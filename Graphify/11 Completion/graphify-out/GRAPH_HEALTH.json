@@ -1,0 +1,20 @@
+{
+  "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+  "graphType": "DIRECTED_MULTI_RELATIONSHIP_JSONL",
+  "authoritative": true,
+  "nodeCount": 35274,
+  "directedEdgeCount": 107213,
+  "uniqueEdgeCount": 107213,
+  "parallelEvidencePreserved": true,
+  "danglingAuthoritativeEdges": 0,
+  "unresolvedInternalEndpoints": 0,
+  "invalidReferences": 0,
+  "invalidSelfLoops": 0,
+  "validSchemaSelfReferences": 1,
+  "validRecursiveRelationships": 1,
+  "nodeIdCollisions": 0,
+  "vendorSymbolsInCoreRuntime": 0,
+  "generatedSymbolsInCoreRuntime": 0,
+  "status": "PASS",
+  "policyVersion": "mindroom-graphify-v2-layered-directed-2"
+}

@@ -1,0 +1,177 @@
+{
+  "recordedAt": "2026-07-28T03:34:47.5049540+03:00",
+  "tools": [
+    {
+      "tool": "Graphify Python package",
+      "status": "AVAILABLE",
+      "version": "0.9.28",
+      "resolvedPath": "C:/Users/mhyah/AppData/Local/hermes/hermes-agent/venv/Scripts/python.exe",
+      "discoveryMethod": "Python import after `python -m pip install --upgrade graphifyy`",
+      "verifiedCapabilities": [
+        "detect",
+        "AST extraction",
+        "graph build",
+        "clustering",
+        "report generation",
+        "exports"
+      ],
+      "limitations": [
+        "The installed graphify.exe wrapper is blocked by Windows Application Control; use the Python module/interpreter path.",
+        "No Gemini or Google API key is set, so semantic extraction cannot use the Gemini backend."
+      ],
+      "exactCommandsTested": [
+        "python -c \"import graphify\"",
+        "graphify --help",
+        "python -m pip install --upgrade graphifyy"
+      ],
+      "notes": "The blocked wrapper is not treated as a usable command."
+    },
+    {
+      "tool": "Ponytail",
+      "status": "AVAILABLE",
+      "version": "",
+      "resolvedPath": "C:/Users/mhyah/.codex/skills/ponytail/SKILL.md",
+      "discoveryMethod": "Codex skill catalog and full instruction read",
+      "verifiedCapabilities": [
+        "minimal implementation guidance"
+      ],
+      "limitations": [
+        "Graphify-only phase forbids cleanup mutations."
+      ],
+      "exactCommandsTested": [],
+      "notes": "Only the explicitly requested findings-only audit is permitted in this phase."
+    },
+    {
+      "tool": "Ponytail Audit",
+      "status": "AVAILABLE",
+      "version": "",
+      "resolvedPath": "C:/Users/mhyah/.codex/skills/ponytail-audit/SKILL.md",
+      "discoveryMethod": "Codex skill catalog and full instruction read",
+      "verifiedCapabilities": [
+        "repo-wide over-engineering findings"
+      ],
+      "limitations": [
+        "One-shot report; applies no fixes."
+      ],
+      "exactCommandsTested": [],
+      "notes": ""
+    },
+    {
+      "tool": "Git",
+      "status": "AVAILABLE",
+      "version": "2.54.0.windows.1",
+      "resolvedPath": "git",
+      "discoveryMethod": "Get-Command and `git --version`",
+      "verifiedCapabilities": [
+        "read-only repository inspection"
+      ],
+      "limitations": [
+        "No .git directory or linked worktree metadata was found in the project or Codebase; repository history is unavailable."
+      ],
+      "exactCommandsTested": [
+        "git --version",
+        "git -C Codebase rev-parse --show-toplevel",
+        "git -C Codebase remote -v"
+      ],
+      "notes": "Filesystem SHA-256 manifests are the evidence mechanism."
+    },
+    {
+      "tool": "ripgrep",
+      "status": "AVAILABLE",
+      "version": "15.1.0",
+      "resolvedPath": "C:/Users/mhyah/AppData/Local/Microsoft/WinGet/Packages/BurntSushi.ripgrep.MSVC_Microsoft.Winget.Source_8wekyb3d8bbwe/ripgrep.exe",
+      "discoveryMethod": "Get-Command",
+      "verifiedCapabilities": [
+        "file discovery",
+        "text search",
+        "hidden and ignored path discovery"
+      ],
+      "limitations": [],
+      "exactCommandsTested": [
+        "rg --files -uu Codebase"
+      ],
+      "notes": ""
+    },
+    {
+      "tool": "Node.js",
+      "status": "AVAILABLE",
+      "version": "",
+      "resolvedPath": "C:/Program Files/nodejs/node.exe",
+      "discoveryMethod": "Get-Command",
+      "verifiedCapabilities": [
+        "repository scripts"
+      ],
+      "limitations": [],
+      "exactCommandsTested": [],
+      "notes": ""
+    },
+    {
+      "tool": "Yarn",
+      "status": "AVAILABLE",
+      "version": "4.13.0",
+      "resolvedPath": "Codebase/.yarn/releases/yarn-4.13.0.cjs",
+      "discoveryMethod": "packageManager field, .yarnrc.yml, and vendored Yarn release",
+      "verifiedCapabilities": [
+        "workspace package management"
+      ],
+      "limitations": [
+        "No global yarn executable is on PATH; invoke the vendored release through Node or Corepack."
+      ],
+      "exactCommandsTested": [],
+      "notes": "Repository package manager was discovered rather than assumed."
+    },
+    {
+      "tool": "TypeScript compiler API",
+      "status": "UNKNOWN",
+      "version": "5.9.3 declared",
+      "resolvedPath": "",
+      "discoveryMethod": "Codebase/package.json devDependencies",
+      "verifiedCapabilities": [],
+      "limitations": [
+        "No global tsc executable was found; dependency installation state must be checked before baseline typecheck."
+      ],
+      "exactCommandsTested": [],
+      "notes": ""
+    },
+    {
+      "tool": "Rust toolchain",
+      "status": "AVAILABLE",
+      "version": "",
+      "resolvedPath": "C:/Users/mhyah/.cargo/bin",
+      "discoveryMethod": "Get-Command cargo and rustc",
+      "verifiedCapabilities": [
+        "Cargo workspace inspection"
+      ],
+      "limitations": [],
+      "exactCommandsTested": [],
+      "notes": ""
+    },
+    {
+      "tool": "Subagent support",
+      "status": "AVAILABLE",
+      "version": "",
+      "resolvedPath": "Codex collaboration runtime",
+      "discoveryMethod": "Three agents dispatched successfully",
+      "verifiedCapabilities": [
+        "parallel non-overlapping mapping waves",
+        "independent review"
+      ],
+      "limitations": [
+        "Maximum four active agents including the orchestrator."
+      ],
+      "exactCommandsTested": [],
+      "notes": ""
+    }
+  ],
+  "runId": "graphify-v2-repair-20260728T095646",
+  "graphifyV2PolicyVersion": "mindroom-graphify-v2-layered-directed-1",
+  "cacheValidation": "SOURCE_HASH_POLICY_EXTRACTOR_CONFIG_ROOT_AND_OUTPUT_HASH",
+  "authoritativeGraphType": "DIRECTED_MULTI_RELATIONSHIP_JSONL",
+  "semanticAiRequired": false,
+  "semanticAiUsed": false,
+  "mediaTranscriptionRequired": false,
+  "mediaTranscriptionUsed": false,
+  "legacySemanticAndTranscriptionArtifacts": "LEGACY_NONAUTHORITATIVE_EXPERIMENT_UNDER_GENERATED_TOOL_CACHE",
+  "missingApiKeysAreMappingBlockers": false,
+  "updatedAt": "2026-07-29T05:46:01.021Z"
+}

@@ -1,0 +1,19 @@
+{
+  "policyVersion": "1.0",
+  "freezeRunId": "mindroom-graphify-final-freeze-integrity-20260731-145843",
+  "effectiveDate": "2026-07-31T14:58:43+03:00",
+  "status": "ACTIVE",
+  "rules": {
+    "baselineImmutability": "The frozen baseline may not be silently overwritten or mutated without formal change authorization.",
+    "changeIdRequirement": "Every future modification to planning artifacts requires a registered change ID and rationale.",
+    "impactAnalysisRequirement": "All affected requirements, capabilities, tasks, tests, and release gates must be explicitly identified prior to change approval.",
+    "hashTraceability": "Modified files require pre-change and post-change cryptographic SHA-256 hashes.",
+    "dependencyValidation": "Dependency graph changes require structural cycle check and reachability matrix revalidation.",
+    "adrDecisionReview": "Architecture Decision Record changes require formal technical decision review and sign-off.",
+    "architecturalChangeReview": "Major architectural changes require a new independent review cycle.",
+    "amendmentHistoryPreservation": "Implementation discoveries may create formal append-only amendments but must never rewrite historical baseline records.",
+    "frozenManifestPreservation": "Previous frozen manifests remain permanently preserved in immutable execution control history.",
+    "freezeVersionIncrement": "A new planning freeze version is required after any approved planning amendment cycle."
+  },
+  "changeHistory": []
+}

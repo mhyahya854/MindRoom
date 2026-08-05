@@ -1,0 +1,2023 @@
+{
+  "policyVersion": "mindroom-graphify-v2-layered-directed-1",
+  "extractor": "graphify.extract.extract",
+  "extractorVersion": "unknown",
+  "runnerSha256": "2adcfbd68a8a4e2b407bba8c37b6f81fb5b31a74fa570e70359e0283bf7f33ec",
+  "classificationResolverSha256": "675743d8d1e0f47c12ac4b2678077ed0ee0f06c0ccb6755505ffdc22bbfdaf55",
+  "codebaseRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Codebase",
+  "layer": "AUTHORED_RUNTIME",
+  "batchIndex": 3,
+  "batchSizePolicy": 400,
+  "files": [
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/text/define.ts",
+      "sha256": "f3f468b6d3bae117ea52bdf499ba3b6e7c63106eebeab7572788559858cabf37",
+      "sizeBytes": 741
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/calendar/calendar-view-manager.ts",
+      "sha256": "41763c638cc01308f872ffcaa228334304c93c4771ea7544f4aa2c938b754485",
+      "sizeBytes": 17086
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/calendar/define.ts",
+      "sha256": "83f59db3e4e11d2db46f352da22751f7eaaa90d8c0f7a88d9444a667af574954",
+      "sizeBytes": 917
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/calendar/effect.ts",
+      "sha256": "39d2954f24773d71e3187d67d06b9ddbbf741ea7502d3475d0797d4f171a239a",
+      "sizeBytes": 98
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/calendar/index.ts",
+      "sha256": "d9b5934953b4ab57877f6dcf7dc383b921dba718e596afcc2ca175ab866cc4f8",
+      "sizeBytes": 190
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/calendar/layout.ts",
+      "sha256": "feee140b8dcb103b29d284ae50fa9ace53e8bb5e682ee37379a828f3e648ce87",
+      "sizeBytes": 6741
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/calendar/pc/actions.ts",
+      "sha256": "2341b4b25c5fbf669cd3078a362d98c1c9f1da45fb141a27396559dfee8c84d4",
+      "sizeBytes": 2704
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/calendar/pc/dnd.ts",
+      "sha256": "05af9835130a5ac48432a902f94e6872bf06621b967f7774724201a52f8d881a",
+      "sizeBytes": 6550
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/calendar/pc/effect.ts",
+      "sha256": "d43a277acc02984ad99c96de82dc048a7567aeb8b924145fcdbeea1629c4b042",
+      "sizeBytes": 220
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/calendar/pc/hit-test.ts",
+      "sha256": "549d7bca7b685a12c4d0e3b04bb3d3956848befbcad7ec7b676cfa4d2daf763c",
+      "sizeBytes": 1056
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/calendar/pc/styles.ts",
+      "sha256": "dd55da6c47a62f1709e4c0ac1afb584ef65e36efcebf22c6c5408baef88fc95f",
+      "sizeBytes": 15524
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/calendar/pc/view.ts",
+      "sha256": "a581104e08e1327843fc8fe70f4d8faca39eeed88d8ffb796140f1bfdea9e8cf",
+      "sizeBytes": 34111
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/calendar/renderer.ts",
+      "sha256": "3d967726b43950a7d9c0e1b730a6a078c48e3d86168c05d8d3bd03cca07349f1",
+      "sizeBytes": 463
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/calendar/source.ts",
+      "sha256": "7d08fd14f81b9ea80a66e483ffd4a03a53bfbdaa158fe0f388075519fc28999f",
+      "sizeBytes": 711
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/calendar/types.ts",
+      "sha256": "7db9684dd24a472c9ed8ffd320f76c47b3ce912deb4f51a9252afad319856ac6",
+      "sizeBytes": 2098
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/convert.ts",
+      "sha256": "54d9fae8487daf94be15073869bb0d51d9d4fd6228daa53cdb20d28d0fcb8f24",
+      "sizeBytes": 1435
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/effect.ts",
+      "sha256": "70be0442cc90c8250340839b5f6b2c9518ca24938763091ce1c5a80e73c9f87f",
+      "sizeBytes": 258
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/index.ts",
+      "sha256": "e3822a7a307567c119418a0e35cfdb473ae1102de2f2daf44cfac32665bd7c68",
+      "sizeBytes": 432
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/define.ts",
+      "sha256": "e533adb6e10a61cb67ee11c578d217e2381b59ebf66a4a677846325ffdb16d32",
+      "sizeBytes": 1799
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/effect.ts",
+      "sha256": "f5a73c2e471bbdf67cdd1178b64fa4659a3cea56a80bf6c7ef39e342b3381297",
+      "sizeBytes": 167
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/group-by-utils.ts",
+      "sha256": "2a73409b021591aef95859a32b6f48a52924f9455d3f2c8f138cbe585089a0ba",
+      "sizeBytes": 3696
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/index.ts",
+      "sha256": "37bcd0596269ed73bf5610be96f6706659b89469a45174df08cd33c348932716",
+      "sizeBytes": 134
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/kanban-view-manager.ts",
+      "sha256": "93dd869ebfbf0c58a261ea4713d17b3247722eaedee871db341e81eb69137248",
+      "sizeBytes": 12570
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/mobile/card.ts",
+      "sha256": "7278df45d70530df9de3d993b73e44e16f5792b41ff3ab5daa563a5a24874b38",
+      "sizeBytes": 5808
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/mobile/cell.ts",
+      "sha256": "7468f1618ab74485b16a11dcd0f49ba1c413ab3a5bbd70a6526732f39a86b026",
+      "sizeBytes": 4774
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/mobile/effect.ts",
+      "sha256": "c41c2b6f919bcb6deac76ecb9c605f24dbfaf5114ad78652e8b97882e999dc41",
+      "sizeBytes": 513
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/mobile/group.ts",
+      "sha256": "fd9a937dd8f3249c1604f4e67d0ddb83f49b0fd96ac4a06f57910e2487e9c684",
+      "sizeBytes": 4171
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/mobile/kanban-view-ui-logic.ts",
+      "sha256": "6199c90adea407c52c72c11b5d8f24793e41bee36bd58b980ae4f58ffbe433e3",
+      "sizeBytes": 4661
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/mobile/menu.ts",
+      "sha256": "2e92fd28c127d0bce6423562d22b2972854ee8103818e78194f0a60a58dd0b89",
+      "sizeBytes": 3200
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/pc/card.ts",
+      "sha256": "38c4f5ddcd5778000662f65c50f9284fa7e5336361ef5ab02c65e0989af6282f",
+      "sizeBytes": 8548
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/pc/cell.ts",
+      "sha256": "9d193f946fe4aee08a0d3abd22a35bed4efff79fc611aadf1ba4fee25787dcf7",
+      "sizeBytes": 4802
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/pc/controller/clipboard.ts",
+      "sha256": "e7d3ae6d2747653da64e13fe0589cb8ac40c847952238585a79b947aec339253",
+      "sizeBytes": 1305
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/pc/controller/drag.ts",
+      "sha256": "bac972a1b41641070fcaf5b3e7b4ecf87702708a3d6ddba7aa079741edb159c9",
+      "sizeBytes": 8130
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/pc/controller/hotkeys.ts",
+      "sha256": "d7b254ab84c1c026ea64e91e31493157078670b1062770817b8c4a2695c604ac",
+      "sizeBytes": 1926
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/pc/controller/selection.ts",
+      "sha256": "76fa322089a7e0db044bcb667a3c0278f59f32afd1ae99e05312b8863bee4159",
+      "sizeBytes": 20798
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/pc/effect.ts",
+      "sha256": "fad6ebd0a133158957b5cce2360c339b4dc9d0c6a861c0e93bebb26e44163ed4",
+      "sizeBytes": 481
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/pc/group.ts",
+      "sha256": "1112c48f93e3985c9b0f35825af1ecb3423984479c737b4584b312f4b80136ce",
+      "sizeBytes": 5616
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/pc/header.ts",
+      "sha256": "a189ee7a92367bcc9cea1d0c819c99c8b34ab65a8b0cb8020a0101d9f9385bb1",
+      "sizeBytes": 2052
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/pc/kanban-view-ui-logic.ts",
+      "sha256": "33eb93f89d476c440043afdab68517b72c0e6a5c67d88ebeb656b84b09f7e5c2",
+      "sizeBytes": 9018
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/pc/menu.ts",
+      "sha256": "f6127b9ee4a77132a3442c3fc5a8d911e53619d30d04d61ea3621330257646e9",
+      "sizeBytes": 3028
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/renderer.ts",
+      "sha256": "aea54b2ba68e0e114636f134d510589ab8cdbf4a1a8dd09412d291a5464d6312",
+      "sizeBytes": 516
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/kanban/selection.ts",
+      "sha256": "88c9b302c03978eef6b21e34e4424fb0124a2058151b4a3c512d82a1ebb0eb3c",
+      "sizeBytes": 1664
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/collapsed-state.ts",
+      "sha256": "2de8f5ab7e8fc05f2fcced1c38d98cec20d68c3ff375fd4d73b9c87ac8934981",
+      "sizeBytes": 1242
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/consts.ts",
+      "sha256": "7bd8c6f987a55dce8e49c471014104ed34cfd803a5709075bdedf0bfd4b66650",
+      "sizeBytes": 358
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/define.ts",
+      "sha256": "ef22f4332d130539bb2ca532a4255591a3aff47537ed86cc004613e49f23f381",
+      "sizeBytes": 1355
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/effect.ts",
+      "sha256": "8ecc23e73f561fece15bd339fd58bb13a38580b585aaffacbeec0dd1fc375ff1",
+      "sizeBytes": 315
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/index.ts",
+      "sha256": "c8a53bf2e3b8d175c5b8769bf659aa8dcee88aea8b2a3d67237a0e81fa6aaf35",
+      "sizeBytes": 205
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/mobile/cell.ts",
+      "sha256": "76d40c4ee8abbfdcea78043c31306d43546a914c45c71610f1a66a2bc1e3354d",
+      "sizeBytes": 4397
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/mobile/column-header.ts",
+      "sha256": "17b7200c43728acc900fb2c559edaa7f1a3d93498b7869f5cb8216b3ade19b36",
+      "sizeBytes": 8039
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/mobile/effect.ts",
+      "sha256": "2fcc755557421ae622213d21c548c64160eb62d15ab0aca32a23efbeacbe656b",
+      "sizeBytes": 754
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/mobile/group.ts",
+      "sha256": "0451c71c44b94db054f76408bd861915cf9d8ca4389b24ffcaae0cb43e36c012",
+      "sizeBytes": 7032
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/mobile/header.ts",
+      "sha256": "d27b9617df9e22663b51a8af97d001c7afe76c047ce0107f59ab8ae8de8175d6",
+      "sizeBytes": 2809
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/mobile/menu.ts",
+      "sha256": "84556c50f6953193e0a191880ef63e4107d493e84387bd9f166dbfae6ea5eeba",
+      "sizeBytes": 1147
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/mobile/row.ts",
+      "sha256": "97893bc61e23e52b7f57a685344c9d649c1011428f8ac226d49ce4d074ba629e",
+      "sizeBytes": 4602
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/mobile/table-view-style.ts",
+      "sha256": "c13ddb05496162dcd5f80c93d786b7ed0df1d9cf8d269659175d81e41a280640",
+      "sizeBytes": 476
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/mobile/table-view-ui-logic.ts",
+      "sha256": "0e0f736e6eaee54bae7344228debbe5a603dda8d714b3d3ecde757471fea43e8",
+      "sizeBytes": 4810
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/controller/clipboard.ts",
+      "sha256": "929e19feeecdedac9a97ee54fd7e2d7c6e4695d165f9ae789573f836249ad340",
+      "sizeBytes": 8862
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/controller/drag-to-fill.ts",
+      "sha256": "479cb2c20ab87247e86a88a5add5813ee29ebbac6fcc426680d628d68d813718",
+      "sizeBytes": 3276
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/controller/drag.ts",
+      "sha256": "a332be3e534031eb1887752e94970690bb83aa7e1d02caf8ccc2154e5dfa9b42",
+      "sizeBytes": 6182
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/controller/hotkeys.ts",
+      "sha256": "7566bd22499819196492bbafa1ff953ec443e241ee9b917986990c9cdb753f72",
+      "sizeBytes": 13567
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/controller/selection.ts",
+      "sha256": "d88261c64c808a02db700c4d5926d8b98d7c455d887e2239a50dcc43a241f890",
+      "sizeBytes": 30596
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/effect.ts",
+      "sha256": "efaa46b7656e0730693b5937474e874f465b89b8b1cf4a2afdf43039a430a2d5",
+      "sizeBytes": 2606
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/group/bottom/group-footer-css.ts",
+      "sha256": "c4fb67eebc695f1e6fd8e71d62d60e79731ba433cfef5f358c82995219ad081a",
+      "sizeBytes": 714
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/group/bottom/group-footer.ts",
+      "sha256": "bdbae9ff5473be92623e37d0a488fd60d7a748fd061f43deeb8d1a00740f97ce",
+      "sizeBytes": 3261
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/group/bottom/stats/column-stats-bar.ts",
+      "sha256": "7d211fab5a433eefb6da53f6bdfa2e0ba37c739935cc85b573e72132ac21dfa9",
+      "sizeBytes": 1443
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/group/bottom/stats/column-stats-column.ts",
+      "sha256": "e20fbaae78c332b1a60ab802c29e5839d25f2481f83c54f45f50de3d29ffb144",
+      "sizeBytes": 6763
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/group/top/group-header-css.ts",
+      "sha256": "36c240a937e2d77ab6d162929d716cd91072b5bc57230357ab8ccc5bf9ec61b5",
+      "sizeBytes": 94
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/group/top/group-header.ts",
+      "sha256": "93a12b0cd411322508cdab86672ae487cc682eb1bebf17c17deb1dd3a468c2a1",
+      "sizeBytes": 4071
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/group/top/group-title-css.ts",
+      "sha256": "ab0a3440bcedc9cb1c9c622b38f166e219a7c1298b53672fbed7e2a73340804b",
+      "sizeBytes": 1378
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/group/top/group-title.ts",
+      "sha256": "04ff9adde9f7add4b08c6eb4b0941f09bce1156bbcd59ed0783ea0b02a6151a1",
+      "sizeBytes": 1980
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/group/top/header/column-header-css.ts",
+      "sha256": "1d97fb310375a4d5cc89ee7def23b0c6c25bc390fa6d97474533526a7659f298",
+      "sizeBytes": 1090
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/group/top/header/column-header.ts",
+      "sha256": "6b1d5521a77b0be60c3d018df9a65a17b0a40f61eaa8fc5e567ac7aa29135f45",
+      "sizeBytes": 4219
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/group/top/header/column-move-preview.ts",
+      "sha256": "a134d18001613fe4de81505a87a8e9badf8ea023e4c3ca1ce4ce662933d8d558",
+      "sizeBytes": 3078
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/group/top/header/number-format-bar.ts",
+      "sha256": "a80b7e72a10fe27628df26c3eeb0aa0d73262b740a62483543a413caedea5711",
+      "sizeBytes": 4964
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/group/top/header/single-column-header.ts",
+      "sha256": "e3deafd6d3ded94f2eb7fdd715e927e09a341531a422ddad374181f47cee1292",
+      "sizeBytes": 14458
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/group/top/header/vertical-indicator.ts",
+      "sha256": "0b8afe9e52df9a55129b0953bc124d0758dacaaf637e97e7290b4cf243c55b12",
+      "sizeBytes": 4411
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/row/cell.ts",
+      "sha256": "90f33278a93e60bbf6b6174efc9d3f56d2389f2bc5f651e7eba29e651c8d148e",
+      "sizeBytes": 6535
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/row/menu.ts",
+      "sha256": "098864e0740354e02f7c875102d43bdfcfaba6ea88574d41af8fd93271638893",
+      "sizeBytes": 3379
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/row/row-header-css.ts",
+      "sha256": "10d0895a339a42c1d9225e0d44212e32c6ddcac7436630eefbee184987429836",
+      "sizeBytes": 1137
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/row/row-header.ts",
+      "sha256": "5856b7b8dde7fc3bc11ece84e525f1a9394ed708302b998dcfda51bf3af58205",
+      "sizeBytes": 3452
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/row/row-last.ts",
+      "sha256": "3b84269dd6a267cbeae88204a4937ca5378f1c302b41e5757020d2129423b4c1",
+      "sizeBytes": 1882
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/table-view-css.ts",
+      "sha256": "f49334fddd4e70b569f522261f395c797af7898819f03c0c4e010785f1417d22",
+      "sizeBytes": 1363
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/table-view-ui-logic.ts",
+      "sha256": "fc7451516b5ddd43d60ba55d63305d546504ba4241f70a73e223bce5f5938c6a",
+      "sizeBytes": 9805
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/types.ts",
+      "sha256": "a84b117846e9906ee4fd7b7a7fe7bfe5d19788496657d1d48d527f2c6d107008",
+      "sizeBytes": 895
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/virtual/batch-task-manager.ts",
+      "sha256": "76523e03e346c9be5bab2b304ff0dad9f48d2ef1f9cf89706870d8d610d1985a",
+      "sizeBytes": 2828
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/virtual/linked-list.ts",
+      "sha256": "1270cbcaee6bbb5bd0eb4511aee90e6d6358f51b8505606b333fa5e1a891fb1c",
+      "sizeBytes": 3454
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/virtual/virtual-cell-css.ts",
+      "sha256": "a9537fceb0b5e816823bc10d3a3d941c0f0fa40c0a8006900fbd71952e535016",
+      "sizeBytes": 109
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/virtual/virtual-cell.ts",
+      "sha256": "78180ec63d5814413ed4b844a7685481b4dac65d0d1c44b31e2017622f7db3ba",
+      "sizeBytes": 1809
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc-virtual/virtual/virtual-scroll.ts",
+      "sha256": "49a3b6f4f689bedde64cd16463c1b1fd90e87256762fbffba375730284607694",
+      "sizeBytes": 25120
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/cell.ts",
+      "sha256": "692ddd62005cefc45da6f268ebbba29f7f8a293a2ae64e4319174fe453a006f7",
+      "sizeBytes": 4496
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/controller/clipboard.ts",
+      "sha256": "3a7ebcfe44769b1e7cbdb84687fa727dd8c0a7c0773446dcf44f04a8d2cf3a4f",
+      "sizeBytes": 8859
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/controller/drag-to-fill.ts",
+      "sha256": "30721235ab93cef7e027b661f4de0b911de82c37e584f84be2fbcdaae66a3dd0",
+      "sizeBytes": 3133
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/controller/drag.ts",
+      "sha256": "ec72bbfc8b53592c2b3bc7e6840f51b62ad6ea63f448464462ee8a48db492615",
+      "sizeBytes": 5885
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/controller/hotkeys.ts",
+      "sha256": "9cc90caa6e6751fa0798f9b590d5e23d33afb5f8ea43bda61c9d758fa66f92b8",
+      "sizeBytes": 13435
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/controller/selection.ts",
+      "sha256": "e0caff182dc3a4ecf646f1bf170c6791be133b56d962c031eb0a46497a29093a",
+      "sizeBytes": 32460
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/effect.ts",
+      "sha256": "b373f0d12a382672aae7852fd6ea9645b059421840edc081e5293551827e16ec",
+      "sizeBytes": 1709
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/group.ts",
+      "sha256": "33528a094ca8571ed16efe932224a2786103c1c961837942154dac28de143e97",
+      "sizeBytes": 11967
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/header/column-header.ts",
+      "sha256": "23be1dd10d0dab8f5107953cd063d75643f46d13e815146bbf6d60bab74de650",
+      "sizeBytes": 4466
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/header/column-renderer.ts",
+      "sha256": "de6c4d83c9f615e702b0c47b469c6e51bd57fdf4d3ea2f4f7e7e18f84b6856e9",
+      "sizeBytes": 3040
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/header/database-header-column.ts",
+      "sha256": "aaf3fc1eba38700d7b69678ac37cfb0ccb0ffdca67e64dbe98c08781af73c3b7",
+      "sizeBytes": 14505
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/header/number-format-bar.ts",
+      "sha256": "5f087636c92717232138e2234c2fd4a3313dc5ec2ff6bf16ddc7786429515917",
+      "sizeBytes": 4874
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/header/styles.ts",
+      "sha256": "05852d995f19a2b7d0e8763acfc79c00243e67cef27fdac36c9791753a430bd2",
+      "sizeBytes": 9089
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/header/vertical-indicator.ts",
+      "sha256": "16dececdd9912b7dbb9b6511b1f2f8f2a3d1a76a8cc19ddd67b6f97b3da86258",
+      "sizeBytes": 4252
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/menu.ts",
+      "sha256": "1305f8bd0955fd9a1a162b8248995fcc9d1bbf33cedd6bf5ff6a9463f163af21",
+      "sizeBytes": 3371
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/row/row-select-checkbox.ts",
+      "sha256": "0ae08e110ee5d5f567212ae7b4dcb05eca44c8e09b85433b562e63714fef18ab",
+      "sizeBytes": 2203
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/row/row.ts",
+      "sha256": "e11af5b02a793feb778c520e215052f42e12c673e6c9f5f8f781ea4e432c07b6",
+      "sizeBytes": 9160
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/table-view-style.ts",
+      "sha256": "40f53a76762bc0bdd025959b33f77c4fbcedb7bc08cc20e383276fb9d312e168",
+      "sizeBytes": 2506
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/pc/table-view-ui-logic.ts",
+      "sha256": "3c381b07f886b6102a7d1adc3ec3a0e3c8c20ec00a56db9bbad0e01faf4c204f",
+      "sizeBytes": 6710
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/renderer.ts",
+      "sha256": "1c2613da49059c24397e6a55ec856c78d4d912126b134590b07e4e955e5871bf",
+      "sizeBytes": 761
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/selection.ts",
+      "sha256": "3dd034f224b9a10a8917bc29c36c02cee5f4c70172195465da1fee35401cc21e",
+      "sizeBytes": 3614
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/stats/column-stats-bar.ts",
+      "sha256": "84e18de800b2645c0eecb4e973d71d1d5dc77aafa86a80eef1e1b05fee228d9d",
+      "sizeBytes": 1452
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/stats/column-stats-column.ts",
+      "sha256": "937eabfb90d04c36c73b32bb905b5c3304f9bf14b843c10ec8075b4eb4f82618",
+      "sizeBytes": 6707
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/stats/effect.ts",
+      "sha256": "a66109722182f641f72101f8269a0216ebbec3d02354f21b172fbf00914b6e35",
+      "sizeBytes": 342
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/styles.ts",
+      "sha256": "a26c01b63ae2bb6a676ff8c7ae600a21db5dd1d5aae2d09d8efddea0cc36eb3c",
+      "sizeBytes": 204
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/table-view-manager.ts",
+      "sha256": "1a1714454d61e7c507af9607a6458248212dfc325b109cfda35bd2292e6a75df",
+      "sizeBytes": 13128
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/types.ts",
+      "sha256": "372adfcab8a1a0b5a44587e834ffdf4ae2b0214024d03819bfbc8be12863293a",
+      "sizeBytes": 245
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table/utils.ts",
+      "sha256": "8aa2e390ebca4de12137edaf4c7848c2a0ce5fc6b68232160b182934982e28a1",
+      "sizeBytes": 2180
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/widget-presets/effect.ts",
+      "sha256": "51ead21da5db10b2793ef1fcfa12601582538b524644342b5fcd13a7400e970a",
+      "sizeBytes": 2061
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/widget-presets/index.ts",
+      "sha256": "2be546b467574c2bf36f56aae3987e9c46b714d4124000617401a0a13393882d",
+      "sizeBytes": 366
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/widget-presets/quick-setting-bar/context.ts",
+      "sha256": "2b97582e48bf752ebd79fc6566b5669527f6e8baa88f2a8cabb0d5a63745fd7c",
+      "sizeBytes": 344
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/widget-presets/quick-setting-bar/filter/condition-view.ts",
+      "sha256": "2ae5f7364200e985b624190f6627836376ca24febb0ca108ace6f15d43bb93a0",
+      "sizeBytes": 9115
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/widget-presets/quick-setting-bar/filter/group-panel-view.ts",
+      "sha256": "fd84a36ee76ad7b01eca2afaa69858189331df7163d09fc40bb1295b279ecc69",
+      "sizeBytes": 12843
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/widget-presets/quick-setting-bar/filter/index.ts",
+      "sha256": "bc3ef065ff28ba15c646943b2257110c73984334380544941219c566c9412aeb",
+      "sizeBytes": 679
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/widget-presets/quick-setting-bar/filter/list-view.ts",
+      "sha256": "dd8ab77784c7558b9fd8dc0cc81a9546a3d348cb89268da5d563a056cc7228d9",
+      "sizeBytes": 5857
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/widget-presets/quick-setting-bar/filter/root-panel-view.ts",
+      "sha256": "1c1e97de68e89a769c0db06a0a4c54652e35ac1f6dc7578e6f29212d603234b5",
+      "sizeBytes": 11611
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/widget-presets/quick-setting-bar/index.ts",
+      "sha256": "93bd44717f78828f92306d0b17859fee80b6485171c8814e9500c93350185fb8",
+      "sizeBytes": 1422
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/widget-presets/quick-setting-bar/sort/index.ts",
+      "sha256": "00ef27462d5f19aea0cf912027622983bdc3e99fff16386be4a82dfeb4279e22",
+      "sizeBytes": 1149
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/widget-presets/quick-setting-bar/sort/root-panel.ts",
+      "sha256": "10387c97e74129b0348fbfed04451684cbb52c0dac3a5093ead07b1a1d15d7d3",
+      "sizeBytes": 7660
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/widget-presets/views-bar/index.ts",
+      "sha256": "a90e472ba207e45634c6b0049c2670022dfed984d6c4e7fd29240f56cb88d552",
+      "sizeBytes": 326
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/widget-presets/views-bar/views-view.ts",
+      "sha256": "7046510fcf4c4091be1695c57993df646508041fda8589dd58409cd260ce860e",
+      "sizeBytes": 8686
+    },
+    {
+      "path": "Codebase/blocksuite/affine/ext-loader/src/base-provider.ts",
+      "sha256": "7a2c6a1d40ac8c8f17a57995c40b05c4300a3e3f457eccadd85ed4b31fb8b030",
+      "sizeBytes": 2041
+    },
+    {
+      "path": "Codebase/blocksuite/affine/ext-loader/src/index.ts",
+      "sha256": "35be264bf73da599633643bc0c732bade31d91dce7b91b0e5155bb8f58dd60cb",
+      "sizeBytes": 132
+    },
+    {
+      "path": "Codebase/blocksuite/affine/ext-loader/src/manager.ts",
+      "sha256": "f78ff90af8412049983bd4ec267802fd9304ecef7bb3d61ada1b9c8fe21b72a3",
+      "sizeBytes": 4514
+    },
+    {
+      "path": "Codebase/blocksuite/affine/ext-loader/src/store-manager.ts",
+      "sha256": "41c1a9fe49f9a2b03b5972eb63c31695358b03b489bb0777dbb704c28c924224",
+      "sizeBytes": 1573
+    },
+    {
+      "path": "Codebase/blocksuite/affine/ext-loader/src/store-provider.ts",
+      "sha256": "6e9b57e229ae1fed6a14f283c8576978de96039221ab1a05a88c18c72e151967",
+      "sizeBytes": 1196
+    },
+    {
+      "path": "Codebase/blocksuite/affine/ext-loader/src/view-manager.ts",
+      "sha256": "f150a69284ad3187cf60fcb62069a5668cac762924d2e32b9ef341073e92b212",
+      "sizeBytes": 1673
+    },
+    {
+      "path": "Codebase/blocksuite/affine/ext-loader/src/view-provider.ts",
+      "sha256": "8d516c3b9bfda52f531ef902be04c654028e35f0f9008b28ae6c03021d0f30b7",
+      "sizeBytes": 3662
+    },
+    {
+      "path": "Codebase/blocksuite/affine/foundation/src/clipboard.ts",
+      "sha256": "3cb82e520a11fc9f328b83c9c6ed75506d1741682c378de33024ee60f7616868",
+      "sizeBytes": 1510
+    },
+    {
+      "path": "Codebase/blocksuite/affine/foundation/src/effects.ts",
+      "sha256": "24d520a84a156221c5e79767173b0b58fa404ecbdb6e799295e3ce50329e7dff",
+      "sizeBytes": 4450
+    },
+    {
+      "path": "Codebase/blocksuite/affine/foundation/src/index.ts",
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "sizeBytes": 11
+    },
+    {
+      "path": "Codebase/blocksuite/affine/foundation/src/store.ts",
+      "sha256": "b56a8f58107e32e05d687db7fec705292a7732f33851a666389c5e8d704df554",
+      "sizeBytes": 1569
+    },
+    {
+      "path": "Codebase/blocksuite/affine/foundation/src/view.ts",
+      "sha256": "7a91fe6be0a34a127f4b5a4d9aafa426597f1b56380f085338c245670feb5aeb",
+      "sizeBytes": 2966
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/adapter-panel/src/adapter-panel.ts",
+      "sha256": "8c70c61c89eee34256e53501b9c9440ae62975ff404d737db09e7aea99a11e0c",
+      "sizeBytes": 4982
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/adapter-panel/src/body/adapter-panel-body.ts",
+      "sha256": "a862358af6945963da334605bf09daebced7cd2d01353e82cfdab760f49fd148",
+      "sizeBytes": 5495
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/adapter-panel/src/config.ts",
+      "sha256": "4b870fea363623894908e884f0c4610bf9b188aeb6a5c30aeb288746368b2504",
+      "sizeBytes": 780
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/adapter-panel/src/effects.ts",
+      "sha256": "dbf3f52ebaa3375fbcf5edb7d87ca98cecdc22561965b757b13f11b0273d6c72",
+      "sizeBytes": 635
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/adapter-panel/src/header/adapter-menu.ts",
+      "sha256": "a1c4391dad6fad4799bbf424f0909130740ec1ce3d1fd2470f8eaa756e7a1864",
+      "sizeBytes": 2320
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/adapter-panel/src/header/adapter-panel-header.ts",
+      "sha256": "917a2f7c7e29046097d4882b37b1e7e8dd3c373eb4b3a54f1990cfa2496901ff",
+      "sizeBytes": 3629
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/adapter-panel/src/index.ts",
+      "sha256": "21ad0ef574ae2966f4bb7f0257b053c01914814a3484f0cb17f9e177e4062497",
+      "sizeBytes": 174
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/adapter-panel/src/view.ts",
+      "sha256": "2d9fb77363300fe657a1be24813963ee8d47996c0b51040d517ae38902e03312",
+      "sizeBytes": 296
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/doc-title/src/doc-title.ts",
+      "sha256": "d9e8a79e8bc7c75e99c1a044d20e62a3b30cb62123ae0e7dbfe8012a7adaac8a",
+      "sizeBytes": 6791
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/doc-title/src/effects.ts",
+      "sha256": "adf2556dcf91be061b5b4d63484e7419aef25c34f93cf061e43827f7daae12bd",
+      "sizeBytes": 206
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/doc-title/src/index.ts",
+      "sha256": "30a125b4f72b200f1b2c53e3f8877d48df07e56d19e4790e98d02c850bf082ce",
+      "sizeBytes": 91
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/doc-title/src/utils.ts",
+      "sha256": "d6731850f06d52944a24099ef07c10bd172216fe092f8a85128129de514c8f50",
+      "sizeBytes": 336
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/doc-title/src/view.ts",
+      "sha256": "988cb176ad5e63318504aaee5a4105ed114e1c0e9dd0d84915adfaf19186bbf9",
+      "sizeBytes": 288
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/frame-panel/src/body/frame-panel-body.ts",
+      "sha256": "3a1e2a39892328e844d603ae035135f56b638551c3bed0ed44c98f27bf588b2a",
+      "sizeBytes": 12009
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/frame-panel/src/card/frame-card-title-editor.ts",
+      "sha256": "9ead6cf2ac7624a2c9975f33efa7200c60885cd3ce175b4d4f6227f8309e3f2a",
+      "sizeBytes": 3639
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/frame-panel/src/card/frame-card-title.ts",
+      "sha256": "f2ed89822039cca9ec566e8cf69122886fd5db89d606bdf1f619c95cd451603b",
+      "sizeBytes": 4019
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/frame-panel/src/card/frame-card.ts",
+      "sha256": "bb786062ec282ed778b24d1ec773add49c9497cdcd9c9dd08d185d87f6dca4d5",
+      "sizeBytes": 6171
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/frame-panel/src/card/frame-preview.ts",
+      "sha256": "848426dc2b3c76e70b88425d22e5ed66c819a75bc74ca09f4649a83a21498d5f",
+      "sizeBytes": 7149
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/frame-panel/src/effects.ts",
+      "sha256": "23824ebf4beb172b5389f35405eb12b9201a3f9bce6f09e4525dce1994e24303",
+      "sizeBytes": 1231
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/frame-panel/src/frame-panel.ts",
+      "sha256": "91b1617e52b26e0e44d8adaa7a75e56f22119903b6c2683a803b343c299b8306",
+      "sizeBytes": 2119
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/frame-panel/src/header/frame-panel-header.ts",
+      "sha256": "25155b448eb9885c58839af2292d69a1c8d4c6deeb76e978fd1b50e1dbdbf6a0",
+      "sizeBytes": 6749
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/frame-panel/src/header/frames-setting-menu.ts",
+      "sha256": "50f51d4044f7234d20a91552daea1dbece30e1ff088a74af0380a3ae296c7192",
+      "sizeBytes": 5730
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/frame-panel/src/index.ts",
+      "sha256": "38678c6c76e27f17bfdca85397d47a335d22c84195d923759e83a65edaa31cd8",
+      "sizeBytes": 31
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/frame-panel/src/utils/drag.ts",
+      "sha256": "ef8c055dd8300333a8a3ad09292386b20de361c75fda7d04d0aaf6311e25b484",
+      "sizeBytes": 4029
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/frame-panel/src/view.ts",
+      "sha256": "5fd02f7081d2c8d461154af0dc01fec1a42b86b24807539cbb83acef30b90794",
+      "sizeBytes": 292
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/body/outline-notice.css.ts",
+      "sha256": "180ef186900d94bfa60ddb6687e7f0ec92af5395c2e559fbee873d5df1864f07",
+      "sizeBytes": 1704
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/body/outline-notice.ts",
+      "sha256": "96c7616108269887bdab7ff66273578c1ebe4823800777ab31c8725dc6985a28",
+      "sizeBytes": 2905
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/body/outline-panel-body.css.ts",
+      "sha256": "138ecd58a02aa2dde688224cc1286bffd3168da51ac53efc63742b654583db41",
+      "sizeBytes": 1292
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/body/outline-panel-body.ts",
+      "sha256": "ce492690b98ab50cae69b2769ba863905479865a822e5c2ddfabcc2adb27a7fe",
+      "sizeBytes": 14633
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/card/outline-card.css.ts",
+      "sha256": "77417cb40c564c5d74243e2e304678098bd451c2858883be7909e92a6df4656c",
+      "sizeBytes": 3433
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/card/outline-card.ts",
+      "sha256": "93d4558336edd3f9db7a1f78b8aec3032ecf641b745440b7f969459e194cdb53",
+      "sizeBytes": 8670
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/card/outline-preview.css.ts",
+      "sha256": "e5b4b6711cdf84c5aeaf4352f20f1c084136566cde2dcb934730c4c9538b056c",
+      "sizeBytes": 2429
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/card/outline-preview.ts",
+      "sha256": "cdab1a1caa8f21d0d6d1f52b417d7cf40b01d7ae58b2825ab086abeb776437e6",
+      "sizeBytes": 7376
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/config.ts",
+      "sha256": "7095a4b84887a72dfcd30efe054ffc096e402d345e5da9e2b39debb6d114fee5",
+      "sizeBytes": 2327
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/effects.ts",
+      "sha256": "0aa2347d1de3e946a1eddcebb2ade953c4641fe64c16410fcb71cdf9431ff389",
+      "sizeBytes": 1502
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/header/outline-panel-header.css.ts",
+      "sha256": "913f82aa88f8af406851e25438c89b92b3ee3c93bf3380a8ff8ac1638d0ff1cd",
+      "sizeBytes": 961
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/header/outline-panel-header.ts",
+      "sha256": "010bf5e5146fb4f9e7b4f7c9de812cf0405b77071e4467a00fa63ee3c89ac069",
+      "sizeBytes": 3237
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/header/outline-setting-menu.css.ts",
+      "sha256": "c6643207d25bb9f3919e9e61db8687b079338daf23fc25bc5093695658b2cc5c",
+      "sizeBytes": 942
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/header/outline-setting-menu.ts",
+      "sha256": "7cca63868cd7b3839363dbadd57783e41d9fff6ea951c9389ee38c7c9a46c3c0",
+      "sizeBytes": 1503
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/index.ts",
+      "sha256": "dd147880544a79e6aebbef1f85406271e754fc5b15b94a6c1b605fcc2d894714",
+      "sizeBytes": 116
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/mobile-outline-panel.ts",
+      "sha256": "adb9e587b9dcaa9dee9e22519da004ebd437b06b4ed5f8de3335b1b07efd44ba",
+      "sizeBytes": 4979
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/outline-panel.css.ts",
+      "sha256": "9e0013679ab89e94da62bc9c2fe527e23c07bdb27bfbdab34b6965e022c050c2",
+      "sizeBytes": 434
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/outline-panel.ts",
+      "sha256": "9a1b111327d809008b7cb5c0c932c3791dfdc858a864e333c9d2ea7fab691a6b",
+      "sizeBytes": 3344
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/outline-viewer.ts",
+      "sha256": "fe710d0b5d199acd6ab0bf97a8c4ff112f9d4c3df3582b77efd43a847b3ed80d",
+      "sizeBytes": 8765
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/utils/custom-events.ts",
+      "sha256": "cd297ec3a35bbf06f78c5e2fa88cd52f25201d88650f6cf2cabc30f514ec590e",
+      "sizeBytes": 566
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/utils/drag.ts",
+      "sha256": "eaf9ea36590c534259d5f71d7e4d3f3380f3e2da9b48f07bccd1ad164ad1775c",
+      "sizeBytes": 126
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/utils/query.ts",
+      "sha256": "a3dcc0498718bdd774517b61585a0b8d86cb9292ff257ec9c77406e1cdd91f0b",
+      "sizeBytes": 1745
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/utils/scroll.ts",
+      "sha256": "1eaa5ae580812cd993a8af682f2814e6269905c88f10bf427c9d1397d005f00d",
+      "sizeBytes": 5383
+    },
+    {
+      "path": "Codebase/blocksuite/affine/fragments/outline/src/view.ts",
+      "sha256": "12d22b294a36894c174daa1eae0a0ed569ea386d5b6a8f0032fac66282f6776f",
+      "sizeBytes": 285
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/adapter/index.ts",
+      "sha256": "aa45e7b111553e06e357b5b6d7333ec5ad668b7a054aff7866fb3c676d09265b",
+      "sizeBytes": 58
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/adapter/markdown/index.ts",
+      "sha256": "897f0b329139465e8eff0b86619d75d572ce264ac21e51ddcab1e65d34537a8a",
+      "sizeBytes": 446
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/adapter/plain-text/index.ts",
+      "sha256": "364e472335fccef2d61e7495c4b5184c08cc1d50915f955bb0b860cf2e652bb5",
+      "sizeBytes": 346
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/brush-tool.ts",
+      "sha256": "187058b64c36d5770116cc51e6c7fbeeac8b1a7d2803efa562cb1ad0b302b0f3",
+      "sizeBytes": 5879
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/effects.ts",
+      "sha256": "b6c8eedfae840d3e9bfaa49af3ec53fc6df163c19fd6c8dfacb20346962a7d00",
+      "sizeBytes": 724
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/eraser-tool.ts",
+      "sha256": "fa62eab6d6051f693fdb70f3b1dfbb7b4aecfbe645ab94eff6a04f35a13c0c86",
+      "sizeBytes": 4199
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/highlighter-tool.ts",
+      "sha256": "bf5d0ff64b7b12b34bbf37c922a5a3cde3efbb4be7f3d61a696009278bccebea",
+      "sizeBytes": 5468
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/index.ts",
+      "sha256": "e9637f15407d8c8df082eec2cd8138415363025c96d45073ae052bec1c823d8a",
+      "sizeBytes": 226
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/renderer/dom/brush.ts",
+      "sha256": "f9553adff063dea964a31ef0c2fce9c0ba122d7e8a8623f8f9db39855fb886ef",
+      "sizeBytes": 618
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/renderer/dom/highlighter.ts",
+      "sha256": "0e6ebacfe7ca31062f9384e3c2c95e34dd2fbf9c23c25ec68d45cbe1aa4f8e65",
+      "sizeBytes": 686
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/renderer/dom/index.ts",
+      "sha256": "1f71b11e2cc32b8322b43f9a41bbf72ed6d15107e1a2957623e50585ba73bcba",
+      "sizeBytes": 118
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/renderer/dom/shared.ts",
+      "sha256": "9e20a0b6d64ef71e9e4b606a1717158f21b434417f673d106d0cb896168de5b2",
+      "sizeBytes": 2122
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/renderer/element/brush.ts",
+      "sha256": "cf41ca758161719abab6ebf1043cb0dd9500430573e3827eda5fb63357106b80",
+      "sizeBytes": 748
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/renderer/element/highlighter.ts",
+      "sha256": "9c5d3aa12711bf1b08432ae9f619291cb4a8781b9f3264fa5a78aa9b997fdaaf",
+      "sizeBytes": 813
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/renderer/element/index.ts",
+      "sha256": "375beb0f39c4a21981b15f7aa928d6bedbd90988084afb43f1001c5cc45aff84",
+      "sizeBytes": 126
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/renderer/index.ts",
+      "sha256": "4b9f59f179b5843a4bb5f5461dedb676b45146170135a2fb3c2d760bc8f3ad28",
+      "sizeBytes": 50
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/store.ts",
+      "sha256": "adb8994109ad7f38e98e499cc4e92bf643689d3680c866cb5d41d59eb4b07d04",
+      "sizeBytes": 498
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/toolbar/components/eraser/eraser-tool-button.ts",
+      "sha256": "3cbd40a376ebd29a5cac7f5383f64e614b69b2b55404c6c1fc8794404e1639d5",
+      "sizeBytes": 2125
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/toolbar/components/eraser/icons.ts",
+      "sha256": "62cbdf16f46b77c1d6258fe310db2b1acec8586a49bbd49b5114d3280cdaff4a",
+      "sizeBytes": 12076
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/toolbar/components/pen/consts.ts",
+      "sha256": "b6c25997adc02d404608708e7ff6f125fdc73f13036f8d70003d89646a4e2745",
+      "sizeBytes": 605
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/toolbar/components/pen/icons.ts",
+      "sha256": "6f5929e3b516cfcffa24bc8f3a8d3d56c9a16b5348b776d26b6a92b858d63faf",
+      "sizeBytes": 18390
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/toolbar/components/pen/pen-menu.ts",
+      "sha256": "920f514c45302498f39b158e63d8b16635deb7d2ef4fb7e62269e74944a98bc8",
+      "sizeBytes": 6181
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/toolbar/components/pen/pen-tool-button.ts",
+      "sha256": "4a549f8c164b90158dfe81a4377501020d1cea0f59154e62465b7e9785f67a2d",
+      "sizeBytes": 5331
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/toolbar/components/pen/types.ts",
+      "sha256": "fea52a43191f925e59da21a4d9935646b297b1d7373894b8767e548a1e2a3e69",
+      "sizeBytes": 84
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/toolbar/configs/brush.ts",
+      "sha256": "76f29cee8828852876b90d56394c100895f6094e5fb12ea897e5f26bbc6b82dd",
+      "sizeBytes": 3492
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/toolbar/configs/highlighter.ts",
+      "sha256": "8142e4e42ca6147299c49f1db272f27a4b38d9929e9960eae468a95d599d84c9",
+      "sizeBytes": 4044
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/toolbar/configs/index.ts",
+      "sha256": "dd76049a66f047cf5be5638ecddc3eb1aeb9942a34c5910ef2be8cf774d4e80e",
+      "sizeBytes": 56
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/toolbar/senior-tool.ts",
+      "sha256": "a2884b8786c32cddce2680036477150fac1f82017bd7be4b0c5a0a5dffc9f6af",
+      "sizeBytes": 462
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/brush/src/view.ts",
+      "sha256": "bd2899a7f47a762cbb6d61656b30880f2bceefc764d28637e693bcceec10d2f9",
+      "sizeBytes": 1308
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/adapter/index.ts",
+      "sha256": "aa45e7b111553e06e357b5b6d7333ec5ad668b7a054aff7866fb3c676d09265b",
+      "sizeBytes": 58
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/adapter/markdown/index.ts",
+      "sha256": "918b32a6ef1e6cbb6d4983c9d18e9f281849c101ecacd337de760f68684444db",
+      "sizeBytes": 669
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/adapter/plain-text/index.ts",
+      "sha256": "902e57c4c7da5c57ef3f3828124b1299fffc113dac69f3e6bc2d69bc24094045",
+      "sizeBytes": 488
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/adapter/text.ts",
+      "sha256": "6d3f19fec1d2aac36045766cb7789c50ee5c0d762e8d42894ba6117e394e9bdd",
+      "sizeBytes": 544
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/components/connector-handle.ts",
+      "sha256": "d15196a5e4f51f0fd0271be9f66e1e1b111fdd0f2c550ac0b3eef29e3d1b0549",
+      "sizeBytes": 4939
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/connector-manager.ts",
+      "sha256": "3caf01023fd571248c9c7ec2aeb9738928b5252795325f01f7956f1039ca7c71",
+      "sizeBytes": 40419
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/connector-tool.ts",
+      "sha256": "81f54f5cb5739fbb97611606545e744a354fa4f8e17bfe221c306e196542162a",
+      "sizeBytes": 6263
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/connector-watcher.ts",
+      "sha256": "7c6ff21b5b39847c9b7a07da3568fbe38f34ac7616ea595d4b50a3b8ad5dcef1",
+      "sizeBytes": 2934
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/effects.ts",
+      "sha256": "22187acb42c86807081290488e791472fb946a94fba5045ccced483f2b40e9a4",
+      "sizeBytes": 1000
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/element-transform/connector-filter.ts",
+      "sha256": "b94c4f59d53dd41c16061df14721b5f6081bce0394a0538b102d0bb18f393289",
+      "sizeBytes": 1321
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/element-transform/index.ts",
+      "sha256": "0cd4f25a2602e45da4c055bfc8c8213694db8af42dc8a8b1ba250aa6ce27c105",
+      "sizeBytes": 36
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/index.ts",
+      "sha256": "11cdfd32eb4e5633ecf899b0ff83f2786e41e2af8dc2b112b4c322126c5b664e",
+      "sizeBytes": 289
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/renderer/dom-renderer.ts",
+      "sha256": "fc07cc07b27016f9ed047aa7f25fea60cfaa362ea5e578c3ebaabcd2a703ca69",
+      "sizeBytes": 11237
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/renderer/element-renderer.ts",
+      "sha256": "3c18d57f709d2e627d305988341b9b683615492fe434084a9b09e6e090d94d7e",
+      "sizeBytes": 7260
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/renderer/index.ts",
+      "sha256": "39104c8c91e6962cadfe33d031d6b648c8ac9fc5b426f6b9f89c7a9f763cf8ff",
+      "sizeBytes": 68
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/renderer/utils.ts",
+      "sha256": "059e6541325174f838e81d2312639b318bf3bd5a692d8ff28ab69a4c07297feb",
+      "sizeBytes": 7415
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/store.ts",
+      "sha256": "96237e795dbdecde37107af17dc2b0c5452e2aa20b95d4bdcc74494bd908dbba",
+      "sizeBytes": 636
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/text/edgeless-connector-label-editor.ts",
+      "sha256": "8efa00c51942e00867b633473b3f62dab6ecbe44a062aaa914ebcfde6766de61",
+      "sizeBytes": 10889
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/text/index.ts",
+      "sha256": "ada93fa3abe8a2aa381dcba3da26f18aaaa0e7abacbed07ba966eadaee5f9ef9",
+      "sizeBytes": 27
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/text/text.ts",
+      "sha256": "8b7a0146b001d485b5ca7566da2e6eac16037780941947b19fb45a00ede0bd6c",
+      "sizeBytes": 1932
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/toolbar/config.ts",
+      "sha256": "89b3c95ed03237503b026eafd8c43374a7eeb1e227e2cb5da8baa6a5159eda4d",
+      "sizeBytes": 12488
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/toolbar/connector-dense-menu.ts",
+      "sha256": "9648c5ede846bc37584494b1ad1bbd994b95057c71d714f1f71bce280c1137a9",
+      "sizeBytes": 1862
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/toolbar/connector-menu.ts",
+      "sha256": "a36611783a03cb9b58b47e8ff85f659728f8e145ce108e362f4c6693f854fefe",
+      "sizeBytes": 4515
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/toolbar/connector-tool-button.ts",
+      "sha256": "b520c11d1798663b4ac3d887addb46eb4ac610b78ddbb245673411fcf54a4dff",
+      "sizeBytes": 2335
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/toolbar/quick-tool.ts",
+      "sha256": "fd5f574f1fa711bfb042024638299d825e377d964c04bd58a5b7622587e3eb42",
+      "sizeBytes": 392
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/view.ts",
+      "sha256": "328bfb4e69ae30ab4c74f2c29348abab371d5a58b2e6b53366630d3bfa7ae5d4",
+      "sizeBytes": 1326
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/view/index.ts",
+      "sha256": "228d05c1d4e849ddee0d84aa08137118c99bc700efc39de0bf8f13fbbf061716",
+      "sizeBytes": 24
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/connector/src/view/view.ts",
+      "sha256": "65b378ee0f8f6bb72c75ab7f4c8cfd274a55c0e110351cf9be2f2ec6f0dc6d1e",
+      "sizeBytes": 6795
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/adapter/index.ts",
+      "sha256": "aa45e7b111553e06e357b5b6d7333ec5ad668b7a054aff7866fb3c676d09265b",
+      "sizeBytes": 58
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/adapter/markdown/index.ts",
+      "sha256": "a2adbfc9bccc2b64d045babf8b689a143e5908b88f22cf6eda79623f1ad88a6d",
+      "sizeBytes": 605
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/adapter/plain-text/index.ts",
+      "sha256": "bd6db5ec2fcc67a049959c8347e0abc148fed155e3cf76adb3eb12c58d71f062",
+      "sizeBytes": 463
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/adapter/text.ts",
+      "sha256": "7e12dfaf0660d236859538bf87ca32945cc4bc2a747534d98d4043973cbbea01",
+      "sizeBytes": 542
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/command/group-api.ts",
+      "sha256": "144b3c1696c842a672678ef34edbef2a9a7948c1191c9ca3fb52e95daab906c6",
+      "sizeBytes": 5962
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/command/index.ts",
+      "sha256": "1a13693f0042bbd39b7eb688f4c98a00db988b991cc65c1aaa000c7d3d84d6be",
+      "sizeBytes": 29
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/effects.ts",
+      "sha256": "99e81b7d986aca6692c87c0cde2c2a11add6e40e8560c9db8bc8b854fb8d20a9",
+      "sizeBytes": 325
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/element-view.ts",
+      "sha256": "aeb559e6ddc72292ce58d73ad7d855da93a716e920b2493a5de28fbb88eabe5f",
+      "sizeBytes": 1394
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/group-watcher.ts",
+      "sha256": "bbf1d2aeefae578c47836a37c3f67715cc7e0b9a958fb08c3f7be6ca2069042f",
+      "sizeBytes": 859
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/index.ts",
+      "sha256": "db0fd1f29e85334372c26336cbc2658b682be9fb8645d6fe64df0c1ec2ddd1f3",
+      "sizeBytes": 177
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/interaction-ext.ts",
+      "sha256": "c34b6e916ae71a4a0f856961a7f1202bdb6e0bd5d2637f5c56a8c9510d85a4e0",
+      "sizeBytes": 1284
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/renderer/consts.ts",
+      "sha256": "2a8e4f5484cd5e33bae8b9dea80c74492983f47c4162a235364e9494a988b584",
+      "sizeBytes": 227
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/renderer/dom-renderer.ts",
+      "sha256": "0b72f1332486ad93f180515ff388b058245ebd46581e0dce2f8cb811261bde7a",
+      "sizeBytes": 2318
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/renderer/element-renderer.ts",
+      "sha256": "fc0ce3459cc80b2908f8f3415a8aeee8c6ed964d16d101eb29a122f4491fd320",
+      "sizeBytes": 1922
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/renderer/index.ts",
+      "sha256": "39104c8c91e6962cadfe33d031d6b648c8ac9fc5b426f6b9f89c7a9f763cf8ff",
+      "sizeBytes": 68
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/renderer/utils.ts",
+      "sha256": "29f95801dcb5ec97632886bf12c661b98c50b67606009f8a5e7b0283ec331808",
+      "sizeBytes": 1900
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/store.ts",
+      "sha256": "603af8528bdf128be83c3c1734ac12afba1d2bda5ae78ee80821eec1ca77d696",
+      "sizeBytes": 616
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/text/edgeless-group-title-editor.ts",
+      "sha256": "4893c4dbe0aa175ff2974ad203f1229b2e593ead8b3a10044e6de138787a83b4",
+      "sizeBytes": 5166
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/text/text.ts",
+      "sha256": "46f3230c5b4eff31c36f31d9bd81301b7ac0f497f44a563a7243dac0dedfdd1a",
+      "sizeBytes": 996
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/toolbar/config.ts",
+      "sha256": "a787302c82005d3a091138eecad398f26e4b45c1c75648a9656eea9a49ea2db2",
+      "sizeBytes": 3068
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/group/src/view.ts",
+      "sha256": "80333e6940dae33858bb781dc659371de61d362161c7062d54be47198c4d9bcd",
+      "sizeBytes": 1007
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/link/src/effects.ts",
+      "sha256": "d97ffe0d0d15ff362d3c86397dcf633d2a446d8d2ae98a40d1d2c94407dfa89c",
+      "sizeBytes": 178
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/link/src/index.ts",
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "sizeBytes": 11
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/link/src/link-tool.ts",
+      "sha256": "1da6b3ae24190ce095d85a7f1292a12975fbf43c28dcefe12bedf9227ad5dff7",
+      "sizeBytes": 421
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/link/src/toolbar/link-dense-menu.ts",
+      "sha256": "563529501c07186338a52e3be933e9db2cbb8ea6e9587d0ae6c6fc9054894824",
+      "sizeBytes": 1091
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/link/src/toolbar/link-tool-button.ts",
+      "sha256": "4943a5bfc9fca0b1bb573dc06e79f054157cfbb4e26e9a4adb64b8f52db68b93",
+      "sizeBytes": 3006
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/link/src/view.ts",
+      "sha256": "bf6d6b99dc035ad0bdd804d21b7146a76fa064656dd7672e03219e8dab6f4b7d",
+      "sizeBytes": 519
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/adapter/index.ts",
+      "sha256": "aa45e7b111553e06e357b5b6d7333ec5ad668b7a054aff7866fb3c676d09265b",
+      "sizeBytes": 58
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/adapter/markdown/index.ts",
+      "sha256": "8d6f4d387752429f96fc3ae8e322f2b1c6370e0a5ab54060c29dbe660b01e6b3",
+      "sizeBytes": 1833
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/adapter/plain-text/index.ts",
+      "sha256": "760883a137d1933431c9f30631f9ea454c90ecafc0afd8d75060802128a4641d",
+      "sizeBytes": 480
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/adapter/utils.ts",
+      "sha256": "eb0a01c83d2e556cecf19f7857223f33365bed90dd163d01a5e90613dd8a65b4",
+      "sizeBytes": 1527
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/effects.ts",
+      "sha256": "78c36bae56f34258b57d6b91747120cb296a71a1ff34528f4e086549bd632a66",
+      "sizeBytes": 715
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/index.ts",
+      "sha256": "20176eb67525d28c0742d1a488b5151f14867e8e1ad712aeecd3ad48c8d1e81c",
+      "sizeBytes": 253
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/indicator-overlay/index.ts",
+      "sha256": "9e7ac31d39a800fe93d1eebd64eccb2287fdfbf3444e7f9e77988fc9c027b0ed",
+      "sizeBytes": 8588
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/interactivity/drag-utils.ts",
+      "sha256": "25c1535f6283d928a76e1b04dfea4ca2be65717111acbe6ddb2332057984f712",
+      "sizeBytes": 5448
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/interactivity/index.ts",
+      "sha256": "9ebf192a5d3f49dc684ecf3a497bbb7349725d33cceb68a6e9aaebdccd8e3542",
+      "sizeBytes": 33
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/interactivity/mind-map-drag.ts",
+      "sha256": "e88fee448383c4cbdb72d0b9d364b42ec73b1c1bb5c11602b2fae38fe09234d7",
+      "sizeBytes": 13614
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/renderer/dom-renderer.ts",
+      "sha256": "5cc6996f44c4eaea52e119573c45aef675252f621a5528a5d0165faa7f009cc7",
+      "sizeBytes": 2154
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/renderer/element-renderer.ts",
+      "sha256": "55ded5b6b833453bdd413d073c254dcf2306c68960f4aed727dd649e4012ed23",
+      "sizeBytes": 1923
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/renderer/index.ts",
+      "sha256": "39104c8c91e6962cadfe33d031d6b648c8ac9fc5b426f6b9f89c7a9f763cf8ff",
+      "sizeBytes": 68
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/store.ts",
+      "sha256": "b61774539208601bf42c66e15edebee0c31fb2cf067e34506df26eb23efba8e9",
+      "sizeBytes": 510
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/toolbar/assets.ts",
+      "sha256": "b4a6162c58f3202888d42db85e8ff4d324bad5e4eddfbbe61189357d4f171707",
+      "sizeBytes": 1193
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/toolbar/basket-elements.ts",
+      "sha256": "0174b6093e9b8de15ec5ce557745c7e7765f22fb5c7e68e64fb00a8aca030608",
+      "sizeBytes": 5839
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/toolbar/config.ts",
+      "sha256": "b8e0483578da6950f5ebb18c3fc4393131767f18d88f5e0d007ff88406c81f3b",
+      "sizeBytes": 5302
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/toolbar/icons.ts",
+      "sha256": "4d1d2c69bfcde1d5e77c5ffb2164a1e620e3b1113e50baef1bf098ef0b33a2f0",
+      "sizeBytes": 87563
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/toolbar/mindmap-importing-placeholder.ts",
+      "sha256": "3daab5086774cf6376c0ae2b9b308d982381c61682feab7aad8aff0a34f8ed73",
+      "sizeBytes": 1426
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/toolbar/mindmap-menu.ts",
+      "sha256": "857ff5f878d814d2c0945971af84f68ac2b4a8363b5e2caafc5e4908c2738b32",
+      "sizeBytes": 13134
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/toolbar/mindmap-tool-button.ts",
+      "sha256": "8462b29fd855931b94aabeb052afe364ab8843ceb87e78ccbcf0fb4646e93e47",
+      "sizeBytes": 13946
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/toolbar/senior-tool.ts",
+      "sha256": "1ba7858b80bcd8f31767b56c8ac6013bb3389f314c0836188fa8ed7fceb9c0bd",
+      "sizeBytes": 430
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/toolbar/utils/import-mindmap.ts",
+      "sha256": "219a8572e97ec0c915d5c719932f2cb98466e1129d76c08810b9d9ef0f6d600b",
+      "sizeBytes": 3346
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/utils/index.ts",
+      "sha256": "1c4c712a82e847a0c09949e87c458db3fbf68da7faa165a8d18c4a73d4ceeaa8",
+      "sizeBytes": 1801
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/view.ts",
+      "sha256": "3597323a08f11ed90df5b6538e45fd6f054f59b1b92f123b0cb59b3a7973e84d",
+      "sizeBytes": 1245
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/view/index.ts",
+      "sha256": "5f502ade17faad42ff91c2d7ed166ea0dbe8f9ee9d13de05aa9cc4921102338d",
+      "sizeBytes": 104
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/view/layout.ts",
+      "sha256": "8e142553f85e2063de6101a103b3342a5cac104877e769164a709dc657620505",
+      "sizeBytes": 4971
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/view/style-svg.ts",
+      "sha256": "db176d5c944656f274eae18fc9f356f77593502a271f3a8efc38e32f9b74dd3f",
+      "sizeBytes": 18048
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/view/utils.ts",
+      "sha256": "272d5117eccd557f74ba5b83b08de882a7b02dc95d8f63a280ea6fe046315365",
+      "sizeBytes": 16476
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src/view/view.ts",
+      "sha256": "892eafb5020a5da1e51f2eefb2bd288b7decad9397bdfe5795d6dbacfb4157e8",
+      "sizeBytes": 10470
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/note/src/components/icons.ts",
+      "sha256": "f1b96f087afcd3309fd40b6b983a28e2d48c94c8bd4073d7c1b545aea562d899",
+      "sizeBytes": 1945
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/note/src/components/note-display-mode-panel.ts",
+      "sha256": "2d9042c53e7c42505c2fba98cb2ccdfdc970f227b8dca6b0f6b783dbc15c0231",
+      "sizeBytes": 2894
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/note/src/components/note-shadow-panel.ts",
+      "sha256": "751b6f7bf27c4a2fa8d7afac8c3887af85374e10d429ba4fdb766cbdee2bfe00",
+      "sizeBytes": 4047
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/note/src/effects.ts",
+      "sha256": "012805802c581157fe43dadb69c768ae7501da4f788eb394178939ce8262e58c",
+      "sizeBytes": 1105
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/note/src/index.ts",
+      "sha256": "fc672c13a098e0c880e0f313497b6c85ff06ae52031983d536b68a03afd28c29",
+      "sizeBytes": 95
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/note/src/note-tool.ts",
+      "sha256": "689b08ffd330647dd331cad1ce4ad68c438bd6847a949103bea7250d5e4d577c",
+      "sizeBytes": 8635
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/note/src/overlay/consts.ts",
+      "sha256": "88f7bef6ef2a0762477a56b23e670aec30c49710b64c835e61f907638a61b4db",
+      "sizeBytes": 476
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/note/src/overlay/index.ts",
+      "sha256": "e2ecdb482917d71cc9f9a80a6c96f530bb91c77c866260591879a4c4311bc7a0",
+      "sizeBytes": 53
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/note/src/overlay/overlay.ts",
+      "sha256": "0183e0f4284876ef3f2676a06c57253e342ed32415c1f9e86d3d67cdde96be8a",
+      "sizeBytes": 4802
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/note/src/toolbar/icon.ts",
+      "sha256": "e6f1d916019f3adc3fc59c35f2a19a1be573015901e9e453e40ffe0adaf3c865",
+      "sizeBytes": 19399
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/note/src/toolbar/note-menu-config.ts",
+      "sha256": "2bc015421ef9637d410e31c89a9bc1c06c0372dacd920406c7bdc95e936675cd",
+      "sizeBytes": 3638
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/note/src/toolbar/note-menu.ts",
+      "sha256": "e3b323adc06ab1ff19e1eaf032eaf3e135e3587e7e9d5c08022d9b4b25a80fa9",
+      "sizeBytes": 6434
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/note/src/toolbar/note-senior-button.ts",
+      "sha256": "7cc4855044907e46b4841bfab54f36d42d1282ff2f1945712d1485c6247e7855",
+      "sizeBytes": 5876
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/note/src/toolbar/note-tool-button.ts",
+      "sha256": "02500390db883e93929c1fda3bef495c622759405f960c7a36e5a27b4260df89",
+      "sizeBytes": 3217
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/note/src/toolbar/senior-tool.ts",
+      "sha256": "802bb38616b2df5316fd89d1cdbc8c4a76505675db7e56123755759915e737ca",
+      "sizeBytes": 334
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/note/src/view.ts",
+      "sha256": "eb7fef2a95f9497bf7a3ac196ffbe7c42192d58b2fb83e695612f17670cf21bb",
+      "sizeBytes": 559
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/pointer/src/effects.ts",
+      "sha256": "9f6d95b68656e1c7fcaa561e070b81e4e40acba34fc9c67e9c3ce38061b94947",
+      "sizeBytes": 205
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/pointer/src/index.ts",
+      "sha256": "8d0bedcdac3268c1c7a0c2e987faa8d3c7bfe2a651188c953fc8a3769bccdbc4",
+      "sizeBytes": 25
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/pointer/src/quick-tool/default-tool-button.ts",
+      "sha256": "b1d0b42db3ffe743cf70b5d3ffb7dc1ced7573a5e888ded448c9ff8a3a91ac32",
+      "sizeBytes": 3112
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/pointer/src/quick-tool/quick-tool.ts",
+      "sha256": "48838a67dcb725e5f0159a148146c646dca95d0a35b64f8f31a24153e7455263",
+      "sizeBytes": 361
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/pointer/src/snap/adaptive-load-controller.ts",
+      "sha256": "35cf00ddd562f1f348f6782d1f76760b66afc39ee99e4a9dd5ba981c1e74a524",
+      "sizeBytes": 1236
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/pointer/src/snap/snap-manager.ts",
+      "sha256": "535489d4cc96724151ead845003757c0e2a16ad5487bad904aebd669f987a3d9",
+      "sizeBytes": 4765
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/pointer/src/snap/snap-overlay.ts",
+      "sha256": "2586f520e3b71718a8c6c617c03b96f94da1307973d468df207484a52c3e2023",
+      "sizeBytes": 24537
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/pointer/src/view.ts",
+      "sha256": "9b2088b568bdd79c4c70771a00b401cbac87f77dbda7e26540e6cc7e431825f4",
+      "sizeBytes": 833
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/adapter/index.ts",
+      "sha256": "9db549e4d6f892955e5e856f1a311544a7ee9e7dace0ac89f3ca03d664730bdf",
+      "sizeBytes": 83
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/adapter/markdown/index.ts",
+      "sha256": "a03eb6d9cadfc8766afb55db34d1a1e57d0ab15c4effc0c082d939bdd057dd2a",
+      "sizeBytes": 1496
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/adapter/plain-text/index.ts",
+      "sha256": "5b89d1b0f314ce2790f5a27ad183106f7230913c2d3dcaab5d31948806056d39",
+      "sizeBytes": 1391
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/adapter/utils.ts",
+      "sha256": "9ed0e48391e4b94c878ee2e395fc8783aaafa7d3dca982939216f729d5638776",
+      "sizeBytes": 853
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/components/shape-panel.ts",
+      "sha256": "8e0dad9484b4275452b393f9bf1807f30eda3bda0ca2e41d6996d24fdf75931f",
+      "sizeBytes": 1796
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/components/shape-style-panel.ts",
+      "sha256": "b57876acfe1b1bdcf6295cd999b7994d10c33c1aeb1c3eddd624aa6e3fb948e6",
+      "sizeBytes": 1449
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/consts.ts",
+      "sha256": "11b6e7fed11db4251253a7918c12d29f944d585e2f8eef3481f57c16bb5dd70d",
+      "sizeBytes": 484
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/draggable/index.ts",
+      "sha256": "f359ec45bd003ce9c06e4a87def2ed77ae16b71fc03b1748deec9a76ff8f9e51",
+      "sizeBytes": 140
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/draggable/shape-draggable.ts",
+      "sha256": "41a3347a35652cbb353db8aa768abcc585020f7f7bf86d1a108d7504f88e0d43",
+      "sizeBytes": 11178
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/draggable/shape-menu.ts",
+      "sha256": "8280e05e51c5c0d03a34a4ba1403ed1a9f29673a3b101c8b8a62ca01be757bed",
+      "sizeBytes": 6315
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/draggable/shape-tool-button.ts",
+      "sha256": "a5fe52217f86771ae43a7bc84ef3be0fdf204e7e563a3856837b9d8b95dc9a2c",
+      "sizeBytes": 2399
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/draggable/shape-tool-element.ts",
+      "sha256": "4dcec50a58961dbd3cc5079fa62df749d23c87019be3af6c7e9f09010630d8a8",
+      "sizeBytes": 8982
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/draggable/utils.ts",
+      "sha256": "2be67a49e61d1b6a994ca7c641d49486ef7fbd998f98949240c5511fdcfced15",
+      "sizeBytes": 3985
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/effects.ts",
+      "sha256": "1d90442ea0dc066bf66672976eaaa9f83a89db2c92b5dc954ad0bdd24e810b15",
+      "sizeBytes": 1422
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/element-renderer/index.ts",
+      "sha256": "3c23af26126b82f5016002954a7621941471481765b459ca271bea9f4e13a0b4",
+      "sizeBytes": 25
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/element-renderer/shape-dom.ts",
+      "sha256": "e88916d4590e046eaf123f9e900d02f98add0cc76a13333b9a199acce4feaa15",
+      "sizeBytes": 320
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/element-renderer/shape-dom/index.ts",
+      "sha256": "b6f359c98187f3e868e6da76dae76fc20e7c0ea0d351d788b13b5d1fe6edfbab",
+      "sizeBytes": 8647
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/element-renderer/shape-dom/utils.ts",
+      "sha256": "d104f8791749640984f9b04f6fbf5427cf640274494437136744a14373f0d19b",
+      "sizeBytes": 2084
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/element-renderer/shape/diamond.ts",
+      "sha256": "3f3a213b6d60fd9740c337233aee736bf61598d060943713f5718d799ecd5857",
+      "sizeBytes": 1641
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/element-renderer/shape/ellipse.ts",
+      "sha256": "a5707cd9d6b0bb0a5d67f78bab66e68151ffb968161b725571b9b00605da9b85",
+      "sizeBytes": 1539
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/element-renderer/shape/index.ts",
+      "sha256": "6842d0a0c3750278de32fc16d6161c95d6af8c9580e0b9fefd38a995404f54aa",
+      "sizeBytes": 4408
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/element-renderer/shape/rect.ts",
+      "sha256": "9182c0522ce1c53baef8a102e7c3157ec6a8447df6f9a75e33a8df35475eaa53",
+      "sizeBytes": 2511
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/element-renderer/shape/triangle.ts",
+      "sha256": "a76381784715621caf5c27bc2a71d6a77925c28072e847686b47219d330a737d",
+      "sizeBytes": 1593
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/element-renderer/shape/utils.ts",
+      "sha256": "96b17ecbc1710c66bafdb2dd7f848bf9a66ce3a5aa1283be034d368682c0c9ab",
+      "sizeBytes": 6642
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/element-view.ts",
+      "sha256": "b2c8e727c5e405d1d9c46b436e7d7b35eddf6148ddb62d0cd2e02ad0d296b857",
+      "sizeBytes": 1198
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/index.ts",
+      "sha256": "c5b4efa528a4b9dda3d88a2c470d2cac7936b9a0fc59319ade0f7b5c8ba3bf66",
+      "sizeBytes": 258
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/overlay/diamond.ts",
+      "sha256": "517d770c2c66bb619980080072902a861ce90d99640110288c96fec2c57de19d",
+      "sizeBytes": 605
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/overlay/ellipse.ts",
+      "sha256": "276daf3df824e3643e672d80c41b1ce3b29050d2d2fd2fada2c375cfc30dd03e",
+      "sizeBytes": 484
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/overlay/factory.ts",
+      "sha256": "7b2285c1e0d8a1148eaabc77223cdb46ed4822ae7cf3542ddc3ebebd657b26bf",
+      "sizeBytes": 1125
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/overlay/index.ts",
+      "sha256": "0e6e3ec2b2b826253c32ba1b21d45bf918090fea75c3e7258914744e65907473",
+      "sizeBytes": 85
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/overlay/rect.ts",
+      "sha256": "e0acc33648fc2f676b8fe8ac421dfdc01cb89c6ec93d1e078155bf3369f2a537",
+      "sizeBytes": 464
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/overlay/rounded-rect.ts",
+      "sha256": "7aa5b41b5f90c91fabb4dda2de80d9d4c79f1385b110a6a9dbfccbd3f4104748",
+      "sizeBytes": 954
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/overlay/shape-overlay.ts",
+      "sha256": "e0879313fa05f3cd6ccd9a4370b545b731253da2b33200fe197a48737e9d627a",
+      "sizeBytes": 3055
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/overlay/shape.ts",
+      "sha256": "18d20428a695122cdfa7c80c85d0d3a8015b2684f5750fe4c7f17042956f5547",
+      "sizeBytes": 589
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/overlay/triangle.ts",
+      "sha256": "7cac91bac3ce02d18e7ed1b3294c06275f784afb924cc98eb999d4f061edbf73",
+      "sizeBytes": 569
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/overlay/utils.ts",
+      "sha256": "94db8c0a50cb048a9429467722ed947d94342f9fadfa9ffdb6ae487a67d9091e",
+      "sizeBytes": 1575
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/shape-tool.ts",
+      "sha256": "4cb95aec09e3e6611a32b1fa4bd796a62c04ed100056b6cb65d9a2821d416ce1",
+      "sizeBytes": 9515
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/store.ts",
+      "sha256": "ac4df8c50937c75003034428851571237985668422c19a4e2ef5a6cc23cf7484",
+      "sizeBytes": 498
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/text/edgeless-shape-text-editor.ts",
+      "sha256": "0d4a7a1a369f3090359c153d14051e32191f589ce1002496f16c6136e8ceb893",
+      "sizeBytes": 15568
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/text/index.ts",
+      "sha256": "825544d7dde00b80dd9c550b2f982abbb62219404283eb1890fbddbb8cf2e55f",
+      "sizeBytes": 46
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/toolbar/config.ts",
+      "sha256": "aeee940920e7c372e502858ecadbcac334b3b49a26bc062cd0171a4f83280d47",
+      "sizeBytes": 10943
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/toolbar/icons.ts",
+      "sha256": "d5d1ebc9864771acc1ae361993c265e2bd12707dba311cc03204e6eb1ccaae5b",
+      "sizeBytes": 40577
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/toolbar/index.ts",
+      "sha256": "c653d66d78790adf0322fa9f22452d727863d6199f154d8513deb40ee6abb641",
+      "sizeBytes": 119
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/toolbar/senior-tool.ts",
+      "sha256": "d8231756386b643035caab2e47ad0b1bc43d76d0366de86b7e6a2c3c5937a206",
+      "sizeBytes": 419
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/toolbar/shape-menu-config.ts",
+      "sha256": "362ca1315020258911fcd40796f5fe10e182471002a3f68fa1dbf496b7390938",
+      "sizeBytes": 1654
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/shape/src/view.ts",
+      "sha256": "e5f5be0b4aa517d32a524e9f013c2c7e0bc4ffde839fda9fd602fa258aa89020",
+      "sizeBytes": 1085
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/template/src/effects.ts",
+      "sha256": "d3965add394cc5f4b579254390f10a201d3536cd2b0f615de91a7d145c717c39",
+      "sizeBytes": 862
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/template/src/index.ts",
+      "sha256": "6656be80a4ac420498d4458072f92735ed2e78b671fc065b77f04c7e3de262fa",
+      "sizeBytes": 207
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/template/src/services/template-middlewares.ts",
+      "sha256": "c37970fc887b4bd7c2eb5acc6c20fe736332a261e4b08834aca4b2f968197845",
+      "sizeBytes": 9810
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/template/src/services/template.ts",
+      "sha256": "92aae0d6ebceb87102d5fee1eeea425fbb6cd36c0f29b90f8bbf47a118cd2028",
+      "sizeBytes": 10884
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/template/src/template-tool.ts",
+      "sha256": "94e217db56330cb372806bfa1164977ccaffb441116593ca466403615be55310",
+      "sizeBytes": 145
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/template/src/toolbar/builtin-templates.ts",
+      "sha256": "5a56cdbc2aac0c929cbba67065ce06a59dfa73ca846c6c6e458dd4d515c92598",
+      "sizeBytes": 2903
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/template/src/toolbar/cards.ts",
+      "sha256": "b9088cf41f62a6332b49ebf387238ca19a2de7aba57a16213a65f27e13073ff7",
+      "sizeBytes": 93635
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/template/src/toolbar/overlay-scrollbar.ts",
+      "sha256": "2b66fb8dafbc86a4501b8771f607150b7303b5a17ad51c46969ea4acbb198828",
+      "sizeBytes": 4481
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/template/src/toolbar/senior-tool.ts",
+      "sha256": "54714c944bc59e7d02cc581d43e54aac4b888c1ab6b3af62dda1ce3e3a961c36",
+      "sizeBytes": 352
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/template/src/toolbar/template-loading.ts",
+      "sha256": "64eef39c9cf91ea77e14ee227fd34f78471ded1cc9f798a568b24e9321682d81",
+      "sizeBytes": 1123
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/template/src/toolbar/template-panel.ts",
+      "sha256": "8de843d65a3249c8760b9aefb7ca0641cbcaff95fa99a739b790d61ac240cb95",
+      "sizeBytes": 14765
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/template/src/toolbar/template-tool-button.ts",
+      "sha256": "37e955fd2e7e56e503a1a0cdc256f2318aee378079ed6860f797ccbbc239d0f6",
+      "sizeBytes": 5902
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/template/src/toolbar/template-type.ts",
+      "sha256": "4d12e3cb4c12aff31c32408923a0f9a5c8f6dd11e3cad31d5c632ababea10668",
+      "sizeBytes": 861
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/template/src/toolbar/utils.ts",
+      "sha256": "a523d89e92e87139b959e502911a36dbe9fef24544b8bc9b9c9df03826746299",
+      "sizeBytes": 720
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/template/src/view.ts",
+      "sha256": "eb0f5ee4bef3bbe0673ee6c77600098cfe6a49310ab0a0ed73e641f0aa870f51",
+      "sizeBytes": 640
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/text/src/adapter/index.ts",
+      "sha256": "aa45e7b111553e06e357b5b6d7333ec5ad668b7a054aff7866fb3c676d09265b",
+      "sizeBytes": 58
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/text/src/adapter/markdown/index.ts",
+      "sha256": "fce594d11b3ec52ca3e6ef216ce8ea01fd278f4e46db4497489cb906802624ab",
+      "sizeBytes": 564
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/text/src/adapter/plain-text/index.ts",
+      "sha256": "73a9650d8670823bf61ed2efce4cfa9e9fac9c479a632fe38905c17e7276e698",
+      "sizeBytes": 420
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/text/src/adapter/text.ts",
+      "sha256": "d97ad2267f29698c31b54469198bb79e507df2a86387064e211c5030794e00f9",
+      "sizeBytes": 540
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/text/src/commands/index.ts",
+      "sha256": "4b3de982ec19628274814bc7534cb7b494f6ff2d9df8d0d8149ca6b5da5aa352",
+      "sizeBytes": 71
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/text/src/commands/insert-edgeless-text.ts",
+      "sha256": "e7030063ef54177689e572bf82cebe0717dafa7aca31964b370e5102b763c2ed",
+      "sizeBytes": 3269
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/text/src/dblclick-add-edgeless-text.ts",
+      "sha256": "52e637227ca631ffe7ab3a176f762456de8ee650ecaf77d88b2cb07ba4f12cbc",
+      "sizeBytes": 1424
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/text/src/edgeless-text-editor.ts",
+      "sha256": "3abab92f5e73d486d1a66b27a2a4bbc61451b9bb06f3018dea1274d2142b89c2",
+      "sizeBytes": 13266
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/text/src/effects.ts",
+      "sha256": "92e30baba087c0ec3182899266880ff151f22b06dc8ac123dcad755dfa94ddf9",
+      "sizeBytes": 434
+    },
+    {
+      "path": "Codebase/blocksuite/affine/gfx/text/src/element-renderer/index.ts",
+      "sha256": "d13c21b86deeed96644e7888ae3897f9e2623ab90ee43d958ffb33a6ea9b1c39",
+      "sizeBytes": 2393
+    }
+  ],
+  "inputFingerprint": "3b26a12717bae7210d02bc66757089b1ea80c11baa07b006dc4a8fb81b32cfc6",
+  "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0003.json",
+  "outputSha256": "a433cc95ba5b011e5429b40344cf31a894391bce6a35ad20f72108ee27b09437",
+  "nodeCount": 2869,
+  "edgeCount": 9337,
+  "inputTokens": 0,
+  "outputTokens": 0,
+  "cacheDecision": "REEXTRACTED",
+  "cacheInvalidationReason": "input fingerprint changed",
+  "completedAt": "2026-07-28T10:26:24.691Z"
+}

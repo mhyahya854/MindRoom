@@ -1,0 +1,2023 @@
+{
+  "policyVersion": "mindroom-graphify-v2-layered-directed-1",
+  "extractor": "graphify.extract.extract",
+  "extractorVersion": "unknown",
+  "runnerSha256": "2adcfbd68a8a4e2b407bba8c37b6f81fb5b31a74fa570e70359e0283bf7f33ec",
+  "classificationResolverSha256": "675743d8d1e0f47c12ac4b2678077ed0ee0f06c0ccb6755505ffdc22bbfdaf55",
+  "codebaseRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Codebase",
+  "layer": "AUTHORED_RUNTIME",
+  "batchIndex": 2,
+  "batchSizePolicy": 400,
+  "files": [
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/consts.ts",
+      "sha256": "7c80a5d1106844d1697885742637cd30778f0fc4842c181bcd22ecc4dacd3d7e",
+      "sizeBytes": 945
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/effects.ts",
+      "sha256": "ab1d11dc402e837775f85fa35d851547a227a9c58c320b702eb74597202fc9ae",
+      "sizeBytes": 301
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/element-model/base.ts",
+      "sha256": "b781fd23dedda6c04e05a4e816ca153294ff93ddf54cfb37fbfb46b63da55854",
+      "sizeBytes": 143
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/element-model/index.ts",
+      "sha256": "ff5bdb189facbe4fcdfffac0a5f907041cf42c008e4ee1f0b5a10f84df4a6d44",
+      "sizeBytes": 1311
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/extensions/clipboard-config.ts",
+      "sha256": "135564fa77136e9d2ff2c6545b12d421619098ccf9f3a8cff4c300281cefa668",
+      "sizeBytes": 2032
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/extensions/crud-extension.ts",
+      "sha256": "b851260ca4674460ee44342824ad833fa938eb9cf03a6737490aa82eee934ca0",
+      "sizeBytes": 4839
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/extensions/dom-element-renderer.ts",
+      "sha256": "5c53f9cc1340b08aea2c695239b334bbf37d0e6a9b470abff3d2449263f9e495",
+      "sizeBytes": 1003
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/extensions/edit-props-middleware-builder.ts",
+      "sha256": "4bb1859a3c930b1b07ace53e7fec81ca1700947b4f2e33d605d94c613a16a42a",
+      "sizeBytes": 753
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/extensions/element-renderer.ts",
+      "sha256": "a25c79829bf3918086f49bb16d1503de93759d5dd857888b72bfccd7a4900a9f",
+      "sizeBytes": 804
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/extensions/export-manager/export-manager.ts",
+      "sha256": "6270dc49de649dcf7e710cb2ac4d60f0f7af909497232bcf206ec9a3fe8abb79",
+      "sizeBytes": 17151
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/extensions/export-manager/file-exporter.ts",
+      "sha256": "249145895222828a01cb689f887eb3036098b4760bfdac4d1ff822d556e6b8e4",
+      "sizeBytes": 2832
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/extensions/export-manager/index.ts",
+      "sha256": "35f7631687030553597a7c3973ebf848ca0debbbaf33f123f5d90be4416cc776",
+      "sizeBytes": 77
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/extensions/index.ts",
+      "sha256": "353cb625a6e2fc57af3f4fb24a64f05ef978ffdf3ccf92f6c672ad9b14ab64aa",
+      "sizeBytes": 333
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/extensions/legacy-slot-extension.ts",
+      "sha256": "dcfb27c4584d1457c655304758f7d0b147a1bb7f4bf96ef3341f77feff008562",
+      "sizeBytes": 1322
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/extensions/query.ts",
+      "sha256": "206212c94282f6d9affc4da2e4c9576bb9c9f3b42842cf506acabe9c423ef089",
+      "sizeBytes": 499
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/extensions/surface-middleware.ts",
+      "sha256": "bc7c6bffcc1e33d68d46d585fa0c4c22036610542f500dd9c9c80e881570b11b",
+      "sizeBytes": 609
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/index.ts",
+      "sha256": "83501bf66d378ad7638f51c1a937f2b32b218eddce4af8da7e9db52bbac0f56a",
+      "sizeBytes": 1773
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/renderer/canvas-renderer.ts",
+      "sha256": "078073dd606e73a9b1e91665abf3d0672dde4c97bc34c4ffb75c80c3346fe29f",
+      "sizeBytes": 39245
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/renderer/dom-elements/index.ts",
+      "sha256": "d328d77751ce46fbb731e978b07d1c1dd3b87b20c7dee9b7ab9ea0d1b3d02c40",
+      "sizeBytes": 1499
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/renderer/dom-renderer.ts",
+      "sha256": "d2c7cbcfdb847b4b41722222a23e1edd6e689a17fde95bd082e99da01e95854c",
+      "sizeBytes": 26180
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/renderer/elements/index.ts",
+      "sha256": "17e4024e69dbec1bdea6651860e0234d21c9f73ed1a41629fc9a71f7fb135624",
+      "sizeBytes": 585
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/renderer/elements/type.ts",
+      "sha256": "b6d5448000ffcc2aa6f0662dd6b8fb6bdda89f51cb9351ad6e0114a5562a9421",
+      "sizeBytes": 165
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/renderer/overlay.ts",
+      "sha256": "c07acdf5b59b09dd473b436ba62d1f00a697534df14409b1eae048c72cd0442c",
+      "sizeBytes": 1454
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/renderer/placeholder-style.ts",
+      "sha256": "0527d1f1b6873bc2c2720fc2007a39eb675f0be5f1747a0b851d9a38b301816d",
+      "sizeBytes": 403
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/renderer/tool-overlay.ts",
+      "sha256": "b133d9e51215cfe6deae1266827899405d469db51981ae88fafff94301bc6500",
+      "sizeBytes": 1191
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/store.ts",
+      "sha256": "05032dbfb9e60250c55ede9307f248f0af33509d2bd8c647548408cf09729c2e",
+      "sizeBytes": 544
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/surface-block-void.ts",
+      "sha256": "a96b891699909e00434dfaefedf155f85dfb0faab8b908ae6121f8f513dab74a",
+      "sizeBytes": 389
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/surface-block.ts",
+      "sha256": "e5f86d8b2f9dce280e004118376855e15dd57f2ab02d280f7a4d6a538b048b3e",
+      "sizeBytes": 7311
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/surface-model.ts",
+      "sha256": "cc6b25d3fb3e8c44eae6884089b110bed0d57fc565975dc74a5108bd62be18b1",
+      "sizeBytes": 6264
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/surface-transformer.ts",
+      "sha256": "0fb9eb2d06b63585c45380f2990bf4ef419781239af5743dc9c6310f148db1cb",
+      "sizeBytes": 3210
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/tool/default-tool.ts",
+      "sha256": "ba8e63be389485f6dd7298cc8c64afd5588e49be8565e49f983f77667df0ece6",
+      "sizeBytes": 9281
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/tool/panning-utils.ts",
+      "sha256": "9e9ec64f6c468ba9e882508e65d4c49c781b338d4413f2367129bbf95d1e9cfa",
+      "sizeBytes": 1448
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/a-star.ts",
+      "sha256": "9d733bbcb2f9d7a566c1489033c2b09cb73dadd8973c4135c865735bfc0c48c9",
+      "sizeBytes": 8833
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/font.ts",
+      "sha256": "12ab17bcb40b009894d9c76667d48e0cedbf575d190efc8e2672cb34653a8984",
+      "sizeBytes": 1497
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/get-bg-grip-gap.ts",
+      "sha256": "2b35bc446361f326241c0143258af00fff3bc223a5330ea0ffa5a9f41560986c",
+      "sizeBytes": 308
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/get-last-props-key.ts",
+      "sha256": "02033e6ae032bdcab7a919f21e567766bd0dad42b58df309e7e9e3cb85140528",
+      "sizeBytes": 790
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/get-surface-block.ts",
+      "sha256": "0c6bdfada483b2f3650bb7509c9b874c15d4d456279ed112969408624c7cd2ec",
+      "sizeBytes": 619
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/graph.ts",
+      "sha256": "b74cbae3072b0d39f0791285fa0be3eb2a31eb2b491bef5306478f751386ab97",
+      "sizeBytes": 4277
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/index.ts",
+      "sha256": "ed67504e01d4c518bb3e0a4fc386daf5d5716c5098874a90a67fbfb8cdd346e3",
+      "sizeBytes": 1075
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/path-data-parser/absolutize.ts",
+      "sha256": "b4e6f26dec3142cebf1880726d30ecd2c0a66e47adf0a63843951525f8f1e74b",
+      "sizeBytes": 2955
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/path-data-parser/normalize.ts",
+      "sha256": "de13b47a9ed70ebfaaa28c6cf871319f7f179f5e8a0ac4047be306b0296ff23d",
+      "sizeBytes": 6661
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/path-data-parser/parser.ts",
+      "sha256": "2c226935f35193783f2e36656412214441af39fca3969b8530ceca61a9184c91",
+      "sizeBytes": 3359
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/points-on-curve/curve-to-bezier.ts",
+      "sha256": "cfd66a71a8ef3e31580f5a9d514c5c1f142f0a5bfebed7e6ef24940559fbebd9",
+      "sizeBytes": 1456
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/points-on-curve/index.ts",
+      "sha256": "ea417ccaddc74335c9c5cdd99349bc74cb483ec6a68ff8292ceff9dbd6fe4fc9",
+      "sizeBytes": 4120
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/points-on-path/index.ts",
+      "sha256": "658db00a2326f237e0c74cd77b16b49bf3c2eeb2b027a0742fee5030dd3e23c8",
+      "sizeBytes": 2079
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/priority-queue.ts",
+      "sha256": "d6107274043b7bb83aad79441188dce6add8ce21cfb7fe119efa7b9cfce554e0",
+      "sizeBytes": 2114
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/rough/canvas.ts",
+      "sha256": "c3bd1d47c982b68c6c97786b526435db2f3b726cf05c753d4f627b8a1c2c3a1b",
+      "sizeBytes": 5058
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/rough/core.ts",
+      "sha256": "8b697fbbb5fe71bb40c7c4e9cf3e4a5cdce091d12c75db27eac7bbe8b6730638",
+      "sizeBytes": 1988
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/rough/fillers/dashed-filler.ts",
+      "sha256": "bba7ef0689bfd9de47bbeb5384dcd99d78ff6bbb464fa2f3dc26a66566c46d79",
+      "sizeBytes": 2067
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/rough/fillers/dot-filler.ts",
+      "sha256": "8b953b541fa5cc4d05574b46b480fb165f6bbdee6ce6095e9936ba21acaaf480",
+      "sizeBytes": 1640
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/rough/fillers/filler-interface.ts",
+      "sha256": "26f1f6e87e1e55d7037fdd06f2b905df9019810d70b015c9df1a9ca2326fab9b",
+      "sizeBytes": 605
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/rough/fillers/filler.ts",
+      "sha256": "d47916b9de69ba03bf1879ac0d3e477e5db429c74cf5493d1d774f2e3664c374",
+      "sizeBytes": 1618
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/rough/fillers/hachure-filler.ts",
+      "sha256": "197bdcbc338ab00b15a0c6367eaa94caca98dbf8143474db100327c5359b1877",
+      "sizeBytes": 1084
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/rough/fillers/hatch-filler.ts",
+      "sha256": "7606c10969ffe0f2588d2261d2ee0e5b0ff2c2bea978d83bb53231a43730b0c0",
+      "sizeBytes": 527
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/rough/fillers/scan-line-hachure.ts",
+      "sha256": "77a7bfe28ee4665d503ab32272fb08aced7fa345653b82cd9fab68ab942646cf",
+      "sizeBytes": 3614
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/rough/fillers/zigzag-filler.ts",
+      "sha256": "dfdb02e836a321b455312a2793324eac5dc0e926ae9df45113619d53777b23da",
+      "sizeBytes": 1135
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/rough/fillers/zigzag-line-filler.ts",
+      "sha256": "8267405354c79da5bfb0ed6bf974331dc0f1d7f23c3190baae7b9e776b69f42b",
+      "sizeBytes": 2140
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/rough/generator.ts",
+      "sha256": "80d6e9af113367c3764ba8a7b2c876df5e6d4c36c4577093749896ebf7c3aa3b",
+      "sizeBytes": 8550
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/rough/geometry.ts",
+      "sha256": "cfd1fab2789f0c4197e9ac40cf645308f48962b52a2d272fcd91bd7a37cbf59f",
+      "sizeBytes": 985
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/rough/math.ts",
+      "sha256": "ea1e66ab6f704be4e54d76a49e9216c6bed16ac3fbd5eba167e0105b2d1d9e9c",
+      "sizeBytes": 387
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/rough/renderer.ts",
+      "sha256": "60d81e691f868c4c7e7bda3bb7401ce194e42bd619e992c67a4e891102188c89",
+      "sizeBytes": 18762
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/rough/rough.ts",
+      "sha256": "3ed2e714b80c22ae178479f6b2f4670f37a1e0c251ee6ae04cc7d1c3cad9d40e",
+      "sizeBytes": 564
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/rough/svg.ts",
+      "sha256": "af7e2e7019d61689c00c4c40e08a9a8c89f2f697e2acf8840e3e384d7b1b2e6e",
+      "sizeBytes": 4804
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/sort.ts",
+      "sha256": "05b0cfd179f3809e525a7ffd773ed090720f805671db4b08d0f8654cff438f6d",
+      "sizeBytes": 2150
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/update-xywh.ts",
+      "sha256": "b561624bf6a980089579050beab69eaf4318f1432c4b1e9357495d7e2d4f682c",
+      "sizeBytes": 2728
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/view.ts",
+      "sha256": "fa9103416e4a2d5aaf3765ec59103621323a92b2e88475386cf645fbf17aa00f",
+      "sizeBytes": 1295
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/adapters/extension.ts",
+      "sha256": "82bc3e491b08c2b61c0eb6e0e6682375827bc9e3cd0a21e2bf28c490c1982a82",
+      "sizeBytes": 546
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/adapters/html.ts",
+      "sha256": "ce557899671cc0657dd409c63098698cb8400d6d8605c01242710736901af694",
+      "sizeBytes": 3694
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/adapters/index.ts",
+      "sha256": "681c06cd61bb20ddd443a4f06d6c6445d4acf6965561273fc2d814c0a4aff0e5",
+      "sizeBytes": 142
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/adapters/markdown.ts",
+      "sha256": "5091ce9b4e00869fd12a1d919426d5cadc4835c32a9cd06861d141dae46f4a4e",
+      "sizeBytes": 2362
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/adapters/notion-html.ts",
+      "sha256": "a72cbacf41e6972b31258f6943a00dab040bbcbda591e3f322a827b73a5d7f05",
+      "sizeBytes": 692
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/adapters/plain-text.ts",
+      "sha256": "7e6c222812cde1c4c5d39d9e18964d4bf2ecfc9d465ad46bf953a27b5bf57112",
+      "sizeBytes": 2495
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/adapters/utils.ts",
+      "sha256": "4f7dc7cbf1f77531416f49f4775f3b6cb720aea7ca2276c0022cfb0a93c859bc",
+      "sizeBytes": 5636
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/add-button-css.ts",
+      "sha256": "8b19b6b045d48ae1f45462ffcc262b0f8c3299389dc74f3d7117d1bf2ba4d56c",
+      "sizeBytes": 2599
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/add-button.ts",
+      "sha256": "ce43cff8d18be851a5fe565310ae1dceffdd73556be900c71fd4a4e59aeee947",
+      "sizeBytes": 9443
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/color.ts",
+      "sha256": "8a46776cb5aab72da36a0b6b2bc21332380ef0e4220600d8fb26e644bef1969e",
+      "sizeBytes": 965
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/commands.ts",
+      "sha256": "a028b69b88d18786f4799c16d920e56223e539f9276f6b9e49a99988ad470172",
+      "sizeBytes": 1257
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/configs/slash-menu.ts",
+      "sha256": "b1a5dcdc25a871813737ee2af4d9043f73ae94f57d62058cac6e42cb81dc7ace",
+      "sizeBytes": 1466
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/configs/tooltips.ts",
+      "sha256": "32c94f4954c9ba78cf6bada02cb5001e46cd233ad006eccef6537bb910615609",
+      "sizeBytes": 5973
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/consts.ts",
+      "sha256": "cbf80d3f21a7d8e70c4f116365c1d1e094619e948196e6db49e6120a775ada97",
+      "sizeBytes": 144
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/effects.ts",
+      "sha256": "6d067125e4cb8a9c75e05bf54f53b44944e0148aa38e1fffb726459954647619",
+      "sizeBytes": 583
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/index.ts",
+      "sha256": "aa88098ce2af8ff9d69ba3fee8c979eabea0dfdc7d980bd0036349ac5a10f73a",
+      "sizeBytes": 139
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/selection-controller.ts",
+      "sha256": "e9745ef80730e327dba58f78ed3128488b3785452c867dc629871938a496b5c6",
+      "sizeBytes": 18732
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/selection-layer.ts",
+      "sha256": "e8a3ced10174a215745406696b2e72e5ac6c8144f9ac0eeaefe98d33a1fdf8ca",
+      "sizeBytes": 2927
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/selection-schema.ts",
+      "sha256": "91bd27aca6731991a827bce29be313b6323031796134697ae90b6429d5dfb1d0",
+      "sizeBytes": 2620
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/store.ts",
+      "sha256": "5ebddc5f9ea3240d464c8dfe965885f02c9cfc10ce8b74ca92d834252fa28539",
+      "sizeBytes": 644
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/table-block-css.ts",
+      "sha256": "2eca30759ec93438462f960dd0d7adf64d6de09824b07e81885a8f32ddf86740",
+      "sizeBytes": 1634
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/table-block.ts",
+      "sha256": "f49ee4f90320ccf3667753facd73f4f3939014d322e92320c8426cdac59719a2",
+      "sizeBytes": 10094
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/table-cell-css.ts",
+      "sha256": "fcae4579be92fcc02f99fa4c02a8e5034bb28eda1d79f6e2c239af2a69a0d2ec",
+      "sizeBytes": 3625
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/table-cell.ts",
+      "sha256": "2a6acb94a3c7aac2d6436c507906c1723781220d29dbb7ffc8e87e500909123d",
+      "sizeBytes": 26536
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/table-data-manager.ts",
+      "sha256": "bef2181830dad1fd716cc6fc3f25dd04b46b4fb37952fca1787901bf45af2b13",
+      "sizeBytes": 10806
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/table-keymap.ts",
+      "sha256": "b92beb0a871c6b5e4f1d47a3705e455991bb8abab70c0d2fa8365b27b2df0119",
+      "sizeBytes": 289
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/utils.ts",
+      "sha256": "01f0b6351e9df90b666cfbad9d1d820a4adb265f12f5565cbc06ca9701fd51de",
+      "sizeBytes": 286
+    },
+    {
+      "path": "Codebase/blocksuite/affine/blocks/table/src/view.ts",
+      "sha256": "7cf87790528419f511744226aaec6cb64e24fdec027b365ee806c8c69a53b05c",
+      "sizeBytes": 1020
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/block-selection/index.ts",
+      "sha256": "fb38a7ccdb0d231eb41fa6d3fb7bfa37b2735acb467efab81e914860ef84555d",
+      "sizeBytes": 1669
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/block-zero-width/index.ts",
+      "sha256": "0117df547598ac57f8084d4af84ccfb777152b6d94de6a6ad102620dbfdb441e",
+      "sizeBytes": 1592
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/caption/block-caption.ts",
+      "sha256": "4fb682877360ae2a4b76affcc31a866c015ec0206ae7b361d8dba68699e3b9f5",
+      "sizeBytes": 4771
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/caption/captioned-block-component.ts",
+      "sha256": "55d88bf37769a1abf05d3a39e82e52664e45da9091cf8c50beb43b3f7af5e63a",
+      "sizeBytes": 2576
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/caption/index.ts",
+      "sha256": "95fef1216e27aae497329b973cd3de34439a0c032c372f9a537f43c6d1fba3f2",
+      "sizeBytes": 332
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/caption/styles.ts",
+      "sha256": "d9c2269358452b9747b54f2fd26eaff89a78c87034923dda9b85c79ac6e89bd0",
+      "sizeBytes": 512
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/card-style-dropdown-menu/dropdown-menu.ts",
+      "sha256": "d46d117a7aaf0f4c87b068a0c526daaf2a20f595dc8b4a6e442da277ceacf4e3",
+      "sizeBytes": 3396
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/card-style-dropdown-menu/index.ts",
+      "sha256": "04f4f9567aea1711c5e0be0175719183ebd1e50ab9ca23bbd1c534ae63ea94d2",
+      "sizeBytes": 217
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/citation/citation.ts",
+      "sha256": "3b9a58d12457dd35e78f8422336e0273ac07f4fc19f798c1151f8dc701de2a15",
+      "sizeBytes": 4633
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/citation/index.ts",
+      "sha256": "c7136d3990e461629707b1633cd7e20eb9343dbfc44f898187b5c62e2d5372b0",
+      "sizeBytes": 166
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/color-picker/button.ts",
+      "sha256": "f50b308e9384f24ea1c1972710a843fc00cfbf566809b8bb482000f2e8609cd6",
+      "sizeBytes": 5823
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/color-picker/color-panel.ts",
+      "sha256": "8d71250573ff94e42b592daaf1d43e8ec9a7c3da0552c489005bd646813facbf",
+      "sizeBytes": 6947
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/color-picker/color-picker.ts",
+      "sha256": "92fccdd8e0299bf9d8e89015cfeae23fe85cf479146f37d6edc518a23c5507be",
+      "sizeBytes": 17856
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/color-picker/consts.ts",
+      "sha256": "336089fd4cd0359927250f9d2a551752a9f65c46506ed149bac0d2b20f20a88d",
+      "sizeBytes": 626
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/color-picker/custom-button.ts",
+      "sha256": "ee0a26356a3d425c8d3a9fa7e9958a6336f83cca13ae347f0645a8dd0235476f",
+      "sizeBytes": 1904
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/color-picker/icons.ts",
+      "sha256": "b10402d86aa366f2a68a742b40fe446b940fd9eb32c8926f62b11beef83020dc",
+      "sizeBytes": 3128
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/color-picker/index.ts",
+      "sha256": "00c3267f067c77cb21f9f0695efe8ea6a8cf5abb73a14ea78ab1a142d4e36e38",
+      "sizeBytes": 1312
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/color-picker/styles.ts",
+      "sha256": "7dcdb537e8af9f88eac2e14cecc3f6d47f654e45db159164ceaa81b4f79646a7",
+      "sizeBytes": 6368
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/color-picker/types.ts",
+      "sha256": "d7870ab6a468e2739dec8ad807b81f8e87ac956b83378ae3cb2f9e701915d24e",
+      "sizeBytes": 1121
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/color-picker/utils.ts",
+      "sha256": "536c8274623706b68b107b2f1d21ebd8aae5a1934227c872827177a03cd3d834",
+      "sizeBytes": 8804
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/context-menu/button.ts",
+      "sha256": "520d4f33537e4dfde917de50a2b1cdb776a5574eafac9adbad2f110c0d8bfbde",
+      "sizeBytes": 8200
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/context-menu/dynamic.ts",
+      "sha256": "ad73e1739db62379240ad2c5dd0f9ede9a0784622fb18ada453d4b68502a1dad",
+      "sizeBytes": 450
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/context-menu/focusable.ts",
+      "sha256": "f573356b5cee18ca329a5b317b7243c9d6b78093017645c0f46bb3b2eafe0ee1",
+      "sizeBytes": 414
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/context-menu/group.ts",
+      "sha256": "9adc7f9f483f638fb10808a8ba48879d2e3baaff81b62134af6171eaf874884e",
+      "sizeBytes": 1128
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/context-menu/index.ts",
+      "sha256": "b829d8dca016e241f48a543ad5b33594097eb1d57117c8c3c1c647c779bed6a8",
+      "sizeBytes": 1154
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/context-menu/input.ts",
+      "sha256": "deff0f686a1e44bc15946c39cc1ee43230f3b7833e7e97ad236640be4c4096c3",
+      "sizeBytes": 6944
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/context-menu/item.ts",
+      "sha256": "df75c3a32930f8d19225b14f44385c777bb568380824c23f45c4f54b9aba0745",
+      "sizeBytes": 366
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/context-menu/menu-all.ts",
+      "sha256": "52a646cc1b100552c8bd09420be5431b682c8c25ebfd6af48907d3e5a596001e",
+      "sizeBytes": 444
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/context-menu/menu-divider.ts",
+      "sha256": "c269ce4a9193753f43ab4bc809ffe9cd30131c844622021bc2eff198d09b6c8f",
+      "sizeBytes": 1071
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/context-menu/menu-renderer.ts",
+      "sha256": "7276694d8181615b62f866d9a4db0401a54d3280f3615bc915082f11925f1b2d",
+      "sizeBytes": 14782
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/context-menu/menu.ts",
+      "sha256": "1e4a8143efa3b4ae00ed9f8fab3daa9d8afa2080280cc41dc12dc6242c143e1b",
+      "sizeBytes": 4085
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/context-menu/sub-menu.ts",
+      "sha256": "1bee0f08c9836440abf8cca0859ef4ebae45fd00c7af6c6ca744432b4c889199",
+      "sizeBytes": 7571
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/context-menu/types.ts",
+      "sha256": "10bfc326222bceb6cbeed05964fe590d55845b0b891a45c83591e66a7aa42840",
+      "sizeBytes": 537
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/date-picker/date-picker.ts",
+      "sha256": "6ebef7da95c502747881c3cd50c37230670566ed8902f3d977e0cbae9034e816",
+      "sizeBytes": 17212
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/date-picker/icons.ts",
+      "sha256": "e6e12d81f0ab7850da97e0f13f14f2a421bab1a86f832aa17dc87c6137972ab0",
+      "sizeBytes": 580
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/date-picker/index.ts",
+      "sha256": "627781d15e7ce0c8581d63db87d217143f111bf498ef99e1dafb2e04e571daf9",
+      "sizeBytes": 165
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/date-picker/style.ts",
+      "sha256": "e466a32e30c3ea67aa425d58d9f130c6a18282b4eee7cebdaf7eac29efef3c6f",
+      "sizeBytes": 5869
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/date-picker/utils.ts",
+      "sha256": "bc79edac815335b23d4a686ba0fb140dab252240e55c3a366ef06640fd3a81e8",
+      "sizeBytes": 1853
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/drop-indicator/drop-indicator.ts",
+      "sha256": "0b5f979f4166cf9634f416130a66118f6fc333669f5b316eb920698a3514f01c",
+      "sizeBytes": 1260
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/drop-indicator/file-drop-manager.ts",
+      "sha256": "a142401a01fac3738d9701e78a3f63f57d993facf350fb228f12bc2add5a55e2",
+      "sizeBytes": 7410
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/drop-indicator/index.ts",
+      "sha256": "082e6ccb0fcb0bd4f1c97547081680f7cef2c7ca6f9ef7b940df8bf46297badc",
+      "sizeBytes": 302
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/edgeless-line-styles-panel/index.ts",
+      "sha256": "37af9e1ac71ded040465cfd3b419f791f6a210c970aea62937f3b9e76f238ea9",
+      "sizeBytes": 212
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/edgeless-line-styles-panel/line-styles-panel.ts",
+      "sha256": "fcfa057dd1ad8e8737de6fa9065c53d9a7b174f084e7e3d490c58d4e6e6d623e",
+      "sizeBytes": 2791
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/edgeless-line-width-panel/index.ts",
+      "sha256": "56b79cf48b79db477e8ac54dae5399644bf19b921830b5c186cc44572af13b35",
+      "sizeBytes": 207
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/edgeless-line-width-panel/line-width-panel.ts",
+      "sha256": "5cb895653ebdd93e80ce921b8d71cdc7261bc2b0da23099196bf15b13b4f6ba4",
+      "sizeBytes": 1357
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/edgeless-shape-color-picker/color-picker.ts",
+      "sha256": "4336e26ce429751d06e7d58efc678f5af992d5f303bd81fc62beabe9dd4345f8",
+      "sizeBytes": 9119
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/edgeless-shape-color-picker/index.ts",
+      "sha256": "cd36c345287abac8834ccb480fc8de2e3815b1c440a9296b7ce736fe94424cee",
+      "sizeBytes": 217
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/embed-card-modal/embed-card-create-modal.ts",
+      "sha256": "817f13c324b79466673f2e3b258160304efebdf5d2b4d7190eff27558c054c97",
+      "sizeBytes": 5865
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/embed-card-modal/embed-card-edit-modal.ts",
+      "sha256": "b1bcb3bbc246802954c1f78f13952d091e562e2b188e093a1a0b829e9251f56f",
+      "sizeBytes": 12361
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/embed-card-modal/index.ts",
+      "sha256": "9fc2a7fbeea07f8c3cab3d6d5c55f322665802982a468d6d9b8391fc436b03f2",
+      "sizeBytes": 388
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/embed-card-modal/styles.ts",
+      "sha256": "0d1c3eff2587cd76d53627ca8e6a421618a8eadc0870857fbcb383646eb1bd73",
+      "sizeBytes": 2969
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/filterable-list/index.ts",
+      "sha256": "dbce64912be5dc3d098fda03ba04d0c82a2abd91b1448299f5af7acd88277c22",
+      "sizeBytes": 7274
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/filterable-list/styles.ts",
+      "sha256": "5b2105f2a93c94527988ddbc022745484c6c0135607ae8742513c83d9914c74c",
+      "sizeBytes": 2052
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/filterable-list/types.ts",
+      "sha256": "e20c94f7c873bebddc295c35132eb6b36fd47a36d2b1ab483e287ca6b3d4f9d1",
+      "sizeBytes": 420
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/highlight-dropdown-menu/dropdown-menu.ts",
+      "sha256": "2e0d55eaa6e5a93835c1e3ea4328cbe6db2a64ecd3f735cf7e1467d4feffe47d",
+      "sizeBytes": 3897
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/highlight-dropdown-menu/highlight-duotone-icon.ts",
+      "sha256": "f6b0d63e256ea539ada49b735a8635b168a53a0c2646efb49d840af0cbe776c3",
+      "sizeBytes": 505
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/highlight-dropdown-menu/index.ts",
+      "sha256": "74abcb3cf766b64308e589593c8a03ff151a645358a76f4e232a5603f646eb27",
+      "sizeBytes": 565
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/highlight-dropdown-menu/text-duotone-icon.ts",
+      "sha256": "a7dc8a202a5737ce404a3ffad08bef47d60b287553d748b021e3998e45c61db6",
+      "sizeBytes": 574
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/hover/controller.ts",
+      "sha256": "095005826da4f609de656b4b0682748a043956c315d7c85db2c2dcd4f7478c0c",
+      "sizeBytes": 4885
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/hover/index.ts",
+      "sha256": "8155bc548c61ae887e4686d0e42039a4f456577c9fead7037076155c5556fec3",
+      "sizeBytes": 129
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/hover/middlewares/basic.ts",
+      "sha256": "516fd91c7f13c30b3749fd083241e4e84aaf03c6d8b56be4f6b99ddf0dfd4a62",
+      "sizeBytes": 2478
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/hover/middlewares/safe-area.ts",
+      "sha256": "0e4492fd622f4e0a995dee82efc966313be7a4300af7f42724fd63fdcce9fd58",
+      "sizeBytes": 11932
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/hover/types.ts",
+      "sha256": "82cf6abcbadfe0df63b1d362b1c5d23008f1696a2f379f8cb33c2e4628759d0b",
+      "sizeBytes": 1914
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/hover/when-hover.ts",
+      "sha256": "5a778d11cccffe8efaba09730134d36a56af5e8a76b6368cab0469e404c0d5d6",
+      "sizeBytes": 4652
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/icon-button/index.ts",
+      "sha256": "61181b17c0943f8b03feadfc92448a3e82328f9b046beb3889b6fc6ac0633e93",
+      "sizeBytes": 5980
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/icons/ai.ts",
+      "sha256": "0702850a5acd0a496cad8ca51357b82b360af5f7a659a92b58eae6eeec53ad1e",
+      "sizeBytes": 13038
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/icons/file-icons-rc.ts",
+      "sha256": "a8e914bdda359d3c3eb163f9375f8def2d41718d4d17037b202501317066c27a",
+      "sizeBytes": 4270
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/icons/file-icons.ts",
+      "sha256": "0080696f5e3a69d45976cd0a127d8620e599eb0233488f07dc2989b48e7a28ab",
+      "sizeBytes": 2490
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/icons/import-export.ts",
+      "sha256": "7521ddeb02d7def580c4f90b92896cd85c9073ebb826999c9ed1ca55fd38746c",
+      "sizeBytes": 10789
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/icons/index.ts",
+      "sha256": "ae7118c94d0063e924d334c7305bc5dfb6fdf8410e5de4b5fb1158dcf7455bf8",
+      "sizeBytes": 293
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/icons/list.ts",
+      "sha256": "ab7fbf7913c31535600f8c7fb4135dfca3c3062df6971c9807ee8e2a2012b167",
+      "sizeBytes": 1230
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/icons/loading.ts",
+      "sha256": "12128e286017d51eacfb7fbcb88bcd38f89f3ae5e19aa28b31b14e012b50a861",
+      "sizeBytes": 1104
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/icons/misc.ts",
+      "sha256": "e2ad985c27b59f04fc2bf3b669e9b17b04f879ed7b50bfdf7de7cc9e4475b376",
+      "sizeBytes": 5227
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/icons/tags.ts",
+      "sha256": "c35b47f56bd47fea5a2685ebb8c7d2d0432d09cf17b5775f42228f2208a0f851",
+      "sizeBytes": 1439
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/icons/text.ts",
+      "sha256": "c21de8030a336589e3064ac81fc6b074de6f6b6976128c41e030dedb9cebbe01",
+      "sizeBytes": 21452
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/icons/utils.ts",
+      "sha256": "1a530274032a90caeef9957189d13fdc23e109a59651de1cc62afb9f0b621bbd",
+      "sizeBytes": 259
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/index.ts",
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "sizeBytes": 11
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/link-preview/index.ts",
+      "sha256": "f79f54e2e57de007f3a72e13c7e7057ea609f0443942ad10bc7fcdfec5c7ad6b",
+      "sizeBytes": 155
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/link-preview/link.ts",
+      "sha256": "c42f2ab6e7053eeef166d1031a5e22c633f06e2c3b81b01ba7642a4d3afa5d0e",
+      "sizeBytes": 1843
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/linked-doc-title/doc-title.ts",
+      "sha256": "b3843f767abad728a9e8839ccb681dfa8b17c587f1c51be0f330dc9b3291d76e",
+      "sizeBytes": 1513
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/linked-doc-title/index.ts",
+      "sha256": "bb2f6bd88fd745765fa2572274155bdde4e9bd625f4bd388f3caa8711fb4e13a",
+      "sizeBytes": 163
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/notification/index.ts",
+      "sha256": "9a8d0744cbc2e4411438ae05244da0a2edaa4e6cc515c7317d624a300a0b670d",
+      "sizeBytes": 33
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/notification/linked-doc.ts",
+      "sha256": "52a48faa38dba1dc25277e33c9b39fdf3a15042414f4796bc0a96f8375d4763f",
+      "sizeBytes": 1161
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/open-doc-dropdown-menu/dropdown-menu.ts",
+      "sha256": "f74efc0e33e97527fb5e78428877e762e6c92741f8b239542658123a47db34e9",
+      "sizeBytes": 3532
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/open-doc-dropdown-menu/index.ts",
+      "sha256": "9729f4dc13be51eb2e733b133546066d6f8d901b262d502208381631a60c7371",
+      "sizeBytes": 199
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/peek/commands.ts",
+      "sha256": "843ab139f98148f3fed1567817cd34f7ba8dd89287e4af395990d5de3c028b99",
+      "sizeBytes": 1296
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/peek/controller.ts",
+      "sha256": "4717e3e742d7a700415dcff5c29a07ea1cb05ca4d5fa2363f933c0d4600c0252",
+      "sizeBytes": 781
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/peek/index.ts",
+      "sha256": "377d4134cf8b1dab453b2ce545ee93ef5290661a3034ef0fff7609fc626a6956",
+      "sizeBytes": 321
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/peek/peekable.ts",
+      "sha256": "2e4beaa6e92ec74e49abd5cde58353e82e4c332c568a3dd6829ba3e92ef4d1c4",
+      "sizeBytes": 4464
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/peek/service.ts",
+      "sha256": "d405d905c80b5379d2bef9e01e4a78b43fb3f2a64137f01229d8a7079dccfe7d",
+      "sizeBytes": 437
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/peek/type.ts",
+      "sha256": "79e698c0527e9aec802ebbc055bedfb09783ad1b9517c7b4ece9e01ffec8c959",
+      "sizeBytes": 2243
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/portal/helper.ts",
+      "sha256": "a3fe1935d04d64071653b20657298b48797bcc86e790e716d05136da267c9efc",
+      "sizeBytes": 6550
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/portal/index.ts",
+      "sha256": "7c365ebcfb17ddae766245bbeef4f14ac3ac7a99c710911252d6a4aef59876b4",
+      "sizeBytes": 262
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/portal/portal.ts",
+      "sha256": "b5926abf2cc32f68d7050e033a69c34ecc8f84a17a31ce96819af6629fb40e1f",
+      "sizeBytes": 1585
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/portal/types.ts",
+      "sha256": "8f650b50e46b0b2c4969dabd11f308c63ca8b8f02ea7ced4d5eeecd59abf05bb",
+      "sizeBytes": 2358
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/resource/index.ts",
+      "sha256": "9629451dd4092b1c66b8fa74afb4fd783290e2b8dda95f8ccab9d7a1dcb7bf29",
+      "sizeBytes": 196
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/resource/resource.ts",
+      "sha256": "edf7831c8e8785155a156cc2a8f19413892b0d0e81ff1578b152e65122d88ade",
+      "sizeBytes": 5241
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/resource/status.ts",
+      "sha256": "9e404c541353dff81cf2fbe26a440c3d6bd4e756169cdcf5c810c1b06f2c1b17",
+      "sizeBytes": 4135
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/size-dropdown-menu/dropdown-menu.ts",
+      "sha256": "51d9aa8fcde9ee3c6aec3b7796665e65290a522b84cb794dc6ab574adf6c4979",
+      "sizeBytes": 5672
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/size-dropdown-menu/index.ts",
+      "sha256": "babe57cc446f0016b964276f3ee2800fdc16bd8d3b088a809e2df8655513762c",
+      "sizeBytes": 189
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/slider/index.ts",
+      "sha256": "e83c853b83c6b07b8e2a394c5c4236081d63708969f4207a585659bfdd6cf2f6",
+      "sizeBytes": 141
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/slider/slider.ts",
+      "sha256": "aa1cbb8d1cec91c5b99efda508057ac0c13e79561fb2eaf863816c1499e87827",
+      "sizeBytes": 4737
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/slider/styles.ts",
+      "sha256": "b1e86f4bdddeb69f5058d919e998c7ce003f2c063ac0c97d37a265ed40f2361b",
+      "sizeBytes": 1796
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/slider/types.ts",
+      "sha256": "aabc052c7d7b26f671d4673acf83b3b78effdaba4a248b7930f4d526db78aafb",
+      "sizeBytes": 386
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/slider/utils.ts",
+      "sha256": "fd76ca6ec97435e1d0762e836bdeb2d69a4b64ea7d90a056d13ba7fb626fa555",
+      "sizeBytes": 247
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/smooth-corner/index.ts",
+      "sha256": "2a225565e5d07116f43b941b218cf852defa61e7f694565fc3efce16fcbb1537",
+      "sizeBytes": 4524
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/toast/create.ts",
+      "sha256": "ce1a84998caf0042a3908df6b48b9e11ce2657121a75868ce788b4c3b0911ff5",
+      "sizeBytes": 1089
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/toast/html-to-element.ts",
+      "sha256": "7f54d9595f5daf8c5f89eeb44b1f460092724e4bddbb17056d1de6c434bc871f",
+      "sizeBytes": 684
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/toast/index.ts",
+      "sha256": "69718f321323679e716d333dabc98f8528fcde964a38747935482281ce4c50e1",
+      "sizeBytes": 36
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/toast/toast.ts",
+      "sha256": "6b59b7b59622af2afc1ae13c260e67cb75f5e36115d03eac24a94bea2b161a8e",
+      "sizeBytes": 1966
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/toggle-button/index.ts",
+      "sha256": "b363a7cbd24f7e2b742fa248ed9d7f3750ef422e31074556360b5529ec0681d3",
+      "sizeBytes": 231
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/toggle-button/toggle-button.ts",
+      "sha256": "d542a779cc937a21da8c41977b942e570478a608aab98f2c8c64fbb83039c6ac",
+      "sizeBytes": 2408
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/toggle-switch/index.ts",
+      "sha256": "ced8764d87db8bb2adb03abc271cce8b32a942b23dc198e197b3e936e342aa9d",
+      "sizeBytes": 1675
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/toolbar/chevron-down.ts",
+      "sha256": "05c9933a81b242a150319d405e12abfd7e89adeb2955302fdc0c860139754c3f",
+      "sizeBytes": 181
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/toolbar/config.ts",
+      "sha256": "e02190be00beb6d6ea2d25dbdcabf4f0b1b2e1d6b9186e37a11aa1d06a494154",
+      "sizeBytes": 248
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/toolbar/icon-button.ts",
+      "sha256": "93e5adba7bdf78e24aaed47ee7a89d1f4483b943260df23517665ec29f60de41",
+      "sizeBytes": 5806
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/toolbar/index.ts",
+      "sha256": "fa02f493ef1233edc55d4ff38c2e26b7372032a18e069b1fb530d0ebc9a69232",
+      "sizeBytes": 1526
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/toolbar/menu-button.ts",
+      "sha256": "851dcb6b0cf6b1210f47e4be647c723e82a543f4c57109e6d8d1dc8308ea70c0",
+      "sizeBytes": 5704
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/toolbar/menu-context.ts",
+      "sha256": "3c04229c07e564388103c0e021868c8373eac34360d829b7373424d97f901d3e",
+      "sizeBytes": 631
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/toolbar/separator.ts",
+      "sha256": "06548eaa18153d67bc241b7666a390081c4b851c123d593c943734f5cb2c2539",
+      "sizeBytes": 765
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/toolbar/styles.ts",
+      "sha256": "404559c858a6fe6cc66470291584bd15a1f97e7e889b6307a38b1a5b7d78c468",
+      "sizeBytes": 1177
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/toolbar/toolbar.ts",
+      "sha256": "edb22b28d27c3927297007b72904a52faf1aa0e836740ab05112a1fa871d209f",
+      "sizeBytes": 1245
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/toolbar/types.ts",
+      "sha256": "0e734d757ec4210cc3fd287651c43a453f7f020e970b9ac216fb0132ea7a0136",
+      "sizeBytes": 993
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/toolbar/utils.ts",
+      "sha256": "948eb1d6e7ca4fb3cec44125ffa0e1e1cfce545ff058b0d696879208c89bb5f0",
+      "sizeBytes": 3468
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/tooltip-content-with-shortcut/index.ts",
+      "sha256": "b1c30857957844d466e6a8b04f132d62ee5c5eccb6669b8972e01359e751958b",
+      "sizeBytes": 2037
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/tooltip/effect.ts",
+      "sha256": "bd0a9093b3efbef31bfba9a8ac0d293cc0a6bdf848e2c9ec62ece70f72eff49c",
+      "sizeBytes": 176
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/tooltip/index.ts",
+      "sha256": "6f9ffaefa115b1f93b3f801d12d9293b86be060940160aedfb3a890af0ae3943",
+      "sizeBytes": 79
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/tooltip/tooltip.ts",
+      "sha256": "0b2e652b4e08a2d36f9f9a9688660326812c9ce4b6d6cb7cd877445c933c3d7a",
+      "sizeBytes": 8476
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/view-dropdown-menu/dropdown-menu.ts",
+      "sha256": "ea6ba68a72bd0feb4c458fc8b608133901399a6d43a1c339a307bf228bf28201",
+      "sizeBytes": 2625
+    },
+    {
+      "path": "Codebase/blocksuite/affine/components/src/view-dropdown-menu/index.ts",
+      "sha256": "1627b18a33e4a6ada954174b459026d0ff47f6910f83a35a900c391677b67819",
+      "sizeBytes": 189
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/common/css-variable.ts",
+      "sha256": "d0df09ec88f5b6bb07edf41bbec829166c231547939f261d209d7959c175461f",
+      "sizeBytes": 1361
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/common/dv-css.ts",
+      "sha256": "2c8ba46819cf5b13a4bd32c7d53b38c49e05f22f8af1f0fcb0274d97005f5a93",
+      "sizeBytes": 1767
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/common/index.ts",
+      "sha256": "d82c26c676acf8ad94ebc28683c4ef7bfdeadc8e92aa14e35bbbb1588611fcb0",
+      "sizeBytes": 342
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/common/properties.ts",
+      "sha256": "6b19478dc4e9bdc0dd125f3ffcf5f430721a855835f12466b06a4fa2b6a28111",
+      "sizeBytes": 7560
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/common/property-menu.ts",
+      "sha256": "b790b33a615f277dc2f17cf314b14904440db314b8215346184de79fd23cd5e5",
+      "sizeBytes": 1862
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/common/types.ts",
+      "sha256": "02a90d58a1484b8d31e7d6a76720a524fe9b35c1eadb17f42205bc9dc5827a8b",
+      "sizeBytes": 236
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/component/button/button.ts",
+      "sha256": "cffad2cb2e90c5e661d98561d6bb3dd31a8b02660a34bcc1502da51afb5ffb20",
+      "sizeBytes": 2555
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/component/index.ts",
+      "sha256": "56d56d141a41e442369fda8ce2c370925aee8a74af04712b86282f0cab3b47b8",
+      "sizeBytes": 109
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/component/overflow/overflow.ts",
+      "sha256": "0d4fb4a619305f99cd42b7b6a9b1e6291276558ba5cc655e06e8ed055ac732a6",
+      "sizeBytes": 3043
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/component/tags/colors.ts",
+      "sha256": "6816581404b873fbbb08b6b3d400e50f2c7b0a6f32e6e1d9b66695ab0fc74232",
+      "sizeBytes": 2039
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/component/tags/index.ts",
+      "sha256": "b41e108744e9f4c13d7628da44f8efa2dd78bb929f176d4d5992579679e9cb87",
+      "sizeBytes": 105
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/component/tags/multi-tag-select.ts",
+      "sha256": "584a50451765c8132ea11456cbf7cdc0679b084e488b831f37d3eddf84399421",
+      "sizeBytes": 19243
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/component/tags/multi-tag-view.ts",
+      "sha256": "c459bb6f7e53ca804a8e75980406916b0c4996a0de2bdf48c4c90eab73e769c5",
+      "sizeBytes": 2397
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/component/tags/styles-css.ts",
+      "sha256": "0055a2120ea86a663dd4581f4bdb89b4b4f0eab40ddd41b02bbeada2f6dee3b7",
+      "sizeBytes": 3240
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/data-source/base.ts",
+      "sha256": "d1a697bd109ecbca9f6dcc48052fdeeb961808954b8f06bee7716985980f3b19",
+      "sizeBytes": 9465
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/data-source/index.ts",
+      "sha256": "8e47d0af503ced0e4e95a3da887a3f92b49387c49877ce29d589d15a2dfcb8ec",
+      "sizeBytes": 27
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/data-view.ts",
+      "sha256": "01134bd3c77f96537cd58fd17f92f617f13fe3c105bc8872068cc94502f8434b",
+      "sizeBytes": 6651
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/detail/detail.ts",
+      "sha256": "61ce09a719385a0f5ee5d75af3fc9250c3c1863996bc0fd242283c1573db8f76",
+      "sizeBytes": 7688
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/detail/field.ts",
+      "sha256": "f88b4a6c9ab70ee0eb82ece4538f650cd5f83447aa6695c52e216a4626f7df80",
+      "sizeBytes": 7571
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/detail/selection.ts",
+      "sha256": "3023608b7bfec1920e7676f9adff68a4bd127751fc50dbc0774ef8bd908bfae2",
+      "sizeBytes": 4432
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/effect.ts",
+      "sha256": "ac9d4884ea8dd9ea6e7f461a4d571a9ed188ad97429d45b841a2f22ef9a45266",
+      "sizeBytes": 2209
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/expression/index.ts",
+      "sha256": "fc18f61735c564ca151774cd84daabf57bb67c618a9928bfb2c160cb3dab342f",
+      "sizeBytes": 104
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/expression/ref/index.ts",
+      "sha256": "4c4f497fc400ed848f0ec232f567588a90cfd72ed4afa66397e9b5441dd414af",
+      "sizeBytes": 57
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/expression/ref/ref-view.ts",
+      "sha256": "0ed5e51f087d97ba9cd70336f455e10ecf5d964c138528823b04fdc13c78c24d",
+      "sizeBytes": 2225
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/expression/ref/ref.ts",
+      "sha256": "58dc8c751d4e3d8aa558989f07b6411c77a44550249096ca1a70ab84a2ed31ca",
+      "sizeBytes": 180
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/expression/types.ts",
+      "sha256": "31b0e04bab9651e8faf9d0a4c3b4a11b220d13b8e72443cb9de108c700147ab8",
+      "sizeBytes": 438
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/add-filter.ts",
+      "sha256": "6c6ca347b95284c10e5c637e0379f862a6e6965aea7a0791a6ac3e4568390910",
+      "sizeBytes": 1802
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/eval.ts",
+      "sha256": "cd712da28290878b6d8232e1148b9feadd1688634128645691b70bec50cfc899",
+      "sizeBytes": 1565
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/filter-fn/boolean.ts",
+      "sha256": "d5f28d939d67d4858389e80e1426291323b848039707767f5f8ff736e39c6967",
+      "sizeBytes": 602
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/filter-fn/create.ts",
+      "sha256": "0a7e298f70bdfc7f37a12c7053361e75ba6ae892ecf62418602daaeac7a533e5",
+      "sizeBytes": 1842
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/filter-fn/date.ts",
+      "sha256": "cbe7db6c48504f1b3f48b4f5f3da8ba69e7110c72f4a2f7d1be4390f41174f31",
+      "sizeBytes": 1032
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/filter-fn/matcher.ts",
+      "sha256": "caff9daf8ca07575e6dfb323e34005da5b048a4d6d2053c9ec3b9daf3f88a681",
+      "sizeBytes": 1675
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/filter-fn/multi-tag.ts",
+      "sha256": "69045578923df54c3d59b9c0e0102d5f8fb01d2593533fca337715edbdf9ebc1",
+      "sizeBytes": 2640
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/filter-fn/number.ts",
+      "sha256": "2c4f9ef515f03723286ec0d31899dfc41ea6a36b79825cb6398b81140590fc8d",
+      "sizeBytes": 2213
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/filter-fn/string.ts",
+      "sha256": "dc32fbbae61efd3e94d2387d4acf2293083fc69b79add3e754093b1cbf44e019",
+      "sizeBytes": 2097
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/filter-fn/tag.ts",
+      "sha256": "debd053c2b4d27b8ff89af9cb6a275a0d4486d15c813668995ec7ab124005a02",
+      "sizeBytes": 1337
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/filter-fn/unknown.ts",
+      "sha256": "2070c35e2943cc8effecd51ba0e5699e786b731e5c00782e1c6aa7d62c9e3053",
+      "sizeBytes": 852
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/filter-fn/utils.ts",
+      "sha256": "529153751403aa8cda85067e873ee76ba764cf5f4f6aa68c6073c9515753f97b",
+      "sizeBytes": 442
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/generate-default-values.ts",
+      "sha256": "0ceaa1bb12f64ba552488c931217f5f3d6072adf35da438ec5a2251a3407aeb1",
+      "sizeBytes": 1525
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/index.ts",
+      "sha256": "e7ff6512726eae658b4ccc35d3db4f9123274dc57d457275aad1d9c115fb7114",
+      "sizeBytes": 162
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/literal/create.ts",
+      "sha256": "5af56a154ecec27aa312e9dcd22c89997039ccac3eabb8d95d5d6378003efc93",
+      "sizeBytes": 148
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/literal/define.ts",
+      "sha256": "a6e8b6d4ec68039469312b05e97d73e8c280a3836ae20c2cda63c9a6ea469c6e",
+      "sizeBytes": 4327
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/literal/index.ts",
+      "sha256": "2f58089e28c59cf785e560b9a788fbfcfa0eb9251819d4666a064ca6cf124e30",
+      "sizeBytes": 87
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/literal/matcher.ts",
+      "sha256": "f30c600ed408dfbb6a8affe5db3afe65c896477fef81c2b3ddb1d0d2afd71f10",
+      "sizeBytes": 567
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/literal/types.ts",
+      "sha256": "acdcf70c63eac4a02235b393796dae7bec2ea4f3c773d671d81d1a94d2cd03c4",
+      "sizeBytes": 610
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/trait.ts",
+      "sha256": "f88f96ccd1c5b81581b201f2a6d3f971927655c4f2952e12e6c0e76c190e2612",
+      "sizeBytes": 684
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/types.ts",
+      "sha256": "b0cd38fa9e13d7c51fcb7373f4718276671f349e32333ccb4e94137a91ff45b2",
+      "sizeBytes": 317
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/filter/utils.ts",
+      "sha256": "aa9b6c6655d7589800e646ec2c1e1383af1121778a0906e3142988be2c0888ea",
+      "sizeBytes": 1636
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/group-by/compare-date-keys.ts",
+      "sha256": "429f74083a00943f07d503fa66eea77b727df922dfbbb7687a3b1bca48ee31a6",
+      "sizeBytes": 1692
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/group-by/default.ts",
+      "sha256": "6a5227022582ff59b3a9cf282a9eb60b4569c6e7fa14cb7a0e0d7515328e1198",
+      "sizeBytes": 740
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/group-by/define.ts",
+      "sha256": "fad7ab718dfa9f620c81fd7a909034b96dbaed73677f935aed4b970dde32187d",
+      "sizeBytes": 8297
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/group-by/group-title.ts",
+      "sha256": "d2e5126ee0009430db2bb0cf27194047fac3ffd87588aba7c78a05d197627315",
+      "sizeBytes": 5845
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/group-by/index.ts",
+      "sha256": "c8e69f1ca73453e031ad506961a061f12fec1520d429ed2056b39529c857f633",
+      "sizeBytes": 87
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/group-by/matcher.ts",
+      "sha256": "58e59e70810b899e86fb81d74a9ace96a66065e5204ce2c869c984ec5d759eb6",
+      "sizeBytes": 1444
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/group-by/renderer/base.ts",
+      "sha256": "ae81f7a55285a24aba1fd16483efe378f61dee68535a35b9a91328306d509119",
+      "sizeBytes": 1001
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/group-by/renderer/boolean-group.ts",
+      "sha256": "e573c660b7b6f31c00f946d1d2289a146601bc4c2ee3486db6a59555e81bda5b",
+      "sizeBytes": 951
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/group-by/renderer/date-group.ts",
+      "sha256": "d5a98291e5ff4959ef7632115c00e190ae74c4aff5fe2e72357d83388e9d8886",
+      "sizeBytes": 1510
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/group-by/renderer/number-group.ts",
+      "sha256": "7adbbcd6774efc98c98dccd82aac3cbf4cfb1a58e7efeb18d423b336f0d99e22",
+      "sizeBytes": 1605
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/group-by/renderer/select-group.ts",
+      "sha256": "e083c3cdea54badf358cff1dc51714d35adfae1e354568aa3a036c8d1938957d",
+      "sizeBytes": 3015
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/group-by/renderer/string-group.ts",
+      "sha256": "f6f98f181a5dd35ff8b54566629c3c6785d2b8532fa53551dc0a19249c095d78",
+      "sizeBytes": 1241
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/group-by/setting.ts",
+      "sha256": "6564c059802401e7abea8bbcffa137466e7183192504f6b625637a64e2b26faa",
+      "sizeBytes": 18639
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/group-by/trait.ts",
+      "sha256": "895256fd1483cecbbaa621da981174e5cb7ee2ab6257ecfd75f0ca77c8cbef28",
+      "sizeBytes": 15347
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/group-by/types.ts",
+      "sha256": "ac43eb588e93e98c36456c2402ff48ec0dfb2d5df4540ec72f965b95c4384739",
+      "sizeBytes": 1289
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/index.ts",
+      "sha256": "5acf9cf75b0e0a252f41931843f86f94348a0dc193b08aa1f72a4903fa8cdf8a",
+      "sizeBytes": 543
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/logical/composite-type.ts",
+      "sha256": "1f7d2e8b05c2330cb7e8646d603f6b6fdf65705a86e79bdaa3d5bd4665cd6b5f",
+      "sizeBytes": 3258
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/logical/data-type.ts",
+      "sha256": "c8fa165b098bc433d1cb1d943f01a968ddad860c4f53587d0138d97a626f4724",
+      "sizeBytes": 1828
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/logical/index.ts",
+      "sha256": "d3ff408837b46a425c1cf529ecc0d14203f5b747f2a2a1f88215bddad580bccb",
+      "sizeBytes": 96
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/logical/matcher.ts",
+      "sha256": "0b0f2c6056a8a1e8eec5a5ee05c237a5b57ce872ace91fcfaa34ce9c2aef2553",
+      "sizeBytes": 2650
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/logical/type-presets.ts",
+      "sha256": "dffd627a39fbaee95039a5faff0765d37088e83a4216745127b0f0969d7f9d46",
+      "sizeBytes": 2271
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/logical/type-system.ts",
+      "sha256": "91c0ec85a4f21ff0f51bf88fdcebe15c8ce040f966a15ca3a631522181c4eec5",
+      "sizeBytes": 4679
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/logical/type-variable.ts",
+      "sha256": "486fa5ac763c77dabfefaff88308d620e98680adea1ae580a8f6d32973b9f38f",
+      "sizeBytes": 1872
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/logical/type.ts",
+      "sha256": "01b8f817b4c400ae0ab2f817edddc9c84c98ea98be570bf2711eb1b78f0b87f7",
+      "sizeBytes": 961
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/property/base-cell.ts",
+      "sha256": "e2913be495a9b5ffa78a1bcc612859d60f39dd4978db156ef65f244c64aa0591",
+      "sizeBytes": 3001
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/property/convert.ts",
+      "sha256": "9a87e35c15c359db493bf4ec5ed0ae7a9f6ade8435752bfe198099d35e56e200",
+      "sizeBytes": 795
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/property/index.ts",
+      "sha256": "185084d326bb1e4bb7567abae7f43629cc0ac740ba8a7c8b8321382b84aa9a13",
+      "sizeBytes": 189
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/property/manager.ts",
+      "sha256": "7ab0e3a51fe2f56180668d9a9e523879187b566c32c9967ddf75a6abae76f78e",
+      "sizeBytes": 1107
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/property/property-config.ts",
+      "sha256": "1e57f6c834b8d6b321dd7ab97a5532b448c72e00c3e9bed4c7d9111a9afcc326",
+      "sizeBytes": 2142
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/property/renderer.ts",
+      "sha256": "fd2f2d73b3f7dd6a825355a38f34e46e68ffc9c0eec443344b3ea43f59e878db",
+      "sizeBytes": 851
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/property/types.ts",
+      "sha256": "1406ecd6f9ea703224fbdd8c760d8dfaaa046b6ed1ae344ed31f376bcf2f278b",
+      "sizeBytes": 2450
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/property/utils.ts",
+      "sha256": "d0cb49b71b2c06e0d65b898eb2d74944482d44cc8cd1225c983f0fe0bedf8813",
+      "sizeBytes": 673
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/sort/add-sort.ts",
+      "sha256": "99bb4e46f35b33c59f58a7454662a54ab8a8046dd96cbc71d6ee5b461dbbb15a",
+      "sizeBytes": 1424
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/sort/eval.ts",
+      "sha256": "637ae199b487748b9b525ef135e2c1b32023d8cff98d9c04906d9ca757ec02f0",
+      "sizeBytes": 5223
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/sort/manager.ts",
+      "sha256": "8f14237339bf65fc38acdaaa76188755e988ce68a44e058fc7eca0ce600bb058",
+      "sizeBytes": 1124
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/sort/types.ts",
+      "sha256": "fed7098d46ca0e8d252528710d789df84c8ab1b4d6d866eb9114eb815686fb79",
+      "sizeBytes": 193
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/sort/utils.ts",
+      "sha256": "d01a97dde432c01dcde2736d786ca2efc13a51cc52038f78642998b0ddfa28db",
+      "sizeBytes": 3270
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/statistics/any.ts",
+      "sha256": "c8f6ec86c141e715dde9822e755dc9ff4db8ea20b2844b68165b053a5da13e4e",
+      "sizeBytes": 2995
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/statistics/checkbox.ts",
+      "sha256": "9c4a54bcff09aaeb092e3a46c51ecbe0562780c1c6825d83558499564ac2f634",
+      "sizeBytes": 1811
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/statistics/create.ts",
+      "sha256": "59e7ed1a2611fafd0891541021770158dde787be3c0f8e7a93e84a955f5d9b53",
+      "sizeBytes": 230
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/statistics/index.ts",
+      "sha256": "ce0c45d2dee99a5698f74fc2a93acae7d2ef26b5c74cc53733677a7c2032e8b1",
+      "sizeBytes": 358
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/statistics/number.ts",
+      "sha256": "31b0aeca79169d291a79dee5d63e8c217d2c2d5d1baf9e26e03586abac518c1f",
+      "sizeBytes": 3406
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/statistics/types.ts",
+      "sha256": "1510f25a0b7234ea3f6f69f403df54890edcd5069896d1f617449b9c054bb57d",
+      "sizeBytes": 530
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/traits/key.ts",
+      "sha256": "511b74293bdac4993b5e1e46321ef1d4b40845639c9ee29e9412554bc4546ee2",
+      "sizeBytes": 167
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/types.ts",
+      "sha256": "f077f3ef3a7179a58a8a1820a51539d19d9fd477cd930c3c94b0ee991eabe765",
+      "sizeBytes": 476
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/auto-scroll.ts",
+      "sha256": "87b427fc2566774578733effc58b7d0e7d0bbc39563a78fdccec66d4011a14e0",
+      "sizeBytes": 1933
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/cache.ts",
+      "sha256": "357ab257d30549ed3beb10d5b0729f562eac85fa2f5a7fa377ac79be0de7a7da",
+      "sizeBytes": 756
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/drag.ts",
+      "sha256": "d08072b0026bcf5acc4d84c2a0f5fae46dc7d91a7239bb28bf867d149bfd81a9",
+      "sizeBytes": 1648
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/event.ts",
+      "sha256": "06e2e476a5a54b86a15a3ffa61c2fd553dc33778873817a1afd282b70e5a4e72",
+      "sizeBytes": 77
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/index.ts",
+      "sha256": "066b4df26bbc187d10125bf21090314350f71fb1d31eae1d071f5ed18383dd4f",
+      "sizeBytes": 100
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/lazy.ts",
+      "sha256": "f3db959b179e7061f20d81af49be4421578cfba2e9f731f994b701127bc39743",
+      "sizeBytes": 222
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/lock.ts",
+      "sha256": "4c421d97cc808a97c3bc91d9127eec628cd82e2740103624c078248c421da9fd",
+      "sizeBytes": 384
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/menu-title.ts",
+      "sha256": "ad39e4f7e07a97e1fa81f79990f2a358f6ddfdfa6766563d1733f7450d6f1a67",
+      "sizeBytes": 607
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/uni-component/index.ts",
+      "sha256": "1c93210d2faac2b3364cbed6bfa654da7d7597da4daab37ff6a8937ffbabb8e2",
+      "sizeBytes": 68
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/uni-component/operation.ts",
+      "sha256": "cfa9004eb4dd8f8f8069373752e41f803dc2ca8b32a7af144f67e772258b2beb",
+      "sizeBytes": 429
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/uni-component/render-template.ts",
+      "sha256": "b35487b696462d109f0582d58955b15ae06406ecbe9ca18667637c53f7f6d365",
+      "sizeBytes": 688
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/uni-component/uni-component.ts",
+      "sha256": "0558e5655332f0de2132dbe56be5b8c5c9c70bb6c50b6038b56592a882a28069",
+      "sizeBytes": 3897
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/uni-icon.ts",
+      "sha256": "643925aee48978758d49bb4e79162818b05d9af331d3cfda657f2273f2cb869c",
+      "sizeBytes": 1032
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/utils.ts",
+      "sha256": "c5ee1b0433ff1161d810f29121ba1925ceb80265ae2177e2f7e0bf1afee838b7",
+      "sizeBytes": 1236
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/dnd-context.ts",
+      "sha256": "0fc1a82b160799c1e5569e23d5faeb4463977a4a76f802693fd604e2c9de3836",
+      "sizeBytes": 15343
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/sensors/index.ts",
+      "sha256": "ed6769e593e758f46b062600648267622e0de60f018433aad337821826e4b3e8",
+      "sizeBytes": 139
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/sensors/mouse.ts",
+      "sha256": "3f642b485d490ab2fd7e2196b702f7ef7123fab7960d2e75f02717f65cb006d4",
+      "sizeBytes": 6104
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/sort/sort-context.ts",
+      "sha256": "15970e0aead850155f8d0f4cdfc073a956ffd7f162d2393039c1c8f2c59ca4a5",
+      "sizeBytes": 2667
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/sort/strategies/horizontal-list-sorting.ts",
+      "sha256": "aefc5af192e416b75cdc8dadc0e4139ecf488d8ee2888739c103e4e302775b57",
+      "sizeBytes": 2171
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/sort/strategies/index.ts",
+      "sha256": "ff0901d3445afbec91367aee56f0e49282b7bf156192d7105a3c6def27e3fa4c",
+      "sizeBytes": 152
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/sort/strategies/vertical-list-sorting.ts",
+      "sha256": "beeb25056b50507160c3f2be09aae0f889ceb24f500ba348216434ef480fcc0c",
+      "sizeBytes": 2122
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/types.ts",
+      "sha256": "8f6828fdd181532b769d95a903b262ebafd3d3dd9726ef27b084ad1345565656",
+      "sizeBytes": 2817
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/utils/adjustment.ts",
+      "sha256": "beceaba10c5eb5d4b15f1d13a488aff2bcc795b40c76b3adc172ffea8b983103",
+      "sizeBytes": 714
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/utils/apply-modifiers.ts",
+      "sha256": "ea0ef20d119af90ba7f262092802f873f21bbb863450b8a656cb38b91d341839",
+      "sizeBytes": 421
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/utils/array-move.ts",
+      "sha256": "3fac2ca6cbe8a876c757723837ff262478981092332f5ed62f353f87e2773ce8",
+      "sizeBytes": 404
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/utils/closest-center.ts",
+      "sha256": "d17bb27740b1e950f01fb042eaa1ca6f28cdbc5c527877187be0ebef50dd0379",
+      "sizeBytes": 1131
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/utils/data-directive.ts",
+      "sha256": "9a19311575f8dcfe7386f920e100ff4c1487ca3c71b33af919093b40d054162f",
+      "sizeBytes": 716
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/utils/distance-between-points.ts",
+      "sha256": "0bf99dfa89a97ebfe7215c2f888ef185a5d824e58a4a779c076c447120d41976",
+      "sizeBytes": 243
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/utils/element.ts",
+      "sha256": "899320da1feccbe281b8161e32afa6bc149ff431e8ffc6ea398ee1ed6f22abe0",
+      "sizeBytes": 132
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/utils/events.ts",
+      "sha256": "60687a7c67aac3459121815e7106aba8314ccc13f39493bd515b7a4e2dc2fe1d",
+      "sizeBytes": 161
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/utils/get-scrollable-ancestors.ts",
+      "sha256": "9e8d5b796bd4fc93a05a342a5cc040599f3b6d1c9f87a32cd35660b4be7d994c",
+      "sizeBytes": 1545
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/utils/has-exceeded-distance.ts",
+      "sha256": "9b0c7027e1d059fdff3051cd6dcd8ecdd4e65c910df59f8719e0524563c6eeba",
+      "sizeBytes": 597
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/utils/linear-move.ts",
+      "sha256": "966445615bc46cc129223e4d0f669acc1f3aa6fe7eec5c8c2b2d678e1cbed6ac",
+      "sizeBytes": 1875
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/utils/listeners.ts",
+      "sha256": "4f0c4648ab801935eedadac5a987ec0cd322533509a4aff4f024319738eba824",
+      "sizeBytes": 569
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/utils/raf.ts",
+      "sha256": "eff17324b10e42b707d744d93c780193adc27ecee25234bbe307866552dfbaec",
+      "sizeBytes": 526
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/utils/rect-adjustment.ts",
+      "sha256": "6ecfa4b501b0e1fd5fd44912a0e7a356d592da2fa513d151edcffcb8fa162910",
+      "sizeBytes": 333
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/utils/rect.ts",
+      "sha256": "4aa3afb443ec6a50c58601fdc808d9827527b9993d897676a71ae8bb6ea53e99",
+      "sizeBytes": 309
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/utils/wc-dnd/utils/signal.ts",
+      "sha256": "9d77f269345800113bfb55bb15e149ac3e457d0511d2f2845661de1abef6d278",
+      "sizeBytes": 372
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/view-manager/cell.ts",
+      "sha256": "569698d1fdd0822b8d1e729016dd8240ffb9673f486d7787a3005d0364c5266a",
+      "sizeBytes": 3277
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/view-manager/index.ts",
+      "sha256": "ac91402bc5d2a94c5b046f8e2d093c6c3a9547a43708caf64e2cc6fe297a085c",
+      "sizeBytes": 144
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/view-manager/property.ts",
+      "sha256": "ab902cd4ebecc46c43a91636cc91a490cdf5b8c19b7abf78da2329ff001eb8eb",
+      "sizeBytes": 7177
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/view-manager/row.ts",
+      "sha256": "1038d243b0a6bdc05b5a01329695d7d93a1837cf2510a356c7aa3b5a505b2e6c",
+      "sizeBytes": 1555
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/view-manager/single-view.ts",
+      "sha256": "e30d1fc1b6b5338cf64de9b33ed9c54042bb74bdcab92909bde876c11193fade",
+      "sizeBytes": 7455
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/view-manager/view-manager.ts",
+      "sha256": "a39d9d9538a509daa2ae2d3affb6d32d479cce1b0b7f579088f16a3abf30a72f",
+      "sizeBytes": 3365
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/view/convert.ts",
+      "sha256": "569320485a72e41fbfa6d15efd188305fafaef1034c7b6c291efdb0b67678b10",
+      "sizeBytes": 648
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/view/data-view-base.ts",
+      "sha256": "35107fceef03f41e6b891c61e615b8fe2eb39c1df1bd7e1898cc3f44c9faccd4",
+      "sizeBytes": 3382
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/view/data-view.ts",
+      "sha256": "79b4ddfc9efcb8e5b77355664e9caed11c6e80847e41ab7c7ce14889cbbaaa30",
+      "sizeBytes": 2136
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/view/index.ts",
+      "sha256": "865cd6a4031150c5a99978a3be8ef23847303cd184f5b75cd286e0dff09286c7",
+      "sizeBytes": 127
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/view/types.ts",
+      "sha256": "e6debbc8d61d8b044c0895528f56657a4b18943250cfd9a8bd55c79662219519",
+      "sizeBytes": 1381
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/widget/index.ts",
+      "sha256": "e9b7713e6b98b868101a342a9e61bae68cba5f20b8bb214a3e5ef1b015cadb22",
+      "sizeBytes": 28
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/widget/types.ts",
+      "sha256": "6718b164793562d89cce8da646d9fdea076bb5cff553bef31f8c6fa408faddb4",
+      "sizeBytes": 338
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/core/widget/widget-base.ts",
+      "sha256": "ed3ebb66fe2014626899bb47e2cb2d0f2492e43392f4751aabe87f05ff484ee7",
+      "sizeBytes": 746
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/effects.ts",
+      "sha256": "e3a9ba0362fbbbc78424fb5c146de06c8b70189b5c6e195dde5d43350ee1432e",
+      "sizeBytes": 375
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/index.ts",
+      "sha256": "a06db219f83fd299973856c648293bcfca1f606a2617b7750f75b13dd28ca5fd",
+      "sizeBytes": 33
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/checkbox/cell-renderer.ts",
+      "sha256": "7bb632398f8ed97ee1e7cf9829c6d97b453596886e66524ff2bf5b16f8c185f6",
+      "sizeBytes": 3412
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/checkbox/define.ts",
+      "sha256": "8aa659e843d87909037a407c3e6ce46cef930335f76ee48f1f2b2010f4f307c8",
+      "sizeBytes": 1045
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/converts.ts",
+      "sha256": "6cbd3cd95b78f348ce0ecc2dd94977687d3d0894aa3d9bf348af3b7bc031c4ea",
+      "sizeBytes": 1253
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/date/cell-renderer-css.ts",
+      "sha256": "cc06f0a0eeffc5450718ac2c171f9ea9697385d929d3f4f142dedd0295c1007b",
+      "sizeBytes": 903
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/date/cell-renderer.ts",
+      "sha256": "74da0c5702e6fa0325ad3cebfc15388e65e3f9e504b9cd7fa41e985b3e5871bd",
+      "sizeBytes": 5120
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/date/define.ts",
+      "sha256": "6277aadb3b5819b371c59b67296cfe3aa1acc86a79d8d22223f4c0ba1a32c25b",
+      "sizeBytes": 933
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/effect.ts",
+      "sha256": "97b804ff0454313cf3bc8601b67c514f777c32cffb5f0bf1770c96c4213c547f",
+      "sizeBytes": 1056
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/image/cell-renderer.ts",
+      "sha256": "3de104aec75b328ce68a9cad868f3cbbad416ec437fd126a89c3880b01094f4d",
+      "sizeBytes": 878
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/image/define.ts",
+      "sha256": "175e38fa8aded793299d8575534d585188905f47b533fcd0f2c8dd0e0a6c291a",
+      "sizeBytes": 807
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/index.ts",
+      "sha256": "d5b80222e2ccf390cdb0cdb6f6e4b2fe7178e89375f5ce87eac0bb439f4229d3",
+      "sizeBytes": 872
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/multi-select/cell-renderer-css.ts",
+      "sha256": "989221f033291b53939b9134e77e1b4028df7cbaf14cda40d4ad53a1a6361af5",
+      "sizeBytes": 483
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/multi-select/cell-renderer.ts",
+      "sha256": "21574f8efb75739d2bf6fc04e8c73700b42fe2e4bde8a19813330d559f3fa768",
+      "sizeBytes": 2615
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/multi-select/define.ts",
+      "sha256": "71ca12dd149442df4574ceb417db70bbd1300c21f7a31ca2c7dd01db6a20a3a5",
+      "sizeBytes": 2295
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/number/cell-renderer-css.ts",
+      "sha256": "93f9aeab58516baaffc2b067580c61eddb6458ee3fc8df828b4e131e875a5503",
+      "sizeBytes": 980
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/number/cell-renderer.ts",
+      "sha256": "539d70fb5eeea441d2f43c05f9b2af4f8765f1ea7b9ffaadf3d6f6e576b65289",
+      "sizeBytes": 3228
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/number/define.ts",
+      "sha256": "60e7da28cc801458836c35292019bb51ef4bce548b93f5245efaaa69a0b0cde4",
+      "sizeBytes": 1058
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/number/index.ts",
+      "sha256": "e9b7713e6b98b868101a342a9e61bae68cba5f20b8bb214a3e5ef1b015cadb22",
+      "sizeBytes": 28
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/number/types.ts",
+      "sha256": "c2a0481ba3e0d81279c6fd357e842695f40b72dceb96e895aa8deb405a898104",
+      "sizeBytes": 280
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/number/utils/formats.ts",
+      "sha256": "3789132c4682e6df0d694db58dc857431632ad68ecc0092bf6b35c147563fde6",
+      "sizeBytes": 783
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/number/utils/formatter.ts",
+      "sha256": "e47be141ae78ac034734458ab5d833d16f2e0517ff5ac8a4aeb1f5815982a657",
+      "sizeBytes": 3195
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/progress/cell-renderer-css.ts",
+      "sha256": "a78977c0f2a11fb435f5d7d7a2e4f86a8668f8012c759e79d52f1b9f6f8fb8dc",
+      "sizeBytes": 1211
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/progress/cell-renderer.ts",
+      "sha256": "434beab4ac64bdbec51738c4ba1be3b1d0157a802f53b08054933b8fe4d51377",
+      "sizeBytes": 4421
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/progress/define.ts",
+      "sha256": "8fd50aed112b9e5ee348ebcc1552b5e397d8e177b1d3a37f08b6bda9fcaefb9f",
+      "sizeBytes": 818
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/pure-index.ts",
+      "sha256": "6cc10554c7035d7d8f1620731ce62132b03dd0779f9d1af81d86994d1d4baa08",
+      "sizeBytes": 799
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/select/cell-renderer-css.ts",
+      "sha256": "384b5aef327d92aa35404b5f67b803952d4e51f9287a68266cd701998c7f02c5",
+      "sizeBytes": 508
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/select/cell-renderer.ts",
+      "sha256": "b10b531a14c45b19436485f5a70060b50f39eeb5859160e9f024f2bb361d7dc0",
+      "sizeBytes": 2404
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/select/define.ts",
+      "sha256": "5c2a12b39c464dd7daa34a05e8f465a91e8e916e389ff3b88127a536f50ae774",
+      "sizeBytes": 2135
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/text/cell-renderer-css.ts",
+      "sha256": "08a3c4322e25bb4bf4a88715e33cbe814d20d7ce5c86549b5aef4f77ac5bdc1c",
+      "sizeBytes": 1036
+    },
+    {
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets/text/cell-renderer.ts",
+      "sha256": "76e91988788549f234efa632b564c685382df491968540afcdcb2621ed16030c",
+      "sizeBytes": 1730
+    }
+  ],
+  "inputFingerprint": "bbf386b21b4d7ca0cc23acb226b1951d7569e4e6634fb3a4dc90cfd018714c94",
+  "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0002.json",
+  "outputSha256": "dde18db9828803c215da53b2a322bcaaf4659b6e9f1dd73362cc3a8fb84cb40f",
+  "nodeCount": 2800,
+  "edgeCount": 8147,
+  "inputTokens": 0,
+  "outputTokens": 0,
+  "cacheDecision": "REEXTRACTED",
+  "cacheInvalidationReason": "input fingerprint changed",
+  "completedAt": "2026-07-28T10:25:35.635Z"
+}

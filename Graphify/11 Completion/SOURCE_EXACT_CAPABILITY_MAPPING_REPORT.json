@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:16:59.549Z",
+  "capabilityCount": 161,
+  "expansionCapabilityCount": 51,
+  "capabilitiesAudited": 161,
+  "capabilitiesWithExactSymbolsBefore": 161,
+  "capabilitiesWithExactSymbolsAfter": 161,
+  "capabilitiesMarkedPlannedAddition": 51,
+  "emptySymbolFieldsRemaining": [],
+  "emptyAnchorFieldsRemaining": [],
+  "emptyRuntimeRegistrationFieldsRemaining": [],
+  "emptyConfigurationReferenceFieldsRemaining": [],
+  "falseKeywordMappingsRemoved": [
+    "Stripe",
+    "RevenueCat",
+    "AI mini-mindmap",
+    "Google Calendar core"
+  ],
+  "legacyCapabilitiesChanged": [],
+  "pathMismatchesRemaining": [],
+  "symbolMismatchesRemaining": [],
+  "nonexistentPathsRemaining": [],
+  "canvasMappingVerdict": "VERIFIED — Core Edgeless surface model/service mapped; AI copilot excluded.",
+  "mindmapMappingVerdict": "VERIFIED — BlockSuite manual mindmap element/gfx mapped; AI Copilot excluded.",
+  "calendarMappingVerdict": "VERIFIED — Local data-view calendar mapped; GCal/CalDAV isolated as optional adapters.",
+  "financeMappingVerdict": "VERIFIED — Reusable DB block & local SQLite mapped; Stripe/RevenueCat excluded.",
+  "stableIdentityMappingVerdict": "VERIFIED — Workspace/page/block IDs mapped; visual Find-in-page excluded.",
+  "knowledgeLinkingMappingVerdict": "VERIFIED — Explicit links/backlinks/tags mapped; cloud AI search excluded.",
+  "fileBackedRecoveryMappingVerdict": "VERIFIED — Local file storage/SQLite mapped; app deletion recovery marked planned.",
+  "codebaseModified": false
+}

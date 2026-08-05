@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "project": "MindRoom",
+  "note": "On Windows, status.json and STATUS.json resolve to the same physical file. The Master Plan mandates lowercase status.json as canonical. ",
+  "canonicalStatusPath": "Graphify/00 Execution Control/status.json",
+  "competingStatusFiles": [],
+  "duplicateStatusFiles": [
+    {
+      "path": "Graphify/00 Execution Control/STATUS.json",
+      "classification": "SAME_FILE_ON_WINDOWS_CASE_INSENSITIVE_FS",
+      "mutationPolicy": "PRESERVE — resolves to canonical status.json on Windows"
+    }
+  ],
+  "authorityRule": "Only lowercase status.json is authoritative for current execution state. No other JSON file in 00 Execution Control/ controls current state.",
+  "repairedAt": "2026-07-30T18:02:52.477Z",
+  "processControlRepaired": true
+}

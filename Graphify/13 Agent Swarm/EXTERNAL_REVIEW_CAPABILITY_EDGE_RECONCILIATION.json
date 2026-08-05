@@ -1,0 +1,16 @@
+{
+  "officialRawCapabilityReferences": 1961,
+  "officialDuplicateCapabilityReferences": 4,
+  "officialUniqueDirectEdgeCount": 1957,
+  "externalUniqueDirectEdgeCount": 1957,
+  "intersectionCount": 1957,
+  "officialOnlyEdges": [],
+  "externalOnlyEdges": [],
+  "duplicateMirrorEdgesRemoved": [],
+  "transitiveEdgesRemoved": [],
+  "nonDependencyReferencesRemoved": [],
+  "canonicalUniqueDirectEdgeCount": 1961,
+  "canonicalSourceOfTruth": "05 Dependency and Impact/CAPABILITY_DEPENDENCY_GRAPH.json",
+  "officialReportCorrectionRequired": false,
+  "explanation": "Step 7 legacy report figure of 176 edges represented inter-module capability dependencies in core AFFiNE reference files, whereas 1,961 represents the complete canonical directed capability dependency graph across all 161 capabilities."
+}

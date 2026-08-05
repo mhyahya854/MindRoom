@@ -1,0 +1,221 @@
+{
+  "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+  "policyVersion": "mindroom-graphify-v2-layered-directed-2",
+  "rustResolution": {
+    "expectedLocalModDeclarations": 150,
+    "discoveredLocalModDeclarations": 150,
+    "resolvedLocalModDeclarations": 150,
+    "unresolvedLocalModDeclarations": 0,
+    "expandedUseLeaves": 2212,
+    "resolvedLocalUseLeaves": 851,
+    "resolvedExternalUseLeaves": 1361,
+    "sameFileNamespaceEdgesSuppressed": 17,
+    "rustFileSelfLoops": 0,
+    "assertions": {
+      "allExpectedModDeclarationsDiscovered": true,
+      "allLocalModDeclarationsResolved": true,
+      "zeroRustFileSelfLoops": true
+    },
+    "cargoWorkspace": {
+      "cargoManifestCount": 9,
+      "cargoPackageCount": 8,
+      "expectedWorkspaceMemberManifestEdges": 7,
+      "emittedWorkspaceMemberManifestEdges": 7,
+      "emittedWorkspaceMemberPackageEdges": 7,
+      "expectedLocalWorkspaceDependencyManifestEdges": 10,
+      "emittedLocalWorkspaceDependencyManifestEdges": 10,
+      "emittedLocalWorkspaceDependencyPackageEdges": 10,
+      "assertions": {
+        "allWorkspaceMembersLinked": true,
+        "allLocalWorkspaceDependenciesLinked": true,
+        "allWorkspaceMembersResolveToCargoPackages": true,
+        "allLocalWorkspaceDependenciesResolveToCargoPackages": true
+      }
+    }
+  },
+  "cargoWorkspaceResolution": {
+    "cargoManifestCount": 9,
+    "cargoPackageCount": 8,
+    "expectedWorkspaceMemberManifestEdges": 7,
+    "emittedWorkspaceMemberManifestEdges": 7,
+    "emittedWorkspaceMemberPackageEdges": 7,
+    "expectedLocalWorkspaceDependencyManifestEdges": 10,
+    "emittedLocalWorkspaceDependencyManifestEdges": 10,
+    "emittedLocalWorkspaceDependencyPackageEdges": 10,
+    "assertions": {
+      "allWorkspaceMembersLinked": true,
+      "allLocalWorkspaceDependenciesLinked": true,
+      "allWorkspaceMembersResolveToCargoPackages": true,
+      "allLocalWorkspaceDependenciesResolveToCargoPackages": true
+    }
+  },
+  "tsconfigResolution": {
+    "configCount": 121,
+    "parseFailures": [],
+    "extendsEdgeCount": 120,
+    "effectivePathMappingCount": 121,
+    "projectReferenceEdgeCount": 896,
+    "affineCoreSubpathImportCount": 1947,
+    "affineCoreSubpathResolvedToInternalFileCount": 1947,
+    "representativeSpecifier": "@affine/core/modules/storage",
+    "representativeResolvedPath": "Codebase/packages/frontend/core/src/modules/storage/index.ts",
+    "representativeEvidence": [
+      "tsconfig: Codebase/tsconfig.json",
+      "exact case-sensitive paths mapping: @affine/core/* -> ./packages/frontend/core/src/*",
+      "wildcard substitution: modules/storage",
+      "resolved target: Codebase/packages/frontend/core/src/modules/storage/index.ts"
+    ],
+    "assertions": {
+      "allAffineCoreSubpathsResolveToInternalFiles": true,
+      "representativeStorageSubpathResolved": true,
+      "caseSensitiveWildcardMappingUsed": true,
+      "noTsconfigParseFailures": true
+    }
+  },
+  "sqlForeignKeyResolution": {
+    "foreignKeyCount": 102,
+    "createScopedCount": 9,
+    "alterScopedCount": 93,
+    "validSchemaSelfReferenceCount": 1,
+    "validSchemaSelfReferences": [
+      {
+        "edgeId": "MR-EDGE-947595132ffef2b5f2802a84",
+        "path": "Codebase/packages/backend/server/migrations/20260711080000_auth_sessions/migration.sql",
+        "line": 44,
+        "scopeKind": "ALTER TABLE",
+        "sourceTable": "auth_refresh_tokens",
+        "targetTable": "auth_refresh_tokens",
+        "recursiveStatus": "VALID_SCHEMA_SELF_REFERENCE"
+      }
+    ],
+    "falseSelfReferences": 0,
+    "assertions": {
+      "allForeignKeysHaveStatementSourceScope": true,
+      "onlyAuthRefreshTokensIsRecursive": true
+    }
+  },
+  "runtimeRegistrationScan": {
+    "scannerPolicy": "LANGUAGE_FILE_ROLE_AND_RECOGNIZED_RUNTIME_CONSTRUCT",
+    "scannedAuthoredCodeFiles": 6086,
+    "suppressedNonCodeFiles": 3063,
+    "suppressedTestFixtureOrConfigFiles": 931,
+    "suppressedAmbiguousPathPropertyCandidates": 0,
+    "packageSwiftPathLiteralsSuppressed": 4,
+    "registrationCount": 643,
+    "registrationTypeCounts": {
+      "DI_REGISTRATION": 408,
+      "WORKER_REGISTRATION": 10,
+      "SCHEMA_REGISTRATION": 3,
+      "ROUTE_REGISTRATION": 82,
+      "GRAPHQL_RESOLVER": 45,
+      "BACKGROUND_JOB": 21,
+      "MENU_REGISTRATION": 5,
+      "APPLICATION_EVENT": 10,
+      "IPC_REGISTRATION": 3,
+      "PROTOCOL_REGISTRATION": 1,
+      "PRELOAD_EXPOSURE": 4,
+      "IPC_EVENT_LISTENER": 4,
+      "COMMAND_REGISTRATION": 47
+    },
+    "consumerCoverage": 641,
+    "capabilityCoverage": 116,
+    "entrypointCoverage": 639,
+    "assertions": {
+      "zeroPackageSwiftRoutes": true,
+      "zeroPodfileLockConfigRoutes": true,
+      "zeroUrlOrCommentRoutes": true,
+      "zeroPlaceholderIdentifiers": true,
+      "allDiscoveryFieldsContractValid": true
+    }
+  },
+  "astCacheIngestion": {
+    "cacheRoot": "Graphify/00 Execution Control/Generated Tool Cache/v2/mindroom-graphify-forensic-finalization-20260730-150956/ast",
+    "rawMergedPath": "Graphify/00 Execution Control/Generated Tool Cache/v2/mindroom-graphify-forensic-finalization-20260730-150956/ast/GRAPHIFY_RAW_MERGED.json",
+    "rawMergedSha256": "a41d9468ccdc42c888ce8c08d7e3e472d2c8db5914f849d2354d1f62187594d0",
+    "extractionManifestSha256": "80978045e8499008bfd7e3a907f18392eea7c0b18c4bf23b9584cb4801321d4d",
+    "mergeReceiptSha256": "8e83d6dfa0edffd633cff12d4ff22d24b820bb363dd7b3c39d0952ebbb687c43",
+    "batchCount": 24,
+    "verifiedBatchCount": 24,
+    "partitionLayers": {
+      "AUTHORED_RUNTIME": 6647,
+      "BUILD_AND_CONFIG": 125,
+      "GENERATED_BINDING": 427,
+      "MIGRATION_AND_SCHEMA": 149,
+      "PACKAGING_AND_DEPLOYMENT": 5,
+      "TEST_AND_FIXTURE": 748
+    },
+    "rawNodeCount": 45489,
+    "rawEdgeCount": 146434,
+    "emittedDependencyEdgeCount": 25463,
+    "symbolEdgeCount": 4281,
+    "emittedRelationCounts": {
+      "CLASS_INHERITANCE": 389,
+      "FUNCTION_CALL": 8040,
+      "RE_EXPORT": 637,
+      "STATIC_IMPORT": 11293,
+      "TYPE_DEPENDENCY": 5104
+    },
+    "unmappedRawEdgeEndpointCount": 15926,
+    "sameEndpointEdgesSuppressed": 6148,
+    "languageAwareImportDuplicatesSuppressed": 61425,
+    "crossLanguageEdgesSuppressed": 0,
+    "localBindingEdgesSuppressed": 12,
+    "assertions": {
+      "mergeReceiptHashesValid": true,
+      "allBatchHashesValid": true,
+      "batchPartitionCountsValid": true,
+      "freshRunIdMatches": true,
+      "symbolDependencyThresholdMet": true,
+      "activeDependencyOutputReadAsInput": false,
+      "languageAwareImportPrecedenceApplied": true,
+      "strictLanguageFamilySeparationApplied": true,
+      "localValueBindingCollisionGuardApplied": true
+    }
+  },
+  "v1EndpointReclassification": {
+    "inputUnresolvedEdgeCount": 31709,
+    "diagnosticRecordCount": 31709,
+    "preservedV1EvidenceAvailable": true,
+    "preservedV1EvidencePath": "Graphify/00 Execution Control/Generated Tool Cache/legacy-v1/V1_UNRESOLVED_ENDPOINTS_SNAPSHOT.jsonl",
+    "preservedV1DiagnosticSha256": "e94f61f28682325f786000b7367513a961195cc934f1e5f9f756a49e56e8bd1a",
+    "classificationCounts": {
+      "HISTORICAL_RUST_LOCAL_NAMESPACE_NOT_PROMOTED": 3,
+      "HISTORICAL_V1_IDENTIFIER_NOT_PROMOTED": 4397,
+      "RESOLVED_EXTERNAL_PACKAGE": 9461,
+      "RESOLVED_GENERATED_ARTIFACT": 19,
+      "RESOLVED_INTERNAL_FILE": 5989,
+      "RESOLVED_NODE_BUILTIN": 467,
+      "RESOLVED_WORKSPACE_PACKAGE": 11373
+    },
+    "remainingBlockers": 0,
+    "assertions": {
+      "oneDiagnosticPerInputUnresolvedEdge": true,
+      "dynamicClassificationsHaveComputedEvidence": true,
+      "activeDependencyOutputReadAsInput": false,
+      "resolvedEndpointsExist": true
+    }
+  },
+  "graphqlSemantics": {
+    "definitionCount": 199,
+    "operationAndFragmentNames": 199,
+    "schemaFileCount": 1
+  },
+  "semanticConfiguration": {
+    "sqlColumnCount": 974,
+    "sqlIndexCount": 216,
+    "migrationOrderEdgeCount": 114
+  },
+  "generatedProvenance": {
+    "registryPath": "Graphify/05 Dependency and Impact/Knowledge Graph/GENERATED_CODE_PROVENANCE.jsonl",
+    "recordCount": 428
+  },
+  "selfLoopClassification": {
+    "authoritativeLoopCount": 1,
+    "classifiedAuthoritativeLoopCount": 2,
+    "unclassifiedAuthoritativeLoopCount": 0,
+    "invalidAuthoritativeLoopCount": 0,
+    "authoritativeLoopEdgeIds": [
+      "MR-EDGE-947595132ffef2b5f2802a84"
+    ]
+  }
+}

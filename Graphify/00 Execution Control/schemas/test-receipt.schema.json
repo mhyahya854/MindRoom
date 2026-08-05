@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "receiptId",
+    "command",
+    "workingDirectory",
+    "packageManager",
+    "startedAt",
+    "finishedAt",
+    "exitCode",
+    "result",
+    "relevantOutput",
+    "failureClassification",
+    "repairApplied",
+    "rerunReceiptId"
+  ],
+  "properties": {
+    "exitCode": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "result": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED"
+      ]
+    },
+    "rerunReceiptId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "receiptId": {},
+    "command": {},
+    "workingDirectory": {},
+    "packageManager": {},
+    "startedAt": {},
+    "finishedAt": {},
+    "relevantOutput": {},
+    "failureClassification": {},
+    "repairApplied": {}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "invalidatedReviewRunId": "mindroom-independent-review-20260730-184813",
+  "timestamp": "2026-07-30T18:51:34.943Z",
+  "classification": [
+    "NON_INDEPENDENT",
+    "PREDETERMINED_OUTCOME",
+    "SUPERSEDED",
+    "NON_AUTHORITATIVE"
+  ],
+  "reasons": [
+    "The same execution context planned, authored, and executed the review.",
+    "Implementation plan declared all domains verified and decision APPROVED before review script ran.",
+    "No separate reviewer session or context isolation evidence was recorded.",
+    "Warning was not represented as a complete structured finding.",
+    "Graphify authoritative artifact immutability during review was not proven."
+  ],
+  "filesRetainedAsHistoricalEvidence": [
+    "Graphify/13 Agent Swarm/INDEPENDENT_ADVERSARIAL_REVIEW.json (invalidated)",
+    "Graphify/11 Completion/INDEPENDENT_REVIEW_REPORT.json (invalidated)"
+  ],
+  "approvalRevoked": true
+}

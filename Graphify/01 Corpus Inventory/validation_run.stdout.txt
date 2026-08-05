@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "codebaseGraphifyOutAbsent": true,
+  "paths": 12628,
+  "filesAndArchives": 10080,
+  "directories": 2548,
+  "packages": 134,
+  "markdown": 207,
+  "binaryRuntimeAssets": 1056,
+  "archives": 25,
+  "platformFiles": 893,
+  "outputSha256": {
+    "REPOSITORY_INVENTORY.jsonl": "93cabb4014e930f87dfecf705fc338e27085222ca8de3c8b3912876526961dc2",
+    "PACKAGE_INVENTORY.json": "151d2725c307fd7c246bb4c984578bd50787910b07a1e9db258c36e2af83a904",
+    "CORPUS_SUMMARY.md": "d89bfdab65c748cdd220958fe7dc400190621d05ca66bf3973ec859d4ddd28a1",
+    "MARKDOWN_MIGRATION_LEDGER.jsonl": "5d71b206db4215d5e234af415714a6344b965aacd391fb6964da181e07ce7f3c",
+    "BINARY_AND_RUNTIME_ASSET_INVENTORY.jsonl": "5e923e15a6e850dddfed973921520bcc20be30aaf82b76c19f7047e23f16a2df",
+    "ARCHIVE_INVENTORY.jsonl": "5ae2f79cec3558662f32ae6311a5e741f7690152ed4ca0ce6d1cea0365b94cb1",
+    "PLATFORM_FILE_INVENTORY.jsonl": "421ae40ae0cb0d3a9b13b97b91658dc67d7d18ccc9189d4cbd8f3bcd8c6bde52"
+  }
+}

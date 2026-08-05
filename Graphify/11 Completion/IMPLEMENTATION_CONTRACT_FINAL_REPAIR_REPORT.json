@@ -1,0 +1,17 @@
+{
+  "freezeRunId": "mindroom-graphify-final-freeze-authoritative-20260801-084203",
+  "timestamp": "2026-08-01T08:42:03+03:00",
+  "capabilityContractsRepaired": 161,
+  "taskContractsRepaired": 162,
+  "genericInitializeExecuteStatusOnly": 0,
+  "genericPlannedCapabilityScope": 0,
+  "normalizedTemplatesReusedMoreThanFiveTimes": 0,
+  "missingPublicOperations": [],
+  "missingDomainModels": [],
+  "missingInvariants": [],
+  "missingFailureModes": [],
+  "invalidAcceptanceTestReferences": [],
+  "capabilityContractWaveMismatches": [],
+  "taskContractWaveMismatches": [],
+  "manualHighFrequencyTemplateInspection": "No behavior template group exceeded five after IDs, names, paths, and waves were normalized."
+}

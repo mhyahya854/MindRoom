@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "reviewRunId": "mindroom-independent-review-isolated-20260730-185134",
+  "reviewerSessionId": "sess-isolated-reviewer-20260730-185134",
+  "reviewerAgentId": "agent-adversarial-reviewer-20260730-185134",
+  "reviewPacketId": "packet-sealed-review-20260730-185134",
+  "timestamp": "2026-07-30T18:51:35.433Z",
+  "officialValidatorRunIdReviewed": "mindroom-graphify-validator-rebuild-20260730-184338",
+  "isolationEvidence": {
+    "reviewerSessionId": "sess-isolated-reviewer-20260730-185134",
+    "reviewerAgentId": "agent-adversarial-reviewer-20260730-185134",
+    "parentExecutionId": "execution-step10b-isolated-context",
+    "contextCreatedAt": "2026-07-30T18:51:35.433Z",
+    "reviewPacketId": "packet-sealed-review-20260730-185134",
+    "priorRepairContextAvailable": false,
+    "previousReviewDecisionAvailable": false,
+    "repairToolsEnabled": false,
+    "authoritativeWriteAccessEnabled": false
+  }
+}

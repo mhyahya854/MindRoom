@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "project": "MindRoom",
+  "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+  "createdAt": "2026-07-30T15:10:24.486Z",
+  "status": "FROZEN_FOR_INDEPENDENT_REVIEW",
+  "artifactCount": 40,
+  "artifacts": [
+    {
+      "path": "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
+      "sizeBytes": 91393,
+      "sha256": "62519be4eff761b775de7c9d687f78a560e047240c8ca14e5d976f127349fd8a"
+    },
+    {
+      "path": "Graphify/Master Plan/02-EVERYTHING-WE-ARE-DELETING.md",
+      "sizeBytes": 69874,
+      "sha256": "2bb940586e484d79eca238ec5c13e960c711c0164123d8f172fd3eadab57502d"
+    },
+    {
+      "path": "Graphify/Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md",
+      "sizeBytes": 820661,
+      "sha256": "d9fa9a2fcd0b783db34c17f5e92bec793d2b53e88d902870c6c2ebe1f5a546ca"
+    },
+    {
+      "path": "Graphify/15 Processed Plan Snapshots/ORIGINAL_MASTER_PLAN_PRESERVATION_INVENTORY.json",
+      "sizeBytes": 2411512,
+      "sha256": "72340a537cfd1ead24f7d53a823aba6aef1f8bab76c8455ba94bb43c624c8eb8"
+    },
+    {
+      "path": "Graphify/15 Processed Plan Snapshots/MASTER_PLAN_PRESERVATION_REPORT.json",
+      "sizeBytes": 3810,
+      "sha256": "a3b725f7d4bb91e6076004468d07a524cba8fa87f05210e53f364200ca5abd2a"
+    },
+    {
+      "path": "Graphify/15 Processed Plan Snapshots/MASTER_PLAN_MANIFEST.json",
+      "sizeBytes": 18783,
+      "sha256": "1e7343e4f85c43cd4df16670f28d32a4b7a258deb7234973ced8fcd91fbba13b"
+    },
+    {
+      "path": "Graphify/03 Capability Map/CAPABILITY_REGISTRY.json",
+      "sizeBytes": 1654164,
+      "sha256": "122e08ecc5cf5cce92351de57707442f8277df202bc631d21a2cbe39bf251bce"
+    },
+    {
+      "path": "Graphify/03 Capability Map/REQUIREMENT_REGISTRY.jsonl",
+      "sizeBytes": 2515816,
+      "sha256": "cc30bb04968f197dece68295e80419ad6a9f9cf427a3e2a9990a25b6f5b11b0b"
+    },
+    {
+      "path": "Graphify/03 Capability Map/REQUIREMENT_TRACEABILITY_MATRIX.jsonl",
+      "sizeBytes": 1215264,
+      "sha256": "e120c24419fa5f3f40bba4a7a621711fd9d371eb9b55b90ff7f2080df39c9cde"
+    },
+    {
+      "path": "Graphify/03 Capability Map/CAPABILITY_SOURCE_SEARCH_RECEIPTS.jsonl",
+      "sizeBytes": 2558535,
+      "sha256": "5e9af820a2e5b6e516cb0a889b54e5f74dac1fa3123c0ab76416d267b363610e"
+    },
+    {
+      "path": "Graphify/03 Capability Map/CAPABILITY_EVIDENCE.jsonl",
+      "sizeBytes": 2921316,
+      "sha256": "6f837d67031c5f784c68fa7ae70d03041091d56507b0f90caa965eff19c9ae79"
+    },
+    {
+      "path": "Graphify/03 Capability Map/CAPABILITY_DEPENDENCY_ORDER.json",
+      "sizeBytes": 46338,
+      "sha256": "f8575a380365e8d6d19f48138c0a51e9ba5ed42b3fef5b5ef8b5c58cc591b46d"
+    },
+    {
+      "path": "Graphify/03 Capability Map/CAPABILITY_MAP.md",
+      "sizeBytes": 1195,
+      "sha256": "6c63691f673fa3ec337d39ff29d4253573f864b01321aa45cfecafb16c575e89"
+    },
+    {
+      "path": "Graphify/04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json",
+      "sizeBytes": 73312185,
+      "sha256": "0c9d4a7aab69555db4bea532dde618d683926798de6655cf47a3a765d2a3f937"
+    },
+    {
+      "path": "Graphify/04 Exact Location Registry/EXACT_LOCATION_COVERAGE.json",
+      "sizeBytes": 3186,
+      "sha256": "76d256c110a43c7e3bd80ea67d3702c51c9952bf82a5dd8fc88e964e03e444a0"
+    },
+    {
+      "path": "Graphify/04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl",
+      "sizeBytes": 1332187,
+      "sha256": "19d9081e2f1a2bf8499dafcb73cd712be4cf39f81afdf31eb855edc1883e93fe"
+    },
+    {
+      "path": "Graphify/04 Exact Location Registry/CHANGE_TRACEABILITY_MATRIX.jsonl",
+      "sizeBytes": 1634300,
+      "sha256": "d8091581c41cc9e94814bfaa1dd83820af8f6359ec8e22e05e77ab016c2bb513"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/CAPABILITY_DEPENDENCY_GRAPH.json",
+      "sizeBytes": 2443766,
+      "sha256": "817dfef1206e78c73d85edec9b054df5590301d1a51b62932aa398463abd1b0f"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/NODES.jsonl",
+      "sizeBytes": 45302175,
+      "sha256": "866f400211c6fa341b7dd4bd23fad8e53f090bdc6a5cfc56dd381d873d087e31"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/EDGES.jsonl",
+      "sizeBytes": 114232612,
+      "sha256": "eab3792a90c7744b5c5d8782ad34796cd0eb48c2f828da2671a861fb0b2d0433"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/graph.json",
+      "sizeBytes": 60102157,
+      "sha256": "88bdd6b4f246a6620f34fa2d2b13e3c20b43e6117ea79558888d5e1af831d49c"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+      "sizeBytes": 698,
+      "sha256": "3dfb446b566df007e182733c0805f8e25ab6d940cbddc6881b3dc4baae7f48a2"
+    },
+    {
+      "path": "Graphify/06 Folder Ownership/FOLDER_OWNERSHIP_MATRIX.json",
+      "sizeBytes": 9850654,
+      "sha256": "59f6037f1e621d44d4f9cc102f8c7ab88a7523a01a55247f9ec9ab8075364b40"
+    },
+    {
+      "path": "Graphify/06 Folder Ownership/CAPABILITY_TO_PATH_MAP.json",
+      "sizeBytes": 243050,
+      "sha256": "44cc855ce2522abae68fa0e193f89f1f7240f3228eceff31ee9c96a6d9659c69"
+    },
+    {
+      "path": "Graphify/06 Folder Ownership/TARGET_CODEBASE_TREE.md",
+      "sizeBytes": 8169,
+      "sha256": "5cb901bae05ab7eb4da29d4aca8c7ee6b950da4d9c03058fc2aeeed327dd7d7b"
+    },
+    {
+      "path": "Graphify/06 Folder Ownership/PACKAGE_BOUNDARY_PLAN.md",
+      "sizeBytes": 943,
+      "sha256": "61a1b9482db0861b2ca246017808344de383c25aabc1df58cd7be04bf51d3abd"
+    },
+    {
+      "path": "Graphify/06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl",
+      "sizeBytes": 452047,
+      "sha256": "eed0994fa62b21e070dbf1327505f6781450971a25e6cc930c089bf7e978f2c8"
+    },
+    {
+      "path": "Graphify/07 Reorganisation/REORGANISATION_LEDGER.jsonl",
+      "sizeBytes": 488459,
+      "sha256": "2207bd03e301b7e74e65708258387fc888442ca880b47c1414167719152ff200"
+    },
+    {
+      "path": "Graphify/07 Reorganisation/MOVE_PLAN.jsonl",
+      "sizeBytes": 159177,
+      "sha256": "d7b7fe1b8852445399ef9253aad6e18ea13cfdb57735c5dc17acfd3e0daccb0d"
+    },
+    {
+      "path": "Graphify/07 Reorganisation/IMPORT_AND_CONFIG_UPDATE_MATRIX.jsonl",
+      "sizeBytes": 77236,
+      "sha256": "642d9d85319da1c43479cd7d56b7a9901e47b0a147fea069cd34c876ee0dfd6c"
+    },
+    {
+      "path": "Graphify/07 Reorganisation/ROLLBACK_PLAN.jsonl",
+      "sizeBytes": 85440,
+      "sha256": "55afa81d91a0a074eea71f806c61c4584c7c628372d56c6bcda108a215e5ae1c"
+    },
+    {
+      "path": "Graphify/09 Implementation/IMPLEMENTATION_QUEUE.md",
+      "sizeBytes": 4482,
+      "sha256": "c80c569a1183ec5a9d3c83237e76fddaf85f12b764386bd21915448f8a9cfb17"
+    },
+    {
+      "path": "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+      "sizeBytes": 1284917,
+      "sha256": "f7fbe948418f5e826bbbe7b385cf3138502723dde17be842b977507f80edc282"
+    },
+    {
+      "path": "Graphify/09 Implementation/NEW_CAPABILITY_TASKS.jsonl",
+      "sizeBytes": 331755,
+      "sha256": "d2f04cebfc16152798efa26115963a4e0452504e0d8b9ca1cf91f8c56971eccb"
+    },
+    {
+      "path": "Graphify/09 Implementation/TRANSPLANT_SEARCH_QUEUE.jsonl",
+      "sizeBytes": 190114,
+      "sha256": "2d4986402b3d61d720deaaf70bee662146f869eea1af4f5b54b3fa8db9e269ac"
+    },
+    {
+      "path": "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl",
+      "sizeBytes": 1601125,
+      "sha256": "b82b03d5239f1a8199f7fb55094968bed1ae99a235ae903f9122a3ca45937056"
+    },
+    {
+      "path": "Graphify/10 Verification/FIXTURE_QA_MATRIX.md",
+      "sizeBytes": 13887,
+      "sha256": "7e089ab40d79558af913edfed8b308ac690fe2354498c6a0b6b1f5c76c4a5322"
+    },
+    {
+      "path": "Graphify/10 Verification/OFFLINE_TEST_PLAN.md",
+      "sizeBytes": 1025,
+      "sha256": "bfff79035ef2cab2f3466268d05a03fd3ae495c9f3ed3240c66d87da4d329ca4"
+    },
+    {
+      "path": "Graphify/10 Verification/APP_DELETION_SURVIVAL_TEST_PLAN.md",
+      "sizeBytes": 1150,
+      "sha256": "a11ea003be19c23396d073cc286a7758beddbde964b9e3aae81573af83a04180"
+    },
+    {
+      "path": "Graphify/14 AFFiNE Reference/PRODUCT_EXPANSION_SOURCE_AUDIT.json",
+      "sizeBytes": 35420,
+      "sha256": "46456e76ff72a7e48cb3cf8703db67869adba318de1e8086229bc05a8229f0ed"
+    }
+  ],
+  "aggregateSha256": "3a0eeb74ac3df9e002b25917384bd10108631ad72ad446b4cc076b466ed4f2d7",
+  "mutableReviewAndCompletionArtifactsExcluded": [
+    "Graphify/13 Agent Swarm/AGENT_REVIEWS.jsonl",
+    "Graphify/11 Completion/PRODUCT_EXPANSION_VALIDATION_GATES.json",
+    "Graphify/11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+    "Graphify/11 Completion/GLOBAL_VALIDATION_RESULT.json",
+    "Graphify/11 Completion/COMPLETION_TRACKER.md",
+    "Graphify/11 Completion/FINAL_HANDOFF.md",
+    "Graphify/00 Execution Control/status.json",
+    "Graphify/00 Execution Control/PRODUCT_EXPANSION_MANIFEST.json"
+  ],
+  "mutationRule": "Any frozen artifact change invalidates this review snapshot and requires a new freeze and review."
+}

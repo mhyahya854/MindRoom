@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "requirementId",
+    "sourcePlan",
+    "sourceHeading",
+    "sourceAnchor",
+    "requirementType",
+    "title",
+    "requirementTextSummary",
+    "decisionLabel",
+    "capabilityIds",
+    "currentEvidence",
+    "plannedEvidence",
+    "status"
+  ],
+  "properties": {
+    "requirementId": {
+      "pattern": "^MR-(KEEP|REMOVE|ADD|PROCESS|VERIFY|LEGAL|COMPAT|REQ)-[0-9]{3,}$"
+    },
+    "requirementType": {
+      "enum": [
+        "KEEP",
+        "REMOVE",
+        "ADD",
+        "PROCESS",
+        "VERIFY",
+        "LEGAL",
+        "COMPATIBILITY",
+        "PRODUCT_EXPANSION"
+      ]
+    },
+    "decisionLabel": {
+      "enum": [
+        "MANDATORY",
+        "CONDITIONAL",
+        "OPTIONAL_LATER",
+        "FORBIDDEN",
+        "REQUIRES_EVIDENCE"
+      ]
+    },
+    "capabilityIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "currentEvidence": {
+      "type": "array"
+    },
+    "plannedEvidence": {
+      "type": "array"
+    },
+    "status": {
+      "type": "string"
+    },
+    "sourcePlan": {},
+    "sourceHeading": {},
+    "sourceAnchor": {},
+    "title": {},
+    "requirementTextSummary": {}
+  },
+  "additionalProperties": true
+}

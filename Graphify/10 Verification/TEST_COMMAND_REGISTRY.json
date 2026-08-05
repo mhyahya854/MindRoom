@@ -1,0 +1,608 @@
+{
+  "project": "MindRoom",
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-28T01:21:59.174Z",
+  "mode": "READ_ONLY_BASELINE_AND_FUTURE_COMMAND_MAPPING",
+  "repository": {
+    "root": "Codebase",
+    "packageName": "@affine/monorepo",
+    "packageVersion": "0.27.0",
+    "declaredPackageManager": "yarn@4.13.0",
+    "authoritativeYarnRuntime": "Codebase/.yarn/releases/yarn-4.13.0.cjs",
+    "dependencyInstallStatePresent": false,
+    "dependencyInstallationPerformed": false
+  },
+  "discovery": {
+    "testFileCount": 601,
+    "sampleTestFiles": [
+      "Codebase/blocksuite/affine/all/src/__tests__/adapters/html.unit.spec.ts",
+      "Codebase/blocksuite/affine/all/src/__tests__/adapters/markdown.unit.spec.ts",
+      "Codebase/blocksuite/affine/all/src/__tests__/adapters/notion-html.unit.spec.ts",
+      "Codebase/blocksuite/affine/all/src/__tests__/adapters/notion-text.unit.spec.ts",
+      "Codebase/blocksuite/affine/all/src/__tests__/adapters/pdf.unit.spec.ts",
+      "Codebase/blocksuite/affine/all/src/__tests__/adapters/plain-text.unit.spec.ts",
+      "Codebase/blocksuite/affine/all/src/__tests__/database/database.unit.spec.ts",
+      "Codebase/blocksuite/affine/all/src/__tests__/database/paste-url.unit.spec.ts",
+      "Codebase/blocksuite/affine/all/src/__tests__/database/typesystem.unit.spec.ts",
+      "Codebase/blocksuite/affine/all/src/__tests__/embed-iframe-config.unit.spec.ts",
+      "Codebase/blocksuite/affine/all/src/__tests__/gfx/canvas-budget.unit.spec.ts",
+      "Codebase/blocksuite/affine/all/src/__tests__/gfx/placeholder-style.unit.spec.ts",
+      "Codebase/blocksuite/affine/all/src/__tests__/gfx/turbo-renderer.unit.spec.ts",
+      "Codebase/blocksuite/affine/blocks/bookmark/src/__tests__/adapters/preprocessor.unit.spec.ts",
+      "Codebase/blocksuite/affine/blocks/surface/src/__tests__/a-star.unit.spec.ts",
+      "Codebase/blocksuite/affine/blocks/surface/src/__tests__/bound.unit.spec.ts",
+      "Codebase/blocksuite/affine/blocks/surface/src/__tests__/graph.unit.spec.ts",
+      "Codebase/blocksuite/affine/blocks/surface/src/__tests__/math-utils.unit.spec.ts",
+      "Codebase/blocksuite/affine/blocks/surface/src/__tests__/priority-queue.unit.spec.ts",
+      "Codebase/blocksuite/affine/blocks/surface/src/__tests__/sort.unit.spec.ts",
+      "Codebase/blocksuite/affine/data-view/src/__tests__/calendar-layout.unit.spec.ts",
+      "Codebase/blocksuite/affine/data-view/src/__tests__/calendar.unit.spec.ts",
+      "Codebase/blocksuite/affine/data-view/src/__tests__/compare-date-keys.unit.spec.ts",
+      "Codebase/blocksuite/affine/data-view/src/__tests__/hotkeys.unit.spec.ts",
+      "Codebase/blocksuite/affine/data-view/src/__tests__/kanban.unit.spec.ts",
+      "Codebase/blocksuite/affine/data-view/src/__tests__/table.unit.spec.ts",
+      "Codebase/blocksuite/affine/ext-loader/src/__tests__/ext-loader.unit.spec.ts",
+      "Codebase/blocksuite/affine/gfx/group/src/__tests__/group-api.unit.spec.ts",
+      "Codebase/blocksuite/affine/gfx/pointer/src/__tests__/adaptive-load-controller.unit.spec.ts",
+      "Codebase/blocksuite/affine/gfx/pointer/src/__tests__/pan-tool.unit.spec.ts",
+      "Codebase/blocksuite/affine/inlines/footnote/src/__tests__/adapters/preprocessor.unit.spec.ts",
+      "Codebase/blocksuite/affine/shared/src/__tests__/adapters/html/rehype-plugins/inline-to-block.unit.spec.ts",
+      "Codebase/blocksuite/affine/shared/src/__tests__/adapters/html/rehype-plugins/wrap-inline-element.unit.spec.ts",
+      "Codebase/blocksuite/affine/shared/src/__tests__/adapters/markdown/remark-plugins/remark-callout.unit.spec.ts",
+      "Codebase/blocksuite/affine/shared/src/__tests__/adapters/utils/file-path.unit.spec.ts",
+      "Codebase/blocksuite/affine/shared/src/__tests__/commands/block-crud/get-first-block.unit.spec.ts",
+      "Codebase/blocksuite/affine/shared/src/__tests__/commands/block-crud/get-last-block.unit.spec.ts",
+      "Codebase/blocksuite/affine/shared/src/__tests__/commands/model-crud/replace-selected-text-with-blocks.unit.spec.ts",
+      "Codebase/blocksuite/affine/shared/src/__tests__/commands/selection/is-nothing-selected.unit.spec.ts",
+      "Codebase/blocksuite/affine/shared/src/__tests__/test-utils/affine-template.unit.spec.ts"
+    ],
+    "playwrightConfigs": [
+      "Codebase/tests/affine-cloud-copilot/playwright.config.ts",
+      "Codebase/tests/affine-cloud/playwright.config.ts",
+      "Codebase/tests/affine-desktop-cloud/playwright.config.ts",
+      "Codebase/tests/affine-desktop/playwright.config.ts",
+      "Codebase/tests/affine-local/playwright.config.ts",
+      "Codebase/tests/affine-mobile/playwright.config.ts",
+      "Codebase/tests/blocksuite/playwright.config.ts"
+    ],
+    "vitestConfigs": [
+      "Codebase/blocksuite/affine/all/vitest.config.ts",
+      "Codebase/blocksuite/affine/blocks/bookmark/vitest.config.ts",
+      "Codebase/blocksuite/affine/data-view/vitest.config.ts",
+      "Codebase/blocksuite/affine/ext-loader/vitest.config.ts",
+      "Codebase/blocksuite/affine/gfx/group/vitest.config.ts",
+      "Codebase/blocksuite/affine/gfx/pointer/vitest.config.ts",
+      "Codebase/blocksuite/affine/inlines/footnote/vitest.config.ts",
+      "Codebase/blocksuite/affine/shared/vitest.config.ts",
+      "Codebase/blocksuite/framework/global/vitest.config.ts",
+      "Codebase/blocksuite/framework/std/vitest.config.ts",
+      "Codebase/blocksuite/framework/store/vitest.config.ts",
+      "Codebase/blocksuite/framework/sync/vitest.config.ts",
+      "Codebase/blocksuite/integration-test/vitest.config.ts",
+      "Codebase/packages/frontend/apps/electron/vitest.config.ts",
+      "Codebase/vitest.config.ts"
+    ],
+    "requiredFixtureCount": 18,
+    "existingRequiredFixtureNames": [
+      "sample.pdf"
+    ],
+    "missingRequiredFixtureNames": [
+      "sample.md",
+      "sample.docx",
+      "sample.odt",
+      "sample.pptx",
+      "sample.odp",
+      "sample.xlsx",
+      "sample.ods",
+      "sample.csv",
+      "sample.jpg",
+      "sample.png",
+      "sample.webp",
+      "sample.mp4",
+      "corrupt.pdf",
+      "corrupt.docx",
+      "corrupt.xlsx",
+      "unsupported-media-file",
+      "large-video.mp4"
+    ],
+    "fixtureMatches": {
+      "sample.md": [],
+      "sample.pdf": [
+        "Codebase/packages/common/native/fixtures/sample.pdf"
+      ],
+      "sample.docx": [],
+      "sample.odt": [],
+      "sample.pptx": [],
+      "sample.odp": [],
+      "sample.xlsx": [],
+      "sample.ods": [],
+      "sample.csv": [],
+      "sample.jpg": [],
+      "sample.png": [],
+      "sample.webp": [],
+      "sample.mp4": [],
+      "corrupt.pdf": [],
+      "corrupt.docx": [],
+      "corrupt.xlsx": [],
+      "unsupported-media-file": [],
+      "large-video.mp4": []
+    }
+  },
+  "commands": [
+    {
+      "commandId": "CMD-PM-VERSION",
+      "category": "TOOLCHAIN",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs --version",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/package.json#packageManager",
+        "Codebase/.yarn/releases/yarn-4.13.0.cjs"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": true,
+      "writesGeneratedOutput": false,
+      "prerequisites": [],
+      "notes": "Authoritative repository package manager; do not substitute Corepack Yarn 1."
+    },
+    {
+      "commandId": "CMD-SCRIPT-DISCOVERY",
+      "category": "DISCOVERY",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs run",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/package.json#scripts"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": true,
+      "writesGeneratedOutput": false,
+      "prerequisites": [],
+      "notes": ""
+    },
+    {
+      "commandId": "CMD-TEST-DISCOVERY",
+      "category": "DISCOVERY",
+      "command": "repository filesystem scan for *.spec.*, *.test.*, Playwright configs, Vitest configs, and required fixture basenames",
+      "cwd": ".",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/vitest.config.ts",
+        "Codebase/tests/**/playwright.config.ts"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": true,
+      "writesGeneratedOutput": false,
+      "prerequisites": [],
+      "notes": "Performed by the verification artifact generator using Node.js standard-library traversal."
+    },
+    {
+      "commandId": "CMD-TYPECHECK",
+      "category": "TYPECHECK",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs typecheck",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/package.json#scripts.typecheck"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": true,
+      "writesGeneratedOutput": true,
+      "prerequisites": [
+        "Yarn install state",
+        "workspace dependencies"
+      ],
+      "notes": "A bounded baseline is attempted only because dependency state is absent, so Yarn fails before tsc can run or emit."
+    },
+    {
+      "commandId": "CMD-LINT-OX",
+      "category": "LINT",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs lint:ox",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/package.json#scripts.lint:ox"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": true,
+      "writesGeneratedOutput": false,
+      "prerequisites": [
+        "Yarn install state",
+        "workspace dependencies"
+      ],
+      "notes": ""
+    },
+    {
+      "commandId": "CMD-LINT-ESLINT",
+      "category": "LINT",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs lint:eslint --max-warnings=0",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/package.json#scripts.lint:eslint",
+        "Codebase/.github/workflows/lint.yml"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": true,
+      "prerequisites": [
+        "Yarn install state",
+        "workspace dependencies"
+      ],
+      "notes": "Not run: configured ESLint cache writes into Codebase."
+    },
+    {
+      "commandId": "CMD-LINT-PRETTIER",
+      "category": "LINT",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs lint:prettier",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/package.json#scripts.lint:prettier",
+        "Codebase/.github/workflows/lint.yml"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": true,
+      "prerequisites": [
+        "Yarn install state",
+        "workspace dependencies"
+      ],
+      "notes": "Not run: configured Prettier cache writes into Codebase."
+    },
+    {
+      "commandId": "CMD-UNIT",
+      "category": "UNIT",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs test",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/package.json#scripts.test",
+        "Codebase/vitest.config.ts"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": true,
+      "writesGeneratedOutput": true,
+      "prerequisites": [
+        "Yarn install state",
+        "workspace dependencies"
+      ],
+      "notes": "A bounded baseline is attempted only because dependency state is absent, so Yarn fails before Vitest can run."
+    },
+    {
+      "commandId": "CMD-UNIT-COVERAGE",
+      "category": "UNIT",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs test:coverage --shard=<N>/5",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/package.json#scripts.test:coverage",
+        "Codebase/.github/workflows/test.yml"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": true,
+      "prerequisites": [
+        "Yarn install state",
+        "workspace dependencies"
+      ],
+      "notes": "Writes .coverage/store; shard placeholder must be replaced."
+    },
+    {
+      "commandId": "CMD-BLOCKSUITE-UNIT",
+      "category": "INTEGRATION",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs workspace @blocksuite/integration-test test:unit",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/packages/frontend/core/blocksuite/integration-test/package.json#scripts.test:unit"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": false,
+      "prerequisites": [
+        "Yarn install state",
+        "workspace dependencies"
+      ],
+      "notes": ""
+    },
+    {
+      "commandId": "CMD-BLOCKSUITE-BUILD",
+      "category": "BUILD",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs workspace @blocksuite/playground build",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/.github/workflows/test-blocksuite.yml"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": true,
+      "prerequisites": [
+        "Yarn install state",
+        "workspace dependencies"
+      ],
+      "notes": ""
+    },
+    {
+      "commandId": "CMD-BLOCKSUITE-E2E",
+      "category": "E2E",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs workspace @affine-test/blocksuite test --forbid-only --shard=<N>/<TOTAL>",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/tests/blocksuite/package.json#scripts.test",
+        "Codebase/.github/workflows/test-blocksuite.yml"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": true,
+      "prerequisites": [
+        "Yarn install state",
+        "Playwright browsers",
+        "built BlockSuite playground"
+      ],
+      "notes": ""
+    },
+    {
+      "commandId": "CMD-WEB-E2E",
+      "category": "E2E",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs affine @affine-test/affine-local e2e --forbid-only --shard=<N>/5",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/tests/affine-local/package.json#scripts.e2e",
+        "Codebase/.github/workflows/test.yml"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": true,
+      "prerequisites": [
+        "Yarn install state",
+        "Playwright browsers",
+        "web build",
+        "test environment"
+      ],
+      "notes": ""
+    },
+    {
+      "commandId": "CMD-ELECTRON-UNIT",
+      "category": "UNIT",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs affine @affine/electron vitest",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/.github/workflows/test.yml",
+        "Codebase/packages/frontend/apps/electron/package.json"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": true,
+      "prerequisites": [
+        "Yarn install state",
+        "workspace dependencies"
+      ],
+      "notes": ""
+    },
+    {
+      "commandId": "CMD-DESKTOP-E2E",
+      "category": "E2E",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs affine @affine-test/affine-desktop e2e",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/tests/affine-desktop/package.json#scripts.e2e",
+        "Codebase/.github/workflows/test.yml"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": true,
+      "prerequisites": [
+        "Yarn install state",
+        "Playwright browsers",
+        "built Electron application"
+      ],
+      "notes": ""
+    },
+    {
+      "commandId": "CMD-RENDERER-BUILD",
+      "category": "RENDERER_BUILD",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs affine @affine/electron-renderer build",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/packages/frontend/apps/electron-renderer/package.json#scripts.build",
+        "Codebase/tools/cli/src/affine.ts"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": true,
+      "prerequisites": [
+        "Yarn install state",
+        "workspace dependencies"
+      ],
+      "notes": ""
+    },
+    {
+      "commandId": "CMD-ELECTRON-BUILD",
+      "category": "ELECTRON_BUILD",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs affine @affine/electron build",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/packages/frontend/apps/electron/package.json#scripts.build",
+        "Codebase/.github/workflows/build-desktop.yml"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": true,
+      "prerequisites": [
+        "Yarn install state",
+        "workspace dependencies",
+        "renderer artifacts"
+      ],
+      "notes": ""
+    },
+    {
+      "commandId": "CMD-WINDOWS-PACKAGE",
+      "category": "WINDOWS_PACKAGE",
+      "command": "HOIST_NODE_MODULES=1 SKIP_WEB_BUILD=1 node .yarn/releases/yarn-4.13.0.cjs affine @affine/electron package --platform=win32 --arch=x64",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/.github/workflows/build-desktop.yml",
+        "Codebase/packages/frontend/apps/electron/package.json#scripts.package"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": true,
+      "prerequisites": [
+        "Windows x64",
+        "Yarn install state",
+        "workspace dependencies",
+        "downloaded native and web artifacts"
+      ],
+      "notes": ""
+    },
+    {
+      "commandId": "CMD-WINDOWS-SQUIRREL",
+      "category": "WINDOWS_INSTALLER",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs affine @affine/electron make-squirrel --platform=win32 --arch=x64",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/.github/workflows/release-desktop.yml",
+        "Codebase/packages/frontend/apps/electron/package.json#scripts.make-squirrel"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": true,
+      "prerequisites": [
+        "packaged and signed Windows app",
+        "Windows x64"
+      ],
+      "notes": ""
+    },
+    {
+      "commandId": "CMD-WINDOWS-NSIS",
+      "category": "WINDOWS_INSTALLER",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs affine @affine/electron make-nsis --platform=win32 --arch=x64",
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Codebase/.github/workflows/release-desktop.yml",
+        "Codebase/packages/frontend/apps/electron/package.json#scripts.make-nsis"
+      ],
+      "availability": "AVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": true,
+      "prerequisites": [
+        "packaged and signed Windows app",
+        "Windows x64"
+      ],
+      "notes": ""
+    },
+    {
+      "commandId": "CMD-INSTALLER-LAUNCH",
+      "category": "INSTALLER_QA",
+      "command": null,
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "No installer launch/smoke script found in scanned package manifests or workflows"
+      ],
+      "availability": "UNAVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": false,
+      "prerequisites": [
+        "built Windows installer",
+        "disposable Windows VM"
+      ],
+      "notes": ""
+    },
+    {
+      "commandId": "CMD-FIXTURE-GENERATION",
+      "category": "FIXTURE",
+      "command": null,
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "No required-fixture generation script found in scanned package manifests"
+      ],
+      "availability": "UNAVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": false,
+      "prerequisites": [],
+      "notes": "Electron generate-assets is product artwork generation and is not a fixture generator."
+    },
+    {
+      "commandId": "CMD-LICENCE-AUDIT",
+      "category": "LICENCE",
+      "command": null,
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Graphify/12 Source Documents/LICENCE_AND_ATTRIBUTION_MAP.md",
+        "Graphify/12 Source Documents/SBOM_PLAN.md"
+      ],
+      "availability": "UNAVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": false,
+      "prerequisites": [],
+      "notes": "No repository script found; 4,212 unresolved third-party licence records remain."
+    },
+    {
+      "commandId": "CMD-SBOM",
+      "category": "SBOM",
+      "command": null,
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Graphify/12 Source Documents/SBOM_PLAN.md"
+      ],
+      "availability": "UNAVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": false,
+      "prerequisites": [],
+      "notes": "Syft, cargo-license, cargo-cyclonedx, and cyclonedx-npm were mapped as missing."
+    },
+    {
+      "commandId": "CMD-OFFLINE-RUNTIME",
+      "category": "OFFLINE",
+      "command": null,
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Graphify/Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md#16.25"
+      ],
+      "availability": "UNAVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": false,
+      "prerequisites": [
+        "production Windows installer",
+        "disposable Windows VM",
+        "network capture"
+      ],
+      "notes": "A manual/automation-ready plan is defined in OFFLINE_TEST_PLAN.md."
+    },
+    {
+      "commandId": "CMD-APP-DELETION-SURVIVAL",
+      "category": "RESTORATION",
+      "command": null,
+      "cwd": "Codebase",
+      "packageManager": "Yarn 4.13.0 via vendored .yarn/releases/yarn-4.13.0.cjs",
+      "sourceEvidence": [
+        "Graphify/Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md#20.1"
+      ],
+      "availability": "UNAVAILABLE",
+      "safeBaseline": false,
+      "writesGeneratedOutput": false,
+      "prerequisites": [
+        "production Windows installer",
+        "disposable workspace and VM",
+        "real fixtures"
+      ],
+      "notes": "A manual/automation-ready plan is defined in APP_DELETION_SURVIVAL_TEST_PLAN.md."
+    }
+  ]
+}

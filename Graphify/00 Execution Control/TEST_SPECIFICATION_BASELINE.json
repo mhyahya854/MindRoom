@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:39:02.841Z",
+  "totalRequirements": 1782,
+  "totalCapabilities": 161,
+  "totalTasks": 162,
+  "testCasesBefore": 338,
+  "requirementsWithoutTestsBefore": 0,
+  "capabilitiesWithoutTestsBefore": 0,
+  "duplicateGenericTestSetsBefore": 0,
+  "unmappedSecurityProhibitionsBefore": 0
+}

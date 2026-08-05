@@ -1,0 +1,12 @@
+{
+  "paths": 12628,
+  "files": 10080,
+  "directories": 2548,
+  "packages": 134,
+  "workspaces": 3,
+  "markdown": 207,
+  "binaryRuntimeAssets": 1056,
+  "archives": 25,
+  "platformFiles": 892,
+  "treeSha256": "951dce8f4ab329f2bbbbd8ddc3d670872f700484450f5aaf5f69d58e10499328"
+}

@@ -1,0 +1,24 @@
+{
+  "invalidatedFreezeRunId": "mindroom-graphify-final-freeze-20260731-135829",
+  "timestamp": "2026-07-31T14:58:43+03:00",
+  "classification": [
+    "SELF_ASSERTED_VALIDATION",
+    "HARD_CODED_COUNTS",
+    "HARD_CODED_HASHES",
+    "INCOMPLETE_MANIFEST",
+    "NON_AUTHORITATIVE",
+    "SUPERSEDED"
+  ],
+  "reasons": [
+    "Validation checks were hard-coded to True",
+    "Validation result was hard-coded to PASS",
+    "Follow-up assertions validated generated booleans rather than underlying claims",
+    "Counts and hashes were hard-coded",
+    "Capability and task edge counts conflicted with external review reconciliation",
+    "Warning owners and waves were hard-coded instead of derived",
+    "Frozen manifest omitted authoritative planning artifacts",
+    "Codebase preservation was not recalculated during final validation"
+  ],
+  "productPlanningInvalidated": false,
+  "freezeReceiptInvalidated": true
+}

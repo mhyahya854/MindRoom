@@ -1,0 +1,1564 @@
+{
+  "project": "MindRoom",
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-28T01:11:28.262Z",
+  "sourceTree": "Codebase/",
+  "documentCount": 154,
+  "byType": {
+    "CARGO_LOCKFILE": 1,
+    "CARGO_MANIFEST": 9,
+    "COPIED_SOURCE_HEADER": 7,
+    "LICENCE_TEXT": 10,
+    "NPM_LOCKFILE": 1,
+    "NPM_MANIFEST": 123,
+    "PACKAGE_MANAGER_CONFIGURATION": 1,
+    "PACKAGE_MANAGER_RUNTIME": 1,
+    "PACKAGING_CONFIGURATION": 1
+  },
+  "missingRequiredDistributionDocuments": [
+    "Codebase/NOTICE.txt",
+    "Codebase/THIRD_PARTY_NOTICES.txt"
+  ],
+  "documents": [
+    {
+      "sourceDocumentId": "SRC-DOC-0001",
+      "path": "Codebase/LICENSE",
+      "sha256": "c107c8088fe42bce6def95d313cfe7b5984d3bb2c1608b67f855327da45f497b",
+      "sizeBytes": 1663,
+      "documentType": "LICENCE_TEXT",
+      "purpose": "AFFINE_ROOT_LICENCE_SCOPE: Repository root: MIT outside packages/backend and packages/common/native, subject to third-party component licences.",
+      "authority": "LOCAL_SOURCE_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0002",
+      "path": "Codebase/LICENSE-MIT",
+      "sha256": "1cdeca52d4f740361f103926144eb8b3f265975b2337d4e27b3313f72465897f",
+      "sizeBytes": 1117,
+      "documentType": "LICENCE_TEXT",
+      "purpose": "AFFINE_MIT_TEXT: Repository content covered by the root MIT grant.",
+      "authority": "LOCAL_SOURCE_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0003",
+      "path": "Codebase/packages/backend/server/LICENSE",
+      "sha256": "5a644f9defc017ffd484413598d1edf65bc78718e4011ac33a0e1fcae629e25d",
+      "sizeBytes": 2758,
+      "documentType": "LICENCE_TEXT",
+      "purpose": "RESTRICTED_BACKEND_LICENCE: packages/backend/server and root-declared backend scope.",
+      "authority": "LOCAL_SOURCE_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0004",
+      "path": "Codebase/packages/backend/native/LICENSE",
+      "sha256": "5a644f9defc017ffd484413598d1edf65bc78718e4011ac33a0e1fcae629e25d",
+      "sizeBytes": 2758,
+      "documentType": "LICENCE_TEXT",
+      "purpose": "RESTRICTED_BACKEND_NATIVE_LICENCE: packages/backend/native.",
+      "authority": "LOCAL_SOURCE_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0005",
+      "path": "Codebase/packages/common/native/LICENSE",
+      "sha256": "5a644f9defc017ffd484413598d1edf65bc78718e4011ac33a0e1fcae629e25d",
+      "sizeBytes": 2758,
+      "documentType": "LICENCE_TEXT",
+      "purpose": "RESTRICTED_COMMON_NATIVE_LICENCE: packages/common/native.",
+      "authority": "LOCAL_SOURCE_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0006",
+      "path": "Codebase/blocksuite/framework/global/src/gfx/perfect-freehand/LICENSE",
+      "sha256": "6a5ac82b42ce0af6a1e5fe39b46f0b52f1368e81e437175e8d9ae21569c8688e",
+      "sizeBytes": 1073,
+      "documentType": "LICENCE_TEXT",
+      "purpose": "EMBEDDED_COMPONENT_LICENCE: Vendored perfect-freehand code.",
+      "authority": "LOCAL_SOURCE_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0007",
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/rough/LICENSE",
+      "sha256": "a734fd0e3f64745e4d78dd34b37a3546f4488a3e516879d62e952f2b9e0f69a4",
+      "sizeBytes": 1067,
+      "documentType": "LICENCE_TEXT",
+      "purpose": "EMBEDDED_COMPONENT_LICENCE: Vendored rough code.",
+      "authority": "LOCAL_SOURCE_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0008",
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/points-on-path/LICENSE",
+      "sha256": "05a601c405df8b356c034413e7d3db9f57300cffad0eea2df809414151914864",
+      "sizeBytes": 1061,
+      "documentType": "LICENCE_TEXT",
+      "purpose": "EMBEDDED_COMPONENT_LICENCE: Vendored points-on-path code.",
+      "authority": "LOCAL_SOURCE_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0009",
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/points-on-curve/LICENSE",
+      "sha256": "a734fd0e3f64745e4d78dd34b37a3546f4488a3e516879d62e952f2b9e0f69a4",
+      "sizeBytes": 1067,
+      "documentType": "LICENCE_TEXT",
+      "purpose": "EMBEDDED_COMPONENT_LICENCE: Vendored points-on-curve code.",
+      "authority": "LOCAL_SOURCE_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0010",
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/utils/path-data-parser/LICENSE",
+      "sha256": "a734fd0e3f64745e4d78dd34b37a3546f4488a3e516879d62e952f2b9e0f69a4",
+      "sizeBytes": 1067,
+      "documentType": "LICENCE_TEXT",
+      "purpose": "EMBEDDED_COMPONENT_LICENCE: Vendored path-data-parser code.",
+      "authority": "LOCAL_SOURCE_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0011",
+      "path": "Codebase/packages/frontend/component/src/lit-react/create-component.ts",
+      "sha256": "d070bf4c7c456f2c67f91ff98cfbddf7d8b6b5689e08d4630f2a149dda6d45d6",
+      "sizeBytes": 11100,
+      "documentType": "COPIED_SOURCE_HEADER",
+      "purpose": "Google Lit React create-component: SPDX-License-Identifier header",
+      "authority": "LOCAL_SOURCE_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0012",
+      "path": "Codebase/blocksuite/framework/global/src/lit/watch.ts",
+      "sha256": "2e3ee7ab149bb968f40828c07a715802d156b50588031e2963ccc152f8a0f532",
+      "sizeBytes": 2514,
+      "documentType": "COPIED_SOURCE_HEADER",
+      "purpose": "Google Lit watch directive: SPDX-License-Identifier header",
+      "authority": "LOCAL_SOURCE_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0013",
+      "path": "Codebase/blocksuite/framework/global/src/lit/signal-watcher.ts",
+      "sha256": "a80bad923068b2a953378c6e8e2ec222816ee4c9fea41163b8c3d42dfd5378f8",
+      "sizeBytes": 2414,
+      "documentType": "COPIED_SOURCE_HEADER",
+      "purpose": "Google Lit SignalWatcher: SPDX-License-Identifier header",
+      "authority": "LOCAL_SOURCE_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0014",
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/Intelligents/Sources/Intelligents/Extension/Then.swift",
+      "sha256": "29148508d0651f804f09bdbc5ab0234010172c136e94fd8be9638fc011d32026",
+      "sizeBytes": 2985,
+      "documentType": "COPIED_SOURCE_HEADER",
+      "purpose": "Then.swift: Complete MIT text in source header",
+      "authority": "LOCAL_SOURCE_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0015",
+      "path": "Codebase/blocksuite/affine/shared/src/adapters/markdown/gfm.ts",
+      "sha256": "51c3066436a923da36a232a1e4e70abd8ed274023c9485c6eac63b90e1fef94c",
+      "sizeBytes": 2239,
+      "documentType": "COPIED_SOURCE_HEADER",
+      "purpose": "mdast-util-gfm-autolink-literal excerpt/adaptation: MIT notice in source header",
+      "authority": "LOCAL_SOURCE_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0016",
+      "path": "Codebase/blocksuite/affine/shared/src/utils/figma-squircle/index.ts",
+      "sha256": "a18f63b41219159d6e72485b07ed84003aefbbb32ac0002e06310c63da360b3e",
+      "sizeBytes": 2974,
+      "documentType": "COPIED_SOURCE_HEADER",
+      "purpose": "figma-squircle-derived code: Copyright/source URL only; no local licence identifier",
+      "authority": "INCOMPLETE_LOCAL_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0017",
+      "path": "Codebase/packages/frontend/component/src/ui/toast/toast.ts",
+      "sha256": "a82faac032525dcf76c0f3cd5a0d7a00a4d580b669b65635f2f1ef9662decd8b",
+      "sizeBytes": 4098,
+      "documentType": "COPIED_SOURCE_HEADER",
+      "purpose": "BlockSuite-derived toast code: Source commit URL only; no local licence identifier in header",
+      "authority": "INCOMPLETE_LOCAL_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0018",
+      "path": "Codebase/blocksuite/affine/all/package.json",
+      "sha256": "4c8ba11cc74c153a96151436aecc7a571a952339ee4d1a1b071e34e2e9aaa915",
+      "sizeBytes": 16863,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0019",
+      "path": "Codebase/blocksuite/affine/blocks/attachment/package.json",
+      "sha256": "20f78990e4c2f4abda4b7ec6bef9658b0a355a63b4a6225a0b49991e0a9588f4",
+      "sizeBytes": 1108,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0020",
+      "path": "Codebase/blocksuite/affine/blocks/bookmark/package.json",
+      "sha256": "cd0f65f9e6b0f7ff6f166aaf13531bdf041aad8961c0dcfcc9bee1204083199e",
+      "sizeBytes": 1337,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0021",
+      "path": "Codebase/blocksuite/affine/blocks/callout/package.json",
+      "sha256": "5b6ad13e9585aff543aae43f2a7f5bcdaaae45e9dff0fb35081ce313e5128a4e",
+      "sizeBytes": 1097,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0022",
+      "path": "Codebase/blocksuite/affine/blocks/code/package.json",
+      "sha256": "18f24d5a3f7162e2196388a7d8dbb2cf913388ac6172bc70b1f165edc92d3000",
+      "sizeBytes": 1458,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0023",
+      "path": "Codebase/blocksuite/affine/blocks/data-view/package.json",
+      "sha256": "d149fb5d6cced51dda702c45e5e92244729b5886656287d464f1cfba3ed6bb96",
+      "sizeBytes": 1088,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0024",
+      "path": "Codebase/blocksuite/affine/blocks/database/package.json",
+      "sha256": "c6b1d71837b0d9f50c9ca2d2345b31edf3873c15b648933b85df55d829559ba7",
+      "sizeBytes": 1439,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0025",
+      "path": "Codebase/blocksuite/affine/blocks/divider/package.json",
+      "sha256": "34f1b2d27c308eeb76ea3b946bfbc93f36ad511215d0f4958179c639a1d14e38",
+      "sizeBytes": 869,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0026",
+      "path": "Codebase/blocksuite/affine/blocks/edgeless-text/package.json",
+      "sha256": "36a5ead9ab660a9590ce817c32a4a2df7553298fcc4b8dcd1adf9fc8696c06b9",
+      "sizeBytes": 1038,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0027",
+      "path": "Codebase/blocksuite/affine/blocks/embed-doc/package.json",
+      "sha256": "4933005f1c5609bdb28c1fb3697c45c311e5cd1a811f771290a027750c4f5739",
+      "sizeBytes": 1294,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0028",
+      "path": "Codebase/blocksuite/affine/blocks/embed/package.json",
+      "sha256": "a78a60c88f25b3fbe89c7b944226dcfc2b25064a28fc5cbc3643b759ce31cf0b",
+      "sizeBytes": 1110,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0029",
+      "path": "Codebase/blocksuite/affine/blocks/frame/package.json",
+      "sha256": "a257b4dd6bb10fdc20f39038b106dd6425d967e83957cfa830bf7fbfbb0878da",
+      "sizeBytes": 1193,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0030",
+      "path": "Codebase/blocksuite/affine/blocks/image/package.json",
+      "sha256": "58b767892e51de2ec692606d8518ce9471005e4c834d801319500cfc95a6adbd",
+      "sizeBytes": 1253,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0031",
+      "path": "Codebase/blocksuite/affine/blocks/latex/package.json",
+      "sha256": "0632b7ef63784c6ae91fcdd8e8c5a6c5795448ccd5f8cad847dc153258032251",
+      "sizeBytes": 1112,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0032",
+      "path": "Codebase/blocksuite/affine/blocks/list/package.json",
+      "sha256": "a485fbb76b105d3744523cc43044012ec8cba25196615a64e607893b1fa35a9a",
+      "sizeBytes": 1154,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0033",
+      "path": "Codebase/blocksuite/affine/blocks/note/package.json",
+      "sha256": "f332ffb658965084a0b44e7c0f76bf89206fc84c788029dffd311a48b3ef2eee",
+      "sizeBytes": 1576,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0034",
+      "path": "Codebase/blocksuite/affine/blocks/paragraph/package.json",
+      "sha256": "05c8be8fd2db8bc862b5059751a16e7009cbe79d4e353bf6599651d593f1063d",
+      "sizeBytes": 1194,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0035",
+      "path": "Codebase/blocksuite/affine/blocks/root/package.json",
+      "sha256": "07c741ba1f8468bbae8673d5643c287adb67e8c252dd3375625d650483d25531",
+      "sizeBytes": 2316,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0036",
+      "path": "Codebase/blocksuite/affine/blocks/surface-ref/package.json",
+      "sha256": "1ecf767e50a22a5735468aeb6efb028ec45a97398084bf19f78911d027b37d10",
+      "sizeBytes": 1136,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0037",
+      "path": "Codebase/blocksuite/affine/blocks/surface/package.json",
+      "sha256": "d1e37400dc591de85d82be574852edd2b9fd0eaa336a4dbbb73a672978cda226",
+      "sizeBytes": 1092,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0038",
+      "path": "Codebase/blocksuite/affine/blocks/table/package.json",
+      "sha256": "3ad16a4e43cc1fc3cf0cb0aeb5ea1536918b49d61d345a555e2660d490e8ce4c",
+      "sizeBytes": 1154,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0039",
+      "path": "Codebase/blocksuite/affine/components/package.json",
+      "sha256": "52c5a0906ac62d9a970c269018ac54acc825d6acd312d1a7f8c38268789b8d4c",
+      "sizeBytes": 3062,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0040",
+      "path": "Codebase/blocksuite/affine/data-view/package.json",
+      "sha256": "1fae8dee89f8159ce3851bb814dc450b3ac15f658bcba0b87cc707b9d4270805",
+      "sizeBytes": 1352,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0041",
+      "path": "Codebase/blocksuite/affine/ext-loader/package.json",
+      "sha256": "916351079fb53277de63d89f1c7d88ba7c87deb91803d6e5bd1a0ee24607c033",
+      "sizeBytes": 576,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0042",
+      "path": "Codebase/blocksuite/affine/foundation/package.json",
+      "sha256": "6a0b5b25ec3a4b4be835ead54ccbddf3e4b8c82ef37b52f34acdac77bb1681e5",
+      "sizeBytes": 880,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0043",
+      "path": "Codebase/blocksuite/affine/fragments/adapter-panel/package.json",
+      "sha256": "ddb9ff2f5322fdbd42d2e0839c1081422a450ed256f40f11e3ea697b1fbbaab5",
+      "sizeBytes": 906,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0044",
+      "path": "Codebase/blocksuite/affine/fragments/doc-title/package.json",
+      "sha256": "8dbab5649a365e56aba03bb957cbf3709b96d45008b2aea0791ec93c1cb462e1",
+      "sizeBytes": 843,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0045",
+      "path": "Codebase/blocksuite/affine/fragments/frame-panel/package.json",
+      "sha256": "66042c85aebb4c16e4f8f0a7104c1f0ce041e773aded0d9936159638c6b42488",
+      "sizeBytes": 1056,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0046",
+      "path": "Codebase/blocksuite/affine/fragments/outline/package.json",
+      "sha256": "584481fe571d3260d3b4bb159d2bbc7b5364d098e686c53e101ad7045aa5e949",
+      "sizeBytes": 1043,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0047",
+      "path": "Codebase/blocksuite/affine/gfx/brush/package.json",
+      "sha256": "5cdfa197a7018a52be8dfc259a0045c368cfda9290976d12521de9a0470325c8",
+      "sizeBytes": 939,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0048",
+      "path": "Codebase/blocksuite/affine/gfx/connector/package.json",
+      "sha256": "f1fbd01dfc8af6483e48763c7349c3ebf54055aa0977d4d483499c7bdbe53b91",
+      "sizeBytes": 1242,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0049",
+      "path": "Codebase/blocksuite/affine/gfx/group/package.json",
+      "sha256": "a650ef44bd6c2cff4af6a7ef76ca514a662b70bdf7e605384dff0f8fd3c3c892",
+      "sizeBytes": 1156,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0050",
+      "path": "Codebase/blocksuite/affine/gfx/link/package.json",
+      "sha256": "40899ff660429f4cba430f00e49f34a76f6fd78ac072058b55dbe39d85bb6b54",
+      "sizeBytes": 887,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0051",
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/package.json",
+      "sha256": "8c9efca144aaa0dab0fe18fdb895550da9bab32f83fecf05e4085da834ac8c29",
+      "sizeBytes": 1493,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0052",
+      "path": "Codebase/blocksuite/affine/gfx/note/package.json",
+      "sha256": "ee815bb54cb46f5ae9d05b849461c95a773032d08a9eee6d7c35aa0d9abbcd08",
+      "sizeBytes": 1180,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0053",
+      "path": "Codebase/blocksuite/affine/gfx/pointer/package.json",
+      "sha256": "2f7ad6e202be28a28d5307aa2c062a6d4785944376ac924a70e17cdd1a22f35b",
+      "sizeBytes": 945,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0054",
+      "path": "Codebase/blocksuite/affine/gfx/shape/package.json",
+      "sha256": "2c0dd626a5332ebde2ec30476f0687ef1db5b8e84a9fd9a16489d8156ca0b11f",
+      "sizeBytes": 1256,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0055",
+      "path": "Codebase/blocksuite/affine/gfx/template/package.json",
+      "sha256": "3c01f1e82b867568117393196e432e5f3ced977d9bba4c8c15d545f7bc26a37a",
+      "sizeBytes": 1032,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0056",
+      "path": "Codebase/blocksuite/affine/gfx/text/package.json",
+      "sha256": "2242864561e68b891fb26c914dbb9ad8cd95a38f6b54c3a3933b124c8db7508a",
+      "sizeBytes": 1077,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0057",
+      "path": "Codebase/blocksuite/affine/gfx/turbo-renderer/package.json",
+      "sha256": "a4e1ef8e34c264074c7432cf2945e7b6ebfd50ea583ca111bad9bb4e811debb8",
+      "sizeBytes": 685,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0058",
+      "path": "Codebase/blocksuite/affine/inlines/comment/package.json",
+      "sha256": "5ad4fccd50eede73d084b495892cd7f483afbd7afeae0bc8f971ad9b20d77faf",
+      "sizeBytes": 965,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0059",
+      "path": "Codebase/blocksuite/affine/inlines/footnote/package.json",
+      "sha256": "b1abf1dfd4ab55a9d0bcd72671a2d387da3ca207e503174f7f61bb674486f1ad",
+      "sizeBytes": 1118,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0060",
+      "path": "Codebase/blocksuite/affine/inlines/latex/package.json",
+      "sha256": "e909cd5578e38cd8a2d5b424ff2e2dbc5adf71318b2c85b9d861b07c00ea4580",
+      "sizeBytes": 1076,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0061",
+      "path": "Codebase/blocksuite/affine/inlines/link/package.json",
+      "sha256": "0bed0cde740d5f4495fa864d818afed3ed87673a5f3804d5e627693eae633e2b",
+      "sizeBytes": 1041,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0062",
+      "path": "Codebase/blocksuite/affine/inlines/mention/package.json",
+      "sha256": "6dc1e9cfaac1f2ef05f29e3c5d305fe158a3d7591cc216ea5ec164332f4e5ac1",
+      "sizeBytes": 722,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0063",
+      "path": "Codebase/blocksuite/affine/inlines/preset/package.json",
+      "sha256": "14deb21f0e8a9f5b77b2ced996725af31c392f3d431b3a9cec09e9ed781cc749",
+      "sizeBytes": 1301,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0064",
+      "path": "Codebase/blocksuite/affine/inlines/reference/package.json",
+      "sha256": "fa23d36535eceb79cfc4f5e6fd88876c8fcfaeece66142973badda513e4a15fa",
+      "sizeBytes": 1015,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0065",
+      "path": "Codebase/blocksuite/affine/model/package.json",
+      "sha256": "e3943543e2a5bf20fa9f7eff289ebf4ebb0db7ecddbe34aa0264c016146294d2",
+      "sizeBytes": 726,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0066",
+      "path": "Codebase/blocksuite/affine/rich-text/package.json",
+      "sha256": "de715b6f6a3d551394a59f79929465b2ada9299cfbe9bc64d6c9d2a9acef435d",
+      "sizeBytes": 869,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0067",
+      "path": "Codebase/blocksuite/affine/shared/package.json",
+      "sha256": "2ca89e44fdd6f8f933e1bdc4e12da3485ab6cf58e6a8b82bd08501a177d63394",
+      "sizeBytes": 2446,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0068",
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/package.json",
+      "sha256": "c69e622f860240cbe06b3783560614621f616b6b419f1f68758d61abc0d1068a",
+      "sizeBytes": 1313,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0069",
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-auto-connect/package.json",
+      "sha256": "0d127818b88e14918d2293d6c447ab30874bd3688d0a53ace62182daba5fcfeb",
+      "sizeBytes": 869,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0070",
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-dragging-area/package.json",
+      "sha256": "e081ec7597530821ff39af8be3aa718b1de6955c4ca5936f2a4c2c6b4d9347d4",
+      "sizeBytes": 732,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0071",
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-selected-rect/package.json",
+      "sha256": "7219e1061af46c04789313d9f5c11b4a264d55602fe823a68ab84caddecf78ec",
+      "sizeBytes": 1171,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0072",
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/package.json",
+      "sha256": "ad00b4d7e54a05e5acbe63976fdc26098768e1bb963384f43b8a927be9090869",
+      "sizeBytes": 1087,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0073",
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-zoom-toolbar/package.json",
+      "sha256": "4c45c9c5bb8d52fe2d117180a3ec0c2e15c70396a27b26419589a8591a5e1353",
+      "sizeBytes": 1045,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0074",
+      "path": "Codebase/blocksuite/affine/widgets/frame-title/package.json",
+      "sha256": "b264e00edcae4bed5c41d51db5629031df8040cd93f84267bdaa3dd7bc94bdd8",
+      "sizeBytes": 932,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0075",
+      "path": "Codebase/blocksuite/affine/widgets/keyboard-toolbar/package.json",
+      "sha256": "eb08a0d6095e969675d0bf32f60d130f0f4346ff762a0f432f2dffd0d579f372",
+      "sizeBytes": 1798,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0076",
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/package.json",
+      "sha256": "7b66e8343e0e48f58e37c93d72936d2a5e2d34bb245530e912e782d2f20f7346",
+      "sizeBytes": 1263,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0077",
+      "path": "Codebase/blocksuite/affine/widgets/note-slicer/package.json",
+      "sha256": "13669e7ead8f7686809b56e6e81dad795b336cd926f48126714427c7dd86db15",
+      "sizeBytes": 920,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0078",
+      "path": "Codebase/blocksuite/affine/widgets/page-dragging-area/package.json",
+      "sha256": "75dd19bca9dd1604fda1a42c7db7a88d6933d9cbc5d50b2fd26e566ed3cf38a2",
+      "sizeBytes": 679,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0079",
+      "path": "Codebase/blocksuite/affine/widgets/remote-selection/package.json",
+      "sha256": "08b5d621c02bd9fe09a0b8a3d85f0170a8b04b8cc3294540ccf1cf79e3149582",
+      "sizeBytes": 869,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0080",
+      "path": "Codebase/blocksuite/affine/widgets/scroll-anchoring/package.json",
+      "sha256": "9043b46de583f12a0c88bc4f2e18be205cfed66141a1f199cd666cda6d9cec4d",
+      "sizeBytes": 792,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0081",
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/package.json",
+      "sha256": "9e6868ea8b770b6d10ab602ec9055209c7bdabc36cd323c75b8318cf6839259b",
+      "sizeBytes": 974,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0082",
+      "path": "Codebase/blocksuite/affine/widgets/toolbar/package.json",
+      "sha256": "5c043140710f585a7015926672f083a573b23b7cf3fd5bb8385bd683223fe5d5",
+      "sizeBytes": 1088,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0083",
+      "path": "Codebase/blocksuite/affine/widgets/viewport-overlay/package.json",
+      "sha256": "d34cbc31ccf4f2ddfd86f5ae5ad0886ef8ae7e8206013508816c0780d76ec22b",
+      "sizeBytes": 627,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0084",
+      "path": "Codebase/blocksuite/docs-site/package.json",
+      "sha256": "fc990c76fcec0443cc6edb3d23369f9737319030d49f3879f7af8a28f7190e0e",
+      "sizeBytes": 1093,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0085",
+      "path": "Codebase/blocksuite/docs/package.json",
+      "sha256": "36ebdc92da98b1fbad298284cbbb3ae05856e24da93fb6655556e04150991b1b",
+      "sizeBytes": 394,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0086",
+      "path": "Codebase/blocksuite/framework/global/package.json",
+      "sha256": "08ff242bc11d79356bf25e9defac0611eb2d1a0d8015b8fb9ecfa5d967238611",
+      "sizeBytes": 1367,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0087",
+      "path": "Codebase/blocksuite/framework/std/package.json",
+      "sha256": "0d00220602796784c29a0c05cfbc911519a991f5dccde6e7037b5e509b28651a",
+      "sizeBytes": 1348,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0088",
+      "path": "Codebase/blocksuite/framework/store/package.json",
+      "sha256": "239e3bc5065c739acc6a51029d172e9a32a1bead41a7a6bc0f3fa43988ffae90",
+      "sizeBytes": 942,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0089",
+      "path": "Codebase/blocksuite/framework/sync/package.json",
+      "sha256": "1db265931afa0f12134a4663e1144d54e51e1d5825b1226eb2c0ba2682e6e0cc",
+      "sizeBytes": 752,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0090",
+      "path": "Codebase/blocksuite/integration-test/package.json",
+      "sha256": "65a97987242837fdf9acf9639b2a2552a145f52f68f5761bd3d64d79b0faf322",
+      "sizeBytes": 1087,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0091",
+      "path": "Codebase/blocksuite/playground/package.json",
+      "sha256": "4a1d1f428dfcdcfda34b0c1b589d4c0fe8d81042f25908a2bc98439f4bdf9644",
+      "sizeBytes": 1219,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0092",
+      "path": "Codebase/docs/reference/package.json",
+      "sha256": "9569b75e8fcd5bf074fdeb960075606ad88d738202a5865d509283a44731faba",
+      "sizeBytes": 517,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0093",
+      "path": "Codebase/package.json",
+      "sha256": "6ce694262f8b3df1ca4bcf54acac62d60ef4bf7784419f1bfefb9858077e4ddf",
+      "sizeBytes": 8362,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0094",
+      "path": "Codebase/packages/backend/native/package.json",
+      "sha256": "3ff35bb04046f436d0b24c734e6909e398c998b09b3714737e3390b8624e08f7",
+      "sizeBytes": 950,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0095",
+      "path": "Codebase/packages/backend/server/package.json",
+      "sha256": "17212bca0b3f4e1ad6b9a27bdb17eeb07884e801614cb95fdbefcc36ebeb070a",
+      "sizeBytes": 5920,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0096",
+      "path": "Codebase/packages/common/auth/package.json",
+      "sha256": "f04ec13711f7ead5c182dbd61dc87f851f3f8194490c6153973dcf37578cc006",
+      "sizeBytes": 188,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0097",
+      "path": "Codebase/packages/common/debug/package.json",
+      "sha256": "1e0a2afa88386382972df95dad894e84107dc2864da83553fedc55f5bd47a25d",
+      "sizeBytes": 267,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0098",
+      "path": "Codebase/packages/common/env/package.json",
+      "sha256": "885a4b77266c7f94b77fb001ac32cfd07bedd0b2d2716fe8314e72fbfced6aeb",
+      "sizeBytes": 593,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0099",
+      "path": "Codebase/packages/common/error/package.json",
+      "sha256": "a02258da6caa78262b6ad00f2de5352fac47cd268c750f9f456773e635ecab28",
+      "sizeBytes": 281,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0100",
+      "path": "Codebase/packages/common/graphql/package.json",
+      "sha256": "ed7b6d4f1506ced948622a0a03f686029e9e61ee458333a651e7507f20bbaab9",
+      "sizeBytes": 791,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0101",
+      "path": "Codebase/packages/common/infra/package.json",
+      "sha256": "e4f95c5ced204ac1760bd9deb8bb5ebb4d6ef3f39d8e146ac350985fed16fe1e",
+      "sizeBytes": 1093,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0102",
+      "path": "Codebase/packages/common/nbstore/package.json",
+      "sha256": "8ae26623f5dbae82e8d3f3c31dd845eca1d5ff66611a4a8c691d9dfa158a5a83",
+      "sizeBytes": 1529,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0103",
+      "path": "Codebase/packages/common/reader/package.json",
+      "sha256": "36b6a0a80b327639d46617fb79c9fe5da029118d6f56ab8ceba9221d2310e9ff",
+      "sizeBytes": 579,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0104",
+      "path": "Codebase/packages/common/realtime/package.json",
+      "sha256": "4f5946ef0b5923d95642c911a3e037bbd45b8cb407ae088526983fd5ad0d0f47",
+      "sizeBytes": 227,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0105",
+      "path": "Codebase/packages/common/s3-compat/package.json",
+      "sha256": "e9549ae478060500c0d732ac96d437c0d01561ff68e27efcb56eea499fda453a",
+      "sizeBytes": 303,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0106",
+      "path": "Codebase/packages/frontend/admin/package.json",
+      "sha256": "a389fff929973aad2ebc52988007a821d8e1f43d92136dac68c9db716e4cecb8",
+      "sizeBytes": 2617,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0107",
+      "path": "Codebase/packages/frontend/apps/android/package.json",
+      "sha256": "0b5242f0909329ffdea8797e57b7089db40fdce18e56e793c5b1dbacc7bb3303",
+      "sizeBytes": 1236,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0108",
+      "path": "Codebase/packages/frontend/apps/electron-renderer/package.json",
+      "sha256": "e75eaaad3271badefbf664a2ececf4fdbba0c0733b07cd2f0c0a585bf5f63f6f",
+      "sizeBytes": 928,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0109",
+      "path": "Codebase/packages/frontend/apps/electron/package.json",
+      "sha256": "58f04dec25375bfbb03a2c6bf254b3b97a1862627c825360af94551fabf759b3",
+      "sizeBytes": 3130,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0110",
+      "path": "Codebase/packages/frontend/apps/electron/scripts/package.json",
+      "sha256": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a",
+      "sizeBytes": 23,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0111",
+      "path": "Codebase/packages/frontend/apps/ios/package.json",
+      "sha256": "79bb14ed75a989c93994a8111364f95f2ef88a7588568440f4dee89055d716a7",
+      "sizeBytes": 1482,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0112",
+      "path": "Codebase/packages/frontend/apps/mobile-shared/package.json",
+      "sha256": "2325cad41c40200de8325dcfff27f2dddae43254edcc44cb73d529094bf732ee",
+      "sizeBytes": 592,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0113",
+      "path": "Codebase/packages/frontend/apps/mobile/package.json",
+      "sha256": "8d6179b8ff00596e9cbae944c223eaf23c4abf43d7ab23bd5389b1fb75f119c2",
+      "sizeBytes": 735,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0114",
+      "path": "Codebase/packages/frontend/apps/web/package.json",
+      "sha256": "4bbfaa8b5c124c6f5b57592327039ad2ebb6543105735368cb2143a4c065e9e7",
+      "sizeBytes": 725,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0115",
+      "path": "Codebase/packages/frontend/component/package.json",
+      "sha256": "3cfa1d58fd56f72525357f5f66eb9ace97e6f42841800e7a929b6190a0732d9a",
+      "sizeBytes": 2707,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0116",
+      "path": "Codebase/packages/frontend/core/package.json",
+      "sha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+      "sizeBytes": 3690,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0117",
+      "path": "Codebase/packages/frontend/electron-api/package.json",
+      "sha256": "d8d0872d7108f15be7a7b5c1f818c2330cc7e80a06531b295d921ba14cac1b58",
+      "sizeBytes": 282,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0118",
+      "path": "Codebase/packages/frontend/i18n/package.json",
+      "sha256": "0d4f377e438ab8689365da1f077a01fb6bef902c203fc04d3eb74ddd388908f3",
+      "sizeBytes": 747,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0119",
+      "path": "Codebase/packages/frontend/native/package.json",
+      "sha256": "68d7732d2379d9d97c8d8fd0ecd5eb6c27ec4495600fc60fa997d403e1863785",
+      "sizeBytes": 1079,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0120",
+      "path": "Codebase/packages/frontend/routes/package.json",
+      "sha256": "a42a5737325664ba2f6e760db0f46f4db3a8092a982cb99b86fea19107204bca",
+      "sizeBytes": 402,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0121",
+      "path": "Codebase/packages/frontend/templates/package.json",
+      "sha256": "749e5643b6a6a3dc2e3e3eaaee12fa3fc70b16ef9ca384e44a97aaff1c93e744",
+      "sizeBytes": 513,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0122",
+      "path": "Codebase/packages/frontend/track/package.json",
+      "sha256": "82899109115077d23c8217a1d613c3cd12f0be67509c40592121f8bdbf50adea",
+      "sizeBytes": 372,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0123",
+      "path": "Codebase/tests/affine-cloud-copilot/package.json",
+      "sha256": "457f61fa769a206fe985927d01ef7f20d82f802ba2e834082925ce2c76b5c580",
+      "sizeBytes": 267,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0124",
+      "path": "Codebase/tests/affine-cloud/package.json",
+      "sha256": "dba28943a98c184f3c4ca61a25cb54577a5b2e7cc97fa03a5d1e92a8acef72ba",
+      "sizeBytes": 275,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0125",
+      "path": "Codebase/tests/affine-desktop-cloud/package.json",
+      "sha256": "7c67601f65d0678637269aff2a980135c35b9f8b5d8fcea009945aa9864ebba3",
+      "sizeBytes": 267,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0126",
+      "path": "Codebase/tests/affine-desktop/package.json",
+      "sha256": "87058670514d48f16d68727b914b3e098af265341ff22b0ab99ae46e5a583f6b",
+      "sizeBytes": 410,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0127",
+      "path": "Codebase/tests/affine-local/package.json",
+      "sha256": "f1071043649bab019ad80e5c0581f054485e85140a90f6522584ab0955519822",
+      "sizeBytes": 259,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0128",
+      "path": "Codebase/tests/affine-mobile/package.json",
+      "sha256": "ae37abb2dd77e583982bedeea08fea863586095e306a3eae703564d5d7ba4178",
+      "sizeBytes": 260,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0129",
+      "path": "Codebase/tests/blocksuite/package.json",
+      "sha256": "54e6276381979e861b5cc84a216e20f561838f81d2897236964498e2d800e559",
+      "sizeBytes": 424,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0130",
+      "path": "Codebase/tests/kit/package.json",
+      "sha256": "497a148c1f1e37a53e2414c65bcc01b723138efa6dc4d0e2df8e7f58f96d35c7",
+      "sizeBytes": 694,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0131",
+      "path": "Codebase/tools/@types/build-config/package.json",
+      "sha256": "704491edcf7cade26fbc914ad3eb7f97ea744c4fa6473265573d894f0c186a69",
+      "sizeBytes": 125,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0132",
+      "path": "Codebase/tools/@types/env/package.json",
+      "sha256": "e2e2244556755c6cc8b52fabf4136f249302e2b334b7989383c2a4cde608eeae",
+      "sizeBytes": 223,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0133",
+      "path": "Codebase/tools/changelog/package.json",
+      "sha256": "af6fc9a5b5b687bb509ca87b43b2d4e7d5d783aea8ec739ef33aaf4d53c83555",
+      "sizeBytes": 416,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0134",
+      "path": "Codebase/tools/cli/package.json",
+      "sha256": "8b4bb8e9eeef61baf2e4f8330e54c10cb1091fe709c823b2b70c49d1c63ebf28",
+      "sizeBytes": 1353,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0135",
+      "path": "Codebase/tools/commitlint/package.json",
+      "sha256": "0a90652f0886e18135005a85c809f18726be6fff8125262f61682ecf7114fd74",
+      "sizeBytes": 224,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0136",
+      "path": "Codebase/tools/copilot-result/package.json",
+      "sha256": "0f9f3c20a109ab81f3fb96cc4ce6578a75976ba36e48e03917fff142cac3c352",
+      "sizeBytes": 339,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0137",
+      "path": "Codebase/tools/doc-diff/package.json",
+      "sha256": "a95e45c6e0b2661d5f59c1f2817bca34fe369c52d4e2991b26bbb494e1c23b6c",
+      "sizeBytes": 554,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0138",
+      "path": "Codebase/tools/playstore-auto-bump/package.json",
+      "sha256": "83ba185cb4f41d8cf8c2a03602b7fc397a435b8d83f2feebf87844c407d67a07",
+      "sizeBytes": 538,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0139",
+      "path": "Codebase/tools/revert-update/package.json",
+      "sha256": "5944de88662dc3520c987dd81783406d240d7ac3290418e086990b436fe6ff97",
+      "sizeBytes": 421,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0140",
+      "path": "Codebase/tools/utils/package.json",
+      "sha256": "a84fdb7b366d78634eeb0178dd8df63979e3bbb694fad1b07759e36c089dd011",
+      "sizeBytes": 578,
+      "documentType": "NPM_MANIFEST",
+      "purpose": "Package identity, dependency declarations, scripts, and declared licence.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0141",
+      "path": "Codebase/Cargo.toml",
+      "sha256": "2b12fd3328a619cfc033334dd1d3a92921f251f82440739a356dcc3a4dfc3e49",
+      "sizeBytes": 3552,
+      "documentType": "CARGO_MANIFEST",
+      "purpose": "Rust workspace/package and direct dependency declarations.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0142",
+      "path": "Codebase/packages/backend/native/Cargo.toml",
+      "sha256": "c8d8c59673a8baedc738a15bdaa9e7fae03ba3141370bca41900dbfac79e4d32",
+      "sizeBytes": 2559,
+      "documentType": "CARGO_MANIFEST",
+      "purpose": "Rust workspace/package and direct dependency declarations.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0143",
+      "path": "Codebase/packages/common/native/Cargo.toml",
+      "sha256": "4cf819e57544b675b08c780d9271da8c3b79e5cde8dc417578b10d59db83bb4d",
+      "sizeBytes": 628,
+      "documentType": "CARGO_MANIFEST",
+      "purpose": "Rust workspace/package and direct dependency declarations.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0144",
+      "path": "Codebase/packages/frontend/mobile-native/Cargo.toml",
+      "sha256": "53db16b8344d803b845063eb80894d71be2d816ca9ffce771d4cc0c5730f5ed1",
+      "sizeBytes": 1504,
+      "documentType": "CARGO_MANIFEST",
+      "purpose": "Rust workspace/package and direct dependency declarations.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0145",
+      "path": "Codebase/packages/frontend/native/Cargo.toml",
+      "sha256": "cd00f88ddcd0e20b88648fa09d4c75621e070d956ba443414d878a9eafbe6854",
+      "sizeBytes": 1763,
+      "documentType": "CARGO_MANIFEST",
+      "purpose": "Rust workspace/package and direct dependency declarations.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0146",
+      "path": "Codebase/packages/frontend/native/media_capture/Cargo.toml",
+      "sha256": "c7ac0c4bea8b21abc998813520b31b119f1d6240c845a2a829473260105f450f",
+      "sizeBytes": 1498,
+      "documentType": "CARGO_MANIFEST",
+      "purpose": "Rust workspace/package and direct dependency declarations.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0147",
+      "path": "Codebase/packages/frontend/native/nbstore/Cargo.toml",
+      "sha256": "88f70e2c95b892d17dadb699bf9383758f8162daaa763418adea5e0a304aa6ce",
+      "sizeBytes": 1492,
+      "documentType": "CARGO_MANIFEST",
+      "purpose": "Rust workspace/package and direct dependency declarations.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0148",
+      "path": "Codebase/packages/frontend/native/schema/Cargo.toml",
+      "sha256": "a9dda3497c5752b02a438e4aaca89610311b722e419e1d9de2662bf88d95d871",
+      "sizeBytes": 181,
+      "documentType": "CARGO_MANIFEST",
+      "purpose": "Rust workspace/package and direct dependency declarations.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0149",
+      "path": "Codebase/packages/frontend/native/sqlite_v1/Cargo.toml",
+      "sha256": "d9409eb730d189c7a74f24a8c17702ca85f5d739aa0ffe583bc9e1714644846f",
+      "sizeBytes": 809,
+      "documentType": "CARGO_MANIFEST",
+      "purpose": "Rust workspace/package and direct dependency declarations.",
+      "authority": "LOCAL_PACKAGE_METADATA",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0150",
+      "path": "Codebase/yarn.lock",
+      "sha256": "4d00a2e861c27561ebd229f7d90bd4f03e2d786fdfe8ba0eb289cca0967cb991",
+      "sizeBytes": 1316158,
+      "documentType": "NPM_LOCKFILE",
+      "purpose": "Pinned JavaScript dependency graph.",
+      "authority": "LOCAL_BUILD_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0151",
+      "path": "Codebase/Cargo.lock",
+      "sha256": "6a1085e7e19e7934d2295b3d35a7413e42e4cfc71fcbfae171264125a8310466",
+      "sizeBytes": 268310,
+      "documentType": "CARGO_LOCKFILE",
+      "purpose": "Pinned Rust dependency graph.",
+      "authority": "LOCAL_BUILD_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0152",
+      "path": "Codebase/.yarnrc.yml",
+      "sha256": "ccc952998c861a4979579f0ee46db8188d2ff531c015bedea4da59f8f26a0c63",
+      "sizeBytes": 253,
+      "documentType": "PACKAGE_MANAGER_CONFIGURATION",
+      "purpose": "Bundled Yarn release and package-manager configuration.",
+      "authority": "LOCAL_BUILD_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0153",
+      "path": "Codebase/.yarn/releases/yarn-4.13.0.cjs",
+      "sha256": "730e0619753d39754c9e7613c7e57f084ea18b3244f5ba9a5a60bd3da048450b",
+      "sizeBytes": 3004059,
+      "documentType": "PACKAGE_MANAGER_RUNTIME",
+      "purpose": "Repository-bundled Yarn 4.13.0 runtime.",
+      "authority": "LOCAL_BUILD_EVIDENCE",
+      "exists": true
+    },
+    {
+      "sourceDocumentId": "SRC-DOC-0154",
+      "path": "Codebase/packages/frontend/apps/electron/forge.config.mjs",
+      "sha256": "58f4e7063be5b5a3a0cee6fca4643ffcd328ea8819b350c3d14f5c9b21021a43",
+      "sizeBytes": 11411,
+      "documentType": "PACKAGING_CONFIGURATION",
+      "purpose": "Electron packaging and extra-resource declarations.",
+      "authority": "LOCAL_BUILD_EVIDENCE",
+      "exists": true
+    }
+  ]
+}

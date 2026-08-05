@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "project",
+    "schemaVersion",
+    "projectPhase",
+    "lastUpdatedAt",
+    "repositoryRoot",
+    "codebaseRoot",
+    "graphifyRoot",
+    "gitStatus",
+    "graphifyStatus",
+    "ponytailStatus",
+    "subagentStatus",
+    "releaseGateStatus"
+  ],
+  "properties": {
+    "project": {
+      "const": "MindRoom"
+    },
+    "schemaVersion": {
+      "type": "integer"
+    },
+    "projectPhase": {
+      "const": "GRAPHIFY_MAPPING"
+    },
+    "currentBatchId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "currentTaskId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lastCompletedTaskId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lastUpdatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "repositoryRoot": {
+      "type": "string"
+    },
+    "codebaseRoot": {
+      "type": "string"
+    },
+    "graphifyRoot": {
+      "type": "string"
+    },
+    "gitStatus": {
+      "enum": [
+        "AVAILABLE",
+        "MISSING",
+        "BROKEN",
+        "UNKNOWN"
+      ]
+    },
+    "graphifyStatus": {
+      "enum": [
+        "AVAILABLE",
+        "MISSING",
+        "BROKEN",
+        "UNKNOWN"
+      ]
+    },
+    "ponytailStatus": {
+      "enum": [
+        "AVAILABLE",
+        "MISSING",
+        "BROKEN",
+        "UNKNOWN"
+      ]
+    },
+    "subagentStatus": {
+      "enum": [
+        "AVAILABLE",
+        "UNAVAILABLE",
+        "LIMIT_REACHED",
+        "UNKNOWN"
+      ]
+    },
+    "releaseGateStatus": {
+      "const": "LOCKED"
+    }
+  },
+  "additionalProperties": true
+}

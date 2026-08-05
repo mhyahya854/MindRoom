@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["candidateId", "candidateType", "classification", "capabilityIds", "paths", "reason", "proposedAction", "replacement", "risk", "evidence", "status", "executionStatus", "quarantineStatus", "deletionReceiptStatus", "independentReviewStatus", "approved", "purged", "implementationPerformed", "proofRequirements"],
+  "properties": {
+    "candidateId": {"type": "string", "pattern": "^MR-DELETE-"},
+    "capabilityIds": {"type": "array", "items": {"type": "string"}},
+    "paths": {"type": "array", "items": {"type": "string", "pattern": "^Codebase/"}},
+    "pathDiscoveryStatus": {"enum": ["EXACT_PATHS_MAPPED", "NO_CURRENT_PATH_MAPPED_DISCOVERY_REQUIRED"]},
+    "status": {"const": "CANDIDATE"},
+    "executionStatus": {"const": "NOT_STARTED"},
+    "quarantineStatus": {"const": "NOT_STARTED"},
+    "deletionReceiptStatus": {"enum": ["NOT_STARTED", "NOT_APPROVED"]},
+    "independentReviewStatus": {"const": "NOT_STARTED"},
+    "approved": {"const": false},
+    "purged": {"const": false},
+    "implementationPerformed": {"const": false},
+    "proofRequirements": {"type": "object", "minProperties": 22}
+  },
+  "additionalProperties": true
+}

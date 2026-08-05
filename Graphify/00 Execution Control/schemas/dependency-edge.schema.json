@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "edgeId",
+    "sourceNodeId",
+    "targetNodeId",
+    "relation",
+    "declaringPath",
+    "sourceSpan",
+    "context",
+    "evidenceOrigin",
+    "sourceResolutionStatus",
+    "targetResolutionStatus",
+    "layer",
+    "capabilityIds",
+    "evidence",
+    "runtimeRelationship",
+    "reviewStatus",
+    "recursiveStatus"
+  ],
+  "properties": {
+    "edgeId": {"type": "string", "pattern": "^MR-EDGE-"},
+    "sourceNodeId": {"type": "string", "minLength": 1},
+    "targetNodeId": {"type": "string", "minLength": 1},
+    "relation": {"type": "string", "minLength": 1},
+    "declaringPath": {"type": "string"},
+    "sourceSpan": {"type": "string"},
+    "context": {"type": "string"},
+    "evidenceOrigin": {"type": "string", "minLength": 1},
+    "sourceResolutionStatus": {"type": "string", "minLength": 1},
+    "targetResolutionStatus": {"type": "string", "minLength": 1},
+    "layer": {"type": "string", "minLength": 1},
+    "capabilityIds": {"type": "array", "items": {"type": "string"}},
+    "evidence": {"type": "array"},
+    "runtimeRelationship": {"type": "boolean"},
+    "reviewStatus": {"type": "string", "minLength": 1},
+    "recursiveStatus": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": true
+}

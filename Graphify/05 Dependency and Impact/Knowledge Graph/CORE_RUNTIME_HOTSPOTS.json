@@ -1,0 +1,1093 @@
+{
+  "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+  "godNodes": [
+    {
+      "nodeId": "MR-FILE-dff2c68a4913cffe0bb16ac8",
+      "qualifiedName": "Codebase/packages/common/graphql/src/schema.ts",
+      "path": "Codebase/packages/common/graphql/src/schema.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 2,
+      "outDegree": 879,
+      "totalDegree": 881,
+      "bridgeScore": 1758,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-8eb47da8948ab3af09733757",
+      "qualifiedName": "Codebase/packages/frontend/apps/ios/src/app.tsx",
+      "path": "Codebase/packages/frontend/apps/ios/src/app.tsx",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 11,
+      "outDegree": 457,
+      "totalDegree": 468,
+      "bridgeScore": 5027,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-92bed059560babeda443cee1",
+      "qualifiedName": "Codebase/packages/frontend/apps/android/src/app.tsx",
+      "path": "Codebase/packages/frontend/apps/android/src/app.tsx",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 11,
+      "outDegree": 444,
+      "totalDegree": 455,
+      "bridgeScore": 4884,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-5bc32412b491e186f8d35059",
+      "qualifiedName": "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+      "path": "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 8,
+      "outDegree": 408,
+      "totalDegree": 416,
+      "bridgeScore": 3264,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-bc6b019b7ec3db777c7372b7",
+      "qualifiedName": "Codebase/packages/frontend/apps/web/src/app.tsx",
+      "path": "Codebase/packages/frontend/apps/web/src/app.tsx",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 6,
+      "outDegree": 398,
+      "totalDegree": 404,
+      "bridgeScore": 2388,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-d075172913c5e4bce1ef0ae9",
+      "qualifiedName": "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+      "path": "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 1,
+      "outDegree": 379,
+      "totalDegree": 380,
+      "bridgeScore": 379,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-b32cc050883433c2568e0775",
+      "qualifiedName": "Codebase/packages/frontend/apps/ios/src/index.tsx",
+      "path": "Codebase/packages/frontend/apps/ios/src/index.tsx",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 0,
+      "outDegree": 361,
+      "totalDegree": 361,
+      "bridgeScore": 0,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-d1d67b8de104f5a2225737a7",
+      "qualifiedName": "Codebase/packages/frontend/apps/android/src/index.tsx",
+      "path": "Codebase/packages/frontend/apps/android/src/index.tsx",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 0,
+      "outDegree": 358,
+      "totalDegree": 358,
+      "bridgeScore": 0,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-2562cbfa942437664cc7242d",
+      "qualifiedName": "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+      "path": "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 2,
+      "outDegree": 330,
+      "totalDegree": 332,
+      "bridgeScore": 660,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-cb9570187d2e639145016b8e",
+      "qualifiedName": "Codebase/packages/frontend/core/src/modules/cloud/index.ts",
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 193,
+      "outDegree": 125,
+      "totalDegree": 318,
+      "bridgeScore": 24125,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-898a42e7c0791aa0d30c855c",
+      "qualifiedName": "Codebase/packages/frontend/core/src/blocksuite/ai/effects/app.ts",
+      "path": "Codebase/packages/frontend/core/src/blocksuite/ai/effects/app.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 2,
+      "outDegree": 313,
+      "totalDegree": 315,
+      "bridgeScore": 626,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-59ac9c02e133cedee0728ff0",
+      "qualifiedName": "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+      "path": "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 2,
+      "outDegree": 303,
+      "totalDegree": 305,
+      "bridgeScore": 606,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-59606f658541cb53a7810815",
+      "qualifiedName": "Codebase/packages/frontend/core/src/modules/workspace/index.ts",
+      "path": "Codebase/packages/frontend/core/src/modules/workspace/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 243,
+      "outDegree": 46,
+      "totalDegree": 289,
+      "bridgeScore": 11178,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-f741104d7c882de9766f62da",
+      "qualifiedName": "Codebase/packages/backend/server/src/base/index.ts",
+      "path": "Codebase/packages/backend/server/src/base/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 226,
+      "outDegree": 40,
+      "totalDegree": 266,
+      "bridgeScore": 9040,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-f36058d4d30901ecbec3a3a7",
+      "qualifiedName": "Codebase/blocksuite/playground/apps/starter/main.ts",
+      "path": "Codebase/blocksuite/playground/apps/starter/main.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 0,
+      "outDegree": 261,
+      "totalDegree": 261,
+      "bridgeScore": 0,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-f39be8bfa67b31690d3613d3",
+      "qualifiedName": "Codebase/blocksuite/playground/apps/starter/utils/app.ts",
+      "path": "Codebase/blocksuite/playground/apps/starter/utils/app.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 2,
+      "outDegree": 257,
+      "totalDegree": 259,
+      "bridgeScore": 514,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-9bf92b0b83ff9e285ca49340",
+      "qualifiedName": "Codebase/blocksuite/playground/apps/comment/index.ts",
+      "path": "Codebase/blocksuite/playground/apps/comment/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 1,
+      "outDegree": 245,
+      "totalDegree": 246,
+      "bridgeScore": 245,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-e4a6da08ecfcfe6c6ef08857",
+      "qualifiedName": "Codebase/packages/backend/server/src/data/app.ts",
+      "path": "Codebase/packages/backend/server/src/data/app.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 2,
+      "outDegree": 208,
+      "totalDegree": 210,
+      "bridgeScore": 416,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-8f35c5a622c73c73f0cb334a",
+      "qualifiedName": "Codebase/packages/backend/server/src/server.ts",
+      "path": "Codebase/packages/backend/server/src/server.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 1,
+      "outDegree": 208,
+      "totalDegree": 209,
+      "bridgeScore": 208,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-f7d170b6d6d7aa9367c5f825",
+      "qualifiedName": "Codebase/packages/backend/server/src/index.ts",
+      "path": "Codebase/packages/backend/server/src/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 0,
+      "outDegree": 204,
+      "totalDegree": 204,
+      "bridgeScore": 0,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-12ded398b37365b50f4ca256",
+      "qualifiedName": "Codebase/blocksuite/framework/std/src/gfx/index.ts",
+      "path": "Codebase/blocksuite/framework/std/src/gfx/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 87,
+      "outDegree": 116,
+      "totalDegree": 203,
+      "bridgeScore": 10092,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-91d681ba82bc619233ba7bf9",
+      "qualifiedName": "Codebase/packages/frontend/core/src/modules/doc/index.ts",
+      "path": "Codebase/packages/frontend/core/src/modules/doc/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 178,
+      "outDegree": 22,
+      "totalDegree": 200,
+      "bridgeScore": 3916,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-c42df50acd71cef32d85b7d4",
+      "qualifiedName": "Codebase/packages/backend/server/src/schema.gql",
+      "path": "Codebase/packages/backend/server/src/schema.gql",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 198,
+      "outDegree": 1,
+      "totalDegree": 199,
+      "bridgeScore": 198,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-2367b3dcb316f40a9253aa84",
+      "qualifiedName": "Codebase/packages/common/graphql/src/graphql/index.ts",
+      "path": "Codebase/packages/common/graphql/src/graphql/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 2,
+      "outDegree": 195,
+      "totalDegree": 197,
+      "bridgeScore": 390,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-0d7430b7388b5bb21b2e63c6",
+      "qualifiedName": "Codebase/packages/backend/server/src/native.ts",
+      "path": "Codebase/packages/backend/server/src/native.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 87,
+      "outDegree": 94,
+      "totalDegree": 181,
+      "bridgeScore": 8178,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-7c236e5399a3780004f41097",
+      "qualifiedName": "Codebase/packages/backend/server/src/models/index.ts",
+      "path": "Codebase/packages/backend/server/src/models/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 97,
+      "outDegree": 83,
+      "totalDegree": 180,
+      "bridgeScore": 8051,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-00f0006587400985fb625792",
+      "qualifiedName": "Codebase/blocksuite/affine/model/src/index.ts",
+      "path": "Codebase/blocksuite/affine/model/src/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 170,
+      "outDegree": 5,
+      "totalDegree": 175,
+      "bridgeScore": 850,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-f1176b75f3e3eeea13906863",
+      "qualifiedName": "Codebase/blocksuite/affine/shared/src/services/index.ts",
+      "path": "Codebase/blocksuite/affine/shared/src/services/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 118,
+      "outDegree": 30,
+      "totalDegree": 148,
+      "bridgeScore": 3540,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-0e59809275533cb645cfcbdd",
+      "qualifiedName": "Codebase/packages/frontend/core/src/modules/workbench/index.ts",
+      "path": "Codebase/packages/frontend/core/src/modules/workbench/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 103,
+      "outDegree": 42,
+      "totalDegree": 145,
+      "bridgeScore": 4326,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-d562570dc16971d5f86ad0a5",
+      "qualifiedName": "Codebase/packages/backend/server/src/core/auth/controller.ts",
+      "path": "Codebase/packages/backend/server/src/core/auth/controller.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 16,
+      "outDegree": 127,
+      "totalDegree": 143,
+      "bridgeScore": 2032,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    }
+  ],
+  "bridgeNodes": [
+    {
+      "nodeId": "MR-FILE-cb9570187d2e639145016b8e",
+      "qualifiedName": "Codebase/packages/frontend/core/src/modules/cloud/index.ts",
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 193,
+      "outDegree": 125,
+      "totalDegree": 318,
+      "bridgeScore": 24125,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-59606f658541cb53a7810815",
+      "qualifiedName": "Codebase/packages/frontend/core/src/modules/workspace/index.ts",
+      "path": "Codebase/packages/frontend/core/src/modules/workspace/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 243,
+      "outDegree": 46,
+      "totalDegree": 289,
+      "bridgeScore": 11178,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-12ded398b37365b50f4ca256",
+      "qualifiedName": "Codebase/blocksuite/framework/std/src/gfx/index.ts",
+      "path": "Codebase/blocksuite/framework/std/src/gfx/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 87,
+      "outDegree": 116,
+      "totalDegree": 203,
+      "bridgeScore": 10092,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-f741104d7c882de9766f62da",
+      "qualifiedName": "Codebase/packages/backend/server/src/base/index.ts",
+      "path": "Codebase/packages/backend/server/src/base/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 226,
+      "outDegree": 40,
+      "totalDegree": 266,
+      "bridgeScore": 9040,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-0d7430b7388b5bb21b2e63c6",
+      "qualifiedName": "Codebase/packages/backend/server/src/native.ts",
+      "path": "Codebase/packages/backend/server/src/native.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 87,
+      "outDegree": 94,
+      "totalDegree": 181,
+      "bridgeScore": 8178,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-7c236e5399a3780004f41097",
+      "qualifiedName": "Codebase/packages/backend/server/src/models/index.ts",
+      "path": "Codebase/packages/backend/server/src/models/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 97,
+      "outDegree": 83,
+      "totalDegree": 180,
+      "bridgeScore": 8051,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-8eb47da8948ab3af09733757",
+      "qualifiedName": "Codebase/packages/frontend/apps/ios/src/app.tsx",
+      "path": "Codebase/packages/frontend/apps/ios/src/app.tsx",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 11,
+      "outDegree": 457,
+      "totalDegree": 468,
+      "bridgeScore": 5027,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-92bed059560babeda443cee1",
+      "qualifiedName": "Codebase/packages/frontend/apps/android/src/app.tsx",
+      "path": "Codebase/packages/frontend/apps/android/src/app.tsx",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 11,
+      "outDegree": 444,
+      "totalDegree": 455,
+      "bridgeScore": 4884,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-0e59809275533cb645cfcbdd",
+      "qualifiedName": "Codebase/packages/frontend/core/src/modules/workbench/index.ts",
+      "path": "Codebase/packages/frontend/core/src/modules/workbench/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 103,
+      "outDegree": 42,
+      "totalDegree": 145,
+      "bridgeScore": 4326,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-1fc222a8acf08e6777afb185",
+      "qualifiedName": "Codebase/packages/frontend/core/src/modules/storage/index.ts",
+      "path": "Codebase/packages/frontend/core/src/modules/storage/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 97,
+      "outDegree": 42,
+      "totalDegree": 139,
+      "bridgeScore": 4074,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-6434ebd1ed218afbbbd57764",
+      "qualifiedName": "Codebase/packages/backend/native/src/llm/core/contracts/mod.rs",
+      "path": "Codebase/packages/backend/native/src/llm/core/contracts/mod.rs",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 80,
+      "outDegree": 49,
+      "totalDegree": 129,
+      "bridgeScore": 3920,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-91d681ba82bc619233ba7bf9",
+      "qualifiedName": "Codebase/packages/frontend/core/src/modules/doc/index.ts",
+      "path": "Codebase/packages/frontend/core/src/modules/doc/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 178,
+      "outDegree": 22,
+      "totalDegree": 200,
+      "bridgeScore": 3916,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-f1176b75f3e3eeea13906863",
+      "qualifiedName": "Codebase/blocksuite/affine/shared/src/services/index.ts",
+      "path": "Codebase/blocksuite/affine/shared/src/services/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 118,
+      "outDegree": 30,
+      "totalDegree": 148,
+      "bridgeScore": 3540,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-5bc32412b491e186f8d35059",
+      "qualifiedName": "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+      "path": "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 8,
+      "outDegree": 408,
+      "totalDegree": 416,
+      "bridgeScore": 3264,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-5406a970f134f8f6dba9dca7",
+      "qualifiedName": "Codebase/packages/frontend/component/src/index.ts",
+      "path": "Codebase/packages/frontend/component/src/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 83,
+      "outDegree": 39,
+      "totalDegree": 122,
+      "bridgeScore": 3237,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-3a6d53346e9c35de23853870",
+      "qualifiedName": "Codebase/packages/backend/server/src/plugins/copilot/providers/types.ts",
+      "path": "Codebase/packages/backend/server/src/plugins/copilot/providers/types.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 61,
+      "outDegree": 52,
+      "totalDegree": 113,
+      "bridgeScore": 3172,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-396baa6b11511edba198c35a",
+      "qualifiedName": "Codebase/packages/backend/server/src/core/auth/index.ts",
+      "path": "Codebase/packages/backend/server/src/core/auth/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 47,
+      "outDegree": 63,
+      "totalDegree": 110,
+      "bridgeScore": 2961,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-d8433b3d219353b89437f114",
+      "qualifiedName": "Codebase/packages/backend/native/src/runtime/storage_runtime/mod.rs",
+      "path": "Codebase/packages/backend/native/src/runtime/storage_runtime/mod.rs",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 62,
+      "outDegree": 46,
+      "totalDegree": 108,
+      "bridgeScore": 2852,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-f3e46723a33e82d0c7c5deac",
+      "qualifiedName": "Codebase/packages/backend/server/src/plugins/copilot/session.ts",
+      "path": "Codebase/packages/backend/server/src/plugins/copilot/session.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 35,
+      "outDegree": 74,
+      "totalDegree": 109,
+      "bridgeScore": 2590,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-25157f60b84cd41c0ec5b5ff",
+      "qualifiedName": "Codebase/blocksuite/affine/shared/src/utils/index.ts",
+      "path": "Codebase/blocksuite/affine/shared/src/utils/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 85,
+      "outDegree": 30,
+      "totalDegree": 115,
+      "bridgeScore": 2550,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-ccbad8c16495754e8e22e985",
+      "qualifiedName": "Codebase/blocksuite/affine/blocks/surface/src/index.ts",
+      "path": "Codebase/blocksuite/affine/blocks/surface/src/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 65,
+      "outDegree": 39,
+      "totalDegree": 104,
+      "bridgeScore": 2535,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-1d6b2943ba4c6a45921ad835",
+      "qualifiedName": "Codebase/packages/frontend/core/src/modules/collection-rules/index.ts",
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/index.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 36,
+      "outDegree": 69,
+      "totalDegree": 105,
+      "bridgeScore": 2484,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-bc6b019b7ec3db777c7372b7",
+      "qualifiedName": "Codebase/packages/frontend/apps/web/src/app.tsx",
+      "path": "Codebase/packages/frontend/apps/web/src/app.tsx",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 6,
+      "outDegree": 398,
+      "totalDegree": 404,
+      "bridgeScore": 2388,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-2c568874b20d43ca948756c6",
+      "qualifiedName": "Codebase/packages/frontend/core/src/modules/doc/services/docs.ts",
+      "path": "Codebase/packages/frontend/core/src/modules/doc/services/docs.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 61,
+      "outDegree": 37,
+      "totalDegree": 98,
+      "bridgeScore": 2257,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-4a315eff9f8532898f98aba0",
+      "qualifiedName": "Codebase/packages/backend/server/src/plugins/calendar/service.ts",
+      "path": "Codebase/packages/backend/server/src/plugins/calendar/service.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 43,
+      "outDegree": 51,
+      "totalDegree": 94,
+      "bridgeScore": 2193,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-cfb53ea31b9c3d786b6bffbc",
+      "qualifiedName": "Codebase/blocksuite/framework/global/src/gfx/model/bound.ts",
+      "path": "Codebase/blocksuite/framework/global/src/gfx/model/bound.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 54,
+      "outDegree": 40,
+      "totalDegree": 94,
+      "bridgeScore": 2160,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-8d5324fede35c3eb3785674a",
+      "qualifiedName": "Codebase/packages/backend/server/src/core/notification/service.ts",
+      "path": "Codebase/packages/backend/server/src/core/notification/service.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 38,
+      "outDegree": 55,
+      "totalDegree": 93,
+      "bridgeScore": 2090,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-64ecdca2d73803d92bdfe602",
+      "qualifiedName": "Codebase/packages/frontend/apps/electron/src/main/windows-manager/tab-views.ts",
+      "path": "Codebase/packages/frontend/apps/electron/src/main/windows-manager/tab-views.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 34,
+      "outDegree": 61,
+      "totalDegree": 95,
+      "bridgeScore": 2074,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-d562570dc16971d5f86ad0a5",
+      "qualifiedName": "Codebase/packages/backend/server/src/core/auth/controller.ts",
+      "path": "Codebase/packages/backend/server/src/core/auth/controller.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 16,
+      "outDegree": 127,
+      "totalDegree": 143,
+      "bridgeScore": 2032,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    },
+    {
+      "nodeId": "MR-FILE-e9d3a850866207f375c05e52",
+      "qualifiedName": "Codebase/packages/frontend/core/src/blocksuite/ai/runtime/chat/runtime.ts",
+      "path": "Codebase/packages/frontend/core/src/blocksuite/ai/runtime/chat/runtime.ts",
+      "layer": "AUTHORED_RUNTIME",
+      "inDegree": 35,
+      "outDegree": 58,
+      "totalDegree": 93,
+      "bridgeScore": 2030,
+      "classification": "AUTHORED_RUNTIME_ONLY"
+    }
+  ],
+  "excludedLayers": [
+    "VENDOR_AND_TOOLCHAIN",
+    "GENERATED_BINDING",
+    "EXTERNAL_DEPENDENCY",
+    "TEST_AND_FIXTURE"
+  ],
+  "specialIdentityAudit": [
+    {
+      "name": "Foundation",
+      "matches": [
+        {
+          "nodeId": "MR-CAP-131",
+          "layer": "PLANNED_CAPABILITY",
+          "nodeType": "CAPABILITY",
+          "path": "",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-EXT-12e45169f6b4e160c62d8953",
+          "layer": "EXTERNAL_DEPENDENCY",
+          "nodeType": "EXTERNAL_PACKAGE",
+          "path": "",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-EXT-3cfbccff0877b628c6c71c0c",
+          "layer": "EXTERNAL_DEPENDENCY",
+          "nodeType": "EXTERNAL_PACKAGE",
+          "path": "",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-EXT-7b3cb06e3ff395f1f2c41bd0",
+          "layer": "EXTERNAL_DEPENDENCY",
+          "nodeType": "EXTERNAL_PACKAGE",
+          "path": "",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-FILE-0b17209d01d1e3ebe779af30",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "FILE",
+          "path": "Codebase/blocksuite/affine/foundation/src/store.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-FILE-15245f5ed1863c372236db01",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "FILE",
+          "path": "Codebase/blocksuite/affine/foundation/src/index.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-FILE-3e56c1c61871f544741f13c9",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "FILE",
+          "path": "Codebase/blocksuite/affine/all/src/foundation/clipboard.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-FILE-5378e61be5a1e9ddd9c138c3",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "FILE",
+          "path": "Codebase/blocksuite/affine/foundation/src/clipboard.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-FILE-6e5d3675a832961698b68812",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "FILE",
+          "path": "Codebase/blocksuite/affine/all/src/foundation/view.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-FILE-836a7c19e00dd5c5be7d6925",
+          "layer": "BUILD_AND_CONFIG",
+          "nodeType": "FILE",
+          "path": "Codebase/blocksuite/affine/foundation/tsconfig.json",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-FILE-92f048e3ff0391e6d3584098",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "FILE",
+          "path": "Codebase/blocksuite/affine/foundation/src/view.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-FILE-b779b71aae7d7c9be5948972",
+          "layer": "BUILD_AND_CONFIG",
+          "nodeType": "FILE",
+          "path": "Codebase/blocksuite/affine/foundation/package.json",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-FILE-b7b302531d506def4d27c8fb",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "FILE",
+          "path": "Codebase/blocksuite/affine/foundation/src/effects.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-FILE-b961ef7a5edbd7e100dba1a7",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "FILE",
+          "path": "Codebase/blocksuite/affine/all/src/foundation/store.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-KEEP-001",
+          "layer": "PLANNED_CAPABILITY",
+          "nodeType": "REQUIREMENT",
+          "path": "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-KEEP-029",
+          "layer": "PLANNED_CAPABILITY",
+          "nodeType": "REQUIREMENT",
+          "path": "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-KEEP-037",
+          "layer": "PLANNED_CAPABILITY",
+          "nodeType": "REQUIREMENT",
+          "path": "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-REG-0b776aa82a63138d336ff8ba",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "RUNTIME_REGISTRATION",
+          "path": "Codebase/blocksuite/affine/foundation/src/view.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-REG-0cece7e68f4382b7cc4fea0e",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "RUNTIME_REGISTRATION",
+          "path": "Codebase/blocksuite/affine/foundation/src/view.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-REG-9e4b9f275365b67a8e84f96c",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "RUNTIME_REGISTRATION",
+          "path": "Codebase/blocksuite/affine/foundation/src/view.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-REG-a7d6d5bf26205852e59d4302",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "RUNTIME_REGISTRATION",
+          "path": "Codebase/blocksuite/affine/foundation/src/view.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-REG-b431ff755a61dcb1df5ac036",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "RUNTIME_REGISTRATION",
+          "path": "Codebase/blocksuite/affine/foundation/src/view.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-REG-b98cb2e95f6247d24d479c8f",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "RUNTIME_REGISTRATION",
+          "path": "Codebase/blocksuite/affine/foundation/src/view.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-REG-be793e197d9a05a0dd7903c7",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "RUNTIME_REGISTRATION",
+          "path": "Codebase/blocksuite/affine/foundation/src/view.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-REG-d69fe6104022011357f48d0b",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "RUNTIME_REGISTRATION",
+          "path": "Codebase/blocksuite/affine/foundation/src/store.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-REQ-0002",
+          "layer": "PLANNED_CAPABILITY",
+          "nodeType": "REQUIREMENT",
+          "path": "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-REQ-0040",
+          "layer": "PLANNED_CAPABILITY",
+          "nodeType": "REQUIREMENT",
+          "path": "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-REQ-0056",
+          "layer": "PLANNED_CAPABILITY",
+          "nodeType": "REQUIREMENT",
+          "path": "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-152be44ba45d129226e01590",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/blocksuite/affine/foundation/src/view.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-1c9c3e76b309f2ff5b4b0295",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/blocksuite/affine/foundation/src/store.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-251cc0f13f798873c3dcf25c",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/blocksuite/affine/foundation/src/view.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-31c2361a6876a649c7748a2b",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/blocksuite/affine/foundation/src/view.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-3a71031a6ca948850daaae54",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/blocksuite/affine/foundation/src/view.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-41e66683a5d0e6f686f674a5",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/blocksuite/affine/foundation/src/clipboard.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-605d9e42dd9a0564f37560b9",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/blocksuite/affine/foundation/src/clipboard.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-7bf46706253bd674dc97ef37",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/packages/frontend/native/media_capture/src/macos/cf_types.rs",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-91d4e195903a9471e46fcc5e",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/blocksuite/affine/foundation/src/effects.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-9eaf7100d2f16ab1e190a769",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/blocksuite/affine/foundation/src/store.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-WSPKG-d300a65b7609d0f2b640e632",
+          "layer": "BUILD_AND_CONFIG",
+          "nodeType": "WORKSPACE_PACKAGE",
+          "path": "Codebase/blocksuite/affine/foundation/package.json",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        }
+      ],
+      "collapsedIdentity": false
+    },
+    {
+      "name": "CurrentUser",
+      "matches": [
+        {
+          "nodeId": "MR-FILE-61c7b7f14df863df207b54e8",
+          "layer": "GENERATED_BINDING",
+          "nodeType": "GENERATED_ARTIFACT",
+          "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Operations/Queries/GetCurrentUserFeaturesQuery.graphql.swift",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-FILE-b49a2807ab59d6f50c70cce0",
+          "layer": "GENERATED_BINDING",
+          "nodeType": "GENERATED_ARTIFACT",
+          "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Operations/Queries/GetCurrentUserQuery.graphql.swift",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-GRAPHQL-5e18250e7b51bc292382d8d9",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "GRAPHQL_OPERATION",
+          "path": "Codebase/packages/common/graphql/src/graphql/get-current-user-features.gql",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-GRAPHQL-cb13ab732a3087cd5b93d0ad",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "GRAPHQL_OPERATION",
+          "path": "Codebase/packages/common/graphql/src/graphql/get-current-user.gql",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-016836d48ff99d1257be4029",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/packages/common/graphql/src/schema.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-04292f5910ece468742a34ed",
+          "layer": "GENERATED_BINDING",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Operations/Queries/GetCurrentUserQuery.graphql.swift",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-17942a60225707c5a081bd3c",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/packages/frontend/admin/src/modules/common.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-1c4daf370b2b82bade3c7142",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/packages/frontend/core/src/modules/editor-setting/impls/user-db.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-36b6f628808bd044b710cc93",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/packages/common/realtime/src/index.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-4fb1cbd7f60e1aae880d7ee3",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/packages/common/graphql/src/graphql/index.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-675eb39e4c616a810cbafcff",
+          "layer": "GENERATED_BINDING",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Operations/Queries/GetCurrentUserFeaturesQuery.graphql.swift",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-8ab3dcf3d678b8c6ddc0d05d",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/packages/common/graphql/src/schema.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-96f3817bd41731df55dd4859",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/packages/common/graphql/src/schema.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-9e2d32b4599492616a7da6e1",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/packages/common/graphql/src/graphql/index.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-b8b733ccfdd177f4475bf559",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/packages/frontend/core/src/modules/userspace/entities/current-user-db.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-bcafc43e6c6e6ef7ef8a757c",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/packages/frontend/admin/src/modules/common.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-d3b76f2f2acf5884f462b2a4",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/packages/common/graphql/src/schema.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-d76c082ba4ecb4fa9bb905d9",
+          "layer": "TEST_AND_FIXTURE",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/packages/backend/server/src/__tests__/utils/user.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        },
+        {
+          "nodeId": "MR-SYM-V2-ded88cc2a4d973b42e43dd2d",
+          "layer": "AUTHORED_RUNTIME",
+          "nodeType": "SYMBOL",
+          "path": "Codebase/packages/backend/server/src/core/auth/session.ts",
+          "classification": "LAYER_QUALIFIED_NO_IDENTITY_COLLAPSE"
+        }
+      ],
+      "collapsedIdentity": false
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "runId": "graphify-v2-repair-20260728T095646",
+  "globalMappingBlockers": [],
+  "resolvedMappingBlockers": [
+    "AFFINE_CANARY_ARCHIVE_ACQUIRED_AND_REFERENCE_PARITY_VERIFIED"
+  ],
+  "independentReviewStatus": "APPROVED",
+  "taskLevelFutureBlockers": [
+    "dependencies not installed",
+    "application typecheck not run",
+    "application tests not run",
+    "installer not produced",
+    "17 future QA fixtures not generated",
+    "SBOM not generated",
+    "MindRoom additions not implemented",
+    "deletions not performed",
+    "transplants not approved",
+    "final legal approval pending",
+    "final release gates false"
+  ],
+  "removedOutOfScopeBlockers": [
+    "semantic API key",
+    "Gemini availability",
+    "MP4 transcription"
+  ]
+}

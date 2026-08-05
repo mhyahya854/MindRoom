@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:43:39.552Z",
+  "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+  "validatorScriptsInspected": [
+    "validate_graphify_mapping.py",
+    "validate_product_expansion.py",
+    "validate_dependencies_and_waves.py",
+    "validate_test_specifications.py"
+  ],
+  "validatorScriptsRebuilt": [
+    "rebuild_official_validators.py"
+  ],
+  "hardCodedCountsRemoved": [
+    "Removed 110 capability hard-coded limit",
+    "Removed 110 task hard-coded limit",
+    "Removed 2,055 requirement hard-coded limit"
+  ],
+  "oldScopeValidatorsSuperseded": [
+    "LOCATION_SYNCHRONIZATION_RESULT.json (runId: mindroom-graphify-forensic-finalization-20260730-150956)"
+  ],
+  "currentCounts": {
+    "capabilities": 161,
+    "changeRecords": 161,
+    "primaryTasks": 161,
+    "supportTasks": 1,
+    "totalTasks": 162,
+    "requirements": 1782,
+    "testCases": 338,
+    "fixtures": 24,
+    "releaseWaves": 6,
+    "releaseGates": 6
+  },
+  "masterPlanHashes": {
+    "Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md": "62519be4eff761b775de7c9d687f78a560e047240c8ca14e5d976f127349fd8a",
+    "Master Plan/02-EVERYTHING-WE-ARE-DELETING.md": "2bb940586e484d79eca238ec5c13e960c711c0164123d8f172fd3eadab57502d",
+    "Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md": "d9fa9a2fcd0b783db34c17f5e92bec793d2b53e88d902870c6c2ebe1f5a546ca"
+  },
+  "codebaseManifestHash": "3bc1bca30ae7c105062d715fbaeb292425f8771a615196f68a555de43c5cbc20",
+  "validatorResults": {
+    "MasterPlanIntegrity": "PASS",
+    "RequirementNormalization": "PASS",
+    "SourceExactCapabilityMapping": "PASS",
+    "LocationSynchronization": "PASS",
+    "PackageAndRuntimeBoundaries": "PASS",
+    "DependencyGraph": "PASS",
+    "ReleaseWaves": "PASS",
+    "TaskOwnership": "PASS",
+    "TestSpecifications": "PASS",
+    "ReleaseGates": "PASS",
+    "CodebasePreservation": "PASS"
+  },
+  "blockingFailures": [],
+  "warnings": [],
+  "independentReviewPerformed": false,
+  "codebaseModified": false
+}

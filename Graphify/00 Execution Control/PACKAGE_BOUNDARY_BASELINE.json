@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:30:35.102Z",
+  "packageManager": "Yarn",
+  "packageManagerVersion": "4.13.0",
+  "workspacePatterns": [
+    ".",
+    "blocksuite/**/*",
+    "packages/*/*",
+    "packages/frontend/apps/*",
+    "tools/*",
+    "docs/reference",
+    "tools/@types/*",
+    "tests/*"
+  ],
+  "rootWorkspaceChangeRequired": false,
+  "existingPackageCount": 24,
+  "plannedPackageCount": 1,
+  "pnpmReferencesBefore": 0,
+  "packageCyclesBefore": 0,
+  "commonToFrontendDependenciesBefore": 0,
+  "financeToAdminDependenciesBefore": 0,
+  "rendererToElectronMainDependenciesBefore": 0,
+  "calendarCoreToOptionalAdapterDependenciesBefore": 0
+}

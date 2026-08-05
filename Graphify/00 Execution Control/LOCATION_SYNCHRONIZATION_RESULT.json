@@ -1,0 +1,15 @@
+{
+  "validatorId": "VAL-LOCATION-004",
+  "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+  "status": "PASS",
+  "counts": {
+    "changeRecords": 161
+  },
+  "checks": [
+    {
+      "checkId": "CHK-LOC-01",
+      "description": "161 change location records synchronized",
+      "status": "PASS"
+    }
+  ]
+}

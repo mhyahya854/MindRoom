@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "deletionId",
+    "originalPath",
+    "quarantinePath",
+    "originalSha256",
+    "classification",
+    "reason",
+    "staticImportMatches",
+    "reExportMatches",
+    "dynamicImportMatches",
+    "symbolReferenceMatches",
+    "runtimeRegistrationMatches",
+    "buildReferenceMatches",
+    "packagingReferenceMatches",
+    "migrationRequired",
+    "plannedCapabilityDependency",
+    "graphifyDependants",
+    "tests",
+    "buildReceipts",
+    "independentReviewer",
+    "reviewDecision",
+    "purgedAt",
+    "status"
+  ],
+  "properties": {
+    "reviewDecision": {
+      "enum": [
+        "APPROVED",
+        "REJECTED",
+        "PENDING"
+      ]
+    },
+    "status": {
+      "enum": [
+        "QUARANTINED",
+        "RESTORED",
+        "PURGED",
+        "NOT_PERFORMED"
+      ]
+    },
+    "purgedAt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "deletionId": {},
+    "originalPath": {},
+    "quarantinePath": {},
+    "originalSha256": {},
+    "classification": {},
+    "reason": {},
+    "staticImportMatches": {},
+    "reExportMatches": {},
+    "dynamicImportMatches": {},
+    "symbolReferenceMatches": {},
+    "runtimeRegistrationMatches": {},
+    "buildReferenceMatches": {},
+    "packagingReferenceMatches": {},
+    "migrationRequired": {},
+    "plannedCapabilityDependency": {},
+    "graphifyDependants": {},
+    "tests": {},
+    "buildReceipts": {},
+    "independentReviewer": {}
+  },
+  "additionalProperties": true
+}

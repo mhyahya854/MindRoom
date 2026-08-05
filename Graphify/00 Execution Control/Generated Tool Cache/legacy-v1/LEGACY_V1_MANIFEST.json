@@ -1,0 +1,17 @@
+{
+  "runId": "graphify-v2-repair-20260728T095646",
+  "status": "PRESERVED_NON_AUTHORITATIVE",
+  "originalPath": "Graphify/11 Completion/graphify-out",
+  "preservedPath": "Graphify/00 Execution Control/Generated Tool Cache/legacy-v1/graphify-out",
+  "fileCount": 1208,
+  "byteCount": 421681688,
+  "knownDefects": [
+    "existence-only AST batch cache",
+    "undirected authoritative graph construction",
+    "vendor/minified Yarn symbol pollution",
+    "31809 dangling endpoint edges",
+    "false SliderProps TypeScript self-loop"
+  ],
+  "authoritative": false,
+  "preservedAt": "2026-07-28T11:14:52.939Z"
+}

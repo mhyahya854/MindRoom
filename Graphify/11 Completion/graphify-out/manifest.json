@@ -1,0 +1,18 @@
+{
+  "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+  "authoritative": true,
+  "policyVersion": "mindroom-graphify-v2-layered-directed-2",
+  "files": {
+    "graph.json": "6219df6f05d7d749099678a25a986bf5d1ba94a3e48553a0fb60ce85f8beae68",
+    "graph.html": "ccf333573f5b35826e469120fab9cae40856e096fe7f1feffe9e22fd7515f006",
+    "GRAPH_HEALTH.json": "7cf54013463525bc4e3b508c288e97e0ff7d75e629642647301dcab94a89bd1d",
+    "GRAPH_REPORT.md": "b55b7f0368fc4ae9e6e217f581722bb219d0734d2aac94a9ee521fd46a6c4519"
+  },
+  "allowedFileSet": [
+    "graph.json",
+    "graph.html",
+    "GRAPH_HEALTH.json",
+    "GRAPH_REPORT.md",
+    "manifest.json"
+  ]
+}

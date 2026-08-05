@@ -1,0 +1,16 @@
+{
+  "invalidatedFreezeRunId": "mindroom-graphify-final-freeze-verified-20260731-161652",
+  "auditSessionId": "9537e3ef-c238-48e0-ac5b-9d0168fe5ab3",
+  "freezeStatus": "INVALIDATED",
+  "planningContentInvalidated": false,
+  "validatorAndFreezeReceiptInvalidated": true,
+  "reasons": [
+    "Validator used tautological actual==expected checks derived from defective baseline",
+    "Genuine task dependency cycle MR-IMPL-001 <-> MR-IMPL-108 present in planning artifacts",
+    "37 task backward-wave dependencies present in planning artifacts",
+    "35 capability backward-wave dependencies present in planning artifacts",
+    "verify_step11b_results.py was an empty exit(0) stub",
+    "STATUS.json mapping status and codebase manifest hash conflicted with completion receipts"
+  ],
+  "invalidatedAt": "2026-07-31T20:35:54+03:00"
+}

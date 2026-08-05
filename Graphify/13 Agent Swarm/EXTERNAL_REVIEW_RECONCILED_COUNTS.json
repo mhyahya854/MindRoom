@@ -1,0 +1,45 @@
+{
+  "reviewRunId": "mindroom-external-independent-review-20260730-215435",
+  "taskCounts": {
+    "canonicalTotalTasks": 162,
+    "canonicalPrimaryTasks": 161,
+    "canonicalSupportTasks": 0,
+    "canonicalBootstrapTasks": 1,
+    "meaningOfNewCapabilityTasksRows": "Derivative partition file containing 92 rows (91 expansion capability implementation tasks + 1 bootstrap task)",
+    "meaningOfAdaptationTasksRows": "Derivative partition file containing 68 rows of adaptation/preservation task mappings"
+  },
+  "fixtureCounts": {
+    "fixtureCategories": 6,
+    "canonicalFixtureRecords": 24,
+    "discrepancyResolution": "6 represents top-level domain fixture categories in FIXTURE_QA_MATRIX.md; 24 represents individual canonical fixture records across test specifications."
+  },
+  "dependencyEdgeCounts": {
+    "directAuthoritativeCapabilityEdges": 1961,
+    "capabilityTransitiveReachabilityPairs": 12880,
+    "directAuthoritativeTaskEdges": 311,
+    "taskTransitiveReachabilityPairs": 2450,
+    "directPackageEdges": 3,
+    "optionalPackageEdges": 0,
+    "forbiddenPackageEdges": 6,
+    "discrepancyResolution": "Edge counts strictly measure direct authoritative edges; transitive reachability closure pairs are classified separately."
+  },
+  "releaseGateCounts": {
+    "waveReleaseGates": 6,
+    "capabilityValidationGates": 51,
+    "applicationReleaseGates": 6,
+    "finalReleaseReceipt": 1,
+    "totalValidationGates": 58
+  },
+  "adrCounts": {
+    "totalAdrFiles": 14,
+    "authoritativeAdrs": 14,
+    "expansionAdrsDeeplyReviewed": 6,
+    "otherAdrsStructurallyReviewed": 8
+  },
+  "codebaseManifest": {
+    "officialCodebaseFileCount": 10080,
+    "externalCodebaseFileCount": 10080,
+    "manifestPathSetDifferences": 0,
+    "officialBaselinePreserved": true
+  }
+}

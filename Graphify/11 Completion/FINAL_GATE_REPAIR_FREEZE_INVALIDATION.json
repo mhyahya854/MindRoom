@@ -1,0 +1,7 @@
+{
+  "invalidatedFreezeRunId": "mindroom-graphify-final-freeze-authoritative-20260801-084203",
+  "freezeReceiptInvalidated": true,
+  "productPlanInvalidated": false,
+  "reason": "Release-gate test assignments were not synchronized to final capability and task waves, and no genuinely independent post-repair review had approved the resulting baseline.",
+  "invalidatedAt": "2026-08-01T13:28:22.3506017Z"
+}

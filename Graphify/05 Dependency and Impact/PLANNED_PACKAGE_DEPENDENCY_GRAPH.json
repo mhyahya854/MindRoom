@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:30:35.102Z",
+  "nodes": [
+    {
+      "id": "@mindroom/common",
+      "name": "@mindroom/common",
+      "path": "Codebase/packages/common/mindroom/",
+      "runtime": "SHARED",
+      "owner": "MindRoom Shared Core Team",
+      "private": true
+    },
+    {
+      "id": "@affine/core",
+      "name": "@affine/core",
+      "path": "Codebase/packages/frontend/core/",
+      "runtime": "RENDERER",
+      "owner": "AFFiNE Frontend Core",
+      "private": true
+    },
+    {
+      "id": "@affine/electron",
+      "name": "@affine/electron",
+      "path": "Codebase/packages/frontend/electron/",
+      "runtime": "ELECTRON_MAIN",
+      "owner": "AFFiNE Desktop Core",
+      "private": true
+    },
+    {
+      "id": "@mindroom/adapter-calendar-gcal",
+      "name": "@mindroom/adapter-calendar-gcal",
+      "path": "Graphify/09 Implementation/planned/mr-cap-120/",
+      "runtime": "OPTIONAL_ADAPTER",
+      "owner": "MindRoom Integration Team",
+      "private": true
+    }
+  ],
+  "edges": [
+    {
+      "from": "@affine/core",
+      "to": "@mindroom/common",
+      "type": "BUILD",
+      "reason": "Frontend application imports shared MindRoom domain contracts."
+    },
+    {
+      "from": "@affine/electron",
+      "to": "@mindroom/common",
+      "type": "BUILD",
+      "reason": "Electron main process imports shared MindRoom storage contracts."
+    },
+    {
+      "from": "@mindroom/adapter-calendar-gcal",
+      "to": "@mindroom/common",
+      "type": "OPTIONAL_ADAPTER",
+      "reason": "Optional Google Calendar adapter implements shared adapter contract."
+    }
+  ],
+  "forbiddenEdges": [
+    {
+      "from": "@mindroom/common",
+      "to": "@affine/core",
+      "reason": "Prevents circular package dependency."
+    },
+    {
+      "from": "@mindroom/common",
+      "to": "packages/frontend/admin/",
+      "reason": "Excludes admin application runtime dependency."
+    },
+    {
+      "from": "MindRoom Finance Core",
+      "to": "packages/frontend/admin/",
+      "reason": "Excludes admin chart and CSV application dependency."
+    },
+    {
+      "from": "MindRoom Local Calendar Core",
+      "to": "@mindroom/adapter-calendar-gcal",
+      "reason": "Local calendar core must operate 100% offline without adapters."
+    },
+    {
+      "from": "Renderer Process",
+      "to": "@affine/electron",
+      "reason": "Renderer must not import Electron main process directly."
+    },
+    {
+      "from": "Renderer Process",
+      "to": "Electron safeStorage",
+      "reason": "Encryption keys must never enter renderer state."
+    }
+  ],
+  "runtimeBoundaries": [
+    {
+      "runtime": "SHARED",
+      "accessibleAPIs": [
+        "Pure JavaScript/TypeScript",
+        "DOM-free validation"
+      ]
+    },
+    {
+      "runtime": "ELECTRON_MAIN",
+      "accessibleAPIs": [
+        "Node.js fs",
+        "Electron safeStorage",
+        "Native SQLite"
+      ]
+    },
+    {
+      "runtime": "RENDERER",
+      "accessibleAPIs": [
+        "React",
+        "BlockSuite UI",
+        "Typed Preload IPC Bridge"
+      ]
+    },
+    {
+      "runtime": "WORKER",
+      "accessibleAPIs": [
+        "WebWorker",
+        "sqlite-vss ONNX local embeddings"
+      ]
+    }
+  ],
+  "cycles": []
+}

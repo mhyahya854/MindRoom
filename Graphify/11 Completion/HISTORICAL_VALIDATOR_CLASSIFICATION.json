@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:43:39.544Z",
+  "rebuildRunId": "mindroom-graphify-validator-rebuild-20260730-184338",
+  "supersededValidators": [
+    {
+      "file": "Graphify/00 Execution Control/LOCATION_SYNCHRONIZATION_RESULT.json (110 scope)",
+      "status": "HISTORICAL / SUPERSEDED"
+    },
+    {
+      "file": "Graphify/00 Execution Control/EXECUTION_PLAN_VALIDATION_RESULT.json (110 scope)",
+      "status": "HISTORICAL / SUPERSEDED"
+    },
+    {
+      "file": "Graphify/00 Execution Control/GLOBAL_VALIDATION_RESULT.json (old run ID)",
+      "status": "HISTORICAL / SUPERSEDED"
+    }
+  ]
+}

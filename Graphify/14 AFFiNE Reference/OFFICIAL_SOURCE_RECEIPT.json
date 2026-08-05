@@ -1,0 +1,59 @@
+{
+  "project": "MindRoom",
+  "receiptId": "MR-AFFINE-SOURCE-DA7781A7",
+  "status": "VERIFIED_PINNED_OFFICIAL_SOURCE",
+  "repository": "toeverything/AFFiNE",
+  "sourceUrl": "https://codeload.github.com/toeverything/AFFiNE/zip/da7781a75171140fd966c6cfbe05da9f1fb111d6",
+  "commitUrl": "https://github.com/toeverything/AFFiNE/commit/da7781a75171140fd966c6cfbe05da9f1fb111d6",
+  "acquisitionCommand": "curl.exe -L --fail --retry 3 --output 'Graphify/14 AFFiNE Reference/Incoming/AFFiNE-canary.zip' 'https://codeload.github.com/toeverything/AFFiNE/zip/da7781a75171140fd966c6cfbe05da9f1fb111d6'",
+  "archivePath": "Graphify/14 AFFiNE Reference/Incoming/AFFiNE-canary.zip",
+  "archiveSha256": "1fc573a2143f664d4944df4e82570651f54c75ba8a891c546fe9153820a597c9",
+  "archiveSizeBytes": 78837502,
+  "archiveModifiedUtc": 1785311778.238088,
+  "commit": "da7781a75171140fd966c6cfbe05da9f1fb111d6",
+  "treeSha": "4f7b0d6657efa7e9ee0c1e3359e09a21eb8e145f",
+  "version": "0.26.3",
+  "archiveValidation": {
+    "crcStatus": "PASS",
+    "crcFailureEntry": null,
+    "zipComment": "da7781a75171140fd966c6cfbe05da9f1fb111d6",
+    "zipCommentMatchesCommit": true,
+    "canonicalContentTreeSha256": "9cc5090ac0db71594e59e8cc557bc6db12c2754fea134dc17ab1d05e82067fba",
+    "canonicalContentTreeDigestAlgorithm": "SHA-256 over sorted UTF-8 records: relative-path NUL size NUL file-sha256 LF",
+    "archiveFileCount": 10109,
+    "extractedFileCount": 10109,
+    "missingExtractedFiles": 0,
+    "mismatchedExtractedFiles": 0,
+    "sampleMissing": [],
+    "sampleMismatched": [],
+    "status": "PASS"
+  },
+  "licenceEvidence": [
+    {
+      "path": "Graphify/14 AFFiNE Reference/Reference Tree/LICENSE",
+      "sha256": "c107c8088fe42bce6def95d313cfe7b5984d3bb2c1608b67f855327da45f497b"
+    },
+    {
+      "path": "Graphify/14 AFFiNE Reference/Reference Tree/LICENSE-MIT",
+      "sha256": "1cdeca52d4f740361f103926144eb8b3f265975b2337d4e27b3313f72465897f"
+    },
+    {
+      "path": "Graphify/14 AFFiNE Reference/Reference Tree/packages/backend/server/LICENSE",
+      "sha256": "5a644f9defc017ffd484413598d1edf65bc78718e4011ac33a0e1fcae629e25d"
+    },
+    {
+      "path": "Graphify/14 AFFiNE Reference/Reference Tree/packages/backend/native/LICENSE",
+      "sha256": "5a644f9defc017ffd484413598d1edf65bc78718e4011ac33a0e1fcae629e25d"
+    },
+    {
+      "path": "Graphify/14 AFFiNE Reference/Reference Tree/packages/common/native/LICENSE",
+      "sha256": "5a644f9defc017ffd484413598d1edf65bc78718e4011ac33a0e1fcae629e25d"
+    }
+  ],
+  "expectedContainerHash": "4a3eaa9e66efda0dc786993321a85750a65992d5c4c12656553ef50c3228e8fa",
+  "expectedContainerHashSource": "Legacy Graphify finalizer constant; no source receipt exists.",
+  "expectedContainerHashMatch": false,
+  "mismatchDisposition": "UNVERIFIED_EXPECTED_HASH; official pinned commit, CRC, archive root, ZIP comment, package version, extracted-tree parity, and content-tree digest pass.",
+  "implementationAuthorization": false,
+  "recordedAt": "2026-07-29T08:25:18.401507Z"
+}

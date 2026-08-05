@@ -1,0 +1,150 @@
+{
+  "repairSessionId": "mindroom-graphify-pre-review-certification-20260805-115001",
+  "repairRunId": "20260805-115001",
+  "repairScope": "Authorized pre-review certification repair of the strict validator, challenge runner, dynamic verifier, replacement-backup receipt, and candidate manifest. Codebase strictly read-only.",
+  "authorizedSourceFilesChanged": [
+    "11 Completion/validate_final_graphify_freeze.py",
+    "11 Completion/run_final_freeze_challenges.py",
+    "00 Execution Control/FINAL_LONG_PATH_BACKUP_VERIFICATION.json",
+    "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"
+  ],
+  "authorizedSourceFilesVerifiedUnchanged": [
+    "11 Completion/verify_step11b_results.py"
+  ],
+  "generatedReportsChanged": [
+    "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+    "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json",
+    "11 Completion/FINAL_THREE_FILE_CERTIFICATION_REPAIR_REPORT.json"
+  ],
+  "validatorRepairSummary": {
+    "validationModes": [
+      "CORE_PRE_CHALLENGE",
+      "FULL_TECHNICAL_CERTIFICATION",
+      "FINAL_FREEZE_CERTIFICATION"
+    ],
+    "fullTechnicalCheckCount": 188,
+    "corePreChallengeCheckCount": 185,
+    "metaCheckCountFull": 18,
+    "metaCheckCountCore": 15,
+    "lineageEvidenceChecks": [
+      "CAPABILITY-LINEAGE-EVIDENCE-SOURCE",
+      "CAPABILITY-LINEAGE-EVIDENCE-STATUS",
+      "CAPABILITY-LINEAGE-EVIDENCE-TARGETS",
+      "CAPABILITY-LINEAGE-EVIDENCE-SUPERSESSION",
+      "CAPABILITY-LINEAGE-EVIDENCE-AUTHORITY",
+      "TASK-LINEAGE-EVIDENCE-SOURCE",
+      "TASK-LINEAGE-EVIDENCE-STATUS",
+      "TASK-LINEAGE-EVIDENCE-TARGETS",
+      "TASK-LINEAGE-EVIDENCE-SUPERSESSION",
+      "TASK-LINEAGE-EVIDENCE-AUTHORITY"
+    ],
+    "validatorWritesToGraphify": 0,
+    "validatorWritesToCodebase": 0,
+    "baselineRelativeAcceptanceChecks": 0,
+    "tautologicalChecks": 0,
+    "failureExemptionsRemoved": true,
+    "documentedEnvironmentFailuresRemaining": 0
+  },
+  "challengeRunnerRepairSummary": {
+    "totalChallenges": 79,
+    "challengesPassed": 79,
+    "challengesFailed": 0,
+    "challengesUsingProductionValidator": 79,
+    "challengesWithZeroFailureBaseline": 79,
+    "challengesUsingBaselineFailureSubtraction": 0,
+    "coreBaselineStatus": "PASS",
+    "coreBaselineFailedCheckIds": [],
+    "fullCertificationStatus": "PASS",
+    "fullCertificationFailedCheckIds": [],
+    "documentedEnvironmentFailures": [],
+    "environmentExemptions": [],
+    "baselineFailuresSubtracted": false,
+    "perChallengeValidationModeSupportAdded": true,
+    "liveReportOverrideChallengeRunsInFullMode": true,
+    "newChallengesAdded": [
+      "CHALLENGE-CAP-EVIDENCE-STATUS-001",
+      "CHALLENGE-TASK-EVIDENCE-STATUS-001",
+      "CHALLENGE-CAP-EVIDENCE-SOURCE-001",
+      "CHALLENGE-TASK-EVIDENCE-SOURCE-001",
+      "CHALLENGE-CAP-EVIDENCE-TARGET-001",
+      "CHALLENGE-TASK-EVIDENCE-TARGET-001",
+      "CHALLENGE-ALIAS-SOURCE-001",
+      "CHALLENGE-ALIAS-TARGET-001",
+      "CHALLENGE-RECLASSIFIED-SOURCE-001",
+      "CHALLENGE-RECLASSIFIED-TARGET-001",
+      "CHALLENGE-BACKUP-PATH-001",
+      "CHALLENGE-BACKUP-HASH-001",
+      "CHALLENGE-BACKUP-MISSING-FILE-001",
+      "CHALLENGE-LIVE-REPORT-OVERRIDE-001",
+      "CHALLENGE-MANIFEST-VALIDATOR-HASH-001"
+    ]
+  },
+  "verifierRepairSummary": {
+    "hardCodedValidatorCheckCountRemoved": true,
+    "hardCodedChallengeCountRemoved": true,
+    "hardCodedChallengeIdArraysRemoved": true,
+    "definitionsDerivedFromProductionScripts": [
+      "get_check_definitions",
+      "get_challenge_definitions"
+    ],
+    "verifierAcceptsUnfrozenGovernanceState": true,
+    "verifierFailsWhenImplementationOrReleaseStarted": true
+  },
+  "backupVerification": {
+    "replacementBackupPath": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-pre-review-certification-20260805-092300",
+    "supersedesMissingHistoricalBackupPath": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-lineage-repair-20260801-190852",
+    "historicalBackupPresent": false,
+    "replacementBackupVerified": true,
+    "sourceFileCount": 13443,
+    "backupFileCount": 13443,
+    "sourceDirectoryCount": 8497,
+    "backupDirectoryCount": 8497,
+    "missingBackupFiles": 0,
+    "extraBackupFiles": 0,
+    "backupHashMismatches": 0,
+    "backupSizeMismatches": 0,
+    "backupDirectoryDifferences": 0,
+    "longPathOmissions": 0,
+    "unreadablePaths": 0,
+    "aggregatePolicy": "The recorded receipt aggregate excludes exactly five generated/self-referential artifacts (backup receipt, candidate manifest, live validation result, challenge report, three-file repair report) because the receipt records the tree aggregate, the candidate manifest records the receipt hash, and the live validation result records the manifest aggregate; no full-tree fixed point exists when regenerated reports carry fresh timestamps. Every per-file comparison and the external full-tree aggregate comparison cover every file byte-for-byte.",
+    "externalFullTreeVerification": "independent os.scandir extended-length scans of live and backup trees, per-file SHA-256, size, path set, directory set, and full-tree aggregate equality"
+  },
+  "candidateManifest": {
+    "recordCount": 166,
+    "inventoryDeclaredRecordCount": 166,
+    "missingPaths": 0,
+    "hashMismatches": 0,
+    "duplicateNormalizedPaths": 0,
+    "inventoryMismatches": 0,
+    "selfReference": false,
+    "aggregateSha256": "9c8a2376c1b4d85909826d836a54ef4615794417e6b606de43b1a937755fb889"
+  },
+  "liveRepositoryValidation": {
+    "validationTarget": "LIVE_REPOSITORY",
+    "candidateRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify",
+    "overridesUsed": false,
+    "temporaryChallengeId": null,
+    "validationMode": "FULL_TECHNICAL_CERTIFICATION",
+    "status": "PASS",
+    "failedChecksCount": 0,
+    "certificationClassification": "TECHNICAL_REPAIR_VALID"
+  },
+  "codebasePreservation": {
+    "codebaseFileCount": 10080,
+    "codebaseDirectoryCount": 2548,
+    "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+    "filesModified": 0,
+    "filesAdded": 0,
+    "filesDeleted": 0
+  },
+  "governanceState": {
+    "finalFreezeCreated": false,
+    "independentApprovalCreated": false,
+    "wave0Started": false,
+    "codebaseExecutionAuthorized": false,
+    "applicationReleaseVerified": false,
+    "planningFreezeStatus": "NOT_FROZEN",
+    "pendingGovernanceCondition": "Genuinely independent GPT-5.6 Sol review remains pending; FINAL_FREEZE_CERTIFICATION is reserved for that later phase."
+  },
+  "generatedAt": "2026-08-05T14:55:00+03:00"
+}

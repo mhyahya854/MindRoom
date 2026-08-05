@@ -1,0 +1,107 @@
+{
+  "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+  "codebaseBaseline": "135fbaacd841e5e4c271b046eda4b1613da83122e08c464904d395cd93ae5a04",
+  "masterPlanHashes": {
+    "01-EVERYTHING-WE-ARE-KEEPING.md": "62519be4eff761b775de7c9d687f78a560e047240c8ca14e5d976f127349fd8a",
+    "02-EVERYTHING-WE-ARE-DELETING.md": "2bb940586e484d79eca238ec5c13e960c711c0164123d8f172fd3eadab57502d",
+    "03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md": "d9fa9a2fcd0b783db34c17f5e92bec793d2b53e88d902870c6c2ebe1f5a546ca"
+  },
+  "generatedAt": "2026-07-30T15:10:08.602Z",
+  "registryPath": "Graphify/04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json",
+  "registrySha256": "0c9d4a7aab69555db4bea532dde618d683926798de6655cf47a3a765d2a3f937",
+  "categoryCount": 8,
+  "categories": {
+    "repositoryFiles": {
+      "denominator": 10080,
+      "numerator": 10080,
+      "missingCount": 0,
+      "missingRecords": [],
+      "independentSources": [
+        "GRAPH_LAYER_FILE_REGISTRY"
+      ],
+      "status": "PASS"
+    },
+    "packageBuildPackagingGeneratorEntrypoints": {
+      "denominator": 263,
+      "numerator": 263,
+      "missingCount": 0,
+      "missingRecords": [],
+      "independentSources": [
+        "MANIFEST_AND_ENTRYPOINT_SOURCE_SCAN"
+      ],
+      "status": "PASS"
+    },
+    "testsAndFixtures": {
+      "denominator": 1187,
+      "numerator": 1187,
+      "missingCount": 0,
+      "missingRecords": [],
+      "independentSources": [
+        "GRAPH_LAYER_FILE_REGISTRY"
+      ],
+      "status": "PASS"
+    },
+    "migrationsAndSchemas": {
+      "denominator": 154,
+      "numerator": 154,
+      "missingCount": 0,
+      "missingRecords": [],
+      "independentSources": [
+        "GRAPH_LAYER_FILE_REGISTRY"
+      ],
+      "status": "PASS"
+    },
+    "generatedArtifacts": {
+      "denominator": 856,
+      "numerator": 856,
+      "missingCount": 0,
+      "missingRecords": [],
+      "independentSources": [
+        "GENERATED_CODE_PROVENANCE",
+        "GRAPH_LAYER_FILE_REGISTRY"
+      ],
+      "status": "PASS"
+    },
+    "exportedOrMeaningfulSymbols": {
+      "denominator": 36492,
+      "numerator": 36492,
+      "missingCount": 0,
+      "missingRecords": [],
+      "independentSources": [
+        "SOURCE_EXPORT_SCAN",
+        "SYMBOL_REGISTRY"
+      ],
+      "status": "PASS",
+      "repairEvidence": [
+        "Graphify/04 Exact Location Registry/SYMBOL_REGISTRY.jsonl",
+        "Graphify/04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json"
+      ]
+    },
+    "runtimeRegistrations": {
+      "denominator": 643,
+      "numerator": 643,
+      "missingCount": 0,
+      "missingRecords": [],
+      "independentSources": [
+        "RUNTIME_REGISTRATION_REGISTRY"
+      ],
+      "status": "PASS"
+    },
+    "productExpansionSemanticRoots": {
+      "denominator": 136,
+      "numerator": 136,
+      "missingCount": 0,
+      "missingRecords": [],
+      "independentSources": [
+        "SOURCE_INSPECTION",
+        "CAPABILITY_SOURCE_SEARCH_RECEIPTS",
+        "CAPABILITY_EVIDENCE"
+      ],
+      "status": "PASS",
+      "arbitraryTopNUsed": false
+    }
+  },
+  "allCategoriesComplete": true,
+  "explicitMeaningfulLocationFieldCount": 32625,
+  "entityCount": 33248
+}

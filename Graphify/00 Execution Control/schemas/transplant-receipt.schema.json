@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "receiptId",
+    "capabilityId",
+    "requiredBehaviour",
+    "activeCodeSearchQueries",
+    "affineReferenceSearchQueries",
+    "activeFilesFound",
+    "affineFilesFound",
+    "coherentModuleBoundary",
+    "decision",
+    "decisionReason",
+    "copiedFiles",
+    "adaptedFiles",
+    "requiredAdaptations",
+    "licenceStatus",
+    "independentReviewer",
+    "approved"
+  ],
+  "properties": {
+    "decision": {
+      "enum": [
+        "KEEP_EXISTING",
+        "KEEP_AND_ADAPT",
+        "COPY_COHERENT_IMPLEMENTATION",
+        "REPAIR_PARTIAL",
+        "INVENT_NEW"
+      ]
+    },
+    "licenceStatus": {
+      "enum": [
+        "APPROVED",
+        "BLOCKED",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "approved": {
+      "type": "boolean"
+    },
+    "receiptId": {},
+    "capabilityId": {},
+    "requiredBehaviour": {},
+    "activeCodeSearchQueries": {},
+    "affineReferenceSearchQueries": {},
+    "activeFilesFound": {},
+    "affineFilesFound": {},
+    "coherentModuleBoundary": {},
+    "decisionReason": {},
+    "copiedFiles": {},
+    "adaptedFiles": {},
+    "requiredAdaptations": {},
+    "independentReviewer": {}
+  },
+  "additionalProperties": true
+}

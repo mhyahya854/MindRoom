@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:30:35.102Z",
+  "dependenciesEvaluated": [
+    {
+      "dependencyPurpose": "Local Semantic Vector Search",
+      "selectedTechnology": "SQLite extension providing vector search (sqlite-vss)",
+      "alreadyPresent": false,
+      "runtime": "WORKER",
+      "native": true,
+      "wasm": false,
+      "electronRebuildRequired": true,
+      "platformRisk": "LOW — Precompiled native binaries available for Windows, macOS, and Linux",
+      "packagingRisk": "MEDIUM — Must bundle native .node / .dll extension with Electron main/worker",
+      "fallback": "Deterministic full-text and metadata search (100% operational without vector extension)",
+      "decision": "USE"
+    },
+    {
+      "dependencyPurpose": "Local Embedding Generation",
+      "selectedTechnology": "Transformers.js (ONNX Runtime Web)",
+      "alreadyPresent": false,
+      "runtime": "WORKER",
+      "native": false,
+      "wasm": true,
+      "electronRebuildRequired": false,
+      "platformRisk": "LOW — Runs cross-platform via WASM / WebGPU",
+      "packagingRisk": "LOW — Local ONNX model file bundled in user app data",
+      "fallback": "Deterministic keyword search",
+      "decision": "USE"
+    },
+    {
+      "dependencyPurpose": "Finance Local Vault Key Storage",
+      "selectedTechnology": "Electron safeStorage API + AES-256-GCM WebCrypto",
+      "alreadyPresent": true,
+      "runtime": "ELECTRON_MAIN",
+      "native": true,
+      "wasm": false,
+      "electronRebuildRequired": false,
+      "platformRisk": "ZERO — Native Electron OS keychain binding (Keychain, Credential Manager, Secret Service)",
+      "packagingRisk": "ZERO — Part of core Electron runtime",
+      "fallback": "User PBKDF2 passphrase key wrapping if safeStorage is unavailable",
+      "decision": "USE"
+    },
+    {
+      "dependencyPurpose": "Receipt OCR Processing",
+      "selectedTechnology": "Tesseract.js / Local OCR Engine",
+      "alreadyPresent": false,
+      "runtime": "WORKER",
+      "native": false,
+      "wasm": true,
+      "electronRebuildRequired": false,
+      "platformRisk": "MEDIUM — High WASM bundle size",
+      "packagingRisk": "HIGH — Deferred until after core MindRoom release",
+      "fallback": "Manual receipt text and attachment entry",
+      "decision": "DEFER"
+    }
+  ],
+  "ocrBoundaryStatus": "OPTIONAL_LATER_CAPABILITY — OCR removed from mandatory receipt exit conditions."
+}

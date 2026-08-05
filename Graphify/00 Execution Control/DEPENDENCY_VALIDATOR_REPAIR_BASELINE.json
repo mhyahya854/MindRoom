@@ -1,0 +1,9 @@
+{
+  "repairRunId": "mindroom-graphify-dependency-validator-repair-20260731-203554",
+  "timestamp": "2026-07-31T20:35:54+03:00",
+  "graphifyFileCount": 10049,
+  "codebaseFileCount": 10080,
+  "codebaseDirCount": 2549,
+  "codebaseAggregateHash": "1d0bcd0465cf84d4175d877041c590a7675110c06534e9f5ba30aea015069c6b",
+  "invalidatedFreezeRunId": "mindroom-graphify-final-freeze-verified-20260731-161652"
+}

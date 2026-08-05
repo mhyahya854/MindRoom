@@ -1,0 +1,138 @@
+{
+  "reviewSessionId": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
+  "reviewerIsolationMethod": "Separate read-only reviewer with no participation in the repair; independently parsed live artifacts, ran the exact production validator with PYTHONDONTWRITEBYTECODE=1, and compared complete Graphify and Codebase inventories before and after review.",
+  "repairSessionId": "mindroom-graphify-lineage-repair-20260801-193148",
+  "readOnly": true,
+  "graphifyMutations": 0,
+  "codebaseMutations": 0,
+  "lineageChecks": [
+    {
+      "checkId": "LINEAGE-01",
+      "description": "Referenced source IDs, live mappings, capability expansion, task expansion, and source-array preservation are exact.",
+      "status": "PASS",
+      "actual": {"distinctReferencedSourceIds": 2055, "legacyLineageRecords": 278, "merged": 170, "excluded": 108, "unresolved": 0, "conflicting": 0, "unsupported": 0, "capabilityExpansionDefects": 0, "taskExpansionDefects": 0, "sourceArrayPreservationDefects": 0},
+      "expected": {"unresolved": 0, "conflicting": 0, "unsupported": 0, "capabilityExpansionDefects": 0, "taskExpansionDefects": 0, "sourceArrayPreservationDefects": 0},
+      "evidence": "Independent comparison of live capability/task source arrays, canonical requirements, NODES.jsonl, lineage records, supersessions, and traceability report."
+    },
+    {
+      "checkId": "LINEAGE-02",
+      "description": "Production validator enforces the complete lineage status vocabulary and evidence semantics.",
+      "status": "FAIL",
+      "actual": {"allowedStatusEnumerationPresent": false, "reclassifiedValidationPresent": false, "aliasValidationPresent": false, "unknownStatusRejectionPresent": false, "mergedEvidenceBindingComplete": false},
+      "expected": {"allowedStatusEnumerationPresent": true, "reclassifiedValidationPresent": true, "aliasValidationPresent": true, "unknownStatusRejectionPresent": true, "mergedEvidenceBindingComplete": true},
+      "evidence": "Static inspection of validate_final_graphify_freeze.py lineage checks and expected_expansion."
+    }
+  ],
+  "backupChecks": [
+    {
+      "checkId": "BACKUP-01",
+      "description": "Backup file set, directory set, hashes, aggregate, and long paths match the captured source baseline.",
+      "status": "PASS",
+      "actual": {"fileCount": 13432, "directoryCount": 8497, "missingFiles": 0, "extraFiles": 0, "hashMismatches": 0, "directoryDifferences": 0, "longPathFiles": 17, "longPathOmissions": 0, "aggregateSha256": "02d2e0b963de308c7252dbcf2a62e22e53ea8da15aaedded0db71d8eeb263569"},
+      "expected": {"fileCount": 13432, "directoryCount": 8497, "missingFiles": 0, "extraFiles": 0, "hashMismatches": 0, "directoryDifferences": 0, "longPathOmissions": 0},
+      "evidence": "Independent extended-length-path traversal and per-file SHA-256 comparison."
+    }
+  ],
+  "validatorChecks": [
+    {
+      "checkId": "VALIDATOR-01",
+      "description": "Exact live production validator executes read-only with its declared check count.",
+      "status": "PASS",
+      "actual": {"sourceSha256": "e050ce8bebe6af433b9c69576ddf5cd5c037624714ebd4f898733b97186b49e6", "status": "PASS", "checks": 148, "failedChecks": 0, "filesystemWriteCalls": 0, "graphifyMutations": 0, "codebaseMutations": 0},
+      "expected": {"status": "PASS", "checks": 148, "failedChecks": 0, "filesystemWriteCalls": 0, "graphifyMutations": 0, "codebaseMutations": 0},
+      "evidence": "Direct invocation, AST inspection, and before/after tree aggregates."
+    },
+    {
+      "checkId": "VALIDATOR-02",
+      "description": "Validator is absolute for all lineage semantics and evidence payloads.",
+      "status": "FAIL",
+      "actual": {"unknownResolutionStatusCanReachExpansion": true, "reclassifiedSemanticsIgnored": true, "aliasSemanticsIgnored": true, "mergedEvidenceNotBoundToSourceOrTarget": true, "capabilityTaskEvidenceOnlyChecksSourceIdSet": true},
+      "expected": {"unknownResolutionStatusCanReachExpansion": false, "reclassifiedSemanticsIgnored": false, "aliasSemanticsIgnored": false, "mergedEvidenceNotBoundToSourceOrTarget": false, "capabilityTaskEvidenceOnlyChecksSourceIdSet": false},
+      "evidence": "Static control-flow inspection of LIN-05 through LIN-23."
+    }
+  ],
+  "challengeChecks": [
+    {
+      "checkId": "CHALLENGE-01",
+      "description": "All mutations use external temporary candidates and the exact production validator.",
+      "status": "PASS",
+      "actual": {"challengeCount": 50, "productionValidatorCalls": 50, "authoritativeInputWrites": 0, "expectedFailureSubsetsObserved": 50},
+      "expected": {"challengeCount": 50, "productionValidatorCalls": 50, "authoritativeInputWrites": 0, "expectedFailureSubsetsObserved": 50},
+      "evidence": "Challenge source and FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json."
+    },
+    {
+      "checkId": "CHALLENGE-02",
+      "description": "Challenge verdict begins from a defect-free validator baseline.",
+      "status": "FAIL",
+      "actual": {"challengesReportingBaselineFailures": 50, "baselineFailedCheckIds": ["META-10"], "verdict": "PASS"},
+      "expected": {"challengesReportingBaselineFailures": 0, "baselineFailedCheckIds": [], "verdict": "PASS only from a clean baseline"},
+      "evidence": "Every challenge record contains baselineFailedCheckIds=[\"META-10\"], which the harness subtracts before judging mutations."
+    },
+    {
+      "checkId": "CHALLENGE-03",
+      "description": "Lineage challenges cover every declared status and evidence-payload corruption mode.",
+      "status": "FAIL",
+      "actual": {"direct": true, "split": true, "unresolved": true, "mergedEvidence": false, "reclassified": false, "prohibitedEvidence": false, "excludedEvidence": false, "alias": false, "unknownStatus": false, "capabilityTaskEvidencePayload": false},
+      "expected": "Coverage for all eight statuses, unknown statuses, and evidence-payload integrity.",
+      "evidence": "Inspection of the lineage challenge mutations."
+    }
+  ],
+  "architectureRegressionChecks": [
+    {
+      "checkId": "ARCH-01",
+      "description": "Capability and task dependency regression metrics remain clean.",
+      "status": "PASS",
+      "actual": {"capabilityUnknown": 0, "capabilityCycles": 0, "capabilityBackwardWave": 0, "taskUnknown": 0, "taskCycles": 0, "taskBackwardWave": 0, "taskDuplicateCanonicalReferences": 0},
+      "expected": {"capabilityUnknown": 0, "capabilityCycles": 0, "capabilityBackwardWave": 0, "taskUnknown": 0, "taskCycles": 0, "taskBackwardWave": 0, "taskDuplicateCanonicalReferences": 0},
+      "evidence": "Independent live graph and task dependency derivation."
+    }
+  ],
+  "manifestChecks": [
+    {
+      "checkId": "MANIFEST-01",
+      "description": "Candidate manifest and included authority path sets are internally valid.",
+      "status": "PASS",
+      "actual": {"manifestRecords": 166, "missingPaths": 0, "hashMismatches": 0, "duplicatePaths": 0, "inventoryPathSetDifferences": 0, "aggregateSha256": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295"},
+      "expected": {"missingPaths": 0, "hashMismatches": 0, "duplicatePaths": 0, "inventoryPathSetDifferences": 0},
+      "evidence": "Independent live hashing and inventory/manifest path-set comparison."
+    },
+    {
+      "checkId": "MANIFEST-02",
+      "description": "Authority inventory record counts agree with their live JSONL files.",
+      "status": "FAIL",
+      "actual": {"path": "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl", "inventoryRecordCount": 162, "liveRecordCount": 166, "includedInFreeze": false},
+      "expected": {"path": "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl", "inventoryRecordCount": 166, "liveRecordCount": 166},
+      "evidence": "Candidate authority-inventory row compared with the live JSONL line count."
+    }
+  ],
+  "receiptChecks": [
+    {
+      "checkId": "RECEIPT-01",
+      "description": "Candidate receipts and live Codebase preservation are internally consistent.",
+      "status": "PASS",
+      "actual": {"receiptsChecked": 10, "inconsistentFields": 0, "codebaseFileCount": 10080, "codebaseDirectoryCount": 2548, "codebaseAggregateSha256": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748", "codebaseMutations": 0},
+      "expected": {"inconsistentFields": 0, "codebaseMutations": 0},
+      "evidence": "Independent cross-document projection and full Codebase path/hash inventory."
+    },
+    {
+      "checkId": "RECEIPT-02",
+      "description": "Review-package zero-blocker claim is supported by validator, challenge, and inventory evidence.",
+      "status": "FAIL",
+      "actual": {"recordedChallengeBaselineFailure": "META-10 in all 50 challenges", "validatorSemanticCoverageDefects": 1, "inventoryRecordCountDefects": 1},
+      "expected": {"challengeBaselineFailures": 0, "validatorSemanticCoverageDefects": 0, "inventoryRecordCountDefects": 0},
+      "evidence": "Candidate claim compared with live validator source, challenge report, and authority inventory."
+    }
+  ],
+  "blockers": [
+    {"findingId": "BLOCKER-01", "description": "The challenge report declares PASS even though every challenge records META-10 as a pre-existing baseline failure; the harness subtracts that baseline failure and never requires a clean baseline."},
+    {"findingId": "BLOCKER-02", "description": "The strict validator does not enumerate allowed resolution statuses or validate RECLASSIFIED and ALIAS semantics, and it does not bind MERGED or capability/task evidence payloads to authoritative source and target evidence."},
+    {"findingId": "BLOCKER-03", "description": "The candidate authority inventory records 162 rows for FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl while the live file contains 166."}
+  ],
+  "majorFindings": [
+    {"findingId": "MAJOR-01", "description": "Challenge baseline acceptance violates the required zero-current-defect adversarial-validation condition."},
+    {"findingId": "MAJOR-02", "description": "Lineage validator and challenge coverage are incomplete for the declared semantic vocabulary and evidence integrity."},
+    {"findingId": "MAJOR-03", "description": "Candidate inventory metadata is stale relative to its candidate manifest."}
+  ],
+  "minorFindings": [],
+  "decision": "FAILED"
+}

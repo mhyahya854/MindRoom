@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "priorRunId": "graphify-v2-repair-20260728T095646",
+  "historicalEvidencePreserved": true,
+  "historicalArtifacts": [
+    {
+      "path": "Graphify/11 Completion/Historical/graphify-v2-repair-20260728T095646/GRAPHIFY_MAPPING_RECEIPT.json",
+      "sha256": "17d50fbafb0337f673b216d248d7c52983c8eeedd5b8e6b79532e51785e817fd"
+    },
+    {
+      "path": "Graphify/11 Completion/Historical/graphify-v2-repair-20260728T095646/GLOBAL_VALIDATION_RESULT.json",
+      "sha256": "d74c241dae97ad56dbdc4ab8fcac4c9cc320e86d38c00efa1b08f133b0dfb842"
+    },
+    {
+      "path": "Graphify/11 Completion/Historical/graphify-v2-repair-20260728T095646/status.json",
+      "sha256": "54ca5c8bd9599d25b578dad47895a733b7b9298e0531b71fe657ec98d5405681"
+    },
+    {
+      "path": "Graphify/11 Completion/Historical/graphify-v2-repair-20260728T095646/status.json",
+      "sha256": "54ca5c8bd9599d25b578dad47895a733b7b9298e0531b71fe657ec98d5405681"
+    }
+  ],
+  "priorMappingCompletionClaim": "SUPERSEDED_ONLY_BY_AUTHORISED_PRODUCT_EXPANSION",
+  "originalMasterPlanContentSuperseded": false,
+  "reason": "The previous mapping receipt predates 51 new product capabilities and their requirements.",
+  "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+  "recordedAt": "2026-07-30T15:10:02.911Z"
+}

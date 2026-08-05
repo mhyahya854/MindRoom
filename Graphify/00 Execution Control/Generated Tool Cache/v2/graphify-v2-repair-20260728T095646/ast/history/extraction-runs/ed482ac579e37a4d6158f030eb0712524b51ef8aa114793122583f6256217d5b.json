@@ -1,0 +1,238 @@
+{
+  "project": "MindRoom",
+  "runId": "graphify-v2-repair-20260728T095646",
+  "policyVersion": "mindroom-graphify-v2-layered-directed-1",
+  "extractorVersion": "unknown",
+  "authoritative": false,
+  "batchCount": 24,
+  "reusedBatchCount": 24,
+  "reextractedBatchCount": 0,
+  "fileCount": 8101,
+  "layers": {
+    "AUTHORED_RUNTIME": 6656,
+    "BUILD_AND_CONFIG": 113,
+    "GENERATED_BINDING": 438,
+    "MIGRATION_AND_SCHEMA": 151,
+    "PACKAGING_AND_DEPLOYMENT": 2,
+    "TEST_AND_FIXTURE": 741
+  },
+  "batches": [
+    {
+      "layer": "AUTHORED_RUNTIME",
+      "batchIndex": 0,
+      "inputFingerprint": "eee4029f6edf64207a47ae4f67f70df8e4e10554dfac860cea617f204c2e56ae",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0000.json",
+      "outputSha256": "8c86fa6c03c8e20397fe2722af867d158bc45a38567a5a55349ef59ef673023c",
+      "nodeCount": 1155,
+      "edgeCount": 3952
+    },
+    {
+      "layer": "AUTHORED_RUNTIME",
+      "batchIndex": 1,
+      "inputFingerprint": "cb5502dd64e0d38fde39214b69a6a8b67493b82886e0ba8952637ca9927d3b69",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0001.json",
+      "outputSha256": "3760b693e4536039eaba514c79141d626b3679bdce7d391603a76d00b413fa0a",
+      "nodeCount": 1909,
+      "edgeCount": 7686
+    },
+    {
+      "layer": "AUTHORED_RUNTIME",
+      "batchIndex": 2,
+      "inputFingerprint": "bbf386b21b4d7ca0cc23acb226b1951d7569e4e6634fb3a4dc90cfd018714c94",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0002.json",
+      "outputSha256": "dde18db9828803c215da53b2a322bcaaf4659b6e9f1dd73362cc3a8fb84cb40f",
+      "nodeCount": 2800,
+      "edgeCount": 8147
+    },
+    {
+      "layer": "AUTHORED_RUNTIME",
+      "batchIndex": 3,
+      "inputFingerprint": "3b26a12717bae7210d02bc66757089b1ea80c11baa07b006dc4a8fb81b32cfc6",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0003.json",
+      "outputSha256": "a433cc95ba5b011e5429b40344cf31a894391bce6a35ad20f72108ee27b09437",
+      "nodeCount": 2869,
+      "edgeCount": 9337
+    },
+    {
+      "layer": "AUTHORED_RUNTIME",
+      "batchIndex": 4,
+      "inputFingerprint": "03f350ec9fed41c879111566feb49c4fce9015cb9cd29f77cb819baed4b4dc3d",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0004.json",
+      "outputSha256": "d40b680cf08042452525b23e391cf2c14d01e992ccd5e9e2c1848248b8078240",
+      "nodeCount": 2252,
+      "edgeCount": 7231
+    },
+    {
+      "layer": "AUTHORED_RUNTIME",
+      "batchIndex": 5,
+      "inputFingerprint": "8917a54eccc18f587862d89ae22f4485d600a0e4958a87d242f5e5bf7ef69bef",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0005.json",
+      "outputSha256": "f121aefd40dd980ba0716f81cf686cf9ccb8292890fde80b17ccabbc967e623b",
+      "nodeCount": 3287,
+      "edgeCount": 10418
+    },
+    {
+      "layer": "AUTHORED_RUNTIME",
+      "batchIndex": 6,
+      "inputFingerprint": "225b36053a0d54895d6d9581c3c494b1639ca306fceaefc04d7bb94cb6cc1dd8",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0006.json",
+      "outputSha256": "d7903c1929f9407e3137a1c4f4ee1239940b991883c882f8e696431f839bd6b9",
+      "nodeCount": 4470,
+      "edgeCount": 13848
+    },
+    {
+      "layer": "AUTHORED_RUNTIME",
+      "batchIndex": 7,
+      "inputFingerprint": "99012cae2689b23f7888338124d341a889496d3bc4f57696a110724c9cb67e12",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0007.json",
+      "outputSha256": "126b4e1bbd57833e9b5e87b6a407063e7b49a532a6cd40f73c60af89f1a7e4c8",
+      "nodeCount": 5136,
+      "edgeCount": 16499
+    },
+    {
+      "layer": "AUTHORED_RUNTIME",
+      "batchIndex": 8,
+      "inputFingerprint": "515802f2b915abb79beac63431bf01d03ba0c22baa3e7422adb29d69957daea6",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0008.json",
+      "outputSha256": "51f52fffb0dbd172521cf4ef421ba8ae415af5cae16d78a3aa0379f6b0e27ee2",
+      "nodeCount": 3003,
+      "edgeCount": 6244
+    },
+    {
+      "layer": "AUTHORED_RUNTIME",
+      "batchIndex": 9,
+      "inputFingerprint": "b0d799d9f270e51264e850225cbcb5d2d327adb124f3f9dabb9b0eaff566803f",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0009.json",
+      "outputSha256": "a306c8a5dcc028bc87ebd637373429ab63c5a8a0af3b74f2cf6b8fc4c899326c",
+      "nodeCount": 3085,
+      "edgeCount": 7475
+    },
+    {
+      "layer": "AUTHORED_RUNTIME",
+      "batchIndex": 10,
+      "inputFingerprint": "7cef7c92432f6f0d342434bb0d0fe65639bd188d845a87b53bab56881648b515",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0010.json",
+      "outputSha256": "7d9f5e0cff3381df239f32936c8beb1bfb2843c3b170410960fd2957cf26e60d",
+      "nodeCount": 2730,
+      "edgeCount": 5523
+    },
+    {
+      "layer": "AUTHORED_RUNTIME",
+      "batchIndex": 11,
+      "inputFingerprint": "c02fdc90417d8e98020b6cb03a9faa91f512ff16f86a807bb80c02bee69b7b06",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0011.json",
+      "outputSha256": "c45e69b4ef21de49c4f7627ea43f0428f38df294daebdd58255ac46240eb3843",
+      "nodeCount": 2917,
+      "edgeCount": 9873
+    },
+    {
+      "layer": "AUTHORED_RUNTIME",
+      "batchIndex": 12,
+      "inputFingerprint": "28cbc74caaf0a7c102b255990ae53ce08935b335a92ecb1622a021b93036bcd2",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0012.json",
+      "outputSha256": "b23ad2bd2b692acc603868ff60807625f002b3516b1651e8da0dfd8027b47749",
+      "nodeCount": 1846,
+      "edgeCount": 6256
+    },
+    {
+      "layer": "AUTHORED_RUNTIME",
+      "batchIndex": 13,
+      "inputFingerprint": "9012de483deb8f207ef5a0d5a9fbf4cb7838839e30b10a2a37cb2544f832f499",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0013.json",
+      "outputSha256": "69ffc56170932a24b94c7c9d00a4b0b20e2df0ef72ffdde2e42afa0c01dea779",
+      "nodeCount": 2131,
+      "edgeCount": 7800
+    },
+    {
+      "layer": "AUTHORED_RUNTIME",
+      "batchIndex": 14,
+      "inputFingerprint": "706f0fca5a4deb419b4cad71eda4af1dcec99043602cd51823fa320f089d3638",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0014.json",
+      "outputSha256": "f8b754d2fa9545237324b365dbb11c110357929be95376a73740a2edd7361dc2",
+      "nodeCount": 2025,
+      "edgeCount": 7199
+    },
+    {
+      "layer": "AUTHORED_RUNTIME",
+      "batchIndex": 15,
+      "inputFingerprint": "c6d6b00dd6ae0e6b78af5e14b71f2f864646820696cb394ea275d3641b081abf",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0015.json",
+      "outputSha256": "b71e842b73b66a536d91246f2c3f2c0bc1f0024429400a560b0b224f68dbc1fd",
+      "nodeCount": 2253,
+      "edgeCount": 8158
+    },
+    {
+      "layer": "AUTHORED_RUNTIME",
+      "batchIndex": 16,
+      "inputFingerprint": "a11349a834714d343d66b0d518987a1d291dd224f154916c7f96c82d8313b4e4",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0016.json",
+      "outputSha256": "588fd55b239b6987bd8e964a99c3a2e790938303d6cbc30c8a66efd301522675",
+      "nodeCount": 2410,
+      "edgeCount": 6921
+    },
+    {
+      "layer": "BUILD_AND_CONFIG",
+      "batchIndex": 0,
+      "inputFingerprint": "b48d7be15297e25c64553780312343637e8c4d27f9c3f72dd51ea3bf7418433c",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/build-and-config/batch-0000.json",
+      "outputSha256": "7f8cfbcc47b8acc349096291f1768374b5063bd5ee563b6631cd30c80da68321",
+      "nodeCount": 607,
+      "edgeCount": 1523
+    },
+    {
+      "layer": "GENERATED_BINDING",
+      "batchIndex": 0,
+      "inputFingerprint": "08df10c477d0bd6a0a7c524a3ae5912f15e6091ccfec23fe7da19aafd0373b72",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/generated-binding/batch-0000.json",
+      "outputSha256": "0e4f81188f2d04d3a04b0b98d84a2a0322c6db82908c0d71594a4ac8822e3b8d",
+      "nodeCount": 9166,
+      "edgeCount": 16093
+    },
+    {
+      "layer": "GENERATED_BINDING",
+      "batchIndex": 1,
+      "inputFingerprint": "c40e9d95cde5d8874a3dc19a212919f50a16c8842afeef07229d466ac85fc048",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/generated-binding/batch-0001.json",
+      "outputSha256": "95baa5aca7de72afeece0f5ce5994b8cfebf6198d4a51ae5debe64ad1eefbd1a",
+      "nodeCount": 260,
+      "edgeCount": 718
+    },
+    {
+      "layer": "MIGRATION_AND_SCHEMA",
+      "batchIndex": 0,
+      "inputFingerprint": "aa93b703f10b662f1b14781ce8eeee64a0780515e74a154efa0515798e08449f",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/migration-and-schema/batch-0000.json",
+      "outputSha256": "190bcd636bdb8d25aafec2751a890fa4f52ffbb981b36777e0675ad2f5d22c6f",
+      "nodeCount": 537,
+      "edgeCount": 690
+    },
+    {
+      "layer": "PACKAGING_AND_DEPLOYMENT",
+      "batchIndex": 0,
+      "inputFingerprint": "bb110aeeb1e91f01e9862c6b1fab5cca7967329a3dc0e46e13e3d11445b519ff",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/packaging-and-deployment/batch-0000.json",
+      "outputSha256": "059c4c1c544be440909406ee3d85640c6667c28d9ce5f19afed6fb60879d2839",
+      "nodeCount": 57,
+      "edgeCount": 219
+    },
+    {
+      "layer": "TEST_AND_FIXTURE",
+      "batchIndex": 0,
+      "inputFingerprint": "9a90c54658676e61540bdba6e7f89d8731a8fa66cca17ac794ab79cbec38f98a",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/test-and-fixture/batch-0000.json",
+      "outputSha256": "044509dd1db22649cf40c4b15ef0b42a5eb76762bb5a406f5d3c757e100c4e94",
+      "nodeCount": 1959,
+      "edgeCount": 7204
+    },
+    {
+      "layer": "TEST_AND_FIXTURE",
+      "batchIndex": 1,
+      "inputFingerprint": "e23f72490b7bad1782a0b7e04fb769273ec5de9fe0562be760ba7d4a648182bf",
+      "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/test-and-fixture/batch-0001.json",
+      "outputSha256": "d8fcc566bfe1c2d6b4ab12dd3ca6172f632fdd6af64c0b81c1489ced8797019a",
+      "nodeCount": 1294,
+      "edgeCount": 7173
+    }
+  ],
+  "completedAt": "2026-07-28T10:36:09.739Z"
+}

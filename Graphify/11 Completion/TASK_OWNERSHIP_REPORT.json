@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:33:52.209Z",
+  "capabilitiesWithoutPrimaryTasks": [],
+  "primaryTasksWithoutCapabilities": [],
+  "supportTasksWithoutOwners": [],
+  "tasksWithMultiplePrimaryOwners": [],
+  "duplicateTaskIds": [],
+  "tasksWithoutEntryConditions": [],
+  "tasksWithoutExitConditions": [],
+  "tasksWithUnresolvedAdrBlockers": [],
+  "tasksWithNonexistentReferences": []
+}

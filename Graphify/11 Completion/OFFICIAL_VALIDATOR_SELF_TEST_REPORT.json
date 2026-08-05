@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:43:39.544Z",
+  "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+  "selfTestsExecuted": 13,
+  "selfTestsPassed": 13,
+  "selfTestFailures": 0,
+  "results": [
+    {
+      "test": "SelfTest_110CapCount_Rejected",
+      "passed": true,
+      "detail": "Validator correctly fails when cap count forced to 110"
+    },
+    {
+      "test": "SelfTest_MissingReq_Rejected",
+      "passed": true,
+      "detail": "Validator correctly fails on missing requirement ID"
+    },
+    {
+      "test": "SelfTest_DependencyCycle_Rejected",
+      "passed": true,
+      "detail": "Validator correctly fails on capability cycle"
+    },
+    {
+      "test": "SelfTest_BackwardWave_Rejected",
+      "passed": true,
+      "detail": "Validator correctly fails on backward wave dependency"
+    },
+    {
+      "test": "SelfTest_pnpmRef_Rejected",
+      "passed": true,
+      "detail": "Validator correctly fails when pnpm is referenced"
+    },
+    {
+      "test": "SelfTest_FinanceAdminImport_Rejected",
+      "passed": true,
+      "detail": "Validator correctly fails on admin import in Finance"
+    },
+    {
+      "test": "SelfTest_StripeBillingSDK_Rejected",
+      "passed": true,
+      "detail": "Validator correctly fails on Stripe import in Finance"
+    },
+    {
+      "test": "SelfTest_UnresolvedADR_Rejected",
+      "passed": true,
+      "detail": "Validator correctly fails on unresolved ADR placeholder"
+    },
+    {
+      "test": "SelfTest_PassedGate_Rejected",
+      "passed": true,
+      "detail": "Validator correctly fails if application gate marked passed"
+    },
+    {
+      "test": "SelfTest_CodebaseMutation_Rejected",
+      "passed": true,
+      "detail": "Validator correctly fails when Codebase hash is modified"
+    },
+    {
+      "test": "SelfTest_OrphanTask_Rejected",
+      "passed": true,
+      "detail": "Validator correctly fails on ownerless support task"
+    },
+    {
+      "test": "SelfTest_UncoveredReq_Rejected",
+      "passed": true,
+      "detail": "Validator correctly fails when requirement missing test"
+    },
+    {
+      "test": "SelfTest_HardCodedApproval_Rejected",
+      "passed": true,
+      "detail": "Validator correctly fails on hard-coded approval claims"
+    }
+  ]
+}

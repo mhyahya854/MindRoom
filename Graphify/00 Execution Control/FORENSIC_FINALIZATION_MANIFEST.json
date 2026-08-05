@@ -1,0 +1,33 @@
+{
+  "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+  "status": "REPAIR_IN_PROGRESS",
+  "startedAt": "2026-07-30T15:10:02.637Z",
+  "completedAt": null,
+  "codebaseBaselineBefore": "135fbaacd841e5e4c271b046eda4b1613da83122e08c464904d395cd93ae5a04",
+  "codebaseBaselineAfter": null,
+  "masterPlanHashesBefore": {
+    "01-EVERYTHING-WE-ARE-KEEPING.md": "458b4bdb995db8f4e5fbbc6be95db252c1f047562e9b27e39d3acdfd261f6faf",
+    "02-EVERYTHING-WE-ARE-DELETING.md": "46f34785e46d7d75dc01800fb29dfdf76d2b29ad09d5628aa430a3ee8c3aee1e",
+    "03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md": "4e2ca7a75e7c5fd4091b9c7c28ed350f1bcf1e062793339293d8485ee9896531"
+  },
+  "masterPlanHashesAfter": {},
+  "capabilityCountBefore": 161,
+  "capabilityCountAfter": null,
+  "requirementCountBefore": 2055,
+  "requirementCountAfter": null,
+  "changeRecordCountBefore": 161,
+  "changeRecordCountAfter": null,
+  "implementationTaskCountBefore": 162,
+  "implementationTaskCountAfter": null,
+  "phases": {
+    "PHASE_0": "PASS"
+  },
+  "validationArtifacts": [],
+  "independentReview": {
+    "status": "NOT_STARTED",
+    "reviewId": null,
+    "previousReviewInvalidated": true,
+    "previousReviewId": "REV-FINAL-20260730-153315",
+    "previousReviewInvalidationReason": "INVALIDATED_BY_FORENSIC_PROCESS_AUDIT"
+  }
+}

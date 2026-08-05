@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "baselineType": "HASH_MANIFEST",
+  "repositoryRevision": "sha256:951dce8f4ab329f2bbbbd8ddc3d670872f700484450f5aaf5f69d58e10499328",
+  "baselineTimestamp": "2026-07-28T01:03:31.289325+00:00",
+  "repositoryRoot": "C:/Users/mhyah/Downloads/Code/MindRoom",
+  "codebaseRoot": "C:/Users/mhyah/Downloads/Code/MindRoom/Codebase",
+  "graphifyRoot": "C:/Users/mhyah/Downloads/Code/MindRoom/Graphify",
+  "masterPlanHashes": {
+    "01-EVERYTHING-WE-ARE-KEEPING.md": "9EBC9C47CF89F98F19CCB039D26031CD7D85E466B57C3A38FD3338EAC618D2E0",
+    "02-EVERYTHING-WE-ARE-DELETING.md": "9065986168858C42E6E4CA7C7050E189265F619C9CB0C902F9BE276A99C08043",
+    "03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md": "8AA9DAB09A432361B6CD0CEB26F6911AAF36BAFDE8ED5634C9A687A4774D2D49"
+  },
+  "counts": {
+    "allPaths": 12628,
+    "fileCount": 10080,
+    "directoryCount": 2548,
+    "sourceCount": 6520,
+    "testCount": 1100,
+    "fixtureCount": 433,
+    "binaryCount": 388,
+    "markdownCountUnderCodebase": 207,
+    "archiveCount": 25,
+    "symlinkCount": 0,
+    "junctionCount": 0,
+    "packageCount": 134
+  },
+  "filesystemTreeSha256": "951dce8f4ab329f2bbbbd8ddc3d670872f700484450f5aaf5f69d58e10499328",
+  "filesystemManifest": "Graphify/00 Execution Control/filesystem_baseline.sha256.jsonl",
+  "git": {
+    "status": "MISSING",
+    "repositoryRoot": null,
+    "branch": null,
+    "commit": null,
+    "remotes": [],
+    "stagedChanges": "UNKNOWN",
+    "unstagedChanges": "UNKNOWN",
+    "untrackedPaths": "UNKNOWN",
+    "submodules": [],
+    "linkedWorktrees": [],
+    "shallow": "UNKNOWN",
+    "historyIntegrity": "UNAVAILABLE",
+    "provenanceSearch": [
+      "Project root and Codebase contain no .git directory or .git file.",
+      "Parent directories inspected without locating linked metadata for MindRoom.",
+      "Codebase/package.json identifies @affine/monorepo version 0.27.0, but no commit or remote can be proven."
+    ]
+  },
+  "knownBaselineFailures": [
+    {
+      "classification": "COMMAND_UNAVAILABLE",
+      "command": "git -C Codebase rev-parse --show-toplevel",
+      "result": "fatal: not a git repository"
+    },
+    {
+      "classification": "ENVIRONMENT_FAILURE",
+      "command": "graphify --help",
+      "result": "Windows Application Control blocked graphify.exe; Python graphify 0.9.28 is used."
+    },
+    {
+      "classification": "ROLLED_BACK_TOOL_OUTPUT",
+      "command": "Graphify AST extraction with cache_root=Codebase",
+      "result": "Generated Codebase/graphify-out was moved out of Codebase and the corrected inventory was regenerated."
+    }
+  ],
+  "existingUncommittedUserWork": [
+    {
+      "status": "UNKNOWN",
+      "reason": "Authentic Git metadata and index are absent; no tracked/untracked distinction can be proven."
+    }
+  ],
+  "phase": "GRAPHIFY_V2_MAPPING",
+  "runId": "graphify-v2-repair-20260728T095646",
+  "v2CodebaseTreeSha256": "135fbaacd841e5e4c271b046eda4b1613da83122e08c464904d395cd93ae5a04",
+  "fileCount": 10080,
+  "directoryCount": 2548,
+  "codebaseWritePolicy": "READ_ONLY_BYTE_IDENTICAL_REQUIRED",
+  "updatedAt": "2026-07-29T05:46:01.021Z"
+}

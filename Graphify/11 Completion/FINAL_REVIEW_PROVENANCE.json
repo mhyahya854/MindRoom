@@ -1,0 +1,29 @@
+{
+  "officialValidatorRunId": "mindroom-graphify-validator-rebuild-20260730-184338",
+  "externalReviewRunId": "mindroom-external-independent-review-20260730-215435",
+  "invalidatedReviewRuns": [
+    "mindroom-independent-review-20260730-184813",
+    "mindroom-independent-review-isolated-20260730-185134"
+  ],
+  "historicalRuns": [
+    "mindroom-graphify-forensic-finalization-20260730-150956"
+  ],
+  "externalReviewReconciliationReports": [
+    "11 Completion/EXTERNAL_INDEPENDENT_REVIEW_REPORT.json",
+    "11 Completion/EXTERNAL_INDEPENDENT_REVIEW_REPORT_RECONCILED.json",
+    "11 Completion/EXTERNAL_REVIEW_FINAL_EVIDENCE_RECONCILIATION.json",
+    "11 Completion/EXTERNAL_REVIEW_RECONCILIATION_REPORT.json",
+    "13 Agent Swarm/EXTERNAL_REVIEW_RECONCILED_COUNTS.json"
+  ],
+  "externalReviewDecision": "APPROVED",
+  "wave0Recommendation": "READY",
+  "blockers": [],
+  "majorFindings": [],
+  "minorFindings": [],
+  "warnings": [
+    "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+    "FINDING-ADR-0013-ADAPTER-ISOLATION"
+  ],
+  "authoritativePlanningMutationsDuringExternalReview": 0,
+  "codebaseMutationsDuringExternalReview": 0
+}

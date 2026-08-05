@@ -1,0 +1,778 @@
+{
+  "policyVersion": "mindroom-graphify-v2-layered-directed-1",
+  "extractor": "graphify.extract.extract",
+  "extractorVersion": "unknown",
+  "runnerSha256": "2adcfbd68a8a4e2b407bba8c37b6f81fb5b31a74fa570e70359e0283bf7f33ec",
+  "classificationResolverSha256": "675743d8d1e0f47c12ac4b2678077ed0ee0f06c0ccb6755505ffdc22bbfdaf55",
+  "codebaseRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Codebase",
+  "layer": "MIGRATION_AND_SCHEMA",
+  "batchIndex": 0,
+  "batchSizePolicy": 400,
+  "files": [
+    {
+      "path": "Codebase/blocksuite/framework/store/src/schema/error.ts",
+      "sha256": "370352295869eef722f109c5671a1c6ff443407d740099ee5ca38f32f5cc949c",
+      "sizeBytes": 297
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/schema/index.ts",
+      "sha256": "b6c93943ce50027a494c90f8fae472a2c471a2922ef3149dd87d74bab3d168be",
+      "sizeBytes": 38
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/schema/schema.ts",
+      "sha256": "a892b3c6b996326997acce77bd22f898cc60175cda80bfe432f980b9e3ecbc66",
+      "sizeBytes": 9823
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/sql/upsert_workspace_admin_stats.sql",
+      "sha256": "6dc64decbf03703729a5d41f28930f482bdd8549f39d6b46e9862dd9b966d30f",
+      "sizeBytes": 2764
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/migrations.rs",
+      "sha256": "0a999be4e9e9c15640cf8f49a1d7e7b268641ad7ee4c053fecb2694b8da56b48",
+      "sizeBytes": 388
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/sql/runtime_migrations.sql",
+      "sha256": "4657eeda31e3d2cdae4002086176322a7b21be1c21363c573d585e7d368b21bf",
+      "sizeBytes": 7917
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20230425035217_init/migration.sql",
+      "sha256": "f483b91aedac9ec192f588d0195441f7c375ee4d580bb1c2b82920366f832691",
+      "sizeBytes": 2041
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20230621052642_next_auth_integrate/migration.sql",
+      "sha256": "052e1d599392da147d756e707dcba7a77470059b3fdb6f5ac1459393d91b103b",
+      "sizeBytes": 2508
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20230628074203_workspace/migration.sql",
+      "sha256": "0c44aea15458bcd1548bc286563ef89eb65bfd6ae0676ade2790ec97476cd0ba",
+      "sizeBytes": 1820
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20230705025556_workspace_id_fkey/migration.sql",
+      "sha256": "ac39f5455ee898960e33d1dd7d27f4bfd0a0aa3c142246139acd2c4893de7d8b",
+      "sizeBytes": 263
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20230706065816_workspace_subpage/migration.sql",
+      "sha256": "0a6cd0fcca1a06755a93c931ba7e4f01e9f688ed930a43040577b250243e5094",
+      "sizeBytes": 529
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20230706090316_change_avatar_url_field_name/migration.sql",
+      "sha256": "db52f78cfac24375b1a623cafe3d4ea4ab44944f254b146098b99dc132f457e2",
+      "sizeBytes": 220
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20230709091238_fix_blob_types/migration.sql",
+      "sha256": "26f8f27c79a56758a952615aa7847ad4bb9837cd01a6a1ece52cff584941f7cf",
+      "sizeBytes": 723
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20230713022301_update_manager/migration.sql",
+      "sha256": "c28a024b2bb63da8b44a87dcb0556b4f5a3aab0799e5ce01c6bafe3f20880612",
+      "sizeBytes": 1312
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20230714065216_snapshot_id/migration.sql",
+      "sha256": "8de117de949fae22736e038de2b7746defd5204b21302c0914a32933b7755d50",
+      "sizeBytes": 359
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20230717084417_remove_update_fkey/migration.sql",
+      "sha256": "e97c93b2de6bf9a17e7109e63bac41b343ef0abec6bc1eb0de07491484c94426",
+      "sizeBytes": 175
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20230822071646_add_new_features_waiting_list/migration.sql",
+      "sha256": "bb2aa69c67edcf607018ad010a7b394deba01c1bb61f29fd342e569ace263b98",
+      "sizeBytes": 396
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20230824091506_euser_email_is_not_nullable/migration.sql",
+      "sha256": "d7209e02cc9dfba0741e731bb32659e71eeb18e2ba88b5920293d8d119617442",
+      "sizeBytes": 214
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20230906100042_user_feature_gates/migration.sql",
+      "sha256": "08a0ed574490f9fd313df2b9bad744faa1b977c744f9c81943ccda2e584ae5ed",
+      "sizeBytes": 491
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20231009081826_updates_manager/migration.sql",
+      "sha256": "a13ce5a2a4102e487c6ec17e363fe0f0bcfd1eb77cef63785158e2c5fc90cf50",
+      "sizeBytes": 685
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20231018074747_payment/migration.sql",
+      "sha256": "607a04d9a6ef412cd67b9c24be0ecadaf218ad39321549830ac6b58617eb569d",
+      "sizeBytes": 2542
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20231019094615_add_inovice_link/migration.sql",
+      "sha256": "92873a345c28d413b63a36403054a6fbc236793dadbdcc75ef8054da5c6394b4",
+      "sizeBytes": 70
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20231024095005_updates_pkey/migration.sql",
+      "sha256": "5fcf7218a521f017f01738c010f687bdcd98f0ec9c0f0566f271c41460cc29e3",
+      "sizeBytes": 504
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20231027090128_data_migration/migration.sql",
+      "sha256": "bc26f5e270bd5ab63deda36a2d0fa09ec0fa57455663c317294b7e1b940e5932",
+      "sizeBytes": 273
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20231030104009_user_features/migration.sql",
+      "sha256": "653226f30edb87cd3141ee954441e15ddbc3a06770122c7a60ec64591a46f1c1",
+      "sizeBytes": 1463
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20231103080802_permission/migration.sql",
+      "sha256": "868c1d1baf86ee3bc915dda23c22eb52fb6dfc46432da190c4ef02b2496f2c67",
+      "sizeBytes": 2733
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20231121033532_history/migration.sql",
+      "sha256": "55145d3b952ddc46c67aeba94746112529255ddcaa0d064c7d6c76d330e178ef",
+      "sizeBytes": 426
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20231124091123_soft_delete_opt_blobs/migration.sql",
+      "sha256": "9f841029575fe98bdc0b64c1a966d5186ec0a3ad23bb636ad65be576b7ded0cd",
+      "sizeBytes": 88
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240103092238_add_workspace_features/migration.sql",
+      "sha256": "532f7c8968edf17196ac67f01d4611f3f144169ced7a4aa52be0465f87f25b79",
+      "sizeBytes": 793
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240228065558_new_auth/migration.sql",
+      "sha256": "2fda1a0843045ae36843614587a197d0a715be4af890ec2c314525093662a62f",
+      "sizeBytes": 2449
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240313033631_user_registered_flag/migration.sql",
+      "sha256": "8bba0ba2266e1f8441bdaf03bd7d1b76b04df39fa435dbbc5744f405609dbc74",
+      "sizeBytes": 93
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240319104623_user_subscriptions/migration.sql",
+      "sha256": "23f11b8e66458648c4b3011459a29465f705500932064146da4e0b2f0edab731",
+      "sizeBytes": 363
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240321065017_ai_prompts/migration.sql",
+      "sha256": "5ad6b9c9dd3d4d07fbbde8a5d373b5cc2179be1cc247e0a696a7d47af160724c",
+      "sizeBytes": 495
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240325125057_ai_sessions/migration.sql",
+      "sha256": "69ba848ccb2bb71557b8831b5be75a6edb06c8ec6340ca2319962a8d4438659d",
+      "sizeBytes": 1080
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240402100608_ai_prompt_session_metadata/migration.sql",
+      "sha256": "480d36e66e0e82b69e0df67ce6d4bd6287a6579ed16b2574b7b4d838ff879ab9",
+      "sizeBytes": 3019
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240416042935_lifetime_subscription/migration.sql",
+      "sha256": "2275186c0cb97eb925a122cd0b7542fc25689d768ff376039fce9bf82abbd6c4",
+      "sizeBytes": 134
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240506051856_add_user_and_features_index/migration.sql",
+      "sha256": "af08f5ad314098b3c34ac7e8aaed7f7bfa084a94fde49b240d3620c3395508fb",
+      "sizeBytes": 155
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240520055805_runtime_setting/migration.sql",
+      "sha256": "5e2d6b48145b5158743fb7dc97df832aae8cb65c4eab7a886a2b5431b220cea6",
+      "sizeBytes": 848
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240521100307_add_copilot_cost/migration.sql",
+      "sha256": "e4f1334ccc88feb5d12f68fd9c2412227b2163adc8fa06c1cd17b4e3b63cddea",
+      "sizeBytes": 205
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240527095524_fix_prompt_schema/migration.sql",
+      "sha256": "fd72f1c369bc94c05ca2dfe07473b46af0c5dc398ba6bd34fc595da88669e202",
+      "sizeBytes": 242
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240625052649_add_fork_session/migration.sql",
+      "sha256": "233bbe58020a82c4036162998c4605dab3c21b1d3b0cf5ef6459d1b00c348162",
+      "sizeBytes": 97
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240708034904_prompt_level_config/migration.sql",
+      "sha256": "384d8773ae1601e73e4cc3c901d069edc1bfbdd34b25ab4fa2177f15e6fdc9ca",
+      "sizeBytes": 78
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240731043837_standardize_table_columns/migration.sql",
+      "sha256": "0a8761e7e01d70c80f281e7fea9145c206f0a965838ddf1018a069adf2b5edf1",
+      "sizeBytes": 5264
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240813053919_use_timestamp_with_timezone/migration.sql",
+      "sha256": "6bbceccca0c1194bcd3e5a9f2c1e1aaf9695428edcfc324f0273f64d8e9fdd79",
+      "sizeBytes": 3707
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240813095727_prompt_updated_field/migration.sql",
+      "sha256": "8e6c7587c3f94392b0b984c6759c408c8675f2957a3452ca35cdfeccab73e37d",
+      "sizeBytes": 185
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240815064332_userspace/migration.sql",
+      "sha256": "457cc319be5ffd877bfac5e2e295d15985e97a4a5053eebf6c36a72f290ba7f8",
+      "sizeBytes": 491
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240815084618_update_doc_tables/migration.sql",
+      "sha256": "71e9aae1675bc56603a7c1685dae88da0bb1c3282573b970be38402160680ff0",
+      "sizeBytes": 457
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240826033024_editor_record/migration.sql",
+      "sha256": "c9667edc682a25fc31d7f76acab139d0e768b08ac20c51886e83ebe790eefe10",
+      "sizeBytes": 985
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240903033137_workspace_url_preview/migration.sql",
+      "sha256": "18afc097b1259141fe2ad4efcb38b9f5d474526718bf123cbff59c8d99bfe223",
+      "sizeBytes": 107
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240908111944_index_permission_user_id/migration.sql",
+      "sha256": "5bc58d99a6b2e26e3eb1c23ffa210ddb5cc56b409aca48dd3988d55e673624fe",
+      "sizeBytes": 113
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240908130725_add_workspace_level_snapshot_index/migration.sql",
+      "sha256": "93aa3ddf8e89f4bb72d73a2c1f191c67deccdc875b7267057db4279ea0f2c351",
+      "sizeBytes": 419
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240909090850_ai_table_index/migration.sql",
+      "sha256": "8edaaa70b60d953c005b7355d1df113e7836b7b25bdefc5dea6430af46d25a8a",
+      "sizeBytes": 340
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240909100000_lower_index_user_email/migration.sql",
+      "sha256": "a728cc1cb6bfd7059a5c2fd8670139c758073f39842f49db23575cf97474fa4a",
+      "sizeBytes": 83
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20240924024058_onetime_payment_subscription/migration.sql",
+      "sha256": "9cc646d4693f0877f921ffaac85beecb4ce1e7b4ae656159a07c3a3b1d9edb56",
+      "sizeBytes": 85
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20241023065619_blobs/migration.sql",
+      "sha256": "ddab3d1226a41e50281d87c097e0b66980be908ca703dccbc3e8a1a6192ca5b4",
+      "sizeBytes": 504
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20241125035804_opt_user_invoices/migration.sql",
+      "sha256": "327f6a52571da3c2a842b1fee66fb09459ab6c645b51a0790734c8cdf207d0f9",
+      "sizeBytes": 242
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20241129062332_workspace_invite_status/migration.sql",
+      "sha256": "e293f5d27cf135043fbff52dc52c36bfb5d13d056c9f0b43c043a919f270b225",
+      "sizeBytes": 559
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20241202070358_universal_subscription/migration.sql",
+      "sha256": "8e5415599ed10962c39fbbaa58e72e77f1913ce3c1100cd24ddced1c4e3e7f3e",
+      "sizeBytes": 1699
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20241204081412_add_workspace_level_feature_flags/migration.sql",
+      "sha256": "0148d44844e34db0ea9c28587b76eec9a36697eac9c58d4b45f2eb775cb5bd6e",
+      "sizeBytes": 97
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250110034441_licenses/migration.sql",
+      "sha256": "82ce78cf4a42eb8559e039dbce345ae8c87444b2b91182f0386b4304f3039ac2",
+      "sizeBytes": 847
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250202080920_record_onetime_subscription_invoices/migration.sql",
+      "sha256": "3c83a2a25f40ccb3abc1115775d09e5db639b4649931f4853ad8bea3c37e81bb",
+      "sizeBytes": 116
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250203112209_data_migration_table_unique_name/migration.sql",
+      "sha256": "178064f777b8c953cb34f49d86c0d8547ab7d689a01e30357d4d6559f5e431d1",
+      "sizeBytes": 94
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250203142831_standardize_features/migration.sql",
+      "sha256": "7cc855a461be44265733f53da185794a65f315265ab3223d7a6d0b8c1259eb00",
+      "sizeBytes": 857
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250206082414_break_update_used_page_permission_table/migration.sql",
+      "sha256": "9b053817d840808cd2fbaa68dc68b181787fa65545b4f258d8b853611140eb15",
+      "sizeBytes": 808
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250207025335_page_default_role_for_workspace_members/migration.sql",
+      "sha256": "7685e8990d0223504dd2572f7c9298f2bbd11211035ad5d42eeb6ede4433205d",
+      "sizeBytes": 103
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250210083416_ai_context/migration.sql",
+      "sha256": "d116c9355adff64961c72bd8fc44e4892f3d8fc1c86a702ad7f43a4445967c78",
+      "sizeBytes": 494
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250210090228_ai_context_embedding/migration.sql",
+      "sha256": "f91522c68677954f669d2063aeb5188bf4586e00bc49bce3d53f98737785ac02",
+      "sizeBytes": 4142
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250303102501_add_workspace_doc_title_and_summary/migration.sql",
+      "sha256": "2c7f08bbf57a218b19a74ed4c2a523f84fc6a0b9058870750905e924fa28c5cd",
+      "sizeBytes": 110
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250303104449_add_workspace_name_and_avatar_key/migration.sql",
+      "sha256": "ceda515b66ee250503ed653d090e358717c4ee801074500a9d2a5aa7cd9af6f0",
+      "sizeBytes": 107
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250303105325-notification/migration.sql",
+      "sha256": "782a5b7c71b21607944b7ce86e33174fff80fd0efe690c4cbf742d596cf64fd1",
+      "sizeBytes": 998
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250303121921_ai_jobs/migration.sql",
+      "sha256": "d9ac1dd615b95783b02ab74051d36cedaa14e79cf625a384336598503dc56d55",
+      "sizeBytes": 1019
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250303194905_add_blocked_to_workspace_docs/migration.sql",
+      "sha256": "0a534b3442047f734da03cb1bd0f787baa157979a43e88ee053d04fee086506d",
+      "sizeBytes": 101
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250307123308_add_more_notification_types/migration.sql",
+      "sha256": "18b6ae45fa95304413989f887c30a5ed96da5c5270b50105903f22e679529dac",
+      "sizeBytes": 479
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250311072215_disable_account/migration.sql",
+      "sha256": "c7ef74c1958180a51745cf16fc988d37a5fbf11a2629f59d22a22cd5fbcdffce",
+      "sizeBytes": 92
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250311143215_add_settings/migration.sql",
+      "sha256": "09dfdd59db58de4df8f3b4892b5b754ff7c3e80a4d260f6557939c76e4e7d650",
+      "sizeBytes": 458
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250325075341_new_app_config/migration.sql",
+      "sha256": "302bb78a2458d9ad2ac7276cc86d7ab0f2d7ebf1867fe45047f17c37baa2b2e3",
+      "sizeBytes": 486
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250326074140_ai_jobs_unique_index/migration.sql",
+      "sha256": "5534dbc8fc880cdf2f433689cbfff3dd1b3a584cc9b6369b12622e5dbf9314fb",
+      "sizeBytes": 464
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250417062046_workspace_level_embed_file_doc/migration.sql",
+      "sha256": "0b49c0d99a8d6689e39813cf014da0f08260402b5a3e9a0bf8714494e781a85c",
+      "sizeBytes": 4221
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250417063749_workspace_enable_embedding/migration.sql",
+      "sha256": "273d705c299bdbc23d61515f2ec920c9b25cd17602a3476f3fff237e782df7eb",
+      "sizeBytes": 108
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250425101411_update_workspace_members/migration.sql",
+      "sha256": "1e17c857b7fd497f4aa73e59f7a91cf35e0148e5340d375bd6a13c792a50aae4",
+      "sizeBytes": 530
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250429113337_workspace_file_blob_id/migration.sql",
+      "sha256": "d32834bd263c1f72ff156662a4ba89eea128be7f15f8d91e6e079929d86dee46",
+      "sizeBytes": 268
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250508073308_installable_license/migration.sql",
+      "sha256": "b0b8bd968271b1e9ee63b12f7252e12225e9862bd9a3612ddacbbec170732cd9",
+      "sizeBytes": 113
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250509070728_add_workspace_sid_and_indexed/migration.sql",
+      "sha256": "b06d853834ddeb1d6d58e79134cd6e061a97ea47a8555d26ce6ad9481c3b8b9a",
+      "sizeBytes": 442
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250512031140_add_optional_models/migration.sql",
+      "sha256": "6520a2da864012eece20828b91f12d8a1388bce3a75770f1ccc0ae77f9cad478",
+      "sizeBytes": 119
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250521083048_fix_workspace_embedding_chunk_primary_key/migration.sql",
+      "sha256": "672ba620119d31270a60c6968ca0e195b28b1a1ba2fe7fb95acd0c87451d38d0",
+      "sizeBytes": 1308
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250609050058_add_comment/migration.sql",
+      "sha256": "0b8a82d9230a3bf04f2f3161aaec7b1cf25557582c23b935061af8690cd80bba",
+      "sizeBytes": 2476
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250609063353_ai_session_independence/migration.sql",
+      "sha256": "e35a25ebd7a6c55f745b49a68ad26b8bbdb9d86e6fbb49115eee3db1ac4bb08b",
+      "sizeBytes": 1025
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250617004240_ai_stream_objects_message/migration.sql",
+      "sha256": "3831aea2e7a1bcdddc171fff97418b9d3da16723d94243f9a87416e72e353385",
+      "sizeBytes": 86
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250624051534_add_comment_attachments/migration.sql",
+      "sha256": "4e44808d033428cad63dbb909b63ab592de3bca04c09a42acd451a67b1f76f72",
+      "sizeBytes": 964
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250625012447_add_comment_type_to_notification/migration.sql",
+      "sha256": "6e2b8dd5d0d4738e41ac46c4199f97c1342e4316ac27148e0ac60c09c6b1820d",
+      "sizeBytes": 385
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250625070609_ai_session_updated_at/migration.sql",
+      "sha256": "5640dc398a6726ebd6adaa14e9fbab3bc4616eb828a0bde716d809bf6f855367",
+      "sizeBytes": 341
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250630094158_session_title/migration.sql",
+      "sha256": "ebcf8b56d22239a203d0fd82ce3a7b1a819a491906a13b60ad782fe21a47cb3e",
+      "sizeBytes": 81
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250728033348_workspace_blob_embedding/migration.sql",
+      "sha256": "528d2d98154b47df81abb948ae725ed53683df892eb59034e59088ff5819ce4c",
+      "sizeBytes": 1601
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250730104457_access_token/migration.sql",
+      "sha256": "8499269fe26ae64e6b369488f853b49d85b27dc6beb3836a1a31a321b3d0a77e",
+      "sizeBytes": 679
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250805074035_workspace_last_check_embeddings/migration.sql",
+      "sha256": "741483eb2e3980a00797615cd7af3d72780ce5389498717969fc8ee575217b2a",
+      "sizeBytes": 250
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20250917092818_payment_rc_fields/migration.sql",
+      "sha256": "15861b8fa8fd72a690c6b2aac03a1401cffb0a47c7e19b7a332faaeeab8de88e",
+      "sizeBytes": 415
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20251222184223_add_blob_status/migration.sql",
+      "sha256": "624b7382074e426ae28a80c278c58825214d57e39bc85844c52a7c9bd51cf953",
+      "sizeBytes": 211
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20251229174000_update_feature/migration.sql",
+      "sha256": "c1c2da0d33dfafc081ebee0e4d13c6ca5dc051820d77c956642f4582b3d52914",
+      "sizeBytes": 2011
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20251231145656_snapshot_size/migration.sql",
+      "sha256": "ece364c80f93f862d8644aee47d1da58a4f4adc34d2bf5c0541eeb2def5c830b",
+      "sizeBytes": 1396
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20251231172409_workspace_index/migration.sql",
+      "sha256": "0fe5d378d475e48c48259b7fb9b69c2f3e7e12a3f479465b54929172e4bcf9e0",
+      "sizeBytes": 539
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20251231203615_workspace_admin_stats/migration.sql",
+      "sha256": "7fe4ab8d2214acf8103475e0b674f1b9093f5f1964d4030d60c0be53d11c7643",
+      "sizeBytes": 4326
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260102120625_workspace_doc_published_at/migration.sql",
+      "sha256": "ca3b3522173d854755dc52f1f18e003889341bd9dcc7363e038a3b10d054e26e",
+      "sizeBytes": 434
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260102142014_workspace_enable_sharing/migration.sql",
+      "sha256": "aa43d5ab2e0d3632451f88e0a91942632864a58db378dec8114c2689ab2dd7a7",
+      "sizeBytes": 102
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260102181003_cleanup_table/migration.sql",
+      "sha256": "f1b944bd5fd74247e33335be81e9a1f909f94ad2fe3db42698484f78f4c9fcfe",
+      "sizeBytes": 1439
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260105175128_calendar/migration.sql",
+      "sha256": "0bb52a56f7f9709b1885e52c0434299cbbac997dbd9efcd3db2e1aeb7b3ce29a",
+      "sizeBytes": 7223
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260109090137_tokens_and_otp/migration.sql",
+      "sha256": "8dca5810e7a52499b8f0e1e1f958b54a41e339362dbb4b20ef158630c42278b6",
+      "sizeBytes": 1304
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260110095744_caldav_fields/migration.sql",
+      "sha256": "3f01d384f3f60ef1291b88f58e3c96d28fd120ffb4804dab753d1dfdc2171735",
+      "sizeBytes": 283
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260204105925_user_sessions_client_version/migration.sql",
+      "sha256": "eea1a093689242522d592e4aa61d901b2d59b5136d3f377b7c5309b05c973344",
+      "sizeBytes": 143
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260212053401_workspace_analytics/migration.sql",
+      "sha256": "9b29bbcc46e05030dec80c6eb9b8d0fd771baa0ea00f83de1468eacb114080c1",
+      "sizeBytes": 3693
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260321124948_copilot_submission_id/migration.sql",
+      "sha256": "8686d312bc3c4860620cc0938701d5253110bc698deb26422720e03bf70e5f66",
+      "sizeBytes": 249
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260405013956_calendar_queue_schedule/migration.sql",
+      "sha256": "4ca2fc5261d0b75540ed3c8518925435338b855a9060ffce5cf0ee47258905ad",
+      "sizeBytes": 789
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260408072717_ai_action_task/migration.sql",
+      "sha256": "65a93b027716606c3f8b5f193f3b5da02059156d8fc0ed3576bc703707d11446",
+      "sizeBytes": 2624
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260504173820_workspace_byok/migration.sql",
+      "sha256": "dbd4abb5963996a741020dc311c2e470f0b3ddf0b21d113b184e1b71090fdd8c",
+      "sizeBytes": 2931
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260512133700_workspace_runtime_states/migration.sql",
+      "sha256": "63a5f8d88646b3906c12df4d2168a4a579dcffa3b4df9958f043ad7cc8c0e0fd",
+      "sizeBytes": 34336
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260514000000_entitlement_quota_states/migration.sql",
+      "sha256": "51e0dca6bdccac0884f6ee80fab9a5f1e28ddb6887093a71917e3f81ab0dec93",
+      "sizeBytes": 8252
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260604000000_payment_provider_facts/migration.sql",
+      "sha256": "ee9d1673e060e925447cdab2b69e99dfc484392b973e3381af55d656d7625290",
+      "sizeBytes": 4658
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260706010719_mail_deliveries_and_invite_quota_indexes/migration.sql",
+      "sha256": "807c299c6df0136f808622cf619d7a1f5e888c8d6e1b1484ffe07e7b31b158cf",
+      "sizeBytes": 5105
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260711080000_auth_sessions/migration.sql",
+      "sha256": "b983bb057e5bd48c51f0f644d9ab571e4b85074048f31aced66b3109f2036c73",
+      "sizeBytes": 2509
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260712093000_mcp_credentials/migration.sql",
+      "sha256": "b46700bb9604d7b75f2af254290f5ae4f79ce85200bb328d79d94abd745851a2",
+      "sizeBytes": 1513
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260714000000_backfill_legacy_permission_and_subscription/migration.sql",
+      "sha256": "2b03ac77b2bc33614a0e660c69c879f409051190ba940b744c53d909e7fa3580",
+      "sizeBytes": 16104
+    },
+    {
+      "path": "Codebase/packages/backend/server/migrations/20260714000001_drop_legacy_permission_and_subscription/migration.sql",
+      "sha256": "340af9ee547fa5f51087fe50dc5e58fe1f351013a3a1b3b524c99d3c62ca471e",
+      "sizeBytes": 4321
+    },
+    {
+      "path": "Codebase/packages/backend/server/scripts/repair-pgvector-embedding-tables.sql",
+      "sha256": "e37a665eeb271bb0ae03cdf131274feb4a48d5aaf8189a0a50b374abb8d4e6dc",
+      "sizeBytes": 5426
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/data/__tests__/migrations.spec.ts",
+      "sha256": "fd9badb70f573d18d205c38f18f36789b9667509f48bdfab946df1d38c20bedf",
+      "sizeBytes": 2158
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/data/migrations/1698398506533-guid.ts",
+      "sha256": "f55d6ae4d061c9467781bc58cccee08d43e19c2d9d0ef49766bdb62f5b866f94",
+      "sizeBytes": 3239
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/data/migrations/1703756315970-unamed-account.ts",
+      "sha256": "3aaa1826ee6e80436cc62ee61b9b8992bff71ac748c886a7d2aa35740ad951db",
+      "sizeBytes": 710
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/data/migrations/1721299086340-refresh-unnamed-user.ts",
+      "sha256": "882e9ea1d97d84da0debe636772b14849719657793aa80efd5c180ed3e8ed81a",
+      "sizeBytes": 386
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/data/migrations/1745211351719-create-indexer-tables.ts",
+      "sha256": "e216090eb3af881411e7c0784b0a1b6f05743d4412cdcd1e86956a4fbe8c5867",
+      "sizeBytes": 441
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/data/migrations/1751966744168-correct-session-update-time.ts",
+      "sha256": "b5b8fb00f2f2e6818f4b940bfc67c856706691dcd70c6d414a553e8fbeb7d9a9",
+      "sizeBytes": 900
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/data/migrations/1763800000000-rebuild-manticore-mixed-script-indexes.ts",
+      "sha256": "359fdfb17f03c93ddfe0593d50b06b9caeec9d3308edd6c1cb1829c95bbdceef",
+      "sizeBytes": 394
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/data/migrations/1765500000000-backfill-permission-projection.ts",
+      "sha256": "bd05b75f02f304de306d3d9e0f14c0cbb6f23e3964424ab8b494d829b2f7794c",
+      "sizeBytes": 4043
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/data/migrations/1765600000000-backfill-entitlement-projection.ts",
+      "sha256": "c387948c97cb41552a662be9eeb459f5c8095ca9f1b7fd037e6bb94a69cd5843",
+      "sizeBytes": 250
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/data/migrations/index.ts",
+      "sha256": "00859e79942694d245d98cf4b85266b467f41cccdd7c9a1dfad758011256b19b",
+      "sizeBytes": 457
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/data/migrations/utils/loop.ts",
+      "sha256": "ed58a4b1d0d77cf2495d6540e0e7c6e0d7478a56710a4446b631a87e0eec5762",
+      "sizeBytes": 264
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/CustomScalars/DateTime.swift",
+      "sha256": "b17ba9445649f3b1bcd2e6f855e0761656f03ab5d432f380777f38aab712d1db",
+      "sizeBytes": 374
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/CustomScalars/ID.swift",
+      "sha256": "7a53a409e1bc686dd3d22c5667e2a3f93cdc54cb61b6e42bc690e95a0b21ee79",
+      "sizeBytes": 607
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/CustomScalars/JSON.swift",
+      "sha256": "56c1c0a6bcab59b9d1b2054822bc4089c2514fa1f90543cb7f2b7fbfa11bbaff",
+      "sizeBytes": 790
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/CustomScalars/JSONObject.swift",
+      "sha256": "f68969e5e5d7297080db7811a0cca63effe6cb285cb01a5f5e80d61b310521e9",
+      "sizeBytes": 916
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/CustomScalars/SafeInt.swift",
+      "sha256": "cfc67ee6170eceb4f0574e8e3f33309330b76c4e6d87a2ef4a574e9d32d66c3f",
+      "sizeBytes": 428
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/CustomScalars/Upload.swift",
+      "sha256": "59ded401ca6e9a011c83ea054d3084a23ee835df05726ccefad46a40b2b527da",
+      "sizeBytes": 329
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/SchemaConfiguration.swift",
+      "sha256": "5bbc5bd30f56451f9630c6febe875ff0188e24b76d9fefab41e73c5a44aa1eed",
+      "sizeBytes": 539
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/components/navigation-panel/sections/migration-favorites/index.tsx",
+      "sha256": "f4b6a916fb128250cddab6be49392ee58c79618c108c59640c4bb79dd99937ce",
+      "sizeBytes": 5074
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/components/navigation-panel/sections/migration-favorites/styles.css.ts",
+      "sha256": "9010e5c7db735fa6540f4cbff90c4d6c408847a7832b6b143aba8883bdb502f7",
+      "sizeBytes": 509
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/all-page/migration-data.css.ts",
+      "sha256": "a1a01c2521e817bfd73d72c9884ea6fb361923297169abaffe005b416beb7382",
+      "sizeBytes": 1257
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/all-page/migration-data.tsx",
+      "sha256": "c96039b06110f089a5169937734285df84992f17fbbb266ed9c7e720b0d7910b",
+      "sizeBytes": 2469
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/db/schema/index.ts",
+      "sha256": "f566c4838ee4cc0cb05d150f4d85192ef3fdc3dd080bd652dc2a3a4a967dfc85",
+      "sizeBytes": 239
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/db/schema/schema.ts",
+      "sha256": "179a39517d9a636a121ddbaee4afd245015b4365ebbc363bf3c8647784c086f7",
+      "sizeBytes": 2789
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/userspace/schema/index.ts",
+      "sha256": "16f3184d8c57d4e537a2925fc3bfb318bb4ace5d7ccd8d41371783106588141b",
+      "sizeBytes": 265
+    },
+    {
+      "path": "Codebase/packages/frontend/native/schema/src/import_validation.rs",
+      "sha256": "b4228bda53ff6ea960dcba79c3d40066fbcecfaaac2a561a4f4c3a6ffc995a50",
+      "sizeBytes": 6907
+    },
+    {
+      "path": "Codebase/packages/frontend/native/schema/src/lib.rs",
+      "sha256": "f4411e61433a1979c1f8998f22a4135a047d63730da6e89d63fa31e96d4d2de6",
+      "sizeBytes": 2857
+    },
+    {
+      "path": "Codebase/packages/frontend/native/schema/src/v1.rs",
+      "sha256": "13ed9474c1ca15c6967c8653a19da2b83a006e5478264d5740846e45d7222dec",
+      "sizeBytes": 809
+    },
+    {
+      "path": "Codebase/tests/affine-cloud/e2e/migration.spec.skip.ts",
+      "sha256": "fa7e597dbd8e3681485d70af84685d5de59174e02c76dacd2296780ea80f18c0",
+      "sizeBytes": 2995
+    }
+  ],
+  "inputFingerprint": "aa93b703f10b662f1b14781ce8eeee64a0780515e74a154efa0515798e08449f",
+  "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/migration-and-schema/batch-0000.json",
+  "outputSha256": "190bcd636bdb8d25aafec2751a890fa4f52ffbb981b36777e0675ad2f5d22c6f",
+  "nodeCount": 537,
+  "edgeCount": 690,
+  "inputTokens": 0,
+  "outputTokens": 0,
+  "cacheDecision": "REEXTRACTED",
+  "cacheInvalidationReason": "input fingerprint changed",
+  "completedAt": "2026-07-28T10:35:02.208Z"
+}

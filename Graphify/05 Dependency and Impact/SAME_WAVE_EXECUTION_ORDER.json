@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:33:51.651Z",
+  "sameWaveExecutionOrders": [
+    {
+      "dependent": "MR-IMPL-015",
+      "prerequisite": "MR-IMPL-001",
+      "wave": "WAVE_1",
+      "executionOrder": 1,
+      "reasonSameWaveIsSafe": "MR-IMPL-001 establishes file-backed identity before calendar core."
+    },
+    {
+      "dependent": "MR-IMPL-016",
+      "prerequisite": "MR-IMPL-001",
+      "wave": "WAVE_1",
+      "executionOrder": 1,
+      "reasonSameWaveIsSafe": "MR-IMPL-001 establishes file-backed identity before finance ledger core."
+    }
+  ]
+}

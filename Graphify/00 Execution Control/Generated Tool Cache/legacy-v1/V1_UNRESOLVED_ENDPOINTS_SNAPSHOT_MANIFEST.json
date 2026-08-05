@@ -1,0 +1,9 @@
+{
+  "runId": "graphify-v2-repair-20260728T095646",
+  "sourcePath": "Graphify/05 Dependency and Impact/UNRESOLVED_ENDPOINTS.jsonl",
+  "snapshotPath": "Graphify/00 Execution Control/Generated Tool Cache/legacy-v1/V1_UNRESOLVED_ENDPOINTS_SNAPSHOT.jsonl",
+  "sha256": "e94f61f28682325f786000b7367513a961195cc934f1e5f9f756a49e56e8bd1a",
+  "recordCount": 31709,
+  "status": "PRESERVED_READ_ONLY_HISTORICAL_DIAGNOSTIC_INPUT",
+  "preservedAt": "2026-07-28T11:14:52.781Z"
+}

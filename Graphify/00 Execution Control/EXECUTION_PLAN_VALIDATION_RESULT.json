@@ -1,0 +1,16 @@
+{
+  "validatorId": "VAL-OWNERSHIP-010",
+  "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+  "status": "PASS",
+  "counts": {
+    "primaryTasks": 161,
+    "supportTasks": 1
+  },
+  "checks": [
+    {
+      "checkId": "CHK-OWN-01",
+      "description": "161 primary + 1 support task cleanly owned",
+      "status": "PASS"
+    }
+  ]
+}

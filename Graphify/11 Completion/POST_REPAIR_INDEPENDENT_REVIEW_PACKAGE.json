@@ -1,0 +1,1289 @@
+{
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-08-01T13:53:24.422320Z",
+  "repairRunId": "mindroom-graphify-final-gate-repair-20260801-132409",
+  "candidateRunId": "mindroom-graphify-final-gate-review-candidate-20260801-132409",
+  "graphifyRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify",
+  "codebaseRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Codebase",
+  "backupPath": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-final-gate-repair-20260801-161930",
+  "changedFiles": [
+    {
+      "path": "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
+      "changeType": "MODIFIED",
+      "preRepair": {
+        "sha256": "e7f30083c85782695d7945bdcb77bdbd442794e6d6d580c7448b4198c42b768f",
+        "sizeBytes": 2978
+      },
+      "postRepair": {
+        "sha256": "80c944dc780c4e57d8db9ec27fefe5178721772b59b6ff51fcaed80b9a6c4f99",
+        "sizeBytes": 3144
+      }
+    },
+    {
+      "path": "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+      "changeType": "MODIFIED",
+      "preRepair": {
+        "sha256": "845e2f24f4cca7aaff657a5d9ae51ec721371a55587360ec8e4d30ddf69604e5",
+        "sizeBytes": 2101267
+      },
+      "postRepair": {
+        "sha256": "95a007b8ff3604b3873942899036a58289121b1a580a43357e3ffa719c886515",
+        "sizeBytes": 2101747
+      }
+    },
+    {
+      "path": "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+      "changeType": "MODIFIED",
+      "preRepair": {
+        "sha256": "c3923e5b24e15bbc5e936a91c0ee5bacd58ae41a0148ce47ea87efa745e3c7b1",
+        "sizeBytes": 81869
+      },
+      "postRepair": {
+        "sha256": "a5e755943178372db11791b6d8d98e4a226f06ad8bd76c08cff119091580ef2d",
+        "sizeBytes": 110108
+      }
+    },
+    {
+      "path": "00 Execution Control/FINAL_GATE_REPAIR_BASELINE.json",
+      "changeType": "ADDED",
+      "preRepair": null,
+      "postRepair": {
+        "sha256": "64edce71afe3818203f1b200ae2ea6c8eff754b6621d835c2aaea3de9402cfd2",
+        "sizeBytes": 5681782
+      }
+    },
+    {
+      "path": "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
+      "changeType": "MODIFIED",
+      "preRepair": {
+        "sha256": "2e168829d5b07992b7bd76884a82fcbdd67b7e0a992e57f42d4d6c619a9edeef",
+        "sizeBytes": 1706
+      },
+      "postRepair": {
+        "sha256": "560b4add5074e37a405e4f21224bc7b05fe15a9d8e6dd9f638ca3c05fa851966",
+        "sizeBytes": 2186
+      }
+    },
+    {
+      "path": "00 Execution Control/STATUS.json",
+      "changeType": "MODIFIED",
+      "preRepair": {
+        "sha256": "b9e6c0b5e0d1fb5a515fdf763ff19968a918e4d020a847da711d78ffd7362bc9",
+        "sizeBytes": 1848
+      },
+      "postRepair": {
+        "sha256": "e8a18dbbfa70ea121ce49416e3bbf715f9e6a1bd47d7ebfe95661e6a738b17ff",
+        "sizeBytes": 2344
+      }
+    },
+    {
+      "path": "10 Verification/RELEASE_GATE_MATRIX.json",
+      "changeType": "MODIFIED",
+      "preRepair": {
+        "sha256": "de52fae23ea8d001130ea5bad3e55689012cc18ae8f8ba8687fd2ec81816ccda",
+        "sizeBytes": 73107
+      },
+      "postRepair": {
+        "sha256": "e1f22a5949f1ad8f94090dd1be5170092440105b1b62cd449a809567c6e63727",
+        "sizeBytes": 74733
+      }
+    },
+    {
+      "path": "10 Verification/REQUIREMENT_TEST_MATRIX.jsonl",
+      "changeType": "MODIFIED",
+      "preRepair": {
+        "sha256": "c7b4c399bbbfec811ad27b483d1097dcc8e1c42f06d38d9e1829962392944e1c",
+        "sizeBytes": 651498
+      },
+      "postRepair": {
+        "sha256": "75d6813eb5062cbc6f70c453df01f7f9d6687b17d48f5ef75a44770fb803bba0",
+        "sizeBytes": 651857
+      }
+    },
+    {
+      "path": "11 Completion/__pycache__/validate_final_graphify_freeze.cpython-311.pyc",
+      "changeType": "MODIFIED",
+      "preRepair": {
+        "sha256": "3d751ea77e129c4c26fb56bf7f9d68f5aad338c3263df8c9815dc7cc285063e8",
+        "sizeBytes": 101173
+      },
+      "postRepair": {
+        "sha256": "82608a163af13e28bbe66b13ae778ef4d2f6a55023dd7e94dc635649550554af",
+        "sizeBytes": 133074
+      }
+    },
+    {
+      "path": "11 Completion/execute_final_gate_repair.py",
+      "changeType": "ADDED",
+      "preRepair": null,
+      "postRepair": {
+        "sha256": "724aabc9a9a44125e090b9c00a532dc67c1aa616aa9ce8844c74ec92e22e48a3",
+        "sizeBytes": 15935
+      }
+    },
+    {
+      "path": "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json",
+      "changeType": "MODIFIED",
+      "preRepair": {
+        "sha256": "4533d3f25625f236fc76b999d75c5751e73865cb906405088834ecfcf29cc218",
+        "sizeBytes": 18610
+      },
+      "postRepair": {
+        "sha256": "bff4274622167bd2e94a5dcd27da9893a456eb7b4dba3b607495addb1a6c6424",
+        "sizeBytes": 27480
+      }
+    },
+    {
+      "path": "11 Completion/FINAL_GATE_REPAIR_AUTHORITY_INVENTORY_CANDIDATE.jsonl",
+      "changeType": "ADDED",
+      "preRepair": null,
+      "postRepair": {
+        "sha256": "ac126d84785d75514a72719f4fd9c6d91ff640c4e5a76e00939e22feb80cabdc",
+        "sizeBytes": 1297238
+      }
+    },
+    {
+      "path": "11 Completion/FINAL_GATE_REPAIR_FREEZE_INVALIDATION.json",
+      "changeType": "ADDED",
+      "preRepair": null,
+      "postRepair": {
+        "sha256": "a36e9fe68cf7b7188d7978b45c4b6fcaa22f9aab896dfe3fa5f73575a5f46763",
+        "sizeBytes": 405
+      }
+    },
+    {
+      "path": "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl",
+      "changeType": "ADDED",
+      "preRepair": null,
+      "postRepair": {
+        "sha256": "42bd973eee4685afee108129395616874a81c3ba846e3b479656a2005af993a3",
+        "sizeBytes": 55833
+      }
+    },
+    {
+      "path": "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+      "changeType": "MODIFIED",
+      "preRepair": {
+        "sha256": "3f0d9493b5624826e264a7b6327c8a75b5fd033c7009dbf26d538ca03721c93e",
+        "sizeBytes": 2173
+      },
+      "postRepair": {
+        "sha256": "f8c71913f525071ae1d8fce6b3b9802bbc38507618f9aa6f73ca15b58f9b0c05",
+        "sizeBytes": 2617
+      }
+    },
+    {
+      "path": "11 Completion/FINAL_TEST_WAVE_OWNERSHIP.jsonl",
+      "changeType": "ADDED",
+      "preRepair": null,
+      "postRepair": {
+        "sha256": "816b0fc4291137a0d1d5b1caaa55b2d6147d28096c276b7ffdb63689f74a03f8",
+        "sizeBytes": 240082
+      }
+    },
+    {
+      "path": "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+      "changeType": "MODIFIED",
+      "preRepair": {
+        "sha256": "442d581e86a97755bef3124d4133431f795b82f69c2c8a1368b6c5801981634a",
+        "sizeBytes": 2789
+      },
+      "postRepair": {
+        "sha256": "3a41a475a62cf491ea6d86557ecb488de2cf9c25929ea5ea3384e3e0f202bc5a",
+        "sizeBytes": 3269
+      }
+    },
+    {
+      "path": "11 Completion/FINAL_WAVE_GATE_TEST_AUDIT.json",
+      "changeType": "ADDED",
+      "preRepair": null,
+      "postRepair": {
+        "sha256": "7815cdd0a5478d333fb55cd3f712c8191aaa3825c0b9e34b87c07ce7a743f40e",
+        "sizeBytes": 76360
+      }
+    },
+    {
+      "path": "11 Completion/FINAL_WAVE_GATE_TEST_SYNCHRONIZATION_REPORT.json",
+      "changeType": "ADDED",
+      "preRepair": null,
+      "postRepair": {
+        "sha256": "68b4ddfd3ac6db6264bca1560d436f60930db0b781d2eb410dc21ca1beed3305",
+        "sizeBytes": 75509
+      }
+    },
+    {
+      "path": "11 Completion/FINAL_WAVE_SYNCHRONIZATION_REPORT.json",
+      "changeType": "MODIFIED",
+      "preRepair": {
+        "sha256": "3f5c1280e3e21d927262c9ae1195ca4881b694ec029e4b92ea9339801311fdea",
+        "sizeBytes": 613
+      },
+      "postRepair": {
+        "sha256": "565f4b1c805f1db8d44fe4baf8e77aca4ef5f20d796f46c0ee087c008a660f1d",
+        "sizeBytes": 1411
+      }
+    },
+    {
+      "path": "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+      "changeType": "MODIFIED",
+      "preRepair": {
+        "sha256": "2e168829d5b07992b7bd76884a82fcbdd67b7e0a992e57f42d4d6c619a9edeef",
+        "sizeBytes": 1706
+      },
+      "postRepair": {
+        "sha256": "d0d987f4c8ca232efacaa6886918f6172621a3f45154d8c01c3bf88d8bbc7d95",
+        "sizeBytes": 2186
+      }
+    },
+    {
+      "path": "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+      "changeType": "MODIFIED",
+      "preRepair": {
+        "sha256": "3936b740f1632a0ce5c73ab91794fb980ca181a5735871b14165e63f398959ea",
+        "sizeBytes": 1616
+      },
+      "postRepair": {
+        "sha256": "eb5b0e84ff92e464bb79fae13b13c7eec4197c9ee773565b952ae4bd8e7f90ea",
+        "sizeBytes": 2096
+      }
+    },
+    {
+      "path": "11 Completion/prepare_repair_side_validation.py",
+      "changeType": "ADDED",
+      "preRepair": null,
+      "postRepair": {
+        "sha256": "b63bf60b36f5245fedc12d9d168091dd95abc19152b7debd690335ec72a80afe",
+        "sizeBytes": 24261
+      }
+    },
+    {
+      "path": "11 Completion/run_final_freeze_challenges.py",
+      "changeType": "MODIFIED",
+      "preRepair": {
+        "sha256": "1739f27764dd820a24389b8e1c86e75c2a9d64d6cc2b51c7f8510308a264cc31",
+        "sizeBytes": 13441
+      },
+      "postRepair": {
+        "sha256": "bc8077e1c606528e089cee114a7e363013e6114e9c02efc9a2d18f1326f0ffa4",
+        "sizeBytes": 17585
+      }
+    },
+    {
+      "path": "11 Completion/validate_final_graphify_freeze.py",
+      "changeType": "MODIFIED",
+      "preRepair": {
+        "sha256": "5076b3d3221083c98033b915610c575c6b201bcd8150ebcef83a62a2b1b94859",
+        "sizeBytes": 47749
+      },
+      "postRepair": {
+        "sha256": "9b0ceed060fec6c3aa95c288e149a060413391e818a7d16a330899ed55eecb12",
+        "sizeBytes": 65829
+      }
+    },
+    {
+      "path": "11 Completion/verify_step11b_results.py",
+      "changeType": "MODIFIED",
+      "preRepair": {
+        "sha256": "dfc196d3a33334ec4aebccafeefcc4099519324cb4e22178bd79abc1fcd370e1",
+        "sizeBytes": 3037
+      },
+      "postRepair": {
+        "sha256": "02a5b7c5c00ea537f80ff6fa1440c9abb8bad9d95bb7feb3943712b56636d6c9",
+        "sizeBytes": 3957
+      }
+    }
+  ],
+  "packageSelfHashExcludedReason": "A file cannot contain its own final SHA-256 without circular self-reference.",
+  "gateTestAudit": {
+    "path": "11 Completion/FINAL_WAVE_GATE_TEST_AUDIT.json",
+    "sha256": "7815cdd0a5478d333fb55cd3f712c8191aaa3825c0b9e34b87c07ce7a743f40e",
+    "summary": {
+      "waveGatesPresent": 5,
+      "missingTestAssignments": 17,
+      "extraTestAssignments": 17,
+      "duplicateTestAssignments": 0,
+      "unknownTestAssignments": 0,
+      "wrongWaveTests": 17
+    }
+  },
+  "testWaveOwnershipEvidence": {
+    "path": "11 Completion/FINAL_TEST_WAVE_OWNERSHIP.jsonl",
+    "sha256": "816b0fc4291137a0d1d5b1caaa55b2d6147d28096c276b7ffdb63689f74a03f8",
+    "recordCount": 338
+  },
+  "synchronizedGateMatrix": {
+    "path": "10 Verification/RELEASE_GATE_MATRIX.json",
+    "sha256": "e1f22a5949f1ad8f94090dd1be5170092440105b1b62cd449a809567c6e63727"
+  },
+  "validator": {
+    "path": "11 Completion/validate_final_graphify_freeze.py",
+    "sha256": "9b0ceed060fec6c3aa95c288e149a060413391e818a7d16a330899ed55eecb12",
+    "resultPath": "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+    "resultSha256": "a5e755943178372db11791b6d8d98e4a226f06ad8bd76c08cff119091580ef2d"
+  },
+  "challenges": {
+    "sourcePath": "11 Completion/run_final_freeze_challenges.py",
+    "sourceSha256": "bc8077e1c606528e089cee114a7e363013e6114e9c02efc9a2d18f1326f0ffa4",
+    "reportPath": "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json",
+    "reportSha256": "bff4274622167bd2e94a5dcd27da9893a456eb7b4dba3b607495addb1a6c6424",
+    "report": {
+      "freezeRunId": "mindroom-graphify-final-gate-review-candidate-20260801-132409",
+      "officialValidatorRunId": "mindroom-graphify-final-gate-repair-validator-20260801-132409",
+      "externalReviewRunId": null,
+      "mappingStatus": "FINAL_GATE_REPAIR_IN_PROGRESS",
+      "independentReviewStatus": "PENDING_POST_REPAIR_EXTERNAL_REVIEW",
+      "planningFreezeStatus": "NOT_FROZEN",
+      "wave0Readiness": "BLOCKED_PENDING_GATE_REPAIR_AND_EXTERNAL_REVIEW",
+      "codebaseExecutionStatus": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+      "finalReleaseReceiptStatus": "NOT_VERIFIED",
+      "canonicalCounts": {
+        "masterPlans": 3,
+        "requirements": 1782,
+        "supersessions": 278,
+        "capabilities": 161,
+        "changeRecords": 161,
+        "tasks": 162,
+        "primaryTasks": 161,
+        "bootstrapTasks": 1,
+        "tests": 338,
+        "fixtureCategories": 6,
+        "canonicalFixtureRecords": 6,
+        "releaseWaves": 6,
+        "waveGates": 6,
+        "capabilityValidationGates": 161,
+        "applicationGates": 1,
+        "adrs": 14,
+        "publicEntrypoints": 161
+      },
+      "manifestRecordCount": 162,
+      "manifestAggregateHash": "2c7ca87d9b9812081899f25649ef528d0866bbbff8d739827e85748a3f216c86",
+      "codebaseFileCount": 10080,
+      "codebaseDirectoryCount": 2548,
+      "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+      "validatorCheckCount": 117,
+      "challengeTestCount": 35,
+      "blockingDefectCount": 0,
+      "repairRunId": "mindroom-graphify-final-gate-repair-20260801-132409",
+      "gateTestSynchronizationStatus": "PASS",
+      "warningSummary": [
+        {
+          "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+          "releaseWave": "WAVE_1",
+          "blockingGateIds": [
+            "GATE-WAVE_1"
+          ]
+        },
+        {
+          "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+          "releaseWave": "WAVE_4",
+          "blockingGateIds": [
+            "GATE-WAVE_4"
+          ]
+        }
+      ],
+      "timestamp": "2026-08-01T16:50:10+03:00",
+      "validatorSourceHash": "9b0ceed060fec6c3aa95c288e149a060413391e818a7d16a330899ed55eecb12",
+      "requiredChallenges": [
+        "CHALLENGE-001",
+        "CHALLENGE-002",
+        "CHALLENGE-003",
+        "CHALLENGE-004",
+        "CHALLENGE-005",
+        "CHALLENGE-006",
+        "CHALLENGE-007",
+        "CHALLENGE-008",
+        "CHALLENGE-009",
+        "CHALLENGE-010",
+        "CHALLENGE-011",
+        "CHALLENGE-012",
+        "CHALLENGE-013",
+        "CHALLENGE-014",
+        "CHALLENGE-015",
+        "CHALLENGE-016",
+        "CHALLENGE-017",
+        "CHALLENGE-018",
+        "CHALLENGE-019",
+        "CHALLENGE-020",
+        "CHALLENGE-021",
+        "CHALLENGE-022",
+        "CHALLENGE-023",
+        "CHALLENGE-024",
+        "CHALLENGE-025",
+        "CHALLENGE-GATE-001",
+        "CHALLENGE-GATE-002",
+        "CHALLENGE-GATE-003",
+        "CHALLENGE-GATE-004",
+        "CHALLENGE-GATE-005",
+        "CHALLENGE-GATE-006",
+        "CHALLENGE-GATE-007",
+        "CHALLENGE-GATE-008",
+        "CHALLENGE-GATE-009",
+        "CHALLENGE-GATE-010"
+      ],
+      "challenges": [
+        {
+          "challengeId": "CHALLENGE-001",
+          "mutation": "Remove one requirement while independent traceability retains it",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\03 Capability Map__REQUIREMENT_REGISTRY.jsonl"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "CNT-02"
+          ],
+          "actualFailedCheckIds": [
+            "CNT-02",
+            "META-07",
+            "TEST-04"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-002",
+          "mutation": "Duplicate a capability ID",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\03 Capability Map__CAPABILITY_REGISTRY.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "CAP-01"
+          ],
+          "actualFailedCheckIds": [
+            "CAP-01",
+            "CNT-04",
+            "META-07"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-003",
+          "mutation": "Add an unknown MR-IMPL task dependency",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "DEP-05"
+          ],
+          "actualFailedCheckIds": [
+            "DEP-05"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-004",
+          "mutation": "Add a task self-dependency",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "DEP-06"
+          ],
+          "actualFailedCheckIds": [
+            "DEP-06"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-005",
+          "mutation": "Create a two-task dependency cycle",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "DEP-08"
+          ],
+          "actualFailedCheckIds": [
+            "DEP-07",
+            "DEP-08",
+            "DEP-09"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-006",
+          "mutation": "Make a Wave 0 task depend on a Wave 1 task",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "DEP-09"
+          ],
+          "actualFailedCheckIds": [
+            "DEP-08",
+            "DEP-09"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-007",
+          "mutation": "Create a two-capability execution cycle",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\05 Dependency and Impact__CAPABILITY_DEPENDENCY_GRAPH.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "DEP-03"
+          ],
+          "actualFailedCheckIds": [
+            "DEP-03"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-008",
+          "mutation": "Make a Wave 0 capability depend on a Wave 1 capability",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\05 Dependency and Impact__CAPABILITY_DEPENDENCY_GRAPH.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "DEP-04"
+          ],
+          "actualFailedCheckIds": [
+            "DEP-04"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-009",
+          "mutation": "Point the authority index at a missing file",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\00 Execution Control__FINAL_AUTHORITY_INDEX.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "AUTH-03"
+          ],
+          "actualFailedCheckIds": [
+            "AUTH-03"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-010",
+          "mutation": "Replace one frozen artifact SHA-256",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\11 Completion__FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "MAN-03"
+          ],
+          "actualFailedCheckIds": [
+            "MAN-03"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-011",
+          "mutation": "Insert the active manifest into itself",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\11 Completion__FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "MAN-01"
+          ],
+          "actualFailedCheckIds": [
+            "MAN-01",
+            "MAN-03",
+            "MAN-04"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-012",
+          "mutation": "Replace the aggregate manifest hash in one receipt",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\00 Execution Control__STATUS.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "MAN-07"
+          ],
+          "actualFailedCheckIds": [
+            "MAN-07"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-013",
+          "mutation": "Restore the forbidden generic planned-capability phrase",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\03 Capability Map__CAPABILITY_REGISTRY.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "CON-04"
+          ],
+          "actualFailedCheckIds": [
+            "CON-04"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-014",
+          "mutation": "Change an embedded capability wave",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\03 Capability Map__CAPABILITY_REGISTRY.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "CON-01"
+          ],
+          "actualFailedCheckIds": [
+            "CON-01"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-015",
+          "mutation": "Change an embedded task wave",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "CON-02"
+          ],
+          "actualFailedCheckIds": [
+            "CON-02"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-016",
+          "mutation": "Assign PBKDF2 evidence to an unrelated task",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\11 Completion__FINAL_WARNING_OWNERSHIP_RESOLUTION.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "WARN-02"
+          ],
+          "actualFailedCheckIds": [
+            "WARN-02"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-017",
+          "mutation": "Remove one PBKDF2 owning-wave gate",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\11 Completion__FINAL_WARNING_OWNERSHIP_RESOLUTION.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "WARN-04"
+          ],
+          "actualFailedCheckIds": [
+            "META-16",
+            "WARN-04"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-018",
+          "mutation": "Assign adapter isolation to the wrong wave",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\11 Completion__FINAL_WARNING_OWNERSHIP_RESOLUTION.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "WARN-07"
+          ],
+          "actualFailedCheckIds": [
+            "META-16",
+            "WARN-07"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-019",
+          "mutation": "Replace CalDAV ownership with an unrelated finance capability",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\11 Completion__FINAL_WARNING_OWNERSHIP_RESOLUTION.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "WARN-05",
+            "WARN-06"
+          ],
+          "actualFailedCheckIds": [
+            "WARN-05",
+            "WARN-06"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-020",
+          "mutation": "Report zero release waves in a completion receipt",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\11 Completion__GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "META-07"
+          ],
+          "actualFailedCheckIds": [
+            "META-07"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-021",
+          "mutation": "Use a conflicting freeze run ID",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\00 Execution Control__STATUS.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "META-01"
+          ],
+          "actualFailedCheckIds": [
+            "META-01"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-022",
+          "mutation": "Falsely verify application release",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\00 Execution Control__STATUS.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "META-06",
+            "SAFE-04"
+          ],
+          "actualFailedCheckIds": [
+            "META-06",
+            "SAFE-04"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-023",
+          "mutation": "Prematurely start Wave 0",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\00 Execution Control__STATUS.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "META-04",
+            "SAFE-02"
+          ],
+          "actualFailedCheckIds": [
+            "META-04",
+            "SAFE-02"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-024",
+          "mutation": "Replace the captured Codebase after hash",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\00 Execution Control__FINAL_CODEBASE_PRESERVATION_RECEIPT.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "CB-05"
+          ],
+          "actualFailedCheckIds": [
+            "CB-05"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-025",
+          "mutation": "Remove one Codebase file from the captured baseline manifest",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\00 Execution Control__FINAL_CODEBASE_PRESERVATION_RECEIPT.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "CB-06",
+            "CB-08"
+          ],
+          "actualFailedCheckIds": [
+            "CB-06",
+            "CB-08"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-GATE-001",
+          "mutation": "Remove a required test from its correct wave gate",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\10 Verification__RELEASE_GATE_MATRIX.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "GATE-05",
+            "GATE-06"
+          ],
+          "actualFailedCheckIds": [
+            "GATE-05",
+            "GATE-06",
+            "GATE-09",
+            "GATE-13"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-GATE-002",
+          "mutation": "Add a WAVE_2 test to WAVE_1",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\10 Verification__RELEASE_GATE_MATRIX.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "GATE-05",
+            "GATE-07"
+          ],
+          "actualFailedCheckIds": [
+            "GATE-05",
+            "GATE-06",
+            "GATE-07",
+            "GATE-13"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-GATE-003",
+          "mutation": "Duplicate one requiredTestId",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\10 Verification__RELEASE_GATE_MATRIX.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "GATE-04"
+          ],
+          "actualFailedCheckIds": [
+            "GATE-04",
+            "GATE-13"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-GATE-004",
+          "mutation": "Add an unknown test ID",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\10 Verification__RELEASE_GATE_MATRIX.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "GATE-03",
+            "GATE-05"
+          ],
+          "actualFailedCheckIds": [
+            "GATE-03",
+            "GATE-05",
+            "GATE-06",
+            "GATE-13"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-GATE-005",
+          "mutation": "Assign a test to the wrong explicit owning wave",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\10 Verification__REQUIREMENT_TEST_MATRIX.jsonl"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "TEST-08"
+          ],
+          "actualFailedCheckIds": [
+            "GATE-13",
+            "TEST-08"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-GATE-006",
+          "mutation": "Remove an entire wave gate",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\10 Verification__RELEASE_GATE_MATRIX.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "GATE-01"
+          ],
+          "actualFailedCheckIds": [
+            "CNT-10",
+            "CNT-11",
+            "GATE-01",
+            "GATE-02",
+            "GATE-13",
+            "META-07"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-GATE-007",
+          "mutation": "Change gateId without changing gate wave",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\10 Verification__RELEASE_GATE_MATRIX.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "GATE-02"
+          ],
+          "actualFailedCheckIds": [
+            "GATE-02",
+            "GATE-13"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-GATE-008",
+          "mutation": "Mark a wrong-wave test as shared without evidence",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\10 Verification__RELEASE_GATE_MATRIX.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "GATE-07",
+            "GATE-08"
+          ],
+          "actualFailedCheckIds": [
+            "GATE-05",
+            "GATE-06",
+            "GATE-07",
+            "GATE-08",
+            "GATE-13"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-GATE-009",
+          "mutation": "Create conflicting task and capability ownership waves",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "CON-03",
+            "TEST-05"
+          ],
+          "actualFailedCheckIds": [
+            "CON-02",
+            "CON-03",
+            "DEP-09",
+            "GATE-05",
+            "GATE-06",
+            "GATE-12",
+            "TEST-05"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        },
+        {
+          "challengeId": "CHALLENGE-GATE-010",
+          "mutation": "Make a completion receipt claim zero synchronized gates",
+          "temporaryFiles": [
+            "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-1p_l0pq6\\11 Completion__GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json"
+          ],
+          "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+          "expectedFailedCheckIds": [
+            "META-07"
+          ],
+          "actualFailedCheckIds": [
+            "META-07"
+          ],
+          "baselineFailedCheckIds": [
+            "META-10"
+          ],
+          "expectedStatus": "FAIL",
+          "actualStatus": "FAIL",
+          "passed": true
+        }
+      ],
+      "gateSpecificChallenges": 10,
+      "challengesUsingProductionValidator": 35,
+      "challengesWithIndependentExpectedEvidence": 35,
+      "verdict": "PASS"
+    }
+  },
+  "currentManifestCandidate": {
+    "path": "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl",
+    "sha256": "42bd973eee4685afee108129395616874a81c3ba846e3b479656a2005af993a3",
+    "recordCount": 162,
+    "aggregateHash": "2c7ca87d9b9812081899f25649ef528d0866bbbff8d739827e85748a3f216c86"
+  },
+  "codebasePreservation": {
+    "receiptPath": "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+    "receiptSha256": "95a007b8ff3604b3873942899036a58289121b1a580a43357e3ffa719c886515",
+    "before": {
+      "fileCount": 10080,
+      "directoryCount": 2548,
+      "aggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748"
+    },
+    "after": {
+      "fileCount": 10080,
+      "directoryCount": 2548,
+      "aggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748"
+    },
+    "modifiedFiles": [],
+    "addedFiles": [],
+    "removedFiles": []
+  },
+  "knownWarnings": [
+    {
+      "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+      "severity": "WARNING",
+      "affectedCapabilityIds": [
+        "MR-CAP-132"
+      ],
+      "owningTaskIds": [
+        "MR-IMPL-132"
+      ],
+      "releaseWave": "WAVE_1",
+      "owningWaves": [
+        "WAVE_1"
+      ],
+      "requiredEvidence": [
+        "Hardware-adaptive PBKDF2 calibration log",
+        "Encryption-envelope migration and authenticated-decryption test receipts"
+      ],
+      "blockingGateIds": [
+        "GATE-WAVE_1"
+      ],
+      "blocksWaveStart": false,
+      "blocksWaveCompletion": true
+    },
+    {
+      "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+      "severity": "WARNING",
+      "affectedCapabilityIds": [
+        "MR-CAP-120"
+      ],
+      "owningTaskIds": [
+        "MR-IMPL-120"
+      ],
+      "releaseWave": "WAVE_4",
+      "owningWaves": [
+        "WAVE_4"
+      ],
+      "requiredEvidence": [
+        "Google Calendar and CalDAV network-sandbox test receipt",
+        "Credential isolation and disabled-by-default verification",
+        "Offline conflict fallback without local data loss"
+      ],
+      "blockingGateIds": [
+        "GATE-WAVE_4"
+      ],
+      "blocksWaveStart": false,
+      "blocksWaveCompletion": true
+    }
+  ],
+  "zeroBlockerClaim": {
+    "claimed": true,
+    "blockingDefectCount": 0,
+    "gateTestSynchronizationStatus": "PASS"
+  },
+  "reviewerMustInspect": [
+    "00 Execution Control/FINAL_GATE_REPAIR_BASELINE.json",
+    "00 Execution Control/STATUS.json",
+    "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
+    "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+    "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+    "03 Capability Map/REQUIREMENT_REGISTRY.jsonl",
+    "03 Capability Map/CAPABILITY_REGISTRY.json",
+    "05 Dependency and Impact/CAPABILITY_DEPENDENCY_GRAPH.json",
+    "05 Dependency and Impact/SAME_WAVE_EXECUTION_ORDER.json",
+    "09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+    "10 Verification/REQUIREMENT_TEST_MATRIX.jsonl",
+    "10 Verification/RELEASE_GATE_MATRIX.json",
+    "10 Verification/FIXTURE_QA_MATRIX.md",
+    "11 Completion/FINAL_TEST_WAVE_OWNERSHIP.jsonl",
+    "11 Completion/FINAL_WAVE_GATE_TEST_AUDIT.json",
+    "11 Completion/FINAL_WAVE_GATE_TEST_SYNCHRONIZATION_REPORT.json",
+    "11 Completion/FINAL_WAVE_SYNCHRONIZATION_REPORT.json",
+    "11 Completion/FINAL_DEPENDENCY_ARCHITECTURE_REPORT.json",
+    "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+    "11 Completion/validate_final_graphify_freeze.py",
+    "11 Completion/run_final_freeze_challenges.py",
+    "11 Completion/verify_step11b_results.py",
+    "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json",
+    "11 Completion/FINAL_GATE_REPAIR_AUTHORITY_INVENTORY_CANDIDATE.jsonl",
+    "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl",
+    "11 Completion/POST_REPAIR_INDEPENDENT_REVIEW_PACKAGE.json"
+  ],
+  "reviewInstruction": "Perform a neutral, strictly read-only audit. Independently derive all expected sets and report VERIFIED, CONDITIONALLY_VERIFIED, or FAILED from the evidence; do not assume any repair-side claim is true.",
+  "approvalDecision": null
+}

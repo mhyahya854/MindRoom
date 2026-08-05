@@ -1,0 +1,213 @@
+{
+  "policyVersion": "mindroom-graphify-v2-layered-directed-1",
+  "extractor": "graphify.extract.extract",
+  "extractorVersion": "unknown",
+  "runnerSha256": "2adcfbd68a8a4e2b407bba8c37b6f81fb5b31a74fa570e70359e0283bf7f33ec",
+  "classificationResolverSha256": "675743d8d1e0f47c12ac4b2678077ed0ee0f06c0ccb6755505ffdc22bbfdaf55",
+  "codebaseRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Codebase",
+  "layer": "GENERATED_BINDING",
+  "batchIndex": 1,
+  "batchSizePolicy": 400,
+  "files": [
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/TimeWindow.graphql.swift",
+      "sha256": "8951f72c10ec920b8eac5aca0b40964ed173be1f6564b684719fcb59f9b4b161",
+      "sizeBytes": 254
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/TokenType.graphql.swift",
+      "sha256": "e124eac3c52f6bf7b82f29164130578da710df6d9d41cdb005e2b36de302c255",
+      "sizeBytes": 252
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/TranscriptionItemType.graphql.swift",
+      "sha256": "09489c0e80781eaba2c0ec3e9dd403f696cb048c4d1c948e852b50440cc6df55",
+      "sizeBytes": 276
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/TranscriptionQualityType.graphql.swift",
+      "sha256": "7c96b11869a0644dcf32cd4af4efcf8af671903b8eb71723a293775ea29b8747",
+      "sizeBytes": 282
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/TranscriptionResultType.graphql.swift",
+      "sha256": "2d783b6f3dad44010635f4fbb9367d430f2f50689bd55f50f9b371508f8b99ee",
+      "sizeBytes": 280
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/TranscriptionSourceAudioType.graphql.swift",
+      "sha256": "57ecc9ce52e3802e96d9806c69b32af18a10c6f60a3d3ca12f1a36326852f78e",
+      "sizeBytes": 290
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/UserImportFailedType.graphql.swift",
+      "sha256": "0d3e18bd3d9975bd4eb7346c5845db31a60ffaf7621851ce8c6ff96ebe5928d9",
+      "sizeBytes": 274
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/UserQuotaHumanReadableType.graphql.swift",
+      "sha256": "83e0081fe491eab910700ce7fd52ee7b7d884dc740d0a2bdcdfe30ea826920d2",
+      "sizeBytes": 286
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/UserQuotaType.graphql.swift",
+      "sha256": "9a57fedfff8a55fbc7cbfee2bdf37e6596147d535217b30f4a7356efc364c2f2",
+      "sizeBytes": 260
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/UserQuotaUsageType.graphql.swift",
+      "sha256": "95e21483b79e60b339d7f255da681476c57b774f06cc555aeac340622c54a35b",
+      "sizeBytes": 270
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/UserSettingsType.graphql.swift",
+      "sha256": "1dd58f674239ebaa722fac6bfa1849cbb3d3b1f80d0c9dec0c3b0d8a874ad69f",
+      "sizeBytes": 266
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/UserType.graphql.swift",
+      "sha256": "66b11a6097050637b70824677d3c24018e2f1300ffe8696d5376927888c3fb78",
+      "sizeBytes": 250
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/WorkspaceByokCapabilityWarningType.graphql.swift",
+      "sha256": "dbcf32e9a6a8314e7dfd69fbbb8ee4ed1277459e6b9d024e34480cddbc4ffcbb",
+      "sizeBytes": 302
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/WorkspaceByokKeyConfigType.graphql.swift",
+      "sha256": "71faa3371eb0a24e60e7093bfae62ab5df7ca60f01443ac1bd7e6bcc6b1e66d8",
+      "sizeBytes": 286
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/WorkspaceByokSettingsType.graphql.swift",
+      "sha256": "67ef3749ad63f47ec683ff120518f495bfe26838052320792d5b1dc4bae84e91",
+      "sizeBytes": 284
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/WorkspaceByokUsagePointType.graphql.swift",
+      "sha256": "bdcfb7442e4e6fa1d799276059d793a58b57d1cf14d1baa73fb7f89b814a0b80",
+      "sizeBytes": 288
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/WorkspaceCalendarItemObjectType.graphql.swift",
+      "sha256": "eb7f5f0fc3e660f9fd736e9499f42dce0dfb83de93cc9aa30b50d7c0f6d4ef75",
+      "sizeBytes": 296
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/WorkspaceCalendarObjectType.graphql.swift",
+      "sha256": "e9745007a61a9a88bcc93c6c0b298744bf4d36883efb09530e1f6015bc9e775d",
+      "sizeBytes": 288
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/WorkspaceDocMeta.graphql.swift",
+      "sha256": "ce06086e130da103bc114bfc6dad445f18bf8a56105d8e95e656939dd51c289f",
+      "sizeBytes": 266
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/WorkspacePermissions.graphql.swift",
+      "sha256": "019c6c88d7fa1247a52fcc0dea56e3435c8b1ceffb1d931d5f644d8226d8aa3a",
+      "sizeBytes": 274
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/WorkspaceQuotaHumanReadableType.graphql.swift",
+      "sha256": "9a988f308067a8382d98dc213d68858d094baa8f9c65dad006ee97182638d9d4",
+      "sizeBytes": 296
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/WorkspaceQuotaType.graphql.swift",
+      "sha256": "e2a3a132b89ea0dcaa886b200b50d35b59e191095fae2a60130b12d4d3d1a766",
+      "sizeBytes": 270
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/WorkspaceRolePermissions.graphql.swift",
+      "sha256": "68877225d2acfc857756c71a0c7242b1c79a3d3fe89ef163a62dec0ee719bd01",
+      "sizeBytes": 282
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/WorkspaceType.graphql.swift",
+      "sha256": "bbdfbb044877eecb03a4d180d066ec13acc64892e81ae10c9240851f4bdc557b",
+      "sizeBytes": 260
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Objects/WorkspaceUserType.graphql.swift",
+      "sha256": "f00ea5df5b4b9e0813bfe1c3b9c5155075842b0fe4ea700effddfbc2dbb0c58b",
+      "sizeBytes": 268
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/SchemaMetadata.graphql.swift",
+      "sha256": "1b484006b6cec04116c54e691a9195a38a8d39fb9d8e61fa6f448b0f1f6794cc",
+      "sizeBytes": 9924
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Unions/UserImportResultType.graphql.swift",
+      "sha256": "3cbf33ddb29f716cbd77b83627e43d3063a26568e8ba1e17410320c4895bce3b",
+      "sizeBytes": 304
+    },
+    {
+      "path": "Codebase/packages/frontend/apps/ios/App/Packages/AffineGraphQL/Sources/Schema/Unions/UserOrLimitedUser.graphql.swift",
+      "sha256": "116200ed6a33ede1aab545f9553b24007e4348d6a0a8a0ff3dbccbfb94e75066",
+      "sizeBytes": 293
+    },
+    {
+      "path": "Codebase/packages/frontend/component/src/type.d.ts",
+      "sha256": "47e73a76bbae9b99b3550afd4406256836c89263ca555e681298d619390550d0",
+      "sizeBytes": 219
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/types/types.d.ts",
+      "sha256": "ba33cdf8c739d8f8e5aceef7bbe8288c444acd68e5a7f00eff79761959066241",
+      "sizeBytes": 635
+    },
+    {
+      "path": "Codebase/packages/frontend/i18n/src/i18n.gen.ts",
+      "sha256": "30125b7dbbe393f9810a656e6d5379cc8e3a8e59d9de7643280a5e32cdd401df",
+      "sizeBytes": 318911
+    },
+    {
+      "path": "Codebase/packages/frontend/native/index.d.ts",
+      "sha256": "47bfb764a2930c378016f4a44294ec07973e4e9dee0a81b710333e0e81cdc9c3",
+      "sizeBytes": 10624
+    },
+    {
+      "path": "Codebase/packages/frontend/templates/edgeless-templates.gen.ts",
+      "sha256": "5050dbfb5ff2d96813db60d35b3310e1890c53c400412a9432e9622efb610983",
+      "sizeBytes": 2598
+    },
+    {
+      "path": "Codebase/packages/frontend/templates/stickers-templates.gen.ts",
+      "sha256": "f9d74b9b08d111556fd3dca538e572dfdcd04a1f582eb757128b26fe5de5e06a",
+      "sizeBytes": 80388
+    },
+    {
+      "path": "Codebase/tests/affine-cloud-copilot/e2e/types/global.d.ts",
+      "sha256": "a6e80e3843ade9be5f30aa25d01b1ffa90b457ac8c8efbe00377cfd433a185a2",
+      "sizeBytes": 83
+    },
+    {
+      "path": "Codebase/tools/@types/build-config/__all.d.ts",
+      "sha256": "449db82d8f5d3fcdee6cf060daab616b8683cf527dbcd23663b206d1cc5271a3",
+      "sizeBytes": 849
+    },
+    {
+      "path": "Codebase/tools/@types/env/__all.d.ts",
+      "sha256": "74e770a792a0bfa94805a45a8baec7383291d3f6c47d77b897fd61b283ac711a",
+      "sizeBytes": 1012
+    },
+    {
+      "path": "Codebase/tools/utils/src/workspace.gen.ts",
+      "sha256": "bb7b8ca60721becace1a035b66cba8e5a656a786d56e2d8cccbe8b25f49f077e",
+      "sizeBytes": 48807
+    }
+  ],
+  "inputFingerprint": "c40e9d95cde5d8874a3dc19a212919f50a16c8842afeef07229d466ac85fc048",
+  "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/generated-binding/batch-0001.json",
+  "outputSha256": "95baa5aca7de72afeece0f5ce5994b8cfebf6198d4a51ae5debe64ad1eefbd1a",
+  "nodeCount": 260,
+  "edgeCount": 718,
+  "inputTokens": 0,
+  "outputTokens": 0,
+  "cacheDecision": "REEXTRACTED",
+  "cacheInvalidationReason": "input fingerprint changed",
+  "completedAt": "2026-07-28T10:34:56.514Z"
+}

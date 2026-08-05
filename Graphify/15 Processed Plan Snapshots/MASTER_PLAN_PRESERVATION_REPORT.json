@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "project": "MindRoom",
+  "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+  "generatedAt": "2026-07-30T15:10:06.380Z",
+  "status": "PASS",
+  "preservationMethod": "BYTE_EXACT_ORIGINAL_PREFIX_PLUS_APPEND_ONLY_EXPANSION",
+  "inventoryPath": "Graphify/15 Processed Plan Snapshots/ORIGINAL_MASTER_PLAN_PRESERVATION_INVENTORY.json",
+  "inventorySha256": "72340a537cfd1ead24f7d53a823aba6aef1f8bab76c8455ba94bb43c624c8eb8",
+  "originalInventoryCounts": {
+    "rawLines": 2841,
+    "headings": 129,
+    "requirements": 2136,
+    "capabilitiesAndProductFunctions": 712,
+    "mandatorySafetyRules": 239,
+    "releaseAndVerificationGates": 426,
+    "explicitDecisions": 547
+  },
+  "plans": [
+    {
+      "path": "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
+      "originalSha256": "f81f3d389d82376ba2b2de5283142c96cbe242973cd918fda653c28684f1baa1",
+      "newSha256": "62519be4eff761b775de7c9d687f78a560e047240c8ca14e5d976f127349fd8a",
+      "originalBytes": 21550,
+      "newBytes": 91393,
+      "originalLineCount": 721,
+      "newLineCount": 3020,
+      "addedBytes": 69843,
+      "additionSha256": "c6f322290ce9dc7ac9b4d35d0a3e40d94ec7115b25cc0faf0fee56f60e884ea7",
+      "originalPrefixPreserved": true
+    },
+    {
+      "path": "Graphify/Master Plan/02-EVERYTHING-WE-ARE-DELETING.md",
+      "originalSha256": "443984b81dccda5de4452b8f09c407b31ce5ab846e2d621b6609535aee83affb",
+      "newSha256": "2bb940586e484d79eca238ec5c13e960c711c0164123d8f172fd3eadab57502d",
+      "originalBytes": 14170,
+      "newBytes": 69874,
+      "originalLineCount": 473,
+      "newLineCount": 2352,
+      "addedBytes": 55704,
+      "additionSha256": "b4c5b57eed66c7b700d2d86e7f345887546abf7115d948d85116b5036a8552f8",
+      "originalPrefixPreserved": true
+    },
+    {
+      "path": "Graphify/Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md",
+      "originalSha256": "35c847337ba08cec90766baf9bbc4ffe3ec2042d41b2bfa5d913db28aaa5b5b6",
+      "newSha256": "d9fa9a2fcd0b783db34c17f5e92bec793d2b53e88d902870c6c2ebe1f5a546ca",
+      "originalBytes": 49189,
+      "newBytes": 820661,
+      "originalLineCount": 1647,
+      "newLineCount": 34466,
+      "addedBytes": 771472,
+      "additionSha256": "dfd1d9143140c0f030068e31de487cc2caa0baf2268dc6f54d8b70d89cfeaa0a",
+      "originalPrefixPreserved": true
+    }
+  ],
+  "proof": {
+    "originalRequirementsPreserved": true,
+    "originalCapabilitiesPreserved": true,
+    "originalRestrictionsPreserved": true,
+    "originalSafetyRulesPreserved": true,
+    "originalReleaseAndVerificationGatesPreserved": true,
+    "originalExplicitDecisionsPreserved": true,
+    "allOriginalHeadingsPreserved": true,
+    "allOriginalBytesPreservedAsExactPrefix": true,
+    "historicalEvidencePreserved": true
+  },
+  "additions": {
+    "masterPlanSections": 3,
+    "requirements": 635,
+    "capabilities": 51,
+    "domains": [
+      "CALENDAR",
+      "FINANCE",
+      "CANVAS",
+      "MIND_MAP",
+      "KNOWLEDGE"
+    ]
+  },
+  "corrections": [
+    {
+      "scope": "Graphify completion status",
+      "justification": "The older completion claim predates the authorised product expansion.",
+      "method": "Historical evidence preserved; claim classified as superseded for current planning."
+    },
+    {
+      "scope": "Eleven expansion-adjacent legacy capability source mappings",
+      "justification": "Source inspection proved fixed-size top candidate lists semantically inaccurate.",
+      "method": "Legacy candidates preserved and classified; current mappings use all and only relevant semantic roots."
+    }
+  ],
+  "removedText": [],
+  "conflictsBetweenOriginalPlansAndExpansionBrief": [],
+  "weakenedRequirements": 0,
+  "accidentallyOmittedRequirements": 0,
+  "unauthorisedProductScopeReductions": 0,
+  "silentConflictResolutions": 0
+}

@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "batchId",
+    "taskId",
+    "capabilityId",
+    "agentId",
+    "affectedPaths",
+    "preMutationHashes",
+    "postMutationHashes",
+    "createdFiles",
+    "modifiedFiles",
+    "movedFiles",
+    "quarantinedFiles",
+    "purgedFiles",
+    "previousAndNewPaths",
+    "rollbackInstructions",
+    "commands",
+    "workingDirectories",
+    "exitCodes",
+    "verificationReceiptIds",
+    "reviewer",
+    "reviewDecision",
+    "creationTimestamp",
+    "completionTimestamp"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "integer"
+    },
+    "affectedPaths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "preMutationHashes": {
+      "type": "object"
+    },
+    "postMutationHashes": {
+      "type": "object"
+    },
+    "createdFiles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "modifiedFiles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "movedFiles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "quarantinedFiles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "purgedFiles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "previousAndNewPaths": {
+      "type": "array"
+    },
+    "rollbackInstructions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "commands": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "workingDirectories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "exitCodes": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "verificationReceiptIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reviewDecision": {
+      "enum": [
+        "APPROVED",
+        "REJECTED",
+        "PENDING"
+      ]
+    },
+    "creationTimestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completionTimestamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "batchId": {},
+    "taskId": {},
+    "capabilityId": {},
+    "agentId": {},
+    "reviewer": {}
+  },
+  "additionalProperties": true
+}

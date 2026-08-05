@@ -1,0 +1,33 @@
+{
+  "project": "MindRoom",
+  "runId": "graphify-v2-repair-20260728T095646",
+  "status": "PASS",
+  "capabilityCount": 110,
+  "uniqueCapabilityIds": 110,
+  "searchIncompleteCapabilities": 0,
+  "referenceVersion": "0.26.3",
+  "referenceCommit": "da7781a75171140fd966c6cfbe05da9f1fb111d6",
+  "referenceTreeSha": "4f7b0d6657efa7e9ee0c1e3359e09a21eb8e145f",
+  "archiveSha256": "1fc573a2143f664d4944df4e82570651f54c75ba8a891c546fe9153820a597c9",
+  "archiveAndExtractionValidation": {
+    "crcStatus": "PASS",
+    "crcFailureEntry": null,
+    "zipComment": "da7781a75171140fd966c6cfbe05da9f1fb111d6",
+    "zipCommentMatchesCommit": true,
+    "canonicalContentTreeSha256": "9cc5090ac0db71594e59e8cc557bc6db12c2754fea134dc17ab1d05e82067fba",
+    "canonicalContentTreeDigestAlgorithm": "SHA-256 over sorted UTF-8 records: relative-path NUL size NUL file-sha256 LF",
+    "archiveFileCount": 10109,
+    "extractedFileCount": 10109,
+    "missingExtractedFiles": 0,
+    "mismatchedExtractedFiles": 0,
+    "sampleMissing": [],
+    "sampleMismatched": [],
+    "status": "PASS"
+  },
+  "evidencePairCount": 1210,
+  "identicalPairCount": 1105,
+  "versionDeltaPairCount": 105,
+  "transplantApprovals": 0,
+  "implementationPerformed": false,
+  "validatedAt": "2026-07-29T08:25:18.401507Z"
+}

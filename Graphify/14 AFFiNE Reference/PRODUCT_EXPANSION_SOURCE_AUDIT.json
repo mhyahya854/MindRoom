@@ -1,0 +1,843 @@
+{
+  "schemaVersion": 1,
+  "project": "MindRoom",
+  "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+  "generatedAt": "2026-07-30T15:10:14.303Z",
+  "sourceRootCount": 54,
+  "allSourceRootsVerified": true,
+  "arbitraryTopNUsed": false,
+  "roots": [
+    {
+      "sourceKey": "calendar_engine",
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/calendar",
+      "classification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+      "reason": "Mature local database calendar view model, rendering, layout, DnD, positioning, actions, and external-source seam.",
+      "anchors": [
+        "define.ts::calendarViewType",
+        "define.ts::calendarViewModel",
+        "calendar-view-manager.ts::CalendarSingleView",
+        "source.ts::CalendarExternalSourceProvider",
+        "pc/view.ts::CalendarViewUILogic"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "e612677963c4e98b285bc56612ddf08bbae74365ff62a0198171edd5773908a6",
+      "fileCount": 14,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "calendar_tests",
+      "path": "Codebase/blocksuite/affine/data-view/src/__tests__",
+      "classification": "TEST_OR_FIXTURE",
+      "reason": "Calendar unit and layout tests, including DST, clipping, overlap, all-day, failure, and interaction behavior.",
+      "anchors": [
+        "calendar.unit.spec.ts",
+        "calendar-layout.unit.spec.ts"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "980a0894fb4992116177ea347a83f5dd591c706ebe6f5ae25d5ec79793f6e6c0",
+      "fileCount": 6,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "calendar_e2e",
+      "path": "Codebase/tests/blocksuite/e2e/database/calendar.spec.ts",
+      "classification": "TEST_OR_FIXTURE",
+      "reason": "Existing BlockSuite database calendar end-to-end behavior.",
+      "anchors": [
+        "calendar.spec.ts"
+      ],
+      "pathKind": "FILE",
+      "sha256": "2d101cd3c599134be223b8fbe8cb65dc14cf854a202f88b4ced1a6a29baef944",
+      "sizeBytes": 14964,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "date_picker",
+      "path": "Codebase/packages/frontend/component/src/ui/date-picker/calendar",
+      "classification": "USER_INTERFACE_ONLY",
+      "reason": "Reusable date-selection UI; it is not calendar event persistence or domain ownership.",
+      "anchors": [
+        "calendar.tsx::Calendar",
+        "day-picker.tsx::DayPicker"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "05688ce6fca4a5e04a3443743a78f07b5178f2303e161ea4f71663452eb4bf8f",
+      "fileCount": 11,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "journal_core",
+      "path": "Codebase/packages/frontend/core/src/modules/journal",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Local journal identity/date behavior reusable for journal-calendar projection.",
+      "anchors": [
+        "services/journal.ts::JournalService",
+        "store/journal.ts::JournalStore"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "0181119b500eef2c39f7ee96d7e2e3243efc52424d889e449df4a303f2ddb47d",
+      "fileCount": 6,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "journal_calendar_ui",
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/journal/calendar-events.tsx",
+      "classification": "CLOUD_COUPLED_IMPLEMENTATION",
+      "reason": "Adjacent journal event UI coupled to integration/calendar cloud data and tracking.",
+      "anchors": [
+        "calendar-events.tsx::CalendarEvents"
+      ],
+      "pathKind": "FILE",
+      "sha256": "830fc8ba1d1456d97e5cc4efc1b54cac16a68e4f3ae71de1347ce0dfb5f1892f",
+      "sizeBytes": 4630,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "calendar_workspace_bridge",
+      "path": "Codebase/packages/frontend/core/src/blocksuite/database-block/calendar/workspace-calendar-source.ts",
+      "classification": "CLOUD_COUPLED_IMPLEMENTATION",
+      "reason": "Optional server-backed external-source projection; yields no entries without WorkspaceServerService.",
+      "anchors": [
+        "workspace-calendar-source.ts::WorkspaceCalendarExternalSource",
+        "workspace-calendar-source.ts::calendarEventToExternalEntry"
+      ],
+      "pathKind": "FILE",
+      "sha256": "f64ea2b8d854d8961a01e943726cb2e44ab784f0ee7d8cd262f8970e8310c776",
+      "sizeBytes": 8480,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "calendar_integration",
+      "path": "Codebase/packages/frontend/core/src/modules/integration",
+      "classification": "CLOUD_COUPLED_IMPLEMENTATION",
+      "reason": "GraphQL-backed calendar accounts, calendars, event ranges, and registration; optional adapter evidence only.",
+      "anchors": [
+        "entities/calendar.ts::CalendarIntegration",
+        "store/calendar.ts::CalendarStore"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "ae8b8ef5e1856a24219699c4824bd548da2f4b6e568a9a7fc6f1567a224acd40",
+      "fileCount": 22,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "calendar_backend",
+      "path": "Codebase/packages/backend/server/src/plugins/calendar",
+      "classification": "CLOUD_COUPLED_IMPLEMENTATION",
+      "reason": "AFFiNE server Google/CalDAV integration, OAuth, jobs, queues, and remote sync; excluded from local core.",
+      "anchors": [
+        "service.ts::CalendarService",
+        "providers/factory.ts::CalendarProviderFactory",
+        "providers/caldav.ts::CalDAVProvider",
+        "providers/google.ts::GoogleCalendarProvider"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "236449b6df37e5b4888a3630e54132eef99c328d3a147ba406d03784805803d9",
+      "fileCount": 16,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "calendar_graphql",
+      "path": "Codebase/packages/common/graphql/src/graphql/calendar",
+      "classification": "CLOUD_COUPLED_IMPLEMENTATION",
+      "reason": "Remote GraphQL calendar operations; not local domain or file persistence.",
+      "anchors": [
+        "calendar-events.gql",
+        "calendar-accounts.gql",
+        "link-caldav-account.gql"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "d8a80bb4495dad2b5ad3c873fea7f0a9e57aada4519f05e9656db1d37d5f6ee6",
+      "fileCount": 9,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "data_view_properties",
+      "path": "Codebase/blocksuite/affine/data-view/src/property-presets",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Reusable date, number, text, select, multi-select, checkbox, progress, and image property UI/conversion.",
+      "anchors": [
+        "number/define.ts::NumberPropertySchema",
+        "number/utils/formatter.ts::formatNumber",
+        "date/define.ts",
+        "select/define.ts"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "353ee0d9d18081a3690c9a0bc6cf650312184405c7be4c12b0d3ac906f97fd00",
+      "fileCount": 30,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "data_view_table",
+      "path": "Codebase/blocksuite/affine/data-view/src/view-presets/table",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Reusable table view and row/property projections; not financial ledger ownership.",
+      "anchors": [
+        "define.ts::tableViewType",
+        "table-view-manager.ts::TableSingleView"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "70ba368aeaac9d5ebf3393f878de671dd689f9323eab7a74791ea543ca950e92",
+      "fileCount": 75,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "data_view_statistics",
+      "path": "Codebase/blocksuite/affine/data-view/src/core/statistics",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Display aggregates such as sum, average, median, min, and max; not accounting-safe calculations.",
+      "anchors": [
+        "number.ts::numberStatsFunctions"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "5d7c6b86f16c47bca3152cfa768c7d4259f349d9d71cb079f7e935bd063c33f4",
+      "fileCount": 6,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "data_view_expression_false_positive",
+      "path": "Codebase/blocksuite/affine/data-view/src/core/expression",
+      "classification": "FALSE_POSITIVE",
+      "reason": "Filter literal/reference expressions, not a completed financial formula engine.",
+      "anchors": [
+        "types.ts",
+        "ref/ref.ts"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "ee5d3e597510a0204a18d5a736ebb57171329002c268d3f434907eefeeadd2b2",
+      "fileCount": 5,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "database_model",
+      "path": "Codebase/blocksuite/affine/model/src/blocks/database",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "CRDT database block schema, columns, views, and stable block/row structures.",
+      "anchors": [
+        "database-model.ts::DatabaseBlockModel",
+        "database-schema.ts::DatabaseBlockSchema"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "62da8f602397c050bdd6b2329719eefbb533e507f05f0a0a92c9c8c86cb9a46c",
+      "fileCount": 3,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "database_block",
+      "path": "Codebase/blocksuite/affine/blocks/database/src",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "DatabaseBlockDataSource, property/view/store machinery, adapters, and UI projection.",
+      "anchors": [
+        "database-block.ts::DatabaseBlockComponent",
+        "database-data-source.ts::DatabaseBlockDataSource"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "0b359e7307c0c2507ef0a6650b98556000de5ddd77e135a73de32ce9b871c3fc",
+      "fileCount": 50,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "data_view_block",
+      "path": "Codebase/blocksuite/affine/blocks/data-view/src",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Generic BlockSuite data-view block integration.",
+      "anchors": [
+        "data-view-block.ts"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "62ecb2697f1d0c24eb0eae7294b7fb443d98a60b652085e97b6922bda72c0f14",
+      "fileCount": 15,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "attachment_model",
+      "path": "Codebase/blocksuite/affine/model/src/blocks/attachment",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Neutral attachment schema/model with name, size, MIME type, source ID, caption, and style metadata.",
+      "anchors": [
+        "attachment-model.ts::AttachmentBlockModel",
+        "attachment-schema.ts::AttachmentBlockSchema"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "bd8c4a57860edec97ef69771eb3d3a3496471b2ab3709f3a644c3e17f3957308",
+      "fileCount": 3,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "attachment_block",
+      "path": "Codebase/blocksuite/affine/blocks/attachment/src",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Blob-backed attachment rendering, adapters, previews, and interactions; telemetry/paywall coupling must be removed at use boundary.",
+      "anchors": [
+        "attachment-block.ts::AttachmentBlockComponent",
+        "store.ts::AttachmentStoreExtension"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "15bd9a1d6dfd96062a2d7a4cd58be893a21af83b45c394d5dc6189fa2c354f35",
+      "fileCount": 20,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "chart_primitive",
+      "path": "Codebase/packages/frontend/admin/src/components/ui/chart.tsx",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Generic Recharts wrapper in the admin package; finance dashboards remain absent and should not import admin ownership.",
+      "anchors": [
+        "chart.tsx::ChartContainer",
+        "chart.tsx::ChartTooltipContent"
+      ],
+      "pathKind": "FILE",
+      "sha256": "1f99d9eb97092aecb2fcf9ca7eaafa1effaa3a09ef1c1854e660f30a3d53f7e5",
+      "sizeBytes": 4963,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "analytics_excluded",
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/analytics.tsx",
+      "classification": "EXCLUDED_SYSTEM",
+      "reason": "Cloud GraphQL analytics and subscription paywall; not MindRoom finance.",
+      "anchors": [
+        "analytics.tsx"
+      ],
+      "pathKind": "FILE",
+      "sha256": "ffda5f5385a31845d1dac3b3371836a3427446702f5012c5f937c66effb7467d",
+      "sizeBytes": 16247,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "csv_adjacent",
+      "path": "Codebase/packages/frontend/admin/src/modules/accounts/utils/csv-utils.ts",
+      "classification": "ADJACENT_IMPLEMENTATION",
+      "reason": "Admin user-import CSV helper lacks finance quoting, dry-run, duplicate, rollback, and receipt semantics.",
+      "anchors": [
+        "csv-utils.ts::processCSVFile",
+        "csv-utils.ts::downloadCsv"
+      ],
+      "pathKind": "FILE",
+      "sha256": "6d6eb4f944fa3244e191114606bc8803eea78277b7a25c489326e9d2510fc19e",
+      "sizeBytes": 5797,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "local_storage",
+      "path": "Codebase/packages/common/nbstore/src/impls/sqlite",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Local SQLite CRDT document/blob/index storage usable as editing cache, never sole file-backed source of truth.",
+      "anchors": [
+        "doc.ts::SqliteDocStorage",
+        "blob.ts::SqliteBlobStorage",
+        "indexer/index.ts::SqliteIndexerStorage"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "4b410bdadef2ff9d6c0e8d367a6c8172d8d73a73e8a5486148b44ed1febf3d04",
+      "fileCount": 17,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "local_storage_core",
+      "path": "Codebase/packages/frontend/core/src/modules/storage",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Local workspace storage service/facade; no canonical finance or calendar ordinary-file contracts.",
+      "anchors": [
+        "services/storage.ts",
+        "index.ts"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "fc21f70927a809909e9014912b3147b8b18bfc13188520e33650acc718ac4d95",
+      "fileCount": 7,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "safe_storage",
+      "path": "Codebase/packages/frontend/apps/electron/src/main/byok-storage/handlers.ts",
+      "classification": "ADJACENT_IMPLEMENTATION",
+      "reason": "Electron safeStorage precedent for encrypted local JSON values; not cross-platform finance encryption ownership.",
+      "anchors": [
+        "handlers.ts::registerByokStorageHandlers"
+      ],
+      "pathKind": "FILE",
+      "sha256": "b903b69243aa7bb5d48fd52e9ee90fd6294464466297414b74416277d18f45de",
+      "sizeBytes": 5189,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "safe_json_storage",
+      "path": "Codebase/packages/frontend/apps/electron/src/main/shared-storage/json-file.ts",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Persistent JSON file storage used by local encrypted-value precedent.",
+      "anchors": [
+        "json-file.ts::PersistentJSONFileStorage"
+      ],
+      "pathKind": "FILE",
+      "sha256": "5a0f3d045239a2b81fe57c7a92feae9da025b92580975ad6e7a5dec1706e32b9",
+      "sizeBytes": 3468,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "payment_system",
+      "path": "Codebase/packages/backend/server/src/plugins/payment",
+      "classification": "EXCLUDED_SYSTEM",
+      "reason": "AFFiNE monetisation, Stripe, RevenueCat, subscription, invoice, entitlement, and billing behavior; never MindRoom Finance.",
+      "anchors": [
+        "stripe.ts",
+        "revenuecat/service.ts",
+        "service.ts::PaymentService"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "06c3fc957a2f70a34b8eae7d38775285da887bcaf26c8f4a6f1d3f4152997e73",
+      "fileCount": 22,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "edgeless_root",
+      "path": "Codebase/blocksuite/affine/blocks/root/src/edgeless",
+      "classification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+      "reason": "Mature Edgeless root component/service, keyboard, clipboard, toolbars, CRUD, and interaction.",
+      "anchors": [
+        "edgeless-root-block.ts::EdgelessRootBlockComponent",
+        "edgeless-root-service.ts::EdgelessRootService"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "8f81d690ad67e27f2cf7b02a11de943822e30c890dcc002c9a76575d0b82f7e7",
+      "fileCount": 23,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "surface_model",
+      "path": "Codebase/blocksuite/affine/blocks/surface/src",
+      "classification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+      "reason": "Surface Y.Map model, element CRUD, renderers, adapters/export, and commands.",
+      "anchors": [
+        "surface-model.ts::SurfaceBlockModel",
+        "surface-model.ts::SurfaceBlockSchema"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "ee7c04dd8d6b1dc3567d6a73614a208ecbf14f400dd3fded0286628128b07df2",
+      "fileCount": 89,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "gfx_framework",
+      "path": "Codebase/blocksuite/framework/std/src/gfx",
+      "classification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+      "reason": "Generic GFX controller, models, views, grid, layers, tools, viewport, and selection.",
+      "anchors": [
+        "model/surface/surface-model.ts::SurfaceBlockModel"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "ce214ded5dda6bcb7741da152697e1338364fd3a60e2d68194414db80b6ba4a5",
+      "fileCount": 44,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "affine_gfx",
+      "path": "Codebase/blocksuite/affine/gfx",
+      "classification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+      "reason": "Coherent AFFiNE brush, connector, group, link, mind-map, note, pointer, shape, template, text, and renderer packages.",
+      "anchors": [
+        "group/src/store.ts",
+        "connector/src/connector-element.ts"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "77851e79eedebc3a8bf13acc4b997efeb91a0c4b4ebcd4b9df8a08f851c85bde",
+      "fileCount": 256,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "surface_ref",
+      "path": "Codebase/blocksuite/affine/model/src/blocks/surface-ref",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Existing stable surface/document reference schema useful for cross-scope canvas references.",
+      "anchors": [
+        "surface-ref-model.ts::SurfaceRefBlockModel"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "f3eed009a6612910fa7f7af682c28bbd7563bfd139447e9875ae9bb2256dfa49",
+      "fileCount": 2,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "embed_doc",
+      "path": "Codebase/blocksuite/affine/blocks/embed-doc/src",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Local linked/synced document embed UI and reference behavior.",
+      "anchors": [
+        "embed-linked-doc-block/embed-linked-doc-block.ts::EmbedLinkedDocBlockComponent"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "4dab25bb82195b4fc336e537cb5a43f8c8f43b364524e6a5c6fb35a80cb7cc39",
+      "fileCount": 41,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "folder_organize",
+      "path": "Codebase/packages/frontend/core/src/modules/organize",
+      "classification": "ADJACENT_IMPLEMENTATION",
+      "reason": "Logical navigation folder tree and links, not filesystem ownership or durable folder scope.",
+      "anchors": [
+        "stores/folder.ts::FolderStore",
+        "services/organize.ts"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "96905b4bc648bd35dd91fe7882e7d393a0e94286715edaf1b4534affb419b9e1",
+      "fileCount": 7,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "collection_rules",
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Dynamic filter/group/order rules useful for folder-content projections.",
+      "anchors": [
+        "impls/filters",
+        "impls/group-by",
+        "impls/order-by"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "d37525147bc081450a7c5b4737ae801a96e219c76970df08a5d948d5e7150c55",
+      "fileCount": 61,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "id_generator",
+      "path": "Codebase/blocksuite/framework/store/src/utils/id-generator.ts",
+      "classification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+      "reason": "Existing nanoid/UUID generators and stable in-document IDs must be preserved for compatibility.",
+      "anchors": [
+        "id-generator.ts::nanoid",
+        "id-generator.ts::uuidv4"
+      ],
+      "pathKind": "FILE",
+      "sha256": "7c07ca645628556b6bb038ba4a2ac7174da5164225e748a47d22d432ee27c88c",
+      "sizeBytes": 309,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "workspace_identity",
+      "path": "Codebase/packages/frontend/core/src/modules/workspace/impls/workspace.ts",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Stable workspace/doc IDs and optional supplied IDs; paths are not identity.",
+      "anchors": [
+        "workspace.ts::WorkspaceImpl",
+        "workspace.ts::idGenerator"
+      ],
+      "pathKind": "FILE",
+      "sha256": "a3ef89d28f47a55a4be972ecc66da37ae754a1eb7dd3f5003c74768e88904543",
+      "sizeBytes": 4371,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "doc_identity",
+      "path": "Codebase/packages/frontend/core/src/modules/doc/stores/docs.ts",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Existing stable document IDs generated independently from file paths.",
+      "anchors": [
+        "docs.ts::DocsStore",
+        "docs.ts::nanoid"
+      ],
+      "pathKind": "FILE",
+      "sha256": "994ed658d3798b8402fd130b507d52696dba84592b73fe9a6651dd7f1d76915d",
+      "sizeBytes": 6964,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "mindmap_model",
+      "path": "Codebase/blocksuite/affine/model/src/elements/mindmap",
+      "classification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+      "reason": "Real non-AI MindmapElementModel tree, stable child IDs, serialization, layout state, loop protection, collapse, reparent, and style.",
+      "anchors": [
+        "mindmap.ts::MindmapElementModel",
+        "mindmap.ts::MindmapNode",
+        "mindmap.ts::MindmapRoot"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "f52e3fad23a64bd14e148568a8f3558315367c588b1c400ecf2c6cb8f15345da",
+      "fileCount": 7,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "mindmap_gfx",
+      "path": "Codebase/blocksuite/affine/gfx/mindmap/src",
+      "classification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+      "reason": "Real non-AI layout, renderer, drag interaction, toolbar, import, and adapters.",
+      "anchors": [
+        "view/layout.ts::layout",
+        "store.ts::MindmapStoreExtension",
+        "interactivity/mind-map-drag.ts"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "608cce438c8355bdd2b3132ae001c88ca9813dd2f6b8d5b5ac486e9fa38f20ab",
+      "fileCount": 30,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "mindmap_registration",
+      "path": "Codebase/blocksuite/affine/all/src/gfx/mindmap",
+      "classification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+      "reason": "Mind-map BlockSuite registration and public composition.",
+      "anchors": [
+        "store.ts",
+        "view.ts"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "ba3c82fdb3a0317e495286d4662dad180b9e0a133e24fbd78823a1bf6b8ed445",
+      "fileCount": 3,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "mindmap_tests",
+      "path": "Codebase/blocksuite/integration-test/src/__tests__/edgeless/mindmap.spec.ts",
+      "classification": "TEST_OR_FIXTURE",
+      "reason": "Non-AI mind-map integration behavior including layout, cycles, collapse, undo, reorder, and reparent.",
+      "anchors": [
+        "mindmap.spec.ts"
+      ],
+      "pathKind": "FILE",
+      "sha256": "6263d91f335b58fe6bf59d6cb6f66b7beadb05cb40a553615aac4e93ce225747",
+      "sizeBytes": 18503,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "mindmap_ai",
+      "path": "Codebase/packages/frontend/core/src/blocksuite/ai/mini-mindmap",
+      "classification": "EXCLUDED_SYSTEM",
+      "reason": "AI-generated mini mind-map implementation; explicitly not the retained mind-map foundation.",
+      "anchors": [
+        "mindmap-service.ts",
+        "mindmap-preview.ts"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "9799bf329c0dc47d620c55c2d2a5be3ad082129c21c52b45c84278f5e1e922e9",
+      "fileCount": 8,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "reference_model",
+      "path": "Codebase/blocksuite/affine/model/src/consts/doc.ts",
+      "classification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+      "reason": "ReferenceInfo/ReferenceParams schemas with page, block, element, database, row, and spatial identifiers.",
+      "anchors": [
+        "doc.ts::ReferenceParamsSchema",
+        "doc.ts::ReferenceInfoSchema"
+      ],
+      "pathKind": "FILE",
+      "sha256": "6fa2818c42f15b94ccc0961b287b83c85fda66abff9db582590853f39e34833c",
+      "sizeBytes": 2912,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "inline_reference",
+      "path": "Codebase/blocksuite/affine/inlines/reference/src",
+      "classification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+      "reason": "Explicit local document/block/element reference model, adapters, rendering, and interaction.",
+      "anchors": [
+        "reference-node/reference-node.ts::AffineReference"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "9727e591182bffc32070f48a5cce6419b758fd1ecff503b73b336d8aa7c85509",
+      "fileCount": 19,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "linked_doc",
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Linked-document widget and local document navigation/import behavior.",
+      "anchors": [
+        "widget.ts",
+        "linked-doc-popover.ts"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "691556cb04b99dad1aa8b4ca9b8ca604c7134e25f641b0c5be39f5a3f554f58d",
+      "fileCount": 25,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "doc_links",
+      "path": "Codebase/packages/frontend/core/src/modules/doc-link",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Explicit links and derived backlinks using indexed refDocId; remote preference must be removed.",
+      "anchors": [
+        "entities/doc-links.ts::DocLinks",
+        "entities/doc-backlinks.ts::DocBacklinks"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "cca08089d653705813ca6974f7a465701dd6763b6b65ef603db881e6f90e723a",
+      "fileCount": 4,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "reader_refs",
+      "path": "Codebase/packages/common/reader/src/reader.ts",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Extracts reference fields, parents, database relations, and markdown preview from BlockSuite documents.",
+      "anchors": [
+        "reader.ts::Reader"
+      ],
+      "pathKind": "FILE",
+      "sha256": "99deb85ec4f57c694e69cf89d67969e6aa16aa3a01069755e4ed1ee2f4451b65",
+      "sizeBytes": 28087,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "indexer_schema",
+      "path": "Codebase/packages/common/nbstore/src/storage/indexer/schema.ts",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Local index fields for refDocId and rebuildable search-derived relationships.",
+      "anchors": [
+        "schema.ts::IndexerSchema"
+      ],
+      "pathKind": "FILE",
+      "sha256": "16f02e4aea79cf513006ed2ebd8725fc6d9bffbcf7b958f38bc063adfe4bd545",
+      "sizeBytes": 1525,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "sqlite_indexer",
+      "path": "Codebase/packages/common/nbstore/src/impls/sqlite/indexer",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Local SQLite full-text/reference index; derived cache only.",
+      "anchors": [
+        "index.ts::SqliteIndexerStorage"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "fbcaf3449cb23707e64a943ab0380b1520c787236c49452262b74a426b62e16c",
+      "fileCount": 6,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "embedding_cloud",
+      "path": "Codebase/packages/frontend/core/src/modules/workspace-indexer-embedding",
+      "classification": "EXCLUDED_SYSTEM",
+      "reason": "Current embedding UI/service is coupled to cloud/vector AI and is not the authoritative local semantic-link engine.",
+      "anchors": [
+        "services/embedding.ts::EmbeddingService"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "c0cd6516176b7f5874eb76969adef95cab737ae3006bb8440bcdfd9ddfcacebf",
+      "fileCount": 16,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "tag_core",
+      "path": "Codebase/packages/frontend/core/src/modules/tag",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Stable tag IDs and memberships in workspace metadata; requires ordinary-file serialization.",
+      "anchors": [
+        "stores/tag.ts::TagStore",
+        "entities/tag.ts::Tag"
+      ],
+      "pathKind": "DIRECTORY_ROOT",
+      "sha256": "09ddb3b9042853754a8e726e393edc7d763d203e68ef739fa460d3f53dfde7ef",
+      "fileCount": 7,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "workspace_trash",
+      "path": "Codebase/packages/frontend/apps/electron/src/helper/workspace/handlers.ts",
+      "classification": "PARTIAL_REUSABLE_FOUNDATION",
+      "reason": "Whole-workspace SQLite trash/import/recovery precedent, not app-independent file-backed restoration.",
+      "anchors": [
+        "handlers.ts::trashWorkspace",
+        "handlers.ts::recoverWorkspace"
+      ],
+      "pathKind": "FILE",
+      "sha256": "05a8be6af1a659d8f1ae8188033f7ebe27b97ab9db3558acff90027871cf4085",
+      "sizeBytes": 9960,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    },
+    {
+      "sourceKey": "db_export",
+      "path": "Codebase/packages/frontend/apps/electron/src/helper/dialog/dialog.ts",
+      "classification": "ADJACENT_IMPLEMENTATION",
+      "reason": "Database export/vacuum-to-temporary precedent; not a general atomic ordinary-file writer.",
+      "anchors": [
+        "dialog.ts::saveDBFileAs"
+      ],
+      "pathKind": "FILE",
+      "sha256": "e4c57fbf569de2ff9128700d0bc3617c89dc37e1f4c0703db431fb95196dcadf",
+      "sizeBytes": 8309,
+      "exists": true,
+      "selectionPolicy": "SEMANTIC_SOURCE_INSPECTION_NOT_KEYWORD_TOP_N"
+    }
+  ],
+  "domainConclusions": {
+    "calendar": {
+      "localCore": "PARTIAL_FOUNDATION_PRESENT_NO_MINDROOM_EVENT_SOURCE_OF_TRUTH",
+      "cloudBoundary": "GOOGLE_CALDAV_GRAPHQL_BACKEND_AND_WORKSPACE_SERVER_ARE_OPTIONAL_ADAPTER_ONLY"
+    },
+    "finance": {
+      "localCore": "PLANNED_ABSENT",
+      "reusableFoundations": "DATABASE_DATA_VIEW_ATTACHMENTS_SQLITE_CHART_AND_SAFE_STORAGE_PRECEDENTS",
+      "excluded": "AFFINE_PAYMENT_STRIPE_REVENUECAT_SUBSCRIPTION_INVOICE_ENTITLEMENT_AND_CLOUD_ANALYTICS"
+    },
+    "canvas": {
+      "foundation": "BLOCKSUITE_EDGELESS_MODEL_GFX_SURFACE_AND_ROOT",
+      "scopeLayer": "PLANNED_ABSENT",
+      "fileBundle": "PLANNED_ABSENT"
+    },
+    "mindMap": {
+      "foundation": "REAL_NON_AI_BLOCKSUITE_MINDMAP_MODEL_GFX_AND_REGISTRATION",
+      "aiMiniMindmap": "EXCLUDED",
+      "federation": "PLANNED_ABSENT"
+    },
+    "knowledge": {
+      "foundation": "LINKED_DOC_BACKLINK_REFERENCE_READER_INDEX_TAG_AND_STABLE_ID_PRECEDENTS",
+      "remoteEmbedding": "EXCLUDED",
+      "fileMovementRepairAndAppDeletionReconstruction": "PLANNED_ABSENT"
+    }
+  }
+}

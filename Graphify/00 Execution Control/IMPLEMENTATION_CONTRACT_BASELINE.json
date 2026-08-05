@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:22:05.684Z",
+  "totalCapabilityCount": 161,
+  "totalChangeRecordCount": 161,
+  "totalImplementationTaskCount": 162,
+  "expansionCapabilityCount": 51,
+  "genericDescriptionsBefore": 0,
+  "capabilitiesWithoutPublicInterfacesBefore": 0,
+  "capabilitiesWithoutStorageContractsBefore": 0,
+  "capabilitiesWithoutMigrationContractsBefore": 0,
+  "capabilitiesWithoutRecoveryContractsBefore": 0,
+  "capabilitiesWithoutFailureContractsBefore": 0,
+  "capabilitiesWithoutRollbackContractsBefore": 0,
+  "capabilitiesWithoutProhibitedDependenciesBefore": 0,
+  "capabilityChangeTaskMismatchesBefore": 0
+}

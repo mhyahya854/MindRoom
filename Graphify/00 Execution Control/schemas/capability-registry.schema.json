@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "capabilities"
+  ],
+  "properties": {
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "required": [
+          "capabilityId",
+          "name",
+          "description",
+          "sourceRequirementIds",
+          "classification",
+          "currentStatus",
+          "currentPaths",
+          "currentSymbols",
+          "dependencies",
+          "dependants",
+          "intendedOwner",
+          "intendedFinalPath",
+          "riskLevel",
+          "mappingConfidence",
+          "evidence"
+        ],
+        "properties": {
+          "capabilityId": {},
+          "name": {},
+          "description": {},
+          "sourceRequirementIds": {},
+          "classification": {},
+          "currentStatus": {},
+          "currentPaths": {},
+          "currentSymbols": {},
+          "dependencies": {},
+          "dependants": {},
+          "intendedOwner": {},
+          "intendedFinalPath": {},
+          "riskLevel": {},
+          "mappingConfidence": {},
+          "evidence": {}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

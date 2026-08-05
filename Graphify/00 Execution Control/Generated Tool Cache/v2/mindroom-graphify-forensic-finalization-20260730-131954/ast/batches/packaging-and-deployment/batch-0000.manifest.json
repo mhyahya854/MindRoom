@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "mindroom.graphify.ast-batch-manifest.v2",
+  "runId": "mindroom-graphify-forensic-finalization-20260730-131954",
+  "extractorName": "graphify.extract.extract",
+  "extractorVersion": "graphifyy==0.9.28",
+  "extractionPolicyVersion": "mindroom-graphify-v2-layered-directed-2",
+  "codebaseBaseline": "135fbaacd841e5e4c271b046eda4b1613da83122e08c464904d395cd93ae5a04",
+  "masterPlanHashes": {
+    "01-EVERYTHING-WE-ARE-KEEPING.md": "41c391154f1253aa59cde5740efb526822b7564b5320147cfa9c213745d792f0",
+    "02-EVERYTHING-WE-ARE-DELETING.md": "901cf1fd325597c50a007fd491ee4ef7e01b8d32ff67aa032299b8dd80bd048c",
+    "03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md": "46b6dd19719d2ab9381594ce30aba7a05c2fa4856930981864639feb06abad90"
+  },
+  "rootPath": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Codebase",
+  "orderedInputFiles": [
+    "Codebase/.github/actions/deploy/deploy.mjs",
+    "Codebase/packages/backend/native/src/entitlement.rs",
+    "Codebase/packages/frontend/apps/android/capacitor.config.ts",
+    "Codebase/packages/frontend/apps/electron/forge.config.mjs",
+    "Codebase/packages/frontend/apps/ios/capacitor.config.ts"
+  ],
+  "inputFileHashes": {
+    "Codebase/.github/actions/deploy/deploy.mjs": "29ed0f8965057f33e3074a5a4ec17606400c0ec6c5d4747e6642c8ae0e0c03a3",
+    "Codebase/packages/backend/native/src/entitlement.rs": "61c7269a8a908e1db6fb5f3da7493247d3b522b1dac8966c193a8e015c8b83e3",
+    "Codebase/packages/frontend/apps/android/capacitor.config.ts": "0792d4a487015da6569c0355a83515c2dc6887accd67b2955af9f34c4b0d88de",
+    "Codebase/packages/frontend/apps/electron/forge.config.mjs": "58f4e7063be5b5a3a0cee6fca4643ffcd328ea8819b350c3d14f5c9b21021a43",
+    "Codebase/packages/frontend/apps/ios/capacitor.config.ts": "ee98e90eeb9119bdcf984a08bffe2661f1a7d7e8ebfc8d8e50c311570e800f5c"
+  },
+  "configurationHashes": {
+    "Graphify/11 Completion/run_ast_batched.py": "7fa74b3d97b75b4792dd3f86f519671b3ea7e161d5c81b98df1cb7f20d5f2502",
+    "Graphify/11 Completion/repair_v2_common.py": "c67ccbab0ae6d45099aea480d29412eae056f572e873e6cd94934d0ad42b1919",
+    "Graphify/01 Corpus Inventory/GRAPH_LAYER_FILE_REGISTRY.jsonl": "ab1ede27b1cce4c4460b287808aba76609705e0f8246e69a46c1ad5c360954a3",
+    "Codebase/package.json": "6ce694262f8b3df1ca4bcf54acac62d60ef4bf7784419f1bfefb9858077e4ddf",
+    "Codebase/yarn.lock": "4d00a2e861c27561ebd229f7d90bd4f03e2d786fdfe8ba0eb289cca0967cb991",
+    "Codebase/.yarnrc.yml": "ccc952998c861a4979579f0ee46db8188d2ff531c015bedea4da59f8f26a0c63",
+    "Codebase/tsconfig.json": "ab93b55858d2328b14aecc5d7c7477d108078fd92b1fa16941e3fabfa1eb2af9"
+  },
+  "layer": "PACKAGING_AND_DEPLOYMENT",
+  "batchIndex": 0,
+  "batchSizePolicy": 400,
+  "batchId": "MR-AST-BATCH-V2-1446b74af09c291f1ebbb4c1",
+  "inputFingerprint": "c8db8e57bf1b99a688f3959285e6934d0eaf86b2c14b339087c8227592ed4bba",
+  "batchOutputPath": "00 Execution Control/Generated Tool Cache/v2/mindroom-graphify-forensic-finalization-20260730-131954/ast/batches/packaging-and-deployment/batch-0000.json",
+  "batchOutputSha256": null,
+  "nodeCount": 0,
+  "edgeCount": 0,
+  "startedAt": "2026-07-30T13:26:15.187Z",
+  "completedAt": "2026-07-30T13:26:15.596Z",
+  "status": "FAILED",
+  "cacheDecision": "EXTRACTION_FAILED",
+  "cacheInvalidationReason": "missing output or manifest",
+  "errorType": "FileNotFoundError",
+  "error": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\mhyah\\\\Downloads\\\\Code\\\\MindRoom\\\\Graphify\\\\00 Execution Control\\\\Generated Tool Cache\\\\v2\\\\mindroom-graphify-forensic-finalization-20260730-131954\\\\ast\\\\graphify-out\\\\cache\\\\ast\\\\v0.9.28\\\\36cc4fb764ff7196a747932cee7b8db58e4b069eae796c82e6876863d5e6d971.p3hob5yz.tmp'"
+}

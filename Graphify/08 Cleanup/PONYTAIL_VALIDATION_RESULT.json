@@ -1,0 +1,19 @@
+{
+  "project": "MindRoom",
+  "runId": "graphify-v2-repair-20260728T095646",
+  "mode": "READ_ONLY_AUDIT",
+  "status": "PASS",
+  "findingCount": 9,
+  "validatedCandidateCount": 3,
+  "falsePositiveCount": 4,
+  "needsReviewCount": 2,
+  "validatedPotentialReduction": {
+    "sourceLines": 86,
+    "directDependencies": 1
+  },
+  "codeChangesApplied": 0,
+  "dependenciesRemoved": 0,
+  "filesDeleted": 0,
+  "byteIdentityAloneAcceptedAsSafetyProof": false,
+  "independentReviewStatus": "PENDING_FINAL_V2_REVIEW"
+}

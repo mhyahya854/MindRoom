@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:39:03.427Z",
+  "requirementCount": 1782,
+  "capabilityCount": 161,
+  "testCount": 338,
+  "fixtureCount": 24,
+  "requirementsWithoutTestsBefore": [],
+  "requirementsWithoutTestsAfter": [],
+  "capabilitiesWithoutTestsBefore": [],
+  "capabilitiesWithoutTestsAfter": [],
+  "testsWithoutRequirements": [],
+  "testsWithoutCapabilities": [],
+  "testsWithoutTasks": [],
+  "duplicateGenericTestSetsBefore": [],
+  "duplicateGenericTestSetsAfter": [],
+  "persistentCapabilitiesWithoutRecoveryTests": [],
+  "migrationTasksWithoutMigrationTests": [],
+  "rollbackTasksWithoutRollbackTests": [],
+  "optionalAdaptersWithoutOfflineTests": [],
+  "securityCapabilitiesWithoutNegativeTests": [],
+  "codebaseModified": false
+}

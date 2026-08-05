@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["symbolId", "locationEntityId", "symbol", "symbolKind", "exportStatus", "currentPath", "lineRange", "uniqueAnchor", "fileSha256", "capabilityIds", "astNodeIds", "mappingConfidence", "status"],
+  "properties": {
+    "symbolId": {"type": "string", "pattern": "^MR-SYM-"},
+    "locationEntityId": {"type": "string", "pattern": "^MR-LOC-"},
+    "symbol": {"type": "string"},
+    "currentPath": {"type": "string", "pattern": "^Codebase/"},
+    "fileSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "capabilityIds": {"type": "array", "items": {"type": "string"}},
+    "astNodeIds": {"type": "array"}
+  },
+  "additionalProperties": true
+}

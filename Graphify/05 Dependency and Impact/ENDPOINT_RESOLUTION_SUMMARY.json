@@ -1,0 +1,46 @@
+{
+  "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+  "previousDanglingEdges": 31809,
+  "diagnosticRecords": 53796,
+  "classifications": {
+    "GENERATED_CODE_TEMPLATE_REFERENCE": 1,
+    "HISTORICAL_RUST_LOCAL_NAMESPACE_NOT_PROMOTED": 3,
+    "HISTORICAL_V1_IDENTIFIER_NOT_PROMOTED": 4397,
+    "NON_AUTHORITATIVE_CACHE_ENDPOINT_NOT_PROMOTED": 15926,
+    "NON_SEMANTIC_LOCAL_BINDING_AST_COLLISION_SUPPRESSED": 12,
+    "NON_SEMANTIC_SAME_ENDPOINT_SUPPRESSED": 6148,
+    "RESOLVED_EXTERNAL_PACKAGE": 9461,
+    "RESOLVED_GENERATED_ARTIFACT": 19,
+    "RESOLVED_INTERNAL_FILE": 5989,
+    "RESOLVED_NODE_BUILTIN": 467,
+    "RESOLVED_WORKSPACE_PACKAGE": 11373
+  },
+  "remainingUnresolvedInternal": 0,
+  "remainingInvalidReferences": 0,
+  "remainingBlockers": 0,
+  "authoritativeDanglingEdges": 0,
+  "externalReferencesAreResolvedNodes": true,
+  "v1ReclassificationEvidence": {
+    "inputUnresolvedEdgeCount": 31709,
+    "diagnosticRecordCount": 31709,
+    "preservedV1EvidenceAvailable": true,
+    "preservedV1EvidencePath": "Graphify/00 Execution Control/Generated Tool Cache/legacy-v1/V1_UNRESOLVED_ENDPOINTS_SNAPSHOT.jsonl",
+    "preservedV1DiagnosticSha256": "e94f61f28682325f786000b7367513a961195cc934f1e5f9f756a49e56e8bd1a",
+    "classificationCounts": {
+      "HISTORICAL_RUST_LOCAL_NAMESPACE_NOT_PROMOTED": 3,
+      "HISTORICAL_V1_IDENTIFIER_NOT_PROMOTED": 4397,
+      "RESOLVED_EXTERNAL_PACKAGE": 9461,
+      "RESOLVED_GENERATED_ARTIFACT": 19,
+      "RESOLVED_INTERNAL_FILE": 5989,
+      "RESOLVED_NODE_BUILTIN": 467,
+      "RESOLVED_WORKSPACE_PACKAGE": 11373
+    },
+    "remainingBlockers": 0,
+    "assertions": {
+      "oneDiagnosticPerInputUnresolvedEdge": true,
+      "dynamicClassificationsHaveComputedEvidence": true,
+      "activeDependencyOutputReadAsInput": false,
+      "resolvedEndpointsExist": true
+    }
+  }
+}

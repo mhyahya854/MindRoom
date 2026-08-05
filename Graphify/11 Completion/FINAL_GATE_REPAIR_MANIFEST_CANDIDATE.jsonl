@@ -1,0 +1,166 @@
+{"path":"00 Execution Control/FINAL_LONG_PATH_BACKUP_VERIFICATION.json","sha256":"812b4b749613d1d5514cf034b51abab2603219f59ad524172fabb31c299b6923","sizeBytes":3129,"recordCount":null,"frozenAt":null}
+{"path":"00 Execution Control/schemas/capability-registry.schema.json","sha256":"dfde14d9bf9f4eb1a44fce1c79cf00ee0f63e22f9edba70482a158392cac00e9","sizeBytes":1355,"recordCount":null,"frozenAt":null}
+{"path":"00 Execution Control/schemas/deletion-candidate.schema.json","sha256":"6da7819885ebf0d8f8372fdb1e7e8daf01e0977940d531b56e5000ad2ef19e75","sizeBytes":1237,"recordCount":null,"frozenAt":null}
+{"path":"00 Execution Control/schemas/deletion-receipt.schema.json","sha256":"6649c1eae72b73d225033448ef888ed9fe5ac1d03282414608dba1d617a4b52d","sizeBytes":1614,"recordCount":null,"frozenAt":null}
+{"path":"00 Execution Control/schemas/dependency-edge.schema.json","sha256":"01252d4d9e660a787612b8580ef321b22b084c8701e732ec50eadc6b736fda23","sizeBytes":1326,"recordCount":null,"frozenAt":null}
+{"path":"00 Execution Control/schemas/exact-location-registry.schema.json","sha256":"81ca8627cce5c00cb1d986fec892dbf76cc02e8536b46202b80ec9580a4247e7","sizeBytes":1695,"recordCount":null,"frozenAt":null}
+{"path":"00 Execution Control/schemas/final-release-receipt.schema.json","sha256":"b14e33267e4023f191d8e15c0be7c0b97cbcf3fd126c3f6b05b9991438be773a","sizeBytes":971,"recordCount":null,"frozenAt":null}
+{"path":"00 Execution Control/schemas/graphify-mapping-receipt.schema.json","sha256":"e2d1c65cad6adc3c96da15a58f633f7609ae811018c7651152414e396da0f722","sizeBytes":965,"recordCount":null,"frozenAt":null}
+{"path":"00 Execution Control/schemas/hash-manifest-checkpoint.schema.json","sha256":"da6114d5f5f7d7a142a32b4f7c9e53fcaa05e6623d920b980c02d400bd76b19c","sizeBytes":2575,"recordCount":null,"frozenAt":null}
+{"path":"00 Execution Control/schemas/implementation-task.schema.json","sha256":"1a719dbb9c6fad0cc3b74f0078af6835c2e0e4ac7f3761a517d72775b7c189ec","sizeBytes":1223,"recordCount":null,"frozenAt":null}
+{"path":"00 Execution Control/schemas/repository-baseline.schema.json","sha256":"e4f050b6c04ef46c90c4e124f785d4e3b20c35065538e14745b8b4c6973ce149","sizeBytes":1154,"recordCount":null,"frozenAt":null}
+{"path":"00 Execution Control/schemas/requirement-registry.schema.json","sha256":"be16227d0ebf0f450d0990b846b9286508991632fb53978c445839f2e35a2d5b","sizeBytes":1343,"recordCount":null,"frozenAt":null}
+{"path":"00 Execution Control/schemas/runtime-registration.schema.json","sha256":"defa1d0c11ff91152b9612b4990452140eec9ebafbd96bba8d00fbeaf09bdad7","sizeBytes":2051,"recordCount":null,"frozenAt":null}
+{"path":"00 Execution Control/schemas/status.schema.json","sha256":"02a1c732306dae26bfd1e14c742d0f51eb5158585eb1c09a9f4431a627ec39f2","sizeBytes":1764,"recordCount":null,"frozenAt":null}
+{"path":"00 Execution Control/schemas/symbol-registry.schema.json","sha256":"f8a8a9f968cf8e1543011edfce5360c51424f3a4e13557739d4fb12e79ec6806","sizeBytes":743,"recordCount":null,"frozenAt":null}
+{"path":"00 Execution Control/schemas/task-record.schema.json","sha256":"34fad6ac148405e67e4a5671724de511116de2d265d8066b0a9fc34138a59f61","sizeBytes":1123,"recordCount":null,"frozenAt":null}
+{"path":"00 Execution Control/schemas/test-receipt.schema.json","sha256":"ad48dc0638ea73cea222b9bfce6f53234da102ab2608a801d4439a279fe79834","sizeBytes":933,"recordCount":null,"frozenAt":null}
+{"path":"00 Execution Control/schemas/transplant-receipt.schema.json","sha256":"8ed0c80fe9d3547f5f3a174c677f96d48dafda171dc1d9381d2c5d5257d32e78","sizeBytes":1318,"recordCount":null,"frozenAt":null}
+{"path":"01 Corpus Inventory/ARCHIVE_INVENTORY.jsonl","sha256":"5ae2f79cec3558662f32ae6311a5e741f7690152ed4ca0ce6d1cea0365b94cb1","sizeBytes":13369,"recordCount":25,"frozenAt":null}
+{"path":"01 Corpus Inventory/BINARY_AND_RUNTIME_ASSET_INVENTORY.jsonl","sha256":"5e923e15a6e850dddfed973921520bcc20be30aaf82b76c19f7047e23f16a2df","sizeBytes":590518,"recordCount":1056,"frozenAt":null}
+{"path":"01 Corpus Inventory/CORPUS_SUMMARY.md","sha256":"a4bf54cf7c70db959f86f47689506692b36ce0754940009f10ed63f83bc50984","sizeBytes":8965,"recordCount":null,"frozenAt":null}
+{"path":"01 Corpus Inventory/GRAPH_LAYER_FILE_REGISTRY.jsonl","sha256":"ab1ede27b1cce4c4460b287808aba76609705e0f8246e69a46c1ad5c360954a3","sizeBytes":5709359,"recordCount":10080,"frozenAt":null}
+{"path":"01 Corpus Inventory/MARKDOWN_MIGRATION_LEDGER.jsonl","sha256":"5d71b206db4215d5e234af415714a6344b965aacd391fb6964da181e07ce7f3c","sizeBytes":214870,"recordCount":207,"frozenAt":null}
+{"path":"01 Corpus Inventory/PACKAGE_INVENTORY.json","sha256":"ec78c1b0167a3d668b182591af6f39dfb5e0b213dc2c007cfce3a9828142e321","sizeBytes":288658,"recordCount":null,"frozenAt":null}
+{"path":"01 Corpus Inventory/PLATFORM_FILE_INVENTORY.jsonl","sha256":"cc5bf21e2207f9d541aba1e5607b94b68113a7e8e63360246a034bd4326aafd7","sizeBytes":465151,"recordCount":892,"frozenAt":null}
+{"path":"01 Corpus Inventory/REPOSITORY_INVENTORY.jsonl","sha256":"f1d6a15250b31b3af95a0a7efdd86650c65475f2c0c150b367bbaf8c4e58f7d9","sizeBytes":14380988,"recordCount":12628,"frozenAt":null}
+{"path":"02 Architecture Map/ARCHITECTURE_MAP.md","sha256":"0f4981059f1b2c1fb8ed606f377554b5f84ad2b71e70ed93c568b9a07cbc845f","sizeBytes":709,"recordCount":null,"frozenAt":null}
+{"path":"02 Architecture Map/ARCHITECTURE_NODES.jsonl","sha256":"0348ab927e39865ae85c07956c02e05586d0c8c0bd5f1eb24d9b67a96f23320b","sizeBytes":23999,"recordCount":44,"frozenAt":null}
+{"path":"02 Architecture Map/BUILD_AND_PACKAGING_MAP.md","sha256":"a7b43ec04128dea1dcd61a4e7dc5dcb849bd62e93a72bad5852ea8756da379fe","sizeBytes":8305,"recordCount":null,"frozenAt":null}
+{"path":"02 Architecture Map/COMMAND_AND_EVENT_MAP.jsonl","sha256":"01460305a6dae6d9ef7088f3f00906e1df539049e533617b47cd8b5127c3cd0a","sizeBytes":19255,"recordCount":25,"frozenAt":null}
+{"path":"02 Architecture Map/ENTRYPOINT_AND_BOOTSTRAP_REGISTRY.jsonl","sha256":"38ae312eca19df623f146ffdbb309b46aeb229d51a07b064048000ffa94163f9","sizeBytes":64356,"recordCount":124,"frozenAt":null}
+{"path":"02 Architecture Map/IPC_AND_PRELOAD_MAP.jsonl","sha256":"e26a8bae2082320beba178e094a25e2bbe23774605ca1dc7da3753c1b87feab4","sizeBytes":52454,"recordCount":11,"frozenAt":null}
+{"path":"02 Architecture Map/NETWORK_BOUNDARY_MAP.jsonl","sha256":"43e3bc9bc924be97b5535971b0e2d19db643ac274255cd5d51da6ffa0966225b","sizeBytes":16156,"recordCount":24,"frozenAt":null}
+{"path":"02 Architecture Map/PERSISTENCE_AND_DATA_FLOW.md","sha256":"0960062c09391c95dc6db5ef31148d97764cc0a272cb4984d1b573848bef9da9","sizeBytes":10715,"recordCount":null,"frozenAt":null}
+{"path":"02 Architecture Map/RUNTIME_REGISTRATION_REGISTRY.jsonl","sha256":"13557da77412ed48bbd9d770af973d0ce7a5d87a6c1f05261011c4ac1c68827e","sizeBytes":3492720,"recordCount":643,"frozenAt":null}
+{"path":"02 Architecture Map/RUNTIME_REGISTRATION_SCAN_SUMMARY.json","sha256":"e597c2b2ecc9e0548c6766d60fbac790b5c11130f637f908287a02f54bdf9d04","sizeBytes":1099,"recordCount":null,"frozenAt":null}
+{"path":"02 Architecture Map/WORKER_MAP.jsonl","sha256":"1e198a6722d3d419e13430716df9cd2af1ce8b53b641ea83b11456ba5dede5c1","sizeBytes":11317,"recordCount":16,"frozenAt":null}
+{"path":"03 Capability Map/CAPABILITY_DEPENDENCY_ORDER.json","sha256":"64b881e7a01a9bee7458b98260812389a4c12a3b99595064cc03dc61cd64b93d","sizeBytes":6711,"recordCount":null,"frozenAt":null}
+{"path":"03 Capability Map/CAPABILITY_EVIDENCE.jsonl","sha256":"b3567da85b6a0c8efe97e71573c9f373e0fc0a8329deacb67e4fdace3504bca0","sizeBytes":49634,"recordCount":161,"frozenAt":null}
+{"path":"03 Capability Map/CAPABILITY_MAP.md","sha256":"6c63691f673fa3ec337d39ff29d4253573f864b01321aa45cfecafb16c575e89","sizeBytes":1195,"recordCount":null,"frozenAt":null}
+{"path":"03 Capability Map/CAPABILITY_REGISTRY.json","sha256":"58e136494d09fa10404e2a9d0a51c5ac800860c17025c0c48c377df0466d7afa","sizeBytes":3817477,"recordCount":null,"frozenAt":null}
+{"path":"03 Capability Map/CAPABILITY_SOURCE_SEARCH_RECEIPTS.jsonl","sha256":"e5c79335bc23bbb33d04e4c103952c033bf5c18c31a5e5099c43e1b65c91daf3","sizeBytes":36822,"recordCount":161,"frozenAt":null}
+{"path":"03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl","sha256":"93ec0afbcd3fba7d1258068760986e8def2585be75d2aae8c7ee3c5fdb60ec62","sizeBytes":360299,"recordCount":278,"frozenAt":null}
+{"path":"03 Capability Map/REQUIREMENT_REGISTRY.jsonl","sha256":"d491347e632936e3de870069b84af6978a473b5812fdada399b658081717a6e0","sizeBytes":1930135,"recordCount":1782,"frozenAt":null}
+{"path":"03 Capability Map/REQUIREMENT_SUPERSESSION_MAP.jsonl","sha256":"3658aaf58dd154a58688d57c3a77f37b30774c3293625a48eca08ac9b9f8cbf8","sizeBytes":382624,"recordCount":278,"frozenAt":null}
+{"path":"03 Capability Map/REQUIREMENT_TRACEABILITY_MATRIX.jsonl","sha256":"c58a2dd64f0f35f717eea1951cca620f937f764db6878fa24dbc275786c75b6b","sizeBytes":354863,"recordCount":2338,"frozenAt":null}
+{"path":"04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl","sha256":"8d052ecfdb21ebdc41d1ae34405c8b2ab523a503a9b5e125d9502d6efd3e7b17","sizeBytes":751189,"recordCount":161,"frozenAt":null}
+{"path":"04 Exact Location Registry/CHANGE_TRACEABILITY_MATRIX.jsonl","sha256":"a4933ce6422a21d1cae73018bf01b5f2c723d8db56dbd564b8830a885379b782","sizeBytes":22862,"recordCount":161,"frozenAt":null}
+{"path":"04 Exact Location Registry/EXACT_LOCATION_COVERAGE.json","sha256":"76d256c110a43c7e3bd80ea67d3702c51c9952bf82a5dd8fc88e964e03e444a0","sizeBytes":3186,"recordCount":null,"frozenAt":null}
+{"path":"04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json","sha256":"354332711469ff7d9173563f0c77791bb13d2db9768c60f756ae6d08529f49e7","sizeBytes":155389,"recordCount":null,"frozenAt":null}
+{"path":"04 Exact Location Registry/LOCATION_SYNCHRONIZATION_RESULT.json","sha256":"14a76e1bfb89472a13e4c1e8eb0cf3fb1130f116e7200c66a00373f5551198cb","sizeBytes":346,"recordCount":null,"frozenAt":null}
+{"path":"04 Exact Location Registry/SYMBOL_REGISTRY.jsonl","sha256":"c9e3458404822c27c8d1ab01427cf5567e309bf88d02be5113cd771ac6ffd418","sizeBytes":40888,"recordCount":161,"frozenAt":null}
+{"path":"05 Dependency and Impact/CAPABILITY_DEPENDENCY_GRAPH.json","sha256":"817dfef1206e78c73d85edec9b054df5590301d1a51b62932aa398463abd1b0f","sizeBytes":2443766,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/CIRCULAR_DEPENDENCY_REPORT.json","sha256":"75376c9e9c9f1e8c5abc50c9f7fabc9cd40fd9382d9e348bfac80fbd367c9d06","sizeBytes":279,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/DEAD_CODE_CANDIDATES.jsonl","sha256":"152ac83101e7def17f0822dbd7ab0a8acf11894b5151c3ce5e3e2ca7de3e4b4d","sizeBytes":142971,"recordCount":103,"frozenAt":null}
+{"path":"05 Dependency and Impact/DEPENDENCY_EDGES.jsonl","sha256":"eab3792a90c7744b5c5d8782ad34796cd0eb48c2f828da2671a861fb0b2d0433","sizeBytes":114232612,"recordCount":109188,"frozenAt":null}
+{"path":"05 Dependency and Impact/DEPENDENCY_SUMMARY.md","sha256":"5c85afefdbc8e52780be3469e2574c662eee6ddd8be73575722fc822178f59b4","sizeBytes":1149,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/DUPLICATE_IMPLEMENTATION_CANDIDATES.jsonl","sha256":"ff3efc2433c9853f4d948babde4747befd1edbe01235c81b5f902b19f19357d3","sizeBytes":39616,"recordCount":23,"frozenAt":null}
+{"path":"05 Dependency and Impact/ENDPOINT_RESOLUTION_SUMMARY.json","sha256":"4032fd29b341e4581e977a145371945031101fd8493d815db8c32083e967ee3c","sizeBytes":1843,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/EXCLUDED_SYSTEM_BOUNDARY_MAP.jsonl","sha256":"571365daa84bbc0ad563b6c514c5ca282c1bc27dda7c9d309f6f2469c9639381","sizeBytes":3694753,"recordCount":1233,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/CAPABILITY_DEPENDENCY_GRAPH.json","sha256":"1e7afbbc9c6ea93d9b24e9c881e5cf3a233ee00cab98e679193b917560034e17","sizeBytes":3280154,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/CORE_RUNTIME_HOTSPOTS.json","sha256":"c4db2ebbac34f9c5edd181daf5008471801a4ee7863d8b6d8fcdde95b1368ecd","sizeBytes":41691,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/EDGES.jsonl","sha256":"22111d28fa7e0ea4b6c2b3c779ca2261bc7a6f4e6da844ebc1b0557fd624ed27","sizeBytes":112287175,"recordCount":107213,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/EXCLUDED_SYSTEM_GRAPH.json","sha256":"7f1f646a6e90fd01e0bc24502547097bfcb7618778cec3e852a39380f93d0f21","sizeBytes":5454150,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/GENERATED_CODE_GRAPH.json","sha256":"9cd0b06972496b7b4205038c5dce1615a51be5e5637d165dee924f17cca4c5f2","sizeBytes":6362481,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/GENERATED_CODE_PROVENANCE.jsonl","sha256":"36a1a94f2e4ee75e377c535c740b1807411ea634c759180eedc1d77e1cc5ad84","sizeBytes":1603712,"recordCount":428,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/GRAPH_BUILD_EVIDENCE.json","sha256":"5734adb2c05fcd885aec1f24c7903d0c9be9924490992a63776b7c8a5f6db2a8","sizeBytes":8323,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/GRAPH_HEALTH.json","sha256":"7cf54013463525bc4e3b508c288e97e0ff7d75e629642647301dcab94a89bd1d","sizeBytes":641,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/GRAPH_INDEX.json","sha256":"c7bb8e869db29413afeb1b7bcaa97703641ab4b5e9d9d41f47c52006eebf5ce0","sizeBytes":2247,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/GRAPH_LAYER_MANIFEST.json","sha256":"a20fe55f2ea956b3965f15d1869252377c5ed8717f549673cb0bfa722151d5ab","sizeBytes":1430,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/GRAPH_REPORT.md","sha256":"1743cd84b716c0064f84660b454bf9f3e38ec5172de6e6f8bd8d8e7a3eed466f","sizeBytes":409,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json","sha256":"765f55c2164a89889fd442dcae359758278e8a1e0fb47d53f3a2fa267b92eaa1","sizeBytes":4335,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/MIGRATION_COMPATIBILITY_GRAPH.json","sha256":"4ca41029595666f9626dec0216788a0f271b955c686e02e6644d9398223d801b","sizeBytes":1794517,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/NODES.jsonl","sha256":"ad815d0319aee13c16fec2b94e48f18ff80ce1f3ee20ec9ed5745e5d2f888ceb","sizeBytes":44338971,"recordCount":35274,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/NODE_ID_REGISTRY.jsonl","sha256":"d6c8ea6632806c459a52edafeb70708ee08351df8fae339d909722fbd82e70c4","sizeBytes":18776236,"recordCount":35274,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/PACKAGE_DEPENDENCY_GRAPH.json","sha256":"ac8f2d46440d1fd4f9885672df2a8e25d85655fb9abc985dd33a6d0d3f5e10e7","sizeBytes":23533570,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/RUNTIME_REGISTRATION_GRAPH.json","sha256":"df96b3c43719ac2718ef9d3b1d8a83314b15e96b19b1fba577d08ffecd6eb6e7","sizeBytes":31902079,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/SELF_LOOP_CLASSIFICATION.jsonl","sha256":"846b8bb19428e6cde202e1c99823adcc381216db9075ed0aeea211503f245339","sizeBytes":1338,"recordCount":2,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/TEST_COVERAGE_GRAPH.json","sha256":"055905f3193709257cc76cc76e3d41d99ccfe28d855c7350893f044d704d5d20","sizeBytes":15074114,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/VENDOR_TOOL_GRAPH.json","sha256":"8f5b0cbb55e8a4360bb1e20bfac77e9355e68586c44bc3a50d59f5badb98c1d9","sizeBytes":7941,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/graph.html","sha256":"ccf333573f5b35826e469120fab9cae40856e096fe7f1feffe9e22fd7515f006","sizeBytes":45985814,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/Knowledge Graph/graph.json","sha256":"6219df6f05d7d749099678a25a986bf5d1ba94a3e48553a0fb60ce85f8beae68","sizeBytes":58713414,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/PLANNED_PACKAGE_DEPENDENCY_GRAPH.json","sha256":"ff14750e636415e609edcb002afacfedf4ef9b3e30eb133b098095e621d72b9e","sizeBytes":3343,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/REMOVAL_BLAST_RADIUS.jsonl","sha256":"b4573f8ebf469d86b9b1aad581dda2709fc5e1fcc567bfe138b996d2689ec44d","sizeBytes":192071,"recordCount":33,"frozenAt":null}
+{"path":"05 Dependency and Impact/REORGANISATION_BLAST_RADIUS.jsonl","sha256":"4f14714a10c5ef46ef58795c63a7732125447a3c479f7e1125ff374ad63f7c40","sizeBytes":1195737,"recordCount":1088,"frozenAt":null}
+{"path":"05 Dependency and Impact/RUNTIME_REACHABILITY_REPORT.jsonl","sha256":"75403c5c4f8956cc1a7dc702e29128e4e3f47e0b5fdfcb6d5094fa8516614bf5","sizeBytes":3867816,"recordCount":11100,"frozenAt":null}
+{"path":"05 Dependency and Impact/SAME_WAVE_EXECUTION_ORDER.json","sha256":"897a49903df69fb0c48b4bb64d787a0a01836df6c57088e44904e2dd02115186","sizeBytes":597,"recordCount":null,"frozenAt":null}
+{"path":"05 Dependency and Impact/UNRESOLVED_ENDPOINTS.jsonl","sha256":"9230e41329ef6f677ff70d9c0c9b431e07688c0acacbf84b2518963456089aab","sizeBytes":48659710,"recordCount":53796,"frozenAt":null}
+{"path":"06 Folder Ownership/CAPABILITY_TO_PATH_MAP.json","sha256":"a6d41905ee83f2d420cf99a66ce774ff19452c547a6e20dc2c666fe3d4c4caae","sizeBytes":12516,"recordCount":null,"frozenAt":null}
+{"path":"06 Folder Ownership/EXECUTION_PLAN_VALIDATION_RESULT.json","sha256":"6c275f948cf24169f6a81f83e5154a0ae752624b99d9f2e923ad2514972cd2de","sizeBytes":400,"recordCount":null,"frozenAt":null}
+{"path":"06 Folder Ownership/FOLDER_OWNERSHIP_MATRIX.json","sha256":"b896c6e111807bd7f4194ecac1f9d102a942100040f86f4a06d371cb0b84f045","sizeBytes":8302,"recordCount":null,"frozenAt":null}
+{"path":"06 Folder Ownership/PACKAGE_BOUNDARY_PLAN.md","sha256":"b40fed78b254866c5abc3a0b8007ed3e6b4025ad2ab7037d0e4c4bf056f79009","sizeBytes":1407,"recordCount":null,"frozenAt":null}
+{"path":"06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl","sha256":"e150853f60baf402784d19bc447011ceb48d148e4bf5f306982c8bc5a5419190","sizeBytes":82543,"recordCount":161,"frozenAt":null}
+{"path":"06 Folder Ownership/TARGET_CODEBASE_TREE.md","sha256":"6676386449fd370f4bdd8c22446f6d0a048786894b02aa7ab76256ccd95d6fee","sizeBytes":903,"recordCount":null,"frozenAt":null}
+{"path":"07 Reorganisation/BATCH_EXECUTION_PLAN.md","sha256":"a9e20b8ab139045b35c03185632003f9dbf13cb692f15b8e1e98aaf84f539dd8","sizeBytes":3549,"recordCount":null,"frozenAt":null}
+{"path":"07 Reorganisation/IMPORT_AND_CONFIG_UPDATE_MATRIX.jsonl","sha256":"642d9d85319da1c43479cd7d56b7a9901e47b0a147fea069cd34c876ee0dfd6c","sizeBytes":77236,"recordCount":161,"frozenAt":null}
+{"path":"07 Reorganisation/MOVE_PLAN.jsonl","sha256":"d7b7fe1b8852445399ef9253aad6e18ea13cfdb57735c5dc17acfd3e0daccb0d","sizeBytes":159177,"recordCount":161,"frozenAt":null}
+{"path":"07 Reorganisation/REORGANISATION_LEDGER.jsonl","sha256":"bcda659b38f92f6f447fd46a70eea2339d99f6776961251a39595c1d24cf32c9","sizeBytes":16744,"recordCount":161,"frozenAt":null}
+{"path":"07 Reorganisation/ROLLBACK_PLAN.jsonl","sha256":"8302a59feb08db928ca32f4dbc7dc86aa68d4dd402fd3556883e5623e5a72679","sizeBytes":32039,"recordCount":161,"frozenAt":null}
+{"path":"08 Cleanup/CLEANUP_VALIDATION_RESULT.json","sha256":"6aa4c28d9f3ba8e3b822f64a305d592668cf527bfcdb89e738e7a72aa8151c17","sizeBytes":756,"recordCount":null,"frozenAt":null}
+{"path":"08 Cleanup/DELETION_CANDIDATES.jsonl","sha256":"b37cb016789d97994135ae91035064ba75b1ec4574c3b853c9826d6cf4e8f035","sizeBytes":1860253,"recordCount":366,"frozenAt":null}
+{"path":"08 Cleanup/DELETION_PROOF_QUEUE.jsonl","sha256":"4d8753a48c69469c767da046c3008de8b3248d549c6c5f89f3c0362fab8dd099","sizeBytes":1381496,"recordCount":366,"frozenAt":null}
+{"path":"08 Cleanup/DELETION_RECEIPTS.jsonl","sha256":"f827e710a453a86afce4c817fe949ee5d93f9d72a1ae07327e51a93a28eb213b","sizeBytes":798,"recordCount":1,"frozenAt":null}
+{"path":"08 Cleanup/DUPLICATE_CODE_CANDIDATES.jsonl","sha256":"2901cf17338a415d12408c70cd4bf9700b01220ea1f6b02723facd96c4f6b2b8","sizeBytes":50725,"recordCount":23,"frozenAt":null}
+{"path":"08 Cleanup/Deletion Receipts/deletion-receipt.schema.json","sha256":"6649c1eae72b73d225033448ef888ed9fe5ac1d03282414608dba1d617a4b52d","sizeBytes":1614,"recordCount":null,"frozenAt":null}
+{"path":"08 Cleanup/PONYTAIL_AUDIT.jsonl","sha256":"38b49c71665f54b68a00bb544620c5dde7cf4e0961d4a5cc74172b51f8a092a2","sizeBytes":17759,"recordCount":9,"frozenAt":null}
+{"path":"08 Cleanup/PONYTAIL_AUDIT.md","sha256":"58378144eeeec2a43046079cf23d69ff340234bd849713fa5e5258a55f5c515b","sizeBytes":1433,"recordCount":null,"frozenAt":null}
+{"path":"08 Cleanup/PONYTAIL_CANDIDATES.jsonl","sha256":"3da177f353ea374baf62772660bc1f4a71726abc9c681f400c9b775f087e54af","sizeBytes":7563,"recordCount":9,"frozenAt":null}
+{"path":"08 Cleanup/PONYTAIL_CHANGE_MAP.jsonl","sha256":"19fb725e6433d8f2c67c940fe2eeb2a7613ed9ffbff2a7d6dc579bb030d63b1a","sizeBytes":3638,"recordCount":5,"frozenAt":null}
+{"path":"08 Cleanup/PONYTAIL_VALIDATION_RESULT.json","sha256":"17f5c24e3b030f38ad4fd946cf9b9bed6a3d133efea9fff829e211291822fded","sizeBytes":505,"recordCount":null,"frozenAt":null}
+{"path":"08 Cleanup/QUARANTINE_PLAN.md","sha256":"2fdda013656d6753bdcd99866145181dda87ca1ffee05280e1a96c35012ed5f1","sizeBytes":633,"recordCount":null,"frozenAt":null}
+{"path":"09 Implementation/ADAPTATION_TASKS.jsonl","sha256":"3030eb340e8b5c0009b71129f3fb044cedb6af702c8d302573ac2c3f6f09a687","sizeBytes":539873,"recordCount":68,"frozenAt":null}
+{"path":"09 Implementation/IMPLEMENTATION_QUEUE.md","sha256":"65a8fae734a7a294b6850a4c43a5c06bf284b0c6f9acdd138bd7cb4b4173b51d","sizeBytes":9040,"recordCount":null,"frozenAt":null}
+{"path":"09 Implementation/IMPLEMENTATION_TASKS.jsonl","sha256":"dd10d1d3d9350bbd0997577dccf20fe11eac745ff5e78d97df9ffa12ba6a0412","sizeBytes":2575587,"recordCount":162,"frozenAt":null}
+{"path":"09 Implementation/NEW_CAPABILITY_TASKS.jsonl","sha256":"5da706adc723d877b7f2d3f98a37e8c20ad05b0049b6e4ab1fe9b5c09d92f7a4","sizeBytes":718829,"recordCount":92,"frozenAt":null}
+{"path":"09 Implementation/TRANSPLANT_RECEIPTS.jsonl","sha256":"9a8f67f4cce84718f5d26c855d3d5dd723c4fe077209185439e8a4c23cf663d1","sizeBytes":885,"recordCount":1,"frozenAt":null}
+{"path":"09 Implementation/TRANSPLANT_SEARCH_QUEUE.jsonl","sha256":"2d4986402b3d61d720deaaf70bee662146f869eea1af4f5b54b3fa8db9e269ac","sizeBytes":190114,"recordCount":161,"frozenAt":null}
+{"path":"09 Implementation/Transplant Receipts/transplant-receipt.schema.json","sha256":"8ed0c80fe9d3547f5f3a174c677f96d48dafda171dc1d9381d2c5d5257d32e78","sizeBytes":1318,"recordCount":null,"frozenAt":null}
+{"path":"10 Verification/APP_DELETION_SURVIVAL_TEST_PLAN.md","sha256":"09fd7ef68d57dc8217df86bd409926598587f50d6d3d7362a74ca0f8aba1b2a7","sizeBytes":789,"recordCount":null,"frozenAt":null}
+{"path":"10 Verification/BASELINE_VERIFICATION_RESULTS.jsonl","sha256":"328b447f3df01cb0f57b835adb96d3fefb7e54207bf7c8debb85a41974c5b057","sizeBytes":16222,"recordCount":26,"frozenAt":null}
+{"path":"10 Verification/CROSS_PLATFORM_TEST_MATRIX.md","sha256":"d5dc9ffe53fddad0104035c9b2989919568ac45301bbb565739c8cb51a507cda","sizeBytes":460,"recordCount":null,"frozenAt":null}
+{"path":"10 Verification/FIXTURE_QA_MATRIX.md","sha256":"900efe268a87a442d7caad542313459432aceab714476b9e4d4a785cf09592e5","sizeBytes":912,"recordCount":null,"frozenAt":null}
+{"path":"10 Verification/MIGRATION_TEST_PLAN.md","sha256":"4092dc64bcad0ea13840632e2a4a435162535f98857229f823e653319e56f4dd","sizeBytes":183,"recordCount":null,"frozenAt":null}
+{"path":"10 Verification/OFFLINE_TEST_PLAN.md","sha256":"4584bc2acca12c33523ed8d5a5217ac5333b04d07c7ceedfce395330f6321836","sizeBytes":553,"recordCount":null,"frozenAt":null}
+{"path":"10 Verification/PACKAGING_TEST_PLAN.md","sha256":"63e4307578c11f99f2ce77413666eeeed173fb907f4befb4199017cb59f8a295","sizeBytes":3032,"recordCount":null,"frozenAt":null}
+{"path":"10 Verification/RELEASE_GATE_MATRIX.json","sha256":"e1f22a5949f1ad8f94090dd1be5170092440105b1b62cd449a809567c6e63727","sizeBytes":74733,"recordCount":null,"frozenAt":null}
+{"path":"10 Verification/REQUIREMENT_TEST_MATRIX.jsonl","sha256":"75d6813eb5062cbc6f70c453df01f7f9d6687b17d48f5ef75a44770fb803bba0","sizeBytes":651857,"recordCount":338,"frozenAt":null}
+{"path":"10 Verification/ROLLBACK_VERIFICATION_PLAN.md","sha256":"ab114f8c4d09d8f40b29861a8845a9d6cb7c82c343ce27612b7bc7d6bfa67694","sizeBytes":187,"recordCount":null,"frozenAt":null}
+{"path":"10 Verification/TEST_COMMAND_REGISTRY.json","sha256":"b769e90b1ad55affae149d1c0b5838c0f00d0bd91a9e4c9d61b62704b182458c","sizeBytes":23600,"recordCount":null,"frozenAt":null}
+{"path":"10 Verification/TEST_RECEIPTS.jsonl","sha256":"dae65efa41640e514059da1f5683890fa4b52e24e93bb985de397ee860458e16","sizeBytes":577,"recordCount":1,"frozenAt":null}
+{"path":"11 Completion/FINAL_CAPABILITY_TASK_REQUIREMENT_TRACEABILITY_REPORT.json","sha256":"1da52d597a72f68b824edea41daffedd7034cc0b08888626a4f014993e242b2a","sizeBytes":1733540,"recordCount":null,"frozenAt":null}
+{"path":"11 Completion/FINAL_DEPENDENCY_ARCHITECTURE_REPORT.json","sha256":"1ed4b2b1efbd94c4443f3e34c2c89bd47a589fc685e92368ffc02642b6994654","sizeBytes":1752,"recordCount":null,"frozenAt":null}
+{"path":"11 Completion/FINAL_GATE_REPAIR_AUTHORITY_INVENTORY_CANDIDATE.jsonl","sha256":"7ca67516b2b46b898d15c600402f313b1cbcaa765b1abf00292ca6da9e567180","sizeBytes":1299005,"recordCount":3308,"frozenAt":null}
+{"path":"11 Completion/FINAL_REPAIR_REPRODUCTION_REPORT.json","sha256":"2aba17852d80916e4790e85f81cd1436ea553526e12b561627203da7db45b828","sizeBytes":33947,"recordCount":null,"frozenAt":null}
+{"path":"11 Completion/FINAL_REQUIREMENT_LINEAGE_RECONCILIATION_REPORT.json","sha256":"c6163604d9c948c9a78f77aefefca7ff552bf212e9ca194c8da7efebd252cdd7","sizeBytes":875,"recordCount":null,"frozenAt":null}
+{"path":"11 Completion/FINAL_TEST_WAVE_OWNERSHIP.jsonl","sha256":"816b0fc4291137a0d1d5b1caaa55b2d6147d28096c276b7ffdb63689f74a03f8","sizeBytes":240082,"recordCount":338,"frozenAt":null}
+{"path":"11 Completion/FINAL_WAVE_GATE_TEST_AUDIT.json","sha256":"7815cdd0a5478d333fb55cd3f712c8191aaa3825c0b9e34b87c07ce7a743f40e","sizeBytes":76360,"recordCount":null,"frozenAt":null}
+{"path":"11 Completion/FINAL_WAVE_GATE_TEST_SYNCHRONIZATION_REPORT.json","sha256":"68b4ddfd3ac6db6264bca1560d436f60930db0b781d2eb410dc21ca1beed3305","sizeBytes":75509,"recordCount":null,"frozenAt":null}
+{"path":"11 Completion/FINAL_WAVE_SYNCHRONIZATION_REPORT.json","sha256":"565f4b1c805f1db8d44fe4baf8e77aca4ef5f20d796f46c0ee087c008a660f1d","sizeBytes":1411,"recordCount":null,"frozenAt":null}
+{"path":"11 Completion/IMPLEMENTATION_CONTRACT_FINAL_REPAIR_REPORT.json","sha256":"c33d2fc50b2b0f0ef86ec461e2c5de225465c798bd6450ebb48320a5cbcca229","sizeBytes":723,"recordCount":null,"frozenAt":null}
+{"path":"11 Completion/run_final_freeze_challenges.py","sha256":"a8e6750b0dee256513d56cf908ca701aad606c6f5c1a6b5b4cecbbab2602c48b","sizeBytes":45341,"recordCount":null,"frozenAt":null}
+{"path":"11 Completion/validate_final_graphify_freeze.py","sha256":"333ff93c0263efae98731e6e7ff0ed97c7ac010af663d792926f05288c1fb9ec","sizeBytes":135616,"recordCount":null,"frozenAt":null}
+{"path":"11 Completion/verify_step11b_results.py","sha256":"9f345bf1f907e061a957f8f9585e47dc9ab05d325ac7ccca5fe2babfdbe44b0d","sizeBytes":11481,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/AFFINE_PROVENANCE.md","sha256":"2a868c526502ba4513fbc58f2dc5e9832cf2fffdce39368a587a86074bf6379b","sizeBytes":1469,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/Architecture Decisions/ADR-0001-canonical-file-backed-source-of-truth.md","sha256":"508a01aad6d62b9b18ffb05c847ae8266e60e447365d7bd74511486e308cbb78","sizeBytes":915,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/Architecture Decisions/ADR-0002-canvas-bundle-format.md","sha256":"1827df3adb77c5ad53ef3337f3d57219c8e637a4e37b8a4bd768b69a4b8f3fc8","sizeBytes":915,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/Architecture Decisions/ADR-0003-mind-map-bundle-format.md","sha256":"09677c70cfccc05a863a45f6c301502d9cebba1c20240a2817d68239a4adb87e","sizeBytes":913,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/Architecture Decisions/ADR-0004-global-graph-projection-versus-cache.md","sha256":"56991e2d2c2ba68bfa2152c4bb220003f2b039cfa6741eeeb8b6f6a027ebf571","sizeBytes":932,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/Architecture Decisions/ADR-0005-stable-ids-and-path-aliases.md","sha256":"c89da7a6e7f9a1793e591a5ace8c20be9eec23dcc7398b6ab7d5c5ab188256d4","sizeBytes":917,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/Architecture Decisions/ADR-0006-local-semantic-index-technology.md","sha256":"09d796389bd9fa2fd45357225e3cb1b097263e79c623b7fadcf4a2defa58c0d7","sizeBytes":3940,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/Architecture Decisions/ADR-0007-semantic-suggestion-persistence.md","sha256":"1917a38403c59dcfe3c8b1750a2220fc92b4d1f9c1bdbb34341da145a32f83c4","sizeBytes":915,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/Architecture Decisions/ADR-0008-calendar-recurrence-representation.md","sha256":"ec5d635fe721abf3d0a8b21ea493f0eab7cd219e9c9715f35529e2e023ef8280","sizeBytes":3001,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/Architecture Decisions/ADR-0009-calendar-file-format-and-ics-compatibility.md","sha256":"9208eafb3e4796569fd555b7df2156d9a4e5814e8f3096e09c321d6d50af7616","sizeBytes":3216,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/Architecture Decisions/ADR-0010-finance-transaction-storage-format.md","sha256":"fbaf8180faac33c5fd96778cf1e4823774f6e070c0ac548b49522103e12ddb3d","sizeBytes":3461,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/Architecture Decisions/ADR-0011-finance-encryption-boundaries.md","sha256":"dc565c2c340a075695b6def62d00c2f58608693f91974a44f6a79c304a29f765","sizeBytes":3281,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/Architecture Decisions/ADR-0012-multi-currency-behavior.md","sha256":"08180f1f2408c2d8149c6977d0127d84c0c676c73ff389e76d7e5e40c5c5db20","sizeBytes":2929,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/Architecture Decisions/ADR-0013-external-calendar-adapter-boundaries.md","sha256":"4910a1be2bab79ec16db953816da45ffb66c5e42f1f12b771a7986a29d168497","sizeBytes":892,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/Architecture Decisions/ADR-0014-folder-and-workspace-inheritance-behavior.md","sha256":"aca3a824f1d8794b05b995ba4cf888bd787ee26b071c6f93503ca00ad5d5992e","sizeBytes":893,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/LICENCE_AND_ATTRIBUTION_MAP.md","sha256":"6b3b2e1f62563d44451cf2a67bc032362a74386b50a9e6a3caa255230076d3dc","sizeBytes":10452,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/Product Expansion/PRODUCT_EXPANSION_2026.md","sha256":"8e89ee530d6b22a3c1228479e76aebc75a7bc6d5ecfdab3f8fb329df1813af2f","sizeBytes":60424,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/SBOM_PLAN.md","sha256":"f4580897042e1d10bddb35348b95ad7c94e81b4d1273b3186328f423c7324a03","sizeBytes":2932,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/SOURCE_DOCUMENT_INDEX.json","sha256":"a5ea040151633870f52c6abc834c37d59195bf8cf63e509e00c6c8e59e26befc","sizeBytes":66485,"recordCount":null,"frozenAt":null}
+{"path":"12 Source Documents/THIRD_PARTY_CODE_REGISTER.jsonl","sha256":"11eaf85d8a1bd08240dcda5eea43b5d170e968c3d3528d77a751e1a5ff8f34e2","sizeBytes":2613534,"recordCount":4226,"frozenAt":null}
+{"path":"Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md","sha256":"62519be4eff761b775de7c9d687f78a560e047240c8ca14e5d976f127349fd8a","sizeBytes":91393,"recordCount":null,"frozenAt":null}
+{"path":"Master Plan/02-EVERYTHING-WE-ARE-DELETING.md","sha256":"2bb940586e484d79eca238ec5c13e960c711c0164123d8f172fd3eadab57502d","sizeBytes":69874,"recordCount":null,"frozenAt":null}
+{"path":"Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md","sha256":"d9fa9a2fcd0b783db34c17f5e92bec793d2b53e88d902870c6c2ebe1f5a546ca","sizeBytes":820661,"recordCount":null,"frozenAt":null}

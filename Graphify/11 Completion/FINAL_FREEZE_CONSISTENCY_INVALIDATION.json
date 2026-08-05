@@ -1,0 +1,30 @@
+{
+  "freezeRunId": "mindroom-graphify-final-repair-20260801-081542",
+  "timestamp": "2026-08-01T08:15:42+03:00",
+  "mappingStatus": "FINAL_REPAIR_IN_PROGRESS",
+  "independentReviewStatus": "TARGETED_REPAIR_IN_PROGRESS",
+  "planningFreezeStatus": "NOT_FROZEN",
+  "wave0Readiness": "BLOCKED_PENDING_FINAL_REPAIR",
+  "codebaseExecutionStatus": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+  "finalReleaseReceiptStatus": "NOT_VERIFIED",
+  "classification": "SUPERSEDED_AFTER_SUCCESSFUL_FINAL_REPAIR",
+  "reasons": [
+    "Current status, authority index, validation result, completion receipt, and challenge report disagree on freeze run identity",
+    "Completion mapping receipts disagree on independent-review status and release-wave count",
+    "Stored Codebase aggregate hashes disagree with the live pre-repair Codebase aggregate hash",
+    "Current implementation contracts remain generic and require substantive repair",
+    "Current completion metadata is inconsistent with a trustworthy frozen state"
+  ],
+  "supersededArtifacts": [
+    "00 Execution Control/STATUS.json",
+    "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
+    "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+    "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+    "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+    "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+    "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+    "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+  ],
+  "supersededByFreezeRunId": "mindroom-graphify-final-freeze-authoritative-20260801-084203",
+  "resolvedAt": "2026-08-01T08:42:03+03:00"
+}

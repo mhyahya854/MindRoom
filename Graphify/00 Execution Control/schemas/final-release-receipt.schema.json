@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "project",
+    "status",
+    "verificationTimestamp",
+    "repositoryRevision",
+    "repositoryEvidenceType",
+    "gates",
+    "evidenceReceipts",
+    "allGatesPassed",
+    "completionBannerUnlocked"
+  ],
+  "properties": {
+    "project": {
+      "const": "MindRoom"
+    },
+    "status": {
+      "const": "NOT_VERIFIED"
+    },
+    "verificationTimestamp": {
+      "type": "null"
+    },
+    "repositoryEvidenceType": {
+      "enum": [
+        "GIT",
+        "HASH_MANIFEST"
+      ]
+    },
+    "gates": {
+      "type": "object"
+    },
+    "evidenceReceipts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allGatesPassed": {
+      "const": false
+    },
+    "completionBannerUnlocked": {
+      "const": false
+    },
+    "repositoryRevision": {}
+  },
+  "additionalProperties": true
+}

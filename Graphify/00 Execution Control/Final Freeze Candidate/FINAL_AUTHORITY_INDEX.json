@@ -1,0 +1,44 @@
+{
+  "freezeRunId": "mindroom-graphify-final-freeze-integrity-20260731-145843",
+  "timestamp": "2026-07-31T14:58:43+03:00",
+  "officialValidatorRunId": "mindroom-graphify-validator-rebuild-20260730-184338",
+  "externalReviewRunId": "mindroom-external-independent-review-20260730-215435",
+  "authoritativeMap": {
+    "masterPlans": [
+      "Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
+      "Master Plan/02-EVERYTHING-WE-ARE-DELETING.md",
+      "Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md"
+    ],
+    "requirements": "03 Capability Map/REQUIREMENT_REGISTRY.jsonl",
+    "supersession": "03 Capability Map/REQUIREMENT_SUPERSESSION_MAP.jsonl",
+    "capabilities": "03 Capability Map/CAPABILITY_REGISTRY.json",
+    "sourceMappings": "03 Capability Map/CAPABILITY_SOURCE_SEARCH_RECEIPTS.jsonl",
+    "changeRecords": "04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl",
+    "dependencies": "05 Dependency and Impact/CAPABILITY_DEPENDENCY_GRAPH.json",
+    "packageBoundaries": "06 Folder Ownership/FOLDER_OWNERSHIP_MATRIX.json",
+    "tasks": "09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+    "tests": "10 Verification/REQUIREMENT_TEST_MATRIX.jsonl",
+    "fixtures": "10 Verification/FIXTURE_QA_MATRIX.md",
+    "releaseGates": "10 Verification/RELEASE_GATE_MATRIX.json",
+    "architectureDecisions": [
+      "12 Source Documents/Architecture Decisions/ADR-0001-canonical-file-backed-source-of-truth.md",
+      "12 Source Documents/Architecture Decisions/ADR-0002-canvas-bundle-format.md",
+      "12 Source Documents/Architecture Decisions/ADR-0003-mind-map-bundle-format.md",
+      "12 Source Documents/Architecture Decisions/ADR-0004-global-graph-projection-versus-cache.md",
+      "12 Source Documents/Architecture Decisions/ADR-0005-stable-ids-and-path-aliases.md",
+      "12 Source Documents/Architecture Decisions/ADR-0006-local-semantic-index-technology.md",
+      "12 Source Documents/Architecture Decisions/ADR-0007-semantic-suggestion-persistence.md",
+      "12 Source Documents/Architecture Decisions/ADR-0008-calendar-recurrence-representation.md",
+      "12 Source Documents/Architecture Decisions/ADR-0009-calendar-file-format-and-ics-compatibility.md",
+      "12 Source Documents/Architecture Decisions/ADR-0010-finance-transaction-storage-format.md",
+      "12 Source Documents/Architecture Decisions/ADR-0011-finance-encryption-boundaries.md",
+      "12 Source Documents/Architecture Decisions/ADR-0012-multi-currency-behavior.md",
+      "12 Source Documents/Architecture Decisions/ADR-0013-external-calendar-adapter-boundaries.md",
+      "12 Source Documents/Architecture Decisions/ADR-0014-folder-and-workspace-inheritance-behavior.md"
+    ],
+    "officialValidators": "11 Completion/OFFICIAL_VALIDATOR_REBUILD_REPORT.json",
+    "externalReview": "11 Completion/EXTERNAL_INDEPENDENT_REVIEW_REPORT_RECONCILED.json",
+    "finalStatus": "00 Execution Control/status.json",
+    "finalCompletionReceipt": "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json"
+  }
+}

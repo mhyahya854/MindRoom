@@ -1,0 +1,3710 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:16:58.895Z",
+  "totalCapabilities": 161,
+  "locations": {
+    "MR-CAP-001": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_001_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_001_CoreSymbol",
+          "anchorSha256": "63a11e50d3d85ef4f5eb67df232a5126853bd07503a5c19ec016951910aadada",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-001 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_001_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-002": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_002_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_002_CoreSymbol",
+          "anchorSha256": "f41f644cf3be76bbb7d5705e43575924a6a93bcd8ae4b7e77afdb47c7b0e74de",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-002 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_002_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-003": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_003_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_003_CoreSymbol",
+          "anchorSha256": "0e149897ade941bb3d3a337d9c964ba81da1318e3550b3e33ba21a86b1311014",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-003 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_003_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-004": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_004_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_004_CoreSymbol",
+          "anchorSha256": "88b96e3fc443067d216ee54b4b51a0acaaa61c08a2a3084b5b72db4110c85c05",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-004 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_004_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-005": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_005_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_005_CoreSymbol",
+          "anchorSha256": "00f4001fbe4177552a684a9bca6125801589c0517ee842a0e727448ec205f01c",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-005 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_005_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-006": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_006_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_006_CoreSymbol",
+          "anchorSha256": "1e541a2054bf933d72b6595cd0dc0cf5a5f94cee2af87a61e0a2b81d961b0cd8",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-006 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_006_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-007": {
+      "paths": [
+        "Codebase/blocksuite/affine/blocks/surface/src/surface-model.ts"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/blocksuite/affine/blocks/surface/src/surface-model.ts",
+          "qualifiedName": "SurfaceBlockModel",
+          "symbolKind": "class",
+          "lineStart": 15,
+          "lineEnd": 45,
+          "uniqueAnchor": "export class SurfaceBlockModel",
+          "anchorSha256": "a9a51b1babb36d282632ac8241104c9294c473719e7d4b971820db9db96745f2",
+          "fileSha256": "cc6b25d3fb3e8c44eae6884089b110bed0d57fc565975dc74a5108bd62be18b1",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core Edgeless surface canvas block model owning shapes, elements, and connectors."
+        }
+      ],
+      "anchors": [
+        "Codebase/blocksuite/affine/blocks/surface/src/surface-model.ts::SurfaceBlockModel@15-45"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-008": {
+      "paths": [
+        "Codebase/blocksuite/affine/blocks/surface/src/index.ts"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/blocksuite/affine/blocks/surface/src/index.ts",
+          "qualifiedName": "SurfaceBlockComponent",
+          "symbolKind": "class",
+          "lineStart": 10,
+          "lineEnd": 50,
+          "uniqueAnchor": "export class SurfaceBlockComponent",
+          "anchorSha256": "245072fee9e3f3dc5d4cb44cc6af5a41d025a50071a1e888d79edd201a51e03c",
+          "fileSha256": "83501bf66d378ad7638f51c1a937f2b32b218eddce4af8da7e9db52bbac0f56a",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Surface service owning element selection, drag operations, and canvas interactions."
+        }
+      ],
+      "anchors": [
+        "Codebase/blocksuite/affine/blocks/surface/src/index.ts::SurfaceBlockComponent@10-50"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-009": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_009_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_009_CoreSymbol",
+          "anchorSha256": "e84c5e0231b3bca01c63cac0bb8614f2ad4400f53c423f0c784242ecb75942ce",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-009 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_009_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-010": {
+      "paths": [
+        "Codebase/blocksuite/affine/model/src/elements/mindmap/mindmap.ts"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/blocksuite/affine/model/src/elements/mindmap/mindmap.ts",
+          "qualifiedName": "MindmapElementModel",
+          "symbolKind": "class",
+          "lineStart": 12,
+          "lineEnd": 60,
+          "uniqueAnchor": "export class MindmapElementModel",
+          "anchorSha256": "b78eaee24423ace2ebd95a29f76860a89c8c4e8fec51fe7432f43a0b7aac77d8",
+          "fileSha256": "f59731c010e8cb6e6e37d43c44a597b8c89d1584a803b72cbf925cf06ee7bdf1",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core manual BlockSuite mindmap model owning node tree structure, layouts, and connections."
+        }
+      ],
+      "anchors": [
+        "Codebase/blocksuite/affine/model/src/elements/mindmap/mindmap.ts::MindmapElementModel@12-60"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-011": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_011_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_011_CoreSymbol",
+          "anchorSha256": "0194e1ddc861329f31f8992e4e6eaa886479c19ef43126a89a06b32213cf907b",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-011 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_011_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-012": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_012_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_012_CoreSymbol",
+          "anchorSha256": "02570bd1770f75dbdecb664697d025b1edf1150fa8189832b617901f609089a0",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-012 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_012_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-013": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_013_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_013_CoreSymbol",
+          "anchorSha256": "fdbb3fcb2e49fe7361bdb20be70dc265a397c5229d14d0b3f8ffc34cbbc257f8",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-013 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_013_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-014": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_014_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_014_CoreSymbol",
+          "anchorSha256": "1790d7e3b19fd7f7a43f77304121f6f3c2f62ccc6fdc6f4dfd1e3853e234ce48",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-014 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_014_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-015": {
+      "paths": [
+        "Codebase/blocksuite/affine/data-view/src/view-presets/calendar/calendar-view-manager.ts"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/blocksuite/affine/data-view/src/view-presets/calendar/calendar-view-manager.ts",
+          "qualifiedName": "CalendarViewManager",
+          "symbolKind": "class",
+          "lineStart": 20,
+          "lineEnd": 80,
+          "uniqueAnchor": "export class CalendarViewManager",
+          "anchorSha256": "2ba6d38edc9e3d1a282f439f61644b29fe6a87f04dad0b80b69f26cb00637209",
+          "fileSha256": "41763c638cc01308f872ffcaa228334304c93c4771ea7544f4aa2c938b754485",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core local file-backed calendar data-view implementation for event and date rendering."
+        }
+      ],
+      "anchors": [
+        "Codebase/blocksuite/affine/data-view/src/view-presets/calendar/calendar-view-manager.ts::CalendarViewManager@20-80"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-016": {
+      "paths": [
+        "Codebase/blocksuite/affine/blocks/database/src/database-block.ts"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/blocksuite/affine/blocks/database/src/database-block.ts",
+          "qualifiedName": "DatabaseBlockComponent",
+          "symbolKind": "class",
+          "lineStart": 10,
+          "lineEnd": 50,
+          "uniqueAnchor": "export class DatabaseBlockComponent",
+          "anchorSha256": "31c88e56ece8f5aa69e4cafc67ec5c47a87b1db8456fb988d60811d2dd392048",
+          "fileSha256": "98b7656cd74e8a283365ee953590dccf80144c8078a1e03971775c14dd9771c7",
+          "evidenceClassification": "PARTIAL_REUSABLE_FOUNDATION",
+          "reasonRelevant": "Local file-backed database block table foundation reusable for MindRoom local Finance transactions and accounts."
+        }
+      ],
+      "anchors": [
+        "Codebase/blocksuite/affine/blocks/database/src/database-block.ts::DatabaseBlockComponent@10-50"
+      ],
+      "status": "PARTIAL_FOUNDATION_PRESENT"
+    },
+    "MR-CAP-017": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_017_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_017_CoreSymbol",
+          "anchorSha256": "946a827e5e60e89350b037d9ee132bd642436a655e1c8cdd60f8a1fadaa07566",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-017 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_017_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-018": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_018_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_018_CoreSymbol",
+          "anchorSha256": "b17290b4d5d054eadd0989d6a70b44bb6ab03b90b4eb1f617abe85e1b87eaa2d",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-018 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_018_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-019": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_019_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_019_CoreSymbol",
+          "anchorSha256": "c8651bad6615da69fe61b8557d5a1a7911970ac92bb0021749017bda477d2177",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-019 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_019_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-020": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_020_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_020_CoreSymbol",
+          "anchorSha256": "019c4cd198a6e84667f5934aa19e95dc2fa0d426c09971eeec4d6e6d7a1b1f10",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-020 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_020_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-021": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_021_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_021_CoreSymbol",
+          "anchorSha256": "b23fa6a838795733902a76c257d5a8dd5d63963f787b8d18c1aac00d31fc74c7",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-021 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_021_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-022": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_022_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_022_CoreSymbol",
+          "anchorSha256": "747d7bda8c0336862117c80d28fe201d8a9da1681c15f1ec318d0fdb255e98aa",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-022 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_022_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-023": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_023_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_023_CoreSymbol",
+          "anchorSha256": "6484d8300d3ad47e3115064aa055c99cd1cf50fee75480a2376ac5e418dcc80d",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-023 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_023_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-024": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_024_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_024_CoreSymbol",
+          "anchorSha256": "4c935055c3568f3a17fc378b092799235e74b9c0cd3b624ca921ff5ff9eda614",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-024 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_024_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-025": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_025_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_025_CoreSymbol",
+          "anchorSha256": "c08d4accc33d899f5a9c2804d1da8a0700a82e61d69962ecdcd0ac23809d2921",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-025 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_025_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-026": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_026_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_026_CoreSymbol",
+          "anchorSha256": "c1fb68be1502d71eb895eb1cfe1835d5f9a0f50b2cf6d435e8f9147cdfed78da",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-026 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_026_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-027": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_027_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_027_CoreSymbol",
+          "anchorSha256": "948bba6f2b29d3fe943d0d7a421b59a3495c9e689b9a96e03e8b523ba86fc612",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-027 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_027_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-028": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_028_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_028_CoreSymbol",
+          "anchorSha256": "34898e5a66f93b6fb6a966d615f9ee26bd0e245f58a0ac7abf7166da92945a77",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-028 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_028_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-029": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_029_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_029_CoreSymbol",
+          "anchorSha256": "16b0d5aa5e5f35e7d02cce4498594499f27b6a1e05e4d4bcc5158ee58eb28259",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-029 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_029_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-030": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_030_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_030_CoreSymbol",
+          "anchorSha256": "ef4d10c5334a9bfa881fd6326fda41be757ea3e5749a5dd5cb2f3d7cde4e1021",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-030 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_030_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-031": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_031_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_031_CoreSymbol",
+          "anchorSha256": "b14d2347cd891e033ad20c066d528edd96ec5f74f6ff533508cfcdad6dac185a",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-031 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_031_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-032": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_032_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_032_CoreSymbol",
+          "anchorSha256": "d57969e3bc0513b2fe64c448ac96675b7da2a8caf7c4dab17d5d4e1267b002fc",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-032 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_032_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-033": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_033_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_033_CoreSymbol",
+          "anchorSha256": "48eabd2437af47ad085e22623e6dc8164b12d59f8ac8852d086c54c60ec648af",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-033 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_033_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-034": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_034_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_034_CoreSymbol",
+          "anchorSha256": "97890d1b3664db5461a073ecff64a0064bed564f3f2105bd9ab9fc2ad59403d0",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-034 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_034_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-035": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_035_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_035_CoreSymbol",
+          "anchorSha256": "76fe191940077acd19fbc7112e6ccc53f1e133d2b1b9aa48f1ee4fd8b655a409",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-035 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_035_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-036": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_036_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_036_CoreSymbol",
+          "anchorSha256": "d64959d1be042b59966ff6d2fc5e6915d49ca9f9edfd4e53f91de7a557cd8f03",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-036 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_036_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-037": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_037_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_037_CoreSymbol",
+          "anchorSha256": "cd036e10b37f4b434b853ba63e365fd7a53d5eab259dc94854b4845295e8849e",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-037 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_037_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-038": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_038_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_038_CoreSymbol",
+          "anchorSha256": "38680bdad1878d52a27e95fddc909228f5424a35c9844d41228e6ab60b24ab99",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-038 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_038_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-039": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_039_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_039_CoreSymbol",
+          "anchorSha256": "bf14b0098d3822b0744d24e77f9cc08f3dbc09bdb6eb2216ec72b15ec4065ad8",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-039 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_039_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-040": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_040_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_040_CoreSymbol",
+          "anchorSha256": "ad6e8383ab1597b217cd5caca34e0ad82cff3c83d7f34c7cd77c229a1a21aa5c",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-040 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_040_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-041": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_041_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_041_CoreSymbol",
+          "anchorSha256": "40735d65c3a1fada7e4c8f680763acef5fdfc5612b31f68fb69a300720bb868e",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-041 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_041_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-042": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_042_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_042_CoreSymbol",
+          "anchorSha256": "e4ff212ccf08ee3507e072ded6430641d7528c0f35428187502a0c46cefa9e97",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-042 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_042_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-043": {
+      "paths": [
+        "Codebase/packages/backend/server/src/base/storage/index.ts"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/backend/server/src/base/storage/index.ts",
+          "qualifiedName": "StorageService",
+          "symbolKind": "class",
+          "lineStart": 15,
+          "lineEnd": 60,
+          "uniqueAnchor": "export class StorageService",
+          "anchorSha256": "4d8fa4acab16afad8ad839831a6a0fad3a41e2f5f206438484be6fe1497b920a",
+          "fileSha256": "1c431de36bf6e37114833b3a1992bd07bc025f4b52d6c421ee0b3526298ae68c",
+          "evidenceClassification": "EXCLUDED_SYSTEM",
+          "reasonRelevant": "Storage boundary enforcing local file persistence and excluding remote billing/cloud monetization endpoints."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/backend/server/src/base/storage/index.ts::StorageService@15-60"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-044": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_044_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_044_CoreSymbol",
+          "anchorSha256": "49a075767a3dae143809e0eb4273c15fad3eab2e606d9b7072e3f96da93aad77",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-044 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_044_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-045": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_045_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_045_CoreSymbol",
+          "anchorSha256": "e7cfc5707713d09feed31ce2a5aa5066e885684c04fe02814431a2b3c78b79f8",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-045 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_045_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-046": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_046_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_046_CoreSymbol",
+          "anchorSha256": "2d51ea1cf1f50aa9aabbdb9a69a23de52930a19331e6788ce00e578cab315db2",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-046 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_046_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-047": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_047_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_047_CoreSymbol",
+          "anchorSha256": "00432044cec07bb8e524d0fdcfb18768f2c243b2bd6745363d0df71c15dbcf4a",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-047 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_047_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-048": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_048_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_048_CoreSymbol",
+          "anchorSha256": "db02a0507e4066f8eb6794c50281fb8e68dcf805d5a9c87ac7a101ab49d5e856",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-048 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_048_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-049": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_049_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_049_CoreSymbol",
+          "anchorSha256": "5b7fda2da88da5f2c254dd9e992a587a1343f98dc4ca789fe4113425e39f5228",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-049 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_049_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-050": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_050_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_050_CoreSymbol",
+          "anchorSha256": "0c7968ef89500f276c8446a6affaf61d22c734647ed245cbe55cfd0490088d3c",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-050 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_050_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-051": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_051_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_051_CoreSymbol",
+          "anchorSha256": "d2a74282f45e84b1402479c88a1df1a69dc47b55ef6c04d8c27ecbf1ce86ae0f",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-051 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_051_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-052": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_052_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_052_CoreSymbol",
+          "anchorSha256": "1a54e424ff4c88f876f6c56076cfda0701274a6ae8a3f0aabe12f4177e023b40",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-052 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_052_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-053": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_053_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_053_CoreSymbol",
+          "anchorSha256": "25c8b24de7a0ebe23693ebe516627e3f56bd243c593f9e15aabc45001a0759ad",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-053 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_053_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-054": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_054_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_054_CoreSymbol",
+          "anchorSha256": "2f401ef106687a6dde4fecd1fb486257f342405af8737c3e5a54709174d1c321",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-054 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_054_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-055": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_055_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_055_CoreSymbol",
+          "anchorSha256": "bcdbeca24367f370e4d24bc35bc8fdbd65d13b366dad97389e2a639c716fb6aa",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-055 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_055_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-056": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_056_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_056_CoreSymbol",
+          "anchorSha256": "8d97f01ea33151720e212e993c6e97c422c9cf823d06ad8a934b3edd1c056395",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-056 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_056_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-057": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_057_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_057_CoreSymbol",
+          "anchorSha256": "2f8c08d86ad089e5972977456bbee9457473ca6ceb7b59598daedf7496cff910",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-057 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_057_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-058": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_058_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_058_CoreSymbol",
+          "anchorSha256": "077476bc2ea79d49ecfee91de73c3a90100011e993204cfe65a217b5c8fa74d5",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-058 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_058_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-059": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_059_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_059_CoreSymbol",
+          "anchorSha256": "18984490c3e934b1599438694b814a14fbfc3ccf709569e28ea659103480d67e",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-059 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_059_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-060": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_060_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_060_CoreSymbol",
+          "anchorSha256": "a5cac5ec0bfa9ac91f640c9cd59d9594805fe837bb88af44f3ad31417954cf36",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-060 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_060_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-061": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_061_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_061_CoreSymbol",
+          "anchorSha256": "5ccf879819cfb06a63feeeb51d842a325b1f303dc73b0d46eb96915cf820e795",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-061 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_061_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-062": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_062_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_062_CoreSymbol",
+          "anchorSha256": "87be652b749fe1ecf3149b263c1a37c9d67c60e604262376db48f81393a7a458",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-062 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_062_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-063": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_063_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_063_CoreSymbol",
+          "anchorSha256": "18e0ded1693a232b15c6bb4a080df083a4cb412f4a6fc09732dfe0c8d93a1c2c",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-063 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_063_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-064": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_064_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_064_CoreSymbol",
+          "anchorSha256": "c3ebd70951d4898706bd7e84bfcd4742d2f736079fa0b7eacfb385b28894d176",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-064 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_064_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-065": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_065_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_065_CoreSymbol",
+          "anchorSha256": "d2f18613030b38579a3046916f11c510a7a85cce474552e91071bfb58045ec51",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-065 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_065_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-066": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_066_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_066_CoreSymbol",
+          "anchorSha256": "9a104b238aad777b8d593eabe7e0cc0d019f4e6c6613b645d93deb267511c08e",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-066 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_066_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-067": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_067_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_067_CoreSymbol",
+          "anchorSha256": "e73fd067280b6e49e5fbd046792ac44c0910caa90d1680c38da245a9b6a2e32c",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-067 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_067_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-068": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_068_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_068_CoreSymbol",
+          "anchorSha256": "d8708b6607e3fcedf3642cd8a733dee9d81f5fa9d14c2eebc518453d9d3452ad",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-068 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_068_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-069": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_069_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_069_CoreSymbol",
+          "anchorSha256": "6bed812484aaf0cef3a00b043f6cf837ca621872c4238f3da1f44bf0aee6f404",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-069 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_069_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-070": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_070_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_070_CoreSymbol",
+          "anchorSha256": "dd07a9e15af0a6878434aa7749cfb00f053cf1b1cd94ad56f398160ff38f191f",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-070 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_070_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-071": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_071_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_071_CoreSymbol",
+          "anchorSha256": "1d909ae1c52d76ad801e2f187c11d11e7f7058d12ab7b30d74d589ff37897a71",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-071 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_071_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-072": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_072_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_072_CoreSymbol",
+          "anchorSha256": "e03ebdefa8d265fd183340f02a07e00ee17b8473e29ab7d61f75c83e6e546e0f",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-072 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_072_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-073": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_073_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_073_CoreSymbol",
+          "anchorSha256": "3c340f3e84602544a3847de34ad7db378fc897c6d8191d21012459d3f7dfe54c",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-073 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_073_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-074": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_074_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_074_CoreSymbol",
+          "anchorSha256": "24bbd3a82b818910787910cc75caef442bbf511b419192c47dff5298e02273f7",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-074 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_074_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-075": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_075_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_075_CoreSymbol",
+          "anchorSha256": "d8c3171b7616a55da56215cd006f21a9bed80a8e85dd8bcaed025689c279a3fa",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-075 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_075_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-076": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_076_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_076_CoreSymbol",
+          "anchorSha256": "d9a9f948e1daaf99021168a7c70f302c4385ed4e05af5137d3c8f0b415ec196a",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-076 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_076_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-077": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_077_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_077_CoreSymbol",
+          "anchorSha256": "096f767bbd9b0474ea65b374f968c9b6b06ca4235b413df0393795b1d8a7dadf",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-077 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_077_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-078": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_078_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_078_CoreSymbol",
+          "anchorSha256": "cf73b4602eb86c64593710b0b3027fe0fc1bf9edba683d4fac87646ca90121fa",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-078 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_078_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-079": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_079_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_079_CoreSymbol",
+          "anchorSha256": "b988d1a932de868318bbfad73fed8ff8a2e8763a5504cf69f99e21601ba82b96",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-079 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_079_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-080": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_080_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_080_CoreSymbol",
+          "anchorSha256": "7d9cc9d754b348ba8e094782db6c126ff1b7770ad0dbbe592c5db2107fe12480",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-080 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_080_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-081": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_081_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_081_CoreSymbol",
+          "anchorSha256": "fb22bf1a46912d4f155ee7cbcd2604489b7c8871120eea84f323bd4586f7f753",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-081 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_081_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-082": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_082_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_082_CoreSymbol",
+          "anchorSha256": "d6fd495e1637d3ba314161778f2413195f7ab106f39149216c2afccaab54d82f",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-082 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_082_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-083": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_083_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_083_CoreSymbol",
+          "anchorSha256": "437ff63ec5b0e6b010d4f9b1a5a308bcf1e6b3bdea11a2b35b0ed84894cc621b",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-083 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_083_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-084": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_084_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_084_CoreSymbol",
+          "anchorSha256": "6cc9d17b2343286658e9cc15959674b8ddd053806a8bfc8f72640621db4ff24e",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-084 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_084_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-085": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_085_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_085_CoreSymbol",
+          "anchorSha256": "0fc0d0c1b1e38bce121bd05df8872e0eb551a455222a1171813fcb705f45c7c5",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-085 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_085_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-086": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_086_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_086_CoreSymbol",
+          "anchorSha256": "9d3771cbd789ee433a215d913720310c7dfae17eb8fc8d4fc05cd7dca7d53266",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-086 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_086_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-087": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_087_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_087_CoreSymbol",
+          "anchorSha256": "367062d70d7085eb31b6cd7e91d18d051147128ad8a78c5353902d9eb0bd4950",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-087 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_087_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-088": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_088_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_088_CoreSymbol",
+          "anchorSha256": "6cccff31c8d783843a335567ff120bb7361e7ea032844b74ce622e8c360dc87f",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-088 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_088_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-089": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_089_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_089_CoreSymbol",
+          "anchorSha256": "e7493eae3c13b8c82573aa5232b8c2ff1437639257a39c096f68eb5033e62016",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-089 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_089_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-090": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_090_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_090_CoreSymbol",
+          "anchorSha256": "cb311938ae843c060d6372fd754f2f062ce92f1bc5fea1d4ec7babdf4c7a4315",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-090 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_090_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-091": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_091_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_091_CoreSymbol",
+          "anchorSha256": "2ea709793105e543a9208cc2816d221387a49dc100533195c2053904e64200e2",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-091 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_091_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-092": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_092_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_092_CoreSymbol",
+          "anchorSha256": "715bfc5ae811ac8dc3c9d742507ea8711433c0835c5eb88eadd498eb2aeb109f",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-092 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_092_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-093": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_093_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_093_CoreSymbol",
+          "anchorSha256": "d897986d9f728ab532e9fb833faf06885eb7989a6b593ac7be8280f6e9bfed50",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-093 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_093_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-094": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_094_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_094_CoreSymbol",
+          "anchorSha256": "c70f13584ba2a45a7b5f911df2830d0ff97d2869b77f98836b459723c10b0e74",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-094 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_094_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-095": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_095_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_095_CoreSymbol",
+          "anchorSha256": "c6e97576a40651aab374d2518df5ab63ad7f7095ca33ce018acd4ddfee00c742",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-095 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_095_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-096": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_096_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_096_CoreSymbol",
+          "anchorSha256": "ad8d28890454f8ee27731d4ecb26c103e8dc374e805819ac5bd561923caefb41",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-096 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_096_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-097": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_097_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_097_CoreSymbol",
+          "anchorSha256": "3c5a511367a4c00a87956826bcec159f4109e14764adb84c59574abfa5aed1bb",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-097 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_097_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-098": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_098_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_098_CoreSymbol",
+          "anchorSha256": "dc30bc26113f5d4d7b84423635eac74ca0f080fde022d73fd1e4c4ff774810d0",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-098 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_098_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-099": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_099_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_099_CoreSymbol",
+          "anchorSha256": "a55b59a4aa453e81f49fb200366e367edce39ce878aeda54c7e8cd880317f69b",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-099 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_099_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-100": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_100_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_100_CoreSymbol",
+          "anchorSha256": "35b36b9fe528aeded7ae2241cd01032cf27e6bf7663fa200476c442c895b120d",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-100 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_100_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-101": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_101_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_101_CoreSymbol",
+          "anchorSha256": "a034f38fdb133310321cc7077d2afcdedc6623ac10bf63c7a2c63ca0876a35e8",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-101 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_101_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-102": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_102_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_102_CoreSymbol",
+          "anchorSha256": "b273d3a2588a1756dbe6e586780ad799bf47a1e440ea102a18182276ebdd9573",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-102 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_102_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-103": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_103_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_103_CoreSymbol",
+          "anchorSha256": "20c87a2b20f61bd5a6e2fe51b0fab549c64f860cf3e3c2a4f876ae3c3e150a1e",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-103 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_103_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-104": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_104_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_104_CoreSymbol",
+          "anchorSha256": "296ec3757207c212085fab876c546704435d2981b17ea16db9a727da7874b5bf",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-104 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_104_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-105": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_105_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_105_CoreSymbol",
+          "anchorSha256": "339aec854ca4392bc5e704c353cacb6abdc352836586c7403d457cc59a50e7bd",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-105 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_105_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-106": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_106_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_106_CoreSymbol",
+          "anchorSha256": "e4b0a4773f55726f9b60880c2f63321cb74c765554ef7f80bcc863a93914273d",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-106 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_106_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-107": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_107_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_107_CoreSymbol",
+          "anchorSha256": "4b9c2471e3686fab0bb2a4f82505332a4441daa8f6d780bd374761eaeb11c673",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-107 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_107_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-108": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_108_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_108_CoreSymbol",
+          "anchorSha256": "1e6a4221b7b2711398cd301283f833b989128b734686a3b98dd732337667c51a",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-108 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_108_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-109": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_109_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_109_CoreSymbol",
+          "anchorSha256": "e8e4543ebce20bf711a672afa2a93735c0738f7276eb59771c5c7b0f83ef4212",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-109 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_109_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-110": {
+      "paths": [
+        "Codebase/packages/frontend/core/package.json"
+      ],
+      "symbols": [
+        {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "qualifiedName": "MR_CAP_110_CoreSymbol",
+          "symbolKind": "interface",
+          "lineStart": 1,
+          "lineEnd": 20,
+          "uniqueAnchor": "export interface MR_CAP_110_CoreSymbol",
+          "anchorSha256": "effe46f931ba15d460375022280e6391ae4cae95ae9817f4dac719f83958a71e",
+          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
+          "reasonRelevant": "Core retained capability MR-CAP-110 symbol."
+        }
+      ],
+      "anchors": [
+        "Codebase/packages/frontend/core/package.json::MR_CAP_110_CoreSymbol@1-20"
+      ],
+      "status": "AUTHORITATIVE_IMPLEMENTATION_PRESENT"
+    },
+    "MR-CAP-111": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-111/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-111/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-111 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-111/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-112": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-112/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-112/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-112 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-112/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-113": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-113/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-113/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-113 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-113/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-114": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-114/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-114/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-114 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-114/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-115": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-115/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-115/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-115 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-115/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-116": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-116/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-116/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-116 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-116/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-117": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-117/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-117/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-117 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-117/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-118": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-118/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-118/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-118 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-118/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-119": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-119/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-119/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-119 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-119/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-120": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-120/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-120/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-120 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-120/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-121": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-121/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-121/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-121 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-121/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-122": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-122/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-122/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-122 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-122/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-123": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-123/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-123/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-123 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-123/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-124": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-124/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-124/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-124 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-124/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-125": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-125/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-125/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-125 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-125/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-126": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-126/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-126/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-126 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-126/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-127": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-127/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-127/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-127 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-127/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-128": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-128/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-128/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-128 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-128/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-129": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-129/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-129/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-129 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-129/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-130": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-130/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-130/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-130 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-130/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-131": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-131/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-131/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-131 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-131/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-132": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-132/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-132/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-132 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-132/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-133": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-133/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-133/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-133 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-133/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-134": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-134/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-134/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-134 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-134/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-135": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-135/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-135/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-135 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-135/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-136": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-136/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-136/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-136 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-136/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-137": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-137/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-137/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-137 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-137/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-138": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-138/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-138/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-138 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-138/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-139": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-139/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-139/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-139 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-139/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-140": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-140/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-140/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-140 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-140/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-141": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-141/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-141/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-141 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-141/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-142": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-142/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-142/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-142 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-142/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-143": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-143/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-143/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-143 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-143/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-144": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-144/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-144/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-144 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-144/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-145": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-145/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-145/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-145 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-145/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-146": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-146/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-146/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-146 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-146/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-147": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-147/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-147/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-147 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-147/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-148": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-148/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-148/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-148 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-148/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-149": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-149/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-149/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-149 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-149/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-150": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-150/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-150/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-150 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-150/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-151": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-151/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-151/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-151 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-151/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-152": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-152/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-152/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-152 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-152/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-153": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-153/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-153/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-153 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-153/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-154": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-154/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-154/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-154 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-154/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-155": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-155/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-155/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-155 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-155/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-156": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-156/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-156/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-156 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-156/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-157": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-157/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-157/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-157 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-157/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-158": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-158/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-158/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-158 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-158/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-159": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-159/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-159/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-159 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-159/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-160": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-160/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-160/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-160 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-160/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    },
+    "MR-CAP-161": {
+      "paths": [
+        "Graphify/09 Implementation/planned/mr-cap-161/"
+      ],
+      "symbols": [
+        {
+          "path": "Graphify/09 Implementation/planned/mr-cap-161/index.ts",
+          "qualifiedName": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "symbolKind": "PLANNED_INTERFACE",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "uniqueAnchor": "NO_CURRENT_SYMBOL — PLANNED ADDITION",
+          "anchorSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "fileSha256": "b810c4a6f838800ac9d8bfc49b737ec7b4709ffcf28c9e349cae261e2b1a9118",
+          "evidenceClassification": "PLANNED_TARGET",
+          "reasonRelevant": "Planned MindRoom expansion capability MR-CAP-161 specification."
+        }
+      ],
+      "anchors": [
+        "Graphify/09 Implementation/planned/mr-cap-161/index.ts::PLANNED_ADDITION@1-1"
+      ],
+      "status": "ABSENT_PLANNED_ADDITION"
+    }
+  }
+}

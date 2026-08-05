@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["project", "phase", "entityCount", "entities", "implementationPerformed", "deletionOrQuarantinePerformed"],
+  "properties": {
+    "project": {"const": "MindRoom"},
+    "phase": {"enum": ["GRAPHIFY_MAPPING", "GRAPHIFY_V2_MAPPING", "PRODUCT_EXPANSION_MAPPING"]},
+    "entityCount": {"type": "integer", "minimum": 0},
+    "implementationPerformed": {"const": false},
+    "deletionOrQuarantinePerformed": {"const": false},
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["entityId", "entityType", "capabilityId", "capabilityIds", "currentStatus", "currentPath", "symbol", "uniqueAnchor", "lineRange", "fileSha256", "package", "intendedOwner", "intendedFinalPath", "dependencies", "dependants", "runtimeRegistrations", "tests", "plannedChanges", "verificationRequirements", "evidence"],
+        "properties": {
+          "entityId": {"type": "string", "pattern": "^MR-(?:FILE|SYM-V2|REG|SCHEMA|MIGRATION|ASSET|VENDOR|LOC|LOC-V2|REF|SQL-COLUMN|SQL-INDEX)-"},
+          "capabilityIds": {"type": "array", "items": {"type": "string"}},
+          "currentPath": {"type": "string"},
+          "fileSha256": {"type": "string"},
+          "dependencies": {"type": "array"},
+          "dependants": {"type": "array"},
+          "runtimeRegistrations": {"type": "array"},
+          "tests": {"type": "array"},
+          "plannedChanges": {"type": "array"},
+          "verificationRequirements": {"type": "array"},
+          "evidence": {"type": "array"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

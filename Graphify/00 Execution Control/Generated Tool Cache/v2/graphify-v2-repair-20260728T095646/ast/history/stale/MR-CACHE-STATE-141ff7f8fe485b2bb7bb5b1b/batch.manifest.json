@@ -1,0 +1,33 @@
+{
+  "policyVersion": "mindroom-graphify-v2-layered-directed-1",
+  "extractor": "graphify.extract.extract",
+  "extractorVersion": "unknown",
+  "runnerSha256": "2adcfbd68a8a4e2b407bba8c37b6f81fb5b31a74fa570e70359e0283bf7f33ec",
+  "classificationResolverSha256": "675743d8d1e0f47c12ac4b2678077ed0ee0f06c0ccb6755505ffdc22bbfdaf55",
+  "codebaseRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Codebase",
+  "layer": "PACKAGING_AND_DEPLOYMENT",
+  "batchIndex": 0,
+  "batchSizePolicy": 400,
+  "files": [
+    {
+      "path": "Codebase/.github/actions/deploy/deploy.mjs",
+      "sha256": "29ed0f8965057f33e3074a5a4ec17606400c0ec6c5d4747e6642c8ae0e0c03a3",
+      "sizeBytes": 6448
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/entitlement.rs",
+      "sha256": "61c7269a8a908e1db6fb5f3da7493247d3b522b1dac8966c193a8e015c8b83e3",
+      "sizeBytes": 22793
+    }
+  ],
+  "inputFingerprint": "bb110aeeb1e91f01e9862c6b1fab5cca7967329a3dc0e46e13e3d11445b519ff",
+  "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/packaging-and-deployment/batch-0000.json",
+  "outputSha256": "059c4c1c544be440909406ee3d85640c6667c28d9ce5f19afed6fb60879d2839",
+  "nodeCount": 57,
+  "edgeCount": 219,
+  "inputTokens": 0,
+  "outputTokens": 0,
+  "cacheDecision": "REEXTRACTED",
+  "cacheInvalidationReason": "input fingerprint changed",
+  "completedAt": "2026-07-28T10:35:02.920Z"
+}

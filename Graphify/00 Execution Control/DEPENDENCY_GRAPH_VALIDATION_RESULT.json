@@ -1,0 +1,17 @@
+{
+  "validatorId": "VAL-DEPENDENCY-008",
+  "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+  "status": "PASS",
+  "counts": {
+    "capabilityEdges": 176,
+    "taskEdges": 337,
+    "cycles": 0
+  },
+  "checks": [
+    {
+      "checkId": "CHK-DEP-01",
+      "description": "0 capability/task/package cycles, 0 unknown dependencies",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "mindroom.graphify.merge-receipt.v2",
+  "runId": "mindroom-graphify-forensic-finalization-20260730-142249",
+  "status": "COMPLETE",
+  "inputManifestSha256": "1118a06a50da4a5053714b9eaf866ad01a05a2226b6edbbab1d318a6bdcf0e98",
+  "partitionValidation": {
+    "status": "PASS",
+    "expectedFileCount": 8101,
+    "partitionedFileCount": 8101,
+    "uniquePartitionedFileCount": 8101,
+    "duplicateFiles": [],
+    "omittedFiles": [],
+    "unexpectedFiles": [],
+    "duplicateBatchIds": [],
+    "orderedSourceSetSha256": "f541cd8651c7106546af70c76328267ebd8807521ba724efc5005a4c02ababd8"
+  },
+  "outputPath": "00 Execution Control/Generated Tool Cache/v2/mindroom-graphify-forensic-finalization-20260730-142249/ast/GRAPHIFY_RAW_MERGED.json",
+  "outputSha256": "6acf18fc42d9c941036be837216288178958aa66fd27183493befbd72d2d9c7d",
+  "nodeCount": 45489,
+  "edgeCount": 146434,
+  "authoritative": false,
+  "completedAt": "2026-07-30T14:30:34.665Z"
+}

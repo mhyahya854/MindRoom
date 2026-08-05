@@ -1,0 +1,55 @@
+[
+  {
+    "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+    "severity": "WARNING",
+    "title": "PBKDF2 Iteration Dynamic Benchmark Calibration Requirement",
+    "sourceAdr": "12 Source Documents/Architecture Decisions/ADR-0011-finance-encryption-boundaries.md",
+    "affectedCapabilityIds": [
+      "MR-CAP-121",
+      "MR-CAP-132"
+    ],
+    "owningTaskIds": [
+      "MR-IMPL-121",
+      "MR-IMPL-132"
+    ],
+    "releaseWave": "WAVE_1",
+    "fallback": "Standard safeStorage encryption fallback",
+    "requiredEvidence": [
+      "Hardware-adaptive PBKDF2 benchmark execution log",
+      "Envelope version migration test suite pass receipt"
+    ],
+    "blockingGateIds": [
+      "GATE-WAVE-1"
+    ],
+    "blocksWaveStart": false,
+    "blocksWaveCompletion": true,
+    "evidencePointer": "ADR-0011 Section 4 and IMPLEMENTATION_TASKS.jsonl MR-IMPL-121 contract"
+  },
+  {
+    "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+    "severity": "WARNING",
+    "title": "External Calendar Adapter Network Sandbox Isolation Requirement",
+    "sourceAdr": "12 Source Documents/Architecture Decisions/ADR-0013-external-calendar-adapter-boundaries.md",
+    "affectedCapabilityIds": [
+      "MR-CAP-119",
+      "MR-CAP-120"
+    ],
+    "owningTaskIds": [
+      "MR-IMPL-119",
+      "MR-IMPL-120"
+    ],
+    "releaseWave": "WAVE_4",
+    "fallback": "Local ICS file import/export fallback",
+    "requiredEvidence": [
+      "Network sandbox isolation test pass receipt",
+      "Credential isolation test pass receipt",
+      "Disabled-by-default runtime flag verification"
+    ],
+    "blockingGateIds": [
+      "GATE-WAVE-4"
+    ],
+    "blocksWaveStart": false,
+    "blocksWaveCompletion": true,
+    "evidencePointer": "ADR-0013 Section 3 and IMPLEMENTATION_TASKS.jsonl MR-IMPL-120 contract"
+  }
+]

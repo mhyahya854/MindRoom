@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "validator": "Graphify/08 Cleanup/validate_cleanup_plan.py",
+  "validationType": "ORCHESTRATOR_SELF_VALIDATION_NOT_INDEPENDENT_REVIEW",
+  "candidateCount": 366,
+  "categoryCounts": {
+    "EXCLUDED_AFFINE_SYSTEM": 33,
+    "DEAD_OR_ABANDONED_SIGNAL": 103,
+    "DUPLICATE_IMPLEMENTATION_SIGNAL": 23,
+    "MARKDOWN_MIGRATION_OR_RETENTION": 207
+  },
+  "proofRequirementsPerCandidate": 22,
+  "quarantineEntries": 0,
+  "receiptSchemaSha256": "83359c9398a0919ef4141b45e01aa31e5a27578f37f48619d0ba45fc9f52c7fa",
+  "ponytailFindings": 9,
+  "limitations": [
+    "Graphify/07 Reorganisation contains planning evidence only; no batch is completed.",
+    "All proof, review, quarantine, implementation, and purge work remains NOT_STARTED."
+  ]
+}

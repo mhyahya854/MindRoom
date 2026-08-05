@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "taskId",
+    "agentId",
+    "exactTask",
+    "allowedGraphifyOutputPaths",
+    "readOnlyCodebaseScope",
+    "forbiddenMutationPaths",
+    "requiredInputs",
+    "requiredOutputs",
+    "evidence",
+    "handoff",
+    "reviewer",
+    "status"
+  ],
+  "properties": {
+    "taskId": {"type": "string", "minLength": 1},
+    "agentId": {"type": "string", "minLength": 1},
+    "exactTask": {"type": "string", "minLength": 1},
+    "allowedGraphifyOutputPaths": {"type": "array", "items": {"type": "string"}},
+    "readOnlyCodebaseScope": {"type": "array", "items": {"type": "string"}},
+    "forbiddenMutationPaths": {"type": "array", "items": {"type": "string"}},
+    "requiredInputs": {"type": "array", "items": {"type": "string"}},
+    "requiredOutputs": {"type": "array", "items": {"type": "string"}},
+    "evidence": {"type": "array"},
+    "handoff": {"type": "string", "minLength": 1},
+    "reviewer": {"type": "string", "minLength": 1},
+    "status": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:27:01.407Z",
+  "adrsResolved": [
+    "ADR-0006: Local semantic-index technology (sqlite-vss / HNSW vector projection)",
+    "ADR-0008: Calendar recurrence representation (RFC 5545 RRULE schema)",
+    "ADR-0009: Calendar file format and ICS compatibility (Versioned Local JSON)",
+    "ADR-0010: Finance transaction storage format (Append-only JSONL ledger + Decimal strings)",
+    "ADR-0011: Finance encryption boundaries (AES-256-GCM + safeStorage key wrapping)",
+    "ADR-0012: Multi-currency behavior (ISO 4217 original amount + Rate snapshots)"
+  ],
+  "adrsStillUnresolved": [],
+  "tasksBlockedBefore": 0,
+  "tasksBlockedAfter": 0,
+  "capabilityReferencesUpdated": 161,
+  "requirementReferencesUpdated": 1782,
+  "implementationContractsUpdated": 161,
+  "invalidCapabilityReferencesRemoved": 0,
+  "repositoryEvidenceCount": 12,
+  "codebaseModified": false
+}

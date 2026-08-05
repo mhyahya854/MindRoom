@@ -1,0 +1,70 @@
+{
+  "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+  "layers": {
+    "AUTHORED_RUNTIME": {
+      "nodeCount": 24720,
+      "primary": true
+    },
+    "TEST_AND_FIXTURE": {
+      "nodeCount": 2186,
+      "primary": true
+    },
+    "BUILD_AND_CONFIG": {
+      "nodeCount": 834,
+      "primary": true
+    },
+    "PACKAGING_AND_DEPLOYMENT": {
+      "nodeCount": 97,
+      "primary": true
+    },
+    "MIGRATION_AND_SCHEMA": {
+      "nodeCount": 1642,
+      "primary": true
+    },
+    "GENERATED_BINDING": {
+      "nodeCount": 1573,
+      "primary": true
+    },
+    "VENDOR_AND_TOOLCHAIN": {
+      "nodeCount": 6,
+      "primary": true
+    },
+    "DOCUMENTATION_AND_LEGAL": {
+      "nodeCount": 181,
+      "primary": true
+    },
+    "ASSET_AND_MEDIA": {
+      "nodeCount": 758,
+      "primary": true
+    },
+    "EXTERNAL_DEPENDENCY": {
+      "nodeCount": 900,
+      "primary": true
+    },
+    "PLANNED_CAPABILITY": {
+      "nodeCount": 3341,
+      "primary": true
+    }
+  },
+  "fileLayerCounts": {
+    "BUILD_AND_CONFIG": 547,
+    "AUTHORED_RUNTIME": 6731,
+    "PACKAGING_AND_DEPLOYMENT": 92,
+    "TEST_AND_FIXTURE": 1187,
+    "MIGRATION_AND_SCHEMA": 154,
+    "VENDOR_AND_TOOLCHAIN": 6,
+    "DOCUMENTATION_AND_LEGAL": 177,
+    "ASSET_AND_MEDIA": 758,
+    "GENERATED_BINDING": 428
+  },
+  "allRepositoryFilesClassified": true,
+  "vendorCoreExclusionPolicy": "VENDOR_ARTIFACT_NODES_ONLY_NO_MINIFIED_SYMBOLS_IN_CORE",
+  "generatedAt": "2026-07-30T15:10:13.069Z",
+  "productExpansionOverlay": {
+    "nodeCount": 964,
+    "edgeCount": 1975,
+    "allSourceRuntimeLayersCarriedForward": true,
+    "sourceRuntimeGraphRebuilt": false,
+    "reason": "Codebase is immutable; the expansion adds planning nodes and edges only."
+  }
+}

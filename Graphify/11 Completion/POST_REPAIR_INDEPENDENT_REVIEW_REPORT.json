@@ -1,0 +1,145 @@
+{
+  "reviewSessionId": "mindroom-independent-review-20260801-5b80a2d4-6ed6-4a0d-8c33-44e8a0fbc71a",
+  "reviewerIsolationMethod": "fresh Codex subagent context with fork_turns=none and package-only neutral instruction",
+  "repairSessionId": "mindroom-graphify-final-gate-repair-20260801-132409",
+  "readOnly": true,
+  "graphifyMutations": 0,
+  "codebaseMutations": 0,
+  "recordedByRepairAgentFromIsolatedReviewerOutput": true,
+  "checks": [
+    {
+      "checkId": "ISO-01",
+      "description": "Reviewer remained read-only and preserved Graphify and Codebase content.",
+      "status": "PASS",
+      "method": "Before/after recursive file and directory enumeration plus SHA-256 over each relative path, size, and content hash; Python was run with -B.",
+      "actual": {
+        "graphifyBefore": {"files": 13421, "directories": 8497, "bytes": 2968267758, "aggregateSha256": "e3c6a11d08036e84a14a4ffde35206fcaada8a4eb492f7afe9d8ec8572c8cb01"},
+        "graphifyAfter": {"files": 13421, "directories": 8497, "bytes": 2968267758, "aggregateSha256": "e3c6a11d08036e84a14a4ffde35206fcaada8a4eb492f7afe9d8ec8572c8cb01"},
+        "codebaseBefore": {"files": 10080, "directories": 2548, "bytes": 118418802, "aggregateSha256": "aef459e9a889cfe775fc436230ac8dfc748ec70a9d4a094198e1e0f0803b2693"},
+        "codebaseAfter": {"files": 10080, "directories": 2548, "bytes": 118418802, "aggregateSha256": "aef459e9a889cfe775fc436230ac8dfc748ec70a9d4a094198e1e0f0803b2693"}
+      },
+      "expected": {"identicalBeforeAfter": true, "graphifyMutations": 0, "codebaseMutations": 0},
+      "evidence": ["Full Graphify and Codebase content inventories computed before and after review", "No repository file was written by the reviewer"]
+    },
+    {
+      "checkId": "REF-TEST-01",
+      "description": "All test capability, task, requirement, and acceptance-test references resolve.",
+      "status": "PASS",
+      "method": "Independent set membership against canonical registries.",
+      "actual": {"unknownTestCapabilityIds": [], "unknownTestTaskIds": [], "unknownTestRequirementIds": [], "unknownContractAcceptanceTestIds": []},
+      "expected": {"unknownReferences": []},
+      "evidence": ["338 tests", "161 capability contracts", "162 task contracts"]
+    },
+    {
+      "checkId": "REF-SOURCE-01",
+      "description": "Every capability and task source-requirement reference resolves to the requirement registry or supersession map.",
+      "status": "FAIL",
+      "method": "Independent membership comparison of capability sourceRequirementIds and task sourceRequirements against 1782 canonical requirement IDs and 278 supersession oldRequirementIds.",
+      "actual": {"capabilityDanglingPairs": 328, "capabilitiesAffected": 95, "taskDanglingPairs": 329, "tasksAffected": 96, "distinctDanglingRequirementIds": 278, "resolvedBySupersessionMap": 0, "distinctDanglingIdSetSha256": "12448f1944719dd548d8a270d40cc55f89dd6209b9f8d19ca26ebe5d1ac3e10e"},
+      "expected": {"danglingPairs": 0, "allRequirementReferencesResolvable": true},
+      "evidence": ["MR-CAP-005 references absent MR-KEEP-038 and MR-LEGAL-037", "MR-IMPL-BOOTSTRAP-001 references absent MR-REQ-0001 in sourceRequirements", "All 278 distinct IDs are absent from both canonical and superseded-ID sets"]
+    },
+    {
+      "checkId": "WAVE-GATE-01",
+      "description": "All test owner waves and exact WAVE_0 through WAVE_5 requiredTestIds sets agree.",
+      "status": "PASS",
+      "method": "Owner waves derived only from task and capability releaseWave fields, followed by exact set equality.",
+      "actual": {"testDistribution": {"WAVE_0": 13, "WAVE_1": 259, "WAVE_2": 56, "WAVE_3": 4, "WAVE_4": 6, "WAVE_5": 0}, "missing": [], "extra": [], "duplicate": [], "unknown": [], "wrongWave": [], "ownershipMismatches": []},
+      "expected": {"mismatches": []},
+      "evidence": ["REQUIREMENT_TEST_MATRIX.jsonl", "IMPLEMENTATION_TASKS.jsonl", "CAPABILITY_REGISTRY.json", "RELEASE_GATE_MATRIX.json"]
+    },
+    {
+      "checkId": "CONTRACT-DEP-WARN-01",
+      "description": "Contracts, owner waves, dependency graphs, and warnings remain internally consistent.",
+      "status": "PASS",
+      "method": "Independent section/phrase/wave checks and DFS dependency traversal.",
+      "actual": {"genericCapabilityContracts": 0, "genericTaskContracts": 0, "contractWaveMismatches": 0, "primaryTaskWaveMismatches": 0, "capabilityExecutionEdges": 109, "capabilityCycles": 0, "capabilityBackwardDependencies": 0, "taskEdges": 640, "taskCycles": 0, "taskBackwardDependencies": 0, "unknownDependencyReferences": 0, "warningMismatches": 0},
+      "expected": {"blockingIssues": 0},
+      "evidence": ["323 contracts", "CAPABILITY_DEPENDENCY_GRAPH.json", "SAME_WAVE_EXECUTION_ORDER.json", "FINAL_WARNING_OWNERSHIP_RESOLUTION.json"]
+    },
+    {
+      "checkId": "VAL-READONLY-01",
+      "description": "Production validator is read-only, derives exact gate sets independently, and scans live Codebase.",
+      "status": "PASS",
+      "method": "Complete source and AST inspection plus direct do_strict_validation invocation.",
+      "actual": {"filesystemWriteCalls": [], "hardCodedCapabilityTaskTestEvidenceIds": [], "gateExpectationUsesRequiredTestIds": false, "usesLiveCodebaseHashing": true, "directStatus": "PASS", "directFailedChecks": 0, "checkCount": 117},
+      "expected": {"writes": 0, "hardCodedEvidenceIds": 0, "independentGateDerivation": true, "liveCodebaseScan": true},
+      "evidence": ["validate_final_graphify_freeze.py", "Live Codebase: 10080 files, 2548 directories, canonical aggregate 91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748"]
+    },
+    {
+      "checkId": "VAL-COVERAGE-01",
+      "description": "Production validator detects unresolved requirement references in all authoritative capability/task reference fields.",
+      "status": "FAIL",
+      "method": "Validator-source coverage compared with the independently observed defect.",
+      "actual": {"validatorResult": "PASS", "unvalidatedFields": ["CAPABILITY_REGISTRY.capabilities[].sourceRequirementIds", "IMPLEMENTATION_TASKS[].sourceRequirements"], "unresolvedPairs": 657, "distinctUnresolvedIds": 278, "validatorChecksForThoseFields": 0},
+      "expected": {"validatorResultWithDanglingAuthoritativeReferences": "FAIL", "allAuthoritativeRequirementReferenceFieldsValidated": true},
+      "evidence": ["TEST-04 checks only test requirementIds", "No check covers capability sourceRequirementIds or task sourceRequirements"]
+    },
+    {
+      "checkId": "CHALLENGE-01",
+      "description": "All 35 challenges use the production validator with real temporary mutations and independent expectations.",
+      "status": "PASS",
+      "method": "AST enumeration and source/report comparison.",
+      "actual": {"sourceExecuteCalls": 35, "reportRecords": 35, "gateSpecificChallenges": 10, "allPassed": true, "allTemporaryPathsOutsideGraphifyAndCodebase": true, "reportVerdict": "PASS"},
+      "expected": {"sourceExecuteCalls": 35, "reportRecords": 35, "gateSpecificChallenges": 10, "verdict": "PASS"},
+      "evidence": ["run_final_freeze_challenges.py", "FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"]
+    },
+    {
+      "checkId": "CHALLENGE-COVERAGE-01",
+      "description": "Challenge suite covers dangling capability/task source-requirement references.",
+      "status": "FAIL",
+      "method": "Mutation inventory compared with authoritative reference fields.",
+      "actual": {"challengeForCapabilitySourceRequirementIds": false, "challengeForTaskSourceRequirements": false, "productionBlindSpotExercised": false},
+      "expected": {"referenceCoverage": "Every authoritative capability/task/requirement reference field has a negative mutation"},
+      "evidence": ["None of the 35 execute calls mutates sourceRequirementIds or sourceRequirements"]
+    },
+    {
+      "checkId": "MANIFEST-RECEIPT-01",
+      "description": "Candidate inventory, manifest, receipts, and Codebase preservation evidence are internally sound.",
+      "status": "PASS",
+      "method": "Independent path-set, SHA-256, size, aggregate, and metadata comparisons.",
+      "actual": {"inventoryRecords": 3302, "includedInventoryRecords": 162, "excludedWithoutReason": 0, "manifestRecords": 162, "manifestSetDifferences": 0, "manifestContentMismatches": 0, "manifestAggregateSha256": "2c7ca87d9b9812081899f25649ef528d0866bbbff8d739827e85748a3f216c86", "receiptConflicts": 0, "codebaseFiles": 10080, "codebaseDirectories": 2548, "codebaseAggregateSha256": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748", "codebaseMutations": 0},
+      "expected": {"setDifferences": 0, "contentMismatches": 0, "receiptConflicts": 0, "codebaseMutations": 0},
+      "evidence": ["FINAL_GATE_REPAIR_AUTHORITY_INVENTORY_CANDIDATE.jsonl", "FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl", "Current metadata receipts", "FINAL_CODEBASE_PRESERVATION_RECEIPT.json"]
+    },
+    {
+      "checkId": "BACKUP-01",
+      "description": "The designated pre-repair backup is a complete recovery image.",
+      "status": "FAIL",
+      "method": "Full content-hash and path-set comparison of backup and live Graphify.",
+      "actual": {"backupFiles": 13377, "liveFilesAtReview": 13421, "modifiedFiles": 17, "addedFiles": 44, "removedFiles": 0, "claimedModified": 17, "claimedAdded": 9, "claimedRemoved": 0, "unclaimedPackageSelf": 1, "unclaimedAffineReferenceFiles": 34, "affineReferenceFilesPredateBackup": true},
+      "expected": {"allLivePreexistingFilesPresentInBackup": true, "unexplainedBackupDifferences": 0},
+      "evidence": ["All 17 claimed MODIFIED and 9 claimed ADDED records are accurate", "Thirty-four long-path AFFiNE reference files predate the backup but are absent from it"]
+    }
+  ],
+  "gateTestMismatches": [],
+  "validatorFindings": [
+    {"findingId": "VAL-FINDING-READONLY", "status": "PASS", "severity": "INFO", "description": "The validator is read-only and correctly enforces gate-test synchronization."},
+    {"findingId": "VAL-FINDING-REFERENCE-BLIND-SPOT", "status": "FAIL", "severity": "BLOCKER", "description": "The validator returns PASS while 657 authoritative capability/task source-requirement references are dangling because those fields are not inspected.", "evidence": {"distinctDanglingIds": 278, "capabilityPairs": 328, "taskPairs": 329}}
+  ],
+  "challengeFindings": [
+    {"findingId": "CHALLENGE-FINDING-EXECUTION", "status": "PASS", "severity": "INFO", "description": "All 35 production-validator challenges passed with temporary overrides."},
+    {"findingId": "CHALLENGE-FINDING-COVERAGE", "status": "FAIL", "severity": "MAJOR", "description": "No challenge targets capability sourceRequirementIds or task sourceRequirements."}
+  ],
+  "manifestFindings": [
+    {"findingId": "MANIFEST-FINDING-INTEGRITY", "status": "PASS", "severity": "INFO", "description": "The 162 candidate manifest records match the 162 included inventory records and all live hashes."}
+  ],
+  "receiptFindings": [
+    {"findingId": "RECEIPT-FINDING-CODEBASE", "status": "PASS", "severity": "INFO", "description": "Codebase remains unchanged at 10080 files, 2548 directories, canonical aggregate 91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748."},
+    {"findingId": "RECEIPT-FINDING-METADATA", "status": "PASS", "severity": "INFO", "description": "Current receipts consistently retain the unfrozen, unreleased transition state."}
+  ],
+  "blockers": [
+    {"findingId": "BLOCKER-REFERENCE-INTEGRITY", "description": "The authoritative capability and task registries contain 657 dangling source-requirement references covering 278 distinct IDs, none resolved by the supersession map."},
+    {"findingId": "BLOCKER-VALIDATOR-FALSE-PASS", "description": "The production validator and challenge suite omit those fields and therefore issue a false zero-defect PASS."},
+    {"findingId": "BLOCKER-BACKUP-COMPLETENESS", "description": "The designated pre-repair Graphify backup omits 34 AFFiNE reference files that predate the backup, so it is not a complete recovery image."}
+  ],
+  "majorFindings": [
+    {"findingId": "MAJOR-001", "description": "Ninety-five capabilities and ninety-six tasks have unresolved source-requirement lineage."},
+    {"findingId": "MAJOR-002", "description": "Validator and adversarial-challenge coverage do not include all authoritative requirement-reference fields."},
+    {"findingId": "MAJOR-003", "description": "The changedFiles records are individually accurate, but the backup is missing 34 preexisting reference files."}
+  ],
+  "minorFindings": [
+    {"findingId": "MINOR-001", "description": "The package gateTestAudit.summary contains pre-synchronization totals without an explicit before label; the synchronization report correctly records the current zero-mismatch state."}
+  ],
+  "decision": "FAILED"
+}

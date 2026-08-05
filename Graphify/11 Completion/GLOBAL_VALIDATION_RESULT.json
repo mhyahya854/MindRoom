@@ -1,0 +1,284 @@
+{
+  "project": "MindRoom",
+  "phase": "GRAPHIFY_V2_MAPPING",
+  "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+  "status": "PASS",
+  "validationType": "ORCHESTRATOR_INTEGRATION_VALIDATION_NOT_INDEPENDENT_REVIEW",
+  "jsonValidation": {
+    "status": "PASS",
+    "jsonFilesParsed": 90,
+    "jsonlFilesParsed": 71,
+    "jsonlRecordsParsed": 431978,
+    "generatedCacheScope": "V2_HASH_MANIFEST_VALIDATED",
+    "cacheBatchOutputsParsed": 24,
+    "astValidation": {
+      "status": "PASS",
+      "batchCount": 24,
+      "fileCount": 8101,
+      "batchOutputsParsed": 24,
+      "freshRunReceipt": true,
+      "verifiedReuseRunReceipt": true,
+      "partitionStatus": "PASS"
+    },
+    "legacyV1CacheScope": "PRESERVED_NON_AUTHORITATIVE_EXCLUDED"
+  },
+  "schemaValidation": {
+    "status": "PASS",
+    "schemaDocumentsValidated": 17,
+    "schemaInstancesValidated": 132023,
+    "schemaInstanceErrors": 0,
+    "schemaInstanceResults": {
+      "capability-registry.schema.json": {
+        "instancePath": "03 Capability Map/CAPABILITY_REGISTRY.json",
+        "instanceCount": 1,
+        "errorCount": 0
+      },
+      "deletion-candidate.schema.json": {
+        "instancePath": "08 Cleanup/DELETION_CANDIDATES.jsonl",
+        "instanceCount": 366,
+        "errorCount": 0
+      },
+      "deletion-receipt.schema.json": {
+        "instancePath": "08 Cleanup/DELETION_RECEIPTS.jsonl",
+        "instanceCount": 1,
+        "errorCount": 0
+      },
+      "dependency-edge.schema.json": {
+        "instancePath": "05 Dependency and Impact/DEPENDENCY_EDGES.jsonl",
+        "instanceCount": 109188,
+        "errorCount": 0
+      },
+      "exact-location-registry.schema.json": {
+        "instancePath": "04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json",
+        "instanceCount": 1,
+        "errorCount": 0
+      },
+      "final-release-receipt.schema.json": {
+        "instancePath": "11 Completion/FINAL_RELEASE_RECEIPT.json",
+        "instanceCount": 1,
+        "errorCount": 0
+      },
+      "graphify-mapping-receipt.schema.json": {
+        "instancePath": "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+        "instanceCount": 1,
+        "errorCount": 0
+      },
+      "hash-manifest-checkpoint.schema.json": {
+        "instancePath": "00 Execution Control/HASH_MANIFEST_CHECKPOINTS.jsonl",
+        "instanceCount": 2,
+        "errorCount": 0
+      },
+      "implementation-task.schema.json": {
+        "instancePath": "09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+        "instanceCount": 162,
+        "errorCount": 0
+      },
+      "repository-baseline.schema.json": {
+        "instancePath": "00 Execution Control/GRAPHIFY_REPAIR_BASELINE.json",
+        "instanceCount": 1,
+        "errorCount": 0
+      },
+      "requirement-registry.schema.json": {
+        "instancePath": "03 Capability Map/REQUIREMENT_REGISTRY.jsonl",
+        "instanceCount": 2055,
+        "errorCount": 0
+      },
+      "runtime-registration.schema.json": {
+        "instancePath": "02 Architecture Map/RUNTIME_REGISTRATION_REGISTRY.jsonl",
+        "instanceCount": 643,
+        "errorCount": 0
+      },
+      "status.schema.json": {
+        "instancePath": "00 Execution Control/STATUS.json",
+        "instanceCount": 1,
+        "errorCount": 0
+      },
+      "symbol-registry.schema.json": {
+        "instancePath": "04 Exact Location Registry/SYMBOL_REGISTRY.jsonl",
+        "instanceCount": 19591,
+        "errorCount": 0
+      },
+      "task-record.schema.json": {
+        "instancePath": "13 Agent Swarm/AGENT_TASKS.jsonl",
+        "instanceCount": 7,
+        "errorCount": 0
+      },
+      "test-receipt.schema.json": {
+        "instancePath": "10 Verification/TEST_RECEIPTS.jsonl",
+        "instanceCount": 1,
+        "errorCount": 0
+      },
+      "transplant-receipt.schema.json": {
+        "instancePath": "09 Implementation/TRANSPLANT_RECEIPTS.jsonl",
+        "instanceCount": 1,
+        "errorCount": 0
+      }
+    },
+    "v2ContractInstancesValidated": 143300,
+    "nodes": 35274,
+    "edges": 107213,
+    "runtimeRegistrations": 643,
+    "requiredChanges": 161,
+    "ponytailFindings": 9
+  },
+  "codebaseBaseline": {
+    "status": "PASS",
+    "beforeTreeSha256": "135fbaacd841e5e4c271b046eda4b1613da83122e08c464904d395cd93ae5a04",
+    "afterTreeSha256": "135fbaacd841e5e4c271b046eda4b1613da83122e08c464904d395cd93ae5a04",
+    "fileCount": 10080,
+    "directoryCount": 2548,
+    "changedFiles": 0,
+    "addedFiles": 0,
+    "missingFiles": 0,
+    "codebaseFilesModified": 0,
+    "masterPlanHashesVerified": {
+      "01-EVERYTHING-WE-ARE-KEEPING.md": "458b4bdb995db8f4e5fbbc6be95db252c1f047562e9b27e39d3acdfd261f6faf",
+      "02-EVERYTHING-WE-ARE-DELETING.md": "46f34785e46d7d75dc01800fb29dfdf76d2b29ad09d5628aa430a3ee8c3aee1e",
+      "03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md": "4e2ca7a75e7c5fd4091b9c7c28ed350f1bcf1e062793339293d8485ee9896531"
+    }
+  },
+  "referentialIntegrity": {
+    "status": "PASS",
+    "nodes": 35274,
+    "directedEdges": 107213,
+    "danglingAuthoritativeEdges": 0,
+    "unresolvedInternalEndpoints": 0,
+    "invalidReferences": 0,
+    "fileNodes": 10080,
+    "requirements": 2055,
+    "capabilities": 161,
+    "requiredChanges": 161,
+    "runtimeRegistrations": 643,
+    "completionOutputFiles": [
+      "GRAPH_HEALTH.json",
+      "GRAPH_LAYER_MANIFEST.json",
+      "GRAPH_REPORT.md",
+      "graph.html",
+      "graph.json",
+      "manifest.json"
+    ],
+    "layerAssertions": {
+      "status": "PASS",
+      "knownNonRuntimeExamplesChecked": 14,
+      "authoredRuntimePollution": 0
+    },
+    "selfLoopAssertions": {
+      "status": "PASS",
+      "authoritativeSelfLoops": 1,
+      "validSchemaSelfReferences": 1,
+      "invalidSelfLoops": 0,
+      "classificationRecords": 2
+    },
+    "rustResolution": {
+      "status": "PASS",
+      "rustModuleDeclarations": 150,
+      "cargoWorkspaceMembers": 7,
+      "localCargoDependencies": 10
+    },
+    "generatedProvenance": {
+      "status": "PASS",
+      "generatedFiles": 428,
+      "provenanceRecords": 428
+    },
+    "representativeMobileEdges": {
+      "status": "PASS",
+      "languages": [
+        "Swift",
+        "Kotlin"
+      ],
+      "representativeEdges": 2,
+      "astImportConflicts": 0,
+      "crossLanguageAstConflicts": 0,
+      "exactSwiftImports": 2,
+      "exactCHeaderImports": 1
+    },
+    "nodeIdentity": {
+      "status": "PASS",
+      "packageJsonPropertySymbols": 0
+    },
+    "astLocalBindingCollisions": {
+      "status": "PASS",
+      "authoritativeLocalBindingCollisions": 0
+    },
+    "removalCapabilitySemantics": {
+      "status": "PASS",
+      "capabilitiesChecked": 5,
+      "activePathCounts": {
+        "MR-CAP-041": 5,
+        "MR-CAP-055": 1,
+        "MR-CAP-056": 0,
+        "MR-CAP-057": 0,
+        "MR-CAP-062": 3
+      },
+      "retainedFalsePositiveExclusions": 20
+    },
+    "runtimeAssertions": {
+      "status": "PASS",
+      "registrations": 643,
+      "placeholderIdentifiers": 0,
+      "falseRoutes": 0,
+      "evidenceBackedAdminJsxRoutes": 10,
+      "runtimeEntrypointAssignments": 5019,
+      "maximumEntrypointsPerRegistration": 16,
+      "maximumAllowedEntrypointsPerRegistration": 32,
+      "capabilityContamination": 0,
+      "crossApplicationEntrypointContamination": 0
+    },
+    "builderIdempotence": {
+      "status": "PASS",
+      "rawMergedNodes": 45489,
+      "rawMergedEdges": 146434,
+      "symbolDependencyEdges": 20047,
+      "symbolDependencyRelationTypes": 5,
+      "consecutiveStableBuilds": 2,
+      "normalizedOutputSha256": "97334c6491ce0599ec0237010769b0850d95b2d5186acb95477f8b5d8458f56f"
+    }
+  },
+  "graphHealth": {
+    "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+    "graphType": "DIRECTED_MULTI_RELATIONSHIP_JSONL",
+    "authoritative": true,
+    "nodeCount": 35274,
+    "directedEdgeCount": 107213,
+    "uniqueEdgeCount": 107213,
+    "parallelEvidencePreserved": true,
+    "danglingAuthoritativeEdges": 0,
+    "unresolvedInternalEndpoints": 0,
+    "invalidReferences": 0,
+    "invalidSelfLoops": 0,
+    "validSchemaSelfReferences": 1,
+    "validRecursiveRelationships": 1,
+    "nodeIdCollisions": 0,
+    "vendorSymbolsInCoreRuntime": 0,
+    "generatedSymbolsInCoreRuntime": 0,
+    "status": "PASS",
+    "policyVersion": "mindroom-graphify-v2-layered-directed-2"
+  },
+  "graphValidation": {
+    "status": "PASS",
+    "evidenceBackedChecks": 10
+  },
+  "independentReview": "APPROVED",
+  "affineReference": {
+    "status": "PASS",
+    "commit": "da7781a75171140fd966c6cfbe05da9f1fb111d6",
+    "treeSha": "4f7b0d6657efa7e9ee0c1e3359e09a21eb8e145f",
+    "version": "0.26.3",
+    "archiveSha256": "1fc573a2143f664d4944df4e82570651f54c75ba8a891c546fe9153820a597c9",
+    "archiveFiles": 10109,
+    "capabilities": 110,
+    "evidencePairs": 1210,
+    "identicalPairs": 1105,
+    "versionDeltaPairs": 105,
+    "activeOnlyPaths": 31,
+    "packages": 135,
+    "approvedTransplants": 0,
+    "implementationPerformed": false
+  },
+  "applicationImplementationPerformed": false,
+  "releaseReceiptLocked": true,
+  "openMappingBlockers": [
+    "INDEPENDENT_V2_FINAL_REVIEW_NOT_APPROVED"
+  ],
+  "validatedAt": "2026-07-30T15:33:15.202Z"
+}

@@ -1,0 +1,115 @@
+{
+  "project": "MindRoom",
+  "phase": "GRAPHIFY_V2_MAPPING",
+  "runId": "graphify-v2-repair-20260728T095646",
+  "status": "REFERENCE_VERIFIED",
+  "provenanceStatus": "PINNED_OFFICIAL_GITHUB_COMMIT_VERIFIED",
+  "sourceRepository": "https://github.com/toeverything/AFFiNE",
+  "sourceUrl": "https://codeload.github.com/toeverything/AFFiNE/zip/da7781a75171140fd966c6cfbe05da9f1fb111d6",
+  "commitUrl": "https://github.com/toeverything/AFFiNE/commit/da7781a75171140fd966c6cfbe05da9f1fb111d6",
+  "verifiedArchiveMetadata": {
+    "path": "Graphify/14 AFFiNE Reference/Incoming/AFFiNE-canary.zip",
+    "sha256": "1fc573a2143f664d4944df4e82570651f54c75ba8a891c546fe9153820a597c9",
+    "sizeBytes": 78837502,
+    "archiveRoot": "AFFiNE-da7781a75171140fd966c6cfbe05da9f1fb111d6/",
+    "commit": "da7781a75171140fd966c6cfbe05da9f1fb111d6",
+    "treeSha": "4f7b0d6657efa7e9ee0c1e3359e09a21eb8e145f",
+    "version": "0.26.3",
+    "fileCount": 10109,
+    "directoryCount": 2551
+  },
+  "archiveAndExtractionValidation": {
+    "crcStatus": "PASS",
+    "crcFailureEntry": null,
+    "zipComment": "da7781a75171140fd966c6cfbe05da9f1fb111d6",
+    "zipCommentMatchesCommit": true,
+    "canonicalContentTreeSha256": "9cc5090ac0db71594e59e8cc557bc6db12c2754fea134dc17ab1d05e82067fba",
+    "canonicalContentTreeDigestAlgorithm": "SHA-256 over sorted UTF-8 records: relative-path NUL size NUL file-sha256 LF",
+    "archiveFileCount": 10109,
+    "extractedFileCount": 10109,
+    "missingExtractedFiles": 0,
+    "mismatchedExtractedFiles": 0,
+    "sampleMissing": [],
+    "sampleMismatched": [],
+    "status": "PASS"
+  },
+  "commitVerification": {
+    "expectedCommit": "da7781a75171140fd966c6cfbe05da9f1fb111d6",
+    "archiveRootCommit": "da7781a75171140fd966c6cfbe05da9f1fb111d6",
+    "zipCommentCommit": "da7781a75171140fd966c6cfbe05da9f1fb111d6",
+    "allCommitClaimsMatch": true,
+    "githubApiTreeSha": "4f7b0d6657efa7e9ee0c1e3359e09a21eb8e145f",
+    "githubApiCommitTimestamp": "2026-06-16T18:08:15Z",
+    "githubApiCommitSubject": "feat(mobile): improve android edgeless & ci (#15118)",
+    "githubApiEndpoint": "https://api.github.com/repos/toeverything/AFFiNE/commits/da7781a75171140fd966c6cfbe05da9f1fb111d6"
+  },
+  "historicalExpectedArchiveMetadata": {
+    "sha256": "4a3eaa9e66efda0dc786993321a85750a65992d5c4c12656553ef50c3228e8fa",
+    "match": false,
+    "classification": "OFFICIAL_CLOAD_REPACK_DIFFERS_FROM_NON_AUTHORITATIVE_HISTORICAL_ZIP_HASH",
+    "completionImpact": "NONE_COMMIT_AND_TREE_PROVENANCE_VERIFIED"
+  },
+  "extractedReferenceTree": {
+    "path": "Graphify/14 AFFiNE Reference/Reference Tree/",
+    "status": "EXTRACTED_READ_ONLY_REFERENCE",
+    "packageVersion": "0.26.3"
+  },
+  "activeCodebaseVersion": "0.27.0",
+  "activeCodebasePackageSha256": "6ce694262f8b3df1ca4bcf54acac62d60ef4bf7784419f1bfefb9858077e4ddf",
+  "capabilitiesCompared": 110,
+  "searchIncompleteCapabilities": 0,
+  "capabilityEvidencePairs": 1210,
+  "byteIdenticalEvidencePairs": 1105,
+  "versionDeltaEvidencePairs": 105,
+  "zeroCurrentPathClassifications": [
+    {
+      "capabilityId": "MR-CAP-056",
+      "name": "Remote conversion",
+      "comparisonStatus": "ABSENT_REMOTE_BOUNDARY_LOCAL_CONVERTERS_EXCLUDED",
+      "semanticMatchCount": 0,
+      "decision": "KEEP_EXISTING"
+    },
+    {
+      "capabilityId": "MR-CAP-057",
+      "name": "Remote OCR",
+      "comparisonStatus": "ABSENT_REMOTE_BOUNDARY",
+      "semanticMatchCount": 0,
+      "decision": "KEEP_EXISTING"
+    },
+    {
+      "capabilityId": "MR-CAP-060",
+      "name": "Remote announcements",
+      "comparisonStatus": "ACTIVE_REMOTE_CHANGELOG_AND_RELEASE_NOTES_PRESENT_IN_BOTH",
+      "semanticMatchCount": 12,
+      "decision": "KEEP_AND_ADAPT"
+    },
+    {
+      "capabilityId": "MR-CAP-064",
+      "name": "Dead code",
+      "comparisonStatus": "DEAD_CODE_CANDIDATE_LEDGER_COMPARED_NO_DELETION_PROOF",
+      "semanticMatchCount": 0,
+      "decision": "NO_TRANSPLANT_REQUIRED"
+    },
+    {
+      "capabilityId": "MR-CAP-093",
+      "name": "Quarantine",
+      "comparisonStatus": "PARTIAL_PRESERVE_FIRST_PATTERNS_NO_COHERENT_MODULE",
+      "semanticMatchCount": 26,
+      "decision": "REPAIR_PARTIAL"
+    },
+    {
+      "capabilityId": "MR-CAP-105",
+      "name": "SBOM",
+      "comparisonStatus": "DEPENDENCY_INPUTS_PRESENT_NO_SBOM_GENERATOR",
+      "semanticMatchCount": 0,
+      "decision": "KEEP_AND_WRAP"
+    }
+  ],
+  "transplantCandidatesMapped": 110,
+  "transplantCandidatesApproved": 0,
+  "parityCompleted": true,
+  "parityMeaning": "All 110 capabilities were searched against active source and the pinned reference. This records source parity evidence, not application implementation or release verification.",
+  "implementationPerformed": false,
+  "externalBlocker": "",
+  "generatedAt": "2026-07-29T08:25:18.401507Z"
+}

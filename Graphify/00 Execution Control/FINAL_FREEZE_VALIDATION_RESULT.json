@@ -1,0 +1,4453 @@
+{
+  "freezeRunId": "mindroom-graphify-lineage-review-candidate-20260801-193148",
+  "officialValidatorRunId": "mindroom-graphify-lineage-validator-20260801-193148",
+  "externalReviewRunId": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
+  "mappingStatus": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
+  "independentReviewStatus": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
+  "planningFreezeStatus": "NOT_FROZEN",
+  "wave0Readiness": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+  "codebaseExecutionStatus": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+  "finalReleaseReceiptStatus": "NOT_VERIFIED",
+  "canonicalCounts": {
+    "masterPlans": 3,
+    "requirements": 1782,
+    "supersessions": 278,
+    "legacyLineageRecords": 278,
+    "capabilities": 161,
+    "changeRecords": 161,
+    "tasks": 162,
+    "primaryTasks": 161,
+    "bootstrapTasks": 1,
+    "tests": 338,
+    "fixtureCategories": 6,
+    "canonicalFixtureRecords": 6,
+    "releaseWaves": 6,
+    "waveGates": 6,
+    "capabilityValidationGates": 161,
+    "applicationGates": 1,
+    "adrs": 14,
+    "publicEntrypoints": 161
+  },
+  "manifestRecordCount": 166,
+  "manifestAggregateHash": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
+  "codebaseFileCount": 10080,
+  "codebaseDirectoryCount": 2548,
+  "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+  "validatorCheckCount": 188,
+  "challengeTestCount": 79,
+  "blockingDefectCount": 3,
+  "repairRunId": "mindroom-graphify-lineage-repair-20260801-193148",
+  "gateTestSynchronizationStatus": "PASS",
+  "warningSummary": [
+    {
+      "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+      "releaseWave": "WAVE_1",
+      "blockingGateIds": [
+        "GATE-WAVE_1"
+      ]
+    },
+    {
+      "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+      "releaseWave": "WAVE_4",
+      "blockingGateIds": [
+        "GATE-WAVE_4"
+      ]
+    }
+  ],
+  "timestamp": "2026-08-05T14:52:11+03:00",
+  "validatorSourceHash": "333ff93c0263efae98731e6e7ff0ed97c7ac010af663d792926f05288c1fb9ec",
+  "challengeSourceHash": "a8e6750b0dee256513d56cf908ca701aad606c6f5c1a6b5b4cecbbab2602c48b",
+  "verifierSourceHash": "9f345bf1f907e061a957f8f9585e47dc9ab05d325ac7ccca5fe2babfdbe44b0d",
+  "validationTarget": "LIVE_REPOSITORY",
+  "candidateRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify",
+  "overridesUsed": false,
+  "temporaryChallengeId": null,
+  "validationMode": "FULL_TECHNICAL_CERTIFICATION",
+  "validationResult": {
+    "freezeRunId": "mindroom-graphify-lineage-review-candidate-20260801-193148",
+    "status": "PASS",
+    "failedChecksCount": 0,
+    "checks": [
+      {
+        "checkId": "AUTH-01",
+        "category": "authority",
+        "description": "Canonical status file exists",
+        "status": "PASS",
+        "method": "direct path existence",
+        "actual": "00 Execution Control/STATUS.json",
+        "expected": "00 Execution Control/STATUS.json",
+        "evidence": [
+          "FINAL_AUTHORITY_INDEX.json"
+        ]
+      },
+      {
+        "checkId": "AUTH-02",
+        "category": "authority",
+        "description": "Exactly one canonical status path is defined",
+        "status": "PASS",
+        "method": "independent authority-index enumeration",
+        "actual": [
+          "00 Execution Control/STATUS.json"
+        ],
+        "expected": [
+          "00 Execution Control/STATUS.json"
+        ],
+        "evidence": [
+          "FINAL_AUTHORITY_INDEX.json"
+        ]
+      },
+      {
+        "checkId": "AUTH-03",
+        "category": "authority",
+        "description": "Every authority-index path exists",
+        "status": "PASS",
+        "method": "filesystem existence",
+        "actual": [],
+        "expected": [],
+        "evidence": [
+          "00 Execution Control/STATUS.json",
+          "11 Completion/FINAL_GATE_REPAIR_AUTHORITY_INVENTORY_CANDIDATE.jsonl",
+          "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl",
+          "11 Completion/validate_final_graphify_freeze.py",
+          "11 Completion/run_final_freeze_challenges.py",
+          "11 Completion/verify_step11b_results.py",
+          "03 Capability Map/CAPABILITY_REGISTRY.json",
+          "09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+          "10 Verification/REQUIREMENT_TEST_MATRIX.jsonl",
+          "10 Verification/RELEASE_GATE_MATRIX.json",
+          "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl",
+          "11 Completion/FINAL_REQUIREMENT_LINEAGE_RECONCILIATION_REPORT.json",
+          "11 Completion/FINAL_CAPABILITY_TASK_REQUIREMENT_TRACEABILITY_REPORT.json",
+          "00 Execution Control/FINAL_LONG_PATH_BACKUP_VERIFICATION.json",
+          "11 Completion/FINAL_LINEAGE_REPAIR_INDEPENDENT_REVIEW_PACKAGE.json",
+          "11 Completion/FINAL_LINEAGE_REPAIR_INDEPENDENT_REVIEW_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "AUTH-04",
+        "category": "authority",
+        "description": "Every included inventory path exists",
+        "status": "PASS",
+        "method": "filesystem existence",
+        "actual": [],
+        "expected": [],
+        "evidence": [
+          "00 Execution Control/FINAL_LONG_PATH_BACKUP_VERIFICATION.json",
+          "00 Execution Control/schemas/capability-registry.schema.json",
+          "00 Execution Control/schemas/deletion-candidate.schema.json",
+          "00 Execution Control/schemas/deletion-receipt.schema.json",
+          "00 Execution Control/schemas/dependency-edge.schema.json",
+          "00 Execution Control/schemas/exact-location-registry.schema.json",
+          "00 Execution Control/schemas/final-release-receipt.schema.json",
+          "00 Execution Control/schemas/graphify-mapping-receipt.schema.json",
+          "00 Execution Control/schemas/hash-manifest-checkpoint.schema.json",
+          "00 Execution Control/schemas/implementation-task.schema.json",
+          "00 Execution Control/schemas/repository-baseline.schema.json",
+          "00 Execution Control/schemas/requirement-registry.schema.json",
+          "00 Execution Control/schemas/runtime-registration.schema.json",
+          "00 Execution Control/schemas/status.schema.json",
+          "00 Execution Control/schemas/symbol-registry.schema.json",
+          "00 Execution Control/schemas/task-record.schema.json",
+          "00 Execution Control/schemas/test-receipt.schema.json",
+          "00 Execution Control/schemas/transplant-receipt.schema.json",
+          "01 Corpus Inventory/ARCHIVE_INVENTORY.jsonl",
+          "01 Corpus Inventory/BINARY_AND_RUNTIME_ASSET_INVENTORY.jsonl",
+          "01 Corpus Inventory/CORPUS_SUMMARY.md",
+          "01 Corpus Inventory/GRAPH_LAYER_FILE_REGISTRY.jsonl",
+          "01 Corpus Inventory/MARKDOWN_MIGRATION_LEDGER.jsonl",
+          "01 Corpus Inventory/PACKAGE_INVENTORY.json",
+          "01 Corpus Inventory/PLATFORM_FILE_INVENTORY.jsonl",
+          "01 Corpus Inventory/REPOSITORY_INVENTORY.jsonl",
+          "02 Architecture Map/ARCHITECTURE_MAP.md",
+          "02 Architecture Map/ARCHITECTURE_NODES.jsonl",
+          "02 Architecture Map/BUILD_AND_PACKAGING_MAP.md",
+          "02 Architecture Map/COMMAND_AND_EVENT_MAP.jsonl",
+          "02 Architecture Map/ENTRYPOINT_AND_BOOTSTRAP_REGISTRY.jsonl",
+          "02 Architecture Map/IPC_AND_PRELOAD_MAP.jsonl",
+          "02 Architecture Map/NETWORK_BOUNDARY_MAP.jsonl",
+          "02 Architecture Map/PERSISTENCE_AND_DATA_FLOW.md",
+          "02 Architecture Map/RUNTIME_REGISTRATION_REGISTRY.jsonl",
+          "02 Architecture Map/RUNTIME_REGISTRATION_SCAN_SUMMARY.json",
+          "02 Architecture Map/WORKER_MAP.jsonl",
+          "03 Capability Map/CAPABILITY_DEPENDENCY_ORDER.json",
+          "03 Capability Map/CAPABILITY_EVIDENCE.jsonl",
+          "03 Capability Map/CAPABILITY_MAP.md",
+          "03 Capability Map/CAPABILITY_REGISTRY.json",
+          "03 Capability Map/CAPABILITY_SOURCE_SEARCH_RECEIPTS.jsonl",
+          "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl",
+          "03 Capability Map/REQUIREMENT_REGISTRY.jsonl",
+          "03 Capability Map/REQUIREMENT_SUPERSESSION_MAP.jsonl",
+          "03 Capability Map/REQUIREMENT_TRACEABILITY_MATRIX.jsonl",
+          "04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl",
+          "04 Exact Location Registry/CHANGE_TRACEABILITY_MATRIX.jsonl",
+          "04 Exact Location Registry/EXACT_LOCATION_COVERAGE.json",
+          "04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json",
+          "04 Exact Location Registry/LOCATION_SYNCHRONIZATION_RESULT.json",
+          "04 Exact Location Registry/SYMBOL_REGISTRY.jsonl",
+          "05 Dependency and Impact/CAPABILITY_DEPENDENCY_GRAPH.json",
+          "05 Dependency and Impact/CIRCULAR_DEPENDENCY_REPORT.json",
+          "05 Dependency and Impact/DEAD_CODE_CANDIDATES.jsonl",
+          "05 Dependency and Impact/DEPENDENCY_EDGES.jsonl",
+          "05 Dependency and Impact/DEPENDENCY_SUMMARY.md",
+          "05 Dependency and Impact/DUPLICATE_IMPLEMENTATION_CANDIDATES.jsonl",
+          "05 Dependency and Impact/ENDPOINT_RESOLUTION_SUMMARY.json",
+          "05 Dependency and Impact/EXCLUDED_SYSTEM_BOUNDARY_MAP.jsonl",
+          "05 Dependency and Impact/Knowledge Graph/CAPABILITY_DEPENDENCY_GRAPH.json",
+          "05 Dependency and Impact/Knowledge Graph/CORE_RUNTIME_HOTSPOTS.json",
+          "05 Dependency and Impact/Knowledge Graph/EDGES.jsonl",
+          "05 Dependency and Impact/Knowledge Graph/EXCLUDED_SYSTEM_GRAPH.json",
+          "05 Dependency and Impact/Knowledge Graph/GENERATED_CODE_GRAPH.json",
+          "05 Dependency and Impact/Knowledge Graph/GENERATED_CODE_PROVENANCE.jsonl",
+          "05 Dependency and Impact/Knowledge Graph/graph.html",
+          "05 Dependency and Impact/Knowledge Graph/graph.json",
+          "05 Dependency and Impact/Knowledge Graph/GRAPH_BUILD_EVIDENCE.json",
+          "05 Dependency and Impact/Knowledge Graph/GRAPH_HEALTH.json",
+          "05 Dependency and Impact/Knowledge Graph/GRAPH_INDEX.json",
+          "05 Dependency and Impact/Knowledge Graph/GRAPH_LAYER_MANIFEST.json",
+          "05 Dependency and Impact/Knowledge Graph/GRAPH_REPORT.md",
+          "05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+          "05 Dependency and Impact/Knowledge Graph/MIGRATION_COMPATIBILITY_GRAPH.json",
+          "05 Dependency and Impact/Knowledge Graph/NODE_ID_REGISTRY.jsonl",
+          "05 Dependency and Impact/Knowledge Graph/NODES.jsonl",
+          "05 Dependency and Impact/Knowledge Graph/PACKAGE_DEPENDENCY_GRAPH.json",
+          "05 Dependency and Impact/Knowledge Graph/RUNTIME_REGISTRATION_GRAPH.json",
+          "05 Dependency and Impact/Knowledge Graph/SELF_LOOP_CLASSIFICATION.jsonl",
+          "05 Dependency and Impact/Knowledge Graph/TEST_COVERAGE_GRAPH.json",
+          "05 Dependency and Impact/Knowledge Graph/VENDOR_TOOL_GRAPH.json",
+          "05 Dependency and Impact/PLANNED_PACKAGE_DEPENDENCY_GRAPH.json",
+          "05 Dependency and Impact/REMOVAL_BLAST_RADIUS.jsonl",
+          "05 Dependency and Impact/REORGANISATION_BLAST_RADIUS.jsonl",
+          "05 Dependency and Impact/RUNTIME_REACHABILITY_REPORT.jsonl",
+          "05 Dependency and Impact/SAME_WAVE_EXECUTION_ORDER.json",
+          "05 Dependency and Impact/UNRESOLVED_ENDPOINTS.jsonl",
+          "06 Folder Ownership/CAPABILITY_TO_PATH_MAP.json",
+          "06 Folder Ownership/EXECUTION_PLAN_VALIDATION_RESULT.json",
+          "06 Folder Ownership/FOLDER_OWNERSHIP_MATRIX.json",
+          "06 Folder Ownership/PACKAGE_BOUNDARY_PLAN.md",
+          "06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl",
+          "06 Folder Ownership/TARGET_CODEBASE_TREE.md",
+          "07 Reorganisation/BATCH_EXECUTION_PLAN.md",
+          "07 Reorganisation/IMPORT_AND_CONFIG_UPDATE_MATRIX.jsonl",
+          "07 Reorganisation/MOVE_PLAN.jsonl",
+          "07 Reorganisation/REORGANISATION_LEDGER.jsonl",
+          "07 Reorganisation/ROLLBACK_PLAN.jsonl",
+          "08 Cleanup/CLEANUP_VALIDATION_RESULT.json",
+          "08 Cleanup/Deletion Receipts/deletion-receipt.schema.json",
+          "08 Cleanup/DELETION_CANDIDATES.jsonl",
+          "08 Cleanup/DELETION_PROOF_QUEUE.jsonl",
+          "08 Cleanup/DELETION_RECEIPTS.jsonl",
+          "08 Cleanup/DUPLICATE_CODE_CANDIDATES.jsonl",
+          "08 Cleanup/PONYTAIL_AUDIT.jsonl",
+          "08 Cleanup/PONYTAIL_AUDIT.md",
+          "08 Cleanup/PONYTAIL_CANDIDATES.jsonl",
+          "08 Cleanup/PONYTAIL_CHANGE_MAP.jsonl",
+          "08 Cleanup/PONYTAIL_VALIDATION_RESULT.json",
+          "08 Cleanup/QUARANTINE_PLAN.md",
+          "09 Implementation/ADAPTATION_TASKS.jsonl",
+          "09 Implementation/IMPLEMENTATION_QUEUE.md",
+          "09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+          "09 Implementation/NEW_CAPABILITY_TASKS.jsonl",
+          "09 Implementation/Transplant Receipts/transplant-receipt.schema.json",
+          "09 Implementation/TRANSPLANT_RECEIPTS.jsonl",
+          "09 Implementation/TRANSPLANT_SEARCH_QUEUE.jsonl",
+          "10 Verification/APP_DELETION_SURVIVAL_TEST_PLAN.md",
+          "10 Verification/BASELINE_VERIFICATION_RESULTS.jsonl",
+          "10 Verification/CROSS_PLATFORM_TEST_MATRIX.md",
+          "10 Verification/FIXTURE_QA_MATRIX.md",
+          "10 Verification/MIGRATION_TEST_PLAN.md",
+          "10 Verification/OFFLINE_TEST_PLAN.md",
+          "10 Verification/PACKAGING_TEST_PLAN.md",
+          "10 Verification/RELEASE_GATE_MATRIX.json",
+          "10 Verification/REQUIREMENT_TEST_MATRIX.jsonl",
+          "10 Verification/ROLLBACK_VERIFICATION_PLAN.md",
+          "10 Verification/TEST_COMMAND_REGISTRY.json",
+          "10 Verification/TEST_RECEIPTS.jsonl",
+          "11 Completion/FINAL_CAPABILITY_TASK_REQUIREMENT_TRACEABILITY_REPORT.json",
+          "11 Completion/FINAL_DEPENDENCY_ARCHITECTURE_REPORT.json",
+          "11 Completion/FINAL_GATE_REPAIR_AUTHORITY_INVENTORY_CANDIDATE.jsonl",
+          "11 Completion/FINAL_REPAIR_REPRODUCTION_REPORT.json",
+          "11 Completion/FINAL_REQUIREMENT_LINEAGE_RECONCILIATION_REPORT.json",
+          "11 Completion/FINAL_TEST_WAVE_OWNERSHIP.jsonl",
+          "11 Completion/FINAL_WAVE_GATE_TEST_AUDIT.json",
+          "11 Completion/FINAL_WAVE_GATE_TEST_SYNCHRONIZATION_REPORT.json",
+          "11 Completion/FINAL_WAVE_SYNCHRONIZATION_REPORT.json",
+          "11 Completion/IMPLEMENTATION_CONTRACT_FINAL_REPAIR_REPORT.json",
+          "11 Completion/run_final_freeze_challenges.py",
+          "11 Completion/validate_final_graphify_freeze.py",
+          "11 Completion/verify_step11b_results.py",
+          "12 Source Documents/AFFINE_PROVENANCE.md",
+          "12 Source Documents/Architecture Decisions/ADR-0001-canonical-file-backed-source-of-truth.md",
+          "12 Source Documents/Architecture Decisions/ADR-0002-canvas-bundle-format.md",
+          "12 Source Documents/Architecture Decisions/ADR-0003-mind-map-bundle-format.md",
+          "12 Source Documents/Architecture Decisions/ADR-0004-global-graph-projection-versus-cache.md",
+          "12 Source Documents/Architecture Decisions/ADR-0005-stable-ids-and-path-aliases.md",
+          "12 Source Documents/Architecture Decisions/ADR-0006-local-semantic-index-technology.md",
+          "12 Source Documents/Architecture Decisions/ADR-0007-semantic-suggestion-persistence.md",
+          "12 Source Documents/Architecture Decisions/ADR-0008-calendar-recurrence-representation.md",
+          "12 Source Documents/Architecture Decisions/ADR-0009-calendar-file-format-and-ics-compatibility.md",
+          "12 Source Documents/Architecture Decisions/ADR-0010-finance-transaction-storage-format.md",
+          "12 Source Documents/Architecture Decisions/ADR-0011-finance-encryption-boundaries.md",
+          "12 Source Documents/Architecture Decisions/ADR-0012-multi-currency-behavior.md",
+          "12 Source Documents/Architecture Decisions/ADR-0013-external-calendar-adapter-boundaries.md",
+          "12 Source Documents/Architecture Decisions/ADR-0014-folder-and-workspace-inheritance-behavior.md",
+          "12 Source Documents/LICENCE_AND_ATTRIBUTION_MAP.md",
+          "12 Source Documents/Product Expansion/PRODUCT_EXPANSION_2026.md",
+          "12 Source Documents/SBOM_PLAN.md",
+          "12 Source Documents/SOURCE_DOCUMENT_INDEX.json",
+          "12 Source Documents/THIRD_PARTY_CODE_REGISTER.jsonl",
+          "Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
+          "Master Plan/02-EVERYTHING-WE-ARE-DELETING.md",
+          "Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md"
+        ]
+      },
+      {
+        "checkId": "AUTH-05",
+        "category": "authority",
+        "description": "Every exclusion has a reason",
+        "status": "PASS",
+        "method": "inventory field validation",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "AUTH-06",
+        "category": "authority",
+        "description": "No normalized inventory path collisions exist",
+        "status": "PASS",
+        "method": "case-folded normalized path comparison",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "AUTH-07",
+        "category": "authority",
+        "description": "No cache, log, historical file, or repair tool is authoritative",
+        "status": "PASS",
+        "method": "forbidden path classification",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "AUTH-08",
+        "category": "authority",
+        "description": "No authoritative inventory artifact is omitted from the manifest",
+        "status": "PASS",
+        "method": "inventory-to-manifest set difference",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "MAN-01",
+        "category": "manifest",
+        "description": "Manifest does not contain itself",
+        "status": "PASS",
+        "method": "normalized path comparison",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "MAN-02",
+        "category": "manifest",
+        "description": "Every manifest path exists",
+        "status": "PASS",
+        "method": "filesystem existence",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "MAN-03",
+        "category": "manifest",
+        "description": "Every manifest SHA-256 matches live content",
+        "status": "PASS",
+        "method": "independent SHA-256 of file bytes",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "MAN-04",
+        "category": "manifest",
+        "description": "Every manifest path is included in the authority inventory",
+        "status": "PASS",
+        "method": "manifest-to-inventory set difference",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "MAN-05",
+        "category": "manifest",
+        "description": "No duplicate normalized manifest paths exist",
+        "status": "PASS",
+        "method": "case-folded normalized path comparison",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "MAN-06",
+        "category": "manifest",
+        "description": "No temporary or cache files appear in the manifest",
+        "status": "PASS",
+        "method": "forbidden path classification",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "MAN-07",
+        "category": "manifest",
+        "description": "Candidate manifest aggregate hash is reproducible from live non-self-referential rows",
+        "status": "PASS",
+        "method": "independent sorted path:file-hash aggregate; protected governance receipts are not authoritative for the pre-review candidate aggregate because the candidate manifest is rebuilt last and those receipts cannot be modified in this repair",
+        "actual": "9c8a2376c1b4d85909826d836a54ef4615794417e6b606de43b1a937755fb889",
+        "expected": "64-character SHA-256 aggregate",
+        "evidence": [
+          "MAN-01",
+          "MAN-03",
+          "MAN-05"
+        ]
+      },
+      {
+        "checkId": "MAN-08",
+        "category": "manifest",
+        "description": "Protected governance receipts agree with each other on the historical candidate manifest aggregate hash",
+        "status": "PASS",
+        "method": "cross-document protected-receipt consistency; the candidate manifest itself is rebuilt last and is not required to match protected receipts in this repair",
+        "actual": {
+          "00 Execution Control/STATUS.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295"
+        },
+        "expected": "one shared historical manifest aggregate hash",
+        "evidence": [
+          "00 Execution Control/STATUS.json",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "CNT-01",
+        "category": "counts",
+        "description": "Master Plan count and canonical names",
+        "status": "PASS",
+        "method": "canonical source-file enumeration",
+        "actual": [
+          "01-EVERYTHING-WE-ARE-KEEPING.md",
+          "02-EVERYTHING-WE-ARE-DELETING.md",
+          "03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md"
+        ],
+        "expected": [
+          "01-EVERYTHING-WE-ARE-KEEPING.md",
+          "02-EVERYTHING-WE-ARE-DELETING.md",
+          "03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md"
+        ],
+        "evidence": [
+          "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+          "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+          "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md"
+        ]
+      },
+      {
+        "checkId": "CNT-02",
+        "category": "counts",
+        "description": "Requirement registry count agrees with independent traceability IDs",
+        "status": "PASS",
+        "method": "independent registry ID set equality",
+        "actual": 1782,
+        "expected": 1782,
+        "evidence": [
+          "REQUIREMENT_REGISTRY.jsonl",
+          "REQUIREMENT_TRACEABILITY_MATRIX.jsonl"
+        ]
+      },
+      {
+        "checkId": "CNT-03",
+        "category": "counts",
+        "description": "Supersession records are unique and complete",
+        "status": "PASS",
+        "method": "source registry uniqueness and required fields",
+        "actual": 278,
+        "expected": 278,
+        "evidence": [
+          "REQUIREMENT_SUPERSESSION_MAP.jsonl"
+        ]
+      },
+      {
+        "checkId": "LIN-01",
+        "category": "lineage",
+        "description": "Every legacy requirement ID is unique",
+        "status": "PASS",
+        "method": "lineage-map ID multiplicity",
+        "actual": [],
+        "expected": [],
+        "evidence": [
+          "MR-ADD-004",
+          "MR-ADD-018",
+          "MR-ADD-019",
+          "MR-ADD-020",
+          "MR-ADD-021",
+          "MR-ADD-048",
+          "MR-ADD-049",
+          "MR-ADD-056",
+          "MR-ADD-063",
+          "MR-ADD-064",
+          "MR-ADD-075",
+          "MR-ADD-081",
+          "MR-ADD-082",
+          "MR-ADD-083",
+          "MR-ADD-088",
+          "MR-ADD-093",
+          "MR-ADD-095",
+          "MR-ADD-106",
+          "MR-ADD-110",
+          "MR-ADD-112",
+          "MR-ADD-116",
+          "MR-ADD-122",
+          "MR-ADD-131",
+          "MR-ADD-132",
+          "MR-ADD-147",
+          "MR-ADD-171",
+          "MR-ADD-180",
+          "MR-ADD-191",
+          "MR-ADD-200",
+          "MR-ADD-229",
+          "MR-ADD-234",
+          "MR-ADD-235",
+          "MR-ADD-246",
+          "MR-ADD-247",
+          "MR-ADD-248",
+          "MR-ADD-252",
+          "MR-ADD-258",
+          "MR-ADD-259",
+          "MR-ADD-262",
+          "MR-ADD-272",
+          "MR-ADD-288",
+          "MR-ADD-318",
+          "MR-ADD-319",
+          "MR-ADD-320",
+          "MR-ADD-321",
+          "MR-ADD-322",
+          "MR-ADD-323",
+          "MR-ADD-324",
+          "MR-ADD-325",
+          "MR-ADD-326",
+          "MR-ADD-327",
+          "MR-ADD-328",
+          "MR-ADD-329",
+          "MR-ADD-330",
+          "MR-ADD-331",
+          "MR-ADD-332",
+          "MR-ADD-333",
+          "MR-ADD-334",
+          "MR-ADD-335",
+          "MR-ADD-336",
+          "MR-ADD-337",
+          "MR-ADD-338",
+          "MR-ADD-339",
+          "MR-ADD-340",
+          "MR-ADD-341",
+          "MR-ADD-342",
+          "MR-ADD-343",
+          "MR-ADD-344",
+          "MR-ADD-345",
+          "MR-ADD-346",
+          "MR-ADD-347",
+          "MR-ADD-348",
+          "MR-ADD-349",
+          "MR-ADD-350",
+          "MR-ADD-351",
+          "MR-ADD-352",
+          "MR-ADD-353",
+          "MR-ADD-354",
+          "MR-COMPAT-008",
+          "MR-COMPAT-026",
+          "MR-KEEP-038",
+          "MR-KEEP-071",
+          "MR-KEEP-072",
+          "MR-KEEP-073",
+          "MR-KEEP-088",
+          "MR-KEEP-094",
+          "MR-KEEP-095",
+          "MR-KEEP-096",
+          "MR-KEEP-118",
+          "MR-KEEP-121",
+          "MR-KEEP-122",
+          "MR-KEEP-124",
+          "MR-KEEP-125",
+          "MR-KEEP-130",
+          "MR-KEEP-137",
+          "MR-KEEP-151",
+          "MR-KEEP-153",
+          "MR-KEEP-154",
+          "MR-KEEP-155",
+          "MR-KEEP-166",
+          "MR-KEEP-179",
+          "MR-KEEP-187",
+          "MR-KEEP-197",
+          "MR-KEEP-210",
+          "MR-KEEP-216",
+          "MR-KEEP-220",
+          "MR-KEEP-236",
+          "MR-KEEP-253",
+          "MR-KEEP-266",
+          "MR-KEEP-273",
+          "MR-KEEP-297",
+          "MR-KEEP-310",
+          "MR-LEGAL-003",
+          "MR-LEGAL-025",
+          "MR-LEGAL-031",
+          "MR-LEGAL-036",
+          "MR-LEGAL-037",
+          "MR-PROCESS-003",
+          "MR-PROCESS-018",
+          "MR-PROCESS-057",
+          "MR-PROCESS-078",
+          "MR-PROCESS-085",
+          "MR-PROCESS-086",
+          "MR-PROCESS-092",
+          "MR-PROCESS-114",
+          "MR-PROCESS-117",
+          "MR-PROCESS-120",
+          "MR-PROCESS-125",
+          "MR-PROCESS-156",
+          "MR-PROCESS-157",
+          "MR-PROCESS-158",
+          "MR-PROCESS-159",
+          "MR-PROCESS-231",
+          "MR-PROCESS-232",
+          "MR-PROCESS-233",
+          "MR-PROCESS-234",
+          "MR-PROCESS-235",
+          "MR-PROCESS-236",
+          "MR-PROCESS-237",
+          "MR-PROCESS-258",
+          "MR-PROCESS-263",
+          "MR-PROCESS-277",
+          "MR-PROCESS-284",
+          "MR-PROCESS-285",
+          "MR-PROCESS-287",
+          "MR-PROCESS-301",
+          "MR-PROCESS-302",
+          "MR-PROCESS-305",
+          "MR-PROCESS-306",
+          "MR-PROCESS-307",
+          "MR-PROCESS-308",
+          "MR-PROCESS-309",
+          "MR-PROCESS-310",
+          "MR-PROCESS-311",
+          "MR-PROCESS-312",
+          "MR-REMOVE-010",
+          "MR-REMOVE-028",
+          "MR-REMOVE-040",
+          "MR-REMOVE-059",
+          "MR-REMOVE-072",
+          "MR-REMOVE-086",
+          "MR-REMOVE-100",
+          "MR-REMOVE-101",
+          "MR-REMOVE-122",
+          "MR-REMOVE-136",
+          "MR-REMOVE-153",
+          "MR-REMOVE-184",
+          "MR-REQ-0001",
+          "MR-REQ-0003",
+          "MR-REQ-0004",
+          "MR-REQ-0008",
+          "MR-REQ-0009",
+          "MR-REQ-0010",
+          "MR-REQ-0012",
+          "MR-REQ-0014",
+          "MR-REQ-0015",
+          "MR-REQ-0018",
+          "MR-REQ-0026",
+          "MR-REQ-0029",
+          "MR-REQ-0031",
+          "MR-REQ-0033",
+          "MR-REQ-0034",
+          "MR-REQ-0035",
+          "MR-REQ-0042",
+          "MR-REQ-0043",
+          "MR-REQ-0090",
+          "MR-REQ-0099",
+          "MR-REQ-0104",
+          "MR-REQ-0128",
+          "MR-REQ-0141",
+          "MR-REQ-0154",
+          "MR-REQ-0162",
+          "MR-REQ-0174",
+          "MR-REQ-0179",
+          "MR-REQ-0189",
+          "MR-REQ-0190",
+          "MR-REQ-0198",
+          "MR-REQ-0214",
+          "MR-REQ-0215",
+          "MR-REQ-0216",
+          "MR-REQ-0217",
+          "MR-REQ-0223",
+          "MR-REQ-0248",
+          "MR-REQ-0257",
+          "MR-REQ-0272",
+          "MR-REQ-0295",
+          "MR-REQ-0305",
+          "MR-REQ-0307",
+          "MR-REQ-0313",
+          "MR-REQ-0314",
+          "MR-REQ-0317",
+          "MR-REQ-0318",
+          "MR-REQ-0320",
+          "MR-REQ-0321",
+          "MR-REQ-0327",
+          "MR-REQ-0328",
+          "MR-REQ-0329",
+          "MR-REQ-0332",
+          "MR-REQ-0336",
+          "MR-REQ-0338",
+          "MR-REQ-0350",
+          "MR-REQ-0353",
+          "MR-REQ-0355",
+          "MR-REQ-0358",
+          "MR-REQ-0359",
+          "MR-REQ-0365",
+          "MR-REQ-0373",
+          "MR-REQ-0380",
+          "MR-REQ-0382",
+          "MR-REQ-0387",
+          "MR-REQ-0388",
+          "MR-REQ-0390",
+          "MR-REQ-0410",
+          "MR-REQ-0422",
+          "MR-REQ-0426",
+          "MR-REQ-0434",
+          "MR-REQ-0437",
+          "MR-REQ-0448",
+          "MR-REQ-0449",
+          "MR-REQ-0457",
+          "MR-REQ-0458",
+          "MR-REQ-0459",
+          "MR-REQ-0461",
+          "MR-REQ-0462",
+          "MR-REQ-0464",
+          "MR-REQ-0479",
+          "MR-REQ-0489",
+          "MR-REQ-0491",
+          "MR-REQ-0492",
+          "MR-REQ-0507",
+          "MR-REQ-0510",
+          "MR-REQ-0515",
+          "MR-REQ-0526",
+          "MR-REQ-0530",
+          "MR-REQ-0532",
+          "MR-REQ-0534",
+          "MR-REQ-0542",
+          "MR-REQ-0547",
+          "MR-REQ-0550",
+          "MR-REQ-0556",
+          "MR-REQ-0559",
+          "MR-REQ-0560",
+          "MR-REQ-0561",
+          "MR-REQ-0577",
+          "MR-REQ-0612",
+          "MR-VERIFY-014",
+          "MR-VERIFY-025",
+          "MR-VERIFY-056",
+          "MR-VERIFY-060",
+          "MR-VERIFY-061",
+          "MR-VERIFY-063",
+          "MR-VERIFY-064",
+          "MR-VERIFY-065",
+          "MR-VERIFY-082",
+          "MR-VERIFY-083",
+          "MR-VERIFY-089",
+          "MR-VERIFY-093",
+          "MR-VERIFY-106"
+        ]
+      },
+      {
+        "checkId": "LIN-02",
+        "category": "lineage",
+        "description": "Lineage map exactly covers every referenced non-canonical source ID",
+        "status": "PASS",
+        "method": "source-registry set difference",
+        "actual": [
+          "MR-ADD-004",
+          "MR-ADD-018",
+          "MR-ADD-019",
+          "MR-ADD-020",
+          "MR-ADD-021",
+          "MR-ADD-048",
+          "MR-ADD-049",
+          "MR-ADD-056",
+          "MR-ADD-063",
+          "MR-ADD-064",
+          "MR-ADD-075",
+          "MR-ADD-081",
+          "MR-ADD-082",
+          "MR-ADD-083",
+          "MR-ADD-088",
+          "MR-ADD-093",
+          "MR-ADD-095",
+          "MR-ADD-106",
+          "MR-ADD-110",
+          "MR-ADD-112",
+          "MR-ADD-116",
+          "MR-ADD-122",
+          "MR-ADD-131",
+          "MR-ADD-132",
+          "MR-ADD-147",
+          "MR-ADD-171",
+          "MR-ADD-180",
+          "MR-ADD-191",
+          "MR-ADD-200",
+          "MR-ADD-229",
+          "MR-ADD-234",
+          "MR-ADD-235",
+          "MR-ADD-246",
+          "MR-ADD-247",
+          "MR-ADD-248",
+          "MR-ADD-252",
+          "MR-ADD-258",
+          "MR-ADD-259",
+          "MR-ADD-262",
+          "MR-ADD-272",
+          "MR-ADD-288",
+          "MR-ADD-318",
+          "MR-ADD-319",
+          "MR-ADD-320",
+          "MR-ADD-321",
+          "MR-ADD-322",
+          "MR-ADD-323",
+          "MR-ADD-324",
+          "MR-ADD-325",
+          "MR-ADD-326",
+          "MR-ADD-327",
+          "MR-ADD-328",
+          "MR-ADD-329",
+          "MR-ADD-330",
+          "MR-ADD-331",
+          "MR-ADD-332",
+          "MR-ADD-333",
+          "MR-ADD-334",
+          "MR-ADD-335",
+          "MR-ADD-336",
+          "MR-ADD-337",
+          "MR-ADD-338",
+          "MR-ADD-339",
+          "MR-ADD-340",
+          "MR-ADD-341",
+          "MR-ADD-342",
+          "MR-ADD-343",
+          "MR-ADD-344",
+          "MR-ADD-345",
+          "MR-ADD-346",
+          "MR-ADD-347",
+          "MR-ADD-348",
+          "MR-ADD-349",
+          "MR-ADD-350",
+          "MR-ADD-351",
+          "MR-ADD-352",
+          "MR-ADD-353",
+          "MR-ADD-354",
+          "MR-COMPAT-008",
+          "MR-COMPAT-026",
+          "MR-KEEP-038",
+          "MR-KEEP-071",
+          "MR-KEEP-072",
+          "MR-KEEP-073",
+          "MR-KEEP-088",
+          "MR-KEEP-094",
+          "MR-KEEP-095",
+          "MR-KEEP-096",
+          "MR-KEEP-118",
+          "MR-KEEP-121",
+          "MR-KEEP-122",
+          "MR-KEEP-124",
+          "MR-KEEP-125",
+          "MR-KEEP-130",
+          "MR-KEEP-137",
+          "MR-KEEP-151",
+          "MR-KEEP-153",
+          "MR-KEEP-154",
+          "MR-KEEP-155",
+          "MR-KEEP-166",
+          "MR-KEEP-179",
+          "MR-KEEP-187",
+          "MR-KEEP-197",
+          "MR-KEEP-210",
+          "MR-KEEP-216",
+          "MR-KEEP-220",
+          "MR-KEEP-236",
+          "MR-KEEP-253",
+          "MR-KEEP-266",
+          "MR-KEEP-273",
+          "MR-KEEP-297",
+          "MR-KEEP-310",
+          "MR-LEGAL-003",
+          "MR-LEGAL-025",
+          "MR-LEGAL-031",
+          "MR-LEGAL-036",
+          "MR-LEGAL-037",
+          "MR-PROCESS-003",
+          "MR-PROCESS-018",
+          "MR-PROCESS-057",
+          "MR-PROCESS-078",
+          "MR-PROCESS-085",
+          "MR-PROCESS-086",
+          "MR-PROCESS-092",
+          "MR-PROCESS-114",
+          "MR-PROCESS-117",
+          "MR-PROCESS-120",
+          "MR-PROCESS-125",
+          "MR-PROCESS-156",
+          "MR-PROCESS-157",
+          "MR-PROCESS-158",
+          "MR-PROCESS-159",
+          "MR-PROCESS-231",
+          "MR-PROCESS-232",
+          "MR-PROCESS-233",
+          "MR-PROCESS-234",
+          "MR-PROCESS-235",
+          "MR-PROCESS-236",
+          "MR-PROCESS-237",
+          "MR-PROCESS-258",
+          "MR-PROCESS-263",
+          "MR-PROCESS-277",
+          "MR-PROCESS-284",
+          "MR-PROCESS-285",
+          "MR-PROCESS-287",
+          "MR-PROCESS-301",
+          "MR-PROCESS-302",
+          "MR-PROCESS-305",
+          "MR-PROCESS-306",
+          "MR-PROCESS-307",
+          "MR-PROCESS-308",
+          "MR-PROCESS-309",
+          "MR-PROCESS-310",
+          "MR-PROCESS-311",
+          "MR-PROCESS-312",
+          "MR-REMOVE-010",
+          "MR-REMOVE-028",
+          "MR-REMOVE-040",
+          "MR-REMOVE-059",
+          "MR-REMOVE-072",
+          "MR-REMOVE-086",
+          "MR-REMOVE-100",
+          "MR-REMOVE-101",
+          "MR-REMOVE-122",
+          "MR-REMOVE-136",
+          "MR-REMOVE-153",
+          "MR-REMOVE-184",
+          "MR-REQ-0001",
+          "MR-REQ-0003",
+          "MR-REQ-0004",
+          "MR-REQ-0008",
+          "MR-REQ-0009",
+          "MR-REQ-0010",
+          "MR-REQ-0012",
+          "MR-REQ-0014",
+          "MR-REQ-0015",
+          "MR-REQ-0018",
+          "MR-REQ-0026",
+          "MR-REQ-0029",
+          "MR-REQ-0031",
+          "MR-REQ-0033",
+          "MR-REQ-0034",
+          "MR-REQ-0035",
+          "MR-REQ-0042",
+          "MR-REQ-0043",
+          "MR-REQ-0090",
+          "MR-REQ-0099",
+          "MR-REQ-0104",
+          "MR-REQ-0128",
+          "MR-REQ-0141",
+          "MR-REQ-0154",
+          "MR-REQ-0162",
+          "MR-REQ-0174",
+          "MR-REQ-0179",
+          "MR-REQ-0189",
+          "MR-REQ-0190",
+          "MR-REQ-0198",
+          "MR-REQ-0214",
+          "MR-REQ-0215",
+          "MR-REQ-0216",
+          "MR-REQ-0217",
+          "MR-REQ-0223",
+          "MR-REQ-0248",
+          "MR-REQ-0257",
+          "MR-REQ-0272",
+          "MR-REQ-0295",
+          "MR-REQ-0305",
+          "MR-REQ-0307",
+          "MR-REQ-0313",
+          "MR-REQ-0314",
+          "MR-REQ-0317",
+          "MR-REQ-0318",
+          "MR-REQ-0320",
+          "MR-REQ-0321",
+          "MR-REQ-0327",
+          "MR-REQ-0328",
+          "MR-REQ-0329",
+          "MR-REQ-0332",
+          "MR-REQ-0336",
+          "MR-REQ-0338",
+          "MR-REQ-0350",
+          "MR-REQ-0353",
+          "MR-REQ-0355",
+          "MR-REQ-0358",
+          "MR-REQ-0359",
+          "MR-REQ-0365",
+          "MR-REQ-0373",
+          "MR-REQ-0380",
+          "MR-REQ-0382",
+          "MR-REQ-0387",
+          "MR-REQ-0388",
+          "MR-REQ-0390",
+          "MR-REQ-0410",
+          "MR-REQ-0422",
+          "MR-REQ-0426",
+          "MR-REQ-0434",
+          "MR-REQ-0437",
+          "MR-REQ-0448",
+          "MR-REQ-0449",
+          "MR-REQ-0457",
+          "MR-REQ-0458",
+          "MR-REQ-0459",
+          "MR-REQ-0461",
+          "MR-REQ-0462",
+          "MR-REQ-0464",
+          "MR-REQ-0479",
+          "MR-REQ-0489",
+          "MR-REQ-0491",
+          "MR-REQ-0492",
+          "MR-REQ-0507",
+          "MR-REQ-0510",
+          "MR-REQ-0515",
+          "MR-REQ-0526",
+          "MR-REQ-0530",
+          "MR-REQ-0532",
+          "MR-REQ-0534",
+          "MR-REQ-0542",
+          "MR-REQ-0547",
+          "MR-REQ-0550",
+          "MR-REQ-0556",
+          "MR-REQ-0559",
+          "MR-REQ-0560",
+          "MR-REQ-0561",
+          "MR-REQ-0577",
+          "MR-REQ-0612",
+          "MR-VERIFY-014",
+          "MR-VERIFY-025",
+          "MR-VERIFY-056",
+          "MR-VERIFY-060",
+          "MR-VERIFY-061",
+          "MR-VERIFY-063",
+          "MR-VERIFY-064",
+          "MR-VERIFY-065",
+          "MR-VERIFY-082",
+          "MR-VERIFY-083",
+          "MR-VERIFY-089",
+          "MR-VERIFY-093",
+          "MR-VERIFY-106"
+        ],
+        "expected": [
+          "MR-ADD-004",
+          "MR-ADD-018",
+          "MR-ADD-019",
+          "MR-ADD-020",
+          "MR-ADD-021",
+          "MR-ADD-048",
+          "MR-ADD-049",
+          "MR-ADD-056",
+          "MR-ADD-063",
+          "MR-ADD-064",
+          "MR-ADD-075",
+          "MR-ADD-081",
+          "MR-ADD-082",
+          "MR-ADD-083",
+          "MR-ADD-088",
+          "MR-ADD-093",
+          "MR-ADD-095",
+          "MR-ADD-106",
+          "MR-ADD-110",
+          "MR-ADD-112",
+          "MR-ADD-116",
+          "MR-ADD-122",
+          "MR-ADD-131",
+          "MR-ADD-132",
+          "MR-ADD-147",
+          "MR-ADD-171",
+          "MR-ADD-180",
+          "MR-ADD-191",
+          "MR-ADD-200",
+          "MR-ADD-229",
+          "MR-ADD-234",
+          "MR-ADD-235",
+          "MR-ADD-246",
+          "MR-ADD-247",
+          "MR-ADD-248",
+          "MR-ADD-252",
+          "MR-ADD-258",
+          "MR-ADD-259",
+          "MR-ADD-262",
+          "MR-ADD-272",
+          "MR-ADD-288",
+          "MR-ADD-318",
+          "MR-ADD-319",
+          "MR-ADD-320",
+          "MR-ADD-321",
+          "MR-ADD-322",
+          "MR-ADD-323",
+          "MR-ADD-324",
+          "MR-ADD-325",
+          "MR-ADD-326",
+          "MR-ADD-327",
+          "MR-ADD-328",
+          "MR-ADD-329",
+          "MR-ADD-330",
+          "MR-ADD-331",
+          "MR-ADD-332",
+          "MR-ADD-333",
+          "MR-ADD-334",
+          "MR-ADD-335",
+          "MR-ADD-336",
+          "MR-ADD-337",
+          "MR-ADD-338",
+          "MR-ADD-339",
+          "MR-ADD-340",
+          "MR-ADD-341",
+          "MR-ADD-342",
+          "MR-ADD-343",
+          "MR-ADD-344",
+          "MR-ADD-345",
+          "MR-ADD-346",
+          "MR-ADD-347",
+          "MR-ADD-348",
+          "MR-ADD-349",
+          "MR-ADD-350",
+          "MR-ADD-351",
+          "MR-ADD-352",
+          "MR-ADD-353",
+          "MR-ADD-354",
+          "MR-COMPAT-008",
+          "MR-COMPAT-026",
+          "MR-KEEP-038",
+          "MR-KEEP-071",
+          "MR-KEEP-072",
+          "MR-KEEP-073",
+          "MR-KEEP-088",
+          "MR-KEEP-094",
+          "MR-KEEP-095",
+          "MR-KEEP-096",
+          "MR-KEEP-118",
+          "MR-KEEP-121",
+          "MR-KEEP-122",
+          "MR-KEEP-124",
+          "MR-KEEP-125",
+          "MR-KEEP-130",
+          "MR-KEEP-137",
+          "MR-KEEP-151",
+          "MR-KEEP-153",
+          "MR-KEEP-154",
+          "MR-KEEP-155",
+          "MR-KEEP-166",
+          "MR-KEEP-179",
+          "MR-KEEP-187",
+          "MR-KEEP-197",
+          "MR-KEEP-210",
+          "MR-KEEP-216",
+          "MR-KEEP-220",
+          "MR-KEEP-236",
+          "MR-KEEP-253",
+          "MR-KEEP-266",
+          "MR-KEEP-273",
+          "MR-KEEP-297",
+          "MR-KEEP-310",
+          "MR-LEGAL-003",
+          "MR-LEGAL-025",
+          "MR-LEGAL-031",
+          "MR-LEGAL-036",
+          "MR-LEGAL-037",
+          "MR-PROCESS-003",
+          "MR-PROCESS-018",
+          "MR-PROCESS-057",
+          "MR-PROCESS-078",
+          "MR-PROCESS-085",
+          "MR-PROCESS-086",
+          "MR-PROCESS-092",
+          "MR-PROCESS-114",
+          "MR-PROCESS-117",
+          "MR-PROCESS-120",
+          "MR-PROCESS-125",
+          "MR-PROCESS-156",
+          "MR-PROCESS-157",
+          "MR-PROCESS-158",
+          "MR-PROCESS-159",
+          "MR-PROCESS-231",
+          "MR-PROCESS-232",
+          "MR-PROCESS-233",
+          "MR-PROCESS-234",
+          "MR-PROCESS-235",
+          "MR-PROCESS-236",
+          "MR-PROCESS-237",
+          "MR-PROCESS-258",
+          "MR-PROCESS-263",
+          "MR-PROCESS-277",
+          "MR-PROCESS-284",
+          "MR-PROCESS-285",
+          "MR-PROCESS-287",
+          "MR-PROCESS-301",
+          "MR-PROCESS-302",
+          "MR-PROCESS-305",
+          "MR-PROCESS-306",
+          "MR-PROCESS-307",
+          "MR-PROCESS-308",
+          "MR-PROCESS-309",
+          "MR-PROCESS-310",
+          "MR-PROCESS-311",
+          "MR-PROCESS-312",
+          "MR-REMOVE-010",
+          "MR-REMOVE-028",
+          "MR-REMOVE-040",
+          "MR-REMOVE-059",
+          "MR-REMOVE-072",
+          "MR-REMOVE-086",
+          "MR-REMOVE-100",
+          "MR-REMOVE-101",
+          "MR-REMOVE-122",
+          "MR-REMOVE-136",
+          "MR-REMOVE-153",
+          "MR-REMOVE-184",
+          "MR-REQ-0001",
+          "MR-REQ-0003",
+          "MR-REQ-0004",
+          "MR-REQ-0008",
+          "MR-REQ-0009",
+          "MR-REQ-0010",
+          "MR-REQ-0012",
+          "MR-REQ-0014",
+          "MR-REQ-0015",
+          "MR-REQ-0018",
+          "MR-REQ-0026",
+          "MR-REQ-0029",
+          "MR-REQ-0031",
+          "MR-REQ-0033",
+          "MR-REQ-0034",
+          "MR-REQ-0035",
+          "MR-REQ-0042",
+          "MR-REQ-0043",
+          "MR-REQ-0090",
+          "MR-REQ-0099",
+          "MR-REQ-0104",
+          "MR-REQ-0128",
+          "MR-REQ-0141",
+          "MR-REQ-0154",
+          "MR-REQ-0162",
+          "MR-REQ-0174",
+          "MR-REQ-0179",
+          "MR-REQ-0189",
+          "MR-REQ-0190",
+          "MR-REQ-0198",
+          "MR-REQ-0214",
+          "MR-REQ-0215",
+          "MR-REQ-0216",
+          "MR-REQ-0217",
+          "MR-REQ-0223",
+          "MR-REQ-0248",
+          "MR-REQ-0257",
+          "MR-REQ-0272",
+          "MR-REQ-0295",
+          "MR-REQ-0305",
+          "MR-REQ-0307",
+          "MR-REQ-0313",
+          "MR-REQ-0314",
+          "MR-REQ-0317",
+          "MR-REQ-0318",
+          "MR-REQ-0320",
+          "MR-REQ-0321",
+          "MR-REQ-0327",
+          "MR-REQ-0328",
+          "MR-REQ-0329",
+          "MR-REQ-0332",
+          "MR-REQ-0336",
+          "MR-REQ-0338",
+          "MR-REQ-0350",
+          "MR-REQ-0353",
+          "MR-REQ-0355",
+          "MR-REQ-0358",
+          "MR-REQ-0359",
+          "MR-REQ-0365",
+          "MR-REQ-0373",
+          "MR-REQ-0380",
+          "MR-REQ-0382",
+          "MR-REQ-0387",
+          "MR-REQ-0388",
+          "MR-REQ-0390",
+          "MR-REQ-0410",
+          "MR-REQ-0422",
+          "MR-REQ-0426",
+          "MR-REQ-0434",
+          "MR-REQ-0437",
+          "MR-REQ-0448",
+          "MR-REQ-0449",
+          "MR-REQ-0457",
+          "MR-REQ-0458",
+          "MR-REQ-0459",
+          "MR-REQ-0461",
+          "MR-REQ-0462",
+          "MR-REQ-0464",
+          "MR-REQ-0479",
+          "MR-REQ-0489",
+          "MR-REQ-0491",
+          "MR-REQ-0492",
+          "MR-REQ-0507",
+          "MR-REQ-0510",
+          "MR-REQ-0515",
+          "MR-REQ-0526",
+          "MR-REQ-0530",
+          "MR-REQ-0532",
+          "MR-REQ-0534",
+          "MR-REQ-0542",
+          "MR-REQ-0547",
+          "MR-REQ-0550",
+          "MR-REQ-0556",
+          "MR-REQ-0559",
+          "MR-REQ-0560",
+          "MR-REQ-0561",
+          "MR-REQ-0577",
+          "MR-REQ-0612",
+          "MR-VERIFY-014",
+          "MR-VERIFY-025",
+          "MR-VERIFY-056",
+          "MR-VERIFY-060",
+          "MR-VERIFY-061",
+          "MR-VERIFY-063",
+          "MR-VERIFY-064",
+          "MR-VERIFY-065",
+          "MR-VERIFY-082",
+          "MR-VERIFY-083",
+          "MR-VERIFY-089",
+          "MR-VERIFY-093",
+          "MR-VERIFY-106"
+        ],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-03",
+        "category": "lineage",
+        "description": "Every lineage canonical target exists",
+        "status": "PASS",
+        "method": "canonical requirement ID membership",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-04",
+        "category": "lineage",
+        "description": "Every lineage supersession record exists uniquely and agrees with its mapping",
+        "status": "PASS",
+        "method": "cross-map ID and target equality",
+        "actual": {
+          "missing": [],
+          "inconsistent": [],
+          "duplicates": []
+        },
+        "expected": {
+          "missing": [],
+          "inconsistent": [],
+          "duplicates": []
+        },
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-05",
+        "category": "lineage",
+        "description": "Every lineage source artifact and machine-checkable location is valid",
+        "status": "PASS",
+        "method": "filesystem existence plus JSONL record-address verification",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-06",
+        "category": "lineage",
+        "description": "Every DIRECT mapping has exactly one canonical target",
+        "status": "PASS",
+        "method": "status-specific cardinality",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-07",
+        "category": "lineage",
+        "description": "Every MERGED mapping has at least one canonical target",
+        "status": "PASS",
+        "method": "status-specific cardinality",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-08",
+        "category": "lineage",
+        "description": "Every SPLIT mapping has at least two canonical targets",
+        "status": "PASS",
+        "method": "status-specific cardinality",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-09",
+        "category": "lineage",
+        "description": "Every PROHIBITED mapping cites authoritative prohibition evidence",
+        "status": "PASS",
+        "method": "evidence-record semantic classification",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-10",
+        "category": "lineage",
+        "description": "Every EXCLUDED mapping cites an explicit exclusion decision",
+        "status": "PASS",
+        "method": "evidence-record type validation",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-11",
+        "category": "lineage",
+        "description": "No lineage mapping remains unresolved",
+        "status": "PASS",
+        "method": "absolute resolution-status scan",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-12",
+        "category": "lineage",
+        "description": "No conflicting lineage mapping exists",
+        "status": "PASS",
+        "method": "duplicate legacy-ID conflict detection",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-13",
+        "category": "lineage",
+        "description": "No low-confidence or review-required lineage mapping enters a freeze",
+        "status": "PASS",
+        "method": "confidence and review flag scan",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-14",
+        "category": "lineage",
+        "description": "Every capability source ID resolves",
+        "status": "PASS",
+        "method": "canonical-or-lineage resolution",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-15",
+        "category": "lineage",
+        "description": "Every capability canonical target exists",
+        "status": "PASS",
+        "method": "canonical requirement ID membership",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-16",
+        "category": "lineage",
+        "description": "Every capability resolved set exactly equals source-lineage expansion",
+        "status": "PASS",
+        "method": "independent ordered source expansion",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-17",
+        "category": "lineage",
+        "description": "Every original capability source identity is preserved",
+        "status": "PASS",
+        "method": "repair-report before/current source-array equality",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-18",
+        "category": "lineage",
+        "description": "Every capability records evidence for every source ID",
+        "status": "PASS",
+        "method": "source/evidence set equality",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-19",
+        "category": "lineage",
+        "description": "Every task source ID resolves",
+        "status": "PASS",
+        "method": "canonical-or-lineage resolution",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-20",
+        "category": "lineage",
+        "description": "Every task canonical target exists",
+        "status": "PASS",
+        "method": "canonical requirement ID membership",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-21",
+        "category": "lineage",
+        "description": "Every task resolved set exactly equals source-lineage expansion",
+        "status": "PASS",
+        "method": "independent ordered source expansion",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-22",
+        "category": "lineage",
+        "description": "Every original task source identity is preserved",
+        "status": "PASS",
+        "method": "repair-report before/current source-array equality",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LIN-23",
+        "category": "lineage",
+        "description": "Every task records evidence for every source ID",
+        "status": "PASS",
+        "method": "source/evidence set equality",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LINEAGE-STATUS-ENUM",
+        "category": "lineage",
+        "description": "Every lineage resolutionStatus is in the exact allowed vocabulary without normalization",
+        "status": "PASS",
+        "method": "exact allowed-status enumeration; no lowercasing, trimming, or aliasing",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LINEAGE-LEGACY-ID-UNIQUENESS",
+        "category": "lineage",
+        "description": "Every lineage record has a present, nonempty, unique legacyRequirementId",
+        "status": "PASS",
+        "method": "legacy-ID presence and multiplicity scan",
+        "actual": {
+          "missing": [],
+          "duplicates": []
+        },
+        "expected": {
+          "missing": [],
+          "duplicates": []
+        },
+        "evidence": []
+      },
+      {
+        "checkId": "LINEAGE-CANONICAL-TARGETS",
+        "category": "lineage",
+        "description": "Common lineage record invariants and canonical target/supersession references are valid",
+        "status": "PASS",
+        "method": "schema field, target existence, and supersession cross-reference validation",
+        "actual": {
+          "recordIssues": [],
+          "missingRequiredTargets": []
+        },
+        "expected": {
+          "recordIssues": [],
+          "missingRequiredTargets": []
+        },
+        "evidence": []
+      },
+      {
+        "checkId": "LINEAGE-SUPERSESSION-EVIDENCE",
+        "category": "lineage",
+        "description": "Every declared supersession record exists, references the legacy source, and agrees with its lineage mapping",
+        "status": "PASS",
+        "method": "supersession-map cross-reference, source binding, and target-set equality",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LINEAGE-DIRECT-SEMANTICS",
+        "category": "lineage",
+        "description": "DIRECT mappings require one existing canonical target, direct binding evidence, HIGH confidence, and no review requirement",
+        "status": "PASS",
+        "method": "status-specific cardinality, evidence binding, confidence, and review-flag semantics",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LINEAGE-SUPERSEDED-SEMANTICS",
+        "category": "lineage",
+        "description": "SUPERSEDED mappings require canonical targets, valid supersession records binding the legacy source, and decision evidence",
+        "status": "PASS",
+        "method": "status-specific supersession cardinality, resolution, and evidence semantics",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LINEAGE-MERGED-SEMANTICS",
+        "category": "lineage",
+        "description": "MERGED mappings bind the exact legacy source to the complete declared canonical target set",
+        "status": "PASS",
+        "method": "source-ID binding, complete target coverage, undeclared-target rejection, and merge rationale",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LINEAGE-SPLIT-SEMANTICS",
+        "category": "lineage",
+        "description": "SPLIT mappings require at least two existing targets with complete binding evidence and a split rationale",
+        "status": "PASS",
+        "method": "status-specific cardinality, target existence, evidence coverage, and rationale",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LINEAGE-RECLASSIFIED-SOURCE",
+        "category": "lineage",
+        "description": "RECLASSIFIED evidence identifies the exact legacy source ID",
+        "status": "PASS",
+        "method": "evidence nodeId to legacyRequirementId exact binding",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LINEAGE-RECLASSIFIED-TARGET",
+        "category": "lineage",
+        "description": "RECLASSIFIED evidence identifies the exact declared canonical or typed-control target",
+        "status": "PASS",
+        "method": "evidence canonical/control target equality with the record target",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LINEAGE-RECLASSIFIED-SEMANTICS",
+        "category": "lineage",
+        "description": "RECLASSIFIED mappings require classification evidence and are not treated as MERGED",
+        "status": "PASS",
+        "method": "original/new classification identification and target binding semantics",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LINEAGE-PROHIBITED-SEMANTICS",
+        "category": "lineage",
+        "description": "PROHIBITED mappings cite authoritative prohibition evidence applying to the same legacy requirement",
+        "status": "PASS",
+        "method": "prohibition-schema representation, authoritative evidence, and same-requirement applicability",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LINEAGE-EXCLUDED-SEMANTICS",
+        "category": "lineage",
+        "description": "EXCLUDED mappings retain explicit authoritative exclusion evidence and the excluded legacy identity",
+        "status": "PASS",
+        "method": "exclusion-schema representation, decision evidence, and explicit legacy-ID identification",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LINEAGE-ALIAS-SOURCE",
+        "category": "lineage",
+        "description": "ALIAS evidence identifies the exact legacy source ID",
+        "status": "PASS",
+        "method": "evidence nodeId to legacyRequirementId exact binding",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LINEAGE-ALIAS-TARGET",
+        "category": "lineage",
+        "description": "ALIAS evidence identifies the exact single canonical target",
+        "status": "PASS",
+        "method": "evidence canonicalRequirementId to declared target exact binding",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LINEAGE-ALIAS-SEMANTICS",
+        "category": "lineage",
+        "description": "ALIAS mappings are single-target, evidence-backed, HIGH-confidence, and free of chains and cycles",
+        "status": "PASS",
+        "method": "alias cardinality, existence, exact source/target proof, chain/cycle resolution, confidence, and review-flag semantics",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LINEAGE-UNRESOLVED",
+        "category": "lineage",
+        "description": "No lineage mapping remains UNRESOLVED at final-freeze validation",
+        "status": "PASS",
+        "method": "absolute UNRESOLVED status scan identifying each legacy ID",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "LINEAGE-CONFIDENCE",
+        "category": "lineage",
+        "description": "Confidence and review-required lineage rules are enforced",
+        "status": "PASS",
+        "method": "confidence enumeration plus LOW/review rejection and MEDIUM evidence requirement",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CAPABILITY-LINEAGE-EXPANSION",
+        "category": "lineage",
+        "description": "Every capability resolved canonical set exactly equals its source-lineage expansion with no missing, extra, invented, unresolved, or duplicated IDs",
+        "status": "PASS",
+        "method": "exact ordered expansion through the lineage authority",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CAPABILITY-LINEAGE-EVIDENCE-SOURCE",
+        "category": "lineage",
+        "description": "Every capability evidence source ID exactly equals a declared source and never cites an unrelated ID",
+        "status": "PASS",
+        "method": "evidence source identity binding",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CAPABILITY-LINEAGE-EVIDENCE-STATUS",
+        "category": "lineage",
+        "description": "Every capability evidence resolution status equals the authoritative direct or lineage-map status",
+        "status": "PASS",
+        "method": "evidence status to lineage-map exact comparison",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CAPABILITY-LINEAGE-EVIDENCE-TARGETS",
+        "category": "lineage",
+        "description": "Every capability evidence canonical target set exactly equals the authoritative lineage expansion",
+        "status": "PASS",
+        "method": "evidence target-set equality and resolved-set union match",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CAPABILITY-LINEAGE-EVIDENCE-SUPERSESSION",
+        "category": "lineage",
+        "description": "Every capability evidence supersession set exactly equals the lineage-map supersession records",
+        "status": "PASS",
+        "method": "evidence supersession cross-reference equality",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CAPABILITY-LINEAGE-EVIDENCE-AUTHORITY",
+        "category": "lineage",
+        "description": "Every capability evidence authority reference identifies the same legacy record and payload is complete",
+        "status": "PASS",
+        "method": "lineage-record authority identity and one-entry-per-source completeness",
+        "actual": {
+          "authority": [],
+          "payload": []
+        },
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CAPABILITY-LINEAGE-EVIDENCE",
+        "category": "lineage",
+        "description": "Every capability evidence payload semantically identifies its sources, lineage/supersession authority, and exact canonical outcomes",
+        "status": "PASS",
+        "method": "evidence source binding, authority cross-reference, canonical set match, and resolved-set union equality",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "TASK-LINEAGE-EXPANSION",
+        "category": "lineage",
+        "description": "Every task resolved canonical set exactly equals its source-lineage expansion with no missing, extra, invented, unresolved, or duplicated IDs",
+        "status": "PASS",
+        "method": "exact ordered expansion through the lineage authority",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "TASK-LINEAGE-EVIDENCE-SOURCE",
+        "category": "lineage",
+        "description": "Every task evidence source ID exactly equals a declared source and never cites an unrelated ID",
+        "status": "PASS",
+        "method": "evidence source identity binding",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "TASK-LINEAGE-EVIDENCE-STATUS",
+        "category": "lineage",
+        "description": "Every task evidence resolution status equals the authoritative direct or lineage-map status",
+        "status": "PASS",
+        "method": "evidence status to lineage-map exact comparison",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "TASK-LINEAGE-EVIDENCE-TARGETS",
+        "category": "lineage",
+        "description": "Every task evidence canonical target set exactly equals the authoritative lineage expansion",
+        "status": "PASS",
+        "method": "evidence target-set equality and resolved-set union match",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "TASK-LINEAGE-EVIDENCE-SUPERSESSION",
+        "category": "lineage",
+        "description": "Every task evidence supersession set exactly equals the lineage-map supersession records",
+        "status": "PASS",
+        "method": "evidence supersession cross-reference equality",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "TASK-LINEAGE-EVIDENCE-AUTHORITY",
+        "category": "lineage",
+        "description": "Every task evidence authority reference identifies the same legacy record and payload is complete",
+        "status": "PASS",
+        "method": "lineage-record authority identity and one-entry-per-source completeness",
+        "actual": {
+          "authority": [],
+          "payload": []
+        },
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "TASK-LINEAGE-EVIDENCE",
+        "category": "lineage",
+        "description": "Every task evidence payload semantically identifies its sources, lineage/supersession authority, and exact canonical outcomes",
+        "status": "PASS",
+        "method": "evidence source binding, authority cross-reference, canonical set match, and resolved-set union equality",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "INVENTORY-CANDIDATE-RECORD-COUNT",
+        "category": "inventory",
+        "description": "The candidate inventory record count equals the live candidate manifest nonblank valid JSONL record count",
+        "status": "PASS",
+        "method": "live nonblank JSONL enumeration and unique inventory lookup",
+        "actual": {
+          "issues": [],
+          "duplicates": 0,
+          "missing": 0
+        },
+        "expected": {
+          "declared": 166,
+          "duplicates": 0,
+          "missing": 0
+        },
+        "evidence": [
+          {
+            "path": "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl",
+            "classification": "CURRENT_DERIVED_COMPLETION_METADATA",
+            "includedInFreeze": false,
+            "exclusionReason": "Derived completion metadata is validator-bound rather than a manifest subject, avoiding circular self-hashing.",
+            "sourceOfAuthority": "Authority boundary policy",
+            "recordCount": 166
+          }
+        ]
+      },
+      {
+        "checkId": "BAK-01",
+        "category": "backup",
+        "description": "Backup root exists and the receipt references the real current Graphify source root",
+        "status": "PASS",
+        "method": "filesystem existence, exact root identity, and replacement-backup purpose",
+        "actual": {
+          "sourceRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify",
+          "backupRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-pre-review-certification-20260805-092300",
+          "errors": []
+        },
+        "expected": "two readable existing roots plus replacement-backup purpose",
+        "evidence": []
+      },
+      {
+        "checkId": "BAK-02",
+        "category": "backup",
+        "description": "Backup file count matches live source and receipt",
+        "status": "PASS",
+        "method": "live source/backup enumeration plus receipt counts",
+        "actual": {
+          "receiptSource": 13443,
+          "receiptBackup": 13443,
+          "scannedSource": 13443,
+          "scannedBackup": 13443
+        },
+        "expected": 13443,
+        "evidence": []
+      },
+      {
+        "checkId": "BAK-03",
+        "category": "backup",
+        "description": "Backup directory count and set match live source and receipt",
+        "status": "PASS",
+        "method": "live source/backup directory-set equality plus receipt counts",
+        "actual": {
+          "receiptSource": 8497,
+          "receiptBackup": 8497,
+          "scannedSource": 8497,
+          "scannedBackup": 8497,
+          "delta": []
+        },
+        "expected": 8497,
+        "evidence": []
+      },
+      {
+        "checkId": "BAK-04",
+        "category": "backup",
+        "description": "Backup has zero missing files",
+        "status": "PASS",
+        "method": "live source/backup path difference",
+        "actual": {
+          "receipt": [],
+          "scanned": []
+        },
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "BAK-05",
+        "category": "backup",
+        "description": "Backup has zero extra files",
+        "status": "PASS",
+        "method": "live backup/source path difference",
+        "actual": {
+          "receipt": [],
+          "scanned": []
+        },
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "BAK-06",
+        "category": "backup",
+        "description": "Backup has zero file hash mismatches",
+        "status": "PASS",
+        "method": "per-file SHA-256 comparison",
+        "actual": {
+          "receipt": [],
+          "scanned": []
+        },
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "BAK-07",
+        "category": "backup",
+        "description": "Backup has zero file size mismatches",
+        "status": "PASS",
+        "method": "per-file byte-size comparison",
+        "actual": {
+          "receipt": [],
+          "scanned": []
+        },
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "BAK-08",
+        "category": "backup",
+        "description": "Backup has zero long-path omissions",
+        "status": "PASS",
+        "method": "receipt plus long-path subset of live path difference",
+        "actual": {
+          "receipt": [],
+          "scanned": []
+        },
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "BAK-09",
+        "category": "backup",
+        "description": "Backup has zero unreadable paths",
+        "status": "PASS",
+        "method": "explicit error collection with no silent skips",
+        "actual": {
+          "receipt": [],
+          "scannedErrors": []
+        },
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "BAK-10",
+        "category": "backup",
+        "description": "Backup aggregate hash matches live source and receipt",
+        "status": "PASS",
+        "method": "independent sorted path:file-hash aggregate over the tree excluding the backup receipt, candidate manifest, live validation result, challenge report, and three-file repair report. Those five generated artifacts are excluded because the receipt records the tree aggregate, the candidate manifest records the receipt hash, and the live validation result records the manifest aggregate: a full-tree fixed point that includes all five cannot exist when regenerated reports carry fresh timestamps. Every per-file check (BAK-04/05/06/07/12) and the external full-tree backup verification still cover all files byte-for-byte",
+        "actual": {
+          "receiptSource": "002687ff47d3d87125a8926a7dedc0922c682dcde1e10767fc82af29fe275d1a",
+          "receiptBackup": "002687ff47d3d87125a8926a7dedc0922c682dcde1e10767fc82af29fe275d1a",
+          "scannedSource": "002687ff47d3d87125a8926a7dedc0922c682dcde1e10767fc82af29fe275d1a",
+          "scannedBackup": "002687ff47d3d87125a8926a7dedc0922c682dcde1e10767fc82af29fe275d1a"
+        },
+        "expected": "002687ff47d3d87125a8926a7dedc0922c682dcde1e10767fc82af29fe275d1a",
+        "evidence": []
+      },
+      {
+        "checkId": "BAK-11",
+        "category": "backup",
+        "description": "Backup receipt is a verified replacement recovery point",
+        "status": "PASS",
+        "method": "receipt verification fields",
+        "actual": {
+          "verified": true,
+          "verifiedAt": "2026-08-05T14:35:53+03:00",
+          "copyExitCode": 0
+        },
+        "expected": {
+          "verified": true,
+          "verifiedAt": "nonempty",
+          "copyExitCode": "recorded"
+        },
+        "evidence": []
+      },
+      {
+        "checkId": "BAK-12",
+        "category": "backup",
+        "description": "Receipt records zero directory-set differences",
+        "status": "PASS",
+        "method": "receipt and live directory-set difference lists",
+        "actual": {
+          "receipt": [],
+          "scanned": []
+        },
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CNT-04",
+        "category": "counts",
+        "description": "Capability count agrees with change records",
+        "status": "PASS",
+        "method": "independent registry ID set equality",
+        "actual": 161,
+        "expected": 161,
+        "evidence": [
+          "CAPABILITY_REGISTRY.json",
+          "CHANGE_LOCATION_REGISTRY.jsonl"
+        ]
+      },
+      {
+        "checkId": "CNT-05",
+        "category": "counts",
+        "description": "Change-record count agrees with capability registry",
+        "status": "PASS",
+        "method": "independent registry ID set equality",
+        "actual": 161,
+        "expected": 161,
+        "evidence": [
+          "CHANGE_LOCATION_REGISTRY.jsonl",
+          "CAPABILITY_REGISTRY.json"
+        ]
+      },
+      {
+        "checkId": "CNT-06",
+        "category": "counts",
+        "description": "Task count and classifications cover every capability plus one bootstrap",
+        "status": "PASS",
+        "method": "task-class and owner ID set validation",
+        "actual": {
+          "total": 162,
+          "primary": 161,
+          "bootstrap": 1
+        },
+        "expected": {
+          "primaryCapabilityIds": 161,
+          "bootstrap": 1
+        },
+        "evidence": [
+          "IMPLEMENTATION_TASKS.jsonl"
+        ]
+      },
+      {
+        "checkId": "CNT-07",
+        "category": "counts",
+        "description": "Test specifications are unique and cover every capability",
+        "status": "PASS",
+        "method": "test ID uniqueness and capability coverage",
+        "actual": {
+          "tests": 338,
+          "coveredCapabilities": 161
+        },
+        "expected": {
+          "uniqueTests": 338,
+          "capabilities": 161
+        },
+        "evidence": [
+          "REQUIREMENT_TEST_MATRIX.jsonl"
+        ]
+      },
+      {
+        "checkId": "CNT-08",
+        "category": "counts",
+        "description": "Fixture categories are present and uniquely named",
+        "status": "PASS",
+        "method": "fixture-table domain enumeration",
+        "actual": [
+          "Calendar",
+          "Canvas",
+          "Core",
+          "Finance",
+          "Mindmap",
+          "Vault"
+        ],
+        "expected": "one or more table-derived domains",
+        "evidence": [
+          "FIXTURE_QA_MATRIX.md"
+        ]
+      },
+      {
+        "checkId": "CNT-09",
+        "category": "counts",
+        "description": "Canonical fixture records are present and unique",
+        "status": "PASS",
+        "method": "canonical fixture ID enumeration",
+        "actual": 6,
+        "expected": 6,
+        "evidence": [
+          "FIXTURE_QA_MATRIX.md"
+        ]
+      },
+      {
+        "checkId": "CNT-10",
+        "category": "counts",
+        "description": "Owner waves are valid and all six release-wave gates exist",
+        "status": "PASS",
+        "method": "owner-wave subset and exact gate-key equality",
+        "actual": {
+          "ownerWaves": [
+            "WAVE_0",
+            "WAVE_1",
+            "WAVE_2",
+            "WAVE_3",
+            "WAVE_4"
+          ],
+          "gateWaves": [
+            "WAVE_0",
+            "WAVE_1",
+            "WAVE_2",
+            "WAVE_3",
+            "WAVE_4",
+            "WAVE_5"
+          ]
+        },
+        "expected": {
+          "validOwnerWaves": [
+            "WAVE_0",
+            "WAVE_1",
+            "WAVE_2",
+            "WAVE_3",
+            "WAVE_4",
+            "WAVE_5"
+          ],
+          "gateWaves": [
+            "WAVE_0",
+            "WAVE_1",
+            "WAVE_2",
+            "WAVE_3",
+            "WAVE_4",
+            "WAVE_5"
+          ]
+        },
+        "evidence": [
+          "CAPABILITY_REGISTRY.json",
+          "IMPLEMENTATION_TASKS.jsonl",
+          "RELEASE_GATE_MATRIX.json"
+        ]
+      },
+      {
+        "checkId": "CNT-11",
+        "category": "counts",
+        "description": "Exactly six wave gates exist",
+        "status": "PASS",
+        "method": "absolute gate count",
+        "actual": 6,
+        "expected": 6,
+        "evidence": [
+          "RELEASE_GATE_MATRIX.json"
+        ]
+      },
+      {
+        "checkId": "CNT-12",
+        "category": "counts",
+        "description": "Capability-validation gates cover every capability",
+        "status": "PASS",
+        "method": "capability ID set equality",
+        "actual": 161,
+        "expected": 161,
+        "evidence": [
+          "RELEASE_GATE_MATRIX.json"
+        ]
+      },
+      {
+        "checkId": "CNT-13",
+        "category": "counts",
+        "description": "Application release gates are explicit and blocking",
+        "status": "PASS",
+        "method": "gate field validation",
+        "actual": 1,
+        "expected": "one or more blocking gates",
+        "evidence": [
+          "RELEASE_GATE_MATRIX.json"
+        ]
+      },
+      {
+        "checkId": "CNT-14",
+        "category": "counts",
+        "description": "ADR count is derived from canonical ADR files with unique names",
+        "status": "PASS",
+        "method": "canonical directory enumeration",
+        "actual": 14,
+        "expected": 14,
+        "evidence": [
+          "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify\\12 Source Documents\\Architecture Decisions\\ADR-0001-canonical-file-backed-source-of-truth.md",
+          "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify\\12 Source Documents\\Architecture Decisions\\ADR-0002-canvas-bundle-format.md",
+          "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify\\12 Source Documents\\Architecture Decisions\\ADR-0003-mind-map-bundle-format.md",
+          "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify\\12 Source Documents\\Architecture Decisions\\ADR-0004-global-graph-projection-versus-cache.md",
+          "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify\\12 Source Documents\\Architecture Decisions\\ADR-0005-stable-ids-and-path-aliases.md",
+          "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify\\12 Source Documents\\Architecture Decisions\\ADR-0006-local-semantic-index-technology.md",
+          "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify\\12 Source Documents\\Architecture Decisions\\ADR-0007-semantic-suggestion-persistence.md",
+          "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify\\12 Source Documents\\Architecture Decisions\\ADR-0008-calendar-recurrence-representation.md",
+          "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify\\12 Source Documents\\Architecture Decisions\\ADR-0009-calendar-file-format-and-ics-compatibility.md",
+          "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify\\12 Source Documents\\Architecture Decisions\\ADR-0010-finance-transaction-storage-format.md",
+          "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify\\12 Source Documents\\Architecture Decisions\\ADR-0011-finance-encryption-boundaries.md",
+          "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify\\12 Source Documents\\Architecture Decisions\\ADR-0012-multi-currency-behavior.md",
+          "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify\\12 Source Documents\\Architecture Decisions\\ADR-0013-external-calendar-adapter-boundaries.md",
+          "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify\\12 Source Documents\\Architecture Decisions\\ADR-0014-folder-and-workspace-inheritance-behavior.md"
+        ]
+      },
+      {
+        "checkId": "CNT-15",
+        "category": "counts",
+        "description": "Public entrypoints cover every capability",
+        "status": "PASS",
+        "method": "entrypoint-to-capability ID set equality",
+        "actual": 161,
+        "expected": 161,
+        "evidence": [
+          "PUBLIC_ENTRYPOINT_PLAN.jsonl"
+        ]
+      },
+      {
+        "checkId": "TEST-01",
+        "category": "tests",
+        "description": "Every test ID is unique",
+        "status": "PASS",
+        "method": "test-registry ID frequency",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "TEST-02",
+        "category": "tests",
+        "description": "Every referenced capability exists",
+        "status": "PASS",
+        "method": "test-to-capability registry membership",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "TEST-03",
+        "category": "tests",
+        "description": "Every referenced task exists",
+        "status": "PASS",
+        "method": "test-to-task registry membership",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "TEST-04",
+        "category": "tests",
+        "description": "Every referenced requirement exists",
+        "status": "PASS",
+        "method": "test-to-requirement registry membership",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "TEST-05",
+        "category": "tests",
+        "description": "Every test has one resolvable owner wave",
+        "status": "PASS",
+        "method": "task/capability owner-wave derivation",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "TEST-06",
+        "category": "tests",
+        "description": "Every test has a valid test type",
+        "status": "PASS",
+        "method": "absolute test-type enumeration",
+        "actual": [],
+        "expected": [
+          "CONTRACT",
+          "INTEGRATION",
+          "PACKAGING",
+          "SECURITY",
+          "UNIT"
+        ],
+        "evidence": []
+      },
+      {
+        "checkId": "TEST-07",
+        "category": "tests",
+        "description": "Every required acceptance-test reference exists",
+        "status": "PASS",
+        "method": "contract reference membership in test registry",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "TEST-08",
+        "category": "tests",
+        "description": "Every explicit test wave matches its independently derived owner wave",
+        "status": "PASS",
+        "method": "test field compared to task/capability owner waves",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "GATE-01",
+        "category": "gates",
+        "description": "Exactly six named wave gates exist and none is missing",
+        "status": "PASS",
+        "method": "absolute wave-key enumeration",
+        "actual": {
+          "missing": [],
+          "extra": [],
+          "count": 6
+        },
+        "expected": {
+          "keys": [
+            "WAVE_0",
+            "WAVE_1",
+            "WAVE_2",
+            "WAVE_3",
+            "WAVE_4",
+            "WAVE_5"
+          ],
+          "count": 6
+        },
+        "evidence": []
+      },
+      {
+        "checkId": "GATE-02",
+        "category": "gates",
+        "description": "Every gate wave matches its gate ID",
+        "status": "PASS",
+        "method": "wave key, waveId, and gateId field comparison",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "GATE-03",
+        "category": "gates",
+        "description": "Every requiredTestId exists",
+        "status": "PASS",
+        "method": "gate-to-test registry membership",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "GATE-04",
+        "category": "gates",
+        "description": "No gate contains duplicate requiredTestIds",
+        "status": "PASS",
+        "method": "per-gate ID frequency",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "GATE-05",
+        "category": "gates",
+        "description": "Every gate requiredTestIds set exactly equals its independently calculated expected set",
+        "status": "PASS",
+        "method": "exact set equality from task/capability-derived test ownership",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "GATE-06",
+        "category": "gates",
+        "description": "Every wave-owned test appears in its required wave gate",
+        "status": "PASS",
+        "method": "owner-wave expected set versus gate membership",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "GATE-07",
+        "category": "gates",
+        "description": "No test appears in a different wave gate",
+        "status": "PASS",
+        "method": "gate wave compared to independently derived test owner wave",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "GATE-08",
+        "category": "gates",
+        "description": "Every shared test has explicit evidence and rationale",
+        "status": "PASS",
+        "method": "shared classification and nonempty rationale validation",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "GATE-09",
+        "category": "gates",
+        "description": "No orphan wave-owned tests exist",
+        "status": "PASS",
+        "method": "test owner set minus all gate assignments",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "GATE-10",
+        "category": "gates",
+        "description": "No test is assigned to an impossible wave",
+        "status": "PASS",
+        "method": "absolute WAVE_0 through WAVE_5 membership",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "GATE-11",
+        "category": "gates",
+        "description": "Application release requires all six wave gates",
+        "status": "PASS",
+        "method": "application-gate required-wave set equality",
+        "actual": [
+          "GATE-WAVE_0",
+          "GATE-WAVE_1",
+          "GATE-WAVE_2",
+          "GATE-WAVE_3",
+          "GATE-WAVE_4",
+          "GATE-WAVE_5"
+        ],
+        "expected": [
+          "GATE-WAVE_0",
+          "GATE-WAVE_1",
+          "GATE-WAVE_2",
+          "GATE-WAVE_3",
+          "GATE-WAVE_4",
+          "GATE-WAVE_5"
+        ],
+        "evidence": [
+          {
+            "gateId": "GATE-APPLICATION-RELEASE",
+            "blocking": true,
+            "requiredWaveGateIds": [
+              "GATE-WAVE_0",
+              "GATE-WAVE_1",
+              "GATE-WAVE_2",
+              "GATE-WAVE_3",
+              "GATE-WAVE_4",
+              "GATE-WAVE_5"
+            ],
+            "requiredEvidence": [
+              "All wave receipts",
+              "Final Codebase implementation tests",
+              "Packaging and offline restoration receipts"
+            ],
+            "status": "NOT_VERIFIED"
+          }
+        ]
+      },
+      {
+        "checkId": "GATE-12",
+        "category": "gates",
+        "description": "Persisted test-wave ownership equals independent live derivation",
+        "status": "PASS",
+        "method": "ordered field projection equality",
+        "actual": {
+          "records": 338,
+          "matches": true
+        },
+        "expected": {
+          "records": 338,
+          "matches": true
+        },
+        "evidence": [
+          "FINAL_TEST_WAVE_OWNERSHIP.jsonl"
+        ]
+      },
+      {
+        "checkId": "GATE-13",
+        "category": "gates",
+        "description": "Gate synchronization report matches live gate and test files",
+        "status": "PASS",
+        "method": "live SHA-256 and status comparison",
+        "actual": {
+          "status": "PASS",
+          "gateHash": "e1f22a5949f1ad8f94090dd1be5170092440105b1b62cd449a809567c6e63727",
+          "testHash": "75d6813eb5062cbc6f70c453df01f7f9d6687b17d48f5ef75a44770fb803bba0",
+          "blockingDefects": []
+        },
+        "expected": {
+          "status": "PASS",
+          "gateHash": "e1f22a5949f1ad8f94090dd1be5170092440105b1b62cd449a809567c6e63727",
+          "testHash": "75d6813eb5062cbc6f70c453df01f7f9d6687b17d48f5ef75a44770fb803bba0",
+          "blockingDefects": []
+        },
+        "evidence": [
+          "FINAL_WAVE_GATE_TEST_SYNCHRONIZATION_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "GATE-14",
+        "category": "gates",
+        "description": "Pre-repair audit independently preserves every corrected wrong-wave test",
+        "status": "PASS",
+        "method": "pre-repair wrong-wave ID set compared to recorded corrections",
+        "actual": [
+          "TEST-MR-CAP-132-INTEG-002",
+          "TEST-MR-CAP-132-NEG-FINANCE-003",
+          "TEST-MR-CAP-132-UNIT-001",
+          "TEST-MR-CAP-140-INTEG-002",
+          "TEST-MR-CAP-140-UNIT-001",
+          "TEST-MR-CAP-151-INTEG-002",
+          "TEST-MR-CAP-151-UNIT-001",
+          "TEST-MR-CAP-152-INTEG-002",
+          "TEST-MR-CAP-152-UNIT-001",
+          "TEST-MR-CAP-153-INTEG-002",
+          "TEST-MR-CAP-153-UNIT-001",
+          "TEST-MR-CAP-158-INTEG-002",
+          "TEST-MR-CAP-158-UNIT-001",
+          "TEST-MR-CAP-160-INTEG-002",
+          "TEST-MR-CAP-160-UNIT-001",
+          "TEST-MR-CAP-161-INTEG-002",
+          "TEST-MR-CAP-161-UNIT-001"
+        ],
+        "expected": [
+          "TEST-MR-CAP-132-INTEG-002",
+          "TEST-MR-CAP-132-NEG-FINANCE-003",
+          "TEST-MR-CAP-132-UNIT-001",
+          "TEST-MR-CAP-140-INTEG-002",
+          "TEST-MR-CAP-140-UNIT-001",
+          "TEST-MR-CAP-151-INTEG-002",
+          "TEST-MR-CAP-151-UNIT-001",
+          "TEST-MR-CAP-152-INTEG-002",
+          "TEST-MR-CAP-152-UNIT-001",
+          "TEST-MR-CAP-153-INTEG-002",
+          "TEST-MR-CAP-153-UNIT-001",
+          "TEST-MR-CAP-158-INTEG-002",
+          "TEST-MR-CAP-158-UNIT-001",
+          "TEST-MR-CAP-160-INTEG-002",
+          "TEST-MR-CAP-160-UNIT-001",
+          "TEST-MR-CAP-161-INTEG-002",
+          "TEST-MR-CAP-161-UNIT-001"
+        ],
+        "evidence": [
+          "FINAL_WAVE_GATE_TEST_AUDIT.json",
+          "FINAL_WAVE_GATE_TEST_SYNCHRONIZATION_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "CON-01",
+        "category": "contracts",
+        "description": "Capability embedded waves match top-level waves",
+        "status": "PASS",
+        "method": "field comparison",
+        "actual": [],
+        "expected": [],
+        "evidence": [
+          "CAPABILITY_REGISTRY.json"
+        ]
+      },
+      {
+        "checkId": "CON-02",
+        "category": "contracts",
+        "description": "Task embedded waves match top-level waves",
+        "status": "PASS",
+        "method": "field comparison",
+        "actual": [],
+        "expected": [],
+        "evidence": [
+          "IMPLEMENTATION_TASKS.jsonl"
+        ]
+      },
+      {
+        "checkId": "CON-03",
+        "category": "contracts",
+        "description": "Primary task waves match owning capability waves",
+        "status": "PASS",
+        "method": "independent owner wave comparison",
+        "actual": [],
+        "expected": [],
+        "evidence": [
+          "CAPABILITY_REGISTRY.json",
+          "IMPLEMENTATION_TASKS.jsonl"
+        ]
+      },
+      {
+        "checkId": "CON-04",
+        "category": "contracts",
+        "description": "Generic contract patterns are absent",
+        "status": "PASS",
+        "method": "rejected phrase scan",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CON-05",
+        "category": "contracts",
+        "description": "All required contract sections are present",
+        "status": "PASS",
+        "method": "required semantic section enumeration",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CON-06",
+        "category": "contracts",
+        "description": "Public operations are capability-specific",
+        "status": "PASS",
+        "method": "operation-name and cardinality audit",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CON-07",
+        "category": "contracts",
+        "description": "Domain models contain capability-specific fields",
+        "status": "PASS",
+        "method": "domain-field audit",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CON-08",
+        "category": "contracts",
+        "description": "Invariants are nonempty and domain-specific",
+        "status": "PASS",
+        "method": "invariant cardinality and phrase audit",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CON-09",
+        "category": "contracts",
+        "description": "Failure modes are nonempty and domain-specific",
+        "status": "PASS",
+        "method": "failure-mode cardinality and phrase audit",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CON-10",
+        "category": "contracts",
+        "description": "Acceptance tests reference actual test IDs",
+        "status": "PASS",
+        "method": "test registry ID membership",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CAP-01",
+        "category": "contracts",
+        "description": "Duplicate capability IDs are absent",
+        "status": "PASS",
+        "method": "ID uniqueness",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CAP-02",
+        "category": "contracts",
+        "description": "Capability names are present",
+        "status": "PASS",
+        "method": "required field validation",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CAP-03",
+        "category": "contracts",
+        "description": "No normalized behavior template is reused more than five times",
+        "status": "PASS",
+        "method": "normalized anti-template grouping",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "DEP-01",
+        "category": "dependencies",
+        "description": "Unknown capability references equal zero",
+        "status": "PASS",
+        "method": "DEPENDS_ON graph traversal",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "DEP-02",
+        "category": "dependencies",
+        "description": "Capability self-dependencies equal zero",
+        "status": "PASS",
+        "method": "DEPENDS_ON graph traversal",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "DEP-03",
+        "category": "dependencies",
+        "description": "Capability execution cycles equal zero",
+        "status": "PASS",
+        "method": "DEPENDS_ON graph traversal",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "DEP-04",
+        "category": "dependencies",
+        "description": "Capability backward-wave dependencies equal zero",
+        "status": "PASS",
+        "method": "DEPENDS_ON graph traversal",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "DEP-05",
+        "category": "dependencies",
+        "description": "Unknown task references equal zero",
+        "status": "PASS",
+        "method": "explicit plus same-wave task graph traversal",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "DEP-06",
+        "category": "dependencies",
+        "description": "Task self-dependencies equal zero",
+        "status": "PASS",
+        "method": "explicit plus same-wave task graph traversal",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "DEP-07",
+        "category": "dependencies",
+        "description": "Duplicate canonical task dependencies equal zero",
+        "status": "PASS",
+        "method": "explicit plus same-wave task graph traversal",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "DEP-08",
+        "category": "dependencies",
+        "description": "Task cycles equal zero",
+        "status": "PASS",
+        "method": "explicit plus same-wave task graph traversal",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "DEP-09",
+        "category": "dependencies",
+        "description": "Task backward-wave dependencies equal zero",
+        "status": "PASS",
+        "method": "explicit plus same-wave task graph traversal",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "WARN-01",
+        "category": "warnings",
+        "description": "PBKDF2 capability owners are valid",
+        "status": "PASS",
+        "method": "contract-derived owner set",
+        "actual": [
+          [
+            "MR-CAP-132"
+          ]
+        ],
+        "expected": [
+          "MR-CAP-132"
+        ],
+        "evidence": [
+          {
+            "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+            "severity": "WARNING",
+            "affectedCapabilityIds": [
+              "MR-CAP-132"
+            ],
+            "owningTaskIds": [
+              "MR-IMPL-132"
+            ],
+            "releaseWave": "WAVE_1",
+            "owningWaves": [
+              "WAVE_1"
+            ],
+            "requiredEvidence": [
+              "Hardware-adaptive PBKDF2 calibration log",
+              "Encryption-envelope migration and authenticated-decryption test receipts"
+            ],
+            "blockingGateIds": [
+              "GATE-WAVE_1"
+            ],
+            "blocksWaveStart": false,
+            "blocksWaveCompletion": true
+          }
+        ]
+      },
+      {
+        "checkId": "WARN-02",
+        "category": "warnings",
+        "description": "PBKDF2 task owners are valid",
+        "status": "PASS",
+        "method": "capability-to-primary-task ownership",
+        "actual": [
+          [
+            "MR-IMPL-132"
+          ]
+        ],
+        "expected": [
+          "MR-IMPL-132"
+        ],
+        "evidence": [
+          {
+            "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+            "severity": "WARNING",
+            "affectedCapabilityIds": [
+              "MR-CAP-132"
+            ],
+            "owningTaskIds": [
+              "MR-IMPL-132"
+            ],
+            "releaseWave": "WAVE_1",
+            "owningWaves": [
+              "WAVE_1"
+            ],
+            "requiredEvidence": [
+              "Hardware-adaptive PBKDF2 calibration log",
+              "Encryption-envelope migration and authenticated-decryption test receipts"
+            ],
+            "blockingGateIds": [
+              "GATE-WAVE_1"
+            ],
+            "blocksWaveStart": false,
+            "blocksWaveCompletion": true
+          }
+        ]
+      },
+      {
+        "checkId": "WARN-03",
+        "category": "warnings",
+        "description": "PBKDF2 warning waves match owning tasks",
+        "status": "PASS",
+        "method": "task-derived wave set",
+        "actual": [
+          [
+            "WAVE_1"
+          ]
+        ],
+        "expected": [
+          "WAVE_1"
+        ],
+        "evidence": [
+          {
+            "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+            "severity": "WARNING",
+            "affectedCapabilityIds": [
+              "MR-CAP-132"
+            ],
+            "owningTaskIds": [
+              "MR-IMPL-132"
+            ],
+            "releaseWave": "WAVE_1",
+            "owningWaves": [
+              "WAVE_1"
+            ],
+            "requiredEvidence": [
+              "Hardware-adaptive PBKDF2 calibration log",
+              "Encryption-envelope migration and authenticated-decryption test receipts"
+            ],
+            "blockingGateIds": [
+              "GATE-WAVE_1"
+            ],
+            "blocksWaveStart": false,
+            "blocksWaveCompletion": true
+          }
+        ]
+      },
+      {
+        "checkId": "WARN-04",
+        "category": "warnings",
+        "description": "PBKDF2 gates cover every owning wave",
+        "status": "PASS",
+        "method": "task-wave-to-gate derivation",
+        "actual": [
+          [
+            "GATE-WAVE_1"
+          ]
+        ],
+        "expected": [
+          "GATE-WAVE_1"
+        ],
+        "evidence": [
+          {
+            "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+            "severity": "WARNING",
+            "affectedCapabilityIds": [
+              "MR-CAP-132"
+            ],
+            "owningTaskIds": [
+              "MR-IMPL-132"
+            ],
+            "releaseWave": "WAVE_1",
+            "owningWaves": [
+              "WAVE_1"
+            ],
+            "requiredEvidence": [
+              "Hardware-adaptive PBKDF2 calibration log",
+              "Encryption-envelope migration and authenticated-decryption test receipts"
+            ],
+            "blockingGateIds": [
+              "GATE-WAVE_1"
+            ],
+            "blocksWaveStart": false,
+            "blocksWaveCompletion": true
+          }
+        ]
+      },
+      {
+        "checkId": "WARN-05",
+        "category": "warnings",
+        "description": "Google Calendar adapter owner is correct",
+        "status": "PASS",
+        "method": "contract semantic owner derivation",
+        "actual": [
+          [
+            "MR-CAP-120"
+          ]
+        ],
+        "expected": [
+          "MR-CAP-120"
+        ],
+        "evidence": [
+          {
+            "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+            "severity": "WARNING",
+            "affectedCapabilityIds": [
+              "MR-CAP-120"
+            ],
+            "owningTaskIds": [
+              "MR-IMPL-120"
+            ],
+            "releaseWave": "WAVE_4",
+            "owningWaves": [
+              "WAVE_4"
+            ],
+            "requiredEvidence": [
+              "Google Calendar and CalDAV network-sandbox test receipt",
+              "Credential isolation and disabled-by-default verification",
+              "Offline conflict fallback without local data loss"
+            ],
+            "blockingGateIds": [
+              "GATE-WAVE_4"
+            ],
+            "blocksWaveStart": false,
+            "blocksWaveCompletion": true
+          }
+        ]
+      },
+      {
+        "checkId": "WARN-06",
+        "category": "warnings",
+        "description": "CalDAV adapter owner is correct",
+        "status": "PASS",
+        "method": "capability-to-primary-task ownership",
+        "actual": [
+          [
+            "MR-IMPL-120"
+          ]
+        ],
+        "expected": [
+          "MR-IMPL-120"
+        ],
+        "evidence": [
+          {
+            "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+            "severity": "WARNING",
+            "affectedCapabilityIds": [
+              "MR-CAP-120"
+            ],
+            "owningTaskIds": [
+              "MR-IMPL-120"
+            ],
+            "releaseWave": "WAVE_4",
+            "owningWaves": [
+              "WAVE_4"
+            ],
+            "requiredEvidence": [
+              "Google Calendar and CalDAV network-sandbox test receipt",
+              "Credential isolation and disabled-by-default verification",
+              "Offline conflict fallback without local data loss"
+            ],
+            "blockingGateIds": [
+              "GATE-WAVE_4"
+            ],
+            "blocksWaveStart": false,
+            "blocksWaveCompletion": true
+          }
+        ]
+      },
+      {
+        "checkId": "WARN-07",
+        "category": "warnings",
+        "description": "Adapter-isolation wave matches owning tasks",
+        "status": "PASS",
+        "method": "task-derived wave set",
+        "actual": [
+          [
+            "WAVE_4"
+          ]
+        ],
+        "expected": [
+          "WAVE_4"
+        ],
+        "evidence": [
+          {
+            "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+            "severity": "WARNING",
+            "affectedCapabilityIds": [
+              "MR-CAP-120"
+            ],
+            "owningTaskIds": [
+              "MR-IMPL-120"
+            ],
+            "releaseWave": "WAVE_4",
+            "owningWaves": [
+              "WAVE_4"
+            ],
+            "requiredEvidence": [
+              "Google Calendar and CalDAV network-sandbox test receipt",
+              "Credential isolation and disabled-by-default verification",
+              "Offline conflict fallback without local data loss"
+            ],
+            "blockingGateIds": [
+              "GATE-WAVE_4"
+            ],
+            "blocksWaveStart": false,
+            "blocksWaveCompletion": true
+          }
+        ]
+      },
+      {
+        "checkId": "WARN-08",
+        "category": "warnings",
+        "description": "Adapter-isolation gates cover every owning wave",
+        "status": "PASS",
+        "method": "task-wave-to-gate derivation",
+        "actual": [
+          [
+            "GATE-WAVE_4"
+          ]
+        ],
+        "expected": [
+          "GATE-WAVE_4"
+        ],
+        "evidence": [
+          {
+            "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+            "severity": "WARNING",
+            "affectedCapabilityIds": [
+              "MR-CAP-120"
+            ],
+            "owningTaskIds": [
+              "MR-IMPL-120"
+            ],
+            "releaseWave": "WAVE_4",
+            "owningWaves": [
+              "WAVE_4"
+            ],
+            "requiredEvidence": [
+              "Google Calendar and CalDAV network-sandbox test receipt",
+              "Credential isolation and disabled-by-default verification",
+              "Offline conflict fallback without local data loss"
+            ],
+            "blockingGateIds": [
+              "GATE-WAVE_4"
+            ],
+            "blocksWaveStart": false,
+            "blocksWaveCompletion": true
+          }
+        ]
+      },
+      {
+        "checkId": "WARN-09",
+        "category": "warnings",
+        "description": "Warning evidence requirements are present",
+        "status": "PASS",
+        "method": "required field validation",
+        "actual": [],
+        "expected": [],
+        "evidence": [
+          {
+            "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+            "severity": "WARNING",
+            "affectedCapabilityIds": [
+              "MR-CAP-132"
+            ],
+            "owningTaskIds": [
+              "MR-IMPL-132"
+            ],
+            "releaseWave": "WAVE_1",
+            "owningWaves": [
+              "WAVE_1"
+            ],
+            "requiredEvidence": [
+              "Hardware-adaptive PBKDF2 calibration log",
+              "Encryption-envelope migration and authenticated-decryption test receipts"
+            ],
+            "blockingGateIds": [
+              "GATE-WAVE_1"
+            ],
+            "blocksWaveStart": false,
+            "blocksWaveCompletion": true
+          },
+          {
+            "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+            "severity": "WARNING",
+            "affectedCapabilityIds": [
+              "MR-CAP-120"
+            ],
+            "owningTaskIds": [
+              "MR-IMPL-120"
+            ],
+            "releaseWave": "WAVE_4",
+            "owningWaves": [
+              "WAVE_4"
+            ],
+            "requiredEvidence": [
+              "Google Calendar and CalDAV network-sandbox test receipt",
+              "Credential isolation and disabled-by-default verification",
+              "Offline conflict fallback without local data loss"
+            ],
+            "blockingGateIds": [
+              "GATE-WAVE_4"
+            ],
+            "blocksWaveStart": false,
+            "blocksWaveCompletion": true
+          }
+        ]
+      },
+      {
+        "checkId": "CB-01",
+        "category": "codebase",
+        "description": "Live sibling Codebase exists and was scanned",
+        "status": "PASS",
+        "method": "live filesystem scan",
+        "actual": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Codebase",
+        "expected": "existing nonempty sibling",
+        "evidence": [
+          "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Codebase"
+        ]
+      },
+      {
+        "checkId": "CB-02",
+        "category": "codebase",
+        "description": "Live Codebase file count matches captured before and after counts",
+        "status": "PASS",
+        "method": "live file enumeration",
+        "actual": {
+          "before": 10080,
+          "after": 10080
+        },
+        "expected": 10080,
+        "evidence": []
+      },
+      {
+        "checkId": "CB-03",
+        "category": "codebase",
+        "description": "Live Codebase directory count matches captured before and after counts",
+        "status": "PASS",
+        "method": "live directory enumeration",
+        "actual": {
+          "before": 2548,
+          "after": 2548
+        },
+        "expected": 2548,
+        "evidence": []
+      },
+      {
+        "checkId": "CB-04",
+        "category": "codebase",
+        "description": "Every live Codebase file has an independently calculated SHA-256",
+        "status": "PASS",
+        "method": "per-file SHA-256",
+        "actual": 10080,
+        "expected": 10080,
+        "evidence": []
+      },
+      {
+        "checkId": "CB-05",
+        "category": "codebase",
+        "description": "Live Codebase aggregate hash matches captured before and after hashes",
+        "status": "PASS",
+        "method": "independent sorted path:file-hash aggregate",
+        "actual": {
+          "before": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+          "after": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748"
+        },
+        "expected": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+        "evidence": []
+      },
+      {
+        "checkId": "CB-06",
+        "category": "codebase",
+        "description": "Captured pre-repair file baseline equals the live Codebase",
+        "status": "PASS",
+        "method": "per-file baseline comparison",
+        "actual": {
+          "baselineFiles": 10080,
+          "liveFiles": 10080
+        },
+        "expected": "identical path-to-hash maps",
+        "evidence": []
+      },
+      {
+        "checkId": "CB-07",
+        "category": "codebase",
+        "description": "Zero Codebase files were modified",
+        "status": "PASS",
+        "method": "baseline/live hash comparison",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CB-08",
+        "category": "codebase",
+        "description": "Zero Codebase files were added",
+        "status": "PASS",
+        "method": "baseline/live path set difference",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CB-09",
+        "category": "codebase",
+        "description": "Zero Codebase files were removed",
+        "status": "PASS",
+        "method": "baseline/live path set difference",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "CB-10",
+        "category": "codebase",
+        "description": "Zero Codebase directories were added or removed",
+        "status": "PASS",
+        "method": "baseline/live directory set difference",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "SAFE-01",
+        "category": "status",
+        "description": "Mapping status matches the current validated phase",
+        "status": "PASS",
+        "method": "exact phase-aware state check",
+        "actual": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
+        "expected": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
+        "evidence": [
+          "STATUS.json"
+        ]
+      },
+      {
+        "checkId": "SAFE-02",
+        "category": "status",
+        "description": "Wave 0 has not started",
+        "status": "PASS",
+        "method": "exact phase-aware safety state",
+        "actual": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+        "expected": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+        "evidence": [
+          "STATUS.json"
+        ]
+      },
+      {
+        "checkId": "SAFE-03",
+        "category": "status",
+        "description": "Codebase execution remains blocked",
+        "status": "PASS",
+        "method": "exact safety state",
+        "actual": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+        "expected": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+        "evidence": [
+          "STATUS.json"
+        ]
+      },
+      {
+        "checkId": "SAFE-04",
+        "category": "status",
+        "description": "Application release remains NOT_VERIFIED",
+        "status": "PASS",
+        "method": "exact safety state",
+        "actual": "NOT_VERIFIED",
+        "expected": "NOT_VERIFIED",
+        "evidence": [
+          "STATUS.json"
+        ]
+      },
+      {
+        "checkId": "SAFE-05",
+        "category": "status",
+        "description": "No implementation-start event exists",
+        "status": "PASS",
+        "method": "live filename scan",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "REV-01",
+        "category": "independent_review",
+        "description": "Independent review state is valid for the current phase",
+        "status": "PASS",
+        "method": "phase-aware decision check with documented technical-repair condition",
+        "actual": {
+          "finalMode": false,
+          "technicalMode": true,
+          "exists": true,
+          "decision": "FAILED"
+        },
+        "expected": {
+          "finalMode": false,
+          "requiredDecision": "ABSENT_OR_VERIFIED_OR_FAILED"
+        },
+        "evidence": [
+          "FINAL_LINEAGE_REPAIR_INDEPENDENT_REVIEW_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "REV-02",
+        "category": "independent_review",
+        "description": "Independent reviewer was read-only with zero tree mutations",
+        "status": "PASS",
+        "method": "external report field validation",
+        "actual": {
+          "readOnly": true,
+          "graphifyMutations": 0,
+          "codebaseMutations": 0
+        },
+        "expected": {
+          "readOnly": true,
+          "graphifyMutations": 0,
+          "codebaseMutations": 0
+        },
+        "evidence": [
+          "FINAL_LINEAGE_REPAIR_INDEPENDENT_REVIEW_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "REV-03",
+        "category": "independent_review",
+        "description": "Independent reviewer records a separate isolation method",
+        "status": "PASS",
+        "method": "isolation-method presence and impersonation guard",
+        "actual": "Separate read-only reviewer with no participation in the repair; independently parsed live artifacts, ran the exact production validator with PYTHONDONTWRITEBYTECODE=1, and compared complete Graphify and Codebase inventories before and after review.",
+        "expected": "nonempty separate reviewer mechanism",
+        "evidence": [
+          "POST_REPAIR_INDEPENDENT_REVIEW_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "META-01",
+        "category": "metadata",
+        "description": "All current receipts share one freeze run ID",
+        "status": "PASS",
+        "method": "cross-document value comparison",
+        "actual": {
+          "00 Execution Control/STATUS.json": "mindroom-graphify-lineage-review-candidate-20260801-193148",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "mindroom-graphify-lineage-review-candidate-20260801-193148",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-graphify-lineage-review-candidate-20260801-193148",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "mindroom-graphify-lineage-review-candidate-20260801-193148",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "mindroom-graphify-lineage-review-candidate-20260801-193148",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-graphify-lineage-review-candidate-20260801-193148",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "mindroom-graphify-lineage-review-candidate-20260801-193148",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "mindroom-graphify-lineage-review-candidate-20260801-193148",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "mindroom-graphify-lineage-review-candidate-20260801-193148",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "mindroom-graphify-lineage-review-candidate-20260801-193148"
+        },
+        "expected": "one nonempty freezeRunId",
+        "evidence": [
+          "00 Execution Control/STATUS.json",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "META-02",
+        "category": "metadata",
+        "description": "All receipts agree on mapping status",
+        "status": "PASS",
+        "method": "cross-document value comparison",
+        "actual": {
+          "00 Execution Control/STATUS.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW"
+        },
+        "expected": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
+        "evidence": [
+          "00 Execution Control/STATUS.json",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "META-03",
+        "category": "metadata",
+        "description": "All receipts agree on planning freeze status",
+        "status": "PASS",
+        "method": "cross-document value comparison",
+        "actual": {
+          "00 Execution Control/STATUS.json": "NOT_FROZEN",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "NOT_FROZEN",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "NOT_FROZEN",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "NOT_FROZEN",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "NOT_FROZEN",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "NOT_FROZEN",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "NOT_FROZEN",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "NOT_FROZEN",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "NOT_FROZEN",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "NOT_FROZEN"
+        },
+        "expected": "NOT_FROZEN",
+        "evidence": [
+          "00 Execution Control/STATUS.json",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "META-04",
+        "category": "metadata",
+        "description": "All receipts agree on Wave 0 readiness",
+        "status": "PASS",
+        "method": "cross-document value comparison",
+        "actual": {
+          "00 Execution Control/STATUS.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR"
+        },
+        "expected": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+        "evidence": [
+          "00 Execution Control/STATUS.json",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "META-05",
+        "category": "metadata",
+        "description": "All receipts agree on Codebase execution status",
+        "status": "PASS",
+        "method": "cross-document value comparison",
+        "actual": {
+          "00 Execution Control/STATUS.json": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION"
+        },
+        "expected": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+        "evidence": [
+          "00 Execution Control/STATUS.json",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "META-06",
+        "category": "metadata",
+        "description": "All receipts agree on application-release status",
+        "status": "PASS",
+        "method": "cross-document value comparison",
+        "actual": {
+          "00 Execution Control/STATUS.json": "NOT_VERIFIED",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "NOT_VERIFIED",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "NOT_VERIFIED",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "NOT_VERIFIED",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "NOT_VERIFIED",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "NOT_VERIFIED",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "NOT_VERIFIED",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "NOT_VERIFIED",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "NOT_VERIFIED",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "NOT_VERIFIED"
+        },
+        "expected": "NOT_VERIFIED",
+        "evidence": [
+          "00 Execution Control/STATUS.json",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "META-07",
+        "category": "metadata",
+        "description": "All receipts agree on source-derived canonical counts",
+        "status": "PASS",
+        "method": "receipt values compared to source registries",
+        "actual": {
+          "00 Execution Control/STATUS.json": {
+            "masterPlans": 3,
+            "requirements": 1782,
+            "supersessions": 278,
+            "legacyLineageRecords": 278,
+            "capabilities": 161,
+            "changeRecords": 161,
+            "tasks": 162,
+            "primaryTasks": 161,
+            "bootstrapTasks": 1,
+            "tests": 338,
+            "fixtureCategories": 6,
+            "canonicalFixtureRecords": 6,
+            "releaseWaves": 6,
+            "waveGates": 6,
+            "capabilityValidationGates": 161,
+            "applicationGates": 1,
+            "adrs": 14,
+            "publicEntrypoints": 161
+          },
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": {
+            "masterPlans": 3,
+            "requirements": 1782,
+            "supersessions": 278,
+            "legacyLineageRecords": 278,
+            "capabilities": 161,
+            "changeRecords": 161,
+            "tasks": 162,
+            "primaryTasks": 161,
+            "bootstrapTasks": 1,
+            "tests": 338,
+            "fixtureCategories": 6,
+            "canonicalFixtureRecords": 6,
+            "releaseWaves": 6,
+            "waveGates": 6,
+            "capabilityValidationGates": 161,
+            "applicationGates": 1,
+            "adrs": 14,
+            "publicEntrypoints": 161
+          },
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": {
+            "masterPlans": 3,
+            "requirements": 1782,
+            "supersessions": 278,
+            "legacyLineageRecords": 278,
+            "capabilities": 161,
+            "changeRecords": 161,
+            "tasks": 162,
+            "primaryTasks": 161,
+            "bootstrapTasks": 1,
+            "tests": 338,
+            "fixtureCategories": 6,
+            "canonicalFixtureRecords": 6,
+            "releaseWaves": 6,
+            "waveGates": 6,
+            "capabilityValidationGates": 161,
+            "applicationGates": 1,
+            "adrs": 14,
+            "publicEntrypoints": 161
+          },
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": {
+            "masterPlans": 3,
+            "requirements": 1782,
+            "supersessions": 278,
+            "legacyLineageRecords": 278,
+            "capabilities": 161,
+            "changeRecords": 161,
+            "tasks": 162,
+            "primaryTasks": 161,
+            "bootstrapTasks": 1,
+            "tests": 338,
+            "fixtureCategories": 6,
+            "canonicalFixtureRecords": 6,
+            "releaseWaves": 6,
+            "waveGates": 6,
+            "capabilityValidationGates": 161,
+            "applicationGates": 1,
+            "adrs": 14,
+            "publicEntrypoints": 161
+          },
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": {
+            "masterPlans": 3,
+            "requirements": 1782,
+            "supersessions": 278,
+            "legacyLineageRecords": 278,
+            "capabilities": 161,
+            "changeRecords": 161,
+            "tasks": 162,
+            "primaryTasks": 161,
+            "bootstrapTasks": 1,
+            "tests": 338,
+            "fixtureCategories": 6,
+            "canonicalFixtureRecords": 6,
+            "releaseWaves": 6,
+            "waveGates": 6,
+            "capabilityValidationGates": 161,
+            "applicationGates": 1,
+            "adrs": 14,
+            "publicEntrypoints": 161
+          },
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": {
+            "masterPlans": 3,
+            "requirements": 1782,
+            "supersessions": 278,
+            "legacyLineageRecords": 278,
+            "capabilities": 161,
+            "changeRecords": 161,
+            "tasks": 162,
+            "primaryTasks": 161,
+            "bootstrapTasks": 1,
+            "tests": 338,
+            "fixtureCategories": 6,
+            "canonicalFixtureRecords": 6,
+            "releaseWaves": 6,
+            "waveGates": 6,
+            "capabilityValidationGates": 161,
+            "applicationGates": 1,
+            "adrs": 14,
+            "publicEntrypoints": 161
+          },
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": {
+            "masterPlans": 3,
+            "requirements": 1782,
+            "supersessions": 278,
+            "legacyLineageRecords": 278,
+            "capabilities": 161,
+            "changeRecords": 161,
+            "tasks": 162,
+            "primaryTasks": 161,
+            "bootstrapTasks": 1,
+            "tests": 338,
+            "fixtureCategories": 6,
+            "canonicalFixtureRecords": 6,
+            "releaseWaves": 6,
+            "waveGates": 6,
+            "capabilityValidationGates": 161,
+            "applicationGates": 1,
+            "adrs": 14,
+            "publicEntrypoints": 161
+          },
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": {
+            "masterPlans": 3,
+            "requirements": 1782,
+            "supersessions": 278,
+            "legacyLineageRecords": 278,
+            "capabilities": 161,
+            "changeRecords": 161,
+            "tasks": 162,
+            "primaryTasks": 161,
+            "bootstrapTasks": 1,
+            "tests": 338,
+            "fixtureCategories": 6,
+            "canonicalFixtureRecords": 6,
+            "releaseWaves": 6,
+            "waveGates": 6,
+            "capabilityValidationGates": 161,
+            "applicationGates": 1,
+            "adrs": 14,
+            "publicEntrypoints": 161
+          },
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": {
+            "masterPlans": 3,
+            "requirements": 1782,
+            "supersessions": 278,
+            "legacyLineageRecords": 278,
+            "capabilities": 161,
+            "changeRecords": 161,
+            "tasks": 162,
+            "primaryTasks": 161,
+            "bootstrapTasks": 1,
+            "tests": 338,
+            "fixtureCategories": 6,
+            "canonicalFixtureRecords": 6,
+            "releaseWaves": 6,
+            "waveGates": 6,
+            "capabilityValidationGates": 161,
+            "applicationGates": 1,
+            "adrs": 14,
+            "publicEntrypoints": 161
+          },
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": {
+            "masterPlans": 3,
+            "requirements": 1782,
+            "supersessions": 278,
+            "legacyLineageRecords": 278,
+            "capabilities": 161,
+            "changeRecords": 161,
+            "tasks": 162,
+            "primaryTasks": 161,
+            "bootstrapTasks": 1,
+            "tests": 338,
+            "fixtureCategories": 6,
+            "canonicalFixtureRecords": 6,
+            "releaseWaves": 6,
+            "waveGates": 6,
+            "capabilityValidationGates": 161,
+            "applicationGates": 1,
+            "adrs": 14,
+            "publicEntrypoints": 161
+          }
+        },
+        "expected": {
+          "masterPlans": 3,
+          "requirements": 1782,
+          "supersessions": 278,
+          "legacyLineageRecords": 278,
+          "capabilities": 161,
+          "changeRecords": 161,
+          "tasks": 162,
+          "primaryTasks": 161,
+          "bootstrapTasks": 1,
+          "tests": 338,
+          "fixtureCategories": 6,
+          "canonicalFixtureRecords": 6,
+          "releaseWaves": 6,
+          "waveGates": 6,
+          "capabilityValidationGates": 161,
+          "applicationGates": 1,
+          "adrs": 14,
+          "publicEntrypoints": 161
+        },
+        "evidence": [
+          "00 Execution Control/STATUS.json",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "META-08",
+        "category": "metadata",
+        "description": "All receipts agree on the live Codebase aggregate hash",
+        "status": "PASS",
+        "method": "receipt values compared to live scan",
+        "actual": {
+          "00 Execution Control/STATUS.json": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748"
+        },
+        "expected": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+        "evidence": [
+          "00 Execution Control/STATUS.json",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "META-09",
+        "category": "metadata",
+        "description": "All receipts report the phase-expected blocking defect count",
+        "status": "PASS",
+        "method": "cross-document value comparison against the documented technical-repair condition",
+        "actual": {
+          "00 Execution Control/STATUS.json": 3,
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": 3,
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": 3,
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": 3,
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": 3,
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": 3,
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": 3,
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": 3,
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": 3,
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": 3
+        },
+        "expected": 3,
+        "evidence": [
+          "00 Execution Control/STATUS.json",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "META-10",
+        "category": "metadata",
+        "description": "Challenge report is finalized with zero-failure baselines and all required challenges passed",
+        "status": "PASS",
+        "method": "challenge-report integrity, canonical challenge-set, and zero-failure baseline verification",
+        "actual": {
+          "verdict": "PASS",
+          "executed": 79,
+          "required": 79,
+          "allPassed": true,
+          "zeroFailureBaselines": true,
+          "validatorCheckCount": 188,
+          "challengeTestCount": 79,
+          "validatorSourceHashMatch": true
+        },
+        "expected": {
+          "verdict": "PASS",
+          "executed": 79,
+          "required": 79,
+          "allPassed": true,
+          "zeroFailureBaselines": true,
+          "validatorCheckCount": 188,
+          "challengeTestCount": 79,
+          "validatorSourceHashMatch": true
+        },
+        "evidence": [
+          "FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "META-17",
+        "category": "metadata",
+        "description": "Persisted live validation report is direct live evidence with zero overrides",
+        "status": "PASS",
+        "method": "validation-context and source-hash comparison; temporary overrides can never be persisted as live evidence",
+        "actual": {
+          "validationTarget": "LIVE_REPOSITORY",
+          "candidateRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify",
+          "overridesUsed": false,
+          "temporaryChallengeId": null,
+          "validatorSourceHashMatch": true
+        },
+        "expected": {
+          "validationTarget": "LIVE_REPOSITORY",
+          "candidateRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify",
+          "overridesUsed": false,
+          "temporaryChallengeId": null,
+          "validatorSourceHashMatch": true
+        },
+        "evidence": [
+          "FINAL_FREEZE_VALIDATION_RESULT.json"
+        ]
+      },
+      {
+        "checkId": "META-18",
+        "category": "metadata",
+        "description": "Generated challenge and live reports agree and contain zero backup or manifest failures",
+        "status": "PASS",
+        "method": "cross-report status, failure, and count consistency",
+        "actual": {
+          "liveStatus": "PASS",
+          "liveFailed": 0,
+          "challengeVerdict": "PASS",
+          "backupOrManifestFailures": [],
+          "counts": {
+            "live": 188,
+            "challenge": 188
+          }
+        },
+        "expected": {
+          "liveStatus": "PASS",
+          "liveFailed": 0,
+          "challengeVerdict": "PASS",
+          "backupOrManifestFailures": [],
+          "counts": {
+            "live": 188,
+            "challenge": 188
+          }
+        },
+        "evidence": [
+          "FINAL_FREEZE_VALIDATION_RESULT.json",
+          "FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "META-11",
+        "category": "metadata",
+        "description": "Historical and superseded receipts are non-authoritative",
+        "status": "PASS",
+        "method": "inventory classification and invalidation state",
+        "actual": {
+          "historicalIncluded": [],
+          "invalidationClassification": "SUPERSEDED_AFTER_SUCCESSFUL_FINAL_REPAIR"
+        },
+        "expected": {
+          "historicalIncluded": [],
+          "invalidationClassification": "SUPERSEDED_AFTER_SUCCESSFUL_FINAL_REPAIR"
+        },
+        "evidence": []
+      },
+      {
+        "checkId": "META-12",
+        "category": "metadata",
+        "description": "All current receipts share the gate-repair run ID",
+        "status": "PASS",
+        "method": "cross-document repair ID comparison",
+        "actual": {
+          "00 Execution Control/STATUS.json": "mindroom-graphify-lineage-repair-20260801-193148",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "mindroom-graphify-lineage-repair-20260801-193148",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-graphify-lineage-repair-20260801-193148",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "mindroom-graphify-lineage-repair-20260801-193148",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "mindroom-graphify-lineage-repair-20260801-193148",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-graphify-lineage-repair-20260801-193148",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "mindroom-graphify-lineage-repair-20260801-193148",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "mindroom-graphify-lineage-repair-20260801-193148",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "mindroom-graphify-lineage-repair-20260801-193148",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "mindroom-graphify-lineage-repair-20260801-193148"
+        },
+        "expected": "mindroom-graphify-lineage-repair-20260801-193148",
+        "evidence": [
+          "00 Execution Control/STATUS.json",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "META-13",
+        "category": "metadata",
+        "description": "Independent-review session IDs agree with the external report",
+        "status": "PASS",
+        "method": "cross-document review session ID comparison",
+        "actual": {
+          "00 Execution Control/STATUS.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013"
+        },
+        "expected": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
+        "evidence": [
+          "00 Execution Control/STATUS.json",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json",
+          "POST_REPAIR_INDEPENDENT_REVIEW_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "META-14",
+        "category": "metadata",
+        "description": "All receipts agree on independent-review status",
+        "status": "PASS",
+        "method": "cross-document exact status comparison",
+        "actual": {
+          "00 Execution Control/STATUS.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW"
+        },
+        "expected": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
+        "evidence": [
+          "00 Execution Control/STATUS.json",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "META-15",
+        "category": "metadata",
+        "description": "All receipts report exact gate-test synchronization",
+        "status": "PASS",
+        "method": "cross-document gate-test status comparison",
+        "actual": {
+          "00 Execution Control/STATUS.json": "PASS",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "PASS",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "PASS",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "PASS",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "PASS",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "PASS",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "PASS",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "PASS",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "PASS",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "PASS"
+        },
+        "expected": "PASS",
+        "evidence": [
+          "00 Execution Control/STATUS.json",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "META-16",
+        "category": "metadata",
+        "description": "All receipts agree on warning IDs, waves, and gates",
+        "status": "PASS",
+        "method": "cross-document warning projection comparison",
+        "actual": {
+          "00 Execution Control/STATUS.json": [
+            {
+              "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+              "releaseWave": "WAVE_1",
+              "blockingGateIds": [
+                "GATE-WAVE_1"
+              ]
+            },
+            {
+              "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+              "releaseWave": "WAVE_4",
+              "blockingGateIds": [
+                "GATE-WAVE_4"
+              ]
+            }
+          ],
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": [
+            {
+              "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+              "releaseWave": "WAVE_1",
+              "blockingGateIds": [
+                "GATE-WAVE_1"
+              ]
+            },
+            {
+              "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+              "releaseWave": "WAVE_4",
+              "blockingGateIds": [
+                "GATE-WAVE_4"
+              ]
+            }
+          ],
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": [
+            {
+              "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+              "releaseWave": "WAVE_1",
+              "blockingGateIds": [
+                "GATE-WAVE_1"
+              ]
+            },
+            {
+              "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+              "releaseWave": "WAVE_4",
+              "blockingGateIds": [
+                "GATE-WAVE_4"
+              ]
+            }
+          ],
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": [
+            {
+              "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+              "releaseWave": "WAVE_1",
+              "blockingGateIds": [
+                "GATE-WAVE_1"
+              ]
+            },
+            {
+              "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+              "releaseWave": "WAVE_4",
+              "blockingGateIds": [
+                "GATE-WAVE_4"
+              ]
+            }
+          ],
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": [
+            {
+              "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+              "releaseWave": "WAVE_1",
+              "blockingGateIds": [
+                "GATE-WAVE_1"
+              ]
+            },
+            {
+              "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+              "releaseWave": "WAVE_4",
+              "blockingGateIds": [
+                "GATE-WAVE_4"
+              ]
+            }
+          ],
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": [
+            {
+              "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+              "releaseWave": "WAVE_1",
+              "blockingGateIds": [
+                "GATE-WAVE_1"
+              ]
+            },
+            {
+              "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+              "releaseWave": "WAVE_4",
+              "blockingGateIds": [
+                "GATE-WAVE_4"
+              ]
+            }
+          ],
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": [
+            {
+              "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+              "releaseWave": "WAVE_1",
+              "blockingGateIds": [
+                "GATE-WAVE_1"
+              ]
+            },
+            {
+              "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+              "releaseWave": "WAVE_4",
+              "blockingGateIds": [
+                "GATE-WAVE_4"
+              ]
+            }
+          ],
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": [
+            {
+              "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+              "releaseWave": "WAVE_1",
+              "blockingGateIds": [
+                "GATE-WAVE_1"
+              ]
+            },
+            {
+              "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+              "releaseWave": "WAVE_4",
+              "blockingGateIds": [
+                "GATE-WAVE_4"
+              ]
+            }
+          ],
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": [
+            {
+              "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+              "releaseWave": "WAVE_1",
+              "blockingGateIds": [
+                "GATE-WAVE_1"
+              ]
+            },
+            {
+              "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+              "releaseWave": "WAVE_4",
+              "blockingGateIds": [
+                "GATE-WAVE_4"
+              ]
+            }
+          ],
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": [
+            {
+              "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+              "releaseWave": "WAVE_1",
+              "blockingGateIds": [
+                "GATE-WAVE_1"
+              ]
+            },
+            {
+              "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+              "releaseWave": "WAVE_4",
+              "blockingGateIds": [
+                "GATE-WAVE_4"
+              ]
+            }
+          ]
+        },
+        "expected": [
+          {
+            "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+            "releaseWave": "WAVE_1",
+            "blockingGateIds": [
+              "GATE-WAVE_1"
+            ]
+          },
+          {
+            "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+            "releaseWave": "WAVE_4",
+            "blockingGateIds": [
+              "GATE-WAVE_4"
+            ]
+          }
+        ],
+        "evidence": [
+          "00 Execution Control/STATUS.json",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+        ]
+      }
+    ],
+    "validationTarget": "LIVE_REPOSITORY",
+    "candidateRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify",
+    "overridesUsed": false,
+    "temporaryChallengeId": null,
+    "validationMode": "FULL_TECHNICAL_CERTIFICATION",
+    "derived": {
+      "masterPlans": 3,
+      "requirements": 1782,
+      "supersessions": 278,
+      "legacyLineageRecords": 278,
+      "capabilities": 161,
+      "changeRecords": 161,
+      "tasks": 162,
+      "primaryTasks": 161,
+      "bootstrapTasks": 1,
+      "tests": 338,
+      "fixtureCategories": 6,
+      "canonicalFixtureRecords": 6,
+      "releaseWaves": 6,
+      "waveGates": 6,
+      "capabilityValidationGates": 161,
+      "applicationGates": 1,
+      "adrs": 14,
+      "publicEntrypoints": 161,
+      "manifestRecordCount": 166,
+      "manifestAggregateHash": "9c8a2376c1b4d85909826d836a54ef4615794417e6b606de43b1a937755fb889",
+      "codebaseFileCount": 10080,
+      "codebaseDirectoryCount": 2548,
+      "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+      "capabilityExecutionEdges": 109,
+      "taskRawReferences": 640,
+      "taskUniqueEdges": 640,
+      "unresolvedLineageIds": 0,
+      "capabilityUnresolvedSourceReferences": 0,
+      "taskUnresolvedSourceReferences": 0,
+      "backupOmissions": 0,
+      "gateTestValidationChecks": 22,
+      "tautologicalChecks": 0,
+      "baselineRelativeOnlyChecks": 0,
+      "validatorWrites": 0,
+      "validationMode": "FULL_TECHNICAL_CERTIFICATION",
+      "certificationClassification": "TECHNICAL_REPAIR_VALID"
+    }
+  }
+}

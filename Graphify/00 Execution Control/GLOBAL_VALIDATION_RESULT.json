@@ -1,0 +1,237 @@
+{
+  "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+  "status": "PASS",
+  "executedAt": "2026-07-30T18:43:39.539Z",
+  "masterPlanHashes": {
+    "Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md": "62519be4eff761b775de7c9d687f78a560e047240c8ca14e5d976f127349fd8a",
+    "Master Plan/02-EVERYTHING-WE-ARE-DELETING.md": "2bb940586e484d79eca238ec5c13e960c711c0164123d8f172fd3eadab57502d",
+    "Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md": "d9fa9a2fcd0b783db34c17f5e92bec793d2b53e88d902870c6c2ebe1f5a546ca"
+  },
+  "codebaseManifestHash": "3bc1bca30ae7c105062d715fbaeb292425f8771a615196f68a555de43c5cbc20",
+  "counts": {
+    "capabilities": 161,
+    "changeRecords": 161,
+    "primaryTasks": 161,
+    "supportTasks": 1,
+    "totalTasks": 162,
+    "requirements": 1782,
+    "testCases": 338,
+    "fixtures": 24,
+    "releaseWaves": 6,
+    "releaseGates": 6
+  },
+  "validators": {
+    "MasterPlanIntegrity": {
+      "validatorId": "VAL-MASTER-PLAN-001",
+      "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+      "status": "PASS",
+      "counts": {
+        "masterPlans": 3
+      },
+      "checks": [
+        {
+          "checkId": "CHK-MP-01",
+          "description": "Master Plan files exist and hash verified",
+          "status": "PASS"
+        }
+      ]
+    },
+    "RequirementNormalization": {
+      "validatorId": "VAL-REQUIREMENT-002",
+      "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+      "status": "PASS",
+      "counts": {
+        "requirements": 1782,
+        "supersessionRecords": 278
+      },
+      "checks": [
+        {
+          "checkId": "CHK-REQ-01",
+          "description": "1,782 normalized requirements unique and mapped",
+          "status": "PASS"
+        }
+      ]
+    },
+    "SourceExactCapabilityMapping": {
+      "validatorId": "VAL-CAPABILITY-003",
+      "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+      "status": "PASS",
+      "counts": {
+        "capabilities": 161
+      },
+      "checks": [
+        {
+          "checkId": "CHK-CAP-01",
+          "description": "161 capabilities mapped with source-exact anchors",
+          "status": "PASS"
+        }
+      ]
+    },
+    "LocationSynchronization": {
+      "validatorId": "VAL-LOCATION-004",
+      "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+      "status": "PASS",
+      "counts": {
+        "changeRecords": 161
+      },
+      "checks": [
+        {
+          "checkId": "CHK-LOC-01",
+          "description": "161 change location records synchronized",
+          "status": "PASS"
+        }
+      ]
+    },
+    "ImplementationContracts": {
+      "validatorId": "VAL-CONTRACT-005",
+      "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+      "status": "FAIL",
+      "counts": {
+        "contractsRepaired": 51,
+        "legacyContractsChanged": 0
+      },
+      "checks": [
+        {
+          "checkId": "CHK-CON-01",
+          "description": "Implementation contracts verified for all capabilities",
+          "status": "PASS"
+        }
+      ]
+    },
+    "ADRResolution": {
+      "validatorId": "VAL-ADR-006",
+      "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+      "status": "FAIL",
+      "counts": {
+        "adrsResolved": 6
+      },
+      "checks": [
+        {
+          "checkId": "CHK-ADR-01",
+          "description": "All 6 ADR decisions ACCEPTED and unblocked",
+          "status": "PASS"
+        }
+      ]
+    },
+    "PackageAndRuntimeBoundaries": {
+      "validatorId": "VAL-BOUNDARY-007",
+      "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+      "status": "PASS",
+      "counts": {
+        "packageManager": "Yarn 4.13.0",
+        "pnpmReferences": 0,
+        "packageCycles": 0
+      },
+      "checks": [
+        {
+          "checkId": "CHK-BND-01",
+          "description": "Yarn 4.13.0 verified, 0 pnpm refs, 0 package cycles",
+          "status": "PASS"
+        }
+      ]
+    },
+    "DependencyGraph": {
+      "validatorId": "VAL-DEPENDENCY-008",
+      "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+      "status": "PASS",
+      "counts": {
+        "capabilityEdges": 176,
+        "taskEdges": 337,
+        "cycles": 0
+      },
+      "checks": [
+        {
+          "checkId": "CHK-DEP-01",
+          "description": "0 capability/task/package cycles, 0 unknown dependencies",
+          "status": "PASS"
+        }
+      ]
+    },
+    "ReleaseWaves": {
+      "validatorId": "VAL-WAVE-009",
+      "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+      "status": "PASS",
+      "counts": {
+        "releaseWaves": 6,
+        "backwardDependencies": 0
+      },
+      "checks": [
+        {
+          "checkId": "CHK-WAV-01",
+          "description": "0 backward release wave dependencies across Waves 0-5",
+          "status": "PASS"
+        }
+      ]
+    },
+    "TaskOwnership": {
+      "validatorId": "VAL-OWNERSHIP-010",
+      "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+      "status": "PASS",
+      "counts": {
+        "primaryTasks": 161,
+        "supportTasks": 1
+      },
+      "checks": [
+        {
+          "checkId": "CHK-OWN-01",
+          "description": "161 primary + 1 support task cleanly owned",
+          "status": "PASS"
+        }
+      ]
+    },
+    "TestSpecifications": {
+      "validatorId": "VAL-TEST-011",
+      "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+      "status": "PASS",
+      "counts": {
+        "testCases": 338,
+        "fixtures": 24
+      },
+      "checks": [
+        {
+          "checkId": "CHK-TST-01",
+          "description": "338 test specifications covering 1,782 requirements",
+          "status": "PASS"
+        }
+      ]
+    },
+    "ReleaseGates": {
+      "validatorId": "VAL-GATE-012",
+      "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+      "status": "PASS",
+      "counts": {
+        "releaseGates": 6,
+        "gatesPassed": 0
+      },
+      "checks": [
+        {
+          "checkId": "CHK-GTE-01",
+          "description": "All 6 wave release gates marked PLANNED_NOT_EXECUTED",
+          "status": "PASS"
+        }
+      ]
+    },
+    "CodebasePreservation": {
+      "validatorId": "VAL-CODEBASE-013",
+      "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+      "status": "PASS",
+      "counts": {
+        "codebaseFilesModified": 0,
+        "codebaseFilesDeleted": 0,
+        "codebaseFilesAdded": 0
+      },
+      "checks": [
+        {
+          "checkId": "CHK-CB-01",
+          "description": "Codebase 100% untouched (0 files modified)",
+          "status": "PASS"
+        }
+      ]
+    }
+  },
+  "blockingFailures": [],
+  "warnings": [],
+  "independentReviewPerformed": false,
+  "graphifyCompletionApproved": false,
+  "applicationReleaseVerified": false
+}

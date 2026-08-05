@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:30:35.817Z",
+  "packageManager": "Yarn",
+  "packageManagerVersion": "4.13.0",
+  "workspacePatterns": [
+    ".",
+    "blocksuite/**/*",
+    "packages/*/*",
+    "packages/frontend/apps/*",
+    "tools/*",
+    "docs/reference",
+    "tools/@types/*",
+    "tests/*"
+  ],
+  "workspaceChangeRequired": false,
+  "plannedPackages": [
+    "@mindroom/common (Codebase/packages/common/mindroom/)"
+  ],
+  "plannedModules": [
+    "MindRoom Local Calendar Core",
+    "MindRoom Optional Calendar Adapters",
+    "MindRoom Finance Core",
+    "MindRoom Edgeless Canvas Engine",
+    "MindRoom Manual Mindmap Engine",
+    "MindRoom Local Semantic Index Worker"
+  ],
+  "packageCyclesBefore": 0,
+  "packageCyclesAfter": 0,
+  "invalidPackagePathsRemoved": [],
+  "pnpmReferencesBefore": 0,
+  "pnpmReferencesAfter": 0,
+  "commonToFrontendDependencies": [],
+  "financeToAdminDependencies": [],
+  "rendererToElectronMainDependencies": [],
+  "calendarCoreToOptionalAdapterDependencies": [],
+  "manualMindMapToAiDependencies": [],
+  "semanticTechnologyDecision": "SQLite extension providing vector search (sqlite-vss) with ONNX local embeddings and deterministic search fallback.",
+  "nativeDependencies": [
+    "sqlite-vss (Local vector search extension)",
+    "Transformers.js ONNX Runtime Web (Local embedding model)",
+    "Electron safeStorage (Local keychain key wrapping)"
+  ],
+  "publicEntrypointCount": 161,
+  "codebaseModified": false
+}

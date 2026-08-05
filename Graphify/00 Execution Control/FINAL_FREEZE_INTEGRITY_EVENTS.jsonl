@@ -1,0 +1,17 @@
+{"timestamp": "2026-07-31T14:58:43+03:00", "event": "INVALID_FINAL_FREEZE_REVOKED", "invalidatedRunId": "mindroom-graphify-final-freeze-20260731-135829"}
+{"timestamp": "2026-07-31T14:58:43+03:00", "event": "FINAL_FREEZE_INTEGRITY_RUN_STARTED", "freezeRunId": "mindroom-graphify-final-freeze-integrity-20260731-145843"}
+{"timestamp": "2026-07-31T14:58:43+03:00", "event": "INVALID_FINAL_FREEZE_REVOKED", "invalidatedRunId": "mindroom-graphify-final-freeze-20260731-135829"}
+{"timestamp": "2026-07-31T14:58:43+03:00", "event": "FINAL_FREEZE_INTEGRITY_RUN_STARTED", "freezeRunId": "mindroom-graphify-final-freeze-integrity-20260731-145843"}
+{"timestamp": "2026-07-31T14:58:43+03:00", "event": "INVALID_FINAL_FREEZE_REVOKED", "invalidatedRunId": "mindroom-graphify-final-freeze-20260731-135829"}
+{"timestamp": "2026-07-31T14:58:43+03:00", "event": "FINAL_FREEZE_INTEGRITY_RUN_STARTED", "freezeRunId": "mindroom-graphify-final-freeze-integrity-20260731-145843"}
+{"timestamp": "2026-07-31T14:58:43+03:00", "event": "INVALID_FINAL_FREEZE_REVOKED", "invalidatedRunId": "mindroom-graphify-final-freeze-20260731-135829"}
+{"timestamp": "2026-07-31T14:58:43+03:00", "event": "FINAL_FREEZE_INTEGRITY_RUN_STARTED", "freezeRunId": "mindroom-graphify-final-freeze-integrity-20260731-145843"}
+{"timestamp": "2026-07-31T14:58:43+03:00", "event": "INVALID_FINAL_FREEZE_REVOKED", "invalidatedRunId": "mindroom-graphify-final-freeze-20260731-135829"}
+{"timestamp": "2026-07-31T14:58:43+03:00", "event": "FINAL_FREEZE_INTEGRITY_RUN_STARTED", "freezeRunId": "mindroom-graphify-final-freeze-integrity-20260731-145843"}
+{"timestamp": "2026-07-31T14:58:43+03:00", "event": "INVALID_FINAL_FREEZE_REVOKED", "invalidatedRunId": "mindroom-graphify-final-freeze-20260731-135829"}
+{"timestamp": "2026-07-31T14:58:43+03:00", "event": "FINAL_FREEZE_INTEGRITY_RUN_STARTED", "freezeRunId": "mindroom-graphify-final-freeze-integrity-20260731-145843"}
+{"timestamp": "2026-07-31T14:58:43+03:00", "event": "INVALID_FINAL_FREEZE_REVOKED", "invalidatedRunId": "mindroom-graphify-final-freeze-20260731-135829"}
+{"timestamp": "2026-07-31T14:58:43+03:00", "event": "FINAL_FREEZE_INTEGRITY_RUN_STARTED", "freezeRunId": "mindroom-graphify-final-freeze-integrity-20260731-145843"}
+{"timestamp": "2026-07-31T14:58:43+03:00", "event": "GRAPHIFY_PLANNING_COMPLETED", "freezeRunId": "mindroom-graphify-final-freeze-integrity-20260731-145843", "aggregatePlanningHash": "66ea7ba7287ce3e412309c3398e52e43642f6c8b76ba9cdbc30efebfe81fd306"}
+{"timestamp": "2026-07-31T14:58:43+03:00", "event": "GRAPHIFY_BASELINE_FROZEN", "freezeRunId": "mindroom-graphify-final-freeze-integrity-20260731-145843", "frozenArtifactManifestHash": "27757393ec6bafd772c61ea8361d8a4dd691f4fd6261a06a179abc08d2b63db3"}
+{"timestamp": "2026-07-31T14:58:43+03:00", "event": "WAVE_0_READY_AWAITING_USER_AUTHORIZATION", "freezeRunId": "mindroom-graphify-final-freeze-integrity-20260731-145843", "codebaseExecutionStatus": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION"}

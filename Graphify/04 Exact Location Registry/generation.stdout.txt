@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "exactLocationEntities": 21754,
+  "symbolRecords": 19591,
+  "dependencyEdges": 132356,
+  "circularComponents": 70,
+  "removalBlastRecords": 33,
+  "reorganisationBlastRecords": 68,
+  "runtimeReachabilityRecords": 10080,
+  "duplicateCandidates": 23,
+  "deadCodeCandidates": 103,
+  "excludedBoundaryRecords": 1233,
+  "codebaseMutated": false
+}

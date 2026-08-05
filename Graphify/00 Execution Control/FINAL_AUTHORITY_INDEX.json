@@ -1,0 +1,83 @@
+{
+  "freezeRunId": "mindroom-graphify-lineage-review-candidate-20260801-193148",
+  "officialValidatorRunId": "mindroom-graphify-lineage-validator-20260801-193148",
+  "externalReviewRunId": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
+  "mappingStatus": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
+  "independentReviewStatus": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
+  "planningFreezeStatus": "NOT_FROZEN",
+  "wave0Readiness": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+  "codebaseExecutionStatus": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+  "finalReleaseReceiptStatus": "NOT_VERIFIED",
+  "canonicalCounts": {
+    "masterPlans": 3,
+    "requirements": 1782,
+    "supersessions": 278,
+    "legacyLineageRecords": 278,
+    "capabilities": 161,
+    "changeRecords": 161,
+    "tasks": 162,
+    "primaryTasks": 161,
+    "bootstrapTasks": 1,
+    "tests": 338,
+    "fixtureCategories": 6,
+    "canonicalFixtureRecords": 6,
+    "releaseWaves": 6,
+    "waveGates": 6,
+    "capabilityValidationGates": 161,
+    "applicationGates": 1,
+    "adrs": 14,
+    "publicEntrypoints": 161
+  },
+  "manifestRecordCount": 166,
+  "manifestAggregateHash": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
+  "codebaseFileCount": 10080,
+  "codebaseDirectoryCount": 2548,
+  "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+  "validatorCheckCount": 148,
+  "challengeTestCount": 50,
+  "blockingDefectCount": 3,
+  "timestamp": "2026-08-01T16:53:15Z",
+  "canonicalStatusPath": "00 Execution Control/STATUS.json",
+  "authoritativeMap": {
+    "canonicalStatus": "00 Execution Control/STATUS.json",
+    "authorityInventoryCandidate": "11 Completion/FINAL_GATE_REPAIR_AUTHORITY_INVENTORY_CANDIDATE.jsonl",
+    "manifestCandidate": "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl",
+    "strictValidator": "11 Completion/validate_final_graphify_freeze.py",
+    "challengeSuite": "11 Completion/run_final_freeze_challenges.py",
+    "resultVerifier": "11 Completion/verify_step11b_results.py",
+    "capabilityRegistry": "03 Capability Map/CAPABILITY_REGISTRY.json",
+    "taskRegistry": "09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+    "testRegistry": "10 Verification/REQUIREMENT_TEST_MATRIX.jsonl",
+    "releaseGates": "10 Verification/RELEASE_GATE_MATRIX.json",
+    "legacyRequirementLineageMap": "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl",
+    "lineageReconciliationReport": "11 Completion/FINAL_REQUIREMENT_LINEAGE_RECONCILIATION_REPORT.json",
+    "capabilityTaskTraceabilityReport": "11 Completion/FINAL_CAPABILITY_TASK_REQUIREMENT_TRACEABILITY_REPORT.json",
+    "longPathBackupVerification": "00 Execution Control/FINAL_LONG_PATH_BACKUP_VERIFICATION.json",
+    "lineageIndependentReviewPackage": "11 Completion/FINAL_LINEAGE_REPAIR_INDEPENDENT_REVIEW_PACKAGE.json",
+    "lineageIndependentReviewReport": "11 Completion/FINAL_LINEAGE_REPAIR_INDEPENDENT_REVIEW_REPORT.json"
+  },
+  "historicalCompatibilityWrapper": {
+    "path": "11 Completion/execute_step11b_final_integrity_repair.py",
+    "classification": "HISTORICAL_COMPATIBILITY_WRAPPER",
+    "authoritative": false
+  },
+  "manifestAlgorithm": "Sort normalized forward-slash path:SHA-256 records by ordinal path, join with LF and no trailing LF, then SHA-256 the UTF-8 bytes.",
+  "repairRunId": "mindroom-graphify-lineage-repair-20260801-193148",
+  "gateTestSynchronizationStatus": "PASS",
+  "warningSummary": [
+    {
+      "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+      "releaseWave": "WAVE_1",
+      "blockingGateIds": [
+        "GATE-WAVE_1"
+      ]
+    },
+    {
+      "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+      "releaseWave": "WAVE_4",
+      "blockingGateIds": [
+        "GATE-WAVE_4"
+      ]
+    }
+  ]
+}

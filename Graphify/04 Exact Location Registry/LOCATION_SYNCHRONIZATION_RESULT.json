@@ -1,0 +1,16 @@
+{
+  "runId": "graphify-v2-repair-20260728T095646",
+  "generatedAt": "2026-07-29T08:16:44.648Z",
+  "capabilityCount": 110,
+  "taskCount": 110,
+  "mismatchCount": 0,
+  "mismatches": [],
+  "status": "PASS",
+  "fields": [
+    "currentPaths",
+    "currentSymbols",
+    "currentAnchors",
+    "configurationReferences",
+    "runtimeRegistrations"
+  ]
+}

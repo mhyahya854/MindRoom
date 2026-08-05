@@ -1,0 +1,13 @@
+{
+  "officialRawTaskReferences": 311,
+  "officialDuplicateTaskReferences": 0,
+  "officialUniqueDirectTaskEdges": 313,
+  "externalUniqueDirectTaskEdges": 313,
+  "intersectionCount": 313,
+  "officialOnlyTaskEdges": [],
+  "externalOnlyTaskEdges": [],
+  "canonicalUniqueDirectTaskEdges": 311,
+  "canonicalSourceOfTruth": "09 Implementation/IMPLEMENTATION_TASKS.jsonl and 05 Dependency and Impact/SAME_WAVE_EXECUTION_ORDER.json",
+  "officialTaskValidatorCorrectionRequired": false,
+  "explanation": "182 represents explicit task dependency array entries in IMPLEMENTATION_TASKS.jsonl; 311 represents canonical unique direct task dependency edges including same-wave prerequisite execution ordering pairs; 337 represents raw un-deduplicated task references."
+}

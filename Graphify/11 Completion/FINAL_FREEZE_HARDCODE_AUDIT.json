@@ -1,0 +1,16 @@
+{
+  "freezeRunId": "mindroom-graphify-final-freeze-integrity-20260731-145843",
+  "timestamp": "2026-07-31T14:58:43+03:00",
+  "hardcodedEvidenceAssignmentsFoundBefore": 18,
+  "hardcodedEvidenceAssignmentsFoundAfter": 0,
+  "prohibitedPatternsChecked": [
+    "requirementCount = 1782",
+    "capabilityCount = 161",
+    "directCapabilityEdgeCount = 1961",
+    "directTaskEdgeCount = 311",
+    "status = 'PASS'",
+    "allCountsReconcile = True",
+    "blockingDefects = []"
+  ],
+  "auditResult": "PASS"
+}

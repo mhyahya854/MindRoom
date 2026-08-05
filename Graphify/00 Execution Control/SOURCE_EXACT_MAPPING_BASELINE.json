@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:16:58.662Z",
+  "totalCapabilityCount": 161,
+  "expansionCapabilityCount": 51,
+  "capabilitiesWithEmptyCurrentSymbolsBefore": 0,
+  "capabilitiesWithEmptyCurrentAnchorsBefore": 0,
+  "capabilitiesWithEmptyRuntimeRegistrationsBefore": 0,
+  "capabilitiesWithEmptyConfigurationReferencesBefore": 0,
+  "capabilitiesWithBroadDirectoryOnlyMappingsBefore": 12,
+  "capabilitiesWithNonexistentPathsBefore": 0,
+  "capabilitiesWithContradictoryLocationStatusBefore": 0,
+  "pathMismatchesBefore": 0,
+  "symbolMismatchesBefore": 0
+}

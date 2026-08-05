@@ -1,0 +1,16 @@
+{
+  "validatorId": "VAL-REQUIREMENT-002",
+  "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+  "status": "PASS",
+  "counts": {
+    "requirements": 1782,
+    "supersessionRecords": 278
+  },
+  "checks": [
+    {
+      "checkId": "CHK-REQ-01",
+      "description": "1,782 normalized requirements unique and mapped",
+      "status": "PASS"
+    }
+  ]
+}

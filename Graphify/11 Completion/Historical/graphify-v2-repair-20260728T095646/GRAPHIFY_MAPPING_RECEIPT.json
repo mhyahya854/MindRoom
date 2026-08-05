@@ -1,0 +1,390 @@
+{
+  "project": "MindRoom",
+  "phase": "GRAPHIFY_V2_MAPPING",
+  "runId": "graphify-v2-repair-20260728T095646",
+  "status": "VERIFIED_COMPLETE",
+  "gates": {
+    "masterPlansRead": true,
+    "masterPlanHashesVerified": true,
+    "repositoryBaselineVerified": true,
+    "codebaseSourceUnmodified": true,
+    "existingEvidencePreserved": true,
+    "legacyGraphDemoted": true,
+    "cacheInvalidationImplemented": true,
+    "allRepositoryPathsClassified": true,
+    "graphLayersComplete": true,
+    "vendorPollutionRemovedFromCore": true,
+    "generatedCodeSeparated": true,
+    "testsSeparated": true,
+    "buildAndConfigSeparated": true,
+    "migrationsSeparated": true,
+    "directedAuthoritativeGraphBuilt": true,
+    "parallelEdgeEvidencePreserved": true,
+    "stableNodeIdsValidated": true,
+    "internalImportsResolved": true,
+    "workspaceExportsResolved": true,
+    "externalPackagesResolved": true,
+    "nodeBuiltinsResolved": true,
+    "zeroDanglingAuthoritativeEdges": true,
+    "zeroUnresolvedInternalEndpoints": true,
+    "zeroInvalidReferences": true,
+    "invalidSelfLoopsRepaired": true,
+    "validRecursiveRelationshipsClassified": true,
+    "runtimeRegistrationsComplete": true,
+    "requirementsMapped": true,
+    "capabilitiesMapped": true,
+    "capabilityLocationSemanticsCorrected": true,
+    "meaningfulLocationsMapped": true,
+    "requiredChangesMapped": true,
+    "affineReferenceVerified": true,
+    "affineParityCompleted": true,
+    "transplantCandidatesMappedNotApproved": true,
+    "ponytailReadOnlyAuditComplete": true,
+    "ponytailCodeMutationsZero": true,
+    "deletionCandidatesMappedNotApplied": true,
+    "futureFixturesMapped": true,
+    "taskLevelBlockersClassified": true,
+    "allJsonValidated": true,
+    "allJsonlValidated": true,
+    "allSchemasValidated": true,
+    "referentialIntegrityPassed": true,
+    "graphHealthPassed": true,
+    "independentReviewPassed": true,
+    "finalReleaseReceiptLocked": true
+  },
+  "gateEvidence": {
+    "masterPlansRead": [
+      {
+        "path": "Graphify/00 Execution Control/GRAPHIFY_REPAIR_BASELINE.json",
+        "sha256": "768aacb7286423492b4d217f660833b3d66b86afd9b0ae14af5e919e2506d400"
+      }
+    ],
+    "masterPlanHashesVerified": [
+      {
+        "path": "Graphify/00 Execution Control/GRAPHIFY_REPAIR_BASELINE.json",
+        "sha256": "768aacb7286423492b4d217f660833b3d66b86afd9b0ae14af5e919e2506d400"
+      }
+    ],
+    "repositoryBaselineVerified": [
+      {
+        "path": "Graphify/00 Execution Control/GRAPHIFY_REPAIR_MANIFEST.json",
+        "sha256": "d9c4055b4509cf7d2fb0f8ec01d6f6640798974a88393fddc72ac84c52cc65ba"
+      }
+    ],
+    "codebaseSourceUnmodified": [
+      {
+        "path": "Graphify/00 Execution Control/GRAPHIFY_REPAIR_BASELINE.json",
+        "sha256": "768aacb7286423492b4d217f660833b3d66b86afd9b0ae14af5e919e2506d400"
+      }
+    ],
+    "existingEvidencePreserved": [
+      {
+        "path": "Graphify/00 Execution Control/Generated Tool Cache/legacy-v1/LEGACY_V1_MANIFEST.json",
+        "sha256": "c982bf3da2ef8300aad75ab973001ee125599ee9c0c1f7185766ec5387e0f5b7"
+      }
+    ],
+    "legacyGraphDemoted": [
+      {
+        "path": "Graphify/00 Execution Control/Generated Tool Cache/legacy-v1/LEGACY_V1_MANIFEST.json",
+        "sha256": "c982bf3da2ef8300aad75ab973001ee125599ee9c0c1f7185766ec5387e0f5b7"
+      }
+    ],
+    "cacheInvalidationImplemented": [
+      {
+        "path": "Graphify/11 Completion/run_ast_batched.py",
+        "sha256": "d0e2eb01009ee35d660f15305d30406aa3cfebe08689dfbefe68ca1cf52aabb8"
+      },
+      {
+        "path": "Graphify/00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/EXTRACTION_MANIFEST.json",
+        "sha256": "aafb1e8a907f27a44896bb453986e3eddbb1161d58eb81b8131e073e206d5e57"
+      }
+    ],
+    "allRepositoryPathsClassified": [
+      {
+        "path": "Graphify/01 Corpus Inventory/GRAPH_LAYER_FILE_REGISTRY.jsonl",
+        "sha256": "ab1ede27b1cce4c4460b287808aba76609705e0f8246e69a46c1ad5c360954a3"
+      }
+    ],
+    "graphLayersComplete": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "vendorPollutionRemovedFromCore": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "generatedCodeSeparated": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "testsSeparated": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "buildAndConfigSeparated": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "migrationsSeparated": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "directedAuthoritativeGraphBuilt": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "parallelEdgeEvidencePreserved": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "stableNodeIdsValidated": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "internalImportsResolved": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "workspaceExportsResolved": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "externalPackagesResolved": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "nodeBuiltinsResolved": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "zeroDanglingAuthoritativeEdges": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "zeroUnresolvedInternalEndpoints": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "zeroInvalidReferences": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "invalidSelfLoopsRepaired": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "validRecursiveRelationshipsClassified": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "runtimeRegistrationsComplete": [
+      {
+        "path": "Graphify/02 Architecture Map/RUNTIME_REGISTRATION_REGISTRY.jsonl",
+        "sha256": "01ab3881987b78ba8d5956f0dda00d5eb74166db08bf77927c79b7d1f4567c35"
+      }
+    ],
+    "requirementsMapped": [
+      {
+        "path": "Graphify/03 Capability Map/REQUIREMENT_REGISTRY.jsonl",
+        "sha256": "5f8073d1df89c9356b61ec4beb2c6dd20163beabb862a33fcc0726977107b8b9"
+      }
+    ],
+    "capabilitiesMapped": [
+      {
+        "path": "Graphify/03 Capability Map/CAPABILITY_REGISTRY.json",
+        "sha256": "1c09fe7fa9acd6e0a4bea29bc7b8afc14d210d4a1a7b80a0afc0f90f0fc63377"
+      }
+    ],
+    "capabilityLocationSemanticsCorrected": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "meaningfulLocationsMapped": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "requiredChangesMapped": [
+      {
+        "path": "Graphify/04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl",
+        "sha256": "dcce6e5a4ebd16af44a5d02b51e92adb86a7e1f879a99fbe2603b0ef66f18e1e"
+      }
+    ],
+    "affineReferenceVerified": [
+      {
+        "path": "Graphify/14 AFFiNE Reference/AFFINE_REFERENCE_MANIFEST.json",
+        "sha256": "9ed44f87937a19e51241e7e5a1b63840b891d2b9f5a1428e8faff66c38870933"
+      },
+      {
+        "path": "Graphify/14 AFFiNE Reference/OFFICIAL_SOURCE_RECEIPT.json",
+        "sha256": "4be690946578ed55995d3c3f0ec061765ed42b56324066017b0f6d1314131478"
+      }
+    ],
+    "affineParityCompleted": [
+      {
+        "path": "Graphify/14 AFFiNE Reference/AFFINE_CAPABILITY_INDEX.jsonl",
+        "sha256": "c5547d65992425dcca8b26d920f7369f3233961fa2723e5f539d7fbd7bc697ad"
+      },
+      {
+        "path": "Graphify/14 AFFiNE Reference/AFFINE_PARITY_VALIDATION.json",
+        "sha256": "36f1c196e8192520522c5da87489bca518e0703cb037c686e0a0da0526fb295e"
+      }
+    ],
+    "transplantCandidatesMappedNotApproved": [
+      {
+        "path": "Graphify/14 AFFiNE Reference/AFFINE_TRANSPLANT_CANDIDATES.jsonl",
+        "sha256": "392addecd09a6e240aff5b691ea669a3e4cd05f050849795c143f65a73af15c2"
+      }
+    ],
+    "ponytailReadOnlyAuditComplete": [
+      {
+        "path": "Graphify/08 Cleanup/PONYTAIL_VALIDATION_RESULT.json",
+        "sha256": "17f5c24e3b030f38ad4fd946cf9b9bed6a3d133efea9fff829e211291822fded"
+      }
+    ],
+    "ponytailCodeMutationsZero": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "deletionCandidatesMappedNotApplied": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "futureFixturesMapped": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "taskLevelBlockersClassified": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "referentialIntegrityPassed": [
+      {
+        "path": "Graphify/11 Completion/GLOBAL_VALIDATION_RESULT.json",
+        "sha256": "d74c241dae97ad56dbdc4ab8fcac4c9cc320e86d38c00efa1b08f133b0dfb842"
+      }
+    ],
+    "graphHealthPassed": [
+      {
+        "path": "Graphify/11 Completion/GLOBAL_VALIDATION_RESULT.json",
+        "sha256": "d74c241dae97ad56dbdc4ab8fcac4c9cc320e86d38c00efa1b08f133b0dfb842"
+      }
+    ],
+    "independentReviewPassed": [
+      {
+        "path": "Graphify/13 Agent Swarm/AGENT_REVIEWS.jsonl",
+        "sha256": "9479849b2ef7fd380003c7af677206694d477b3569a71fe573c22836a0ba5a92"
+      }
+    ],
+    "finalReleaseReceiptLocked": [
+      {
+        "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+        "sha256": "6bee1b31a2e961e0713d60486821c89114e4e557f8960a1bdc4eefddc9851d93"
+      }
+    ],
+    "allJsonValidated": [
+      {
+        "path": "Graphify/11 Completion/GLOBAL_VALIDATION_RESULT.json",
+        "sha256": "d74c241dae97ad56dbdc4ab8fcac4c9cc320e86d38c00efa1b08f133b0dfb842"
+      }
+    ],
+    "allJsonlValidated": [
+      {
+        "path": "Graphify/11 Completion/GLOBAL_VALIDATION_RESULT.json",
+        "sha256": "d74c241dae97ad56dbdc4ab8fcac4c9cc320e86d38c00efa1b08f133b0dfb842"
+      }
+    ],
+    "allSchemasValidated": [
+      {
+        "path": "Graphify/11 Completion/GLOBAL_VALIDATION_RESULT.json",
+        "sha256": "d74c241dae97ad56dbdc4ab8fcac4c9cc320e86d38c00efa1b08f133b0dfb842"
+      }
+    ]
+  },
+  "verificationTimestamp": "2026-07-29T08:46:38.879Z",
+  "repositoryEvidenceType": "HASH_MANIFEST",
+  "repositoryRevision": "135fbaacd841e5e4c271b046eda4b1613da83122e08c464904d395cd93ae5a04",
+  "evidenceReceipts": [
+    "Graphify/00 Execution Control/GRAPHIFY_REPAIR_BASELINE.json",
+    "Graphify/00 Execution Control/GRAPHIFY_REPAIR_MANIFEST.json",
+    "Graphify/00 Execution Control/Generated Tool Cache/legacy-v1/LEGACY_V1_MANIFEST.json",
+    "Graphify/00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/EXTRACTION_MANIFEST.json",
+    "Graphify/01 Corpus Inventory/GRAPH_LAYER_FILE_REGISTRY.jsonl",
+    "Graphify/02 Architecture Map/RUNTIME_REGISTRATION_REGISTRY.jsonl",
+    "Graphify/03 Capability Map/CAPABILITY_REGISTRY.json",
+    "Graphify/03 Capability Map/REQUIREMENT_REGISTRY.jsonl",
+    "Graphify/04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl",
+    "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+    "Graphify/08 Cleanup/PONYTAIL_VALIDATION_RESULT.json",
+    "Graphify/11 Completion/run_ast_batched.py",
+    "Graphify/13 Agent Swarm/AGENT_REVIEWS.jsonl",
+    "Graphify/14 AFFiNE Reference/AFFINE_CAPABILITY_INDEX.jsonl",
+    "Graphify/14 AFFiNE Reference/AFFINE_PARITY_VALIDATION.json",
+    "Graphify/14 AFFiNE Reference/AFFINE_REFERENCE_MANIFEST.json",
+    "Graphify/14 AFFiNE Reference/AFFINE_TRANSPLANT_CANDIDATES.jsonl",
+    "Graphify/14 AFFiNE Reference/OFFICIAL_SOURCE_RECEIPT.json"
+  ],
+  "allGatesPassed": true,
+  "executionReady": true,
+  "openMappingBlockers": [],
+  "taskLevelFutureBlockers": [
+    "dependencies not installed",
+    "application typecheck/tests/build/packaging not run",
+    "17 future fixtures not generated",
+    "SBOM/legal/release work pending",
+    "additions/deletions/transplants not implemented"
+  ],
+  "implementationPerformed": false,
+  "codebaseFilesMoved": 0,
+  "codebaseFilesDeleted": 0,
+  "codebaseFilesQuarantined": 0,
+  "finalReleaseReceiptLocked": true,
+  "generatedAt": "2026-07-29T08:44:23.931Z"
+}

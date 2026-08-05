@@ -1,0 +1,452 @@
+"""Generate the authoritative Graphify JSON Schemas with Python's standard library."""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+SCHEMA = "https://json-schema.org/draft/2020-12/schema"
+ROOT = Path(__file__).parent / "schemas"
+
+
+def object_schema(required: list[str], properties: dict | None = None) -> dict:
+    props = dict(properties or {})
+    for key in required:
+        props.setdefault(key, {})
+    return {
+        "$schema": SCHEMA,
+        "type": "object",
+        "required": required,
+        "properties": props,
+        "additionalProperties": True,
+    }
+
+
+string = {"type": "string"}
+nullable_string = {"type": ["string", "null"]}
+boolean = {"type": "boolean"}
+integer = {"type": "integer"}
+array = {"type": "array"}
+string_array = {"type": "array", "items": {"type": "string"}}
+object_value = {"type": "object"}
+
+schemas = {
+    "status.schema.json": object_schema(
+        [
+            "project",
+            "schemaVersion",
+            "projectPhase",
+            "lastUpdatedAt",
+            "repositoryRoot",
+            "codebaseRoot",
+            "graphifyRoot",
+            "gitStatus",
+            "graphifyStatus",
+            "ponytailStatus",
+            "subagentStatus",
+            "releaseGateStatus",
+        ],
+        {
+            "project": {"const": "MindRoom"},
+            "schemaVersion": integer,
+            "projectPhase": {"const": "GRAPHIFY_MAPPING"},
+            "currentBatchId": nullable_string,
+            "currentTaskId": nullable_string,
+            "lastCompletedTaskId": nullable_string,
+            "lastUpdatedAt": {"type": "string", "format": "date-time"},
+            "repositoryRoot": string,
+            "codebaseRoot": string,
+            "graphifyRoot": string,
+            "gitStatus": {"enum": ["AVAILABLE", "MISSING", "BROKEN", "UNKNOWN"]},
+            "graphifyStatus": {"enum": ["AVAILABLE", "MISSING", "BROKEN", "UNKNOWN"]},
+            "ponytailStatus": {"enum": ["AVAILABLE", "MISSING", "BROKEN", "UNKNOWN"]},
+            "subagentStatus": {"enum": ["AVAILABLE", "UNAVAILABLE", "LIMIT_REACHED", "UNKNOWN"]},
+            "releaseGateStatus": {"const": "LOCKED"},
+        },
+    ),
+    "task-record.schema.json": object_schema(
+        [
+            "taskId",
+            "batchId",
+            "agentId",
+            "status",
+            "allowedPaths",
+            "forbiddenPaths",
+            "commandsUsed",
+            "evidenceProduced",
+            "startedAt",
+            "reviewer",
+        ],
+        {
+            "taskId": string,
+            "batchId": string,
+            "agentId": string,
+            "capabilityId": string,
+            "mappingArea": string,
+            "status": string,
+            "allowedPaths": string_array,
+            "forbiddenPaths": string_array,
+            "filesInspected": string_array,
+            "graphifyOutputs": string_array,
+            "commandsUsed": string_array,
+            "evidenceProduced": string_array,
+            "startedAt": {"type": "string", "format": "date-time"},
+            "completionTimestamp": {"type": ["string", "null"], "format": "date-time"},
+            "reviewer": string,
+            "nextTask": nullable_string,
+        },
+    ),
+    "repository-baseline.schema.json": object_schema(
+        [
+            "schemaVersion",
+            "baselineType",
+            "baselineTimestamp",
+            "repositoryRoot",
+            "codebaseRoot",
+            "graphifyRoot",
+            "masterPlanHashes",
+            "counts",
+            "knownBaselineFailures",
+            "existingUncommittedUserWork",
+        ],
+        {
+            "schemaVersion": integer,
+            "baselineType": {"enum": ["GIT", "HASH_MANIFEST"]},
+            "repositoryRevision": nullable_string,
+            "baselineTimestamp": {"type": "string", "format": "date-time"},
+            "repositoryRoot": string,
+            "codebaseRoot": string,
+            "graphifyRoot": string,
+            "masterPlanHashes": object_value,
+            "counts": object_value,
+            "knownBaselineFailures": array,
+            "existingUncommittedUserWork": array,
+        },
+    ),
+    "requirement-registry.schema.json": object_schema(
+        [
+            "requirementId",
+            "sourcePlan",
+            "sourceHeading",
+            "sourceAnchor",
+            "requirementType",
+            "title",
+            "requirementTextSummary",
+            "decisionLabel",
+            "capabilityIds",
+            "currentEvidence",
+            "plannedEvidence",
+            "status",
+        ],
+        {
+            "requirementId": {"pattern": "^MR-(KEEP|REMOVE|ADD|PROCESS|VERIFY|LEGAL|COMPAT)-[0-9]{3,}$"},
+            "requirementType": {"enum": ["KEEP", "REMOVE", "ADD", "PROCESS", "VERIFY", "LEGAL", "COMPATIBILITY"]},
+            "decisionLabel": {"enum": ["MANDATORY", "CONDITIONAL", "OPTIONAL_LATER", "FORBIDDEN", "REQUIRES_EVIDENCE"]},
+            "capabilityIds": string_array,
+            "currentEvidence": array,
+            "plannedEvidence": array,
+            "status": string,
+        },
+    ),
+    "capability-registry.schema.json": object_schema(
+        ["capabilities"],
+        {
+            "capabilities": {
+                "type": "array",
+                "items": object_schema(
+                    [
+                        "capabilityId",
+                        "name",
+                        "description",
+                        "sourceRequirementIds",
+                        "classification",
+                        "currentStatus",
+                        "currentPaths",
+                        "currentSymbols",
+                        "dependencies",
+                        "dependants",
+                        "intendedOwner",
+                        "intendedFinalPath",
+                        "riskLevel",
+                        "mappingConfidence",
+                        "evidence",
+                    ]
+                ),
+            }
+        },
+    ),
+    "exact-location-registry.schema.json": object_schema(
+        ["entries"],
+        {
+            "entries": {
+                "type": "array",
+                "items": object_schema(
+                    [
+                        "entityId",
+                        "entityType",
+                        "capabilityId",
+                        "currentStatus",
+                        "currentPath",
+                        "symbol",
+                        "uniqueAnchor",
+                        "lineRange",
+                        "fileSha256",
+                        "package",
+                        "intendedOwner",
+                        "intendedFinalPath",
+                        "dependencies",
+                        "dependants",
+                        "runtimeRegistrations",
+                        "tests",
+                        "plannedChanges",
+                        "verificationRequirements",
+                        "evidence",
+                    ]
+                ),
+            }
+        },
+    ),
+    "symbol-registry.schema.json": object_schema(
+        ["symbolId", "capabilityId", "entityType", "currentPath", "symbol", "uniqueAnchor", "fileSha256", "evidence"],
+        {
+            "symbolId": string,
+            "capabilityId": string,
+            "currentPath": string,
+            "symbol": string,
+            "uniqueAnchor": string,
+            "fileSha256": string,
+            "evidence": array,
+        },
+    ),
+    "dependency-edge.schema.json": object_schema(
+        ["edgeId", "sourceId", "targetId", "dependencyType", "sourcePath", "targetPath", "evidence", "confidence"],
+        {
+            "dependencyType": {
+                "enum": [
+                    "STATIC_IMPORT",
+                    "RE_EXPORT",
+                    "DYNAMIC_IMPORT",
+                    "FUNCTION_CALL",
+                    "CLASS_INHERITANCE",
+                    "TYPE_DEPENDENCY",
+                    "DI_REGISTRATION",
+                    "ROUTE_REGISTRATION",
+                    "COMMAND_REGISTRATION",
+                    "IPC_REGISTRATION",
+                    "PRELOAD_EXPOSURE",
+                    "WORKER_REGISTRATION",
+                    "EVENT_REGISTRATION",
+                    "SCHEMA_REGISTRATION",
+                    "MIGRATION_DEPENDENCY",
+                    "BUILD_REFERENCE",
+                    "PACKAGING_REFERENCE",
+                    "FIXTURE_REFERENCE",
+                    "ASSET_REFERENCE",
+                    "STRING_LOOKUP",
+                    "PLANNED_CAPABILITY_DEPENDENCY",
+                ]
+            },
+            "evidence": array,
+        },
+    ),
+    "runtime-registration.schema.json": object_schema(
+        [
+            "registrationId",
+            "registrationType",
+            "declaringPath",
+            "symbolOrAnchor",
+            "lineRange",
+            "registeredIdentifier",
+            "implementationPath",
+            "consumerPaths",
+            "runtimeReachability",
+            "capabilityIds",
+            "removalRisk",
+            "evidence",
+        ],
+        {"consumerPaths": string_array, "capabilityIds": string_array, "evidence": array},
+    ),
+    "implementation-task.schema.json": object_schema(
+        [
+            "taskId",
+            "capabilityId",
+            "sourceRequirements",
+            "exactCurrentPaths",
+            "exactTargetPaths",
+            "exactSymbols",
+            "requiredAffineSearches",
+            "activeCodeSearches",
+            "preliminaryTransplantDecision",
+            "allowedPaths",
+            "forbiddenPaths",
+            "dependencies",
+            "dependantTasks",
+            "requiredAdaptations",
+            "prohibitedReinvention",
+            "tests",
+            "fixtures",
+            "verificationReceipts",
+            "reviewer",
+            "rollback",
+            "status",
+        ]
+    ),
+    "deletion-candidate.schema.json": object_schema(
+        [
+            "candidateId",
+            "path",
+            "classification",
+            "reason",
+            "capabilityIds",
+            "status",
+            "proofRequirements",
+            "replacement",
+            "tests",
+            "build",
+            "graphifyImpact",
+            "independentReview",
+        ],
+        {"status": {"const": "CANDIDATE"}, "proofRequirements": object_value},
+    ),
+    "deletion-receipt.schema.json": object_schema(
+        [
+            "deletionId",
+            "originalPath",
+            "quarantinePath",
+            "originalSha256",
+            "classification",
+            "reason",
+            "staticImportMatches",
+            "reExportMatches",
+            "dynamicImportMatches",
+            "symbolReferenceMatches",
+            "runtimeRegistrationMatches",
+            "buildReferenceMatches",
+            "packagingReferenceMatches",
+            "migrationRequired",
+            "plannedCapabilityDependency",
+            "graphifyDependants",
+            "tests",
+            "buildReceipts",
+            "independentReviewer",
+            "reviewDecision",
+            "purgedAt",
+            "status",
+        ],
+        {
+            "reviewDecision": {"enum": ["APPROVED", "REJECTED"]},
+            "status": {"enum": ["QUARANTINED", "RESTORED", "PURGED"]},
+            "purgedAt": nullable_string,
+        },
+    ),
+    "transplant-receipt.schema.json": object_schema(
+        [
+            "receiptId",
+            "capabilityId",
+            "requiredBehaviour",
+            "activeCodeSearchQueries",
+            "affineReferenceSearchQueries",
+            "activeFilesFound",
+            "affineFilesFound",
+            "coherentModuleBoundary",
+            "decision",
+            "decisionReason",
+            "copiedFiles",
+            "adaptedFiles",
+            "requiredAdaptations",
+            "licenceStatus",
+            "independentReviewer",
+            "approved",
+        ],
+        {
+            "decision": {"enum": ["KEEP_EXISTING", "KEEP_AND_ADAPT", "COPY_COHERENT_IMPLEMENTATION", "REPAIR_PARTIAL", "INVENT_NEW"]},
+            "licenceStatus": {"enum": ["APPROVED", "BLOCKED", "NOT_APPLICABLE"]},
+            "approved": boolean,
+        },
+    ),
+    "test-receipt.schema.json": object_schema(
+        ["receiptId", "command", "workingDirectory", "packageManager", "startedAt", "finishedAt", "exitCode", "result", "relevantOutput", "failureClassification", "repairApplied", "rerunReceiptId"],
+        {
+            "exitCode": {"type": ["integer", "null"]},
+            "result": {"enum": ["PASS", "FAIL", "BLOCKED"]},
+            "rerunReceiptId": nullable_string,
+        },
+    ),
+    "hash-manifest-checkpoint.schema.json": object_schema(
+        [
+            "schemaVersion",
+            "batchId",
+            "taskId",
+            "capabilityId",
+            "agentId",
+            "affectedPaths",
+            "preMutationHashes",
+            "postMutationHashes",
+            "createdFiles",
+            "modifiedFiles",
+            "movedFiles",
+            "quarantinedFiles",
+            "purgedFiles",
+            "previousAndNewPaths",
+            "rollbackInstructions",
+            "commands",
+            "workingDirectories",
+            "exitCodes",
+            "verificationReceiptIds",
+            "reviewer",
+            "reviewDecision",
+            "creationTimestamp",
+            "completionTimestamp",
+        ],
+        {
+            "schemaVersion": integer,
+            "affectedPaths": string_array,
+            "preMutationHashes": object_value,
+            "postMutationHashes": object_value,
+            "createdFiles": string_array,
+            "modifiedFiles": string_array,
+            "movedFiles": string_array,
+            "quarantinedFiles": string_array,
+            "purgedFiles": string_array,
+            "previousAndNewPaths": array,
+            "rollbackInstructions": string_array,
+            "commands": string_array,
+            "workingDirectories": string_array,
+            "exitCodes": {"type": "array", "items": integer},
+            "verificationReceiptIds": string_array,
+            "reviewDecision": {"enum": ["APPROVED", "REJECTED", "PENDING"]},
+            "creationTimestamp": {"type": "string", "format": "date-time"},
+            "completionTimestamp": {"type": ["string", "null"], "format": "date-time"},
+        },
+    ),
+    "graphify-mapping-receipt.schema.json": object_schema(
+        ["project", "phase", "status", "verificationTimestamp", "repositoryEvidenceType", "repositoryRevision", "gates", "evidenceReceipts", "allGatesPassed", "executionReady"],
+        {
+            "project": {"const": "MindRoom"},
+            "phase": {"const": "GRAPHIFY_MAPPING"},
+            "repositoryEvidenceType": {"enum": ["GIT", "HASH_MANIFEST"]},
+            "gates": object_value,
+            "evidenceReceipts": string_array,
+            "allGatesPassed": boolean,
+            "executionReady": boolean,
+        },
+    ),
+    "final-release-receipt.schema.json": object_schema(
+        ["project", "status", "verificationTimestamp", "repositoryRevision", "repositoryEvidenceType", "gates", "evidenceReceipts", "allGatesPassed", "completionBannerUnlocked"],
+        {
+            "project": {"const": "MindRoom"},
+            "status": {"const": "NOT_VERIFIED"},
+            "verificationTimestamp": {"type": "null"},
+            "repositoryEvidenceType": {"enum": ["GIT", "HASH_MANIFEST"]},
+            "gates": object_value,
+            "evidenceReceipts": string_array,
+            "allGatesPassed": {"const": False},
+            "completionBannerUnlocked": {"const": False},
+        },
+    ),
+}
+
+ROOT.mkdir(parents=True, exist_ok=True)
+for name, schema in schemas.items():
+    (ROOT / name).write_text(json.dumps(schema, indent=2) + "\n", encoding="utf-8")
+print(f"Generated {len(schemas)} schemas in {ROOT}")

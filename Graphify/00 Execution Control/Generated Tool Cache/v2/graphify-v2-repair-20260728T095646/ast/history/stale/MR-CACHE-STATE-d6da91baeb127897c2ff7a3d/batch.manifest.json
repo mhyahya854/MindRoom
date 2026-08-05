@@ -1,0 +1,2023 @@
+{
+  "policyVersion": "mindroom-graphify-v2-layered-directed-1",
+  "extractor": "graphify.extract.extract",
+  "extractorVersion": "unknown",
+  "runnerSha256": "2adcfbd68a8a4e2b407bba8c37b6f81fb5b31a74fa570e70359e0283bf7f33ec",
+  "classificationResolverSha256": "675743d8d1e0f47c12ac4b2678077ed0ee0f06c0ccb6755505ffdc22bbfdaf55",
+  "codebaseRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Codebase",
+  "layer": "AUTHORED_RUNTIME",
+  "batchIndex": 14,
+  "batchSizePolicy": 400,
+  "files": [
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/all-tag/header.tsx",
+      "sha256": "76659aa064e615576918df291d54625db0e455af4f11c8e7e11469663ccbbc57",
+      "sizeBytes": 258
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/all-tag/index.tsx",
+      "sha256": "5263712456516011cf0966972ffbd910650ea03be46c5547fdc2722b5f9e1025",
+      "sizeBytes": 2306
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/attachment/index.css.ts",
+      "sha256": "9ad27190fd82a393a4132f568bae3132fde567f31511e6e48f846a61221b0b7d",
+      "sizeBytes": 217
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/attachment/index.tsx",
+      "sha256": "c8398dcf85b64d36bf3010b4e9fa4ff10b73068047e85b3706a987d84af145d7",
+      "sizeBytes": 3346
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/chat/index.css.ts",
+      "sha256": "c2b1018835cb073ef2f6c74ebab557a5c673c40abc24309905debf40a6c86127",
+      "sizeBytes": 532
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/chat/index.tsx",
+      "sha256": "64dde9da89482c261663b7c2b2b52c464b9cf8be81fb2daff693e7244d707939",
+      "sizeBytes": 10393
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/collection/collection.css.ts",
+      "sha256": "beeea55e0f1a9343a4372af3579dde3d1db52b60526bfbacad298faef7255277",
+      "sizeBytes": 884
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/collection/header.tsx",
+      "sha256": "8e7a8b98e28d9237202b27723792edf01c6f7eee6fda8999c1cbc3ee8bbef9bb",
+      "sizeBytes": 1262
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/collection/index.css.ts",
+      "sha256": "5e98b7e184ac0e1b5d04ded499be90263abbc340c56789c6b6cc6ea3864a620c",
+      "sizeBytes": 1171
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/collection/index.tsx",
+      "sha256": "0a71d0490d6cc48653609e9e10fdbef9d4e6282d3cf5cee761efdb480adf5ac5",
+      "sizeBytes": 7130
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/collection/list-header.tsx",
+      "sha256": "bfb7e41cded5a9c00f24efa62a68299a738ca2a50eb5a82da5bdd03a1d6fcb02",
+      "sizeBytes": 3990
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/detail-page-header.css.ts",
+      "sha256": "2dc3002515b7c190f0bbb3e7c139c63d01c1f48ce6b8b55a7783acaae130097c",
+      "sizeBytes": 1682
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/detail-page-header.tsx",
+      "sha256": "7e26055bec2b023265f8d51928ce4b96bf76ad5a59451b2d1dae06e53e36727b",
+      "sizeBytes": 8008
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/detail-page-wrapper.tsx",
+      "sha256": "1b6b6d05a0debff148565c4640ae7f9b25e969a1acb2749cd79cb9c10776dc10",
+      "sizeBytes": 2688
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/detail-page.css.ts",
+      "sha256": "707fd7fd5a26e7639dc28dd2a132ad0151a834af3bf5b316f39f13d610a348ae",
+      "sizeBytes": 1861
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/detail-page.tsx",
+      "sha256": "1530f51b8c86c3295120cc92a8e2536e3f05e678d074cd00a66fce00a1cdaabe",
+      "sizeBytes": 16713
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/index.ts",
+      "sha256": "9e7805edfb844678c59f0de5ff8fd54f7d60d9827ff7331043ac9152ec220451",
+      "sizeBytes": 31
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/adapter.css.ts",
+      "sha256": "bdb298619dbb93196ee66e813b052f75dfa925431ff8d1b6504355d68f8ba48f",
+      "sizeBytes": 132
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/adapter.tsx",
+      "sha256": "8ea4315a512f83081fd8bfbe03e99d9e070918734b1233cd76cfc11c74806bf2",
+      "sizeBytes": 2362
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/analytics.css.ts",
+      "sha256": "a9aeaa1ed8dd61639721642b0755a4927658c95ee3b37637e9f7d566a1e1ba7f",
+      "sizeBytes": 4787
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/analytics.tsx",
+      "sha256": "ffda5f5385a31845d1dac3b3371836a3427446702f5012c5f937c66effb7467d",
+      "sizeBytes": 16247
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/analytics.utils.ts",
+      "sha256": "91897fbcdab9b1ff0d552a2d100608a1a87c5186b8b7f8e7dd2c9cb9581226a3",
+      "sizeBytes": 1835
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/chat.css.ts",
+      "sha256": "7bdc74ff9cbb944cdb5cd3eefa0250d1745d0578611e8b863e67e5c86cdbe791",
+      "sizeBytes": 2222
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/chat.tsx",
+      "sha256": "6e30f6ebaa43736640f48ef553390d1bae153d5cc106c07486c71934e5d42111",
+      "sizeBytes": 16344
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/frame.css.ts",
+      "sha256": "bdb298619dbb93196ee66e813b052f75dfa925431ff8d1b6504355d68f8ba48f",
+      "sizeBytes": 132
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/frame.tsx",
+      "sha256": "5805c4eaa06f3aa1b917c29c8bf6f1f8344297af8f4cd5ac37937dbceb47a658",
+      "sizeBytes": 971
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/journal/assets.ts",
+      "sha256": "d5e3844e3ea175884316b4e1691519e206182e3ed0bff0f8c1661bdd3c4cecde",
+      "sizeBytes": 43821
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/journal/calendar-events.css.ts",
+      "sha256": "ce0f4cb08661986058ce48d390334519dea5c7544a8d95f9f369c19b54ab277f",
+      "sizeBytes": 2076
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/journal/calendar-events.tsx",
+      "sha256": "830fc8ba1d1456d97e5cc4efc1b54cac16a68e4f3ae71de1347ce0dfb5f1892f",
+      "sizeBytes": 4630
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/journal/index.tsx",
+      "sha256": "55ff7f646209734d6e0e628e80c4f9b540da6442eb3c8b6b620ca3a18150fefd",
+      "sizeBytes": 17838
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/journal/journal.css.ts",
+      "sha256": "c17794627de8f26dd3bb67a174961f2c151786a0ea06117447decd8fc74261b4",
+      "sizeBytes": 6068
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/journal/template-onboarding.css.ts",
+      "sha256": "3aad808a822c32d9b6caeb37ea4b5cfc7bf3b6129ef0056d5586c4d42f3a7c8c",
+      "sizeBytes": 3031
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/journal/template-onboarding.tsx",
+      "sha256": "bcdda18f7015f8d3c32b058debfee6878f23cda1e2473b2e45d63dee18d9c495",
+      "sizeBytes": 3703
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/journal/template-setting.css.ts",
+      "sha256": "bb5e15bdb9208ddfe8cd76aaed94996b6d38c0264e0f4e3f008d687df8d5078e",
+      "sizeBytes": 845
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/journal/template-setting.tsx",
+      "sha256": "c50af0ade4e71392dfbf2ded5c334e891c7a04187ec266a6a8452a737ede69c1",
+      "sizeBytes": 2927
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/outline.css.ts",
+      "sha256": "bdb298619dbb93196ee66e813b052f75dfa925431ff8d1b6504355d68f8ba48f",
+      "sizeBytes": 132
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/tabs/outline.tsx",
+      "sha256": "1a996ce3d2ddd6514453a0b089266f2ed8ba1f907a99fa78336d3e666c1012b1",
+      "sizeBytes": 1004
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/detail-page/use-header-responsive.ts",
+      "sha256": "a7719bf2b56892610b788bf26ea23633eb98154b706b37ea162d7650bb4c74d8",
+      "sizeBytes": 1213
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/index.tsx",
+      "sha256": "ce0d88ef6b330af5292dcb2ad014cc2c9389f6abfed4c200cb6e8900cc54316f",
+      "sizeBytes": 10661
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/journals/index.css.ts",
+      "sha256": "ce24fae8983049c9e6f80c6618f581ff955d9a4453dcf8ed0c4899076106f38b",
+      "sizeBytes": 1569
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/journals/index.tsx",
+      "sha256": "201e206f8eee831de8849825a60e7c5176aca56ffa280eceb4a58c9000941490",
+      "sizeBytes": 4676
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/layouts/all-doc-sidebar-tabs.tsx",
+      "sha256": "6558ad82b6d87ae0c682afb8815ab7c2a05deb280cd212677a6fb3a7ed7c98f5",
+      "sizeBytes": 654
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/layouts/workspace-layout.tsx",
+      "sha256": "829e0c849c1f59e1e464402e2c733f2d3ccfdd1100dfb1500a5752c5a64807d5",
+      "sizeBytes": 2495
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/page-list-empty.css.ts",
+      "sha256": "e76cb4a0e68de7791f6af9ef5ae0b484834c4ec9bdb79b7a9b972880cbc4d7d2",
+      "sizeBytes": 1005
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/page-list-empty.tsx",
+      "sha256": "c72671b9701595d31d3b85086d380dd124ef4f256559241317a643ce017c01ad",
+      "sizeBytes": 1131
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/settings/index.tsx",
+      "sha256": "0b1ed1a9849c319830fd1521cb13b5a46335e7214adc7876eedae45d04faddce",
+      "sizeBytes": 1109
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/share/share-footer.css.ts",
+      "sha256": "9ad0d720dfca3ab30d420b36e46822dc75d0b9123847b84937dc8b87fb40a482",
+      "sizeBytes": 1195
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/share/share-footer.tsx",
+      "sha256": "1b971b19bc105d206a48f1db90ecf7f2229973c5cd49e5c82759f6f89e9b8dc9",
+      "sizeBytes": 722
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/share/share-header.css.ts",
+      "sha256": "6590338c84f32e8e4ef1070db8c47e33728d5a4ee6aacccc143be77dd559749a",
+      "sizeBytes": 411
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/share/share-header.tsx",
+      "sha256": "39c2dcd8b510ee5275dea90cf46e3a56d741779b65e133238ead61e29d154eeb",
+      "sizeBytes": 921
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/share/share-page.css.ts",
+      "sha256": "93635c1b376c3fd983b2ea67e54fb4ab30bf92afb9c64da22aa80cf480990307",
+      "sizeBytes": 1234
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/share/share-page.tsx",
+      "sha256": "ba2a5a8af79986dcd5715f9eedb76b78ca8035af07ed657c301169031f5615d8",
+      "sizeBytes": 12141
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/share/share-page.utils.ts",
+      "sha256": "dfb83f3d59f4eb6a232f71c3df8df5147bfbfa6b942c442fd8434e91db6b4f08",
+      "sizeBytes": 2195
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/share/use-shared-mode-query-sync.ts",
+      "sha256": "56c27ab1f6ff76d38f516660e121f5955892fad181c49b82aae8a979411fc7a0",
+      "sizeBytes": 1639
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/tag/header.tsx",
+      "sha256": "f03b140e8440e59c98222ff88e0e3742abde37395d5cde9fa7b46ab55bdaa2f1",
+      "sizeBytes": 840
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/tag/index.css.ts",
+      "sha256": "2426a4f49dd4c630f3dd105e689883b30465cee6c9bec00333da715e3a251fa1",
+      "sizeBytes": 238
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/tag/index.tsx",
+      "sha256": "d76b46ff16af8398f89c5701cea5a85eba6f50b77a7f1a8d9679d8bdd8691fb1",
+      "sizeBytes": 4720
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/tag/list-header.css.ts",
+      "sha256": "17114182f99502d81d58ec1c2554f493ecdff3b5ca9ebe4771208c3e0e19e676",
+      "sizeBytes": 3439
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/tag/list-header.tsx",
+      "sha256": "32357c6d5c9134ebfd1432c03a980bf3c1edb54eb104e771633c72e882d972f9",
+      "sizeBytes": 4918
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/trash-page.css.ts",
+      "sha256": "81a8a0b36d842192253fafc6461bea264598fb3071bb979405053a9e7ecb859b",
+      "sizeBytes": 465
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/pages/workspace/trash-page.tsx",
+      "sha256": "14d893c027f4b6257e1ab0bb3177f3ae34e549e6ed2637f8f7242d8e02eded36",
+      "sizeBytes": 5607
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/route-paths.ts",
+      "sha256": "fae90fa148b36213a62e9ad118f3ebae68985e572610788466b2d808522279b3",
+      "sizeBytes": 337
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/router.tsx",
+      "sha256": "233dd8c5f9fa62dd7c2fda62376627a99ff72b4182d2e67f1f4e53150f48fb7e",
+      "sizeBytes": 5694
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/storage.ts",
+      "sha256": "a94eef86b30d4d18c1903a7cf07b3af808c524d3ddc91ba37672c901334bb691",
+      "sizeBytes": 676
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/desktop/workbench-router.ts",
+      "sha256": "ab6eb5620cd4dacade2161a84275294af01e126495331b7da99c025d4dd5391f",
+      "sizeBytes": 1194
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/app-fallback/index.tsx",
+      "sha256": "3df2ef514f75b6c1fd587dea4bf814e6431de404cb6fd473bf672e15beefc57c",
+      "sizeBytes": 3398
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/app-tabs/constants.ts",
+      "sha256": "03788e0920fa73d07a4e146b39267a052939b94f7a3cc77824ed73e735286c2e",
+      "sizeBytes": 42
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/app-tabs/create.tsx",
+      "sha256": "3b8d1d040b0099e8b090081a15383b0eb0ab58926d4e93e124743ce7044a6219",
+      "sizeBytes": 1944
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/app-tabs/data.tsx",
+      "sha256": "247324833b00aece9cd126144685b488463e386c0193ef78bd720bb6bbfad99a",
+      "sizeBytes": 449
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/app-tabs/index.tsx",
+      "sha256": "861868fa916526d53314ca3e0fc6161d346bb14adefdef0202254cb017609730",
+      "sizeBytes": 2641
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/app-tabs/journal.tsx",
+      "sha256": "80ad169d660848373f0105c0529623b361b469c2fbe847fa9b6f88fddba93f7e",
+      "sizeBytes": 1268
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/app-tabs/styles.css.ts",
+      "sha256": "fb9cab9d3cc0ce91008d41865bfd07f552fd2cbdfcf67d08a283808b5a2d3fb5",
+      "sizeBytes": 1159
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/app-tabs/tab-item.tsx",
+      "sha256": "63cca924c806b1925e9b1d760b0a449fb546e9874be1205a3b7f82eeaa03b51b",
+      "sizeBytes": 1117
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/app-tabs/type.ts",
+      "sha256": "3af316c1706d37f1ef274176634a04f91e328c24c2cdcba3766924cbc3e25be0",
+      "sizeBytes": 482
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/doc-card/index.tsx",
+      "sha256": "2941a1922e82e2c5256ec40731012181dcf600bfb5a073cfdacb5f42c96376a8",
+      "sizeBytes": 3438
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/doc-card/styles.css.tsx",
+      "sha256": "f75fd379880359b91fae0fa902321ad33ff5b502a210a6c40b645332fb42ab3c",
+      "sizeBytes": 1082
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/doc-card/tag.css.ts",
+      "sha256": "a47d9d2f798278bfc9dfecc3cf60e3997f62980c8e1e2f7493f35201b291a5c7",
+      "sizeBytes": 873
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/doc-card/tag.tsx",
+      "sha256": "84907eff83279334812f8ff4bf5928f71dc8003f9b24702ccdcd3c79757ad70a",
+      "sizeBytes": 1230
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/doc-info/doc-info.css.ts",
+      "sha256": "c7f22193c01d88ae00943cc0601b6f60b492e308a67f0cb7b8edd2c8412264d2",
+      "sizeBytes": 1082
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/doc-info/doc-info.tsx",
+      "sha256": "fe2eb2056fc088590bd3638dd764a585e517d89e1ba93ae3b2c47b2d2d083c68",
+      "sizeBytes": 5607
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/doc-info/doc-scope.tsx",
+      "sha256": "a6c9e30009635b777e8a85b202e56dddbc7cfddb99e005db23d9fd6a677ef6af",
+      "sizeBytes": 723
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/doc-info/index.ts",
+      "sha256": "550e5b3d9b6e5331768341bc2aab6cb6ed76dbe0a45c6c91beada12e07935b11",
+      "sizeBytes": 57
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/index.ts",
+      "sha256": "1f38c021a787520d9453f4debe2b89037cb590efffae2f90da6b574d97914503",
+      "sizeBytes": 419
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/mobile-modal-config-provider.tsx",
+      "sha256": "7f594b676166e601f4191224e2a5d482803a78932cdc9746acc63b55bf1f6c46",
+      "sizeBytes": 1014
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/mobile-shell-host.tsx",
+      "sha256": "37ec1e87c73b3dcc72b598a3242dc0685c94f2fc87d821dc66a70e2d6953c90c",
+      "sizeBytes": 2000
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation-back/index.tsx",
+      "sha256": "69e3586ca3abea35b4b69581f30716892a0e9ab67396a778afe196bbcbdd408c",
+      "sizeBytes": 1369
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/index.ts",
+      "sha256": "fbb0edd5202346fac0c73e21e2e08f2b65f3db30003eeca4f33adda1f9240141",
+      "sizeBytes": 390
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/layouts/add-item-placeholder.css.ts",
+      "sha256": "d48ad70ef26107d5a401fbaa9ddbf4ae4f0249b427d42146ac9edc74536fe2d4",
+      "sizeBytes": 554
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/layouts/add-item-placeholder.tsx",
+      "sha256": "5562aa38c0e08b567f652652dfc033e182ad0194887235c074b9e59be7123334",
+      "sizeBytes": 1225
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/layouts/collapsible-section.css.ts",
+      "sha256": "42bbff1e426635fdccb8d49a63675efea05436f4c6d8fd7604d29ae22086334f",
+      "sizeBytes": 1128
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/layouts/collapsible-section.tsx",
+      "sha256": "57ddf17e0106961933b90a4a873b8d4518751d7a3eee27b501f3bb83b423509d",
+      "sizeBytes": 2912
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/menu-host.tsx",
+      "sha256": "cbc665c0d80b4ea21414e65ca69ec6d6cd7a7a62c30969f3ca8c3d09c39f6c3f",
+      "sizeBytes": 1871
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/nodes/collection/dialog.tsx",
+      "sha256": "e6b8592745da5147406c3c38b9ed69101d9f0dd9b1fdcb1605101582ac124672",
+      "sizeBytes": 872
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/nodes/collection/index.tsx",
+      "sha256": "b3216e2c049685f2ce7fffb1c92871cffb90894b48368c13c40aa1d3d92edb13",
+      "sizeBytes": 5596
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/nodes/collection/operations.tsx",
+      "sha256": "825cc939c20ffb1ad2b3126ea7a0ad3e4f3d16997e7586d705b87219138abfd0",
+      "sizeBytes": 8701
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/nodes/doc/dialog.tsx",
+      "sha256": "499f8186c6dc9a8d1cadcc7c9e51ad7aca46416895d350d02be1ba2e094044a2",
+      "sizeBytes": 416
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/nodes/doc/index.tsx",
+      "sha256": "666c88345f96a9e21f2fa0b365dbb7761e10050d9647124fbfc3462612ca16d4",
+      "sizeBytes": 3950
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/nodes/doc/operations.tsx",
+      "sha256": "f634a68a7d50e749076d5b9dd080ffc846b72201da064cd53b7d9f38db33ba8f",
+      "sizeBytes": 9248
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/nodes/doc/styles.css.ts",
+      "sha256": "a378b8857b367d192c62f9af02bdea23c8177c5150046ebb5eea92065491a046",
+      "sizeBytes": 164
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/nodes/folder/dialog.tsx",
+      "sha256": "a6e146537bb71dbd9754a3aec90845e525e38b6927ffa8c5637d158113865a86",
+      "sizeBytes": 1548
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/nodes/folder/index.tsx",
+      "sha256": "976d53bea5332eead51d6f1122f7cf05470dcf84866fdad2be56be2d26e6174c",
+      "sizeBytes": 13223
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/nodes/folder/operations.tsx",
+      "sha256": "bc45797ac7fd0aa678966b03235f04238147a4988ccc9915443ca29aabb18e77",
+      "sizeBytes": 1039
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/nodes/tag/dialog.css.ts",
+      "sha256": "9fe7a8a1a024cdd572b6141e3f1c1bc1770f4bfa8ead57c2c1eb66a4c29101b6",
+      "sizeBytes": 1132
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/nodes/tag/dialog.tsx",
+      "sha256": "18a14e031e8dd769c574237d31db85b9f79fa0f2409abd96423f657884dd8f10",
+      "sizeBytes": 4972
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/nodes/tag/index.tsx",
+      "sha256": "a6262700035efa65cc3ad93bc6ad88ee340227ca481d986c6da26077573c4ebc",
+      "sizeBytes": 3885
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/nodes/tag/operations.tsx",
+      "sha256": "bb499e1f8f903fb7b6c1685055387497c6ed58e4ce04314330aa0211b286bcca",
+      "sizeBytes": 9576
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/nodes/tag/styles.css.ts",
+      "sha256": "a9b9049fe7e5d7ce0c8836988d97ffec1c930867fc937c2de96ca78352239b1e",
+      "sizeBytes": 287
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/sections/collections/index.css.ts",
+      "sha256": "999d8c9d03ad84907a14494e6d373065fa97c31f7d156eaea9007d4221b1fb17",
+      "sizeBytes": 208
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/sections/collections/index.tsx",
+      "sha256": "956d34a3a8bf3427a76fb8d9d8acb7c28f0c89474c1e4c12b3a26f84f5fa4339",
+      "sizeBytes": 3124
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/sections/favorites/index.tsx",
+      "sha256": "09ca4e3c3e57287edb56b78f26b4d33b8144d024f6ebf922cdec38df0543b2d9",
+      "sizeBytes": 3372
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/sections/favorites/loading.tsx",
+      "sha256": "68fdf617ac2bf39fe664671422a2f6c1ba31941ea9fd2fbe183002d368a0a3e9",
+      "sizeBytes": 153
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/sections/organize/index.tsx",
+      "sha256": "e63fddd5274f2dc868148a79ed35f186d10d08c9577819772aa985cfa5a35184",
+      "sizeBytes": 2714
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/sections/tags/index.tsx",
+      "sha256": "613f825f25ea5339afcb9e3469e3ce4437ccdbde2bf66d0cb0189bc215b14f71",
+      "sizeBytes": 2539
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/tree/node.css.ts",
+      "sha256": "cc22b16753b5db33492945e7a1cf77d465e0794d296a704ea6569b71dbb1b527",
+      "sizeBytes": 2641
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/tree/node.tsx",
+      "sha256": "1be755d73c359c86570e23703cdaa0bfa547bc36a88252b9bbba3fe65c663677",
+      "sizeBytes": 5960
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/tree/root.css.ts",
+      "sha256": "1d13d3b5fc2a2c5035955d09fa13b564b0b726882726e4e8f9ab5e3cfd009fbb",
+      "sizeBytes": 180
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/tree/root.tsx",
+      "sha256": "698a530155767a91335d7c901e5edac0d66c8cf8a77f95b9baef1ea73b64999a",
+      "sizeBytes": 1229
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/virtual-scroller/index.tsx",
+      "sha256": "8d67f2518d7ee16568a1b600857a6a0742486a54716cb57353248b72b6fbedbc",
+      "sizeBytes": 26564
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/navigation/virtual-scroller/styles.css.ts",
+      "sha256": "242b7acf7cc676848eb114a0a950531b10d4d014974fef29aef5059762fc2922",
+      "sizeBytes": 1926
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/page-header/index.tsx",
+      "sha256": "ed0b22000e12f8567b876b531d899a9ff729801505fd82ad1db5f00441cb2236",
+      "sizeBytes": 2746
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/page-header/styles.css.ts",
+      "sha256": "7a317527300fac18f6f118eeabac3823db9ed6dbb80dbc9f76b96a0670a5ef3d",
+      "sizeBytes": 1300
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/page/index.tsx",
+      "sha256": "132d159859a1a52b11cd80afaeda925feb63d8f7b0c7aec2386725dcbd33725a",
+      "sizeBytes": 742
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/page/styles.css.ts",
+      "sha256": "165b79feea73f505796abc86ba3418fc75c5202a9cfda745e004ace11e5c758f",
+      "sizeBytes": 374
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/rename/content.css.ts",
+      "sha256": "64699dd00cb8afcfea64947046c21086ec0de4c6b435629ca728c6b8a388b44f",
+      "sizeBytes": 734
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/rename/content.tsx",
+      "sha256": "fc8dd239a9cf7bf358ad7962436974ad3ba461bfb5102b5ec9205532f8f7eb93",
+      "sizeBytes": 1937
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/rename/dialog.css.ts",
+      "sha256": "f90b1ddc5d6e8a6606028c002eff41ad093e6b6ae7370c714ec0b87f3ca4296e",
+      "sizeBytes": 406
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/rename/dialog.tsx",
+      "sha256": "c617e79b53540951a294fdde9ee5facf272678c9afdb10f9e2f13066d683efd3",
+      "sizeBytes": 1243
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/rename/index.tsx",
+      "sha256": "e3145eab6a95e7996a090af7597f1f0e9e92d1d8df0e3a5601559e1e554b4dd7",
+      "sizeBytes": 105
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/rename/sub-menu.tsx",
+      "sha256": "a77649b52fc2023fd1699c88acc29448f43394a01e7a8ef53ebee3191042f8c7",
+      "sizeBytes": 1243
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/rename/type.ts",
+      "sha256": "13e5048c718c4b7ef556d3d4612552d7e6848e69ade25dbe0b899db548f1ac2c",
+      "sizeBytes": 1085
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/search-input/index.tsx",
+      "sha256": "8c6e57b84404d3e2a0afdc48a83786a10c2e557b45a15bb673b6fdf3ebc5c10b",
+      "sizeBytes": 3261
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/search-input/style.css.ts",
+      "sha256": "2eb98440764ffd57aaee3c74629291d466894675ef6fb793c9bc58b7bd0f19eb",
+      "sizeBytes": 1112
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/search-result/index.ts",
+      "sha256": "0dcba87e21f15957fc21f817d687afdae68aff90f32f620df3a7c1b7f26d56e0",
+      "sizeBytes": 70
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/search-result/search-res-label.tsx",
+      "sha256": "3dcd0fbe1b055b696bc498be2d1a17f5fcfb514077e26021382caf63d3b1ec29",
+      "sizeBytes": 533
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/search-result/universal-item.css.ts",
+      "sha256": "394e13c54c2967c9a8aad67396a7888922f14658cff28efd4426da4c23421af9",
+      "sizeBytes": 966
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/search-result/universal-item.tsx",
+      "sha256": "96f79a2a53bdbb56cc679c65aa381fd31fb1919d79115bc1ba7bda6adc1c199c",
+      "sizeBytes": 965
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/sign-in/background.css.ts",
+      "sha256": "5ed31d7a6963d46e9e978257730bb63da6b66b4da090ee967c0101b4b3895744",
+      "sizeBytes": 1012
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/sign-in/background.tsx",
+      "sha256": "f7cb3077d26abcbf1509fa6e34c6761e86739c248f09eba745b222f30cad56db",
+      "sizeBytes": 478
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/sign-in/index.tsx",
+      "sha256": "b32c0ae0afb979e12853794ed7b155b0c9eb7e6f7c0b7b0ad5eaa5315019cf2a",
+      "sizeBytes": 788
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/sign-in/layout.css.ts",
+      "sha256": "1cd1df8ddee940cc317f4e579b279bda2dbe75fc93f517166fad8a59b67cd696",
+      "sizeBytes": 483
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/sign-in/layout.tsx",
+      "sha256": "2e4583cee5ddee1dc8cb82e98e1106f43a9a2f380740c4392ffbcfc35563dc6c",
+      "sizeBytes": 358
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/swipe-menu/index.tsx",
+      "sha256": "30717ff7cfc920694e8be49b64103078ecd46aed786e3e57048d5d516a879d14",
+      "sizeBytes": 5471
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/swipe-menu/styles.css.ts",
+      "sha256": "fd0a4a92e91f1d027666e2d2fea7240e06abb8d9c2303f0132c4adf4953f71a6",
+      "sizeBytes": 543
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/toc-menu/index.tsx",
+      "sha256": "9d7dd9691085fd9b56b5be93c49677346d045dc13297595f12cc284be245702c",
+      "sizeBytes": 872
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/user-plan-tag/index.tsx",
+      "sha256": "64ff686f0ccd573b8916f40286d5abe91c5682f0968760e695db23e2948d8887",
+      "sizeBytes": 1416
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/user-plan-tag/style.css.ts",
+      "sha256": "590788cb8c82a05ffc7d5ae5de2436f679e838afad5e27a5a6486420a0d4dca1",
+      "sizeBytes": 487
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/workspace-selector/card.css.ts",
+      "sha256": "8166f0c4157fff6d87e8362486394f30ecced6890c11352699cf9beb94ec5ffd",
+      "sizeBytes": 472
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/workspace-selector/current-card.tsx",
+      "sha256": "c6262ab84cd6da02dfe12e72cecec4d691765304f68a54908f303774a9359375",
+      "sizeBytes": 1690
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/workspace-selector/index.tsx",
+      "sha256": "991ca22cf5a445d09f85c5fac4b435e0a5d6744632d9a0a51a3f81ed906c0e7d",
+      "sizeBytes": 1511
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/workspace-selector/menu.css.ts",
+      "sha256": "54f4abd4e80346eec1708157d5d339f1b1a54dd26f2adf53ed207eaadb29bcc7",
+      "sizeBytes": 2540
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/components/workspace-selector/menu.tsx",
+      "sha256": "84c69ae8e7392ec3f4d9c166f468702cd8acd4c4baf5c868773eb3e608cda9ce",
+      "sizeBytes": 10614
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/index.tsx",
+      "sha256": "8cc6f47ebeba272a1c80499908838e87c28661ee098d891ed1ac80b8c65a9fa8",
+      "sizeBytes": 2601
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/selectors/collection-selector.tsx",
+      "sha256": "9179c8fa4db0733cfc53ceb91a5778ecf7d74a1bbe77fc84cf6c14d895d6316d",
+      "sizeBytes": 1530
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/selectors/date-selector.tsx",
+      "sha256": "0f0fd6bb1cc63b1569f47b842d348f880225c0a28993dd3130221199281841d6",
+      "sizeBytes": 1961
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/selectors/doc-selector.tsx",
+      "sha256": "8ab4192f028de635b03173540ce79b149f7b9ef32e3d8ff910845c3ef0151c66",
+      "sizeBytes": 2035
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/selectors/generic-selector.tsx",
+      "sha256": "fe9ab79c6bc7d9be63ddf386ec53887249f7e976042b3372cc9963292cc6fc0b",
+      "sizeBytes": 7397
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/selectors/generic.css.ts",
+      "sha256": "dcb693b74a91ab5d7a2053a1551030bd4c294c46e6d0c569af063d890eb5871d",
+      "sizeBytes": 2723
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/selectors/tag-selector.tsx",
+      "sha256": "6e39d873b7b5a5d5eff0eab8346da2b65ff607f3b479f5a8b76eb05e67804a79",
+      "sizeBytes": 2050
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/about/index.tsx",
+      "sha256": "45ad83090e0bb8130ff7efc21d37756a06efe1fb8f62746b27acc1b35deddbcc",
+      "sizeBytes": 875
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/appearance/font.tsx",
+      "sha256": "12e5494f84c4a9b8756baa1ae550c4032b37af09e9a605e62af3885fa5076aa3",
+      "sizeBytes": 1136
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/appearance/index.tsx",
+      "sha256": "d441f5d30bdefb01323eca2d79172199071c28ab1a1d908ec1392605e3e825f5",
+      "sizeBytes": 466
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/appearance/language.tsx",
+      "sha256": "80e6837d4b01e9f12c549eb980f5a91c62978211ef2b215bdee0194cff68119d",
+      "sizeBytes": 1089
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/appearance/theme.tsx",
+      "sha256": "3858486103e0ea39d25a083c2e163014c442a862d77c89f80c6e4d7555705d84",
+      "sizeBytes": 702
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/devices/index.tsx",
+      "sha256": "896ac3e9bbef41705a2c6c345fd3ea8aa3d84391aad456ee826ede4b06f03e59",
+      "sizeBytes": 3305
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/dropdown-select.css.ts",
+      "sha256": "c559ea56128abc3f10a3985ef1169b6fe1ff4ec582905ee2124dd7000c05817e",
+      "sizeBytes": 577
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/dropdown-select.tsx",
+      "sha256": "aa3b442540d3f7c42693ec7a58e579ed8271951a52d679152546bff2386032a7",
+      "sizeBytes": 3751
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/experimental/index.tsx",
+      "sha256": "1a90b19b82b17a56e242f54135971c09c3e83fdc45fa54afa6900d404aff9f2b",
+      "sizeBytes": 2125
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/experimental/styles.css.ts",
+      "sha256": "d930cb8bf15920c7d8810cccea0795cae5197c6ae7ae0458d5bb993a13bcff77",
+      "sizeBytes": 685
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/group.css.ts",
+      "sha256": "2c61e486efc44e71379e88432623257ecf0f290566b288dec22bc39e4cfdbdc7",
+      "sizeBytes": 153
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/group.tsx",
+      "sha256": "dc2d0e355a5c5d9771f8a6ebba830ab4d7b21fc33472f9204a922bea40b090b6",
+      "sizeBytes": 895
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/index.tsx",
+      "sha256": "d0af85002edc3868551ba98b9745ada72d3b0d64f2a95677ca15d06aa7e878d3",
+      "sizeBytes": 1799
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/others/delete-account.css.ts",
+      "sha256": "42df0bf56e8641325db30c9cd593a4ae4d3be39b688140a0096b0f4e9d042e2e",
+      "sizeBytes": 183
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/others/delete-account.tsx",
+      "sha256": "80bde52659ce3837832e0930d0b08826424594e31e4f0dedc58a4e4e01663276",
+      "sizeBytes": 5129
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/others/index.css.ts",
+      "sha256": "da7b914ce10ab863288323c5dce586722e0793f5cee57c44afbf240a6dcf5c05",
+      "sizeBytes": 1329
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/others/index.tsx",
+      "sha256": "91df63a5a5c111df3175d92d822ad5c28b36740df12841f452f2ad759a52a1a0",
+      "sizeBytes": 1244
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/row.layout.tsx",
+      "sha256": "9572284189ecb7647905be54826cae67537a425efe8fde7bdee190ce1d892604",
+      "sizeBytes": 896
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/style.css.ts",
+      "sha256": "f679bd39756d8aeaf3046b56b3a631a9d5423ff48ac718926c734266d418a498",
+      "sizeBytes": 998
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/subscription/index.tsx",
+      "sha256": "7ad318ecbf2a698574a126535965a28d23fcd5fe759ec8092063f24001e3612e",
+      "sizeBytes": 1545
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/subscription/styles.css.ts",
+      "sha256": "b0aab4df6589b8d180e4873b19768fa254b10a804ccf0767ff11340877f0f3ef",
+      "sizeBytes": 803
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/swipe-dialog.css.ts",
+      "sha256": "49efbf3c6afbae56ea2bb05a1f3f092b4cd947b19211431b1e2135a7e000770b",
+      "sizeBytes": 1255
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/swipe-dialog.tsx",
+      "sha256": "dbffbad0509577aa41ef15d271d19d84ccf3e642a0d93d08dbe0eababbafa656",
+      "sizeBytes": 7196
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/user-profile/index.tsx",
+      "sha256": "a583a85ea20b460c30ae320402da8a405d1287ac2b3393bce8b1a82a5adb6431",
+      "sizeBytes": 2516
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/user-profile/style.css.ts",
+      "sha256": "020288a4f5774356a0e8f78cd7eae3c8fb724012d1a485e0fa483e0edb48863d",
+      "sizeBytes": 1074
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/user-usage/index.tsx",
+      "sha256": "e951781f9b6a8d9adfbb7ba36acf1c20567506178f83ffbef96654e65663e5e6",
+      "sizeBytes": 3807
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/setting/user-usage/style.css.ts",
+      "sha256": "26a51b2f9e75183bd2b0d9987169556aeb749138e50c8c57832a0023dd73face",
+      "sizeBytes": 843
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/dialogs/sign-in/index.tsx",
+      "sha256": "6d7d8ec097d9819f90bbd2f36b2de1dea246648b0a2619fd680fde31d05fe710",
+      "sizeBytes": 1425
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/hooks/use-global-events.ts",
+      "sha256": "f035cffe5eec3921ac34084bae0dd5fee24cc395ed670c9ac5439f2a5abc43ed",
+      "sizeBytes": 1283
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/modules/back-coordinator/back-coordinator.ts",
+      "sha256": "04b3c6776cc8e6b3847eefe1b40d63ba77be77f3c6e97cb701ce058817b33d8f",
+      "sizeBytes": 6808
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/modules/back-coordinator/index.ts",
+      "sha256": "85e8fcaac1822000f447609b6f19c6094bf24cb5d88992dea1985b19f13a0430",
+      "sizeBytes": 547
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/modules/back-coordinator/visual-layer.ts",
+      "sha256": "14fc79a60b30018c2ed1a9439b00caae6b3d089958d3cd5a0616988333a257ae",
+      "sizeBytes": 725
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/modules/haptics/index.ts",
+      "sha256": "38b9250cf6816861365f57fb3921a8c9f7415a11a4a218a5364f482f27f96261",
+      "sizeBytes": 382
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/modules/haptics/providers/haptic.ts",
+      "sha256": "a39ec5ec532e27e03af60f05a6a11b0b7efb21f41bc19c2cefb44fdb408fe1c0",
+      "sizeBytes": 535
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/modules/haptics/services/haptics.ts",
+      "sha256": "16ce69a8c9ea63bcc168873e8f24513a8f686a16256fefe7d88f17c80cca6ad9",
+      "sizeBytes": 925
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/modules/index.ts",
+      "sha256": "003e5a4493431810b70e164b372318203a14f91899daa9ec2dfc512e603548eb",
+      "sizeBytes": 689
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/modules/navigation-projection/index.ts",
+      "sha256": "772736be656e072a55d9d852b4dc7cc945faae69f97b30073031cb8833b732f3",
+      "sizeBytes": 1189
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/modules/navigation-projection/navigation-projection.ts",
+      "sha256": "c1e13804506f57738f21399858d13c328f52aa7873b4c541d4a2a29c76995203",
+      "sizeBytes": 3639
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/modules/navigation-projection/shell-data-projection.ts",
+      "sha256": "7a25d4d0a32707819c474fca3025f11cf0e4c52ce00641f050bfec70f7505c23",
+      "sizeBytes": 16576
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/modules/search/index.ts",
+      "sha256": "4932e50e06baa34f70d24797fb156e007561611320e25cbf94cb8d5146ca1776",
+      "sizeBytes": 344
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/modules/search/service/search.ts",
+      "sha256": "4a366845379c945af5777694e7958e07a27e64ca15808c1d3bc2b6b9bae060b4",
+      "sizeBytes": 1015
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/modules/virtual-keyboard/index.ts",
+      "sha256": "16dfc201086880ff168b48f23455c315ca74ebc854ae18c4ee765035d70e1534",
+      "sizeBytes": 410
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/modules/virtual-keyboard/providers/virtual-keyboard.ts",
+      "sha256": "951316b00d099a40b2588e32c90016c3afec65bc447aa412770402cfd0a05c38",
+      "sizeBytes": 713
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/modules/virtual-keyboard/services/virtual-keyboard.ts",
+      "sha256": "c25fec98d29e1ec8aeb2f0afb2a4c5c3aacfe0b7acf31c40fb2787cbbd44e443",
+      "sizeBytes": 1124
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/404.tsx",
+      "sha256": "955b00be8cade1e4344808e982e8866e991a0d3b86c627b3a6b05ef2719c8398",
+      "sizeBytes": 62
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/auth.tsx",
+      "sha256": "b597eae53d84cf154b2a4bfb7b6eafefb57417736f6d9a41e097c856ced2861b",
+      "sizeBytes": 65
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/index.tsx",
+      "sha256": "2ec25c88e810d18281a7ebeee709d26f1b4a345418f8875f0f6eb7be8fb596d7",
+      "sizeBytes": 433
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/root/index.tsx",
+      "sha256": "0439bb8aae8dd31f3d6bb687cd36899a4f80ce283cbad19de45e998ff8cca99c",
+      "sizeBytes": 1026
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/sign-in.tsx",
+      "sha256": "2d65931afde64cd65ad9e2fa052b26b832ec6c5508b0fe4d54e36106e7257706",
+      "sizeBytes": 292
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/all.tsx",
+      "sha256": "63669e454ab30334dd5f715f2756bba31477f5ff4300df69a6a2f954c421f209",
+      "sizeBytes": 2538
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/collection/detail.tsx",
+      "sha256": "9547085bba34f57e9216d957fb54e658497eb178a0195464b680093c6decfbcc",
+      "sizeBytes": 1290
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/collection/index.tsx",
+      "sha256": "41cb77aafa7ec1a3d30b1612532346093a1c6e0d76bbd702e88c7f822bd1ca95",
+      "sizeBytes": 289
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/journal-conflict-block.css.ts",
+      "sha256": "ad30774e66dedce94c4ed5f0df4cf35a671d4c71138347870e235018d1c13a4d",
+      "sizeBytes": 1535
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/journal-conflict-block.tsx",
+      "sha256": "eccadde7a12ecee21be92993c8a38946a1324b9f11344ebac801fbd8e3a5d8c9",
+      "sizeBytes": 2623
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/journal-date-picker/constants.ts",
+      "sha256": "9f095109ec01127273059e6e8f3963b4b9737a8a1008e3212efc214edf71a39b",
+      "sizeBytes": 378
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/journal-date-picker/context.ts",
+      "sha256": "59f1b7ad48a7324151637ec1fc31d5de891d555627c212e4c06e2aa6811f00e7",
+      "sizeBytes": 532
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/journal-date-picker/day-cell.css.ts",
+      "sha256": "d23c559db093c2011cbf2f746071ad93bb15477c1c5e359a726778ced02deeb3",
+      "sizeBytes": 915
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/journal-date-picker/day-cell.tsx",
+      "sha256": "73b16400df02512a8bccb94bc57f9a2d7ac198cf60deb8b8307dd58da1b6a810",
+      "sizeBytes": 1106
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/journal-date-picker/index.tsx",
+      "sha256": "370837b481f239dcc57bb5e257d38a8829dcd1c32b04485936a846e5f5fee003",
+      "sizeBytes": 1267
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/journal-date-picker/month.css.ts",
+      "sha256": "56ee2334db6d32256518252a2b5c8642ca63aedbbb0510647d591beb2bd97c5b",
+      "sizeBytes": 428
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/journal-date-picker/month.tsx",
+      "sha256": "ba846f370ca418909aac94e3020c5e8d47a6e2fd9ae44b035cfa76a6c01b6a89",
+      "sizeBytes": 4443
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/journal-date-picker/utils.ts",
+      "sha256": "5f7e2a73c8e0d05e5386c4d99d573e40819e1b7f141e719ef39e3e3c5cbc7de2",
+      "sizeBytes": 375
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/journal-date-picker/viewport.css.ts",
+      "sha256": "cd87362dcf52e78f588bdaba4c9ca27f731fc0e823522860f702f85f2982a79c",
+      "sizeBytes": 574
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/journal-date-picker/viewport.tsx",
+      "sha256": "a9b794634f481052eaa5c1d71036dfa599fcee9cc4735553959fb1956e42286f",
+      "sizeBytes": 4341
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/journal-date-picker/week.css.ts",
+      "sha256": "ed71f9ff64873cd9ca9f7fc30b3eb5a52d81238ee6278d75d17bea24aa617d25",
+      "sizeBytes": 608
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/journal-date-picker/week.tsx",
+      "sha256": "e08289870378959152301847642785a1ec291eda03f34292c9bfe78898371983",
+      "sizeBytes": 4128
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/menu/journal-conflicts.css.ts",
+      "sha256": "2c77033c01403b4b45b916ee3d2ad190d4713559906e0a46cd94775a50ec2dd8",
+      "sizeBytes": 512
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/menu/journal-conflicts.tsx",
+      "sha256": "67bbe404f38b81eb8e29710a0b44afec02a06feaaf2d85c400bda657d7ce8b0d",
+      "sizeBytes": 5571
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/menu/journal-today-activity.css.ts",
+      "sha256": "24548afe69a015df28d95cb98cb910182e7a781602bb0362ffba585145881c37",
+      "sizeBytes": 387
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/menu/journal-today-activity.tsx",
+      "sha256": "194a61622b5fb7275fe4660da7d9c0256c6261983f16644c05044b95a91e240d",
+      "sizeBytes": 3662
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/menu/mode-switch.css.ts",
+      "sha256": "9f5d42b4232eb02cb22d389e653b736948d99a906c5cc0cc5d86507447d3fed4",
+      "sizeBytes": 127
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/menu/mode-switch.tsx",
+      "sha256": "2cf85dca28933b6f87947f4b4c232cb3881a6a98b03b57ca17e6ee11897ee95d",
+      "sizeBytes": 1522
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/mobile-detail-page.css.ts",
+      "sha256": "be508c08af5e20fb664920785dd2890449f095415a3bf0b9aa4546908fa03b62",
+      "sizeBytes": 3635
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/mobile-detail-page.immersive.ts",
+      "sha256": "2cf2670bda2b680011f2ec5892c8f9d5a88fe95f4ca0a6be41abce3011f97940",
+      "sizeBytes": 2188
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/mobile-detail-page.tsx",
+      "sha256": "89423b22d71950d0bc19d955e90405747841acb1244fadca1f46d0b124723ef0",
+      "sizeBytes": 16878
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/page-header-more-button.css.ts",
+      "sha256": "f1eece990782b273a4febe8141b8849e78dfd8b38d3d0ede24396af19bb2a220",
+      "sizeBytes": 332
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/page-header-more-button.tsx",
+      "sha256": "2cfa9139df4b8e57813f3bdab5acbed7c8ca738d2b5a9517c04a27849391e021",
+      "sizeBytes": 6914
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/page-header-share-button.css.ts",
+      "sha256": "8e466a11c5c1f9e6327c83a01de75cfe38acf59c97306422cae93f2d84a76113",
+      "sizeBytes": 103
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/detail/page-header-share-button.tsx",
+      "sha256": "0a99bb3039093290e1c0a98f428529801ff757ffc1983579d417a4510adde7ef",
+      "sizeBytes": 1340
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/home.tsx",
+      "sha256": "07bbe3bee925cb8c5061b04dcc7aaee8cc172d1cfa015a74104f349af67c04f0",
+      "sizeBytes": 271
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/index.tsx",
+      "sha256": "b4e964587f3a453206a43fc200b2bbf91444849bb5c2dd9cd76ea2d8b46d4194",
+      "sizeBytes": 5089
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/journals.css.ts",
+      "sha256": "87ce3047c9a3a75fb1dae5324f01c2c508eaaec3dd47458a285031ecf99ed49b",
+      "sizeBytes": 631
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/journals.tsx",
+      "sha256": "3157d444d250335823d237d1500aa7b4681c917c74df8a5d515870e2e2f720d6",
+      "sizeBytes": 2580
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/layout.tsx",
+      "sha256": "6ae343641f0fe580cfe4e00e1b890abe39598e188514be41216e6721a2c8b39e",
+      "sizeBytes": 5133
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/search.tsx",
+      "sha256": "e2656b73bbdcdaa064b44ad738598aba523ad6b1799ac06e89901c0e4dcdad33",
+      "sizeBytes": 5485
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/tag/detail.tsx",
+      "sha256": "8678b90c34d27c3e8d9d2961fe3ba2cc6c540d311b1433d6a9c98c3c7b2a52c2",
+      "sizeBytes": 1159
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/tag/index.tsx",
+      "sha256": "0250f77735d88baa8ebb88fea954ff8623016d797c451c53ab7f4f7d2509c3fe",
+      "sizeBytes": 275
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/trash.tsx",
+      "sha256": "fdf67974dd293f946957f0ce63230f740a6a0bf07112722fb940344b388a9e08",
+      "sizeBytes": 87
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/pages/workspace/workbench-root.tsx",
+      "sha256": "37ea4442e65a1ef7dd69833b236f0febc6b417b2c13d31b7c75a341221bf90a7",
+      "sizeBytes": 5151
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/router.tsx",
+      "sha256": "7cf7ae086bf6a579eaadc6f4f3822dc5e1edf66b371d01880ae316178b4b4cd0",
+      "sizeBytes": 2690
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/styles/mobile.css.ts",
+      "sha256": "a3b78bb3691d096d1de88ee7704e45d817ae927875943805ca87055c8eec6112",
+      "sizeBytes": 1201
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/styles/variables.css.ts",
+      "sha256": "58658d803a29f843634f64d9e59894340842f4dda9cbee246cdd3a18b1160a3d",
+      "sizeBytes": 541
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/utils/index.ts",
+      "sha256": "0d08c4a4cdd944c34ca240a31127828f1751c06f0e039ef5736d61a7e5e8fe73",
+      "sizeBytes": 32
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/utils/swipe-helper.ts",
+      "sha256": "687b70626f87228ae2a3150af647000e3eecd787e46209e16d41ff9777bd904c",
+      "sizeBytes": 6552
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/collection/detail.css.ts",
+      "sha256": "d3763741dd64fda51c766d84a53d5217a26bd74ea96f4406bc64115c0d86a893",
+      "sizeBytes": 508
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/collection/detail.tsx",
+      "sha256": "eaa0de8958fd5df268e0c200193cc690838741ee28ed93687beb3bce024d897e",
+      "sizeBytes": 2850
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/collection/empty.tsx",
+      "sha256": "cb0fb56c56608157c1691106d78f443985aa610ed5634b49b6d847e17e81e185",
+      "sizeBytes": 284
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/collection/index.ts",
+      "sha256": "e0db78f74c1837ebcae9a5a072f2d47ec1fda529899cd533a5437c59b8b1f233",
+      "sizeBytes": 94
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/collection/item.tsx",
+      "sha256": "2b6bbb48a6264247dc78b837e3d2a5e6dc9a86d1e1d88896e37d650d1298a3c2",
+      "sizeBytes": 1353
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/collection/list.tsx",
+      "sha256": "ca8b200e83dc2e81df0d93f95d9e5b80d76d77014f4581116b33c0661e208087",
+      "sizeBytes": 707
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/collection/styles.css.ts",
+      "sha256": "ad67871c4838b7ef5e94d602b9f24fa276ac4ca9be6598dccc92537f37dfc21f",
+      "sizeBytes": 973
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/header.tsx",
+      "sha256": "883eed8542e2a8e86e690893f29c105c886244755244348b55eedd130189d97d",
+      "sizeBytes": 855
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/index.ts",
+      "sha256": "f1ad0096671e8f69709d178c031c87566f8d81dff92975f504d68947c2d0c44b",
+      "sizeBytes": 79
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/style.css.ts",
+      "sha256": "582bf52b77e862b672bf5d03afe4e10527967d60e9887bcb35d576fb0a3b5a36",
+      "sizeBytes": 878
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/tabs.tsx",
+      "sha256": "eafa8fe9285938688ad23dea27fa7d9b840d7d3f1692a534cc23f37d1d68f351",
+      "sizeBytes": 941
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/tag/detail-header.tsx",
+      "sha256": "53ce8e54a026f283d6222946e4aca2ec23651e3b885dbf23f500b1ada20a993e",
+      "sizeBytes": 570
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/tag/detail.css.ts",
+      "sha256": "171a70f529f9086b14946f1d4fde571596ee4262e0852435bf5f99883c4e2968",
+      "sizeBytes": 728
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/tag/detail.tsx",
+      "sha256": "faf5439f76c32e3d7c04cafcb870b9ed8c268bbe841df800eea631e7e66ff90b",
+      "sizeBytes": 2685
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/tag/empty.tsx",
+      "sha256": "b60e94069d9bbecbfbf1c9d418449894f9a877e306d9792c1e66faaab84f897f",
+      "sizeBytes": 241
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/tag/index.ts",
+      "sha256": "3efc9f785bd22b830239d14962a50f460333bf71395f168cbac12c15097ff273",
+      "sizeBytes": 86
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/tag/item.tsx",
+      "sha256": "261a9e4259c225c0c9b22d4114778fdcbf61c7359da698ad8350948c572775d2",
+      "sizeBytes": 1318
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/tag/list.tsx",
+      "sha256": "858d1353d744f6fc053b9588272c4126a060f1ab6ee796ae40efac21b13e632e",
+      "sizeBytes": 583
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/all-docs/tag/styles.css.ts",
+      "sha256": "2be3659e265b2298b5ddd2a7a4510b5bb10e9ba580f40ae6502762b4dc672665",
+      "sizeBytes": 1097
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/home-header/index.tsx",
+      "sha256": "3898c3922e53511d6f9d46608fcd270fb8cf844e16b92e642b3819f4b1ed9549",
+      "sizeBytes": 4000
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/home-header/styles.css.ts",
+      "sha256": "8d4ef081210c6df70e71afe0e2b018aa2f6a499bc9b11ddc1417bf653bad56be",
+      "sizeBytes": 1958
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/index.ts",
+      "sha256": "a1396819d55c7b8928373a36783193b869831f147413624cb73c920beb8c9fe7",
+      "sizeBytes": 90
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/recent-docs/index.tsx",
+      "sha256": "66c5a689a87e4ae3e38116b4d8b68137b02a9a091566dc707d2c82d5ae7b331c",
+      "sizeBytes": 1416
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/recent-docs/styles.css.ts",
+      "sha256": "dcac1ec3724a502d0be610703c36a30895f78b5dd8db64362092dceea1994205",
+      "sizeBytes": 655
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/search/search-results.tsx",
+      "sha256": "341cb4f204f58773632972936ac5a8cc1799b54d6c34e686eabfef500eeba824",
+      "sizeBytes": 2502
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/views/search/style.css.ts",
+      "sha256": "fbf8d32b222899390e372b4a90c3d4b9074f2d4d456848e2480d19fa9fe794a0",
+      "sizeBytes": 1730
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/mobile/workbench-router.ts",
+      "sha256": "7b0bb2001c4dada5991fc5562039a72e0bc3ef91b94a9d6ed618b723ac2995f8",
+      "sizeBytes": 1674
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/ai-button/index.ts",
+      "sha256": "024bfa3c1fabde1f23da99c292f590a89b5ba5898ca3c24482c4cf336008e978",
+      "sizeBytes": 1950
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/ai-button/provider/ai-button.ts",
+      "sha256": "0054aad0bc83afaf037b98fb21e47583342785c8e5bfc24497c588dad4b4ce61",
+      "sizeBytes": 266
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/ai-button/services/ai-button.ts",
+      "sha256": "b2b2083691bfc2067faf04f32dc0e446b53204cbfc2640d0b1c321ccbedb7d95",
+      "sizeBytes": 1097
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/ai-button/services/ai-draft.ts",
+      "sha256": "e2b0f9deaa7c1e5b574d17e8b9091e51881a48ae0d4bfa9f8915efd05aa1676a",
+      "sizeBytes": 4005
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/ai-button/services/models.ts",
+      "sha256": "0140183d435adae8b2b70212ce69f71719c80150bc3fd47925f98f2ca07057dd",
+      "sizeBytes": 3284
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/ai-button/services/playground.ts",
+      "sha256": "182617284180b0141fc52e6c21dfc9cad501c5b96ea59abeb8c42a49cf49ea7f",
+      "sizeBytes": 716
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/ai-button/services/reasoning.ts",
+      "sha256": "54b013013c6916ce1e6e2139babd7e588ad5705b1766ffef41b0dcdc7094892b",
+      "sizeBytes": 928
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/ai-button/services/tools-config.ts",
+      "sha256": "c08fadfa88362fd870262bfe4872b5f44aaa287759cfd4cfffb417ac96a3b9f1",
+      "sizeBytes": 1280
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/entities/app-sidebar.ts",
+      "sha256": "7b64e78e7d664ff4ce350aacedcc4df97f7c92851eacad62b8ef93597d7f9f3d",
+      "sizeBytes": 2091
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/impls/storage.ts",
+      "sha256": "aa55ef11697d539364f43d26b2f8ee5e312589ec0a243e08666223138c7c6bd6",
+      "sizeBytes": 795
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/index.ts",
+      "sha256": "c89b079e58fc742ea66efbc227bf2ff4896839a58e454f2b2bbf48a88d98f543",
+      "sizeBytes": 581
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/providers/storage.ts",
+      "sha256": "600c0ae4dc44055dc75cf31be323fa8a28d0facdb0591afc3e1cf90c74eb4760",
+      "sizeBytes": 211
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/services/app-sidebar.ts",
+      "sha256": "690c7f02a1ecb65110864032968ac7689bd34515b28ff570cb7fb82c7be2454d",
+      "sizeBytes": 267
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/add-page-button/index.css.ts",
+      "sha256": "f9bd7b09d89b880df456268812076c41af1a2db74e779e8b5f4bbe3fd9bfff69",
+      "sizeBytes": 618
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/add-page-button/index.tsx",
+      "sha256": "10b416f34bf74c82f8fad2e9c75b99ff3b783fd3b091b43e8166c90b5e4a2d51",
+      "sizeBytes": 5796
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/app-download-button/index.css.ts",
+      "sha256": "f8ee31fb66c26c8a14757d9892b5985d2c621bf9d1d8bc851ea00adab402386c",
+      "sizeBytes": 442
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/app-download-button/index.tsx",
+      "sha256": "41f94deea351a20eb17535ff557efc77217e041d2caef8ea2845a38558823d47",
+      "sizeBytes": 1418
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/app-updater-button/index.css.ts",
+      "sha256": "6957d58b0ab90c570fb08687df8b285ae4121faeb783d98e340cdd1923cd371c",
+      "sizeBytes": 7586
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/app-updater-button/index.tsx",
+      "sha256": "e13694f8217dd6fd5f0b81c30ecf5297ffb27932946b61a6796737588f7866f3",
+      "sizeBytes": 7799
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/category-divider/index.css.ts",
+      "sha256": "5eb696c15bb1bca7c3bbef2d3c2bf051ecd7279a516897eac49b9f224868b59c",
+      "sizeBytes": 1454
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/category-divider/index.stories.tsx",
+      "sha256": "26b7766a8a21d1204fa47d4eba029c11581abf45751e630740cdf4eec200f89f",
+      "sizeBytes": 369
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/category-divider/index.tsx",
+      "sha256": "bf95c7e43f2c7ab65d4c8c7dec4b74433513d1f6db3ff56489148a50a0280400",
+      "sizeBytes": 1492
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/fallback.css.ts",
+      "sha256": "f2bea42185704689a24c17792000e171b4171bf9d36984aa935391fe377b05ed",
+      "sizeBytes": 682
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/index.css.ts",
+      "sha256": "ec938f39dea42c369448244a2228c92816be9de896129aa5c499501a14140586",
+      "sizeBytes": 2797
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/index.tsx",
+      "sha256": "1d85f3966b3c211e44f6508140e2630ca5ee86d09a4d6d3a5bfbc2860b6e8d61",
+      "sizeBytes": 10509
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/menu-item/external-menu-link-item.tsx",
+      "sha256": "3980a536452bb63de4fbe97d40b41cd048f6782e615ae7d40a388844b5ccb4d8",
+      "sizeBytes": 965
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/menu-item/index.css.ts",
+      "sha256": "dd5c15ffad05481548edc64407a77a80ac66b325a8decb002caf1104d9378a5a",
+      "sizeBytes": 2951
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/menu-item/index.stories.tsx",
+      "sha256": "db49798fab8ce03637610338d3f88dfa15d829f2d4614757ad45ca4a4fd63e72",
+      "sizeBytes": 1122
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/menu-item/index.tsx",
+      "sha256": "8695ac7a722f147292c2eb11686c35aae06c30b867cbcb1abfd37a3dec9fea7f",
+      "sizeBytes": 3494
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/open-in-app-card/index.tsx",
+      "sha256": "cd17982a795e6bc286102ca490e53555e908eaf71119cc355c3a4cbaa91a775e",
+      "sizeBytes": 36
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/open-in-app-card/open-in-app-card.css.ts",
+      "sha256": "3593ffcdb7684d83ee1cb7b949dc4ac47f9ef1b02d67db1992850e85e657f7a6",
+      "sizeBytes": 2400
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/open-in-app-card/open-in-app-card.tsx",
+      "sha256": "3b804bb66e34babb68fe76142e29a815408f4480b67e4c69e15549af93a0f75d",
+      "sizeBytes": 3229
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/quick-search-input/index.css.ts",
+      "sha256": "8863a7643ebc7608c97fe60e3da56814a4334b435a83cb9457a34f22e277b384",
+      "sizeBytes": 923
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/quick-search-input/index.stories.tsx",
+      "sha256": "183ab2e6cc73baa95a71c90979f3c708cd840abf883373655f6d0069e5bcfe35",
+      "sizeBytes": 387
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/quick-search-input/index.tsx",
+      "sha256": "b59082f44e23549af23e33453ac97e5bbb4bc745d2e1b10425641ee9bb232ff5",
+      "sizeBytes": 775
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/sidebar-containers/index.css.ts",
+      "sha256": "b30f0f862888a2a60b55f6e8b9e10996f81060482e0473330f6a577e742a1859",
+      "sizeBytes": 1845
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/sidebar-containers/index.tsx",
+      "sha256": "aac8128a435a51a75387479f94b8db066cea9a199b82130e6295b36f324a35d3",
+      "sizeBytes": 1332
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/sidebar-header/index.tsx",
+      "sha256": "a227d71abbbd139751337ee3fa4ec53bfa21f588951a00fd391626063214333c",
+      "sizeBytes": 539
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/sidebar-header/sidebar-switch.css.ts",
+      "sha256": "e9ff7752db8b23274ce21f7ebe606b50cb9c74f2d3fa5f0d6976c8613ba20e4f",
+      "sizeBytes": 1402
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/sidebar-header/sidebar-switch.tsx",
+      "sha256": "0a46c9adf1642603cefa976bbb1f06e88a572a1bdcb0bee888ca704ac7a8409e",
+      "sizeBytes": 2424
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/spolight/index.css.ts",
+      "sha256": "fca1299f61d94f66fa50189b1d2f32f44dc5a050b755fb45b3204f8fbf21d62b",
+      "sizeBytes": 715
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/spolight/index.stories.tsx",
+      "sha256": "228f3090333660f494a57d9f110ce33958f067b96aef950af2df30480b38e587",
+      "sizeBytes": 581
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-sidebar/views/spolight/index.tsx",
+      "sha256": "bc1ec8c528bf7909b216c8d63a7a8515e1efc9b9306898a3968222aeb316ef2f",
+      "sizeBytes": 1578
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-tabs-header/index.ts",
+      "sha256": "1c55d8947fbda3c717330693287d4aeea01d4c9656e4fd22f86854e07cb9aebc",
+      "sizeBytes": 376
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-tabs-header/services/app-tabs-header-service.ts",
+      "sha256": "731e1f140b414c5de90b818828bc6160d3ef2e2fd17a7707fdbea9c0c53c3f98",
+      "sizeBytes": 2146
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-tabs-header/views/app-tabs-header.tsx",
+      "sha256": "6c3b4eb3068f791ba993f1d59ea56e7435293f07dfd6a25641ea61df33d41747",
+      "sizeBytes": 15354
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/app-tabs-header/views/styles.css.ts",
+      "sha256": "014c9fb55881b5ea6c91a69624c8cad0820d0676c3181bdc46233ac265f7db49",
+      "sizeBytes": 6107
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/at-menu-config/index.ts",
+      "sha256": "5280df3060d3eb2102c4872d3aab750eeb2418f8bbcdf23ca47298ab7ab24ec6",
+      "sizeBytes": 1027
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/at-menu-config/services/index.ts",
+      "sha256": "dc03978669a2e296260714d29aec45ee27ef3fdc3001d9d64641df6190a09e6c",
+      "sizeBytes": 20901
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/backup/index.ts",
+      "sha256": "eb29a9e28fa44468803466fda4de42cfde8cef0c82a73866711689c0fd6802b7",
+      "sizeBytes": 349
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/backup/services/index.ts",
+      "sha256": "0b10a2421744e8cf99ce392c745c0e3f20bc242c73a359949a074c1214ac6274",
+      "sizeBytes": 1894
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/blob-management/entity/unused-blobs.ts",
+      "sha256": "df3981035f9b3cc9ee783ac903ff2710add4f4a007d7eff6aa45d966ba45d9e5",
+      "sizeBytes": 3903
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/blob-management/index.ts",
+      "sha256": "80a8db20adad7527dde4989c798585745efffd93422fa8cec4d74dd110f0b274",
+      "sizeBytes": 616
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/blob-management/services/index.ts",
+      "sha256": "b494e7e490532c45d9aaced8827a8878c1b5010efc7cb555ebe5aaa2b1731c30",
+      "sizeBytes": 252
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/constant.ts",
+      "sha256": "ff5cff3bb0b1018564097ac54b0bcc12d931bda6cc3a5911fc0316cc78be32bf",
+      "sizeBytes": 7271
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/entities/cloud-doc-meta.ts",
+      "sha256": "9be3c4e302d17c8537c8bc7c7f7ab667d5c6a1190cf919d9c47266dde31a33ea",
+      "sizeBytes": 1636
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/entities/invoices.ts",
+      "sha256": "67090d651965fa660155b257eb807b53c3bfba961d3a42fcfec73da07e9700a7",
+      "sizeBytes": 1720
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/entities/server.ts",
+      "sha256": "c2a8749a1bfa106e0c4b3dee8d6d36f3ca9dfeb85a9eddeee12a190f55ae9525",
+      "sizeBytes": 3534
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/entities/session.ts",
+      "sha256": "ef3949ebb7326263bb6cb8e764505ee193a7756064874027fa4e363384aa24e4",
+      "sizeBytes": 3842
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/entities/subscription-prices.ts",
+      "sha256": "23480f4bff7249c7ef827cacf6c53544af8ae6b508d7a6b7b5a75220b9d09b8c",
+      "sizeBytes": 1779
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/entities/subscription.ts",
+      "sha256": "3767bdd7d2e2f1be8239ffba38981252f53be66964e64f6830bbe57f8cea1448",
+      "sizeBytes": 4372
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/entities/user-copilot-quota.ts",
+      "sha256": "f5968fbacaff87713f4c1306e9b03a57733c9b071dab6d07378fd27f465517cb",
+      "sizeBytes": 2458
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/entities/user-feature.ts",
+      "sha256": "af8aa466ced23b55e7b3dd258fdfc2a9bc2dae17e5ad5c510eed67032c9c2170",
+      "sizeBytes": 2089
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/entities/user-quota.ts",
+      "sha256": "234cceac72ee6ca60e4ef89d29172e576f0a61e4d73bb6e6fb5f3e96bd1cd86c",
+      "sizeBytes": 4562
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/entities/workspace-invoices.ts",
+      "sha256": "f71604af11b0051e6eb8226465abde2986b8db3b2dc84553d211824ad7e0defc",
+      "sizeBytes": 2169
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/entities/workspace-subscription.ts",
+      "sha256": "f9262b0de552afcd72a128396da7f6ec56cae39e2e6277cfc24ff59807dff81f",
+      "sizeBytes": 4338
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/events/account-changed.ts",
+      "sha256": "0f0033ce59b4de25c902deb06645313b06b3517737c17c3dffeb773824065a1b",
+      "sizeBytes": 202
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/events/account-logged-in.ts",
+      "sha256": "af6cc61b9e592bb814b708230284f6b5dda15b640b272d3f0c106e48d535aff1",
+      "sizeBytes": 193
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/events/account-logged-out.ts",
+      "sha256": "2005a47a67cef3d636aae0471f60fb7fa980651e29488c6b80ff49f8b49002e2",
+      "sizeBytes": 197
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/events/server-started.ts",
+      "sha256": "69ecc22975ccbe174b00e9e1f864b8cf750ce4b7dcc8ac8657c8d7b46e62c132",
+      "sizeBytes": 111
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/impl/auth.ts",
+      "sha256": "03309dab9db0c72fa1d5f338300dff4770384ab3998cca57ea37fe0e1630838d",
+      "sizeBytes": 3198
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/index.ts",
+      "sha256": "56e1b38b5fcbffc438c6604d73de4281ee3eb63a2ac194f036b77a03ef7e4806",
+      "sizeBytes": 10497
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/provider/auth.ts",
+      "sha256": "2e3e3c3a02570b054d7c8eaba09bb5e2ec8765f6a60d66aed4fe2b6b13a1ec51",
+      "sizeBytes": 860
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/provider/validator.ts",
+      "sha256": "9a112cb60310241814c4295f1ae204ff77d4a3fbbb13bade487d67f4ffacd5e2",
+      "sizeBytes": 379
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/realtime/enum.ts",
+      "sha256": "7d360f0b735a597998816500f731ed3b6c19f7f8ed4656b37c0a903743097429",
+      "sizeBytes": 288
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/realtime/live-query.ts",
+      "sha256": "b4661cea11be39125c21bd6eff2e5d50a2a52a3b1065cf983870a1f51516ab72",
+      "sizeBytes": 2726
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/scopes/server.ts",
+      "sha256": "a7dc64c3a56ecaa112daabc08f0b161ad3791159518847ff163616c38a0ecda7",
+      "sizeBytes": 199
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/server-name.ts",
+      "sha256": "49d960f94f34191dc56a82c6358c7c09b7f912fdb0b8f5a4f2433b9be97fc9e9",
+      "sizeBytes": 310
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/auth.ts",
+      "sha256": "e1dc3daf0ab02a337c5906c2c48fa9d6995552d3e258d3df09ac91ba35435fec",
+      "sizeBytes": 10480
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/blocksuite-writer-info.ts",
+      "sha256": "2435c5497f9cacd89e88fc2d13975b27c97d9f4abbf97777b89286c2482b7a57",
+      "sizeBytes": 1554
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/captcha.ts",
+      "sha256": "52f779e34134fea6c69954e82e7e86ef6c7711de18261816648d1433470dcf3d",
+      "sizeBytes": 3506
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/cloud-doc-meta.ts",
+      "sha256": "bdbf38a49555e18c8a5e0965690904fe25286249972f038f982dba05e5477df9",
+      "sizeBytes": 221
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/default-server.ts",
+      "sha256": "e2e808ce48282a23acd265780e2bcbb8c268aa48328ed8a41448599f86c91f59",
+      "sizeBytes": 760
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/doc-created-by-updated-by-sync.ts",
+      "sha256": "9cbefa43c6401999914e606dd5c9fd0578324700492d9749e682c381a578e820",
+      "sizeBytes": 4358
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/doc-created-by.ts",
+      "sha256": "bda32e5052feb5b0f077bdbcaba04ec6a18598ffbe47e3ac7f33bfddce5c6c7f",
+      "sizeBytes": 654
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/doc-updated-by.ts",
+      "sha256": "a42e05895738be1de1b258d155dab399bc80a87812caea45ccd5943e1a37e567",
+      "sizeBytes": 1108
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/eventsource.ts",
+      "sha256": "b3b43f886b77859f08ced7dbf69b47c0ef3567d0fd8802592666f0f1699d07a8",
+      "sizeBytes": 424
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/fetch.ts",
+      "sha256": "65bd843e235fedc0a20c36b7f4e506954c9edc2439b579b66b08b67afdab71fb",
+      "sizeBytes": 3253
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/graphql.ts",
+      "sha256": "d0db76b7dee08f04abd8e3b4f1f14e680004c4816a8e60d7dde67f69d92f1c1b",
+      "sizeBytes": 1247
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/invitation.ts",
+      "sha256": "9bcf2acfbbc71285564cf4baf538206393b8839d0eea069cd0461b4f20787258",
+      "sizeBytes": 1940
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/invoices.ts",
+      "sha256": "12a6f38ac9e14ad6de69683b8052fa4dc9328cc0bb19f4bcb6457fa515b42671",
+      "sizeBytes": 199
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/mcp-credential.ts",
+      "sha256": "625c56ec56e2187942e06b7c7d139c8810af172e65f66ddbbb412aaefc6656b2",
+      "sizeBytes": 1857
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/public-user.ts",
+      "sha256": "f56653700b18fc920f254105fb84bb82c86812a67201c5dfa2649d5c7c3b17e2",
+      "sizeBytes": 3158
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/realtime.ts",
+      "sha256": "e5f716445d0a509444e543979e37b89dfc94d74758c6e818961e974d59d087f7",
+      "sizeBytes": 2768
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/selfhost-generate-license.ts",
+      "sha256": "1194c7526968514e46ee0e0155eb5038f45d8dd65f00153759459d0311b2df92",
+      "sizeBytes": 1110
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/selfhost-license.ts",
+      "sha256": "0e8c5362a84613966b74d4dac65c38ebc794a6f29132ea949f4667ebe5909d79",
+      "sizeBytes": 1831
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/server.ts",
+      "sha256": "25583127e3ff2b5795e4b7ebd9492d94918a09d2760e93dc2ac6efd257d4b884",
+      "sizeBytes": 270
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/servers.ts",
+      "sha256": "20bb9e591285cce90bb07e5cd5021108eb3e1b863034042f8654c3d615e9cbb2",
+      "sizeBytes": 3326
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/subscription.ts",
+      "sha256": "7c83372515f423946b6a751c0657542f547fd19f9311d910fa3fc258d566b699",
+      "sizeBytes": 1265
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/user-copilot-quota.ts",
+      "sha256": "a3fe4702754268af5293af41f9973bdaa9789dafe33983bc7386f05f5f17b53c",
+      "sizeBytes": 428
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/user-feature.ts",
+      "sha256": "385845fb1e8b8f28e3a43a20fd58c2071bad07398bca0a933a733a4293a9ed9c",
+      "sizeBytes": 405
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/user-quota.ts",
+      "sha256": "eada19c851302e822358e807c3bf289ca8c127b7ec06a459a357abf9c751c664",
+      "sizeBytes": 650
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/user-settings.ts",
+      "sha256": "d6d288144df97bad1c8e7605c9eb1f0ea0285584fe29eb495b96f03a1c18d4fa",
+      "sizeBytes": 1615
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/workspace-invoices.ts",
+      "sha256": "a110113d4fa81c657a221e20aaf5588b11401ea8d28e153d10a8c6cc4148e23b",
+      "sizeBytes": 236
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/workspace-server.ts",
+      "sha256": "fc813fc01758dccda2f897612b92ba7292a03dc054ab8f55be6751f34a60c15c",
+      "sizeBytes": 345
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/services/workspace-subscription.ts",
+      "sha256": "b54035387eb97bf8ce4a104445911460ee8a74e62b64122adbaaaa3a5148d8ea",
+      "sizeBytes": 831
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/stores/accept-invite.ts",
+      "sha256": "0db1a70349b75ceaaf884d17c701c2efd963067456deb1f1e749ecbdfa414e76",
+      "sizeBytes": 632
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/stores/auth.ts",
+      "sha256": "7ad8d0c3704659b13cf78cf65b7d5094164185ea32276e5d79ab00ab4bd46865",
+      "sizeBytes": 6156
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/stores/cloud-doc-meta.ts",
+      "sha256": "e608ef51e655658fb90759afd96d536d965f7409c75c9b54cb47155282e5c64c",
+      "sizeBytes": 922
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/stores/doc-created-by-updated-by-sync.ts",
+      "sha256": "b87da4de38fd8ee00635ad6b324d74fb84013938bf924fa51e996132b7cb0afd",
+      "sizeBytes": 1459
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/stores/invite-info.ts",
+      "sha256": "e8af4ac40a39a70f789cfcfde0408bf77d99725cba9a887d47884f7dc879a3b8",
+      "sizeBytes": 611
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/stores/invoices.ts",
+      "sha256": "a9bca722b3401225e8d8ffe822e61a6cbbf132d0b54a93eb3ce0057894971abd",
+      "sizeBytes": 1032
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/stores/mcp-credential.ts",
+      "sha256": "2be316c747c6c206671452479b96ee8a91fc28edd8fa7b5d5fdfdc15d448b0e7",
+      "sizeBytes": 1602
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/stores/public-user.ts",
+      "sha256": "99622cc30e382e1810b93454ddf37778de6034bde2db0f4c88edc929265331ae",
+      "sizeBytes": 565
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/stores/selfhost-generate-license.ts",
+      "sha256": "135cd5c5a3319cfb6e4509a7f5ca8bafc1f29c57a902391b37236a6408295c4a",
+      "sizeBytes": 622
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/stores/selfhost-license.ts",
+      "sha256": "0baaa4fa84c40d431b58e76bdfa5c9cff283424b6fce0e935c7f8c97d2bc008f",
+      "sizeBytes": 2131
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/stores/server-config.ts",
+      "sha256": "2dfb6d020d5a2dcbc800d771c7f3515de49b22efdd9317e57bb2a624fe5f15e5",
+      "sizeBytes": 3980
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/stores/server-list.ts",
+      "sha256": "545024ec4679255751450693afd2740d4c0ffbacbb5630df2aedc23cb80de7c0",
+      "sizeBytes": 2471
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/stores/subscription.ts",
+      "sha256": "fdc1d49246fb36e528bff3ce44e986b8580b1dc290df36fed20dd3a2a54569fe",
+      "sizeBytes": 5192
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/stores/user-copilot-quota.ts",
+      "sha256": "339bb5b2d475cb46680a4bd616b897b40a865ad3053d881f505dd11455fee693",
+      "sizeBytes": 621
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/stores/user-quota.ts",
+      "sha256": "381643bbb6692a73425b051e5db5573fe3a0eb54b12343f82ff7375a0345bca7",
+      "sizeBytes": 613
+    }
+  ],
+  "inputFingerprint": "706f0fca5a4deb419b4cad71eda4af1dcec99043602cd51823fa320f089d3638",
+  "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0014.json",
+  "outputSha256": "f8b754d2fa9545237324b365dbb11c110357929be95376a73740a2edd7361dc2",
+  "nodeCount": 2025,
+  "edgeCount": 7199,
+  "inputTokens": 0,
+  "outputTokens": 0,
+  "cacheDecision": "REEXTRACTED",
+  "cacheInvalidationReason": "input fingerprint changed",
+  "completedAt": "2026-07-28T10:33:20.368Z"
+}

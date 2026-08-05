@@ -1,0 +1,40 @@
+{
+  "freezeRunId": "mindroom-graphify-final-freeze-authoritative-20260801-084203",
+  "timestamp": "2026-08-01T13:33:05.299034Z",
+  "authoritativeReleaseWaves": [
+    "WAVE_0",
+    "WAVE_1",
+    "WAVE_2",
+    "WAVE_3",
+    "WAVE_4",
+    "WAVE_5"
+  ],
+  "releaseWaveCount": 6,
+  "capabilityContractWaveMismatches": [],
+  "taskContractWaveMismatches": [],
+  "capabilityPrimaryTaskWaveMismatches": [],
+  "warningOwningTaskWaveMismatches": [],
+  "staleWave5Disposition": "Restored as an explicit final-evidence wave gate with no current capability-, task-, or test-owned records; application release remains a separate NOT_VERIFIED gate.",
+  "repairRunId": "mindroom-graphify-final-gate-repair-20260801-132409",
+  "waveGateCount": 6,
+  "gateTestSynchronizationStatus": "PASS",
+  "testWaveMetadataCorrections": [
+    "TEST-MR-CAP-132-UNIT-001",
+    "TEST-MR-CAP-132-INTEG-002",
+    "TEST-MR-CAP-132-NEG-FINANCE-003",
+    "TEST-MR-CAP-140-UNIT-001",
+    "TEST-MR-CAP-140-INTEG-002",
+    "TEST-MR-CAP-151-UNIT-001",
+    "TEST-MR-CAP-151-INTEG-002",
+    "TEST-MR-CAP-152-UNIT-001",
+    "TEST-MR-CAP-152-INTEG-002",
+    "TEST-MR-CAP-153-UNIT-001",
+    "TEST-MR-CAP-153-INTEG-002",
+    "TEST-MR-CAP-158-UNIT-001",
+    "TEST-MR-CAP-158-INTEG-002",
+    "TEST-MR-CAP-160-UNIT-001",
+    "TEST-MR-CAP-160-INTEG-002",
+    "TEST-MR-CAP-161-UNIT-001",
+    "TEST-MR-CAP-161-INTEG-002"
+  ]
+}

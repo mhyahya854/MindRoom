@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:12:14.873Z",
+  "masterPlanHashes": {
+    "01-EVERYTHING-WE-ARE-KEEPING.md": "62519be4eff761b775de7c9d687f78a560e047240c8ca14e5d976f127349fd8a",
+    "02-EVERYTHING-WE-ARE-DELETING.md": "2bb940586e484d79eca238ec5c13e960c711c0164123d8f172fd3eadab57502d",
+    "03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md": "d9fa9a2fcd0b783db34c17f5e92bec793d2b53e88d902870c6c2ebe1f5a546ca"
+  },
+  "requirementRegistryHash": "636c0db42ef0b1d30c938551c747cdb4556a35f0889d19cd8f8fac7ff5f74a8f",
+  "traceabilityMatrixHash": "9a50f202eb6c045461722a4bcf98790beb6b352c02a03c382b46051901be7851",
+  "capabilityRegistryHash": "af0610bd23d74f83ec0dc7350f93b3313ef22f05c1bf36db3e8c1d1ba628d075",
+  "requirementTestMatrixHash": "0361744c730afa77c94cd2ed555836c1fc31e037f77683cc7cb8495f38225fb1",
+  "totalRequirementCount": 2055,
+  "originalPlanRequirementCount": 635,
+  "productExpansionRequirementCount": 1420,
+  "duplicateTitleGroups": 173,
+  "exactDuplicateRecords": 173,
+  "semanticDuplicateCandidates": 173,
+  "fragmentOnlyRecords": 105,
+  "headingOnlyRecords": 0,
+  "oneWordRecords": 190,
+  "invalidSourceAnchors": 2055,
+  "orphanedRequirementsCount": 0,
+  "requirementsWithNoCapabilityCount": 0,
+  "requirementsWithNoTraceabilityCount": 0,
+  "requirementsWithNoVerificationCount": 0
+}

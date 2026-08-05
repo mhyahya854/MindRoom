@@ -1,0 +1,100 @@
+{
+  "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+  "status": "PASS",
+  "checks": {
+    "directedAuthoritativeGraph": true,
+    "parallelEvidencePreserved": true,
+    "allNodesHaveStableUniqueIds": true,
+    "allEdgesHaveExistingEndpoints": true,
+    "allFilesHavePrimaryLayer": true,
+    "vendorInternalsExcludedFromCore": true,
+    "generatedSeparated": true,
+    "testsSeparated": true,
+    "buildConfigSeparated": true,
+    "migrationsSeparated": true,
+    "zeroDanglingAuthoritativeEdges": true,
+    "zeroUnresolvedInternalEndpoints": true,
+    "zeroInvalidReferences": true,
+    "invalidTypeScriptSelfLoopRepaired": true,
+    "allAuthoritativeSelfLoopsClassified": true,
+    "zeroRustFileSelfLoops": true,
+    "allRustModDeclarationsResolved": true,
+    "onlyAuthRefreshTokensSqlSelfReferenceRetained": true,
+    "runtimeRegistrationEvidenceContractValid": true,
+    "sourceFilesExist": true,
+    "sourceHashesCurrent": true,
+    "jsonParsingPassed": true,
+    "schemaInstancesValidated": true,
+    "resolverAssertionsPassed": true,
+    "layerAssertionsPassed": true,
+    "selfLoopAssertionsPassed": true,
+    "generatedProvenancePassed": true,
+    "runtimeRegistrationAssertionsPassed": true,
+    "astBatchManifestValidated": true
+  },
+  "evidence": {
+    "sourceFilesExist": {
+      "path": "Graphify/00 Execution Control/GRAPHIFY_REPAIR_MANIFEST.json",
+      "sha256": "d9c4055b4509cf7d2fb0f8ec01d6f6640798974a88393fddc72ac84c52cc65ba",
+      "count": 10080
+    },
+    "sourceHashesCurrent": {
+      "path": "Graphify/00 Execution Control/GRAPHIFY_REPAIR_BASELINE.json",
+      "sha256": "18c9a9ad4d6d12acf91f35fb4fb3c9735879b9d422462e8ba443c7ef5d96f8c6",
+      "count": 10080,
+      "treeSha256": "135fbaacd841e5e4c271b046eda4b1613da83122e08c464904d395cd93ae5a04"
+    },
+    "jsonParsingPassed": {
+      "path": "Graphify/11 Completion/validate_graphify_mapping.py",
+      "sha256": "663c4d356d77e649123a92f655660002e3ff85f77712b9c9bfaf606aaab63400",
+      "count": 432068
+    },
+    "schemaInstancesValidated": {
+      "path": "Graphify/00 Execution Control/schemas",
+      "sha256": "5f80f76e47642fab50edef4188ec27b5bc06b95bb3f2d6c250548f547699a545",
+      "count": 132023,
+      "errorCount": 0
+    },
+    "resolverAssertionsPassed": {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/EDGES.jsonl",
+      "sha256": "22111d28fa7e0ea4b6c2b3c779ca2261bc7a6f4e6da844ebc1b0557fd624ed27",
+      "count": 107213,
+      "rustModuleDeclarations": 150,
+      "symbolDependencyEdges": 20047
+    },
+    "layerAssertionsPassed": {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/NODES.jsonl",
+      "sha256": "ad815d0319aee13c16fec2b94e48f18ff80ce1f3ee20ec9ed5745e5d2f888ceb",
+      "count": 10080,
+      "status": "PASS",
+      "knownNonRuntimeExamplesChecked": 14,
+      "authoredRuntimePollution": 0
+    },
+    "selfLoopAssertionsPassed": {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/SELF_LOOP_CLASSIFICATION.jsonl",
+      "sha256": "846b8bb19428e6cde202e1c99823adcc381216db9075ed0aeea211503f245339",
+      "count": 2,
+      "authoritativeSelfLoops": 1
+    },
+    "generatedProvenancePassed": {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GENERATED_CODE_PROVENANCE.jsonl",
+      "sha256": "36a1a94f2e4ee75e377c535c740b1807411ea634c759180eedc1d77e1cc5ad84",
+      "count": 428
+    },
+    "runtimeRegistrationAssertionsPassed": {
+      "path": "Graphify/02 Architecture Map/RUNTIME_REGISTRATION_REGISTRY.jsonl",
+      "sha256": "13557da77412ed48bbd9d770af973d0ce7a5d87a6c1f05261011c4ac1c68827e",
+      "count": 643,
+      "jsxRoutes": 10
+    },
+    "astBatchManifestValidated": {
+      "path": "Graphify/00 Execution Control/Generated Tool Cache/v2/mindroom-graphify-forensic-finalization-20260730-150956/ast/EXTRACTION_MANIFEST.json",
+      "sha256": "80978045e8499008bfd7e3a907f18392eea7c0b18c4bf23b9584cb4801321d4d",
+      "count": 24,
+      "mergeReceiptPath": "Graphify/00 Execution Control/Generated Tool Cache/v2/mindroom-graphify-forensic-finalization-20260730-150956/ast/MERGE_RECEIPT.json",
+      "mergeReceiptSha256": "8e83d6dfa0edffd633cff12d4ff22d24b820bb363dd7b3c39d0952ebbb687c43"
+    }
+  },
+  "validationAuthority": "VALIDATOR_ASSERTIONS_COMPLETED_NOT_BUILDER_PREASSERTION",
+  "validatedAt": "2026-07-30T15:33:11.771Z"
+}

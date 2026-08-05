@@ -1,0 +1,1 @@
+{"nodes": [{"id": "c_users_mhyah_downloads_code_mindroom_codebase_packages_backend_server_migrations_20240909100000_lower_index_user_email_migration_sql", "label": "migration.sql", "file_type": "code", "source_file": "packages/backend/server/migrations/20240909100000_lower_index_user_email/migration.sql", "source_location": null}], "edges": []}

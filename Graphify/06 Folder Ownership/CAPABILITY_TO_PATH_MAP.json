@@ -1,0 +1,485 @@
+{
+  "MR-CAP-001": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-002": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-003": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-004": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-005": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-006": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-007": [
+    "Graphify/09 Implementation/tasks/mr-cap-007.ts"
+  ],
+  "MR-CAP-008": [
+    "Graphify/09 Implementation/tasks/mr-cap-008.ts"
+  ],
+  "MR-CAP-009": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-010": [
+    "Graphify/09 Implementation/tasks/mr-cap-010.ts"
+  ],
+  "MR-CAP-011": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-012": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-013": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-014": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-015": [
+    "Graphify/09 Implementation/tasks/mr-cap-015.ts"
+  ],
+  "MR-CAP-016": [
+    "Graphify/09 Implementation/tasks/mr-cap-016.ts"
+  ],
+  "MR-CAP-017": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-018": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-019": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-020": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-021": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-022": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-023": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-024": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-025": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-026": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-027": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-028": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-029": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-030": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-031": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-032": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-033": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-034": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-035": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-036": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-037": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-038": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-039": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-040": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-041": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-042": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-043": [
+    "Graphify/09 Implementation/tasks/mr-cap-043.ts"
+  ],
+  "MR-CAP-044": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-045": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-046": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-047": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-048": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-049": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-050": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-051": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-052": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-053": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-054": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-055": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-056": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-057": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-058": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-059": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-060": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-061": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-062": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-063": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-064": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-065": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-066": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-067": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-068": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-069": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-070": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-071": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-072": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-073": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-074": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-075": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-076": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-077": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-078": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-079": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-080": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-081": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-082": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-083": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-084": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-085": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-086": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-087": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-088": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-089": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-090": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-091": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-092": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-093": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-094": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-095": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-096": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-097": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-098": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-099": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-100": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-101": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-102": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-103": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-104": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-105": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-106": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-107": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-108": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-109": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-110": [
+    "Codebase/packages/frontend/core/package.json"
+  ],
+  "MR-CAP-111": [
+    "Graphify/09 Implementation/planned/mr-cap-111/"
+  ],
+  "MR-CAP-112": [
+    "Graphify/09 Implementation/planned/mr-cap-112/"
+  ],
+  "MR-CAP-113": [
+    "Graphify/09 Implementation/planned/mr-cap-113/"
+  ],
+  "MR-CAP-114": [
+    "Graphify/09 Implementation/planned/mr-cap-114/"
+  ],
+  "MR-CAP-115": [
+    "Graphify/09 Implementation/planned/mr-cap-115/"
+  ],
+  "MR-CAP-116": [
+    "Graphify/09 Implementation/planned/mr-cap-116/"
+  ],
+  "MR-CAP-117": [
+    "Graphify/09 Implementation/planned/mr-cap-117/"
+  ],
+  "MR-CAP-118": [
+    "Graphify/09 Implementation/planned/mr-cap-118/"
+  ],
+  "MR-CAP-119": [
+    "Graphify/09 Implementation/planned/mr-cap-119/"
+  ],
+  "MR-CAP-120": [
+    "Graphify/09 Implementation/planned/mr-cap-120/"
+  ],
+  "MR-CAP-121": [
+    "Graphify/09 Implementation/planned/mr-cap-121/"
+  ],
+  "MR-CAP-122": [
+    "Graphify/09 Implementation/planned/mr-cap-122/"
+  ],
+  "MR-CAP-123": [
+    "Graphify/09 Implementation/planned/mr-cap-123/"
+  ],
+  "MR-CAP-124": [
+    "Graphify/09 Implementation/planned/mr-cap-124/"
+  ],
+  "MR-CAP-125": [
+    "Graphify/09 Implementation/planned/mr-cap-125/"
+  ],
+  "MR-CAP-126": [
+    "Graphify/09 Implementation/planned/mr-cap-126/"
+  ],
+  "MR-CAP-127": [
+    "Graphify/09 Implementation/planned/mr-cap-127/"
+  ],
+  "MR-CAP-128": [
+    "Graphify/09 Implementation/planned/mr-cap-128/"
+  ],
+  "MR-CAP-129": [
+    "Graphify/09 Implementation/planned/mr-cap-129/"
+  ],
+  "MR-CAP-130": [
+    "Graphify/09 Implementation/planned/mr-cap-130/"
+  ],
+  "MR-CAP-131": [
+    "Graphify/09 Implementation/planned/mr-cap-131/"
+  ],
+  "MR-CAP-132": [
+    "Graphify/09 Implementation/planned/mr-cap-132/"
+  ],
+  "MR-CAP-133": [
+    "Graphify/09 Implementation/planned/mr-cap-133/"
+  ],
+  "MR-CAP-134": [
+    "Graphify/09 Implementation/planned/mr-cap-134/"
+  ],
+  "MR-CAP-135": [
+    "Graphify/09 Implementation/planned/mr-cap-135/"
+  ],
+  "MR-CAP-136": [
+    "Graphify/09 Implementation/planned/mr-cap-136/"
+  ],
+  "MR-CAP-137": [
+    "Graphify/09 Implementation/planned/mr-cap-137/"
+  ],
+  "MR-CAP-138": [
+    "Graphify/09 Implementation/planned/mr-cap-138/"
+  ],
+  "MR-CAP-139": [
+    "Graphify/09 Implementation/planned/mr-cap-139/"
+  ],
+  "MR-CAP-140": [
+    "Graphify/09 Implementation/planned/mr-cap-140/"
+  ],
+  "MR-CAP-141": [
+    "Graphify/09 Implementation/planned/mr-cap-141/"
+  ],
+  "MR-CAP-142": [
+    "Graphify/09 Implementation/planned/mr-cap-142/"
+  ],
+  "MR-CAP-143": [
+    "Graphify/09 Implementation/planned/mr-cap-143/"
+  ],
+  "MR-CAP-144": [
+    "Graphify/09 Implementation/planned/mr-cap-144/"
+  ],
+  "MR-CAP-145": [
+    "Graphify/09 Implementation/planned/mr-cap-145/"
+  ],
+  "MR-CAP-146": [
+    "Graphify/09 Implementation/planned/mr-cap-146/"
+  ],
+  "MR-CAP-147": [
+    "Graphify/09 Implementation/planned/mr-cap-147/"
+  ],
+  "MR-CAP-148": [
+    "Graphify/09 Implementation/planned/mr-cap-148/"
+  ],
+  "MR-CAP-149": [
+    "Graphify/09 Implementation/planned/mr-cap-149/"
+  ],
+  "MR-CAP-150": [
+    "Graphify/09 Implementation/planned/mr-cap-150/"
+  ],
+  "MR-CAP-151": [
+    "Graphify/09 Implementation/planned/mr-cap-151/"
+  ],
+  "MR-CAP-152": [
+    "Graphify/09 Implementation/planned/mr-cap-152/"
+  ],
+  "MR-CAP-153": [
+    "Graphify/09 Implementation/planned/mr-cap-153/"
+  ],
+  "MR-CAP-154": [
+    "Graphify/09 Implementation/planned/mr-cap-154/"
+  ],
+  "MR-CAP-155": [
+    "Graphify/09 Implementation/planned/mr-cap-155/"
+  ],
+  "MR-CAP-156": [
+    "Graphify/09 Implementation/planned/mr-cap-156/"
+  ],
+  "MR-CAP-157": [
+    "Graphify/09 Implementation/planned/mr-cap-157/"
+  ],
+  "MR-CAP-158": [
+    "Graphify/09 Implementation/planned/mr-cap-158/"
+  ],
+  "MR-CAP-159": [
+    "Graphify/09 Implementation/planned/mr-cap-159/"
+  ],
+  "MR-CAP-160": [
+    "Graphify/09 Implementation/planned/mr-cap-160/"
+  ],
+  "MR-CAP-161": [
+    "Graphify/09 Implementation/planned/mr-cap-161/"
+  ]
+}

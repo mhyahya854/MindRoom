@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "manifestRole": "AUTHORITATIVE_PRODUCT_EXPANSION_EXECUTION_MANIFEST",
+  "project": "MindRoom",
+  "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+  "createdAt": "2026-07-29T12:51:04.542Z",
+  "status": "PRIMARY_ARTIFACTS_GENERATED_PENDING_VALIDATION_AND_REVIEW",
+  "authority": "AUTHORITATIVE",
+  "scope": {
+    "mode": "PLANNING_AND_GRAPHIFY_ONLY",
+    "allowedMutationRoot": "Graphify/",
+    "codebaseMutationAllowed": false,
+    "applicationImplementationAllowed": false,
+    "moveDeleteQuarantineTransplantAllowed": false,
+    "ponytailApplicationAllowed": false,
+    "finalReleaseMustRemainLocked": true
+  },
+  "sourceContracts": [
+    {
+      "path": "C:/Users/mhyah/.codex/attachments/de588ef3-ec0f-4f21-ad59-47efc8cdb139/pasted-text.txt",
+      "sha256": "8E89EE530D6B22A3C1228479E76AEBC75A7BC6D5ECFDAB3F8FB329DF1813AF2F",
+      "bytes": 60424,
+      "lines": 2397,
+      "role": "PRODUCT_EXPANSION_BRIEF"
+    },
+    {
+      "path": "C:/Users/mhyah/.codex/attachments/0dd652d4-bac9-4dfd-941b-17396aab8872/pasted-text.txt",
+      "sha256": "8E89EE530D6B22A3C1228479E76AEBC75A7BC6D5ECFDAB3F8FB329DF1813AF2F",
+      "bytes": 60424,
+      "lines": 2397,
+      "role": "BYTE_IDENTICAL_DUPLICATE_REFERENCE"
+    }
+  ],
+  "preservationGuardrail": {
+    "status": "BINDING_BEFORE_MASTER_PLAN_EDITS",
+    "interpretation": "The expansion brief is additive and corrective. It supersedes only the prior claim that Graphify mapping was complete; it does not supersede, replace, reduce, simplify, or discard original Master Plan content.",
+    "preserve": [
+      "every existing valid requirement",
+      "every existing capability and product function",
+      "every architectural rule",
+      "every safety restriction",
+      "every workflow",
+      "every retained AFFiNE feature",
+      "every deletion rule",
+      "every implementation constraint",
+      "every verification requirement",
+      "every recovery requirement",
+      "every product decision",
+      "all historical evidence"
+    ],
+    "permittedMasterPlanChanges": [
+      "add the newly authorised calendar, finance, canvas-scoping, mind-map federation, and knowledge-linking requirements",
+      "correct a proven contradiction, semantic mapping error, stale count, stale hash, or outdated completion statement",
+      "integrate new requirements into the existing structure without duplication",
+      "clarify an existing requirement without reducing its scope or protection"
+    ],
+    "forbiddenMasterPlanChanges": [
+      "delete an original feature or requirement merely because it is not mentioned in the expansion brief",
+      "weaken local-first, file-backed, privacy, offline, recovery, provenance, anti-reinvention, Graphify, Ponytail, deletion, testing, or independent-review protections",
+      "replace an original plan with a shorter expansion-only plan",
+      "renumber or rewrite unrelated sections unnecessarily",
+      "interpret silence as permission to remove anything",
+      "reduce original product scope",
+      "mark an original capability obsolete unless the original plan already authorised its removal",
+      "overwrite historical evidence without preserving it",
+      "silently resolve an original-plan versus expansion-brief conflict"
+    ],
+    "requiredPreEditInventory": {
+      "path": "Graphify/15 Processed Plan Snapshots/ORIGINAL_MASTER_PLAN_PRESERVATION_INVENTORY.json",
+      "mustInclude": [
+        "every original Master Plan heading",
+        "every original requirement",
+        "every original capability or product function",
+        "every mandatory safety rule",
+        "every mandatory release or verification gate",
+        "every explicit KEEP, ADAPT, REMOVE, ADD, or CONDITIONAL decision"
+      ],
+      "sha256Required": true,
+      "complete": true,
+      "sha256": "112a5cab0347295307918da66b5107602012fee6c6603837f485c341aba92aa0",
+      "counts": {
+        "rawLines": 2841,
+        "headings": 129,
+        "requirements": 2136,
+        "capabilitiesAndProductFunctions": 712,
+        "mandatorySafetyRules": 239,
+        "releaseAndVerificationGates": 426,
+        "explicitDecisions": 547
+      }
+    },
+    "requiredPostEditReport": {
+      "path": "Graphify/15 Processed Plan Snapshots/MASTER_PLAN_PRESERVATION_REPORT.json",
+      "mustProve": [
+        "original requirements preserved",
+        "original capabilities preserved",
+        "original restrictions preserved",
+        "additions clearly identified",
+        "corrections clearly identified",
+        "removed text listed with exact justification",
+        "weakened requirements equals zero",
+        "accidentally omitted requirements equals zero",
+        "unauthorised product-scope reductions equals zero"
+      ],
+      "sha256Required": true,
+      "complete": true,
+      "sha256": "a3b725f7d4bb91e6076004468d07a524cba8fa87f05210e53f364200ca5abd2a"
+    },
+    "conflictPolicy": "BLOCK_FOR_REVIEW",
+    "conflictsMayBeSilentlyResolved": false
+  },
+  "independentReviewer": {
+    "agentId": "affine_zero_path_review",
+    "canonicalAgentPath": "/root/affine_zero_path_review",
+    "role": "READ_ONLY_INDEPENDENT_REVIEWER",
+    "preservationAssignmentAccepted": true,
+    "acceptedAt": "2026-07-29T12:51:04.542Z",
+    "preEditManifestReviewRequired": true,
+    "finalFrozenSnapshotReviewRequired": true,
+    "mayEditArtifacts": false,
+    "currentDecision": "APPROVED_FINAL_FROZEN_SNAPSHOT",
+    "preEditInventoryApprovedAt": "2026-07-29T13:04:03.384Z",
+    "preEditInventoryApprovalScope": "PRESERVATION_INVENTORY_ONLY_NOT_FINAL_MAPPING",
+    "finalReviewId": "MR-REVIEW-PRODUCT-EXPANSION-FINAL",
+    "finalReviewApprovedAt": "2026-07-29T13:57:27.176Z",
+    "finalFrozenSnapshotSha256": "5404129001f37cccd9867c73ee9751f633638b3b6d19b37025b606ae84b92e83",
+    "finalFrozenAggregateSha256": "d8b566b650c2e6f2d15f964364cf253a9c2fe31350a615b83889f99d5f9e2f2f"
+  },
+  "mutationInterlocks": {
+    "masterPlanMutationAuthorized": false,
+    "requiredBeforeAuthorization": [
+      "complete untouched Codebase file and directory baseline",
+      "complete original Master Plan preservation inventory",
+      "bind preservation inventory SHA-256 into this manifest",
+      "obtain independent reviewer confirmation that the inventory and report contract are complete"
+    ],
+    "codebaseMutationAuthorized": false,
+    "finalReleaseAuthorized": false
+  },
+  "historicalCompletion": {
+    "priorRunId": "graphify-v2-repair-20260728T095646",
+    "priorMappingEvidenceMustBePreserved": true,
+    "priorMappingCompletionClaim": "SUPERSEDED_ONLY_BY_CURRENT_PRODUCT_EXPANSION",
+    "originalMasterPlanContentSuperseded": false
+  },
+  "phaseLedger": [
+    {
+      "phase": "READ_ORIGINAL_CONTRACTS",
+      "status": "COMPLETE"
+    },
+    {
+      "phase": "BIND_PRESERVATION_GUARDRAIL",
+      "status": "COMPLETE"
+    },
+    {
+      "phase": "BASELINE_AND_PRESERVATION_INVENTORY",
+      "status": "COMPLETE"
+    },
+    {
+      "phase": "MASTER_PLAN_EXPANSION",
+      "status": "COMPLETE"
+    },
+    {
+      "phase": "DERIVED_ARTIFACT_REGENERATION",
+      "status": "COMPLETE"
+    },
+    {
+      "phase": "INDEPENDENT_REVIEW",
+      "status": "PENDING"
+    }
+  ],
+  "baseline": {
+    "path": "Graphify/00 Execution Control/PRODUCT_EXPANSION_BASELINE.json",
+    "sha256": "077b74113ee7c8e68bd52727bd76c5e53c9c26732fa3adf6b428914e3adb5c25",
+    "codebaseFileCount": 10080,
+    "codebaseDirectoryCount": 2549,
+    "codebaseFileTreeSha256": "135fbaacd841e5e4c271b046eda4b1613da83122e08c464904d395cd93ae5a04",
+    "codebaseDirectoryTreeSha256": "fc158ef1d6608fa66ef7a2c717a7620daa63a9daf3ee9645b3539c383e02891f"
+  },
+  "lastUpdatedAt": "2026-07-30T15:10:24.502Z",
+  "currentMasterPlanHashes": {
+    "01-EVERYTHING-WE-ARE-KEEPING.md": "62519be4eff761b775de7c9d687f78a560e047240c8ca14e5d976f127349fd8a",
+    "02-EVERYTHING-WE-ARE-DELETING.md": "2bb940586e484d79eca238ec5c13e960c711c0164123d8f172fd3eadab57502d",
+    "03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md": "d9fa9a2fcd0b783db34c17f5e92bec793d2b53e88d902870c6c2ebe1f5a546ca"
+  },
+  "codebaseAfter": {
+    "fileCount": 10080,
+    "directoryCount": 2549,
+    "fileTreeSha256": "135fbaacd841e5e4c271b046eda4b1613da83122e08c464904d395cd93ae5a04",
+    "directoryTreeSha256": "fc158ef1d6608fa66ef7a2c717a7620daa63a9daf3ee9645b3539c383e02891f",
+    "modifiedFiles": [],
+    "addedFiles": [],
+    "removedFiles": [],
+    "unchanged": true
+  },
+  "primaryFreeze": {
+    "path": "Graphify/11 Completion/PRODUCT_EXPANSION_PRIMARY_FREEZE.json",
+    "sha256": "47e8ebb69ca07089afdb2fec15c0eeba1a12811878990c8d2bddf3e25eeb0aa0",
+    "aggregateSha256": "3a0eeb74ac3df9e002b25917384bd10108631ad72ad446b4cc076b466ed4f2d7",
+    "artifactCount": 40,
+    "status": "FROZEN_FOR_INDEPENDENT_REVIEW"
+  },
+  "completion": {
+    "semanticGateCount": 52,
+    "semanticGatesPassed": 52,
+    "independentReviewPassed": true,
+    "codebaseUnmodified": true,
+    "applicationImplementationPerformed": false,
+    "finalReleaseReceiptLocked": true
+  },
+  "codebaseBaselineSha256": "135fbaacd841e5e4c271b046eda4b1613da83122e08c464904d395cd93ae5a04"
+}

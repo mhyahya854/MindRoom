@@ -1,0 +1,9 @@
+{
+  "freezeRunId": "mindroom-graphify-final-freeze-integrity-20260731-145843",
+  "timestamp": "2026-07-31T14:58:43+03:00",
+  "invalidatedFreezeRunId": "mindroom-graphify-final-freeze-20260731-135829",
+  "officialValidatorRunId": "mindroom-graphify-validator-rebuild-20260730-184338",
+  "externalReviewRunId": "mindroom-external-independent-review-20260730-215435",
+  "initialMappingStatus": "READY_FOR_FINAL_SYNCHRONIZATION",
+  "initialFreezeStatus": "NOT_FROZEN"
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "mindroom.graphify.merge-receipt.v2",
+  "runId": "graphify-v2-repair-20260728T095646",
+  "status": "COMPLETE",
+  "inputManifestSha256": "aafb1e8a907f27a44896bb453986e3eddbb1161d58eb81b8131e073e206d5e57",
+  "partitionValidation": {
+    "status": "PASS",
+    "expectedFileCount": 8101,
+    "partitionedFileCount": 8101,
+    "uniquePartitionedFileCount": 8101,
+    "duplicateFiles": [],
+    "omittedFiles": [],
+    "unexpectedFiles": [],
+    "duplicateBatchIds": [],
+    "orderedSourceSetSha256": "f541cd8651c7106546af70c76328267ebd8807521ba724efc5005a4c02ababd8"
+  },
+  "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/GRAPHIFY_RAW_MERGED.json",
+  "outputSha256": "05cc198edd59af80b5c841724a5db454c566aa6117be68f34eeb7a3f6d6f79c5",
+  "nodeCount": 60158,
+  "edgeCount": 176108,
+  "authoritative": false,
+  "completedAt": "2026-07-29T03:59:44.768Z"
+}

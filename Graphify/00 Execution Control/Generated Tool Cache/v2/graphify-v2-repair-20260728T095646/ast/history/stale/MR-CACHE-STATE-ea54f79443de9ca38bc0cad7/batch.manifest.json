@@ -1,0 +1,2023 @@
+{
+  "policyVersion": "mindroom-graphify-v2-layered-directed-1",
+  "extractor": "graphify.extract.extract",
+  "extractorVersion": "unknown",
+  "runnerSha256": "2adcfbd68a8a4e2b407bba8c37b6f81fb5b31a74fa570e70359e0283bf7f33ec",
+  "classificationResolverSha256": "675743d8d1e0f47c12ac4b2678077ed0ee0f06c0ccb6755505ffdc22bbfdaf55",
+  "codebaseRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Codebase",
+  "layer": "AUTHORED_RUNTIME",
+  "batchIndex": 5,
+  "batchSizePolicy": 400,
+  "files": [
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/styles/index.ts",
+      "sha256": "1b5ef90b783db21111f4e49c54bfc2490f2ec9158b3ef4402ce3ed16fbbd0d08",
+      "sizeBytes": 225
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/styles/panel.ts",
+      "sha256": "85c7694bffe21ff85e25d89a77baa195133fc77deeae2562a4e508785c1065f9",
+      "sizeBytes": 742
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/styles/scrollbar-style.ts",
+      "sha256": "0d9ffa70d1bf2548f596dc1065173f8fd776fcfa9e268c789be68fd43427e33c",
+      "sizeBytes": 1088
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/styles/text.ts",
+      "sha256": "aee9c32d2338b497c7b06a9d21feb6a7f23a9b8882ab6235a7ffe20001ff50bb",
+      "sizeBytes": 1194
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/test-utils/affine-template.ts",
+      "sha256": "98a9e4dcd5c44ec4abd3aab767899e2ed95a385d7fdce3fb9caa6abc4dcbf8ad",
+      "sizeBytes": 9022
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/test-utils/affine-test-utils.ts",
+      "sha256": "34ac6935fd238451841e52bbd47a77b1d995ab8d640f070f92fc102646214983",
+      "sizeBytes": 3076
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/test-utils/create-test-host.ts",
+      "sha256": "05aa4ccd78b2d3d4c3d179087a4feab6f61f360710a5419d99bbbf09e1f9ccb5",
+      "sizeBytes": 5827
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/test-utils/index.ts",
+      "sha256": "aa3a49c689b4e409148697f1b2ddd6d51104873279a011a068e2ef6d89c9b9eb",
+      "sizeBytes": 108
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/theme/css-variables.ts",
+      "sha256": "6683ddd7bde9229f89d50812e7381273f06aed2df30330112395fd68cf087642",
+      "sizeBytes": 3569
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/theme/index.ts",
+      "sha256": "b994fb6a317b7e18017837f637d4fbc30961799798f2406e3190337d4da056bf",
+      "sizeBytes": 76
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/theme/placeholder-style.ts",
+      "sha256": "c7f17895f663caf9791b82e982dd472f6b53c3a17de8ffc52af0799cbf9f79d7",
+      "sizeBytes": 587
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/types/index.ts",
+      "sha256": "a56bd5d4e18b655f2cbed7ccd9aa392e5ae624537f7595f670410ce27e882a23",
+      "sizeBytes": 1676
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/types/uni-component.ts",
+      "sha256": "692f88878e15d921b7beb308bf35d6c430bb5c930a9f367305974ba1f8c595d4",
+      "sizeBytes": 470
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/auto-scroll.ts",
+      "sha256": "a4da9b40dce2969ef8ee95c53fb95f602c11c3c6727ef64203646dcf2fcc25b2",
+      "sizeBytes": 704
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/button-popper.ts",
+      "sha256": "6f35ee4273aea9b309ec6d87fb6d2b6ebbe8ce3b70587cd131245e364d275db5",
+      "sizeBytes": 3941
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/collapsed/index.ts",
+      "sha256": "35102968ea7f19b06ce3992ac3820ea98a0280ef25deda44b322d6b34648819f",
+      "sizeBytes": 32
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/collapsed/paragraph.ts",
+      "sha256": "b04ac3652418c67521f548cc6dac8ce064ff6bf7f2313ca362c30d2825dd396f",
+      "sizeBytes": 1530
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/computing.ts",
+      "sha256": "31f2d6a6963073ef9ee181b57d41fa88e593457c5ecd51b385a8e947c572720d",
+      "sizeBytes": 614
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/dnd/calc-drop-target.ts",
+      "sha256": "4d2f2b3209fc5e01b9c6a4bd9a4acc80a2144b9ad2d7ecc916f4a5c6f8787053",
+      "sizeBytes": 5831
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/dnd/get-drop-rect-by-point.ts",
+      "sha256": "5e536a94985b0b31b83c15bf88bc9dff7200614165c39be821930c1c3579af9e",
+      "sizeBytes": 3884
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/dnd/index.ts",
+      "sha256": "0daa9f94172f0296f7aa3d95897b124812691d378c70b9e35686a7efd259c7c2",
+      "sizeBytes": 112
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/dnd/types.ts",
+      "sha256": "5e27c4a90dacf65d379497bc1f69470e30fca889513696f65518770fdc5cc87e",
+      "sizeBytes": 581
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/dom/checker.ts",
+      "sha256": "c0aca87831253f0a7045bd2a31322cc0068398d6e67c5b56b8737ab2e5768978",
+      "sizeBytes": 510
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/dom/has-classname-in-list.ts",
+      "sha256": "b21cf7f8a1fea46b6ca45db70568045df2f9973061a1c4d478f2b83ff495def5",
+      "sizeBytes": 229
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/dom/index.ts",
+      "sha256": "1e25a3acf1707f9e42f0bc00b941b0d2c2832a83205ebb85b42de1a6e7a1e171",
+      "sizeBytes": 246
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/dom/point-to-block.ts",
+      "sha256": "fb3a8c9c1abec9feaa523e300432d624a8ac4f6369e532f51b9e5feec1e5065d",
+      "sizeBytes": 8620
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/dom/point-to-range.ts",
+      "sha256": "e7f082f31fe8ce05f19096bb913cd14f26453297658e3c37769b93243ca15a77",
+      "sizeBytes": 4378
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/dom/query.ts",
+      "sha256": "a7fb232b326704364393588f8e0c9464e5e80a4af2887b7a54771defc5f8ed63",
+      "sizeBytes": 1090
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/dom/scroll-container.ts",
+      "sha256": "086f0406ca2258dbb9816be4f445cbdd8a0165d41953e78550a215da2df16060",
+      "sizeBytes": 397
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/dom/viewport.ts",
+      "sha256": "9883c3e512285bfb5f624d3eec4d465790b169416d377ae04edb93b86d45fe1e",
+      "sizeBytes": 523
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/drag-helper/cell-select.ts",
+      "sha256": "7846966bf8f9d76a85f4c0d5a094bf7fb3f51b4b5e85f2da3288514e306dc9a0",
+      "sizeBytes": 2017
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/drag-helper/index.ts",
+      "sha256": "82ef9ec62320818658c0d9309e119ada3d904365e27b5b84e19525c4009f4a02",
+      "sizeBytes": 87
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/drag-helper/linear-move.ts",
+      "sha256": "744051f5f5184b7b8c3bafd615bc706d353be1392d1618a09ab94e6095ce2a65",
+      "sizeBytes": 1101
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/drag-helper/types.ts",
+      "sha256": "50d29df3be380d4cf9d6e2bc1d0319a3def63dbc3d18317a2b67dd668767f99c",
+      "sizeBytes": 35
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/edgeless.ts",
+      "sha256": "1b42dc9db645a01c7c61cf90bf6141f099a9c1f7c41f06eb95257e1405de43a2",
+      "sizeBytes": 2171
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/event.ts",
+      "sha256": "f91c9d38187506bc8667b3b58683947a357f34c6923f018b2d501d5a0a5e2f47",
+      "sizeBytes": 8627
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/figma-squircle/distribute.ts",
+      "sha256": "0e8dfdd7e3326a71b38f1c8d60ca04aad7624396214a74b19f4686eab8f5bdc9",
+      "sizeBytes": 3760
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/figma-squircle/draw.ts",
+      "sha256": "f3be691ba662e13445935a5a6537e01e52c0f44af8460f178c367d9c6cd12cb8",
+      "sizeBytes": 6010
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/figma-squircle/index.ts",
+      "sha256": "a18f63b41219159d6e72485b07ed84003aefbbb32ac0002e06310c63da360b3e",
+      "sizeBytes": 2974
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/file/filesys.ts",
+      "sha256": "0f7263a9cf809450ad4343210ddbe4ad2404aa045af8029f840205d97500a8b5",
+      "sizeBytes": 14287
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/file/header-value-parser.ts",
+      "sha256": "d905c9f90315462b0a0f2dc3b749a86b2f8ff2dc9b8837a4d541de2ed9554690",
+      "sizeBytes": 1109
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/file/index.ts",
+      "sha256": "8b3c387924eb5463fad0cbad08b56b267e832fde93fb01e3d26d22dcf3fef0a1",
+      "sizeBytes": 72
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/fractional-indexing.ts",
+      "sha256": "f16f05328594f0022652bda4be3fe9d50148afe42702a7dfe1cf9a2514a8620f",
+      "sizeBytes": 2335
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/image.ts",
+      "sha256": "bcf25d03ae669b3592452cd685d4e27f336aaa611f2521061f4c808cec3f95a0",
+      "sizeBytes": 1405
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/index.ts",
+      "sha256": "315148764f1e43a504cb443a4f6c13d7000b3f52efc1ca18314983483c1be024",
+      "sizeBytes": 946
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/insert.ts",
+      "sha256": "90d066b5662f3683e7c46c6cacc68dfc424490ea5d6445654629c29d781fad6e",
+      "sizeBytes": 1193
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/is-abort-error.ts",
+      "sha256": "fc1173c08fe8a8216593d204d0d18976ba4ab0098e5bae95f8caae8770757c48",
+      "sizeBytes": 113
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/math.ts",
+      "sha256": "306926305f124b47b619f84fc2ce3dbb4678d5f39a44d128198f475fafdaa4b1",
+      "sizeBytes": 266
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/model/block-props.ts",
+      "sha256": "118812d8bba940f8ee5f706651bb170c73a4cee874509ce96cef9892c8ac820b",
+      "sizeBytes": 262
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/model/checker.ts",
+      "sha256": "d0ca35e533d16c73817889a88d89644ea69365ec204fb7c797526d41aca6c578",
+      "sizeBytes": 913
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/model/doc.ts",
+      "sha256": "fd1940c6f8c78314efaa469881a1ffc22806dd3957d065c3f79f40156819dcee",
+      "sizeBytes": 984
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/model/get-content-block.ts",
+      "sha256": "644f31915d132733d533438be8b4e78b5a3e4ed57a3b2a5febfe67b84af3b36e",
+      "sizeBytes": 3445
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/model/getter.ts",
+      "sha256": "d5d6e29e56c1b2d82364532c8adf153343fe2c06467c299cb5a32d4def1c258a",
+      "sizeBytes": 1970
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/model/index.ts",
+      "sha256": "cb5dd396aa48aa7e4928ad2398ab0a8cf758c59b67571a96408311405743b92d",
+      "sizeBytes": 266
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/model/list.ts",
+      "sha256": "5afa9dfc5a2dc26de1f69d73f2eca6a9a4a79fde08baf7163a2443f8f3f7545e",
+      "sizeBytes": 2830
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/model/merge-to-code-model.ts",
+      "sha256": "89f2e8490caa7f3763588b5b269618a722fad0e517a647cd7c6712fb8a2acc00",
+      "sizeBytes": 730
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/model/transform-model.ts",
+      "sha256": "1a77fe77e628db27997b815aeb97dc747d5381ecec5300eee8f8418268f93eb5",
+      "sizeBytes": 885
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/number-prefix.ts",
+      "sha256": "9c0ec44ffdd21df7f82691cc335ccac6a704daf84c103bd7e3e73e2159119c57",
+      "sizeBytes": 1090
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/popper-position.ts",
+      "sha256": "295498e92029826f2ee25bf7ae844df844c2f44d3fd494638e52a896f9a7415b",
+      "sizeBytes": 3822
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/print-to-pdf.ts",
+      "sha256": "b41c7cdd528b53ca99fa6ca4be6ad1921d29cdde0f3bb454064df706e5fce2c8",
+      "sizeBytes": 10452
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/reference.ts",
+      "sha256": "bbb672a5f78d54ed8c2a7538fb9ebeb0b2e96538dd9b61ae4ea7ec9ecfa433a1",
+      "sizeBytes": 1187
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/reordering.ts",
+      "sha256": "5e1246679a7d6ba4281ff5558422a6222eb39f7c7e029646279e1f5f18fd54a4",
+      "sizeBytes": 155
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/safe-html.ts",
+      "sha256": "d2408e2452c02629f3612182dc8af96611887a6b3fbf4e58a6bbe9edf9dea35d",
+      "sizeBytes": 732
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/signal.ts",
+      "sha256": "96933d7b3f0122270498d67334dfb7c5455b09559c80ea9c6b364d3cb9551edd",
+      "sizeBytes": 556
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/string.ts",
+      "sha256": "20b0545acd3d1c0f18dd9e0e7bf6530837b7bc1492ad3ab22857bab4faddc257",
+      "sizeBytes": 1905
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/svg.ts",
+      "sha256": "7f26fe6cef53ba5eda3d63392b56859398ca7fb20d41338415d1277dda4a9a3d",
+      "sizeBytes": 8007
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/title.ts",
+      "sha256": "94614661072855cbf039ac54c37c6de1af24690916403a790fc8fe3672969e27",
+      "sizeBytes": 1089
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/url.ts",
+      "sha256": "868b720c32cd1d8b79e1d47016b1f98f2ed62373fc9d37fa04007806716a1ab5",
+      "sizeBytes": 5610
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/virtual-padding.ts",
+      "sha256": "78a3666ac73e0f24227045b8047b5e69ad3153807fddb9b064928854dcad55d2",
+      "sizeBytes": 974
+    },
+    {
+      "path": "Codebase/blocksuite/affine/shared/src/utils/zod-schema.ts",
+      "sha256": "c53904ff57ec874f740bcbfcb41e2f5b0c1b5630d9f126fa6c9b9715f28df5ab",
+      "sizeBytes": 5669
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/components/add-block-widget.ts",
+      "sha256": "0d859e80ad2424438ab9a1bcf057504c698c638ad9c144cf06937e153c019f03",
+      "sizeBytes": 1823
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/components/edgeless-preview/preview.ts",
+      "sha256": "1d35ecfe67c312d7670e99e8f184948199c6de5129029783981199ed54ef4b0c",
+      "sizeBytes": 2958
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/config.ts",
+      "sha256": "9ebf19868d98549d18916030dd5bcd60a11ca080dfdba63dff080659fd6a9519",
+      "sizeBytes": 838
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/consts.ts",
+      "sha256": "e71c8653b686a03e0a29b80423223e511c4971a864162ab823ec52397a71f0c5",
+      "sizeBytes": 136
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/drag-handle.ts",
+      "sha256": "58fadde738fb3f1f57cd68c53442b9a9da20d7d5063616870be67e2b44a0ac72",
+      "sizeBytes": 8880
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/effects.ts",
+      "sha256": "8e4ef7e0f01546060ebf973063f80e80e9e8b9a087e3dda6fda6510af6b582de",
+      "sizeBytes": 596
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/helpers/preview-helper.ts",
+      "sha256": "cc5d8b815d2bfde6322564b0268b86736982c963cd17237391f48c6081244cc7",
+      "sizeBytes": 5736
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/helpers/rect-helper.ts",
+      "sha256": "04cc6705f9e4263882b98ced869f22b095dbd03cc83a4f5d04bdceabd070e10f",
+      "sizeBytes": 3201
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/helpers/selection-helper.ts",
+      "sha256": "6194d7c31303515bd30289e8f677100c945fad800241204ed230ef53c5e551ac",
+      "sizeBytes": 1800
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/index.ts",
+      "sha256": "5aeea8d5eb7cc725defaf3ea7fc123a6048da87d4fbe5b7a92242c20b716994a",
+      "sizeBytes": 481
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/middleware/blocks-filter.ts",
+      "sha256": "da5a57e63cd705d542bd16d38520616793fe31684b489371142fd9364516f092",
+      "sizeBytes": 3553
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/middleware/card-style-updater.ts",
+      "sha256": "bc7114c186cc05e147633208029cfa6af4f6d6a26249f1fecd55bda1537a4932",
+      "sizeBytes": 1776
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/middleware/new-id-cross-doc.ts",
+      "sha256": "aed9089a487c2813f7a7e47ba4211cad4746a66bfb68b1d44c8a6c2804bf6d11",
+      "sizeBytes": 1641
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/middleware/reorder-list.ts",
+      "sha256": "9bbfaab034f754568a1876355ba30b36ec13ddd199dbd8032dc96061b002e85c",
+      "sizeBytes": 1045
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/styles.ts",
+      "sha256": "9a08264a244cef893fac561c3c2dda06a57235f472ddcd8df292b59ad91c1a7b",
+      "sizeBytes": 2155
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/utils.ts",
+      "sha256": "c68ee400e8a496e334d4e3d01426f886b6d9b5b898e3c3f81a161a8dfcf20205",
+      "sizeBytes": 9292
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/view.ts",
+      "sha256": "1ffbb8918e0dc481a6c555eca427f30c2149871c4c3d732f4d424055dc31df75",
+      "sizeBytes": 481
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/watchers/drag-event-watcher.ts",
+      "sha256": "50d3954af4fd98848d20fedb39b964507ee612beb5ae1d0de65b6a98d12c00b3",
+      "sizeBytes": 50733
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/watchers/edgeless-watcher.ts",
+      "sha256": "1b7df64d38f1d1953498ad83e7009ce85af4bc4f66b7a3c5a465c187a613e0f4",
+      "sizeBytes": 10422
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/watchers/handle-event-watcher.ts",
+      "sha256": "6d87b24f6b9fae11faef8e4c1974de4e7f8c604d84f77b049ca42feca2b3a1f6",
+      "sizeBytes": 2838
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/watchers/keyboard-event-watcher.ts",
+      "sha256": "b925ccf48a3c1b4c12fbd81f918d840b6c6c42576eab0ea63dd23e453f96e209",
+      "sizeBytes": 736
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/watchers/page-watcher.ts",
+      "sha256": "1c6feafbc1a0867b15813e13e527de4ccbc98a2edcacc12d202b85dce74dbaed",
+      "sizeBytes": 489
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/drag-handle/src/watchers/pointer-event-watcher.ts",
+      "sha256": "837d4f86f0a237ad1fc7bbabbcaba34f1b344fc7fe650016889d1fa43764aa91",
+      "sizeBytes": 13167
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-auto-connect/src/effects.ts",
+      "sha256": "ebedcce300bc062083263012e5c9f3a73e02d01a80fd70a33855bc6e49a696d4",
+      "sizeBytes": 221
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-auto-connect/src/index.ts",
+      "sha256": "293fc104b59858e9d6d059c0eac758c2643c664ac2dc5178686a20b407824fff",
+      "sizeBytes": 17603
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-auto-connect/src/view.ts",
+      "sha256": "bf96de7abb276ebe74f805cdf8288b23459fa08361e6f047e9c675a7cbc73cdf",
+      "sizeBytes": 552
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-dragging-area/src/edgeless-dragging-area-rect.ts",
+      "sha256": "f4407ddcab7cadf670a354cb5a6b6e16a459cee379bd697892c3a811d461c193",
+      "sizeBytes": 1963
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-dragging-area/src/effects.ts",
+      "sha256": "ce7c14585416f7843570546b639cf63184fcc1727bc7fd766c15c0551daa3cfd",
+      "sizeBytes": 247
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-dragging-area/src/index.ts",
+      "sha256": "54cc8dcc8dc8ca258eb99544f1261dbd75061ceeb92ba0d81b622f3822488390",
+      "sizeBytes": 47
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-dragging-area/src/view.ts",
+      "sha256": "4bcb99d780402571d18ac51363aa3d108a9883ff5af955399f79c99f08ac6dbc",
+      "sizeBytes": 600
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-selected-rect/src/auto-complete-panel.ts",
+      "sha256": "d8cf33a76e100e2dcb8b99d76e83560b650b8233069cf9228e468a39a4d696ca",
+      "sizeBytes": 18599
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-selected-rect/src/edgeless-auto-complete.ts",
+      "sha256": "8f56cc2576923483063f89a07ea89b3ac8b9a69a8a5ce111624ec5ffebd30737",
+      "sizeBytes": 21575
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-selected-rect/src/edgeless-selected-rect.ts",
+      "sha256": "4028ee7411e2acf9ec9e6f6803ee543124f0e031694dba93fddf080caccb8980",
+      "sizeBytes": 24606
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-selected-rect/src/effects.ts",
+      "sha256": "ad2921c5a96fb4be7a3ae88fdf2a52fd2f4c8bf1c0bbd9b547d68b978a8faa8b",
+      "sizeBytes": 535
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-selected-rect/src/index.ts",
+      "sha256": "d2647344ad91172c55d910f447330a3b35113f1f5c9d7f8dfe2e4002c03a4301",
+      "sizeBytes": 42
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-selected-rect/src/resize-handles.ts",
+      "sha256": "2fea18a16db38b53f75947e2958a1c1355898b6dd480c14aa4714538a0d0de53",
+      "sizeBytes": 2639
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-selected-rect/src/spec.ts",
+      "sha256": "96b8f62d6f1541327c5bc99d116809568a9363ff17ed2276f55ee22c240612ec",
+      "sizeBytes": 365
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-selected-rect/src/utils.ts",
+      "sha256": "0a5488902b07eb0111de2d474f9b3226f687cbbc705a651b48f17f7445cbd49a",
+      "sizeBytes": 10650
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-selected-rect/src/view.ts",
+      "sha256": "3be4d4675b07bbb0ee27b8da0b59a21864c27bf1353b360eb500a598776d1893",
+      "sizeBytes": 577
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/button/tool-icon-button.ts",
+      "sha256": "a86983b32b9af9cc2dcf224eb00fc3b27070095289ec8293dc3e240bb1b74398",
+      "sizeBytes": 4960
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/button/toolbar-button.ts",
+      "sha256": "56bb754cbf6cbb563a0aeb0dbdd5788d537f1c17212bacfced5529c448a7e4a8",
+      "sizeBytes": 891
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/config/consts.ts",
+      "sha256": "c1a409da4acca0f5e8fc00d4369f1207ef8058560a0a1de10a869a435ce76a90",
+      "sizeBytes": 351
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/config/index.ts",
+      "sha256": "0fc92ba448fda6da9b892717fcda90186112a123a8bc27987222c13f51490545",
+      "sizeBytes": 85
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/config/types.ts",
+      "sha256": "c101524f8461eb0393c0532274c5179440723341e35bd98430460a56fa0f5295",
+      "sizeBytes": 686
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/config/utils.ts",
+      "sha256": "f47ea0dfff7b70ded9833d7c29338d2691f3c7c2d95ec5e5b99c923f813b0101",
+      "sizeBytes": 1894
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/context.ts",
+      "sha256": "07ba9a45cf98b92a23b716b49624616ce52a6ad42d4c39c81d5e1ee1b88fdd95",
+      "sizeBytes": 655
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/create-popper.ts",
+      "sha256": "74bbe7fb78ff0201c53ab2b4c45427c4512a4b436ab57f29f17200d87bd1ec1d",
+      "sizeBytes": 2857
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/draggable/draggable-element.controller.ts",
+      "sha256": "a2ffd8514676775ae982c286b869871e44cf94834ab802900af953191ce68f29",
+      "sizeBytes": 14291
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/draggable/event-resolver.ts",
+      "sha256": "49fcddda67f17d9f609374e82813a828c6277670cb590adde5cf02e4f2278a31",
+      "sizeBytes": 635
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/draggable/index.ts",
+      "sha256": "ca8d05c4f9dd4a37e912b863576562a3e7ec0458eb3f5b582b0af6d83d57e148",
+      "sizeBytes": 51
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/draggable/overlay-factory.ts",
+      "sha256": "794838e75e83b2a0549436be514b387b03d549d76b413d8047e873e471b148b0",
+      "sizeBytes": 2809
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/draggable/types.ts",
+      "sha256": "70da5f81c65c1950a505d025aa2a9342d6cf44870b3cc7b201e0a8326b31abef",
+      "sizeBytes": 2779
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/edgeless-toolbar.ts",
+      "sha256": "69f04ca3cabbbb6ddb029dcaf00781876eec6ff0721efce4b21d2ecc0773000b",
+      "sizeBytes": 20757
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/effects.ts",
+      "sha256": "b39170f83de9688e2809fa77b5819c16c092db6535c5583310da8bc48a41cf85",
+      "sizeBytes": 1541
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/extension/index.ts",
+      "sha256": "25a241a2b20ff57a836ca5c0fae73a5a6fd893b9c00d0aff50a628ad88798f92",
+      "sizeBytes": 1479
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/index.ts",
+      "sha256": "577f56409dd0d9e931cd469cf1f94701ff0826b516eb0c2ca8d11549d8ab8cfc",
+      "sizeBytes": 206
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/menu/slide-menu.ts",
+      "sha256": "88357bce07a6b0155e438a3cb4b3e92aa5e0f4d68be9ecc420900431f71dabe8",
+      "sizeBytes": 5276
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/menu/toolbar-arrow-up-icon.ts",
+      "sha256": "adaa4793649ff78c079b5d1999b271913f825682002ed582bbafbf7dfa5a34bc",
+      "sizeBytes": 437
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/mixins/index.ts",
+      "sha256": "4fd212d93585af62b335a9a6d084b479264412eb408cdcf1c9deb68cb51ab906",
+      "sizeBytes": 116
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/mixins/quick-tool.mixin.ts",
+      "sha256": "00823284e5d2c01b1585ab644508de71d89ebb0d7b2d682b7cf980606b2b9b24",
+      "sizeBytes": 614
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/mixins/tool.mixin.ts",
+      "sha256": "c9b0040457c7ae035437929c197dd65260524bfc975e175c745e63a4c274e42b",
+      "sizeBytes": 4460
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/mixins/toolbar-button-with-menu.mixin.ts",
+      "sha256": "75186432319ceb236fcbb14dc86c238fee00449b01aabea62db83bd0cfcab189",
+      "sizeBytes": 633
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/panel/font-family-panel.ts",
+      "sha256": "72b32031f9c1c3376972885e82baa4cc5ebcc8b69f8ace5545772752bb81801e",
+      "sizeBytes": 1576
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/panel/font-weight-and-style-panel.ts",
+      "sha256": "4c7ed73fa523feaa369de7e64165200548657d09d0808013a77b4e0a7d3a241f",
+      "sizeBytes": 5035
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-toolbar/src/view.ts",
+      "sha256": "91e99d93c8d4b83716c61f08ff967f036b6daccdab8d0fb4ee6e1b99a7d5e90f",
+      "sizeBytes": 568
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-zoom-toolbar/src/effects.ts",
+      "sha256": "f5731f272bc97f5c88790cd10b38a1002fe49147d41c6da1242abc0f633d3dae",
+      "sizeBytes": 612
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-zoom-toolbar/src/index.ts",
+      "sha256": "50a490b3b14b6055eaebebe7ecb60aef3c0e4df01ba661d0fd604e6d8923ad18",
+      "sizeBytes": 2677
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-zoom-toolbar/src/mobile-zoom-ruler.ts",
+      "sha256": "dfbe50c7540f3436d05457c9156d34210b2a66d9ffc3fac86791a344fe2f7498",
+      "sizeBytes": 3518
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-zoom-toolbar/src/view.ts",
+      "sha256": "c013d7f4046d22b502825f32e54125acd0e95d83809e0f3f90f4f39701919ff2",
+      "sizeBytes": 574
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-zoom-toolbar/src/zoom-bar-toggle-button.ts",
+      "sha256": "3f6f12151994a17e3a347357fac1f6ea68af8c53bc8b855bc13b1d842879000a",
+      "sizeBytes": 3095
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/edgeless-zoom-toolbar/src/zoom-toolbar.ts",
+      "sha256": "fda5a46446f5585875729e90ac7797518818e89366c969f98888b0cb0a796dad",
+      "sizeBytes": 5629
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/frame-title/src/affine-frame-title-widget.ts",
+      "sha256": "4397178bc6df6060d774eb00efaa908dd1000a588b4092e3223b657598843e8c",
+      "sizeBytes": 685
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/frame-title/src/edgeless-frame-title-editor.ts",
+      "sha256": "3d1236123a4a12479a671abcb0a5cbc485eaf6b7ce9c130e099afb54070c608c",
+      "sizeBytes": 5342
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/frame-title/src/effects.ts",
+      "sha256": "e3c8203ea6bcdd7843defee8ec4e1c5343c5f29fd3e332f667e18ea6158ec2fc",
+      "sizeBytes": 519
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/frame-title/src/frame-title.ts",
+      "sha256": "3fbb47cfb861d7a7d76d449fadb5a836b751d819444c52dc25fbf1765547d79d",
+      "sizeBytes": 7989
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/frame-title/src/index.ts",
+      "sha256": "e238438375431660734525dfb984bc02b5a0bdcc87d6a44bfaabcd8a9046f5bd",
+      "sizeBytes": 174
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/frame-title/src/mount-frame-title-editor.ts",
+      "sha256": "e0946895b51de636580944b172b77d095b95dd2d848ba0edc383299076e82130",
+      "sizeBytes": 1037
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/frame-title/src/styles.ts",
+      "sha256": "c5f5523fbc10541898e8af8d73a003b8a49b1fc8c1c70d16966ee1bc88d0a7d5",
+      "sizeBytes": 868
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/frame-title/src/view.ts",
+      "sha256": "8f712d76a36c3609865886cd1bc0743761f3d1eac4809d8a8789ba80045ed52e",
+      "sizeBytes": 555
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/keyboard-toolbar/src/config.ts",
+      "sha256": "d0e2b34d1f2d4bc76cd86313319afd97349a262985c49e399046bf88cea1f55f",
+      "sizeBytes": 33744
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/keyboard-toolbar/src/effects.ts",
+      "sha256": "fc52369e38423b36c4b9a6c6b48203ed4b844b2c125a239c6880dba7fbe3775b",
+      "sizeBytes": 742
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/keyboard-toolbar/src/icons.ts",
+      "sha256": "a934247ad2a8ed8ea323003c2fd91b676f28385e8cf0950fca2efd442abc5b89",
+      "sizeBytes": 5950
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/keyboard-toolbar/src/index.ts",
+      "sha256": "cd1eb94b335225094adad8b987ee7197fc5081379325ae5880586040024ad63f",
+      "sizeBytes": 58
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/keyboard-toolbar/src/keyboard-tool-panel.ts",
+      "sha256": "13be5ebc2782d53e1a5326e434e9aea0913adcdf9f5d51d1a6abfb7e5dd8ee5b",
+      "sizeBytes": 2562
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/keyboard-toolbar/src/keyboard-toolbar.ts",
+      "sha256": "42b971ef5a5389a671b8693d4e4ae2f6bfe7ba3e850ad07309e8e59df1f042db",
+      "sizeBytes": 11466
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/keyboard-toolbar/src/styles.ts",
+      "sha256": "210b86ee0581cedf3c2b953cc64a405a995d4c46f10805a73bef09e47f959496",
+      "sizeBytes": 3232
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/keyboard-toolbar/src/utils.ts",
+      "sha256": "31a03ee8c2716fa13b6b0a975284b3a1027036c00d58b54a5bb60a490c530731",
+      "sizeBytes": 1232
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/keyboard-toolbar/src/view.ts",
+      "sha256": "e81d524ad6bbcd04adfe02e99d634840eaff5a334cf24df370b2e964e18f4395",
+      "sizeBytes": 700
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/keyboard-toolbar/src/widget.ts",
+      "sha256": "da1f29b231c61cbaec127622565e1aad40f5ce88dc8dbd92b345ec5dc024041c",
+      "sizeBytes": 3894
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/config.ts",
+      "sha256": "ece82ba98c7779746735dbb826bb5bfa072c7ae491e0ff89b09e8c17a87165f7",
+      "sizeBytes": 6125
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/effects.ts",
+      "sha256": "05243ea7370158d5fe165738945f8d99ff7870b8e22d1f3ba92a513df0c55da7",
+      "sizeBytes": 721
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/import-doc/import-doc.ts",
+      "sha256": "e8658713dc7aa6eb1bbc864cc3aaca71665721c89adc725aa5147985ccc2c2a3",
+      "sizeBytes": 6881
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/import-doc/index.ts",
+      "sha256": "4034aaa4b0566d47ec2e046e902ac60f5ed49e1a5f39388af895dc229b5fb8c4",
+      "sizeBytes": 829
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/import-doc/loader.ts",
+      "sha256": "f7adf9907614f968bdf0d06a4226bffc2c244556dd9aeb8b64a37cec69357d44",
+      "sizeBytes": 2392
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/import-doc/styles.ts",
+      "sha256": "3423821d4a38390b4b2242ffaf0f5030b1e905210b184fb65d1bb5cb8527bf4e",
+      "sizeBytes": 1768
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/index.ts",
+      "sha256": "78f8ef76f1c8c2c1ff5d90de546ac45d237ec61a7739911a8b545f7aec37bc1a",
+      "sizeBytes": 114
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/linked-doc-popover.ts",
+      "sha256": "391d082ff2a2ed41052fbd14c66053419d752fce0cd5a2bfdd2d6a4ca7935088",
+      "sizeBytes": 13627
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/mobile-linked-doc-menu.ts",
+      "sha256": "935201d4570bd4ee36b69107e694c2af1a758229a4555e95e2e1747dea3e3239",
+      "sizeBytes": 6225
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/styles.ts",
+      "sha256": "8e754f633a29b281cc42ead5ec5d35b28a760b02e898edcef3694d2647ccb472",
+      "sizeBytes": 3828
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/transformers/bear.ts",
+      "sha256": "e391c3b7d428aef0950a7f87f7658d0a3d433bb0951e73a9fc1a901757622405",
+      "sizeBytes": 17510
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/transformers/docx.ts",
+      "sha256": "e95e85f44fd052f04560a73b16ccceac9cc33cc3ff9d459683e4f2efcedac8fe",
+      "sizeBytes": 1249
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/transformers/html.ts",
+      "sha256": "75cd833d871a1e9f69a8dfbbfc5a5766c449940fc023a33e903213f28d5c4d8a",
+      "sizeBytes": 6301
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/transformers/import-batch.ts",
+      "sha256": "16fc94a156784a91eb816d0fc5e6cf61429a81c88436c816313acc0a56945cd2",
+      "sizeBytes": 3330
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/transformers/index.ts",
+      "sha256": "17f0993bfd28cca176f118a59f8ab6fdca41705d296dcf9460332a19b1abba4d",
+      "sizeBytes": 727
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/transformers/markdown.ts",
+      "sha256": "7246330a7eb3dbf6a38e5a967f8760c64a65add82abb0f620b32921e9297ee66",
+      "sizeBytes": 26875
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/transformers/notion-html.ts",
+      "sha256": "902cdefc744d75a88e714603bfc37f6975a52a07e7773340d119cbcc08007cc0",
+      "sizeBytes": 11169
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/transformers/obsidian.ts",
+      "sha256": "950b62411120151782a10f2093ecd3d008b8bd4b82fb3f407c3942a66b3497aa",
+      "sizeBytes": 26554
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/transformers/pdf.ts",
+      "sha256": "68193360fe185c6b53e488bc31767dacf1d7e205581f3ae188e20c5903612e35",
+      "sizeBytes": 802
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/transformers/type.ts",
+      "sha256": "0b6d39c9e023978c122d67adc4b60f166c70bf9f3401cb836a99e1cab402b024",
+      "sizeBytes": 973
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/transformers/utils.ts",
+      "sha256": "efa9964ac00de3e09f3691c89a406a46ba65e93d64739f0ec5bdd1e6983b30e3",
+      "sizeBytes": 6346
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/transformers/zip.ts",
+      "sha256": "cc0395c4da704d0c8e903a766d8c3949ce72e02f6dd44de09370950d78ef8127",
+      "sizeBytes": 4969
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/utils.ts",
+      "sha256": "ddee87ac6b814e1049900d570e96f1eb7500d0d95b44091a3ed26112e512d63b",
+      "sizeBytes": 162
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/view.ts",
+      "sha256": "fa6e82b390e30e6fbcab5199c7c2a781ff0dbcce6aefacae54c78efdc855c9fd",
+      "sizeBytes": 2210
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/linked-doc/src/widget.ts",
+      "sha256": "8450601c551e5e2b1e8d5cb899076c2f28350b584bf102c17441bc5caa21e481",
+      "sizeBytes": 10341
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/note-slicer/src/effects.ts",
+      "sha256": "4b082f7d0781a6227d67d0a28a02af7ab7866ffd6e39f648477e6d1adbbb3b0d",
+      "sizeBytes": 152
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/note-slicer/src/index.ts",
+      "sha256": "1a79fd2d60bb49eba235af1086230187851f9a837a4a3317dd0076d9a5a5884f",
+      "sizeBytes": 31
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/note-slicer/src/note-slicer.ts",
+      "sha256": "90acb69907d8bc65968982e60d96d7ac9b7b7a95b594a1274376faf1e0694f83",
+      "sizeBytes": 12282
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/note-slicer/src/view.ts",
+      "sha256": "98d61cf51c98b48f5d7846e40d72bbe566db043275109ad4646c7e438666a68b",
+      "sizeBytes": 543
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/page-dragging-area/src/effects.ts",
+      "sha256": "51734335717e358482071ba4757cc56e0850472fa8cbee14d2f86001540f06d4",
+      "sizeBytes": 227
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/page-dragging-area/src/index.ts",
+      "sha256": "e2499611e9270d2ea467dcf3f456cb719eac2d713415ef70ca589e93750cfd2e",
+      "sizeBytes": 8119
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/page-dragging-area/src/utils.ts",
+      "sha256": "e6c75a633d690bbc66b1951cdb137023ae32dd18116bf55bbaf723c70f7cd5a0",
+      "sizeBytes": 3872
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/page-dragging-area/src/view.ts",
+      "sha256": "64c0f8a62e92cae70adb6bdfe0b3dd9ef8f0ad926926ac0220bbce582844d08f",
+      "sizeBytes": 574
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/remote-selection/src/doc/config.ts",
+      "sha256": "f8995a6676276d420a2adfe5fa3f54bdc727248a3781ee3fb46ac50e5018bc28",
+      "sizeBytes": 169
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/remote-selection/src/doc/doc-remote-selection.ts",
+      "sha256": "ad9a3e61db1f44f2daeddaf534df35fefa7467da4ce340c3d772fd93581e816b",
+      "sizeBytes": 11125
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/remote-selection/src/doc/index.ts",
+      "sha256": "dbfb909d4a0b09e0679fa95ad583cc275887da0a99db20b3c4786b9c74e36503",
+      "sizeBytes": 43
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/remote-selection/src/doc/utils.ts",
+      "sha256": "cb98c4668ae95b76d4a392789cc80e02f8083cd444b007d35cd3bdf8dc244dfe",
+      "sizeBytes": 965
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/remote-selection/src/edgeless/index.ts",
+      "sha256": "d38f6da63f20510b8a0387c745f8896e5fe4d88b7e51ddb7eb216e477cbf6ca7",
+      "sizeBytes": 8008
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/remote-selection/src/effects.ts",
+      "sha256": "d7682cbb6373ca155cf66b027cc69c4ffa8c29256b5da8e58dc73fd126619bdc",
+      "sizeBytes": 488
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/remote-selection/src/index.ts",
+      "sha256": "07c95dde260b96ea28aa57f8b9018b15a249d863798080ef0c4f18e922f2b06f",
+      "sizeBytes": 679
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/remote-selection/src/manager/color-picker.ts",
+      "sha256": "d03a0a99528990d7d0e423d560bbb88410629bc4e5daf2cbd2aa27f936f733d8",
+      "sizeBytes": 934
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/remote-selection/src/manager/remote-color-manager.ts",
+      "sha256": "94e5ce02135239045ecb8e602e6940d70c004da8f9adda101522ee3386f178df",
+      "sizeBytes": 1404
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/remote-selection/src/view.ts",
+      "sha256": "1e87bd83b2512c16f9e2344ea847664ae12afc76273b8d2896e8f91b18bb83c2",
+      "sizeBytes": 650
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/scroll-anchoring/src/effects.ts",
+      "sha256": "012976863132396ba669a78fdb131f058d6da7d34c3a7d00c2dc6b029220883b",
+      "sizeBytes": 362
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/scroll-anchoring/src/index.ts",
+      "sha256": "48f5d7200164d0acbc24dd5dd5ec399a12cac505efaf22a8c6bcc6758b0de1e2",
+      "sizeBytes": 400
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/scroll-anchoring/src/scroll-anchoring.ts",
+      "sha256": "48ca080a31b353c0a1fbce2937fa7b53b4c550fc9ede141d467e3a44e79e29a5",
+      "sizeBytes": 7595
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/scroll-anchoring/src/view.ts",
+      "sha256": "0d9d8f4a1b8c949c0c612c378aceecd542b41b994f04edf8f687b128f6887fcc",
+      "sizeBytes": 507
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/config.ts",
+      "sha256": "0aa1dbc7195f7fb7198729a971edc9f8437643ffd76205bdb065ad7af1c0afe8",
+      "sizeBytes": 5605
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/consts.ts",
+      "sha256": "e7441ba8dc1a173f5a713cd96e0be91f925c3750689ea2f654df74542aaef073",
+      "sizeBytes": 221
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/effects.ts",
+      "sha256": "a855e74fe5b7aa67639d1687b313d88f9c1adcf69527cc94f68629e2e5f0b969",
+      "sizeBytes": 507
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/extensions.ts",
+      "sha256": "84c44038b8a82844fd6e796479f5152f1db8627488b1c3b0a437dc18ad0227ff",
+      "sizeBytes": 1383
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/index.ts",
+      "sha256": "87dd93d03b58dc63bd52410708ddb947270cf8661a9db59c4eb53573697f54c7",
+      "sizeBytes": 108
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/slash-menu-popover.ts",
+      "sha256": "a5d66d8e9390ffa5ff666057abeed46e9f7bd56b354bcad054d90df89976ea5f",
+      "sizeBytes": 19563
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/styles.ts",
+      "sha256": "6beff45d937feead5ea247ed79e4ed7ed72ef60e9a0b93a0aeac829d626d8a7a",
+      "sizeBytes": 2539
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/tooltips/copy.ts",
+      "sha256": "88dc1ba67c7fbe909d3ff202efc9563ea357f8bc807bdcd10238bb0500377960",
+      "sizeBytes": 1493
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/tooltips/delete.ts",
+      "sha256": "265dfcd5443f8a0142b3e6ca24bcebe7be16dd9f760191c797d2a0245021e319",
+      "sizeBytes": 1626
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/tooltips/empty.ts",
+      "sha256": "42266f30ce0c759a7f99bc6107e041ec31ece5c50052f37b9f1300e3c9fc68f8",
+      "sizeBytes": 453
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/tooltips/index.ts",
+      "sha256": "d700ec92632ebf2a68eeec22ae3fabcfee4b1ce0fcee04eaa4004eeaf3d51700",
+      "sizeBytes": 1029
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/tooltips/move-down.ts",
+      "sha256": "f9d1aaf37a7320660c6c7712124d2110ae8b043a6802b248cf315ef1be5ebdbf",
+      "sizeBytes": 2223
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/tooltips/move-up.ts",
+      "sha256": "1501f2669e95782b81e966b6ef9b30ae6f860ed2b2f924bef6ff1c5aa1cd93ae",
+      "sizeBytes": 2220
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/tooltips/now.ts",
+      "sha256": "b6b51998a97f748c9856ea6c23db16efc6eda68faf97740726a45289ace4d4f4",
+      "sizeBytes": 1083
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/tooltips/today.ts",
+      "sha256": "d834afc34c3325bd7c4c0ba14f2e8483c001fa96f12293130ed3edc5c9d25046",
+      "sizeBytes": 1000
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/tooltips/tomorrow.ts",
+      "sha256": "aceef233a405992ae6fa9ab2da89f5c8a947c87b6e0cd316462ad4e55a02580d",
+      "sizeBytes": 1084
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/tooltips/yesterday.ts",
+      "sha256": "e43bd86b70a34fb23402a15e0855f586bdae4342774d8a6fa61741a45ef0437e",
+      "sizeBytes": 1086
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/types.ts",
+      "sha256": "2aea22545b990d04a2eb9e2a804d362ec3c9178162693894173c0684def31efc",
+      "sizeBytes": 1644
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/utils.ts",
+      "sha256": "947b5fa28668a6bcc1ef9d655f5d03f41b05acc64921f796f8cd0d356beb46d2",
+      "sizeBytes": 2875
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/view.ts",
+      "sha256": "648584c68f1f29ae037c6fa92152c08ce4287ca93ec8d7f1d4754a818ee8ebee",
+      "sizeBytes": 540
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/slash-menu/src/widget.ts",
+      "sha256": "2937ddb2bf6360a71ccc6f9cbf5f226db544746970a1741b6a9b732c78d910e2",
+      "sizeBytes": 6006
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/toolbar/src/effects.ts",
+      "sha256": "44979d3b598ac6aed034c77658da8fb20cb8e279fa1907c3c236e0412faaaf11",
+      "sizeBytes": 282
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/toolbar/src/index.ts",
+      "sha256": "dcb6c1ff4553debab1053258f077c658135359e02894e96e7d52f751759a97ed",
+      "sizeBytes": 341
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/toolbar/src/toolbar.ts",
+      "sha256": "e9c707b0204f7f027947732b7ca038ebb2f0b854082b550322a19bb4c9165502",
+      "sizeBytes": 24053
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/toolbar/src/utils.ts",
+      "sha256": "c8f2d96a98275e7c9ec82d1d2486fe5454a1837e5692e3a63ac17d3845dc7e48",
+      "sizeBytes": 11668
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/toolbar/src/view.ts",
+      "sha256": "528027bbcd00ac70037b4efd3af349cd3d7a03677139ed21c6b210bf472543b8",
+      "sizeBytes": 514
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/viewport-overlay/src/effects.ts",
+      "sha256": "eae1af1534700fdca684451b45344b6687e61ad8273e311ce055174a033b9b4e",
+      "sizeBytes": 221
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/viewport-overlay/src/index.ts",
+      "sha256": "e6ddb4cc93fa2e90437ab2ef2aae5398d31361b093aeae0033527b5f3ff4e806",
+      "sizeBytes": 2205
+    },
+    {
+      "path": "Codebase/blocksuite/affine/widgets/viewport-overlay/src/view.ts",
+      "sha256": "9ed91d6064afd1e9d1e21f688be065ac5d6fb265311965cf837ca0d61698e6a8",
+      "sizeBytes": 507
+    },
+    {
+      "path": "Codebase/blocksuite/docs-site/.vitepress/config.ts",
+      "sha256": "ceaf2fe9321aa63ab43eb0a5cf8c3aee850dac0403e9ee798ae57da596a6432e",
+      "sizeBytes": 6520
+    },
+    {
+      "path": "Codebase/blocksuite/docs-site/.vitepress/sidebar.ts",
+      "sha256": "e91f382380550409a464cbd63059a2ccee77c60dc01df7e5965e2d717941a050",
+      "sizeBytes": 6855
+    },
+    {
+      "path": "Codebase/blocksuite/docs-site/.vitepress/theme/composables/posts.data.ts",
+      "sha256": "6ea5c372acb3804b22711d6dd4fc37a48ff93ba7536ba3892e2288d52b850a6a",
+      "sizeBytes": 1048
+    },
+    {
+      "path": "Codebase/blocksuite/docs-site/.vitepress/theme/composables/use-posts.ts",
+      "sha256": "84716c81076f064b39fed79b4c1b9c3b286bf16e695e098c17976c580899acf8",
+      "sizeBytes": 489
+    },
+    {
+      "path": "Codebase/blocksuite/docs-site/.vitepress/theme/index.ts",
+      "sha256": "c1b47e4b06e60c4d38b82f19beee74f25fc208bcbc399bf2ffaf498e00b82e68",
+      "sizeBytes": 936
+    },
+    {
+      "path": "Codebase/blocksuite/docs-site/copy-pages-worker.mjs",
+      "sha256": "26759ec3ae0d601c228fa825ee699d33fcfa381ae0e5c277e5b6d299a4824374",
+      "sizeBytes": 193
+    },
+    {
+      "path": "Codebase/blocksuite/docs-site/pages-worker.mjs",
+      "sha256": "5cf9c9409e4fb62a8b4b4a60a99a53cfcc7659e57a14008450261b9d74eb9b43",
+      "sizeBytes": 1020
+    },
+    {
+      "path": "Codebase/blocksuite/docs-site/typedoc-remove-inherited.mjs",
+      "sha256": "59dab34bac7b7f6dfcfec058734674dcb8d9bd7005b0efdfc85b5f0df79460e8",
+      "sizeBytes": 948
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/di/consts.ts",
+      "sha256": "3a5c86feffca48fff55d4f3dd4f5d21b474cede87eb4c79eb498e32478877579",
+      "sizeBytes": 147
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/di/container.ts",
+      "sha256": "217166db3be9528af58bf692dffc09356ee87a853c4a2954a7196558b5d1419d",
+      "sizeBytes": 11568
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/di/error.ts",
+      "sha256": "2640a59eb23dc14725df63d666dc4ce739d61a810727b1efea07a8bbde523df3",
+      "sizeBytes": 1713
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/di/identifier.ts",
+      "sha256": "ba4df5a4e5378d72874f6bf2bf39c75c04dc1c9761f2bfe8de48216fdd94db25",
+      "sizeBytes": 3681
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/di/index.ts",
+      "sha256": "53d515bd7e873a9f963f3951ef0a491a5a586ab018bb4d77b427bebd9a961b1e",
+      "sizeBytes": 209
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/di/provider.ts",
+      "sha256": "455bf7b3fe9d3c9b1f2e7246ea65414414d6a9d4a687a85dc0a11904239f16af",
+      "sizeBytes": 5457
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/di/scope.ts",
+      "sha256": "d678b684f145736f6cf29601774a3381114ece447730e98f3c402ea665654ae3",
+      "sizeBytes": 307
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/di/stable-hash.ts",
+      "sha256": "8376982026e3c4621d23e8aa09a53126fdfb002038ede34e354ac3eca80c330f",
+      "sizeBytes": 2051
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/di/types.ts",
+      "sha256": "99384baabaa45b7572d03e44ac7ec28ab5f52aec50baa6e937bd6037575b8d3d",
+      "sizeBytes": 894
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/disposable/index.ts",
+      "sha256": "942c21f7d30d3af6992a37fdf529ea5ae9bb68ce04bd7fb1c09f208a488133c2",
+      "sizeBytes": 2740
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/env/index.ts",
+      "sha256": "d55931c326ea08540bfc962c533ad0e21ad5639f65197c7bf0b1c6d909a11179",
+      "sizeBytes": 1042
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/exceptions/code.ts",
+      "sha256": "1367a14f4f73375d906989c925cb100952e155432a7d661e942e3f00d86cb096",
+      "sizeBytes": 636
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/exceptions/index.ts",
+      "sha256": "6ac23d310cd704797ade0b9d8c3f10738523647ad5d71f3763b4e769f05f821f",
+      "sizeBytes": 834
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/bound.ts",
+      "sha256": "ab79a72217f5870bebc1a2187c1900953ba3052336a9523acee17a574e72375a",
+      "sizeBytes": 4179
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/curve.ts",
+      "sha256": "292e0fd647450606154d6ece90055003f37e96b07fa164004aae353a329fd726",
+      "sizeBytes": 10097
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/index.ts",
+      "sha256": "a4fc7e3e4a5f0725c3774735fbe2a7cfce90dd3db0791cd8e690b95b45cd4c5a",
+      "sizeBytes": 251
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/math.ts",
+      "sha256": "3b03868675ef20277e26212844ea6b9bc56661c9cecc9fd93cc363971610bc80",
+      "sizeBytes": 14215
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/model/bound.ts",
+      "sha256": "c2e7bf831731c86b712e7c5e331c32c5a91355a84a4d3ef1f0f032786fea65dd",
+      "sizeBytes": 8090
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/model/index.ts",
+      "sha256": "50a147ce8d158bebb59d9869884248003c79a8388dc6ff0841d4cc9eccb6822b",
+      "sizeBytes": 119
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/model/point-location.ts",
+      "sha256": "8f77df8d182574f9994804d68d99aa2811a2754e09a54ad93d108073a9b8d79d",
+      "sizeBytes": 1567
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/model/point.ts",
+      "sha256": "773f0a417dd0a18cdfdaadbcf7f9e5e9e44a433bdad31c4bae1cc790d7cbdb6e",
+      "sizeBytes": 5602
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/model/vec.ts",
+      "sha256": "baaed2d900156d6ce7c92476ea692af61503238a3a3d7b0191402c92dd134d02",
+      "sizeBytes": 13926
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/perfect-freehand/get-solid-stroke-points.ts",
+      "sha256": "74c0851238c206cc4632c4b7866b9d9caafa2a0fbfe867bef1afd458c751a8db",
+      "sizeBytes": 401
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/perfect-freehand/get-stroke-outline-points.ts",
+      "sha256": "03138d29af7b16fc8d9cc45012297fdd8c87abfe796013672bc17521fff8f0a5",
+      "sizeBytes": 11946
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/perfect-freehand/get-stroke-points.ts",
+      "sha256": "b415832854637ac1d216872940d130349862a5e628c01e1b723f0cc2e8cfdcc9",
+      "sizeBytes": 5009
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/perfect-freehand/get-stroke-radius.ts",
+      "sha256": "f5b394cc35313cb0022e4fda32bf6b940a570d44347dcceddabcd706a9b9d6cc",
+      "sizeBytes": 329
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/perfect-freehand/get-stroke.ts",
+      "sha256": "2077923e1846a6915963f7099c65fff5b5783560eb32b464706d8bc6c4a9d051",
+      "sizeBytes": 1336
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/perfect-freehand/index.ts",
+      "sha256": "9c90f3752bfdd010b7d703403c7794b8e6c4a600161fb558db92f6665574c88a",
+      "sizeBytes": 207
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/perfect-freehand/types.ts",
+      "sha256": "ae78d2c49f168c4219f7b824b6e03d84909070eccd14713b5c2eb351ad366a1c",
+      "sizeBytes": 1576
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/perfect-freehand/vec.ts",
+      "sha256": "24c57cbd5f0949c5cf3e9abed1807bb93ed018f9005f899ec9d1d1921880c27c",
+      "sizeBytes": 2913
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/polyline.ts",
+      "sha256": "6e28d93702eb3f04663906cba39dea957077a39bcfbea97cb6e1b1f6f50fd456",
+      "sizeBytes": 2595
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/svg-path.ts",
+      "sha256": "89ddf9d0292a662f04d7b39650504ab28e781d6b12be39948952f2f5708d28fc",
+      "sizeBytes": 3345
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/gfx/xywh.ts",
+      "sha256": "9e413f171ca3eeb8c58f2c1515d60a4c6b39cc9e5bad5a7bad5dd1aa86aa32bb",
+      "sizeBytes": 665
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/index.ts",
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "sizeBytes": 11
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/lit/index.ts",
+      "sha256": "bb33bd5685b0b717b4e58e6344e73d536d6b94994d83cd03ca46be3c8315cb3d",
+      "sizeBytes": 103
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/lit/signal-watcher.ts",
+      "sha256": "a80bad923068b2a953378c6e8e2ec222816ee4c9fea41163b8c3d42dfd5378f8",
+      "sizeBytes": 2414
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/lit/watch.ts",
+      "sha256": "2e3ee7ab149bb968f40828c07a715802d156b50588031e2963ccc152f8a0f532",
+      "sizeBytes": 2514
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/lit/with-disposable.ts",
+      "sha256": "fe81049c9ef4491ce3954a4c5eb046546095f576d7b67f44665854d2fa177015",
+      "sizeBytes": 1483
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/types/index.ts",
+      "sha256": "b3e503f5cabc3d2f7a93168cd121893490b18e4331fc35b63eb13f3102dec50c",
+      "sizeBytes": 39
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/types/virtual-keyboard.ts",
+      "sha256": "2e50ee414f1645e9165c504b53192c6332aa94cdbd4011e57ab56398a766d3a7",
+      "sizeBytes": 1249
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/utils/crypto.ts",
+      "sha256": "9a8be0d9fed96920e14537b645be517ca4164bda033287b802548c3a38bef48c",
+      "sizeBytes": 503
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/utils/function.ts",
+      "sha256": "fdbd9167a6a1c0430068fa18a20610f30e600992a4c467d74ae7f8b78146f595",
+      "sizeBytes": 918
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/utils/index.ts",
+      "sha256": "c4f26000b4aceb6ead30e743e5cb85c541333cacaa8168100b24bce987198223",
+      "sizeBytes": 117
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/utils/logger.ts",
+      "sha256": "9ffcb710dc8650d50467e84c13d66041f6b719c1db3e414e91e6d86a1e7b773d",
+      "sizeBytes": 751
+    },
+    {
+      "path": "Codebase/blocksuite/framework/global/src/utils/types.ts",
+      "sha256": "df6fa74aec05b901c94b43e28d479406a1eb9ca9372bc44ae9b903c38d0bef61",
+      "sizeBytes": 394
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/clipboard/clipboard-adapter.ts",
+      "sha256": "525ef09cf1c9c322220f1e8f809311b86741a912911ee54bb911db20d2cc29d5",
+      "sizeBytes": 758
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/clipboard/clipboard.ts",
+      "sha256": "809aa88fcd1a1fc4ea3ad1c931821f7e0cf88801ae62658bf60896380d2cb66c",
+      "sizeBytes": 8576
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/clipboard/index.ts",
+      "sha256": "391fd286c4f74af8ecb0d680c2ff513118baeb49122393d798a0411de452b635",
+      "sizeBytes": 66
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/clipboard/utils.ts",
+      "sha256": "fbe84065357313622b17428e81f74ad41c0b3db08d20a61cec4044a496bafe9b",
+      "sizeBytes": 818
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/command/consts.ts",
+      "sha256": "595f6a29b13ef2746148e5ea2088765f7bdc717a9096de33182d9a837316df2c",
+      "sizeBytes": 41
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/command/index.ts",
+      "sha256": "f082d63b928050e06f8e1c17a5c943a2dfe8bd8c95c99f739ebf482153fd0470",
+      "sizeBytes": 87
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/command/manager.ts",
+      "sha256": "24a5a938daf2dfcb612c037160f9c75fe1c0154db7f52be2900adbe1e3298bd8",
+      "sizeBytes": 6253
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/command/types.ts",
+      "sha256": "566e400ef5ab554e3f4cd2cac72d35e239e2f46a6385673042162d96684ca958",
+      "sizeBytes": 1373
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/effects.ts",
+      "sha256": "3478cc5f90178c3ce339ad49c1ccd0bace3944904c27f88f55c320c824c0d8fc",
+      "sizeBytes": 484
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/event/base.ts",
+      "sha256": "3b245cd82afa6ba5481e61cca112328c8287150dc2808d164ca8823ce7152a1d",
+      "sizeBytes": 1520
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/event/control/clipboard.ts",
+      "sha256": "0207638aee44b339de32231b5026c75586a88aa48869c7732cb2b19a53376fc2",
+      "sizeBytes": 1622
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/event/control/keyboard.ts",
+      "sha256": "8f759a5b06c7040a18677885bbf4b0a94c9432effa29954b9230713cc8a440be",
+      "sizeBytes": 3597
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/event/control/pointer.ts",
+      "sha256": "ba15a925fe586bf326a0a65cb351f26143046258f8cc4bb1b842a9faec3a5638",
+      "sizeBytes": 16882
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/event/control/range.ts",
+      "sha256": "6c4b6ce10f38e96dacdc61010d28dc3caf0916176de37d5a6f2d01ca23b51d6f",
+      "sizeBytes": 4624
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/event/dispatcher.ts",
+      "sha256": "124612e31369d449ae98a0a380cd9b6b151a971cc4681ad4711194fad88c2db5",
+      "sizeBytes": 12455
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/event/index.ts",
+      "sha256": "dc2d06de2df06dfeb3e139f582021e10a2797b790b42d7c390baf88e3537425b",
+      "sizeBytes": 123
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/event/keymap.ts",
+      "sha256": "aacf62909fdf1ca76d993689e9fd453d52854e491cc15e988ad0548e86bca52c",
+      "sizeBytes": 4107
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/event/state/clipboard.ts",
+      "sha256": "4093349c9c066f946e9c1810647407f1b107e0803952eb983ec2dd073a824438",
+      "sizeBytes": 430
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/event/state/dnd.ts",
+      "sha256": "b8aa8443ccbed7a1f8017d8b2e28d7977b6f4b3350fc0cdf5734b1ec561f5505",
+      "sizeBytes": 384
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/event/state/index.ts",
+      "sha256": "31a4f24c67aa8b149f8f0b7c06ff079120a24a5005ad05dbaaee70c29e935c85",
+      "sizeBytes": 148
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/event/state/keyboard.ts",
+      "sha256": "dac0063c91f7be5a9c33700502ac66c735ebd84d65130e4117f1324940c80b24",
+      "sizeBytes": 510
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/event/state/pointer.ts",
+      "sha256": "fbbe8e0a9aa1cddd59ac49a6572e744dd40ba75093360f208785c6964dd8755a",
+      "sizeBytes": 1703
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/event/state/source.ts",
+      "sha256": "e5181fc627303c96add508136b574921b38019e856f0254883b37652fe2c69d7",
+      "sizeBytes": 686
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/event/utils.ts",
+      "sha256": "029ba7489548a208dbcbc904cecebb9cdfe021825869a7cc7df48f2c9268c205",
+      "sizeBytes": 428
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/extension/block-view.ts",
+      "sha256": "6959161b86297462274edfb9c9c68f39641bf488230703816b63e53a8d00cafc",
+      "sizeBytes": 821
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/extension/config.ts",
+      "sha256": "52ac0784640e76da846e99dafc3546a4f94a429cb7efb2701d228948cbcb9cd1",
+      "sizeBytes": 1398
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/extension/dnd/index.ts",
+      "sha256": "5991b13ab6e2a9715f85f1c07e4a7637312f3a0932177732ad73b3d6025a87fa",
+      "sizeBytes": 11195
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/extension/dnd/types.ts",
+      "sha256": "3796b6c83590544837cf9e06d3a6388ef9ed5bbb17e131c52ec0ad33a3ddd792",
+      "sizeBytes": 3310
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/extension/editor-life-cycle.ts",
+      "sha256": "456b2e4108a00d268dfa4a91db384e6f2d4b6aa1292f0e19fd9b04a79872cead",
+      "sizeBytes": 1155
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/extension/flavour.ts",
+      "sha256": "130830511fd794a3b0bcac77f77f8b30d241165a6d4f589e4cb2e69f2478279f",
+      "sizeBytes": 581
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/extension/index.ts",
+      "sha256": "8b90a492e09e939b273cdd46e3a14afd23796d231fa68a29cb524c8846047ef4",
+      "sizeBytes": 339
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/extension/keymap.ts",
+      "sha256": "859ed3e165ba1d5c6e8b394171828fc90296d9f4090144cdaa40d68486950a80",
+      "sizeBytes": 1139
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/extension/lifecycle-watcher.ts",
+      "sha256": "e97a4c00e40e2aa80ed2448e7533e970034a5e96ef28fffd88acdd64666e45b1",
+      "sizeBytes": 2103
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/extension/service-manager.ts",
+      "sha256": "06c3ba07c9a8a790f066b36d96a6675277161e93d722c55e9a0314b6d44e39f4",
+      "sizeBytes": 547
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/extension/service.ts",
+      "sha256": "2ec07ef16e518f680c2578c78ee3c6b5392c511d86590b77e390010722372518",
+      "sizeBytes": 2665
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/extension/widget-view-map.ts",
+      "sha256": "7acae9afe9cec71bccc53f9dd5f30a6325b72a09224bdd0a2f3e13f12f4dbdee",
+      "sizeBytes": 1183
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/controller.ts",
+      "sha256": "d12475694284a789e6e3546a60efec7bcfb00e60e9263b17739760a2cb97c65b",
+      "sizeBytes": 7499
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/cursor.ts",
+      "sha256": "144ec4483d4d2327969f8ba05cbd6490742c6ccfc525bd1fd8f8d4868069c8ab",
+      "sizeBytes": 955
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/extension.ts",
+      "sha256": "f894c2ea2073b2b2c62a29bec71c80df51e2b49927b6ccfc7f2d437a4108b3f0",
+      "sizeBytes": 1358
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/grid.ts",
+      "sha256": "5049f18fb0de8ac9347ed52c664aa2972b08db271c88bfbeeeb59f308707eea7",
+      "sizeBytes": 14475
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/identifiers.ts",
+      "sha256": "2cf9cd0ceb7cb392442f289205e895575adfc3452be81ba6a1515cde79b7cef0",
+      "sizeBytes": 358
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/index.ts",
+      "sha256": "f1a64a965998f392d0ab54f6e89051df455ce358dc481578874418b792f31bef",
+      "sizeBytes": 3338
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/interactivity/event.ts",
+      "sha256": "5aacd3c0c811379ef2fc056b9d519b139cfb461a52a06186bb7071ddeee6d727",
+      "sizeBytes": 940
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/interactivity/extension/base.ts",
+      "sha256": "a55488d4dad1bdc6d49142fd036cc0b6a7d765b4ac58a5d826f3a72ba854841a",
+      "sizeBytes": 5485
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/interactivity/extension/view.ts",
+      "sha256": "3420da700aef137e7a63adfa237e9a3c7fba71a7501aed271c20a155cb40a5db",
+      "sizeBytes": 3899
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/interactivity/gfx-view-event-handler.ts",
+      "sha256": "54615c4981363413090ad68ef830007cd1eea46c6d9fe746463b097ab4b98d87",
+      "sizeBytes": 3237
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/interactivity/index.ts",
+      "sha256": "ea9747f9455f775966fca4060c4dd931004054e53a038e2a8460e577c737c45a",
+      "sizeBytes": 976
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/interactivity/manager.ts",
+      "sha256": "18b8bb0ef3bd58c36ce5c702ebf70bfcb1dac7145f07dddebbe0674008e59c0c",
+      "sizeBytes": 31184
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/interactivity/resize/manager.ts",
+      "sha256": "2eecbb25d284a87754cf1309e6ef42dbbd39428d5f1e28826d559a6e4fb385c1",
+      "sizeBytes": 17660
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/interactivity/types/clone.ts",
+      "sha256": "e414b0aee1695f37cfd70154625a8afab9c2b22bae75dcb844e4c543d39bda19",
+      "sizeBytes": 199
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/interactivity/types/drag.ts",
+      "sha256": "d9df1b4bcbfe894edfd0fab7bd5186fa6ff1ae634822c029ca2d8bde4c9d6423",
+      "sizeBytes": 1570
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/interactivity/types/resize.ts",
+      "sha256": "923e2ef4ddfa0cca7442fae8a93047d661a4716ed052cfa9b84e848be5541d7c",
+      "sizeBytes": 906
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/interactivity/types/select.ts",
+      "sha256": "659848b04fd30505e52e8b681911e936053e19198dfdd5ad960546e5a4a12c93",
+      "sizeBytes": 693
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/interactivity/types/view.ts",
+      "sha256": "5084131a8f3b484b125582903339a11f376c0cd0f9cc8948c376b9ff921d7d45",
+      "sizeBytes": 3746
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/keyboard.ts",
+      "sha256": "c891e92c966f33e331859bee9630f82cad09fd5d89a12899d3f21bad33660a40",
+      "sizeBytes": 1237
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/layer.ts",
+      "sha256": "6035addf34024ac1a5ec06126c847e2aa5dbe3eb8b02098a091b7358feef7217",
+      "sizeBytes": 27384
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/model/base.ts",
+      "sha256": "7020305f59fd8fbd228a6551e1120f026d35ba0687149093d2b870ee4e476e7c",
+      "sizeBytes": 4976
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/model/gfx-block-model.ts",
+      "sha256": "b3ed63d54f4a2ec8920a5368562f2b91399fae6ff7abaab7598966ae8d08bee5",
+      "sizeBytes": 8212
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/model/model.ts",
+      "sha256": "76c729846a0ffa695aee0bcb63db095e9912ea8249102338398763abb67e31b2",
+      "sizeBytes": 574
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/model/surface/decorators/common.ts",
+      "sha256": "beb8040b088bffd83ad4173c3bc8738d0da7066a2adaa4e51154da18b9b9e5e3",
+      "sizeBytes": 1294
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/model/surface/decorators/convert.ts",
+      "sha256": "208b159f32ce15133a5b13ec217a435524953c2334a6b9cc68e899ee7621a5f7",
+      "sizeBytes": 1354
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/model/surface/decorators/derive.ts",
+      "sha256": "9a4315fc6246b717954de16f29e0637d7776ba6a5f695963a585855b7c81b06b",
+      "sizeBytes": 2981
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/model/surface/decorators/field.ts",
+      "sha256": "a6312c3ce40456d765eb61b6814c9d85a4848e28c3e0dcaa177f92de7151a18e",
+      "sizeBytes": 2519
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/model/surface/decorators/index.ts",
+      "sha256": "7c2a196f8f143dda1a2b8a9ce7d62bd474995bd2ef2eed04edd194e26301316d",
+      "sizeBytes": 337
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/model/surface/decorators/local.ts",
+      "sha256": "f7136f2e7322804976366ed2d2253a119ebc0e0bc4977bebc0712f676861a59c",
+      "sizeBytes": 1835
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/model/surface/decorators/observer.ts",
+      "sha256": "8e5b3b33e89dd31b7b017439d1c1b6f0056e49922f9c92a85d0ced2b1bf410ba",
+      "sizeBytes": 3232
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/model/surface/decorators/watch.ts",
+      "sha256": "912951230e29a4613232dd39f3ad4770117f74c29170af405cfd10c8478c933f",
+      "sizeBytes": 1801
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/model/surface/element-model.ts",
+      "sha256": "9c62c8a8ca04f1519df4bc080936b81438e2e7f95ecf293d984bbc45333132cd",
+      "sizeBytes": 14653
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/model/surface/local-element-model.ts",
+      "sha256": "108d26fcc3164a870e4c39cd92a5b283e0626f62e1677de77bfee74a704f47d6",
+      "sizeBytes": 5768
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/model/surface/surface-model.ts",
+      "sha256": "74fd10ba5a3adb527d0f50227ef3152d6f96790644e56d19249db2e238feeb1f",
+      "sizeBytes": 24722
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/perf.ts",
+      "sha256": "9f01a076b0b6c64394be0c4189154e46742940ae2f1cdb1c2f28481b00cfd423",
+      "sizeBytes": 843
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/raf-coalescer.ts",
+      "sha256": "487499afac4b1052bba3284299f647285b9b38188c9eed61f186df37089a5871",
+      "sizeBytes": 1792
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/selection.ts",
+      "sha256": "d13a4be6c534c74aa89851be5a45039fd4f34bea0969b097d7b4ac7498e45b32",
+      "sizeBytes": 10020
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/surface-middleware.ts",
+      "sha256": "4a2d9e8cb816c5694f4f49262dc9d10f432f2a640b3dcf7bbb47a6c082b8a243",
+      "sizeBytes": 1835
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/tool/tool-controller.ts",
+      "sha256": "0b7fcf9e7fb2e2a76bf76027c1287fd4f4cfdebbf91c7965350f12c716d37535",
+      "sizeBytes": 15754
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/tool/tool.ts",
+      "sha256": "33ad127802a67dd9de0513a0bda54dd1948c78f824f1c36363612b90e8422edf",
+      "sizeBytes": 3062
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/view/view-manager.ts",
+      "sha256": "5e6c8d6c905b5cd42cff3a746747869faf5816a1d8aaa6e60ce749df392f410f",
+      "sizeBytes": 3788
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/view/view.ts",
+      "sha256": "b0c48f80f6f4dc5c02dbf3a66cfbc8cd4a3ffcf1b542492a4bcc51155e0d12ce",
+      "sizeBytes": 5369
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/viewport-element.ts",
+      "sha256": "3357a9b1e6888114f4ea093d7d8d5a858d01ffd82b2fa2f69fc5803c192dca4e",
+      "sizeBytes": 33689
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/gfx/viewport.ts",
+      "sha256": "c12e0ab73f4a041028df8df66c711c6602882b50c8b2d6cc606da062d366ac77",
+      "sizeBytes": 27169
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/identifier.ts",
+      "sha256": "e21dcd6e4886fca03dead90373e80468da7fb7cc0819574b68960308b7a4b9db",
+      "sizeBytes": 1226
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/index.ts",
+      "sha256": "b5792d637f97339175540589428b6e29f62e6c9207b63cab688cc5f064368a80",
+      "sizeBytes": 317
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/components/embed-gap.ts",
+      "sha256": "65d787ca8962570cab8f00e78f84c91de38cc2c8b22ccfd7e02e56f2d578cd93",
+      "sizeBytes": 273
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/components/index.ts",
+      "sha256": "7d093d7805b644cb745efa60d697a4aa38906e5e9b9a7e38fc731a0d8f4cf4b5",
+      "sizeBytes": 90
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/components/v-element.ts",
+      "sha256": "04956a232b8029b993e6197a7568f76b45ba095d657abe91050fe11115d6508d",
+      "sizeBytes": 3515
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/components/v-line.ts",
+      "sha256": "882c88361323e7a6262a7132a91b4d0c7c0c590021171f4e64bcdcdea9de5469",
+      "sizeBytes": 4673
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/components/v-text.ts",
+      "sha256": "8929122316eb1c7d3bc4fa459ea5489de06a58a6337a8c69503a80017d4689a4",
+      "sizeBytes": 859
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/consts.ts",
+      "sha256": "ac745ce95e0ad880c127fa81f59f512b54c75e30a67aaf11b6bcbbefaade5289",
+      "sizeBytes": 249
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/extensions/index.ts",
+      "sha256": "2e06957804909861ee4a909163f7e4383a4b70a05cb500a15b36dbed7bf05ff1",
+      "sizeBytes": 125
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/extensions/inline-manager.ts",
+      "sha256": "36f223068d416aba92195aecd931e29926a769884df56a91d084fae365529403",
+      "sizeBytes": 3392
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/extensions/inline-spec.ts",
+      "sha256": "865c9d96dfdb2d3faa68a3e9469354029a2b14cf297000a9dbb6051bb838fb20",
+      "sizeBytes": 1542
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/extensions/markdown-matcher.ts",
+      "sha256": "f8148523b8a74e8a9b6aea971aac97300e3b49126a432eb32ea9cf7631aa491a",
+      "sizeBytes": 770
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/extensions/type.ts",
+      "sha256": "f25a43105138845fc1510b6316164025b0c563cd48e3bd7f656245575a0fe9b8",
+      "sizeBytes": 1279
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/index.ts",
+      "sha256": "fe481a4eb6f22061bbab14d095ebb5499cd57ada28ff2eac4ed033fec0691a53",
+      "sizeBytes": 222
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/inline-editor.ts",
+      "sha256": "2060a4b347cfd288b040888ddf6d7e8a11b10007e82ebdfb8ce61ffd84405874",
+      "sizeBytes": 9204
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/range/active.ts",
+      "sha256": "ba2e905bc835d7f227f4b06f55cb284a9427e08df6d34df8f135af89a4122410",
+      "sizeBytes": 1900
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/range/consts.ts",
+      "sha256": "c0b940ffc3849475e7e8c23f827592424a7948a7537bc0a3680df15141cd08a3",
+      "sizeBytes": 375
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/range/index.ts",
+      "sha256": "67fd6cfa056fe9ec9ad01653ca89e5708e53ac0715e20d65294c29840d630e34",
+      "sizeBytes": 145
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/range/inline-range-provider.ts",
+      "sha256": "17680557c117003c4cc2bcd89784e56deb2a6ea933011fe06ff4821122426f4a",
+      "sizeBytes": 3078
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/range/range-binding.ts",
+      "sha256": "b2e4fa1476dfd088ad3cf4d1e188949f6b7ba096e6cb64a514d8e4c281960784",
+      "sizeBytes": 11577
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/range/range-manager.ts",
+      "sha256": "11c4963420100f86127400321dd8f8615b97d1dd0e9e73e7649d14298743bedb",
+      "sizeBytes": 7290
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/services/attribute.ts",
+      "sha256": "9b9a445c6c23d3aa61b06b15fc288685868fa2a4e632b5bbc775d1ba6e608014",
+      "sizeBytes": 3447
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/services/delta.ts",
+      "sha256": "935e82bec028c88240910e92845bcdede3cde46022d36e7f5fd78ce59180b163",
+      "sizeBytes": 4509
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/services/event.ts",
+      "sha256": "a67c1336e60dd19210980dc2c58c0a88c882bc405830da653f39c366f922b3e9",
+      "sizeBytes": 14984
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/services/hook.ts",
+      "sha256": "4d242856c956675b5cb37854d38002510dba9c36ba8bdf6e5c8c4a5fc9496a45",
+      "sizeBytes": 1129
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/services/index.ts",
+      "sha256": "5fee930e8987fbce839ae0da7c1910e388be08f148334028ed9ea8365b112150",
+      "sizeBytes": 172
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/services/range.ts",
+      "sha256": "39fff110b1a3f59013c81098786782976c0dbc0525444e7c5bf52d3bf859dc04",
+      "sizeBytes": 12355
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/services/render.ts",
+      "sha256": "76f5b16a66244c2ccf30b566c15b8b1cec35a39a0d765389ae3303362dce7c81",
+      "sizeBytes": 6221
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/services/text.ts",
+      "sha256": "d476d150c52e4e58ab63f4cfdf33630e98fcef0c403e37dcc36fdc5f37524b12",
+      "sizeBytes": 3791
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/types.ts",
+      "sha256": "a60a5e4a24118f9c0c6b566b85b6b8354d9b39f2a1bef034eab11d7f0bb327d3",
+      "sizeBytes": 1136
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/utils/attribute-renderer.ts",
+      "sha256": "105d4b6844bfcbc11aff14799b30a3f434e453e677d39e6efac683b698671327",
+      "sizeBytes": 1399
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/utils/delta-convert.ts",
+      "sha256": "29b07a4722268627d93d164ea65004310d023537a5f64701e28ed95a439a86df",
+      "sizeBytes": 1659
+    }
+  ],
+  "inputFingerprint": "8917a54eccc18f587862d89ae22f4485d600a0e4958a87d242f5e5bf7ef69bef",
+  "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0005.json",
+  "outputSha256": "f121aefd40dd980ba0716f81cf686cf9ccb8292890fde80b17ccabbc967e623b",
+  "nodeCount": 3287,
+  "edgeCount": 10418,
+  "inputTokens": 0,
+  "outputTokens": 0,
+  "cacheDecision": "REEXTRACTED",
+  "cacheInvalidationReason": "input fingerprint changed",
+  "completedAt": "2026-07-28T10:28:03.766Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-01T16:21:39Z",
+  "sourceInventory": {
+    "distinctReferencedSourceIds": 2055,
+    "capabilitySourceReferenceCount": 2526,
+    "taskSourceReferenceCount": 2527,
+    "directCanonicalIds": 1777
+  },
+  "lineageCounts": {
+    "direct": 1777,
+    "superseded": 0,
+    "merged": 170,
+    "split": 0,
+    "reclassified": 0,
+    "prohibited": 0,
+    "excluded": 108,
+    "aliases": 0,
+    "unresolved": 0,
+    "conflictingMappings": 0,
+    "lowConfidenceMappings": 0,
+    "lowConfidenceMappingsRequiringReview": 0,
+    "legacyLineageRecords": 278
+  },
+  "authority": {
+    "lineageMap": "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl",
+    "supersessionMap": "03 Capability Map/REQUIREMENT_SUPERSESSION_MAP.jsonl",
+    "canonicalRequirementRegistry": "03 Capability Map/REQUIREMENT_REGISTRY.jsonl"
+  },
+  "result": "PASS"
+}

@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "project": "MindRoom",
+  "phase": "GRAPHIFY_MAPPING",
+  "maximumConcurrentAgentsIncludingOrchestrator": 4,
+  "agents": [
+    {
+      "agentId": "agent-orchestrator",
+      "taskName": "/root",
+      "role": "Master Graphify orchestrator and sequential fallback integrator",
+      "allowedGraphifyPaths": ["Graphify/**"],
+      "readOnlyCodebaseScope": ["Codebase/**"],
+      "forbiddenMutationPaths": ["Codebase/**"],
+      "status": "SEQUENTIAL_HANDOFF_COMPLETE_WITH_OPEN_BLOCKERS",
+      "reviewer": "UNASSIGNED_DUE_SUBAGENT_RUNTIME_LIMIT"
+    },
+    {
+      "agentId": "agent-inventory-001",
+      "taskName": "/root/inventory_wave",
+      "role": "Repository inventory agent",
+      "allowedGraphifyPaths": ["Graphify/01 Corpus Inventory/**"],
+      "readOnlyCodebaseScope": ["Codebase/**"],
+      "forbiddenMutationPaths": ["Codebase/**", "Graphify/00 Execution Control/**", "Graphify/02 Architecture Map/**", "Graphify/03 Capability Map/**"],
+      "status": "INITIAL_HANDOFF_COMPLETE; LATER_WAVE_UNAVAILABLE_EXTERNAL_LIMIT",
+      "reviewer": "UNASSIGNED_DUE_SUBAGENT_RUNTIME_LIMIT"
+    },
+    {
+      "agentId": "agent-architecture-001",
+      "taskName": "/root/architecture_wave",
+      "role": "Architecture and runtime-registration agent",
+      "allowedGraphifyPaths": ["Graphify/02 Architecture Map/**"],
+      "readOnlyCodebaseScope": ["Codebase/**"],
+      "forbiddenMutationPaths": ["Codebase/**", "Graphify/01 Corpus Inventory/**", "Graphify/03 Capability Map/**"],
+      "status": "INITIAL_HANDOFF_COMPLETE; LATER_WAVE_UNAVAILABLE_EXTERNAL_LIMIT",
+      "reviewer": "UNASSIGNED_DUE_SUBAGENT_RUNTIME_LIMIT"
+    },
+    {
+      "agentId": "agent-capability-001",
+      "taskName": "/root/capability_wave",
+      "role": "Master-plan requirement and capability extraction agent",
+      "allowedGraphifyPaths": ["Graphify/03 Capability Map/**", "Graphify/15 Processed Plan Snapshots/**"],
+      "readOnlyCodebaseScope": ["Codebase/**"],
+      "forbiddenMutationPaths": ["Codebase/**", "Graphify/01 Corpus Inventory/**", "Graphify/02 Architecture Map/**"],
+      "status": "INITIAL_HANDOFF_COMPLETE; LATER_WAVE_UNAVAILABLE_EXTERNAL_LIMIT",
+      "reviewer": "UNASSIGNED_DUE_SUBAGENT_RUNTIME_LIMIT"
+    },
+    {
+      "agentId": "agent-affine-parity-001",
+      "taskName": "/root/affine_parity_contract",
+      "role": "AFFiNE parity contract and completion-gate auditor",
+      "allowedGraphifyPaths": [],
+      "readOnlyCodebaseScope": ["Codebase/**"],
+      "forbiddenMutationPaths": ["Codebase/**", "Graphify/**"],
+      "status": "READ_ONLY_CONTRACT_AUDIT_COMPLETE",
+      "reviewer": "/root"
+    },
+    {
+      "agentId": "agent-affine-provenance-001",
+      "taskName": "/root/affine_provenance_audit",
+      "role": "Pinned archive provenance and extraction-parity auditor",
+      "allowedGraphifyPaths": [],
+      "readOnlyCodebaseScope": ["Codebase/**"],
+      "forbiddenMutationPaths": ["Codebase/**", "Graphify/**"],
+      "status": "READ_ONLY_PROVENANCE_AUDIT_COMPLETE",
+      "reviewer": "/root"
+    },
+    {
+      "agentId": "agent-affine-independent-review-001",
+      "taskName": "/root/affine_zero_path_review",
+      "role": "Special-case capability auditor and fresh hash-bound independent final reviewer",
+      "allowedGraphifyPaths": [],
+      "readOnlyCodebaseScope": ["Codebase/**"],
+      "forbiddenMutationPaths": ["Codebase/**", "Graphify/**"],
+      "status": "INDEPENDENT_FINAL_REVIEW_APPROVED",
+      "reviewer": "INDEPENDENT_REVIEW_ROLE"
+    }
+  ],
+  "independentReviewerSpawned": true,
+  "independentReviewPassed": true,
+  "limitation": "All AFFiNE agents were read-only. Mapping approval does not authorize implementation, transplantation, deletion, quarantine, or release."
+}

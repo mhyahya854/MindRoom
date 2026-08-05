@@ -1,0 +1,16 @@
+{
+  "validatorId": "VAL-GATE-012",
+  "runId": "mindroom-graphify-validator-rebuild-20260730-184338",
+  "status": "PASS",
+  "counts": {
+    "releaseGates": 6,
+    "gatesPassed": 0
+  },
+  "checks": [
+    {
+      "checkId": "CHK-GTE-01",
+      "description": "All 6 wave release gates marked PLANNED_NOT_EXECUTED",
+      "status": "PASS"
+    }
+  ]
+}

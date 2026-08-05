@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "runId",
+    "createdAt",
+    "projectRoot",
+    "codebaseTreeSha256",
+    "codebaseFileCount",
+    "codebaseDirectoryCount",
+    "masterPlanHashes",
+    "writeScope",
+    "codebaseMutationAllowed"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "integer"
+    },
+    "runId": {
+      "type": "string"
+    },
+    "repositoryRevision": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "projectRoot": {
+      "type": "string"
+    },
+    "codebaseTreeSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "codebaseFileCount": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "masterPlanHashes": {
+      "type": "object"
+    },
+    "codebaseDirectoryCount": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "writeScope": {
+      "type": "string"
+    },
+    "codebaseMutationAllowed": {
+      "const": false
+    }
+  },
+  "additionalProperties": true
+}

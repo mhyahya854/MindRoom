@@ -1,0 +1,2023 @@
+{
+  "policyVersion": "mindroom-graphify-v2-layered-directed-1",
+  "extractor": "graphify.extract.extract",
+  "extractorVersion": "unknown",
+  "runnerSha256": "2adcfbd68a8a4e2b407bba8c37b6f81fb5b31a74fa570e70359e0283bf7f33ec",
+  "classificationResolverSha256": "675743d8d1e0f47c12ac4b2678077ed0ee0f06c0ccb6755505ffdc22bbfdaf55",
+  "codebaseRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Codebase",
+  "layer": "AUTHORED_RUNTIME",
+  "batchIndex": 12,
+  "batchSizePolicy": 400,
+  "files": [
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/edgeless-block-header/common.tsx",
+      "sha256": "a2748c850b7df090d3526a82068257410063eb19c8bfe852a0a1b418ce110999",
+      "sizeBytes": 2070
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/edgeless-block-header/edgeless-block-header.css.ts",
+      "sha256": "1293dc57a833fe08e05bed43511b773e900d32b40b9761658f1fc8b55995123a",
+      "sizeBytes": 1576
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/edgeless-block-header/edgeless-embed-synced-doc-header.tsx",
+      "sha256": "b654dc23369557f2a02b99d03f6c0b0dc7e08f6a0d978cbf560be534b1e15737",
+      "sizeBytes": 6881
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/edgeless-block-header/edgeless-note-header.tsx",
+      "sha256": "7b9d6b3ca845ee8df812110c0ba9a03dc708d6407d83aa6a3b3e2a08defd0c28",
+      "sizeBytes": 5218
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/edgeless-block-header/index.tsx",
+      "sha256": "a84787daeb9e7d50f1fd50790912d3b277b23b4a5aefd265f5a19baf5f5b3d1c",
+      "sizeBytes": 1353
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/edgeless-block-header/patch.tsx",
+      "sha256": "f85d84853bc9029ac39bcc0d6406e963947dbf826eda003490de2e7bf0900ee5",
+      "sizeBytes": 3898
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/editor-config/database.ts",
+      "sha256": "1c8b81255df11518c262848b309d2a679846a6e62e7f8fe3a5904277df8e354e",
+      "sizeBytes": 2341
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/editor-config/get-config.ts",
+      "sha256": "b5e636efae59f57e17e1e95af8e7f4e37aa11373a9518a81980371acced1d1eb",
+      "sizeBytes": 1283
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/editor-config/index.ts",
+      "sha256": "3de9e0a52cf46b1a3d957c08d097829c54acf6aa41ad0ec3264e673f828ee535",
+      "sizeBytes": 1015
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/editor-config/linked.ts",
+      "sha256": "a5c4fe13523ba8959a8fb29fcc9b2101097bb47248c04c57bc4a2302b7c42a30",
+      "sizeBytes": 464
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/editor-config/toolbar/copy-as-image.ts",
+      "sha256": "e87add5e32d0d319e3166cf716186cabf7c414bfdbad8f75ea917728767ba1c0",
+      "sizeBytes": 6889
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/editor-config/toolbar/index.ts",
+      "sha256": "fe8fe0f2c2043cd57142b861f8f11f569757f04db11909eb7cd5c27f8a4b7a08",
+      "sizeBytes": 37737
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/editor-view/audio/audio-view.tsx",
+      "sha256": "1c6560ed81f31c8bd9de26579fb2fec0791dba47ad97d9672486753445b034e1",
+      "sizeBytes": 877
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/editor-view/display-meta.ts",
+      "sha256": "733cb82622741306f327e4ec4b92de4509e302422fb68f314ed8062d56ca394a",
+      "sizeBytes": 2790
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/editor-view/doc-mode-service.ts",
+      "sha256": "fbee91ea9b941670e58c342af0c2a75715bd9e8506566ddb480db21b41c0cbb6",
+      "sizeBytes": 1777
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/editor-view/doc-url.ts",
+      "sha256": "cbdf6cced4ef37cda81d648ae48147226effe93df2b9d4f2a927c5cba72aef99",
+      "sizeBytes": 1840
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/editor-view/editor-view.tsx",
+      "sha256": "23fbb643ea0dc0e8cf4ba69f9514dac6730914c9a409a9c8b8c30cf219706b06",
+      "sizeBytes": 4083
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/editor-view/file-size-limit.ts",
+      "sha256": "71ee81a66145be96586865af136c309612ac85a569185781852756d88df98899",
+      "sizeBytes": 1059
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/editor-view/notification-service.tsx",
+      "sha256": "a415f7007e69b07f4840c4494667c76c8c3de5e1c6e34a3141d8853b8e6f7a6b",
+      "sizeBytes": 4043
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/editor-view/open-doc.ts",
+      "sha256": "d13ea72542d551077ec6b7fb6abaeb6981cd252db71c50aede9ffc82aae15757",
+      "sizeBytes": 1612
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/editor-view/quick-search-service.ts",
+      "sha256": "8d75b8806a8a5e6b6edcde85818c3ce528a589d5b3e2cea3101c45d58c89278c",
+      "sizeBytes": 5723
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/editor-view/reference-renderer.ts",
+      "sha256": "8ec9855d2ae1491736791db2b5ad2be246e60a370efc45a0ded0619f19173969",
+      "sizeBytes": 752
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/editor-view/side-bar-service.ts",
+      "sha256": "ae6dcb78fe6aa2fb9178c5016cf209b649c31d11a684b5bbe43e269f0298b9e4",
+      "sizeBytes": 668
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/electron/electron-clipboard.ts",
+      "sha256": "5a61f32d27f3952ffa6ba8b8170e0542b0878356ad1220e52bcd85eace5c17d1",
+      "sizeBytes": 442
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/electron/index.ts",
+      "sha256": "63e6819584c28af03350e06c428353aa04db95978bd98dcca197947ffb2bba06",
+      "sizeBytes": 917
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/icon-picker/icon-picker-service.ts",
+      "sha256": "18a927163c499c00ecf442b184fc2a91b0c4cbe3ec61c12be37a6a745bcc95d2",
+      "sizeBytes": 721
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/icon-picker/index.ts",
+      "sha256": "41cc4b6a0afcf3f10436e504eceee28f702c4a8bcfa59a59426700736bb1258d",
+      "sizeBytes": 885
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/link-preview-service/index.ts",
+      "sha256": "c8dc71bd0e4d558b35bf4d62313a3bb3f3ef23ad4d766c239bacd26523fe9ec4",
+      "sizeBytes": 893
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/link-preview-service/link-preview-service.ts",
+      "sha256": "5294f30d1e67dd111281888ab1a48f37d2eb5b8e72c780533bea9d32a85c5245",
+      "sizeBytes": 1601
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/mobile/index.ts",
+      "sha256": "5e1722af2af5874765219d12200882588b08785c98cdef87837de9c1034768be",
+      "sizeBytes": 1117
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/mobile/keyboard-toolbar-extension.ts",
+      "sha256": "310012391846498b3f9d237cb36a135d158a2e431ec5ff52db0718c4b18843ab",
+      "sizeBytes": 2600
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/mobile/mobile-feature-flag-control.ts",
+      "sha256": "8ebcb983e0231f2bdfd68723063e1ae85c55cbd4621f081ac14539d6f091a1d5",
+      "sizeBytes": 523
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/pdf/index.ts",
+      "sha256": "870f395b8204bac3d46a66572ceac3001359e072835fee3f620b55d8782eb1c8",
+      "sizeBytes": 1093
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/pdf/pdf-view.tsx",
+      "sha256": "51ac98f24688af1645930089d40fd2d3ca217eb73e6a7f9c61ba2ebc84a949ad",
+      "sizeBytes": 1278
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/theme/index.ts",
+      "sha256": "9d5ec520b62f204d4c2e370ef743e2e65749ac2e23838cca64e08bcccdf5edfb",
+      "sizeBytes": 1103
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/theme/preview-theme.ts",
+      "sha256": "7e70c902845b692459034b015d9482a6feb753d977a346a2e119fdf91b7b40b9",
+      "sizeBytes": 1885
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/theme/theme.ts",
+      "sha256": "b2ed513715702e6cb1f6336c72c30e5d0fd9364161f16d327d88ccbd0b0cc921",
+      "sizeBytes": 3026
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/turbo-renderer/index.ts",
+      "sha256": "c83e5a61bb6040c121ad022e09bd486ff28657e8173ee0048604b36d9670e0e5",
+      "sizeBytes": 892
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/turbo-renderer/turbo-painter.worker.ts",
+      "sha256": "2ef255d7b7ff19c2893c821fdb249bb636984036b9629fb2f9633277704869f4",
+      "sizeBytes": 665
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/blocksuite/view-extensions/turbo-renderer/turbo-renderer.ts",
+      "sha256": "cc6d71f7409f40ab61e1f5d3381752ddf443178f52103445f61e43b19c1640a8",
+      "sizeBytes": 1070
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/bootstrap/browser.ts",
+      "sha256": "1402ab2397beb6ca8590b90493779c45f3d186edca0af853db788e6da618d799",
+      "sizeBytes": 108
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts",
+      "sha256": "72274d71fd1e43638b4368c2417214692e851d65b5d673e7f629af1494aac6d8",
+      "sizeBytes": 912
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/bootstrap/electron.ts",
+      "sha256": "294f0eb7ca5ae774eb1daa2ca2d4a8eb2aa8502df07d5cf5410ddaee4fad34ef",
+      "sizeBytes": 109
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/bootstrap/env.ts",
+      "sha256": "e585249998feabb0606d9aec6d2865cc7d0f2648fff271ce16ace885e65b74ff",
+      "sizeBytes": 128
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/bootstrap/polyfill/array.ts",
+      "sha256": "65b89cefc6392bf23b9dcadb9cd647bb999879fc0e3583102a78307a9e9548b9",
+      "sizeBytes": 114
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/bootstrap/polyfill/browser.ts",
+      "sha256": "f89dbb864c29e9f5b7b853962ee2277b83c4623fbfd64812cc3f0260407ea739",
+      "sizeBytes": 180
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/bootstrap/polyfill/dispose.ts",
+      "sha256": "69407447f93a18dcf73a0afcdd94907e73a21679d4a4657291dc02f72a79b783",
+      "sizeBytes": 102
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/bootstrap/polyfill/electron.ts",
+      "sha256": "18874d19e9d92da5fc7ff1954bed5946a2491ea003553a8f30c1e10ae1a80804",
+      "sizeBytes": 28
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/bootstrap/polyfill/iterator-helpers.ts",
+      "sha256": "61d913dab84e7220864718834f1b40dae4c1c23c27a50596e06317de2e418a08",
+      "sizeBytes": 53
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/bootstrap/polyfill/promise-with-resolvers.ts",
+      "sha256": "08646c62f56edba529d81c77654c6ec8fc0cc6b2a9866cef96b4ae4b773abdce",
+      "sizeBytes": 50
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/bootstrap/polyfill/request-idle-callback.ts",
+      "sha256": "30f0b1734739329bf3b12c14f8ab23d0adfc4affa3eb13a585dbe032fdea08f6",
+      "sizeBytes": 509
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/bootstrap/polyfill/resize-observer.ts",
+      "sha256": "f93e0023af80d256494d4a1fc8c74ac88ec7266e4b53cb8f7fcdf9fb28110c51",
+      "sizeBytes": 189
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/bootstrap/polyfill/set.ts",
+      "sha256": "d0ac694c3939f90533ce89134da49c84294e1aeb041968c0fe68d072687adff5",
+      "sizeBytes": 155
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/bootstrap/public-path.ts",
+      "sha256": "5ec270c6dafb4747baf7dcc5ab8cf305547a9bab8d0015b5657f5b404e3a5e59",
+      "sizeBytes": 50
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/bootstrap/telemetry.ts",
+      "sha256": "87f2728c825af16ffe95bf7d4e8ea041a1cf489dd0e89d482a581411a8da8351",
+      "sizeBytes": 540
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/commands/affine-creation.tsx",
+      "sha256": "482d43158b3c664c2a81b90c53c03006579c6214aeaeab731fa17fd14bf9e135",
+      "sizeBytes": 2457
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/commands/affine-help.tsx",
+      "sha256": "6eba28c0289dc2817b56c39ae7dbca52b9823bcca62bf3cfea4a5f9528057156",
+      "sizeBytes": 1327
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/commands/affine-i18n.tsx",
+      "sha256": "df7b75114ed97aacbd7f24b72c30b5ab6915e7718365eeefa1ddd20ad03cef7c",
+      "sizeBytes": 1084
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/commands/affine-layout.tsx",
+      "sha256": "ae571bb48a799e2e90bd3ab01a0590d53c5166756d58195b831671994334988b",
+      "sizeBytes": 1128
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/commands/affine-navigation.tsx",
+      "sha256": "263c8753936cc1ba1cbb19b424c69ad73c11f8335f0ab9876e638ed452eb70a6",
+      "sizeBytes": 3687
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/commands/affine-settings.tsx",
+      "sha256": "d720845c3d2d5bff18283fde21cae10b7be528b137f73580da24108f0480297a",
+      "sizeBytes": 7458
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/commands/affine-updates.tsx",
+      "sha256": "8dddedf64b1e25ff00af00795dc839943e71900b2b52f9292fab12983afee46a",
+      "sizeBytes": 1255
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/commands/index.ts",
+      "sha256": "95a499decd9d8dd898bdc58f3804473f8685922a04c71235d29132d8cd826bcf",
+      "sizeBytes": 264
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/commands/registry/command.ts",
+      "sha256": "4fa3f80ea7b1551f7ebebf10382cc1d8c634693ab5ec8062fc4a030a4cfbb2e2",
+      "sizeBytes": 2884
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/commands/registry/index.ts",
+      "sha256": "dd4d6fc75e829aee2978f7e6d4670e9d0610c46fee6947b2420088b139dfb524",
+      "sizeBytes": 55
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/commands/registry/registry.ts",
+      "sha256": "a8f879c3231c950de87159c70c7e9f29cd1e3f29ea1e780d12cbc781a411892b",
+      "sizeBytes": 3463
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/affine-error-boundary/affine-error-fallback.css.ts",
+      "sha256": "7952327bbfc848e7a6e4e62ae1a8fecac9386ed9da94508e11124da11b2fb3d5",
+      "sizeBytes": 312
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/affine-error-boundary/affine-error-fallback.tsx",
+      "sha256": "8ec2f471c3ade25ed6c807fa7fc0fd477d8b18fcae4c681027743270213f41ab",
+      "sizeBytes": 2438
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/affine-error-boundary/error-basic/error-detail.css.ts",
+      "sha256": "9489872ecfd0dfb170005f1838c66a7dd82ae27cf8ab8d2f3377edef09a9a9eb",
+      "sizeBytes": 1945
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/affine-error-boundary/error-basic/error-detail.tsx",
+      "sha256": "ee09515b6917d90dc95c43a3bd021e8695aa92322ca23af8d26436315b83eeac",
+      "sizeBytes": 4401
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/affine-error-boundary/error-basic/fallback-creator.tsx",
+      "sha256": "355db21647a5d01791fcec6aec523614170486965b3e3b5fe18f2ad3f33cd802",
+      "sizeBytes": 440
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/affine-error-boundary/error-basic/info-logger.tsx",
+      "sha256": "d303ef685d48385a9aa5a0961219b7d4bcf769852218476ca2533e5beab9acf4",
+      "sizeBytes": 798
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/affine-error-boundary/error-fallbacks/any-error-fallback.tsx",
+      "sha256": "a603323b9f37b51634a63b9dc77fb00d0dbc2cea5211d48c8ac0eb8db06e377d",
+      "sizeBytes": 854
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/affine-error-boundary/error-fallbacks/no-page-root-fallback.tsx",
+      "sha256": "e307aaab1261c4b4acc31942c5d2b30b1fd119d20b92382ca81bde6bbd006e1d",
+      "sizeBytes": 604
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/affine-error-boundary/error-fallbacks/page-not-found-fallback.tsx",
+      "sha256": "d114b0d8e564c7bdabde1f242bd4834e1003814d12ad5480c196780aa103452b",
+      "sizeBytes": 1125
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/affine-error-boundary/index.tsx",
+      "sha256": "7e1f55e2196acbb835cf627c0a3d18f5b579e0c8b7a22948f55591b3925eec2d",
+      "sizeBytes": 1108
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/ai-onboarding/apis.ts",
+      "sha256": "a727441c6d08ea99f325426eefb413b0decc366e7b95ccf311c9b197587beb2e",
+      "sizeBytes": 998
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/ai-onboarding/base-style.css.ts",
+      "sha256": "2506e1c722f52905c9da52d5f34c8bc19fb4665b46ec9b018cea8a5062525102",
+      "sizeBytes": 741
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/ai-onboarding/edgeless.dialog.css.ts",
+      "sha256": "67eec7052d319eca23b0f94dbae53584ee131ffff9bb05aebe8cc9d7900de409",
+      "sizeBytes": 688
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/ai-onboarding/edgeless.dialog.tsx",
+      "sha256": "23aa380b4b7a5a79596f64b83121506bb490c198b5628e808a6771ae187f287a",
+      "sizeBytes": 4016
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/ai-onboarding/general.dialog.css.ts",
+      "sha256": "61ff0a539d2aa597f66576b571302b8a772231f469789618f1f0fc635d8bde0b",
+      "sizeBytes": 2431
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/ai-onboarding/general.dialog.tsx",
+      "sha256": "7fd4210b0b204591a081da9d83c8012195c6b219dc2bc8939d1d3ef3e41caabe",
+      "sizeBytes": 9231
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/ai-onboarding/index.tsx",
+      "sha256": "6d248b041f11eb335cc352b7b38f7e9471c7b31cce2f5e9ebad0295be639ae72",
+      "sizeBytes": 1382
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/ai-onboarding/local.dialog.css.ts",
+      "sha256": "a1f7a867b81f9785c4f6cc325d0c6f8d17f16cee1e677c378f998333e45cfa7b",
+      "sizeBytes": 1053
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/ai-onboarding/local.dialog.tsx",
+      "sha256": "f2ad94d8d022115e8170e0cf68ad177eab8b4ab6d26976ff48c135aa35565f5f",
+      "sizeBytes": 2959
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/ai-onboarding/slider.css.ts",
+      "sha256": "9531762d3ec43386fea7874fe9754b16a63ca1c734bbb44a2e30a963c24676b2",
+      "sizeBytes": 268
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/ai-onboarding/slider.tsx",
+      "sha256": "663433cbef3d264e28d9a2e97cfe4fb831fa8faa3dc698da8eac7660ff34dc59",
+      "sizeBytes": 1519
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/ai-onboarding/state.ts",
+      "sha256": "c6f63d7cbd6c25f7f960d831855be45af59b01f6c19e98a4c56a529374ad43f0",
+      "sizeBytes": 460
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/ai-onboarding/type.ts",
+      "sha256": "18e90e1207b2aa12eedb744b0a2fdcb12d87896f6adef4a98c98926662c4894d",
+      "sizeBytes": 150
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/auth/ai-login-required.tsx",
+      "sha256": "fe79cd6a541bab05a7b045e97e8536ec8840efd182d43aa6fd202a9af3aafa3a",
+      "sizeBytes": 1413
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/auth/oauth.tsx",
+      "sha256": "eb29c411176d277d66ef3bb81cef9dc9ad87ff5b436ca4cd0a2de853d0dafc92",
+      "sizeBytes": 3566
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/auth/style.css.ts",
+      "sha256": "a78a8ca1f8651ee3c74f2dd9a282a4664cb97699f35bdafd16911cf560fe74fe",
+      "sizeBytes": 609
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/auth/user-plan-button.tsx",
+      "sha256": "e36fe62b8d687dca2b6a6a0e8e599403d2e2a90df0f230fda5d1f397580148cb",
+      "sizeBytes": 1798
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/empty/action-button.tsx",
+      "sha256": "cb0a24d4feefa161ed4a33ceb1ed8fc5dada4189bcbebe2cc6cd4cde5a96b796",
+      "sizeBytes": 632
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/empty/collection-detail.tsx",
+      "sha256": "ea60efa121b287a5feb668b763adcceddda32b8ccd8c923b50b5c74e84b83be9",
+      "sizeBytes": 2256
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/empty/collections.tsx",
+      "sha256": "bb9e7b1768943c1a0e54a0975c888551eba53caac101f79940c6c4c048285737",
+      "sizeBytes": 2470
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/empty/docs.tsx",
+      "sha256": "6d2e94c3527cdab93769bba59799fae78000fdf803b115f10630389131f8a560",
+      "sizeBytes": 2239
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/empty/index.ts",
+      "sha256": "a1d0e9520a54221b46a64b18742890523ddc4201899e3abc3a55d87da0bcee31",
+      "sizeBytes": 116
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/empty/layout.tsx",
+      "sha256": "f702dc1a54c2dd596308fa70092686ddadca97dd36378cf34ee521a7f14b95ac",
+      "sizeBytes": 991
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/empty/style.css.ts",
+      "sha256": "fcf538f64116d35c728ab85367ad4390c6a47e9111ee6bfe68fd087a70175ff0",
+      "sizeBytes": 1275
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/empty/tags.tsx",
+      "sha256": "9062683b6b4b4133ae7487dacd15d088b88e9d9f8c46ec0624f8dcfdfe55c1c6",
+      "sizeBytes": 561
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/empty/types.ts",
+      "sha256": "92fc62d533ea15853332bb3e400b886a7e36a19ce69160f770eadd54042484cc",
+      "sizeBytes": 514
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/language-menu/index.tsx",
+      "sha256": "4192230f99e4a57e39335a42aa93fcae5481547e4c33a2f0d0acb5b1f869b130",
+      "sizeBytes": 1977
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/language-menu/style.css.ts",
+      "sha256": "afd7e559fef502e9e82a3ff5065b7e7cd0e80af30cad0d45a752f5007908ee25",
+      "sizeBytes": 533
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/animate-in-tooltip.css.tsx",
+      "sha256": "25315f568d64bd9000b24e4c6d8322f79057404a8c50ad5faad722896eab337d",
+      "sizeBytes": 888
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/animate-in-tooltip.tsx",
+      "sha256": "08558b617a6bfe6faba7623be3fc45b30fd6f656e6d8ab971f3c46d1151f54f9",
+      "sizeBytes": 643
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/articles/article-0.tsx",
+      "sha256": "7de005ccad2644ae446a601f77882f5e14853ff643e727109904f7e4119d274d",
+      "sizeBytes": 10069
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/articles/article-1.tsx",
+      "sha256": "31e4a9c0303028ad03a6d762e538848c22e6c2366afdc1597eaaa909fd1ca099",
+      "sizeBytes": 9891
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/articles/article-2.tsx",
+      "sha256": "895fe66a1a1d06c09d2ad7c6e3f3b099339ff661f55192d3f3d794b8b1ac5320",
+      "sizeBytes": 6173
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/articles/article-3.tsx",
+      "sha256": "ff932758f48f4ab06dfe0383632f8ab84d61e79589d43ecbd4e7d56ed79d3133",
+      "sizeBytes": 6112
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/articles/article-4.tsx",
+      "sha256": "d8778cd033521dfb883b71a8863597b90ecd1a70124da494367f24f5ae239ba8",
+      "sizeBytes": 8609
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/articles/assets/article-1-illustration-2.tsx",
+      "sha256": "3f3a74592bfe3de0ed173776972906a496a4b810ef6c3e1f114e4157910ea77b",
+      "sizeBytes": 157119
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/articles/blocks.css.ts",
+      "sha256": "b4834927ad499bfd37f4072e9c13a45b7934ed9a8cc9116472a0ae1606260e54",
+      "sizeBytes": 2882
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/articles/blog-link.tsx",
+      "sha256": "7f6fda1688109766bf565ea44a379f3abc19a16c7bce01185c49563078629be0",
+      "sizeBytes": 181
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/articles/index.tsx",
+      "sha256": "558d0da63331066688d0b81ace68fb900f603ea50dfd34dde214532302db4049",
+      "sizeBytes": 5960
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/assets/logo.tsx",
+      "sha256": "f0161c0371a28fd84d93a7cd46b45e6e3f6894d275c6ddea13d97f0fed90e185",
+      "sizeBytes": 11521
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/curve-paper/paper.css.ts",
+      "sha256": "a41eb380f2194e964085770a4e0153368cc7461d98d2317bfc1dd3f3f7397ff8",
+      "sizeBytes": 2537
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/curve-paper/paper.tsx",
+      "sha256": "a2594666fc9596ec4287e187fbfa0e8943265cc05d1eadda41ac0051a2be94d5",
+      "sizeBytes": 455
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/curve-paper/segment.tsx",
+      "sha256": "e0452e84884821108c785f64a14cb4e21d53146ccdde2512fb3ba34611c00861",
+      "sizeBytes": 934
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/curve-paper/segments.tsx",
+      "sha256": "2619679c73fb5f67315b501d4f5c7f3d86417839352feac4028e57f375994a50",
+      "sizeBytes": 1405
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/onboarding.tsx",
+      "sha256": "c1684edfd5863f9084ca06b9e86ef52277ca8ebc818aee2df0119f536fa03e2c",
+      "sizeBytes": 3039
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/paper-steps.tsx",
+      "sha256": "65134b076f895c816bc85badec2eb0d595c34b04e62de21d4a1293a56df9c432",
+      "sizeBytes": 1962
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/steps/animate-in.css.ts",
+      "sha256": "8595a6d64384a9efe14fc1a29b61599779576064d8da77974e3d007639980fc0",
+      "sizeBytes": 681
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/steps/animate-in.tsx",
+      "sha256": "6ae731d2871876f50db1ae1db3c25ec3f4cdc00ca465ae1cd6abf4bb5856f57b",
+      "sizeBytes": 1705
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/steps/edgeless-switch.css.ts",
+      "sha256": "150a067a5ddff463c9c018ddded908088d4b207129bb773b3be6edaf84f90c71",
+      "sizeBytes": 4842
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/steps/edgeless-switch.tsx",
+      "sha256": "ed8b62dcb518980b7a590d8788e9810e64b546507cae6310c5cdf95606afe0f5",
+      "sizeBytes": 8266
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/steps/unfolding.css.ts",
+      "sha256": "5f0d6c6cab64029ce47c06afb0567829a6e839218d4933d40248511e58c996e5",
+      "sizeBytes": 2453
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/steps/unfolding.tsx",
+      "sha256": "c603f195a6160b9210e888f4ef08fe7778e68224cc4b8ccc25baf58740f24e69",
+      "sizeBytes": 1255
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/style.css.ts",
+      "sha256": "80a711eac345965ed7446307afbd4ab3980fe7640309206b626473e4fe91f4cb",
+      "sizeBytes": 3545
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/switch-widgets/block.tsx",
+      "sha256": "0191dabd250fbadccc67c9b9a767511605da3a565e548981dac6c137ad83a424",
+      "sizeBytes": 1642
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/switch-widgets/counter-note.css.tsx",
+      "sha256": "c27ddaaf9d59a8e4ba9c5834bad41bf449093f2db505e15b0eb6a83d4cb6b252",
+      "sizeBytes": 993
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/switch-widgets/counter-note.tsx",
+      "sha256": "b3fe5ba79fa508dee2b462e4dc0798bef4ffd0f030480403961a5844bb2bf300",
+      "sizeBytes": 7806
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/switch-widgets/page-link.tsx",
+      "sha256": "fcd6a3d092d7df6b508edb358a86d5f3dbb251da6fe9ab340e5bdee813bf77f9",
+      "sizeBytes": 461
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/switch-widgets/shadow-sticker.tsx",
+      "sha256": "fa98010b6bb74bc189a6b8db00a4f95d2d341e8160af546f27662ed72726a377",
+      "sizeBytes": 526
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/switch-widgets/style.css.tsx",
+      "sha256": "f86c9f7faa8c486e26df085328807e7fdd25e66bca241d41501c9d09fdf4a6f8",
+      "sizeBytes": 3778
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/switch-widgets/switch.tsx",
+      "sha256": "5159847d265b700012d3fbbe3629917b70dad9399248eb3f1e461be0242d7dc2",
+      "sizeBytes": 1038
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/switch-widgets/toolbar.tsx",
+      "sha256": "1c8a041b2f7c0b1e88e891aa5e36a5a8d18c48b11cbc043c652c8dd3f414977b",
+      "sizeBytes": 167656
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/onboarding/types.ts",
+      "sha256": "2954ba365a104e9dd5e321ba74e2960889fa4eeac1dab3df2a4a53e848048f1a",
+      "sizeBytes": 2214
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/page-history-modal/data.ts",
+      "sha256": "c543f5b255f5025e4078d40917b63a61a496bbb6069e8d3298b6fc0bd5c68d63",
+      "sizeBytes": 9664
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/page-history-modal/empty-history-shape.tsx",
+      "sha256": "de980112a0965825363661521ca6300907570c256f70ce52f7e065e143358270",
+      "sizeBytes": 3235
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/page-history-modal/history-modal.tsx",
+      "sha256": "b01880d9f0b16291d7d54ef0812cc098429956547a513146381bcc99ad770b41",
+      "sizeBytes": 18138
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/page-history-modal/index.tsx",
+      "sha256": "3d44059ae3a357971f1161fe3105073f08e8bafb12b14bb80fef4294acf14c2e",
+      "sizeBytes": 33
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/page-history-modal/styles.css.ts",
+      "sha256": "49a959317af0c1d801d29d0f823621ec2eca2a6ef146bda393a44316958dbc34",
+      "sizeBytes": 8167
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/reference-link/index.tsx",
+      "sha256": "2eaa9a3f7905db8c8a2e011aee7e270515ab3e54b828c1096132ae07b94c1a76",
+      "sizeBytes": 5517
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/reference-link/styles.css.ts",
+      "sha256": "287cd7fb23560644154b82b2038097ce17f2cfd75898bf84b7ee319b22b83d86",
+      "sizeBytes": 650
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/sign-out-modal/index.tsx",
+      "sha256": "15495749d89a2e0f3c093ed12402cbd8d684ba380896c824253b42a847b9a789",
+      "sizeBytes": 1385
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/subscription-landing/notify.css.ts",
+      "sha256": "d2e51af78fcdadc648571a169276a639c6b5f3a9be280631d4c4d8772502b0fb",
+      "sizeBytes": 526
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/subscription-landing/notify.tsx",
+      "sha256": "22100bfa2088ebe4d26fd3e235b8ad1c367aea4131877db0f999c4530fda1e25",
+      "sizeBytes": 1691
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/affine/subscription-landing/styles.css.ts",
+      "sha256": "7c1d06c4b37947bb6c1560fa10332f2058aefaf297ee063b74a1319eb6b6a741",
+      "sizeBytes": 369
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/atoms/index.ts",
+      "sha256": "1338d0b3626bcf28e95a36754a6aa6e856c1e4d6a6d266606ca09dbbea5e277c",
+      "sizeBytes": 274
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/atoms/page-history.ts",
+      "sha256": "36f6f3e8d38268171bccd1625723f330e053fc7caef07713d6ac317ede0b2a60",
+      "sizeBytes": 182
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/atoms/trash-modal.ts",
+      "sha256": "f6506fdd3e5fe43d750c4a8ca3ab23f1fb64ed230360a9ff737e311ed56ed7d9",
+      "sizeBytes": 225
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/cloud/share-header-right-item/import-template.tsx",
+      "sha256": "81c32f99903314f036860112685eae8bfd83da0453288eaafc54238efbdb5724",
+      "sizeBytes": 562
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/cloud/share-header-right-item/index.tsx",
+      "sha256": "c05bce20ff7d672540fac4f1a33a2e8c7a3a49f85b19b7e5dad50356b79157bc",
+      "sizeBytes": 1537
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/cloud/share-header-right-item/present.tsx",
+      "sha256": "f256cc80819ac1ab38be55ec459b13744d148f342f892e0a066aabb1d78cac90",
+      "sizeBytes": 767
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/cloud/share-header-right-item/sign-in.tsx",
+      "sha256": "0c1ed5130225f7b6d9f6c44a67cb49e65f5c07b21440da78a6dab4e7c55945ca",
+      "sizeBytes": 741
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/cloud/share-header-right-item/styles.css.ts",
+      "sha256": "6f1813eb29b7e05265e7091cf05794d856be149a94cad39e6e5d7a2a00aa65d6",
+      "sizeBytes": 2700
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/cloud/share-header-right-item/user-avatar.tsx",
+      "sha256": "38425ac84a91a67aeb38beb678ceac28ce878b6b335ab206993492281973e2e6",
+      "sizeBytes": 2665
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/comment/comment-editor/index.tsx",
+      "sha256": "fac8df456485733ca96d890ea6ac6fcb10833d55849f50b0eae465c4ac9eb276",
+      "sizeBytes": 18559
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/comment/comment-editor/linked-widget-config.ts",
+      "sha256": "38795c859e8bb1e7c98ae9e602b896b1141267356e565854e33cc1b44efef2a6",
+      "sizeBytes": 5040
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/comment/comment-editor/specs.ts",
+      "sha256": "e733563b5198d304d665369524be5a337b8389cac749106490b3befb6240bfe8",
+      "sizeBytes": 6032
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/comment/comment-editor/style.css.ts",
+      "sha256": "c4ea5aa64b8fba0b3dac280867046ee9bcda2b0648be9def60b14a4ecf2df387",
+      "sizeBytes": 4099
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/comment/sidebar/index.tsx",
+      "sha256": "19e720f1c01423e5c7744675efca9f7593da969905aea69347202800c3c77cde",
+      "sizeBytes": 31649
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/comment/sidebar/style.css.ts",
+      "sha256": "604812f730ac977c78014049c1deb2d48a5d22e8df2d19569d7028f9e14f1189",
+      "sizeBytes": 5269
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/context/index.tsx",
+      "sha256": "f23e012f7c0eb56d7987028bb827bd5c13a081202994e3f8bd1bc6d5a48aa575",
+      "sizeBytes": 1088
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/context.ts",
+      "sha256": "2935f767cfc94d861d7a79367184af3b076ee3dd870755a40955137f60e5acdd",
+      "sizeBytes": 3410
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/display-menu/group.tsx",
+      "sha256": "6d7f35b0b0c9b21051f47d3c444dc746583c4ba4307df186446fb74bd5470876",
+      "sizeBytes": 4280
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/display-menu/index.tsx",
+      "sha256": "158c804ce5c3dca175f2ad0e5557401e650c8f5582f0e58f045e72e3978188ff",
+      "sizeBytes": 3633
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/display-menu/order.tsx",
+      "sha256": "7f15565076394f453c5ff1e4e5b1c43f020dacbc8192736a14883eaa90e3bd60",
+      "sizeBytes": 4283
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/display-menu/properties.css.ts",
+      "sha256": "58bb40193142ef035df27bfd348e083d96133012b32a1c79393483ee08b40ffa",
+      "sizeBytes": 621
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/display-menu/properties.tsx",
+      "sha256": "27bdffd35240042de329ea43f0b20f07b8b374d372e5a97a8200315bab2cdbe5",
+      "sizeBytes": 5881
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/display-menu/quick-actions.tsx",
+      "sha256": "6a8ba59dcd0a5f03469ef82bd6357fcc652c9882e9427dce96cbc5c39ca7ce19",
+      "sizeBytes": 1793
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/display-menu/styles.css.ts",
+      "sha256": "5f8297b41dd884721cea21df5b38ed49180d0d7f09147ae51307249c0efc2e1c",
+      "sizeBytes": 360
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/display-menu/view-toggle.css.ts",
+      "sha256": "d4e00f616e3d7db4fed286a3ba28ab2ea1dec17d8fd36499dbbfd39ce88f8f7d",
+      "sizeBytes": 508
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/display-menu/view-toggle.tsx",
+      "sha256": "2ea494074c7ebac196524f48d9903d83b99155d4ec888707d3d2cec4823f4ee3",
+      "sizeBytes": 1287
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/docs-view/doc-list-item.css.ts",
+      "sha256": "d44c129d9e9948f6f199d1869068fdce816528c6ae110a9dab42e17ff494aaee",
+      "sizeBytes": 6120
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/docs-view/doc-list-item.tsx",
+      "sha256": "076cd9d2ecd6ecf7edb021145747acad788edbbd61f931bd307c80c08c6201ff",
+      "sizeBytes": 11809
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/docs-view/docs-list.css.ts",
+      "sha256": "ee0fbfda5673c075d479f6d22bb6e765231887d2755563bbce44ce79e13f071e",
+      "sizeBytes": 262
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/docs-view/docs-list.tsx",
+      "sha256": "2a3a3d4674e9a5a3ba82089a4aba291a2a38f2aa68c613762316be9a9f2f9008",
+      "sizeBytes": 8483
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/docs-view/group-header.css.ts",
+      "sha256": "c58bedbec6ecadd4a2824c8636428b53b66b23c414988d080bd727a123051d2d",
+      "sizeBytes": 1900
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/docs-view/group-header.tsx",
+      "sha256": "7c5a74cbce40316f83cc81c6f84d89b0bd1264dde220cfa0b0f380355089be47",
+      "sizeBytes": 3501
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/docs-view/more-menu.tsx",
+      "sha256": "f5d0fc0dc731f65905a985584413a3567d519d452be532c7d9c46f02d416290e",
+      "sizeBytes": 6543
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/docs-view/properties.css.ts",
+      "sha256": "0e55efd81715f3c3fb44121775f55d9354ec9fbe435b8b90b55eabe52cc29738",
+      "sizeBytes": 2014
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/docs-view/properties.tsx",
+      "sha256": "b2c4d9ce4141fd913646bb79061c0d12aeec63d39da03788211583ae4b0a2452",
+      "sizeBytes": 9580
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/docs-view/quick-actions.tsx",
+      "sha256": "058a128e5a8e6f693ed81e3a95b1fdd6e6152c57c409447cb3bd7ecd6150a0e5",
+      "sizeBytes": 9553
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/docs-view/stack-property.tsx",
+      "sha256": "4015d9d1fb4edec476bee59dce2c6a65156e720d539cc573ea87d5c78f3cb187",
+      "sizeBytes": 433
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/header/navigation.css.ts",
+      "sha256": "1954d26f48b8911a21965d4fed21a4b859ea58f1230d71f9cacf2b57359ac1f6",
+      "sizeBytes": 425
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/header/navigation.tsx",
+      "sha256": "8ee374488b89bb806f0ac42074f69adee9666b34975f040a0cf4e6e0c4cc6920",
+      "sizeBytes": 1253
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/properties.ts",
+      "sha256": "0aff15603618a8f1c17f99d2b82997f82112b98286f20d219db3ff0334f1b975",
+      "sizeBytes": 2610
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/quick-actions.constants.tsx",
+      "sha256": "e728b930e11087904bc71ae5e1c12645d1735bb0bbfcd755db70c88f03e2fabf",
+      "sizeBytes": 1832
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/explorer/types.ts",
+      "sha256": "fc255e444cdd5e166801fa145ecf4511776640eb6e5b1f6e95c0d1fe77b6b241",
+      "sizeBytes": 968
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/filter-container.css.ts",
+      "sha256": "519ae9cab26e9096be33f2d8861eb541caeeb848e9dec64238a33df61592af10",
+      "sizeBytes": 158
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/filter/add-filter.tsx",
+      "sha256": "92c5bb2bb082b2f8e95127256f20aa1f4b02ec93dc415127e50e16d0d31d65f4",
+      "sizeBytes": 4916
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/filter/conditions/condition.tsx",
+      "sha256": "16672401ffc9aad4c8f1ce60c76bc609563c0abb1725c8bc00ac920f28faf74c",
+      "sizeBytes": 3005
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/filter/conditions/property.tsx",
+      "sha256": "8cf71b77dec7761365bdaf010137b982e7d178028ab496a40508432eeeab5015",
+      "sizeBytes": 1845
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/filter/conditions/styles.css.ts",
+      "sha256": "76e49c1ff0e38a8b56542b7814c5517de98cbe2bf094479279ca01b12f60db95",
+      "sizeBytes": 1691
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/filter/conditions/system.tsx",
+      "sha256": "4f731f8a4ac375c5fc5df86f3743d12929f28cc71a2584b9c16f5b3eeed19e6d",
+      "sizeBytes": 1458
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/filter/conditions/unknown.tsx",
+      "sha256": "459869d969d6ee913512ebb3406d7d88f814643fa0e2e60020b762e182783f9a",
+      "sizeBytes": 776
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/filter/filter-value-menu.tsx",
+      "sha256": "69ea78ec38e3c7cd86c4dcbbb672c51ec8f0667df0422c4caaee203caf151a99",
+      "sizeBytes": 702
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/filter/filter.tsx",
+      "sha256": "9b65d4a7f2db96be2848646cfccf4b1ccfd7c109ff0ca8677bf631e1f0f065c8",
+      "sizeBytes": 1161
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/filter/filters.tsx",
+      "sha256": "0fa0e67ce450ac1a0c004317d228e60d126979ed56102b9fbd521edc4c198630",
+      "sizeBytes": 2640
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/filter/index.ts",
+      "sha256": "b64154f28c2a4ffefba853e8706af5d8dc76c5ca178bfc662058ca42ee4e3f91",
+      "sizeBytes": 53
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/filter/options.tsx",
+      "sha256": "f184d8cc9764141d3a4ecef90d44ac47fc0e2b524c459949fef660811086031b",
+      "sizeBytes": 2011
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/filter/styles.css.ts",
+      "sha256": "5267e8aec6b291aff1bc396a26194e7e9108dee193f1c590fbebcb6c7e9f10c0",
+      "sizeBytes": 1503
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/guard/guard.tsx",
+      "sha256": "387a5a73d4074e1c8f42a3e8ba64b647633399c4cf781ec979a6593764a146d3",
+      "sizeBytes": 724
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/guard/index.ts",
+      "sha256": "00bc735a085c4c1100cbf7035bb2cf1314770e8d8c52dc90b26acf91c138c817",
+      "sizeBytes": 54
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/guard/use-guard.tsx",
+      "sha256": "30d49870bf01a0ab11672124f4a8fefb9019a454d0e6238ceb2b9fca0fcafeff",
+      "sizeBytes": 870
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine-async-hooks.ts",
+      "sha256": "5cdc640cdd88b27d912102f9e4d691e1180524b194904e357329adb53e4294db",
+      "sizeBytes": 906
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-ai-chat-config.ts",
+      "sha256": "c81495f609b52ad82ae43b884acf84fdbee4f5f743a59b4f001c5c36c978802b",
+      "sizeBytes": 4488
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-ai-specs.ts",
+      "sha256": "9bd1bbc4051d736477de8ff713a78ff5509e26f254e5f7c5e5437f5effe4301a",
+      "sizeBytes": 1721
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-ai-subscribe.ts",
+      "sha256": "8f5828545f479b18d42ace5c50a66f852e53ecba83e4c06596c715c1ad0e44e7",
+      "sizeBytes": 1647
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-app-setting-helper.ts",
+      "sha256": "936c1465aac04ab7ca7b491e61d5dc8a480a435e1c6ec1b0d4e0321b0422cc31",
+      "sizeBytes": 631
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-block-suite-meta-helper.ts",
+      "sha256": "494a9da13e9475bfda200a2006e41cc51656e645fc3a8daefc9b586544f6d220",
+      "sizeBytes": 1722
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-enable-ai.ts",
+      "sha256": "601661aa36b8fb0bb9677032b12b178174232e4da25cdb1301d0461e1ddafcb6",
+      "sizeBytes": 560
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-enable-cloud.tsx",
+      "sha256": "8f24eb7cbb8302991e3bf4561445f326370f5997709746804af3a69ee804bbc1",
+      "sizeBytes": 4162
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-export-page.ts",
+      "sha256": "5c609c095fa0b65480a3d4bd660ebffb7b03499bed9f2d1b7848cc3d8a1368f8",
+      "sizeBytes": 7879
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-mutate-cloud.ts",
+      "sha256": "3be0e05732bfcbd09ee90dd3bf80f228b10de8c3400e25f73c2625d5d70af1ac",
+      "sizeBytes": 385
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-reference-link-helper.ts",
+      "sha256": "f0971779b20fd1f83fbf385ed43b99ed98edc02382ccee5b664972bd8cafa52a",
+      "sizeBytes": 936
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-register-blocksuite-editor-commands.tsx",
+      "sha256": "7e4229ee520c6c4068fc04ab081d66fd72ee117c821660fe7ae75f628d8c4948",
+      "sizeBytes": 12450
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-register-copy-link-commands.tsx",
+      "sha256": "b125cfba88f1febb73ad80597a1707877cc51703d728911fec4e2dbdad657b39",
+      "sizeBytes": 1788
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-register-find-in-page-commands.ts",
+      "sha256": "952bebef974fb390cdd722476a7bb0d59261d20b3686e13307bb89cbbff2423c",
+      "sizeBytes": 1270
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-selfhost-login-version-guard.tsx",
+      "sha256": "6f77629aa132717782b2a7b082aebe191c93f625d605274a1134caf18cc4427f",
+      "sizeBytes": 1556
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-share-url.ts",
+      "sha256": "ad32a33487aee869fd4851c4d64aea9122de5c61e0dd01e4665e353fcdce49d8",
+      "sizeBytes": 4528
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-share-url.utils.ts",
+      "sha256": "1a8462a399532d1273e1c212dbfaa7d161712c7e9e31ec8caf4deac180fe248c",
+      "sizeBytes": 212
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-shortcuts.ts",
+      "sha256": "eec846d3039ba2ebaf7b33c6387ed2d3e2585a117233cb6abbd75350f3efc0a0",
+      "sizeBytes": 9431
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-sign-out.ts",
+      "sha256": "164f36de05f65022db2a1a8df3e0124e49f219b27a718f9cf0781c55e4ffccb6",
+      "sizeBytes": 2478
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-subscription-notify.tsx",
+      "sha256": "d31645408745d1bb904f4de4c76fa4033aa054fc60266d07cc3f7989cbda107c",
+      "sizeBytes": 2959
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/affine/use-toggle-cloud-public.ts",
+      "sha256": "05b79b2b28abfd6313aea9cac89e435c76c017906432f408e376d237c32874db",
+      "sizeBytes": 599
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-all-block-suite-page-meta.ts",
+      "sha256": "c2cf10bfaa4e651afd1922c5ae2ac5b6ccab4c4dcd78e94ccdcb6e9e5c67c768",
+      "sizeBytes": 884
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-app-config-storage.ts",
+      "sha256": "c55bdbaa35aed67bb9f9ff122233958438bce7cb5b5219cfaef2366ae74f8f94",
+      "sizeBytes": 2299
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-app-updater.ts",
+      "sha256": "aaa50eca71007271a8b23734bbab2d9823027321ff3ecee29a6c7d03ee9e77e8",
+      "sizeBytes": 5720
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-block-suite-editor.ts",
+      "sha256": "2c4259adbd09a7237c0d9e784d7bf7f49827d98080386db73f69aef69855376e",
+      "sizeBytes": 535
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-block-suite-page-meta.ts",
+      "sha256": "1a40ea45df995acb2d2662b9f0b5fe89bbbd24f39f56d4e00c3bdb86d6f96b51",
+      "sizeBytes": 1722
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-block-suite-workspace-helper.ts",
+      "sha256": "396f40ce4a7c36eb6032bf6a7755741db4441f4b45f2e003d516cfa66e987215",
+      "sizeBytes": 348
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-block-suite-workspace-page.ts",
+      "sha256": "a0f282a83e083f6344f7973a452aece9bba664607a054d7a11663fb34fabb077",
+      "sizeBytes": 1103
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-blur-root.ts",
+      "sha256": "d0396fc96857e48b75bc47d8f54ed33e4c3738d34ba996125e6653c328322e8d",
+      "sizeBytes": 503
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-catch-event-hook.ts",
+      "sha256": "ceed0df22a55737f7cd3ad68c7deb7fffa8d8b94e1d75547cb8bb00c37c368c2",
+      "sizeBytes": 479
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-image-antialiasing.ts",
+      "sha256": "17254045cf4db61072d3124c8a1d63c0f11526d43f149208a42b6c9064cd22cb",
+      "sizeBytes": 383
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-journal.ts",
+      "sha256": "449d603ba52c66af383a67dbd4c0c8d2199c49f72c88e3e8d062fbd3b8aa2586",
+      "sizeBytes": 4082
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-mutation.ts",
+      "sha256": "b0001af11f31ff35c243b69a8a99f3dfda9c060ffa205abb10e1fc86831485fc",
+      "sizeBytes": 2325
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-navigate-helper.ts",
+      "sha256": "8e9e4c38ccac0b125419c5bab047e4116bf28af671008538843894ef2ce68a56",
+      "sizeBytes": 8362
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-query.ts",
+      "sha256": "a86a1d961a9df871df5844fa0a00b0b9d651737034bfa0d98327f86166e64348",
+      "sizeBytes": 3418
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-register-workspace-commands.ts",
+      "sha256": "b7b7eb0472ed6cb63dc5b04c9ae8e0374968a343e44b4f34105897edd08ab382",
+      "sizeBytes": 4708
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-responsive-siedebar.ts",
+      "sha256": "586a9c9cbb10ca1ad54400f012822181eedee0637d0ce21752ffbc22a91c2e6f",
+      "sizeBytes": 2102
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-seek-time.ts",
+      "sha256": "643d732bc4acc77b556921080b915bbdafa36c1e166a030361d26edaa684f56a",
+      "sizeBytes": 1565
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-system-online.ts",
+      "sha256": "f3ff38a6b5389cecabfc5178c491c33f98ce1684bc84d37342232806844df14d",
+      "sizeBytes": 676
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-workspace-info.ts",
+      "sha256": "3a59af5bffb204742bba64790c7f479391c36d33dfbd24754311fc454cd981c5",
+      "sizeBytes": 644
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/hooks/use-workspace.ts",
+      "sha256": "a691cb7885bf720684d0d677186df68a2e00ce789402b63216f2799b2d92afed",
+      "sizeBytes": 817
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/member-selector/index.tsx",
+      "sha256": "26aac5a73ec92aaf480d69c7bf184494d24c148c179bd26e5f02392550f5ba55",
+      "sizeBytes": 10506
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/member-selector/inline-member-list.tsx",
+      "sha256": "ee9a8dde164bac16e5c81c615dfaba4fb799661707e48ef78990d2cfd740d10b",
+      "sizeBytes": 828
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/member-selector/item.tsx",
+      "sha256": "ead994f00c3274dea81358587b87df99bcd8a9f2e9804bced7e0e9d859436379",
+      "sizeBytes": 2877
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/member-selector/styles.css.ts",
+      "sha256": "ed3edd1e655f7e9ef9d09a50b6ead91937bc08e9dc3955dea6850dba1327f55f",
+      "sizeBytes": 4695
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/mobile/config-modal/index.tsx",
+      "sha256": "89105b8a69e4d8472a907a911750562c7f0e9cf303cd04f8a6bea5b4d9605e1c",
+      "sizeBytes": 3505
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/mobile/config-modal/styles.css.ts",
+      "sha256": "518ccd2c4a359e21f010253f0c19c2d4abe6842d135a379e45d50e1c1640b9f3",
+      "sizeBytes": 1789
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/mobile/index.ts",
+      "sha256": "5afeb13c1270691fe833f88c9e51c67db1b10c0706f8bb86a0a3edac06fac156",
+      "sizeBytes": 32
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/notification/list.style.css.ts",
+      "sha256": "5fb79939aa2bed58e022c96bac914623ff70e36cb1874d728bc97717ba18fa5a",
+      "sizeBytes": 3965
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/notification/list.tsx",
+      "sha256": "eb364bd5ac5f54272e72a6c66f790d752b7bee258e200dbd6c4f55e7356732c0",
+      "sizeBytes": 30682
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/over-capacity/index.tsx",
+      "sha256": "ea5d30ad4329a5997276b5731c81f69a038e7dc6e91ddec3c31e004a9fd8e6fb",
+      "sizeBytes": 2375
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-detail-editor.css.ts",
+      "sha256": "b7c3d6a9e92518f608298d066c15674127077a6c38362304351345f5ce5df068",
+      "sizeBytes": 550
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-detail-editor.tsx",
+      "sha256": "fd8494d545724af36c9069d46df2fb198c77f477c77f89213fa724c82d0a8f69",
+      "sizeBytes": 2583
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/collections/collection-list-header.css.ts",
+      "sha256": "999090ab6c164cacb57a50d94b0e329a05844697162b5ad822aa8a150b3fefe2",
+      "sizeBytes": 761
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/collections/collection-list-header.tsx",
+      "sha256": "7ab3edc68fb28e197997a2b75a5f186fc6e027b89937aff03f87fb4ecfc7ef1a",
+      "sizeBytes": 679
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/collections/collection-list-item.css.ts",
+      "sha256": "e7a797c582a07594289325ddbd2a82da230de47c206d7a0e84cda49ee98ff41f",
+      "sizeBytes": 3511
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/collections/collection-list-item.tsx",
+      "sha256": "00e10e8583fd33247a775bf9f417e7969a454648246fbcbab5ad3369c4212745",
+      "sizeBytes": 6394
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/collections/index.ts",
+      "sha256": "c199a00c9dc1a6bf93a7f2d1da5f55919a1ffa9ded47f9f37f4515b85bd7817d",
+      "sizeBytes": 129
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/collections/virtualized-collection-list.tsx",
+      "sha256": "7123a5a761e250a3fd96329381655668a66969b162a49c9f957618b6bf1e30e6",
+      "sizeBytes": 3814
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/components/favorite-tag.tsx",
+      "sha256": "f289669ba5663ce2fa9234594d58cda0e32dd28f1ed99b70db7ca2d6772dc6aa",
+      "sizeBytes": 1625
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/components/floating-toolbar.css.ts",
+      "sha256": "ebc40588f24d386ee6f220f328cfac2076e05fee40f8cc996d8b9a5e0d4caf49",
+      "sizeBytes": 1844
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/components/floating-toolbar.tsx",
+      "sha256": "20c3338238c2957ce72720e6d402e0a659e1016de6cc6094b69005d3f50cdab4",
+      "sizeBytes": 2306
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/components/list-floating-toolbar.css.ts",
+      "sha256": "bf0985887d80d09cf7e0e495061d768e8601ba8ea73822a372586cc02691d34d",
+      "sizeBytes": 157
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/components/list-floating-toolbar.tsx",
+      "sha256": "4b620a53e7e707da51b2e7e7c0cf81711fd0a8ccfe2dcc8f3a5244d17e58bf06",
+      "sizeBytes": 1214
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/components/list-header-cell.css.ts",
+      "sha256": "b4372ff7f00f872dcbbf449eb9cd301c4fa956b641ee5177eca677e1fba6c44d",
+      "sizeBytes": 708
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/components/list-header-cell.tsx",
+      "sha256": "ef5db300d48f1a00fc104e0838a91ced69e239e0ecbb7166cb4eb1bfa68ae731",
+      "sizeBytes": 1356
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/components/new-page-button.css.ts",
+      "sha256": "2cdd7de00d3c3263c2e0134d061e17ffb71d03ddb9e956d9b5011cbbc6550796",
+      "sizeBytes": 320
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/components/new-page-button.tsx",
+      "sha256": "598f86996e866944d09a03306017d1cf6ec746d5cca8303368412d4721f80320",
+      "sizeBytes": 3822
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/components/page-display-menu.css.ts",
+      "sha256": "692c28aec3d06878204b122633338220934e373d3e161760d8d90a0e6cbe27af",
+      "sizeBytes": 1428
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/components/page-display-menu.tsx",
+      "sha256": "c0f415539535f2a2d9281bb06db8b0236ec2989c143575eba75eb0cd5315c23c",
+      "sizeBytes": 5042
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/docs/index.ts",
+      "sha256": "aa68d9e09e9f9656da2993cf7d77a89c32c52cc8bca3fca87a1fa97ca212d1f8",
+      "sizeBytes": 74
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/docs/page-list-new-page-button.css.ts",
+      "sha256": "1cd6ad0bb55132c456ffcb4ebd80ba90bf794ebac7d44c467333d0bc7cc84b93",
+      "sizeBytes": 135
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/docs/page-list-new-page-button.tsx",
+      "sha256": "ba8806c8eaa1da9e8422df0383294ac63d3a27c8b29bfac3d4a55f4897e25e58",
+      "sizeBytes": 996
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/docs/page-tags.css.ts",
+      "sha256": "1f5407b913c32c4edc48be0a3e426a4e53192111a3d0ddbc780585ece8fe4c7f",
+      "sizeBytes": 3025
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/docs/page-tags.tsx",
+      "sha256": "6a5e41d86645acd1b77374662c1bd390f6c07acd3a7e97aa19f2e19786e500df",
+      "sizeBytes": 1108
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/docs/select-page.css.ts",
+      "sha256": "2deebe9a52b78507f1cbf5eea3b4842b800b726784ca93c73cec2bb4a082e6e0",
+      "sizeBytes": 515
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/docs/select-page.tsx",
+      "sha256": "b9f984f62b21a86ca77b2029b5fcff472f83b93604db01a7c5ab75f9d7ed4d65",
+      "sizeBytes": 6806
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/group-definitions.css.ts",
+      "sha256": "10b90ef1cf69bdd0fc4054bdbf966d06385981960a4a78631555aba75e5ccda1",
+      "sizeBytes": 850
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/group-definitions.tsx",
+      "sha256": "91da2cd327618beccc25e684e099de0058687ba8793386f5e8d2a8eaf127b040",
+      "sizeBytes": 6560
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/header-col-def.tsx",
+      "sha256": "5775c402060cbe19477fb86b97238dc423c2e0bc5da39e6fa148d49a9bc05638",
+      "sizeBytes": 1835
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/index.tsx",
+      "sha256": "901aa33067189e666472c636bf0b7dc404efef524fb36dc0e3a11f8eb5d004aa",
+      "sizeBytes": 687
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/items-to-item-group.tsx",
+      "sha256": "24221c3b37eb07de0e4337b293bc8b69a097a6eaca18c3b67e917e22d5853aa8",
+      "sizeBytes": 1465
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/list.css.ts",
+      "sha256": "f3e1e64e5a8fc88f1c133cb18979e26773f6b537f0dee2b277f5c21699fd58b2",
+      "sizeBytes": 2231
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/list.tsx",
+      "sha256": "000b15b7d63f3c62aafa20543326cbf4dd3e966869a9920017061e38369ae3de",
+      "sizeBytes": 2990
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/operation-cell.tsx",
+      "sha256": "b4b8d3ff7971ad92f7ed58e7463a4c73165522f449fe1bc9cb182f996e2dfc50",
+      "sizeBytes": 17094
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/operation-menu-items/disable-public-sharing.tsx",
+      "sha256": "9caffb495bacf43e51fb83d1baf1a6283be5a4fcb206798015b76d68d8721604",
+      "sizeBytes": 420
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/operation-menu-items/export.tsx",
+      "sha256": "395bea4586bb5bc97affa659ea74507ca8d67a0239c7757a5c3aeca6c63edaa4",
+      "sizeBytes": 4242
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/operation-menu-items/index.css.ts",
+      "sha256": "835b8cefef4d1ff3cc79ad1c25913dbd3bcf4b0a3118cd350312057bf1638b6f",
+      "sizeBytes": 428
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/operation-menu-items/index.ts",
+      "sha256": "a8aee37a952484b08df166f12c9c122cbe6178c99619f856435dbd1d5316e72b",
+      "sizeBytes": 130
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/operation-menu-items/move-to-trash.tsx",
+      "sha256": "08e01b1cc7a2c31b0387343759925dcbe723e0756b3c69a05fdec9c0112e526b",
+      "sizeBytes": 1486
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/operation-menu-items/types.ts",
+      "sha256": "fbbcd5f5046e47de86335e261b5d41ed2f06fb1bc8666bcf842211aec8761ea7",
+      "sizeBytes": 516
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/page-content-preview.tsx",
+      "sha256": "b9478e9b2332657394448eb48a15493462def03439f405c84bc59346398b768b",
+      "sizeBytes": 804
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/page-group.css.ts",
+      "sha256": "739d0731cd400be4ba9c0542126977eec794e67b507432004b5a16398cf7990f",
+      "sizeBytes": 2652
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/page-group.tsx",
+      "sha256": "3c325f9565febb2b4ee1b8f982a317a52ace7c81bb585a5c230d44153b1dfc55",
+      "sizeBytes": 7005
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/page-header.css.ts",
+      "sha256": "b15dccc74ce2464b498fdc53bdb1dbbbf9d9889890b0cb7b17c6357582f5868c",
+      "sizeBytes": 1001
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/page-header.tsx",
+      "sha256": "92981f2191092ce2352a7e317d58fb80f7fa393b0ade8fa397c84f9606405b68",
+      "sizeBytes": 4151
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/scoped-atoms.tsx",
+      "sha256": "26e91c54c04d0f189217cbbbdca492947f1012addb406458afcf6e34dedee41f",
+      "sizeBytes": 5178
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/selector/selector-layout.css.ts",
+      "sha256": "d427826425cce6de5fb526753a5a4386f5b45a1d2da7b73e1c534f6c4b5b4e58",
+      "sizeBytes": 1450
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/selector/selector-layout.tsx",
+      "sha256": "bebf3f175074b78e66f10223366aa317769527562205bd707212f123f042ce6f",
+      "sizeBytes": 2548
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/tags/create-tag.css.ts",
+      "sha256": "38ca4139180d4302f9fa6b3a97bbc430a611a314182588b3fec4891ff1016d03",
+      "sizeBytes": 1327
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/tags/create-tag.tsx",
+      "sha256": "9880979a689366ed61188b11b0ef9e69e7399fe0e841fc38b4d8f49f75b56921",
+      "sizeBytes": 4834
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/tags/index.ts",
+      "sha256": "0fefcc4d405a144fb3fd1a7026c72b661af0b94870b394fd8cca1117080eaf45",
+      "sizeBytes": 108
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/tags/tag-list-header.css.ts",
+      "sha256": "f56c81f1e664c4e9f49183d2f009129b22600c9c23e7add71bf42ba396f33a01",
+      "sizeBytes": 740
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/tags/tag-list-header.tsx",
+      "sha256": "9900e3451e55cbdfe93819552bbdbd4b1f9ef6289a3b36424e233c655bafeff3",
+      "sizeBytes": 570
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/tags/tag-list-item.css.ts",
+      "sha256": "ace32d3f1baac58b8eff97bc8a65924c8fbdbd4518ce67585c55f53c53de22c8",
+      "sizeBytes": 3745
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/tags/tag-list-item.tsx",
+      "sha256": "cfa14566d5ed741816338ec57c8af48eda80c39fac6ac599e113831f1e501ee7",
+      "sizeBytes": 6088
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/tags/virtualized-tag-list.tsx",
+      "sha256": "c36ba2b32c671c5c7a15eed501abce83ad9d288148dd8641190f2936fa9d3ffc",
+      "sizeBytes": 3737
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/types.ts",
+      "sha256": "6701e80058d4bdd2fac196907c23b24a230ea47eaef1e8a1d58a69cc75c3482b",
+      "sizeBytes": 5575
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/use-all-doc-display-properties.ts",
+      "sha256": "6f4d247f67729ff2e0adc6b3a6d8de798a00c0446d732e16a0b12479459d5d13",
+      "sizeBytes": 1433
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/use-block-suite-page-preview.ts",
+      "sha256": "fb4c513b7c7e99909e80d24a7a54b1ca41c0d679ad3714cd45225a858a21b016",
+      "sizeBytes": 2471
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/use-block-suite-workspace-page.ts",
+      "sha256": "07a47f36ed82d941320e57460309437643cbd8fb9437f857b6a13ba364a8ee8c",
+      "sizeBytes": 1304
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/use-page-selection-events.ts",
+      "sha256": "cc83c9cccf3290dc43ffc4fe1f8ba1e9562011beaed89513dbc3fad1264e257d",
+      "sizeBytes": 111
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/utils.tsx",
+      "sha256": "ffead7227ed716cbf82b2da5ee60e8fed5c37bfd3d9a4f20c87ef706f2163a22",
+      "sizeBytes": 1423
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/view/affine-shape.tsx",
+      "sha256": "b68fc24d5c0ad98a57b5bcc5f4d3d74f3d7665a79f060da39b3aa4816d46e135",
+      "sizeBytes": 3108
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/view/collection-operations.css.ts",
+      "sha256": "f17f494870193b72d7d6d9595609dc5b6e6e3e04476ed80b76c0169b8d4276fb",
+      "sizeBytes": 268
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/view/collection-operations.tsx",
+      "sha256": "2e5b0c9fca14c2c5babb2f95d6026d19564fce7d143df5a0de6c2fb997c72a1a",
+      "sizeBytes": 5695
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/view/create-collection.css.ts",
+      "sha256": "f06e993604d422d7fb292fda8d28792367f36282a3c965f85d45a15ac4c8cc8e",
+      "sizeBytes": 567
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/view/create-collection.tsx",
+      "sha256": "d91784d1b4dc249f6368787f8467f077c140511a06c348e21cc567735ef0f76a",
+      "sizeBytes": 3378
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/view/index.ts",
+      "sha256": "7e39f01cffde786a60ae72350864a9eedb61321e71af28208dabecc1b71ce933",
+      "sizeBytes": 155
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/view/save-as-collection-button.css.ts",
+      "sha256": "1f23a69baafb33db704b15847ae3f10eec54b04e920ccd7b4b91bfccc4836937",
+      "sizeBytes": 402
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/view/save-as-collection-button.tsx",
+      "sha256": "38b535a8706169f7de8000e5303153d30eb7179dee2683b9c6448d830c781090",
+      "sizeBytes": 1464
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/view/use-action.tsx",
+      "sha256": "b8b09c526ad24bd7e93b1dfad7800b3d452d9b78cef91b075d5ecad63b84d394",
+      "sizeBytes": 1105
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/page-list/virtualized-list.tsx",
+      "sha256": "526697c5819d6ddc2bed841288ae89995225b076d9c1d60bc0ab49cb5f6fd007",
+      "sizeBytes": 5957
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/icons/constant.ts",
+      "sha256": "d14efccd5c766876fa0ea510afdb0e071fab6ab483dd477367b11659b5e4c60e",
+      "sizeBytes": 1528
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/icons/icons-selector.css.ts",
+      "sha256": "b88a4508b06352ad1d0be81a1a7734df45230984f82e26cf755ba1a020cf565d",
+      "sizeBytes": 1838
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/icons/icons-selector.tsx",
+      "sha256": "db9cccc24a3d857a1a69719a51a6273ca8967419fb81a97f24f55357a30076d1",
+      "sizeBytes": 2778
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/icons/workspace-property-icon.tsx",
+      "sha256": "489627d85ad8a294c3847c14c0e081e93375955628a18c67b38300e9df4e978f",
+      "sizeBytes": 1359
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/index.ts",
+      "sha256": "ca0aeda289613352617b1369d88f1303d1c85756c67da5efc0b0e7080af73099",
+      "sizeBytes": 146
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/manager/index.tsx",
+      "sha256": "4bb93f5a5104b03a672ee078eb341e4f683c49e94b202a3d847505024e1f7fc4",
+      "sizeBytes": 6006
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/manager/styles.css.ts",
+      "sha256": "7cb8e435ea9414151b0bf812dc55885ef1ee265cbdd235174cfc928cd21c74f8",
+      "sizeBytes": 2176
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/menu/create-doc-property.css.ts",
+      "sha256": "2d6b33abb4c766b313a39b4b2ab0902c112706367ea99012e17da5201ff9eeaf",
+      "sizeBytes": 593
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/menu/create-doc-property.tsx",
+      "sha256": "853be870d82bff23fa5e7e6e7404ad4143343717c4aa98d6919c32772b2417d4",
+      "sizeBytes": 3096
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/menu/edit-doc-property.css.ts",
+      "sha256": "4dd00999eb470c3cc5af6cb78a0e0e1d0519f32eb23abbbda1ccb0693de3796a",
+      "sizeBytes": 1268
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/menu/edit-doc-property.tsx",
+      "sha256": "addf6ef3f43f06c0efe145407b98265209cef4b7bb51973872a844626b82b60e",
+      "sizeBytes": 7528
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/name.tsx",
+      "sha256": "5ac33580a5e85caad0cebcb3ecb2c5252a2535ddfb8bd727feb0effc5baef6a3",
+      "sizeBytes": 452
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/sidebar/index.tsx",
+      "sha256": "30f9c0ebca43dfd6fe50a58886cd1844805998c12bcfea4f0371600b7aa23811",
+      "sizeBytes": 4884
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/sidebar/section.css.ts",
+      "sha256": "44e9cf51d6c3deca0843917bcdd97928d71a47f8fbbc600eed436de508edd7fb",
+      "sizeBytes": 707
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/sidebar/section.tsx",
+      "sha256": "46787bf5f5407c77e76d6e87993654e40d85391793edbd3ba7bd1eae8fab0bd5",
+      "sizeBytes": 1147
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/sidebar/styles.css.ts",
+      "sha256": "2fb1335a4c6c72cdb97dd0922b14fbaeb4d26f1952ae4258ea7ec410354509cf",
+      "sizeBytes": 1461
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/table.css.ts",
+      "sha256": "f64c97b5b6e48c2364462b843287e926c926123e556c82d743b01735a400b600",
+      "sizeBytes": 3571
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/table.tsx",
+      "sha256": "9f5d6b7a77599da2e6874234c493da6cdf5a566ad71ffb9af7ac26c1dd758f1a",
+      "sizeBytes": 15011
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/types.ts",
+      "sha256": "9341cfb6d9efbb6d67dca287dbd365c7ea9d396a868b9490dd54c101436afa0d",
+      "sizeBytes": 320
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/widgets/radio-group.css.ts",
+      "sha256": "0b04be7d32735074a42dd8e8c37dcd1cb4f98e6310ad2e41a8bd6150847feb3e",
+      "sizeBytes": 99
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/properties/widgets/radio-group.tsx",
+      "sha256": "1e8e4166a5540c45afcb5768cd45b3540c2e0f394b527b6b207d3b18a05cf9c4",
+      "sizeBytes": 1013
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/providers/current-server-scope.tsx",
+      "sha256": "55d3e46ab054a076f21ce8fc9a9a866cf5f0e16dd4e513f96c5461f6fddeab45",
+      "sizeBytes": 1469
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/providers/current-workspace-scope.tsx",
+      "sha256": "a5c7a6104e9b0f5f0425ed8aa3be1e5755a01ef4d4dfb136d2f10f3c70ddcfd8",
+      "sizeBytes": 928
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/providers/swr-config-provider.tsx",
+      "sha256": "bf178f088c2b3d6b6da956b378af04555b4f20007d0a470ea2d4ebddef750a9c",
+      "sizeBytes": 1188
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/providers/workspace-side-effects.tsx",
+      "sha256": "9c1239bacde6c318735fce73bc79e49239b46a6ef742996aedbc15d2e13cc385",
+      "sizeBytes": 5874
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/pure/file-upload/index.tsx",
+      "sha256": "57313183a9f845fb56837d6cfcedf2f74306df70951f52025cf431d7c29b4464",
+      "sizeBytes": 1297
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/pure/header-drop-down-button/index.tsx",
+      "sha256": "d2a2cd7a6ce5ef881c11d31f8108437ed691e07f4b7da33a7dda18590758fea6",
+      "sizeBytes": 658
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/pure/header-drop-down-button/styles.css.ts",
+      "sha256": "2716d0ab36000cde4654b4635709d74179bb82291c9f022ef44f28ceab69c9f2",
+      "sizeBytes": 237
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/pure/header/index.tsx",
+      "sha256": "d96a1f9db2ccc4e4233c215651a93e4b2d4039eeaca6c29d71c23e58eb981667",
+      "sizeBytes": 1527
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/pure/header/style.css.tsx",
+      "sha256": "7d9f94be3aa5c4eec634480c94ef54c2992b7ed8911e6ff3647deed61d6b4dee",
+      "sizeBytes": 1762
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/pure/header/windows-app-controls.tsx",
+      "sha256": "cebdd5f365414c0582f48ff9f189471025479687794486f18d4fe937b0d7ce91",
+      "sizeBytes": 8559
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/pure/help-island/icons.tsx",
+      "sha256": "64dfa7cc6dca5fb4a2a73764122d91c96b5e5e6c491bd3e4ae5d9b0393cad76b",
+      "sizeBytes": 10007
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/pure/help-island/index.tsx",
+      "sha256": "036698cd5d1c14f0a7a6abcd57b6a9a64b9fbea3fac8aa22d6957bd803d7c14b",
+      "sizeBytes": 3833
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/pure/help-island/style.ts",
+      "sha256": "ffcb92df26e369d11ecd003ac8f9bc7ed916928ff7b2af72f840becbf2f0e8d2",
+      "sizeBytes": 2043
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/pure/icons/favorite-icon.tsx",
+      "sha256": "053e5107264dfb9832282864d9595b9d1323029f921213549777300859f9d48c",
+      "sizeBytes": 462
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/pure/icons/index.tsx",
+      "sha256": "f810de2b888125ebe9dec46424830d8d306a6cb3d14c9d9bf7ac3bad8dd36703",
+      "sizeBytes": 33
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/pure/swr-error-bundary.tsx",
+      "sha256": "f12c3a8ba843e4e56e498643d6b1e1fb4faaff8d8dab812ea594303bf7949902",
+      "sizeBytes": 1615
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/pure/trash-page-footer/index.tsx",
+      "sha256": "7bf35ca3fd7e7452a5c22e32c53f31caf314bf601cb917b308c82017651eb229",
+      "sizeBytes": 3140
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/pure/trash-page-footer/styles.css.ts",
+      "sha256": "06259e0840b9154c7998600072ad66440a1f579d0a4f0d79adb23de1fe598809",
+      "sizeBytes": 885
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/pure/workspace-mode-filter-tab/index.css.ts",
+      "sha256": "b5c1aec9b89c8333bafbe54bb6180429befe99168057d3a4c8f0bd42b0caefaa",
+      "sizeBytes": 209
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/pure/workspace-mode-filter-tab/index.tsx",
+      "sha256": "dfe40fa1d471f21fe2a9e7c6848870205452a73957a5652a5eb19f5a8f83945b",
+      "sizeBytes": 2226
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/index.css.ts",
+      "sha256": "4a4c5eb23d0f6d007775aaff0f66318b65b1a54d563a752fe55d735e917ab82e",
+      "sizeBytes": 615
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/index.tsx",
+      "sha256": "d645280a2b5571cd3d02b2edbe1ed34a90a201590ae57d65d86e6fc92488e7b8",
+      "sizeBytes": 8459
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/invite-members-button.tsx",
+      "sha256": "732ab614061a603102e87c441809d21f11442487c2e02f49a857aeb84b2f0ca6",
+      "sizeBytes": 1043
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/journal-button.tsx",
+      "sha256": "5aa95408494256e6c3b4876ee3c327a063d662a5750fc8314d8c33c848f4f393",
+      "sizeBytes": 1274
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/notification-button.style.css.ts",
+      "sha256": "62dd134dc962470f2d491f9a4799fbde6d5d5bee162d543a76b3a22ed0a22823",
+      "sizeBytes": 382
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/notification-button.tsx",
+      "sha256": "ff34c9d98ed648232a5857f3d456872934b6ac233ea33518f39c26a246d95968",
+      "sizeBytes": 2019
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/sidebar-audio-player.css.ts",
+      "sha256": "cf7b8e7aebc01214dfb82abe14ecfebbca23c6f252e0057cb665b49da4d01c8c",
+      "sizeBytes": 146
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/sidebar-audio-player.tsx",
+      "sha256": "1664c80611bc88d0470525eb805b89d5fdbea2c6497f35ed9fa5da2f974056f3",
+      "sizeBytes": 4300
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/template-doc-entrance.tsx",
+      "sha256": "a0ee007e3d8dea4a77758da33e725dc9741b28e708abce22dda448bd5d64925f",
+      "sizeBytes": 1561
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/trash-button.tsx",
+      "sha256": "39663a887eb2f1b348d67bcd2972018daa3970ab9e8dbe626a0a1541628b0d70",
+      "sizeBytes": 2976
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/updater-button.tsx",
+      "sha256": "a03159198766848ef7800b8f0ac38bec05768756d032e9a4a2538e91fe9cb1b4",
+      "sizeBytes": 922
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/user-info/account-menu.tsx",
+      "sha256": "8e3f104e6a24e6c24af993ca39899645b6c191f9be279d53c21305e789949975",
+      "sizeBytes": 2167
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/user-info/account.tsx",
+      "sha256": "0bf9fc87002c3d12f322e121157a4ce7192c1340f23b52446996d640d6c4d52d",
+      "sizeBytes": 981
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/user-info/ai-usage.tsx",
+      "sha256": "2e40b276e5a63de1fb75dcf3c04eade66632200b984fbb97195ee3349fe2f0d7",
+      "sizeBytes": 3340
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/user-info/cloud-usage.tsx",
+      "sha256": "fd51db7f0751dc23a38bf5ea09fd69c651e120cd422e7e7157bf8f87358c7704",
+      "sizeBytes": 2358
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/user-info/index.css.ts",
+      "sha256": "fa426b2b2ecc8347842308c53f62e621097b4fb924c0788bc517647a5101feac",
+      "sizeBytes": 3163
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/user-info/index.tsx",
+      "sha256": "b7e7732c225b6ef7a03c6095b31df0b8e57952e9b198b76fd0ed74677d8467c3",
+      "sizeBytes": 2214
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/user-info/team-list.tsx",
+      "sha256": "793835c772061d78f1d2559382248fd0e2a81a9d725165b4be41f4a8e05daa17",
+      "sizeBytes": 5072
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/root-app-sidebar/user-info/unknow-user.tsx",
+      "sha256": "8a642e200bae032bf25c77ae2c3d3bc6e3268eba9de00ed9143534589f5b1d6d",
+      "sizeBytes": 1251
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/server-selector/index.tsx",
+      "sha256": "1dc7e610791dcfbac9602396524b03f2e5b3d95bef3842e982a0936608832fd0",
+      "sizeBytes": 1258
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/server-selector/style.css.ts",
+      "sha256": "26e312ca2c563ad318efa61cf80b2f20d101d603b3fbc6cf29173643ce102139",
+      "sizeBytes": 104
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/sign-in/add-selfhosted.tsx",
+      "sha256": "829882ddaa13d6d0e52762367e095475a66e5e6c1f1f62df195b5b1b48b2cd13",
+      "sizeBytes": 5027
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/sign-in/back.tsx",
+      "sha256": "b8fc384d384ce7694bd98ada261f94300d74558ed0aaee486999503b78325682",
+      "sizeBytes": 496
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/sign-in/background-arts/index.tsx",
+      "sha256": "09b6f17caa2bfdb2637ced8d0298b76d6269912db4bb8961a6d663c33969d246",
+      "sizeBytes": 425
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/sign-in/background-arts/style.css.ts",
+      "sha256": "1a9a9c7cf03d35988c7144928fc13aa61a812719f937b203977d0462d46775a7",
+      "sizeBytes": 250
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/sign-in/captcha.tsx",
+      "sha256": "dc61f0dfd60466bcf005d2b3d38abd01f006c37c89cc9e79417e9edc695e20ea",
+      "sizeBytes": 1901
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/sign-in/index.tsx",
+      "sha256": "27b1dc97b6958def8d4ab2b0862e0c0ef972fbf8fb90556026bf3765dcdae949",
+      "sizeBytes": 2155
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/sign-in/sign-in-with-email.tsx",
+      "sha256": "c51be6679064903a662e30aa89726b7dc0eb5c5eeb37af19ba7c1fa9da335bbc",
+      "sizeBytes": 6730
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/components/sign-in/sign-in-with-password.tsx",
+      "sha256": "e741ed4f737b7b76e948d612d83cedef265e1fc7c6c984ced2b96461a51b5414",
+      "sizeBytes": 6015
+    }
+  ],
+  "inputFingerprint": "28cbc74caaf0a7c102b255990ae53ce08935b335a92ecb1622a021b93036bcd2",
+  "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0012.json",
+  "outputSha256": "b23ad2bd2b692acc603868ff60807625f002b3516b1651e8da0dfd8027b47749",
+  "nodeCount": 1846,
+  "edgeCount": 6256,
+  "inputTokens": 0,
+  "outputTokens": 0,
+  "cacheDecision": "REEXTRACTED",
+  "cacheInvalidationReason": "input fingerprint changed",
+  "completedAt": "2026-07-28T10:32:13.057Z"
+}

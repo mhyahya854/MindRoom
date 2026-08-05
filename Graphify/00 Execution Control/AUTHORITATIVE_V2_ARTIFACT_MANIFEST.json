@@ -1,0 +1,787 @@
+{
+  "schemaVersion": "mindroom.graphify.authoritative-v2-artifact-manifest.v1",
+  "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+  "codebaseBaselineSha256": "135fbaacd841e5e4c271b046eda4b1613da83122e08c464904d395cd93ae5a04",
+  "masterPlanHashes": {
+    "01-EVERYTHING-WE-ARE-KEEPING.md": "458b4bdb995db8f4e5fbbc6be95db252c1f047562e9b27e39d3acdfd261f6faf",
+    "02-EVERYTHING-WE-ARE-DELETING.md": "46f34785e46d7d75dc01800fb29dfdf76d2b29ad09d5628aa430a3ee8c3aee1e",
+    "03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md": "4e2ca7a75e7c5fd4091b9c7c28ed350f1bcf1e062793339293d8485ee9896531"
+  },
+  "graphBuilderPath": "Graphify/11 Completion/build_graphify_v2.py",
+  "graphBuilderSha256": "30dab78a6f6ff25e37636d7ffabaecee6c294ca55f8c340d6beefda61816fdbc",
+  "graphBuilderGeneratorVersion": "mindroom-graphify-v2-layered-directed-2",
+  "graphifyExtractorVersion": "graphifyy==0.9.28",
+  "extractionPolicyVersion": "mindroom-graphify-v2-layered-directed-2",
+  "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b",
+  "generatedAt": "2026-07-30T15:33:14.243Z",
+  "authoritativeRoots": [
+    "Graphify/Master Plan",
+    "Graphify/00 Execution Control/schemas",
+    "Graphify/01 Corpus Inventory/GRAPH_LAYER_FILE_REGISTRY.jsonl",
+    "Graphify/02 Architecture Map/RUNTIME_REGISTRATION_REGISTRY.jsonl",
+    "Graphify/03 Capability Map",
+    "Graphify/04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl",
+    "Graphify/04 Exact Location Registry/CHANGE_TRACEABILITY_MATRIX.jsonl",
+    "Graphify/05 Dependency and Impact/Knowledge Graph",
+    "Graphify/08 Cleanup/PONYTAIL_AUDIT.jsonl",
+    "Graphify/11 Completion",
+    "Graphify/14 AFFiNE Reference"
+  ],
+  "artifactCount": 124,
+  "artifacts": [
+    {
+      "path": "Graphify/00 Execution Control/GRAPHIFY_REPAIR_BASELINE.json",
+      "sha256": "18c9a9ad4d6d12acf91f35fb4fb3c9735879b9d422462e8ba443c7ef5d96f8c6",
+      "sizeBytes": 2496464,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/GRAPHIFY_REPAIR_MANIFEST.json",
+      "sha256": "d9c4055b4509cf7d2fb0f8ec01d6f6640798974a88393fddc72ac84c52cc65ba",
+      "sizeBytes": 2503588,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/HASH_MANIFEST_CHECKPOINTS.jsonl",
+      "sha256": "f055d4440eb89a95f2df4195eaaf180bdb2dd166186a989e8ccccfcc14e4da4f",
+      "sizeBytes": 3683,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/schemas/capability-registry.schema.json",
+      "sha256": "dfde14d9bf9f4eb1a44fce1c79cf00ee0f63e22f9edba70482a158392cac00e9",
+      "sizeBytes": 1355,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/schemas/deletion-candidate.schema.json",
+      "sha256": "6da7819885ebf0d8f8372fdb1e7e8daf01e0977940d531b56e5000ad2ef19e75",
+      "sizeBytes": 1237,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/schemas/deletion-receipt.schema.json",
+      "sha256": "6649c1eae72b73d225033448ef888ed9fe5ac1d03282414608dba1d617a4b52d",
+      "sizeBytes": 1614,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/schemas/dependency-edge.schema.json",
+      "sha256": "01252d4d9e660a787612b8580ef321b22b084c8701e732ec50eadc6b736fda23",
+      "sizeBytes": 1326,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/schemas/exact-location-registry.schema.json",
+      "sha256": "81ca8627cce5c00cb1d986fec892dbf76cc02e8536b46202b80ec9580a4247e7",
+      "sizeBytes": 1695,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/schemas/final-release-receipt.schema.json",
+      "sha256": "b14e33267e4023f191d8e15c0be7c0b97cbcf3fd126c3f6b05b9991438be773a",
+      "sizeBytes": 971,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/schemas/graphify-mapping-receipt.schema.json",
+      "sha256": "e2d1c65cad6adc3c96da15a58f633f7609ae811018c7651152414e396da0f722",
+      "sizeBytes": 965,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/schemas/hash-manifest-checkpoint.schema.json",
+      "sha256": "da6114d5f5f7d7a142a32b4f7c9e53fcaa05e6623d920b980c02d400bd76b19c",
+      "sizeBytes": 2575,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/schemas/implementation-task.schema.json",
+      "sha256": "1a719dbb9c6fad0cc3b74f0078af6835c2e0e4ac7f3761a517d72775b7c189ec",
+      "sizeBytes": 1223,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/schemas/repository-baseline.schema.json",
+      "sha256": "e4f050b6c04ef46c90c4e124f785d4e3b20c35065538e14745b8b4c6973ce149",
+      "sizeBytes": 1154,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/schemas/requirement-registry.schema.json",
+      "sha256": "be16227d0ebf0f450d0990b846b9286508991632fb53978c445839f2e35a2d5b",
+      "sizeBytes": 1343,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/schemas/runtime-registration.schema.json",
+      "sha256": "defa1d0c11ff91152b9612b4990452140eec9ebafbd96bba8d00fbeaf09bdad7",
+      "sizeBytes": 2051,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/schemas/status.schema.json",
+      "sha256": "02a1c732306dae26bfd1e14c742d0f51eb5158585eb1c09a9f4431a627ec39f2",
+      "sizeBytes": 1764,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/schemas/symbol-registry.schema.json",
+      "sha256": "f8a8a9f968cf8e1543011edfce5360c51424f3a4e13557739d4fb12e79ec6806",
+      "sizeBytes": 743,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/schemas/task-record.schema.json",
+      "sha256": "34fad6ac148405e67e4a5671724de511116de2d265d8066b0a9fc34138a59f61",
+      "sizeBytes": 1123,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/schemas/test-receipt.schema.json",
+      "sha256": "ad48dc0638ea73cea222b9bfce6f53234da102ab2608a801d4439a279fe79834",
+      "sizeBytes": 933,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/schemas/transplant-receipt.schema.json",
+      "sha256": "8ed0c80fe9d3547f5f3a174c677f96d48dafda171dc1d9381d2c5d5257d32e78",
+      "sizeBytes": 1318,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/STATUS.json",
+      "sha256": "d00e3c0f89214e41bdcf4dc3405828e48fa99a4b242b6b01938a654d88ce64c8",
+      "sizeBytes": 1722,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/00 Execution Control/V1_EVIDENCE_CLASSIFICATION.jsonl",
+      "sha256": "02630c78ab059c1783027acbf107f86f005063740cacd19a7f8c8899804661a0",
+      "sizeBytes": 539938,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/01 Corpus Inventory/GRAPH_LAYER_FILE_REGISTRY.jsonl",
+      "sha256": "ab1ede27b1cce4c4460b287808aba76609705e0f8246e69a46c1ad5c360954a3",
+      "sizeBytes": 5709359,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/02 Architecture Map/RUNTIME_REGISTRATION_REGISTRY.jsonl",
+      "sha256": "13557da77412ed48bbd9d770af973d0ce7a5d87a6c1f05261011c4ac1c68827e",
+      "sizeBytes": 3492720,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/03 Capability Map/CAPABILITY_DEPENDENCY_ORDER.json",
+      "sha256": "f8575a380365e8d6d19f48138c0a51e9ba5ed42b3fef5b5ef8b5c58cc591b46d",
+      "sizeBytes": 46338,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/03 Capability Map/CAPABILITY_EVIDENCE.jsonl",
+      "sha256": "6f837d67031c5f784c68fa7ae70d03041091d56507b0f90caa965eff19c9ae79",
+      "sizeBytes": 2921316,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/03 Capability Map/CAPABILITY_MAP.md",
+      "sha256": "6c63691f673fa3ec337d39ff29d4253573f864b01321aa45cfecafb16c575e89",
+      "sizeBytes": 1195,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/03 Capability Map/CAPABILITY_REGISTRY.json",
+      "sha256": "af0610bd23d74f83ec0dc7350f93b3313ef22f05c1bf36db3e8c1d1ba628d075",
+      "sizeBytes": 1665684,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/03 Capability Map/CAPABILITY_SOURCE_SEARCH_RECEIPTS.jsonl",
+      "sha256": "5e9af820a2e5b6e516cb0a889b54e5f74dac1fa3123c0ab76416d267b363610e",
+      "sizeBytes": 2558535,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/03 Capability Map/REQUIREMENT_REGISTRY.jsonl",
+      "sha256": "cc30bb04968f197dece68295e80419ad6a9f9cf427a3e2a9990a25b6f5b11b0b",
+      "sizeBytes": 2515816,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/03 Capability Map/REQUIREMENT_TRACEABILITY_MATRIX.jsonl",
+      "sha256": "e120c24419fa5f3f40bba4a7a621711fd9d371eb9b55b90ff7f2080df39c9cde",
+      "sizeBytes": 1215264,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl",
+      "sha256": "12ffd1fa6d9247e8d33b08d81fabf4525f2555e150b5e253a7152de45d0ffe62",
+      "sizeBytes": 1174448,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/04 Exact Location Registry/CHANGE_TRACEABILITY_MATRIX.jsonl",
+      "sha256": "6477eacfa053a2b706bf6bfbcaf69134100047b88abbfb0935dd3368d72fb981",
+      "sizeBytes": 1571074,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json",
+      "sha256": "67a0d0ca3ef21539cdae6328753a1ffa3b6dce98be4ddf3d471eff0104708570",
+      "sizeBytes": 73071489,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/04 Exact Location Registry/SYMBOL_REGISTRY.jsonl",
+      "sha256": "74de9b3fe3e49a97499fdc9b9092f48168fb3db70103d4f7ac8086dc4f40eb1c",
+      "sizeBytes": 11654860,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/DEPENDENCY_EDGES.jsonl",
+      "sha256": "eab3792a90c7744b5c5d8782ad34796cd0eb48c2f828da2671a861fb0b2d0433",
+      "sizeBytes": 114232612,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/CAPABILITY_DEPENDENCY_GRAPH.json",
+      "sha256": "1e7afbbc9c6ea93d9b24e9c881e5cf3a233ee00cab98e679193b917560034e17",
+      "sizeBytes": 3280154,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/CORE_RUNTIME_HOTSPOTS.json",
+      "sha256": "c4db2ebbac34f9c5edd181daf5008471801a4ee7863d8b6d8fcdde95b1368ecd",
+      "sizeBytes": 41691,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/EDGES.jsonl",
+      "sha256": "22111d28fa7e0ea4b6c2b3c779ca2261bc7a6f4e6da844ebc1b0557fd624ed27",
+      "sizeBytes": 112287175,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/EXCLUDED_SYSTEM_GRAPH.json",
+      "sha256": "7f1f646a6e90fd01e0bc24502547097bfcb7618778cec3e852a39380f93d0f21",
+      "sizeBytes": 5454150,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GENERATED_CODE_GRAPH.json",
+      "sha256": "9cd0b06972496b7b4205038c5dce1615a51be5e5637d165dee924f17cca4c5f2",
+      "sizeBytes": 6362481,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GENERATED_CODE_PROVENANCE.jsonl",
+      "sha256": "36a1a94f2e4ee75e377c535c740b1807411ea634c759180eedc1d77e1cc5ad84",
+      "sizeBytes": 1603712,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/graph.html",
+      "sha256": "ccf333573f5b35826e469120fab9cae40856e096fe7f1feffe9e22fd7515f006",
+      "sizeBytes": 45985814,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/graph.json",
+      "sha256": "6219df6f05d7d749099678a25a986bf5d1ba94a3e48553a0fb60ce85f8beae68",
+      "sizeBytes": 58713414,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_BUILD_EVIDENCE.json",
+      "sha256": "5734adb2c05fcd885aec1f24c7903d0c9be9924490992a63776b7c8a5f6db2a8",
+      "sizeBytes": 8323,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_HEALTH.json",
+      "sha256": "7cf54013463525bc4e3b508c288e97e0ff7d75e629642647301dcab94a89bd1d",
+      "sizeBytes": 641,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_INDEX.json",
+      "sha256": "c7bb8e869db29413afeb1b7bcaa97703641ab4b5e9d9d41f47c52006eebf5ce0",
+      "sizeBytes": 2247,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_LAYER_MANIFEST.json",
+      "sha256": "a20fe55f2ea956b3965f15d1869252377c5ed8717f549673cb0bfa722151d5ab",
+      "sizeBytes": 1430,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_REPORT.md",
+      "sha256": "1743cd84b716c0064f84660b454bf9f3e38ec5172de6e6f8bd8d8e7a3eed466f",
+      "sizeBytes": 409,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
+      "sha256": "765f55c2164a89889fd442dcae359758278e8a1e0fb47d53f3a2fa267b92eaa1",
+      "sizeBytes": 4335,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/MIGRATION_COMPATIBILITY_GRAPH.json",
+      "sha256": "4ca41029595666f9626dec0216788a0f271b955c686e02e6644d9398223d801b",
+      "sizeBytes": 1794517,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/NODE_ID_REGISTRY.jsonl",
+      "sha256": "d6c8ea6632806c459a52edafeb70708ee08351df8fae339d909722fbd82e70c4",
+      "sizeBytes": 18776236,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/NODES.jsonl",
+      "sha256": "ad815d0319aee13c16fec2b94e48f18ff80ce1f3ee20ec9ed5745e5d2f888ceb",
+      "sizeBytes": 44338971,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/PACKAGE_DEPENDENCY_GRAPH.json",
+      "sha256": "ac8f2d46440d1fd4f9885672df2a8e25d85655fb9abc985dd33a6d0d3f5e10e7",
+      "sizeBytes": 23533570,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/RUNTIME_REGISTRATION_GRAPH.json",
+      "sha256": "df96b3c43719ac2718ef9d3b1d8a83314b15e96b19b1fba577d08ffecd6eb6e7",
+      "sizeBytes": 31902079,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/SELF_LOOP_CLASSIFICATION.jsonl",
+      "sha256": "846b8bb19428e6cde202e1c99823adcc381216db9075ed0aeea211503f245339",
+      "sizeBytes": 1338,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/TEST_COVERAGE_GRAPH.json",
+      "sha256": "055905f3193709257cc76cc76e3d41d99ccfe28d855c7350893f044d704d5d20",
+      "sizeBytes": 15074114,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/VENDOR_TOOL_GRAPH.json",
+      "sha256": "8f5b0cbb55e8a4360bb1e20bfac77e9355e68586c44bc3a50d59f5badb98c1d9",
+      "sizeBytes": 7941,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/UNRESOLVED_ENDPOINTS.jsonl",
+      "sha256": "9230e41329ef6f677ff70d9c0c9b431e07688c0acacbf84b2518963456089aab",
+      "sizeBytes": 48659710,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/08 Cleanup/DELETION_CANDIDATES.jsonl",
+      "sha256": "b37cb016789d97994135ae91035064ba75b1ec4574c3b853c9826d6cf4e8f035",
+      "sizeBytes": 1860253,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/08 Cleanup/DELETION_RECEIPTS.jsonl",
+      "sha256": "f827e710a453a86afce4c817fe949ee5d93f9d72a1ae07327e51a93a28eb213b",
+      "sizeBytes": 798,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/08 Cleanup/PONYTAIL_AUDIT.jsonl",
+      "sha256": "38b49c71665f54b68a00bb544620c5dde7cf4e0961d4a5cc74172b51f8a092a2",
+      "sizeBytes": 17759,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+      "sha256": "f7fbe948418f5e826bbbe7b385cf3138502723dde17be842b977507f80edc282",
+      "sizeBytes": 1284917,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/09 Implementation/TRANSPLANT_RECEIPTS.jsonl",
+      "sha256": "9a8f67f4cce84718f5d26c855d3d5dd723c4fe077209185439e8a4c23cf663d1",
+      "sizeBytes": 885,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/10 Verification/TEST_RECEIPTS.jsonl",
+      "sha256": "dae65efa41640e514059da1f5683890fa4b52e24e93bb985de397ee860458e16",
+      "sizeBytes": 577,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/bootstrap_graphify_v2.py",
+      "sha256": "b54a05c2a807807a0dd2b8517985c22008a8a48426adaa8d0e7729bb44c7b7a2",
+      "sizeBytes": 13625,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/build_graphify_graph.py",
+      "sha256": "1f955273a725e07a77af8096d1f7578a764f28c46e774e4927fe2d8381256d5a",
+      "sizeBytes": 372,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/build_graphify_v2.py",
+      "sha256": "30dab78a6f6ff25e37636d7ffabaecee6c294ca55f8c340d6beefda61816fdbc",
+      "sizeBytes": 203958,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/CAPABILITY_MATRIX.md",
+      "sha256": "d2d0f935d0443c9f019a2184c0b6a7faf076fecf7a25c6a45a296a812a6eaee0",
+      "sizeBytes": 407,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/CODEBASE_MAP.md",
+      "sha256": "d6107cfa1f01a7efc17c425fa5975132451df165cc5be96edcabc15fcb43d165",
+      "sizeBytes": 472,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/COMPLETION_TRACKER.md",
+      "sha256": "bcdbadc08f1fde522710934133135d31081dee54afe630fc3eb07b50a86905c6",
+      "sizeBytes": 602,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/execute_finalization_repair.py",
+      "sha256": "a813f739f48e2712032a928a1f69b00b6dfcdd508a728d82945ad38a1343b8a2",
+      "sizeBytes": 26121,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/FINAL_HANDOFF.md",
+      "sha256": "e4ee67d0766ca5e2f7b708744bbf8e9e22f628835fd9855c03df482a6ae20ab4",
+      "sizeBytes": 555,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/FINAL_RELEASE_RECEIPT.json",
+      "sha256": "9b26c3dc6ef203dda3f9157613c8497965d145f20adbfb6ef897ef5d96b041fe",
+      "sizeBytes": 1767,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/finalize_graphify_v2.py",
+      "sha256": "1009d97ad138c3e2d8f7341f8d2461d7af1c800fe6b96635307dfce71ad867ed",
+      "sizeBytes": 123060,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/finalize_product_expansion_review.py",
+      "sha256": "d82a6f990896cb9759834d855d89898cb9581c87c27b0e67e45d91c28e8c691f",
+      "sizeBytes": 27221,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/finalize_repair_and_review.py",
+      "sha256": "1f653c8a6c3cff834593e5446c830ec026bea4193e47c9d9df037b89d43ac25e",
+      "sizeBytes": 6596,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/FOLDER_TREE.md",
+      "sha256": "61c1ae3b8dfedec3b8b903b181ed8162780064f1ea1c8f26e4e4ede72aa29f6e",
+      "sizeBytes": 189,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/generate_completion_artifacts.py",
+      "sha256": "e1d7f5b3df001a010ff04f7db0b30b61979e9f8a604d83c79c045ad58ffb2346",
+      "sizeBytes": 22862,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/generate_product_expansion.py",
+      "sha256": "cb61bd4275658e9e57bbaa1a42cfd9e82c6ec49ba512c39060580541159ccec6",
+      "sizeBytes": 167910,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/generate_product_expansion_baseline.py",
+      "sha256": "96fd9da023232a22819663a51b9d2bcd4a829ff4b0e0123bfe5ccecbf00e270a",
+      "sizeBytes": 15123,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/generated_provenance_v2.py",
+      "sha256": "c4ef942d52a29b1c2decdcd428b22d22681a0f6fbbd428557f53e55388b72432",
+      "sizeBytes": 16854,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/GLOBAL_VALIDATION_RESULT.json",
+      "sha256": "c0b013ddd06d61fb1a9add2d342ba62eb65f1a9901049b3f7c91fcdd33c2881e",
+      "sizeBytes": 9217,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/GRAPH_BUILD_RUNS.jsonl",
+      "sha256": "6361935e70f0c584cbeb9c33a67496bf616773c2ddfbf5128afe7c64cc281c68",
+      "sizeBytes": 2860,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/graphify-out/graph.html",
+      "sha256": "ccf333573f5b35826e469120fab9cae40856e096fe7f1feffe9e22fd7515f006",
+      "sizeBytes": 45985814,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/graphify-out/graph.json",
+      "sha256": "6219df6f05d7d749099678a25a986bf5d1ba94a3e48553a0fb60ce85f8beae68",
+      "sizeBytes": 58713414,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/graphify-out/GRAPH_HEALTH.json",
+      "sha256": "7cf54013463525bc4e3b508c288e97e0ff7d75e629642647301dcab94a89bd1d",
+      "sizeBytes": 641,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/graphify-out/GRAPH_LAYER_MANIFEST.json",
+      "sha256": "5366495e9411136210bea6dd9d30cc6aa571bc30956f4675fb48ef677a4c4d11",
+      "sizeBytes": 1735,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/graphify-out/GRAPH_REPORT.md",
+      "sha256": "b55b7f0368fc4ae9e6e217f581722bb219d0734d2aac94a9ee521fd46a6c4519",
+      "sizeBytes": 4274,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/graphify-out/manifest.json",
+      "sha256": "d5d526492c765ef28b0be961ee47d51b4a4ad7e406ebfb97a7b96d5396e124b4",
+      "sizeBytes": 664,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/GRAPHIFY_FINAL_AUDIT.md",
+      "sha256": "42e72e3df17b7d7ab26319a6643faa32ed178095293879c8a8c0589fb4f90ca7",
+      "sizeBytes": 874,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+      "sha256": "c7e8d7bb0de74d44b037815a35dfd38161c446b81f44f65baefab2491afd5cf3",
+      "sizeBytes": 35462,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/Historical/graphify-v2-repair-20260728T095646/GLOBAL_VALIDATION_RESULT.json",
+      "sha256": "d74c241dae97ad56dbdc4ab8fcac4c9cc320e86d38c00efa1b08f133b0dfb842",
+      "sizeBytes": 9169,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/Historical/graphify-v2-repair-20260728T095646/GRAPHIFY_MAPPING_RECEIPT.json",
+      "sha256": "17d50fbafb0337f673b216d248d7c52983c8eeedd5b8e6b79532e51785e817fd",
+      "sizeBytes": 15275,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/Historical/graphify-v2-repair-20260728T095646/status.json",
+      "sha256": "54ca5c8bd9599d25b578dad47895a733b7b9298e0531b71fe657ec98d5405681",
+      "sizeBytes": 1388,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/Historical/graphify-v2-repair-20260728T095646/SUPERSESSION_RECORD.json",
+      "sha256": "7847036905453a9ad77be69f0409bc634bd7cd583019424d727014c27e38432e",
+      "sizeBytes": 1312,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/product-expansion-finalization-final.log",
+      "sha256": "90537163322e15f3c57f8d0f32a433c275fab58799344e713e4fa0a9fb227ae2",
+      "sizeBytes": 966,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/product-expansion-finalization.log",
+      "sha256": "90537163322e15f3c57f8d0f32a433c275fab58799344e713e4fa0a9fb227ae2",
+      "sizeBytes": 966,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/product-expansion-generation.log",
+      "sha256": "3bbe1b704d28cc16b753099d7892e17356b656d38eebd3c7a2c52b1edd963e22",
+      "sizeBytes": 7312,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/product-expansion-validation-final.log",
+      "sha256": "fc6d5b3d8f07def86df15a002b0cb4e8827445482de921342ff119ffa9b4f193",
+      "sizeBytes": 8896,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/product-expansion-validation.log",
+      "sha256": "be3a670dc0238c068bb1f99ead6696de11e7162408015f4f8e0dacf9f2192407",
+      "sizeBytes": 8240,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/PRODUCT_EXPANSION_PRIMARY_FREEZE.json",
+      "sha256": "47e8ebb69ca07089afdb2fec15c0eeba1a12811878990c8d2bddf3e25eeb0aa0",
+      "sizeBytes": 8925,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/product_expansion_spec.py",
+      "sha256": "a3145f2211465afdc703fba944a66d185da0d9eb173ad23eb97ea5c485cfca91",
+      "sizeBytes": 73918,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/PRODUCT_EXPANSION_VALIDATION_GATES.json",
+      "sha256": "20b514b8d149ba07bb2aadbac9ce9f511b9d96b0aacd7d738b013aa735cead6f",
+      "sizeBytes": 2482911,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/repair_v2_common.py",
+      "sha256": "c67ccbab0ae6d45099aea480d29412eae056f572e873e6cd94934d0ad42b1919",
+      "sizeBytes": 21870,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/REQUIREMENT_COVERAGE_REPORT.md",
+      "sha256": "faaa99d56b3e52a3db9b011243aca2734262dbde7b09644467f0b8ebb29bd871",
+      "sizeBytes": 469,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/run_ast_batched.py",
+      "sha256": "41ecae023168be4fbd7d7de40f1d08517f839070afacd5225fc026ab2bab5845",
+      "sizeBytes": 25684,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/transcribe_graphify_media.py",
+      "sha256": "f4ecaaeda6840a1755b00f479b615e6b1ba289812ad061264459a7aecbe2e47a",
+      "sizeBytes": 902,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/UNRESOLVED_MAPPING_ISSUES.md",
+      "sha256": "e050dfa1ac0fc5fe64a14a93906a6fda66c6fab6e68934c4eea26f4303e0b11a",
+      "sizeBytes": 208,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/validate_graphify_mapping.py",
+      "sha256": "663c4d356d77e649123a92f655660002e3ff85f77712b9c9bfaf606aaab63400",
+      "sizeBytes": 124513,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/11 Completion/validate_product_expansion.py",
+      "sha256": "e339e07d5dd83378cedee36dba0b5d42207e6ccaef0e49f5cca43fc635a774de",
+      "sizeBytes": 31901,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/13 Agent Swarm/AGENT_TASKS.jsonl",
+      "sha256": "f942eb42e30c2ca0b5b7cae53b81155648349a5596b2c73a31a2ad87ffa06b1f",
+      "sizeBytes": 4937,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/14 AFFiNE Reference/AFFINE_ACTIVE_CODE_PARITY_REPORT.md",
+      "sha256": "19e5095fc64ac065baf3b3caf7976d92040cc5feb5912ce0259d3f8be341c1c9",
+      "sizeBytes": 929,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/14 AFFiNE Reference/AFFINE_CAPABILITY_INDEX.jsonl",
+      "sha256": "c5547d65992425dcca8b26d920f7369f3233961fa2723e5f539d7fbd7bc697ad",
+      "sizeBytes": 1068915,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/14 AFFiNE Reference/AFFINE_PACKAGE_INVENTORY.json",
+      "sha256": "9ced4f4bb46b6fe6ff85f7912e9d327af7cceb39bd2bcd043fdf4c7f5efe33f0",
+      "sizeBytes": 177080,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/14 AFFiNE Reference/AFFINE_PARITY_VALIDATION.json",
+      "sha256": "36f1c196e8192520522c5da87489bca518e0703cb037c686e0a0da0526fb295e",
+      "sizeBytes": 1302,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/14 AFFiNE Reference/AFFINE_REFERENCE_MANIFEST.json",
+      "sha256": "9ed44f87937a19e51241e7e5a1b63840b891d2b9f5a1428e8faff66c38870933",
+      "sizeBytes": 4892,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/14 AFFiNE Reference/AFFINE_TRANSPLANT_CANDIDATES.jsonl",
+      "sha256": "392addecd09a6e240aff5b691ea669a3e4cd05f050849795c143f65a73af15c2",
+      "sizeBytes": 324957,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/14 AFFiNE Reference/complete_reference_mapping.py",
+      "sha256": "9d9ad3f059bc024dcac7eb9a410e06a80dbcbfed9e0e081ff10141f6c93552a7",
+      "sizeBytes": 34448,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/14 AFFiNE Reference/OFFICIAL_SOURCE_RECEIPT.json",
+      "sha256": "4be690946578ed55995d3c3f0ec061765ed42b56324066017b0f6d1314131478",
+      "sizeBytes": 3064,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/14 AFFiNE Reference/PRODUCT_EXPANSION_SOURCE_AUDIT.json",
+      "sha256": "46456e76ff72a7e48cb3cf8703db67869adba318de1e8086229bc05a8229f0ed",
+      "sizeBytes": 35420,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
+      "sha256": "62519be4eff761b775de7c9d687f78a560e047240c8ca14e5d976f127349fd8a",
+      "sizeBytes": 91393,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/Master Plan/02-EVERYTHING-WE-ARE-DELETING.md",
+      "sha256": "2bb940586e484d79eca238ec5c13e960c711c0164123d8f172fd3eadab57502d",
+      "sizeBytes": 69874,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    },
+    {
+      "path": "Graphify/Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md",
+      "sha256": "d9fa9a2fcd0b783db34c17f5e92bec793d2b53e88d902870c6c2ebe1f5a546ca",
+      "sizeBytes": 820661,
+      "provenanceBindingSha256": "655b72391dc45778135aff9654b8d461bc9d7d4ae05e4bb87e8a89fc1dce281b"
+    }
+  ],
+  "selfHashPolicy": "MANIFEST_EXCLUDED_TO_AVOID_RECURSIVE_SELF_HASH",
+  "excludedScopes": [
+    "Graphify/00 Execution Control/AUTHORITATIVE_V2_ARTIFACT_MANIFEST.json",
+    "Graphify/00 Execution Control/Generated Tool Cache/legacy-v1",
+    "Graphify/00 Execution Control/Generated Tool Cache/v2/*/ast/history",
+    "Graphify/00 Execution Control/Generated Tool Cache/v2/*/ast/CACHE_STATE_EVENTS.jsonl",
+    "Graphify/14 AFFiNE Reference/Incoming/**",
+    "Graphify/14 AFFiNE Reference/Reference Tree/**"
+  ],
+  "legacyAndCacheHistoryPolicy": "PRESERVED_NON_AUTHORITATIVE_NOT_INCLUDED_IN_V2_ARTIFACT_HASH_SET"
+}

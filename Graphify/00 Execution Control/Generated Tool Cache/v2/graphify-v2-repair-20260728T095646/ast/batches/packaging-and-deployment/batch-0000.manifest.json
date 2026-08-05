@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "mindroom.graphify.ast-batch-manifest.v2",
+  "runId": "graphify-v2-repair-20260728T095646",
+  "extractorName": "graphify.extract.extract",
+  "extractorVersion": "graphifyy==0.9.28",
+  "extractionPolicyVersion": "mindroom-graphify-v2-layered-directed-2",
+  "codebaseBaseline": "135fbaacd841e5e4c271b046eda4b1613da83122e08c464904d395cd93ae5a04",
+  "masterPlanHashes": {
+    "01-EVERYTHING-WE-ARE-KEEPING.md": "9EBC9C47CF89F98F19CCB039D26031CD7D85E466B57C3A38FD3338EAC618D2E0",
+    "02-EVERYTHING-WE-ARE-DELETING.md": "9065986168858C42E6E4CA7C7050E189265F619C9CB0C902F9BE276A99C08043",
+    "03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md": "8AA9DAB09A432361B6CD0CEB26F6911AAF36BAFDE8ED5634C9A687A4774D2D49"
+  },
+  "rootPath": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Codebase",
+  "orderedInputFiles": [
+    "Codebase/.github/actions/deploy/deploy.mjs",
+    "Codebase/packages/backend/native/src/entitlement.rs",
+    "Codebase/packages/frontend/apps/android/capacitor.config.ts",
+    "Codebase/packages/frontend/apps/electron/forge.config.mjs",
+    "Codebase/packages/frontend/apps/ios/capacitor.config.ts"
+  ],
+  "inputFileHashes": {
+    "Codebase/.github/actions/deploy/deploy.mjs": "29ed0f8965057f33e3074a5a4ec17606400c0ec6c5d4747e6642c8ae0e0c03a3",
+    "Codebase/packages/backend/native/src/entitlement.rs": "61c7269a8a908e1db6fb5f3da7493247d3b522b1dac8966c193a8e015c8b83e3",
+    "Codebase/packages/frontend/apps/android/capacitor.config.ts": "0792d4a487015da6569c0355a83515c2dc6887accd67b2955af9f34c4b0d88de",
+    "Codebase/packages/frontend/apps/electron/forge.config.mjs": "58f4e7063be5b5a3a0cee6fca4643ffcd328ea8819b350c3d14f5c9b21021a43",
+    "Codebase/packages/frontend/apps/ios/capacitor.config.ts": "ee98e90eeb9119bdcf984a08bffe2661f1a7d7e8ebfc8d8e50c311570e800f5c"
+  },
+  "configurationHashes": {
+    "Graphify/11 Completion/run_ast_batched.py": "d0e2eb01009ee35d660f15305d30406aa3cfebe08689dfbefe68ca1cf52aabb8",
+    "Graphify/11 Completion/repair_v2_common.py": "c67ccbab0ae6d45099aea480d29412eae056f572e873e6cd94934d0ad42b1919",
+    "Graphify/01 Corpus Inventory/GRAPH_LAYER_FILE_REGISTRY.jsonl": "ab1ede27b1cce4c4460b287808aba76609705e0f8246e69a46c1ad5c360954a3",
+    "Codebase/package.json": "6ce694262f8b3df1ca4bcf54acac62d60ef4bf7784419f1bfefb9858077e4ddf",
+    "Codebase/yarn.lock": "4d00a2e861c27561ebd229f7d90bd4f03e2d786fdfe8ba0eb289cca0967cb991",
+    "Codebase/.yarnrc.yml": "ccc952998c861a4979579f0ee46db8188d2ff531c015bedea4da59f8f26a0c63",
+    "Codebase/tsconfig.json": "ab93b55858d2328b14aecc5d7c7477d108078fd92b1fa16941e3fabfa1eb2af9"
+  },
+  "layer": "PACKAGING_AND_DEPLOYMENT",
+  "batchIndex": 0,
+  "batchSizePolicy": 400,
+  "batchId": "MR-AST-BATCH-V2-30d993221973ec0fe7799efd",
+  "inputFingerprint": "dca6d8d75a81c2bc64e039270a99a6dd5ab70abbd8f14e8802c5460df080e6ca",
+  "batchOutputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/packaging-and-deployment/batch-0000.json",
+  "batchOutputSha256": "d667d429fdf0e06f1b29ac1a0425e9cdd46c5b857fe47d252d8febaf447e6d9c",
+  "nodeCount": 74,
+  "edgeCount": 261,
+  "startedAt": "2026-07-29T03:58:13.051Z",
+  "completedAt": "2026-07-29T03:58:13.520Z",
+  "status": "COMPLETE",
+  "inputTokens": 0,
+  "outputTokens": 0,
+  "cacheDecision": "REUSED_AFTER_FULL_VALIDATION",
+  "cacheInvalidationReason": "manifest field changed: batchId",
+  "reuseValidationCount": 1,
+  "lastValidatedAt": "2026-07-29T03:59:19.683Z"
+}

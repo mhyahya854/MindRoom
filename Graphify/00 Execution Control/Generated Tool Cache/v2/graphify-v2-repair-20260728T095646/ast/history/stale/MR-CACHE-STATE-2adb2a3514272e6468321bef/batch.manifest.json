@@ -1,0 +1,2023 @@
+{
+  "policyVersion": "mindroom-graphify-v2-layered-directed-1",
+  "extractor": "graphify.extract.extract",
+  "extractorVersion": "unknown",
+  "runnerSha256": "2adcfbd68a8a4e2b407bba8c37b6f81fb5b31a74fa570e70359e0283bf7f33ec",
+  "classificationResolverSha256": "675743d8d1e0f47c12ac4b2678077ed0ee0f06c0ccb6755505ffdc22bbfdaf55",
+  "codebaseRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Codebase",
+  "layer": "AUTHORED_RUNTIME",
+  "batchIndex": 6,
+  "batchSizePolicy": 400,
+  "files": [
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/utils/dynamic-schema.ts",
+      "sha256": "1c402bfc72b85120daab9830fd85f2c57e73db0f356758c2e15bd8ec8807a7f4",
+      "sizeBytes": 687
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/utils/embed.ts",
+      "sha256": "0584a04074bf206030b60bff40f6d6d0e502cfbe1e9cdaf806b8368997aeb821",
+      "sizeBytes": 1579
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/utils/guard.ts",
+      "sha256": "f70a368de47bc916a6731f8771ff125004b66540736a0eee61088ae6f68ea168",
+      "sizeBytes": 975
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/utils/index.ts",
+      "sha256": "bd8516cd045dae58ceccf4341e941b5048518a6622ae93f73f9e03fe82dea09f",
+      "sizeBytes": 372
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/utils/inline-range.ts",
+      "sha256": "291d8395c7c921a626a09e6b3db0fa217d81b68dd16082b9217c9da2a8617dbe",
+      "sizeBytes": 2013
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/utils/point-conversion.ts",
+      "sha256": "fc7fb89272ab18a8d3c3f27661cfff91099853b578b0706beddb5d80460393a3",
+      "sizeBytes": 5949
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/utils/query.ts",
+      "sha256": "ba426cf5b5a6bb55bb78b3d4a4209059ed830defed3e4834ae4bbed285ccf332",
+      "sizeBytes": 594
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/utils/range-conversion.ts",
+      "sha256": "ea436df9b951ec973e40c3894a8aa3b812e8b002d8592965e29a39cd68f75d88",
+      "sizeBytes": 9029
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/utils/renderer.ts",
+      "sha256": "bfe3eee65a87b220a9e381fff51155d78f4103896acd9db68513b6509da6409b",
+      "sizeBytes": 545
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/utils/text.ts",
+      "sha256": "65c648ebdf179106b7d01f84e076bba2deb961c84f68b1514790ab684150fe3b",
+      "sizeBytes": 3034
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/inline/utils/transform-input.ts",
+      "sha256": "529bd6f0b4e79f3744f9aa50a1b979dd32ea3fbcf9d7fc39239cc374f5f7aa3c",
+      "sizeBytes": 2168
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/scope/index.ts",
+      "sha256": "b36cd4f33d11a56fe3d0e224729dd55b4e2d0e799b80a98985e1892d4ef230f4",
+      "sizeBytes": 32
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/scope/std-scope.ts",
+      "sha256": "b2bd3cb42503901e24c692babb1b8f826604f58e105d5e0d98090bf9ddad7dcf",
+      "sizeBytes": 3932
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/selection/block.ts",
+      "sha256": "722e96b2348610ab620840ed6f5c7b47d297542c178df93d272b7b5080a55b5d",
+      "sizeBytes": 823
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/selection/cursor.ts",
+      "sha256": "15ebcbd13b2d20d22ad2e29d7c286315612b52c51dd90d4f423a7b09414829ba",
+      "sizeBytes": 1019
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/selection/index.ts",
+      "sha256": "0b8e4a57e2f8a142621e9e04a281fc3b51f7bce42e471b73a299ec5d18601f9d",
+      "sizeBytes": 114
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/selection/surface.ts",
+      "sha256": "71e798ff2ba754e71b21d48d0fdfa14445bc16e108b01e26cf75824109adac1b",
+      "sizeBytes": 1787
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/selection/text.ts",
+      "sha256": "ecf2200bbad6ac1e889d1d258102090a7a8122862fce807cfe86263285c2c221",
+      "sizeBytes": 2537
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/spec/index.ts",
+      "sha256": "41cb698b38616ce25ca3313f3ee29ea0f86f91590a3987f99f8ba457f477beea",
+      "sizeBytes": 27
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/spec/type.ts",
+      "sha256": "03b7b532304576f849ea91f8a675fd37307f91b4ed3f33e067660a4e0fd58a01",
+      "sizeBytes": 231
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/utils/fractional-indexing.ts",
+      "sha256": "86dde2a802dbb2e3203a426f4aca42c8a3aee79da2b002749e432b3d0749f713",
+      "sizeBytes": 2308
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/utils/gfx.ts",
+      "sha256": "fb9bcf01afb362069b3aba59d9b1be5aadace8227a0b6fa2cc678ae3853e0705",
+      "sizeBytes": 750
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/utils/layer.ts",
+      "sha256": "216db369104a9f3c54147de695fd85194d45a70007d485dbe36977eb680a3155",
+      "sizeBytes": 4279
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/utils/tree.ts",
+      "sha256": "e5668b929b586221e2dbaf6ef6a36a69a7310a5838557939b18acffe4e6ccd1b",
+      "sizeBytes": 4726
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/view/decorators/index.ts",
+      "sha256": "8322fca67576e17711e9b08025b90c4ebd8016c6f1e7fe7c46092c530352e217",
+      "sizeBytes": 63
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/view/decorators/required.ts",
+      "sha256": "2092794ede95949fd07ffb6c385b071694d760a66c42828d8d4b6bdd653b74ca",
+      "sizeBytes": 2098
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/view/element/block-component.ts",
+      "sha256": "c2736ae004fe2d3c6d2384e64b2d5d180777d60ba88ad810f2b346954baff013",
+      "sizeBytes": 8756
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/view/element/consts.ts",
+      "sha256": "95504108ccb2b596b434f6e26384eb9d3004cd95d2c0ae08fb5884282074c87b",
+      "sizeBytes": 453
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/view/element/gfx-block-component.ts",
+      "sha256": "8d00245e9024fa8f1af3bcdf7c4825bb156345911089a3ddfb0234e5258f7b64",
+      "sizeBytes": 9359
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/view/element/index.ts",
+      "sha256": "dbdf10dbc2a5ad6f8da1397f9fa3eeb2b1ff240c5a205b023785864b86a088c4",
+      "sizeBytes": 220
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/view/element/lit-host.ts",
+      "sha256": "a7c0795a869192fe25e6359a7780b6f589ddf041a2c879d97b99a0fdb782cc2f",
+      "sizeBytes": 6044
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/view/element/shadowless-element.ts",
+      "sha256": "5c8c483087ce52b70f94d10f21319030a94e60cbf8d2f4b3cae47541ed5db6fa",
+      "sizeBytes": 3388
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/view/element/widget-component.ts",
+      "sha256": "1756890ccd1f9e466f77b5bb3dac4ec9090a1435eea208fedf1b05ef0edf89ab",
+      "sizeBytes": 2324
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/view/index.ts",
+      "sha256": "751f37f01434da9b0567f8dae2b31e2591e13abefc5f4f159683196454e98e1e",
+      "sizeBytes": 108
+    },
+    {
+      "path": "Codebase/blocksuite/framework/std/src/view/view-store.ts",
+      "sha256": "e52c58c8c9d44670188202f4ac82a729e1056781324e1d027c756857644a6cf3",
+      "sizeBytes": 3599
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/adapter/assets.ts",
+      "sha256": "387c6b2386872194ea28eb932301f170c4ef682a703558cf266efa78249bd71c",
+      "sizeBytes": 4406
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/adapter/base.ts",
+      "sha256": "4dc66398f97dd4b0863949664899a61fe0448ccd9662db1c7845da6ecb0e6c28",
+      "sizeBytes": 8356
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/adapter/context.ts",
+      "sha256": "c3271c4bcaa69137cb7258b289d338db1b11e18617221b441e8d13b0581acfbe",
+      "sizeBytes": 2681
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/adapter/index.ts",
+      "sha256": "6858873b7fa2b52852a6efbe08a5639785c40fd2c6cd219e004c05e399bda495",
+      "sizeBytes": 86
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/consts.ts",
+      "sha256": "4c2be46fc66a76bbe940534d813a1a8f29c6e47cd3bc59846c0f43f15d0af673",
+      "sizeBytes": 317
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/extension/extension.ts",
+      "sha256": "2b7b7db70aa504b20662552c4e0955ca4e5dd6fbad488f9c6e1600443e5c7d99",
+      "sizeBytes": 3872
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/extension/history/history-extension.ts",
+      "sha256": "ee272298f866d4dcd31d4a91c71b10e2e47374a3b7e7d8fdcf08fcef3a064d54",
+      "sizeBytes": 2059
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/extension/history/index.ts",
+      "sha256": "3c1c1eaec81a9c3f0a39d4f3f852549373d5dc5c2f8dc6f3a35f883794914686",
+      "sizeBytes": 37
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/extension/index.ts",
+      "sha256": "198ff5bf818120b7f08a2c1f94dde6b5daec0d9e2b0d0799988dcb0f02fb20ff",
+      "sizeBytes": 175
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/extension/schema.ts",
+      "sha256": "e71792e34efa7ca57c58e6c29b6e9dbe5a092a61b05541d0b4e623b9669d584f",
+      "sizeBytes": 502
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/extension/selection/base.ts",
+      "sha256": "dc3e8f621f7a770328726fceece7fb0710d18c12504a8f4b8f937b1e30c8fa7d",
+      "sizeBytes": 1079
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/extension/selection/identifier.ts",
+      "sha256": "bcaf106ffabae00bf0a1db9635529e17598b1a89b27e765a088cb6aeed2ff8c9",
+      "sizeBytes": 472
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/extension/selection/index.ts",
+      "sha256": "e36b7acf4d4d49168768365569d482062d3a0c1357cca6c799e8dd4caa36207e",
+      "sizeBytes": 118
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/extension/selection/selection-extension.ts",
+      "sha256": "23db72befc88b06ba25e4cb496b7d75a5881cacc7842565e6625abe3aff5b917",
+      "sizeBytes": 6037
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/extension/selection/types.ts",
+      "sha256": "7695735c8041b826da8404e55fd9449502c1c4621b3006e0c4539da841b6cc2a",
+      "sizeBytes": 236
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/extension/store-extension.ts",
+      "sha256": "9353fef0484e07c0cdf61a5f43fd4f138328c027d330680faaf761c6f007bc79",
+      "sizeBytes": 1591
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/extension/workspace/doc.ts",
+      "sha256": "5371485445329f98e1e5c4e4c552b303f3c35df2d0669c29a299eca6303d0ec5",
+      "sizeBytes": 1001
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/extension/workspace/index.ts",
+      "sha256": "b213c2d9d698db8baac153f57ed4e2dc04bcc20de2877a2aec4857e4d84ee076",
+      "sizeBytes": 86
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/extension/workspace/workspace-meta.ts",
+      "sha256": "dbc084d8f20173519becf6ee4eae7b30f3bf5232c2ce2acb645f0c39cd342f22",
+      "sizeBytes": 857
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/extension/workspace/workspace.ts",
+      "sha256": "a07ca254ef1aafa2f636892a0e9ee4370e8e2852ca2ac3259d9cdce6e713fd9c",
+      "sizeBytes": 830
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/index.ts",
+      "sha256": "eaea9362ee7dcb9dda06221b55e8f6652541b134da4f285633f3a527e80b77c3",
+      "sizeBytes": 712
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/model/block/block-model.ts",
+      "sha256": "2760d4b0704c016de66c193bc403f341082577f614f9dddde85c004c9d2a737c",
+      "sizeBytes": 3636
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/model/block/block.ts",
+      "sha256": "beda9dfe26ee64d54c4023e145cdc2fb952e4ce58ac6f05640ed5ba0082369e1",
+      "sizeBytes": 1608
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/model/block/draft.ts",
+      "sha256": "eb21b375a4af2a0e67ab6cb15a634b2a18bc18f20ecd0497e3fd25e335b67b0d",
+      "sizeBytes": 998
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/model/block/flat-sync-controller.ts",
+      "sha256": "818a4a1174b3777481c3564ab889404a1141e84357906758843cba0dbafd6beb",
+      "sizeBytes": 4144
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/model/block/index.ts",
+      "sha256": "e7db5c98471b4a615bbc99edc5ec07473784a5e4eb036411b1d2a1fb7440fa83",
+      "sizeBytes": 144
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/model/block/sync-controller.ts",
+      "sha256": "fb84ec22a976b258460f098b3a91c1c73b443da8595e6333d555d051c31efd20",
+      "sizeBytes": 11373
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/model/block/types.ts",
+      "sha256": "eed446cf682f0b5ec72eba338a93e029796953feba4c9f5044cdb8e61bf8bc06",
+      "sizeBytes": 634
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/model/block/zod.ts",
+      "sha256": "3c2f82580bfd0a2f79cf339a510ef86ff55d5882c0c838d1d7250841af68099f",
+      "sizeBytes": 3059
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/model/index.ts",
+      "sha256": "94d5924e0e9547f6c9138f46ade06bf857db5b565a1a40691e4008620e68b867",
+      "sizeBytes": 106
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/model/store-container.ts",
+      "sha256": "5c9d708d8ab326461bbc05b52791d62b486e5fa960081550d6979957efd85630",
+      "sizeBytes": 2079
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/model/store/crud.ts",
+      "sha256": "f95f7b87933bad2bc32391313696290e34a7b73d6f655263ea52d89ac4e14b58",
+      "sizeBytes": 11146
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/model/store/identifier.ts",
+      "sha256": "14a9ba8f974a58698637811bca953adad41e6885ce9dcc33b74f118b85eb9986",
+      "sizeBytes": 163
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/model/store/index.ts",
+      "sha256": "4de6813a4ad71c489ef63684d10397cffa712d0ddfb1b62b743955e1d57d9798",
+      "sizeBytes": 89
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/model/store/query.ts",
+      "sha256": "3f034b5fe41ea1eb72747c31281f4a56cf4d4d6dc247898e6ac5a18ba43656a1",
+      "sizeBytes": 2392
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/model/store/store.ts",
+      "sha256": "a8bb5d2f61d9c562d2aa34a09b32cd7e78130a08da94a0eae4da8f41a7a950eb",
+      "sizeBytes": 30968
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/model/store/utils.ts",
+      "sha256": "11b522889ac0c08efe0bde22dd56f00a8578873914744a9e6cbd39a63b253e3e",
+      "sizeBytes": 1007
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/base-reactive-data.ts",
+      "sha256": "14f640edcce1662db7565305a15a915f494196b72f46f6c34bd11862cf2f371b",
+      "sizeBytes": 1710
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/boxed.ts",
+      "sha256": "96cec413cd09ac2f00d84693fdcf6c7c02b27620c39830218912eada6ebc2c15",
+      "sizeBytes": 3407
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/flat-native-y/index.ts",
+      "sha256": "057520df0e9061a4ac210d959663e4d2426226a38c077f7b5e9676f1ba9b14ae",
+      "sizeBytes": 4458
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/flat-native-y/initialize.ts",
+      "sha256": "a562ae05bbf072669a920182e4ac0948455d990dc976aeb9bbcca43db2f8d6dd",
+      "sizeBytes": 1928
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/flat-native-y/proxy.ts",
+      "sha256": "2a5b0d4f1c1a27169edd3492e869676a19d8d1f1c31f4e75388cefa86fca4f64",
+      "sizeBytes": 5011
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/flat-native-y/signal-updater.ts",
+      "sha256": "dc7affe1bda243f7018a2250544150548a1202dacd37a1664b44a3ffa6774b84",
+      "sizeBytes": 1250
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/flat-native-y/types.ts",
+      "sha256": "b7a4983cea0a6403527e5ff4a74c1f65d4aa156fea1a0f891eb17b68e8024967",
+      "sizeBytes": 652
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/flat-native-y/utils.ts",
+      "sha256": "d90f111177ee9c04eeb6dd2da519ae6644b5d4ec9c1d212ec8ca1dbf42878bc3",
+      "sizeBytes": 1211
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/flat-native-y/y-event-handler.ts",
+      "sha256": "5595f13181019fda0d62c64a3e4f2e6f2fa3234d553f62ec2c706aa0f87b3a2f",
+      "sizeBytes": 3117
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/flat-native-y/y-map-updater.ts",
+      "sha256": "fccd8a5ae77f662939b67711f17336b1435543400bd5abcf3815b319c6d398e0",
+      "sizeBytes": 1428
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/index.ts",
+      "sha256": "99ab08361f8ebf29c880042386efe90429163e6dc384a3d1803ba11298ba6861",
+      "sizeBytes": 259
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/is-pure-object.ts",
+      "sha256": "6754ba53e793ac729e6565398a3cacc2d94f1767d131aa407494007722d724b3",
+      "sizeBytes": 269
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/memory.ts",
+      "sha256": "8694b9edaa0d1f2d72e376c6f7beac2677a90393384abcc702dbe3b581492c8d",
+      "sizeBytes": 212
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/native-y.ts",
+      "sha256": "042504384fb10574c66f1e9ce7bb134c93ab14d52dd97610c3ee038c6cb4cef2",
+      "sizeBytes": 2200
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/proxy.ts",
+      "sha256": "b06a41c6d14115eee16c823083fbcd8480c3dbd2da3588172fc0db2fd1c19470",
+      "sizeBytes": 11354
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/stash-pop.ts",
+      "sha256": "319fe463dbb8bc712c14a11b2d984c9021b2ed8652365506f8c4c37733f97825",
+      "sizeBytes": 634
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/text/attributes.ts",
+      "sha256": "c88d552ecb5ff7142c98f5d753c4987df3fac82a38397ee778fe7a9128f7e7b0",
+      "sizeBytes": 533
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/text/index.ts",
+      "sha256": "de24dfe1bb3289a16cf3ddcd40327f85f642e0a0bc391f151523fd26f07c5858",
+      "sizeBytes": 79
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/text/text.ts",
+      "sha256": "4c17f7de6e2c297119ff0d48e797c3eb6adfcd6205461cebae4c5ad527e1f146",
+      "sizeBytes": 12269
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/text/types.ts",
+      "sha256": "83becebc98fdf0fb7d489260a390bd1dd0158d713bfe2f2f0c87db5213e85382",
+      "sizeBytes": 498
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/reactive/types.ts",
+      "sha256": "bc6cceb0a012148edfbf163c220e7a53e64ddcb82e5c8a1bd6896d6b28edf31c",
+      "sizeBytes": 444
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/transformer/assets.ts",
+      "sha256": "5db43fa6359422739a59920f6ee782ac86f26b3ece0bc6d411495ad4356704d5",
+      "sizeBytes": 2688
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/transformer/base.ts",
+      "sha256": "1c586aa27cef4e00d8dc8b7fb4a8c70ec6041f56a979f6be3a803964de45ddab",
+      "sizeBytes": 2248
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/transformer/index.ts",
+      "sha256": "91a517cb5aa753240fab1192f0dc63d50ee5d61a206b99f78443089f96383e9e",
+      "sizeBytes": 184
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/transformer/json.ts",
+      "sha256": "2de003289a0124830b551eb9d085df094d2b011cd833f94bfbfecca8ab6e040d",
+      "sizeBytes": 1311
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/transformer/middleware.ts",
+      "sha256": "d063318b038b6ad3f505ee988c6dafeae5005107395e065cb4e12d00efffb0c3",
+      "sizeBytes": 2381
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/transformer/slice.ts",
+      "sha256": "4cda3bc0c140e48c9d84e72b8fcb3ae5f1e08ed3c74a5d6506afbc08664455a2",
+      "sizeBytes": 860
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/transformer/transformer.ts",
+      "sha256": "11e8cb13844537c68c4d4ed8c7fb6100fdaa067a811e31cc274a5e42e5990ef2",
+      "sizeBytes": 16944
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/transformer/type.ts",
+      "sha256": "1f6da0914287e8fec19be30610cb0b07ede965dcc76c0bc812c9bfb29d9a56fd",
+      "sizeBytes": 1740
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/utils/id-generator.ts",
+      "sha256": "7c07ca645628556b6bb038ba4a2ac7174da5164225e748a47d22d432ee27c88c",
+      "sizeBytes": 309
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/yjs/awareness.ts",
+      "sha256": "868ff0ea4cc5eff7ac9edc398bb8526320c68a3c3ba83a240c8b67d2835516b1",
+      "sizeBytes": 1692
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/yjs/index.ts",
+      "sha256": "31da9e80e256d4cf0c0c004bb294a1e54c2e9ce9b2eb81db8ce353c59abdfaf0",
+      "sizeBytes": 60
+    },
+    {
+      "path": "Codebase/blocksuite/framework/store/src/yjs/utils.ts",
+      "sha256": "1011e2dc27f4277823702eaeb2f067f12c0fe6a92bfdd53fd95227cf16bbe651",
+      "sizeBytes": 208
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/awareness/engine.ts",
+      "sha256": "85900bf3d88cb7fc7e2d8a041fb03721292c9db70a0726a8a7364209c81bee93",
+      "sizeBytes": 406
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/awareness/impl/broadcast.ts",
+      "sha256": "e14cff3343b9f606eb2ec885f1ba9585cf1b6bd75b5e20d9570f9228b4f1fa3b",
+      "sizeBytes": 2034
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/awareness/impl/index.ts",
+      "sha256": "2d2382e7b03669ec475ff6194d9ba561c25bfe4b8c4c58c51042594a81fe2fd9",
+      "sizeBytes": 32
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/awareness/index.ts",
+      "sha256": "8e2804316440926bac2a5b92114ec0b7499c255c6b3a00e0c17325847845e51b",
+      "sizeBytes": 91
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/awareness/source.ts",
+      "sha256": "7f14ab6d9af924061314e094050eb117af5c4a5690809218bd86cfb2ab29d6a4",
+      "sizeBytes": 155
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/blob/engine.ts",
+      "sha256": "b85af0e5606dfec7a7610372c1cb850fe51b7769161a1842e0b221e311c13ee8",
+      "sizeBytes": 5002
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/blob/impl/index.ts",
+      "sha256": "e4225ccf1cdefaddd87da8067316d7ea4afadad4fbf7b5eed31a460b535810e2",
+      "sizeBytes": 61
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/blob/impl/indexeddb.ts",
+      "sha256": "867a47e1bbf97442a137992e076772d35f910d8dd6e881380887f1e8c49ba7d2",
+      "sizeBytes": 960
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/blob/impl/memory.ts",
+      "sha256": "0ac5a1594d84fbd3976602d4081dddc5c35a5d1106f86fdd9cfaddcf01419d11",
+      "sizeBytes": 529
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/blob/index.ts",
+      "sha256": "8e2804316440926bac2a5b92114ec0b7499c255c6b3a00e0c17325847845e51b",
+      "sizeBytes": 91
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/blob/source.ts",
+      "sha256": "3d4762488fc909c7e98fde607819867907265bbca33a62812300f19c35187c2d",
+      "sizeBytes": 697
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/doc/consts.ts",
+      "sha256": "b366a13cedacf06ecc78fce9b9319c2391e3f64f3d74d03bca934442770c029a",
+      "sizeBytes": 222
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/doc/engine.ts",
+      "sha256": "46c4ea71f4f32db236825f7e22347c8107517925d50faeba4aeef4365af2a98d",
+      "sizeBytes": 8037
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/doc/impl/broadcast.ts",
+      "sha256": "5e0a7b54d534687fd5804c45f012cfef579c423873c5fc68549f41c1143d65de",
+      "sizeBytes": 2488
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/doc/impl/index.ts",
+      "sha256": "7c18ac12d03317264ee1b94bf9b2f3e6df2011774a9dc54c357d961149226a8d",
+      "sizeBytes": 91
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/doc/impl/indexeddb.ts",
+      "sha256": "4a66bec67aeb6bdbe69df4157acac836d2d77561802219d8881844ff0059ca4e",
+      "sizeBytes": 3155
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/doc/impl/noop.ts",
+      "sha256": "f4494fdf232959332d0cd095f2212a3ba3f617d607e02a5a961dee1c86306008",
+      "sizeBytes": 368
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/doc/index.ts",
+      "sha256": "089228043c26375c8475d38543e111ef43a50f897dfc961a43234b3c1b0836c5",
+      "sizeBytes": 470
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/doc/peer.ts",
+      "sha256": "05932fe906d0f2ebbc4e02c3ac3bbc077ccd3a4be1d475537491b47463a9611d",
+      "sizeBytes": 12819
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/doc/source.ts",
+      "sha256": "7f46fec40f0e952a4f3f653e09fdd2b6365467364af07935a1290f7719a1c397",
+      "sizeBytes": 695
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/index.ts",
+      "sha256": "812d04a9ffa95978ae3e7070891cc7a9169a874f35e55f417bf085ba423fc4e5",
+      "sizeBytes": 103
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/utils/async-queue.ts",
+      "sha256": "15cfdcf99d5da1665f6bed723e76298cd4afc5f6a3378170d0110171dbb68e4c",
+      "sizeBytes": 2301
+    },
+    {
+      "path": "Codebase/blocksuite/framework/sync/src/utils/throw-if-aborted.ts",
+      "sha256": "bdbab26ea2273d47a833621a1db64601603b1689029a525895997c8eb64a9fc3",
+      "sizeBytes": 253
+    },
+    {
+      "path": "Codebase/blocksuite/integration-test/src/editors/editor-container.ts",
+      "sha256": "5375f5fd9bbde84f51b690afb4bca9d054cdbc74ec459bc8ba06cf4ec166a80c",
+      "sizeBytes": 5062
+    },
+    {
+      "path": "Codebase/blocksuite/integration-test/src/editors/index.ts",
+      "sha256": "ffb4cb3308b475ded6afde20e158b1c7919974f198d8f187d853af3136a93d91",
+      "sizeBytes": 39
+    },
+    {
+      "path": "Codebase/blocksuite/integration-test/src/effects.ts",
+      "sha256": "c8eef1d255881ef4c7008438206048b9afe43d4148cdec864dd126a227253e3b",
+      "sizeBytes": 212
+    },
+    {
+      "path": "Codebase/blocksuite/integration-test/src/index.ts",
+      "sha256": "5ded17a450c2974e91b2bc35c9f5e939bb0c9b43723dcc1b5d221caa8b966dbd",
+      "sizeBytes": 27
+    },
+    {
+      "path": "Codebase/blocksuite/integration-test/src/store.ts",
+      "sha256": "50f36a9448a03909c449b755e18d5cad364c79883826c139c28568bd6b87eb86",
+      "sizeBytes": 288
+    },
+    {
+      "path": "Codebase/blocksuite/integration-test/src/view.ts",
+      "sha256": "11cb0a10b6a1e5fd38b3295268d8167c44f4e27e8212d39d991242eca1179004",
+      "sizeBytes": 282
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/components/attachment-viewer-panel.ts",
+      "sha256": "e28f86d0df8d120bd3469593e43eb925251a7b3b89afc07b0455dfbb3227c676",
+      "sizeBytes": 8155
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/components/custom-adapter-panel.ts",
+      "sha256": "87f8cca3b92bb58aaf897aa1f65a23702a60e4832ec8862950b98517cfccfcd3",
+      "sizeBytes": 1664
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/components/custom-frame-panel.ts",
+      "sha256": "1c845d84b0a9cb2d31d56c2e48de345023dd368d3c11c300b0f820cc56dc0446",
+      "sizeBytes": 1755
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/components/custom-outline-panel.ts",
+      "sha256": "3e7cf731f5830bcffde77e855a39cf6303c241712bdd505f3d99e926654a860a",
+      "sizeBytes": 1440
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/components/custom-outline-viewer.ts",
+      "sha256": "2dc408fbf79c586443531a59902f2852f437d5b23ade7f7d1df054cfdc379a87",
+      "sizeBytes": 1387
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/components/docs-panel.ts",
+      "sha256": "6b34d5535119d12332e1cb67a9931a2bac711ad19f3ef60fffed1516607d59c8",
+      "sizeBytes": 5217
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/components/left-side-panel.ts",
+      "sha256": "cd1f6f92a4070c550ea99918d122eb5a79d93258332a33cb74daf4b905d959d7",
+      "sizeBytes": 1162
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/components/pdf/types.ts",
+      "sha256": "32fe83410fd7b00503e5bbbc841636f79458dda3edb53f73104fbf4154edda5c",
+      "sizeBytes": 951
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/components/pdf/worker.ts",
+      "sha256": "335ba51ac2dc843498eaf8109fcfad1f9d0f5725f9cc29a6007ab0ca7e328170",
+      "sizeBytes": 2798
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/components/starter-debug-menu.ts",
+      "sha256": "87fe86aede60cb5def7b0d0e85a3a2f14def8429b146d6156bc05d4cc80946da",
+      "sizeBytes": 32405
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/helper.ts",
+      "sha256": "30c388515461df4fad70ab292e6d17498811769e8fe0e6aa5d406225377704c9",
+      "sizeBytes": 696
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/history.ts",
+      "sha256": "f93fda0aec97f0e58e14655ea57c2808e4200d626b15758ef3dfa4baf54a0673",
+      "sizeBytes": 1609
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/mock-services.ts",
+      "sha256": "dc255565e9c490408e157c75dbfca74e169471527eed313eaa452c796038a1cf",
+      "sizeBytes": 7952
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/setup.ts",
+      "sha256": "c8a7d5c671ee9904f6ad0a5347d6127477bb002d3d6e89fb2cdcd193c923045f",
+      "sizeBytes": 1958
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/sync/blob/mock-server.ts",
+      "sha256": "8311037f4f37975610340d75eb0e3359cdcb026aeeccec437b16a4a47519b5b9",
+      "sizeBytes": 2992
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/sync/websocket/awareness.ts",
+      "sha256": "9a64bcdd38a1d246184ed99f57333966cb9077963e5654969934a4090c089816",
+      "sizeBytes": 2442
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/sync/websocket/doc.ts",
+      "sha256": "3ba6fa0cee8ae7e07d1f6cdf93373801e64888dde9ef190ad169bfb33e0e3957",
+      "sizeBytes": 2754
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/sync/websocket/types.ts",
+      "sha256": "07d3eba1a2b26a051a10693f217604d32d3497635765ce36af4e075bce149988",
+      "sizeBytes": 383
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/sync/websocket/utils.ts",
+      "sha256": "1c08a809278994fb9ef0eee71932d349938c0bcba6a8849132c1b19e9d8299b2",
+      "sizeBytes": 248
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/_common/templates/stickers.ts",
+      "sha256": "d6e1e14ad3f908d189a0b0b53394e08b11ca61f24bfb4951f0d950b0511aead8",
+      "sizeBytes": 27146
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/comment/comment-input.ts",
+      "sha256": "c1cc689d387c94643a92bd7f12a4447bcaaa78f5cfc675022e191ac975a5f6ce",
+      "sizeBytes": 3025
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/comment/comment-manager.ts",
+      "sha256": "2f92ee64c8ebbe8ddb083e89ad04a74c5e9cf6c9a5cda9779c1fe455c4d82580",
+      "sizeBytes": 4277
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/comment/comment-panel.ts",
+      "sha256": "b33c204f87d259ebdd83e7b5cf82421cf0563e1a7a9099e92efb4681cf9428f3",
+      "sizeBytes": 3132
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/comment/effects.ts",
+      "sha256": "e9a60b374251a04b9a36596824ab6a43dd30d1c6d74dee820a295ca9556074e7",
+      "sizeBytes": 245
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/comment/index.ts",
+      "sha256": "17e040e15d592beacae9a3b54e968c06138a4c2b1659b36eb48f8dd97973cf97",
+      "sizeBytes": 74
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/data/affine-snapshot.ts",
+      "sha256": "1f179a36ddbf4d0d32aa380628b566669e7416074e1d77a2668995a025250519",
+      "sizeBytes": 982
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/data/database.ts",
+      "sha256": "5f0b6e88edd1bcbfe2f256532da02deb8e7eb33e12ce900e97cd41c04a9370e9",
+      "sizeBytes": 4370
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/data/embed.ts",
+      "sha256": "fc86b5ec37b606f525dba0ba5fb7e601a7359ab808c1c2a48f86b498228005db",
+      "sizeBytes": 1488
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/data/empty.ts",
+      "sha256": "ac532f5a2d498e8bdcd2960f0ae7a472a40b84485fe1a9bfa7c7dcba2dbcc298",
+      "sizeBytes": 838
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/data/heavy-whiteboard.ts",
+      "sha256": "d2823a8863020d1b84020194a8e8d7472c0f759ae41d5cc0fc354c9ddaac9bc7",
+      "sizeBytes": 2708
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/data/heavy.ts",
+      "sha256": "7cdf4570e4194f0bb065f188c260f3daa73403b6701704bc537ec5bda819ce4d",
+      "sizeBytes": 1046
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/data/index.ts",
+      "sha256": "ffc845c8cab1df4bdf400bc2c3f5adc247b92adef5723f6ba6a46e3fefb38212",
+      "sizeBytes": 678
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/data/linked.ts",
+      "sha256": "29771190da491e0cc47c4780895a712fc1c5af5e3df96f37a187431771d4a992",
+      "sizeBytes": 2199
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/data/multiple-editor.ts",
+      "sha256": "5bb74a15dc30fc2fde12f4cee9adbf19fc7812eae308045d551d85d22bb4ab3a",
+      "sizeBytes": 2196
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/data/pending-structs.ts",
+      "sha256": "9ecda1bf5ee816129b2aae8d9407280586387cbc88f0517be6a49bcae9f70fd2",
+      "sizeBytes": 1312
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/data/preset.ts",
+      "sha256": "e9adab4b26f1107ae00ee8221a2e576521d393f002cda3eb14b4fd19507fcfe1",
+      "sizeBytes": 1456
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/data/synced.ts",
+      "sha256": "808b7020b82a9472bbc9ce09740e2ea3c7ba9a0fa3a6fcde0fe6decffb85b93b",
+      "sizeBytes": 5806
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/data/utils.ts",
+      "sha256": "240e92b340a2c24476d340bf5ab6c18575b701fa38a94b1b4f02441f39a6bafa",
+      "sizeBytes": 212
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/data/version-mismatch.ts",
+      "sha256": "eee7a696a477df60eb8929b200856cc3ae3c348604d64fea9ca166ac2b68f39f",
+      "sizeBytes": 1268
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/main.ts",
+      "sha256": "86c0fcbf81ccd26f9a417e3950000d9d8e29a8428be3cf3dcdcd2079fceb5ea4",
+      "sizeBytes": 1935
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/utils/app.ts",
+      "sha256": "eaa7fabcb1d69b67596a5fca02cc8fa2fa34a097914d1d8dff4da62b7041e3a2",
+      "sizeBytes": 3215
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/utils/collection.ts",
+      "sha256": "7588305fc8233acd687900d3cdf14132f20b9ebae31b17dcc623179286527462",
+      "sizeBytes": 3148
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/utils/extensions.ts",
+      "sha256": "a49cef6e026eec126b36dd20340c1d4feb8ced18fab71eacc44ef944a3b8c5ba",
+      "sizeBytes": 1966
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/utils/setup-playground.ts",
+      "sha256": "a6e27ab860c6f39af23c0cade7f0428dfffc8896332d5d2077ecabb43b2d09ee",
+      "sizeBytes": 1305
+    },
+    {
+      "path": "Codebase/blocksuite/playground/apps/starter/utils/test.ts",
+      "sha256": "9ccfe47b5edafd42434308e30e39c70caf75ce189b7518ddfb124bd0f0ef4880",
+      "sizeBytes": 1380
+    },
+    {
+      "path": "Codebase/blocksuite/playground/examples/inline/test-page.ts",
+      "sha256": "ecf3607d2cf0c178fcd8f0094720d562185e9987c9e0e2e42e6b6e2f5e3b20e0",
+      "sizeBytes": 11994
+    },
+    {
+      "path": "Codebase/nyc.config.js",
+      "sha256": "bdd8ab71e6b546f7d38c14fb86dff22657b949893edad3eb9421185128323699",
+      "sizeBytes": 203
+    },
+    {
+      "path": "Codebase/packages/backend/native/benchmark/index.js",
+      "sha256": "1ac7363d394ba6efb2686155ca3162f96408e882472bf4b171a07d6aed03b4be",
+      "sizeBytes": 1285
+    },
+    {
+      "path": "Codebase/packages/backend/native/build.rs",
+      "sha256": "fb4b8223e3c918998e1c985096bc8f6052adf75e9891ec5266ef7a6a57aa843f",
+      "sizeBytes": 37
+    },
+    {
+      "path": "Codebase/packages/backend/native/index.js",
+      "sha256": "826a3c1fa17a1c76174f260f838f021b8d0512e42d3790877365cd804b1eb9b2",
+      "sizeBytes": 343
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/auth_session.rs",
+      "sha256": "87b6aecfa836bee85e802f8d94483ae5228f524e3cd44a472c38629bb1d9f2c4",
+      "sizeBytes": 7995
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/content_policy.rs",
+      "sha256": "a160db0b950fd5c83236a8a5bd649036b011ae1adc16006a50e6158f3f423363",
+      "sizeBytes": 8697
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/doc.rs",
+      "sha256": "d8a7093df6e68bd0144017bd382d9600f7796aefeb2e0766b520aa98758014ff",
+      "sizeBytes": 8455
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/doc_loader.rs",
+      "sha256": "a0a780f3506aa270ce85397886a35c13804c83cb3b5575c619eb8a48677b66dc",
+      "sizeBytes": 1448
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/file_type.rs",
+      "sha256": "d7c10eb73ec6ec6e18e0fb4304493d8d0c83d8726c7ad4c65895ef6391ea6ca3",
+      "sizeBytes": 3115
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/hashcash.rs",
+      "sha256": "b9f94d58cf156b54d432fc4e8fc59eddec59e4f8927527f95557ded5ae5c9230",
+      "sizeBytes": 1490
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/html_sanitize.rs",
+      "sha256": "1c96c576a4c1a9b6fbc06ff230e92702acc5b16479c7040ec5f1acd9ccf9ebae",
+      "sizeBytes": 101
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/image.rs",
+      "sha256": "7874a73db7cd9e29edb8acbc47e00b004b123e6dd2b221007fabe694da8a52b4",
+      "sizeBytes": 11304
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/lib.rs",
+      "sha256": "1cd7670aaf6b4aaaee369ff84e74b1bdd7eaf2b496c740af687c05a6f3dd7f0a",
+      "sizeBytes": 2165
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/action/catalog.rs",
+      "sha256": "c8a2e0bf267a726be22e40d5fadca50d095ffc07b9f2788617c03ec3fa4f56ae",
+      "sizeBytes": 8726
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/action/contract.rs",
+      "sha256": "367597c1cef04ed67aecdc686147c140df6042d009905d51a3e773e15c48e88f",
+      "sizeBytes": 7754
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/action/mod.rs",
+      "sha256": "48b63be098250ba95c3bbd1d262e3fe5781e6bfa98e9d80a4518705c86da02ed",
+      "sizeBytes": 3049
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/action/runtime.rs",
+      "sha256": "1ea13e2862c74d0c1cc7be459f20fcc37c0e4c64e405ab82aece2758528e2646",
+      "sizeBytes": 17416
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/action/slides_outline.rs",
+      "sha256": "200c2f13987d8083bd4e20ae0328d9a84bd801ab929ae623c649997209d5fa39",
+      "sizeBytes": 7497
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/action/tests.rs",
+      "sha256": "45d44ebf554e73faf78df321db6c65f28a26092252ee28b1f64f3f5303b675a1",
+      "sizeBytes": 23141
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/contract_schema.rs",
+      "sha256": "37d3fd75a9f8dd8635ad279a9d676850c9e5adadf492367f74dd7636833abd1b",
+      "sizeBytes": 13295
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/core/capability.rs",
+      "sha256": "9f1bbaa8675367870481688906f48f80743bd8e2b121f5f029da65d18706819d",
+      "sizeBytes": 3104
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/core/contracts/mod.rs",
+      "sha256": "022bf89b3dc571406ee77a778121e8683fe2717f7a1981cbf3d28c0a19e945d4",
+      "sizeBytes": 26049
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/core/mod.rs",
+      "sha256": "8213daff1e390df6c6760d85d3dc64c8e698b23d5d7aea88baa615b1bf585978",
+      "sizeBytes": 173
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/core/model_registry.rs",
+      "sha256": "7d6df6c5f482fb5bb8bef129bbbac2a7e8feca9178278fb9732564b5eef4ee36",
+      "sizeBytes": 10006
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/core/prompt/metadata.rs",
+      "sha256": "bd4dbf9866231974d5b5ae335bde0b752c0212b5ab714af7732d15950f7b0f27",
+      "sizeBytes": 785
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/core/prompt/mod.rs",
+      "sha256": "67b8e5a096fc67cb931a64552e72f9ebcb8f4285c52eb560e2014ba7aa8ca353",
+      "sizeBytes": 13620
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/core/prompt/render.rs",
+      "sha256": "315d61f0ba9ce1d9f1f334887a865df69defda86e65056eef03d0d6592be13df",
+      "sizeBytes": 5193
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/core/prompt/session.rs",
+      "sha256": "4c9d08f9586150ff16a474b8b657c63ceb49f14d64123b7feb854f91473fc61e",
+      "sizeBytes": 6009
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/core/request_builder/mod.rs",
+      "sha256": "974ff860355880de0ac14f7be7954011ba2a2bb6fe6a90c9fd76f3c53a5f1461",
+      "sizeBytes": 15460
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/core/request_builder/types.rs",
+      "sha256": "f217cbd82550b1b403e61cefb39691de80b46ee9045de186ca27a1849d0e3596",
+      "sizeBytes": 17435
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/core/structured_output.rs",
+      "sha256": "2a35778a702e5a02dfe082d26cda7ff81452bdb0a2e0bddb859296c3bbf160e4",
+      "sizeBytes": 549
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/ffi/dispatch.rs",
+      "sha256": "6afa18f32dea71b8a44b2fd738b3e9e08b0d4048af80ec9cb51e1f09e563caa5",
+      "sizeBytes": 15974
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/ffi/middleware.rs",
+      "sha256": "969a9a0a4548e350838fe980ee2b071b09c7c1fcd2e8fde12e902df12e2c030b",
+      "sizeBytes": 3460
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/ffi/mod.rs",
+      "sha256": "9c3a7b123b5b495d1bd07a4a5330f1c2c797790a810578c9d7c45eda766126ff",
+      "sizeBytes": 1240
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/ffi/payload.rs",
+      "sha256": "01b76f242b022126e42da69c6b74852d237dc588aabccaae29ac597239b7e6e8",
+      "sizeBytes": 6816
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/host/error.rs",
+      "sha256": "b1099440ced7b7c4c4d3bf27ebcf6b6c5d245371ce3a444b3e393f2c7df69c0a",
+      "sizeBytes": 551
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/host/mod.rs",
+      "sha256": "fa9d762e62a02ec280b907a34cf598cb18acd2cccd3d5a541569122abeceefd3",
+      "sizeBytes": 501
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/host/stream.rs",
+      "sha256": "7215a7129085715623c3890c3d5f36ae16481401d5e004cb3e9c1ffac666e9c3",
+      "sizeBytes": 7415
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/host/stream_handle.rs",
+      "sha256": "7eb47f1ac75b98534098ef087575aaf1f352ad54970e1ea7e17dba796074499d",
+      "sizeBytes": 260
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/host/tool_loop/callback.rs",
+      "sha256": "c95748638dc4ba40197ff5c297baef7278f402d73d64b97eb9e5538ab99b0295",
+      "sizeBytes": 5459
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/host/tool_loop/contract.rs",
+      "sha256": "13f69bcdfe440c1ee31ffe39550ba0a187a75a5088060796b26a80cc6c2e2dd7",
+      "sizeBytes": 163
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/host/tool_loop/engine.rs",
+      "sha256": "19381e1237cdb2c6e40fcd20b1fdcb30da64ca94e4330d40f56296be52075bd1",
+      "sizeBytes": 11854
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/host/tool_loop/mod.rs",
+      "sha256": "65ed264aed0df8b26dc6eecd50ff69885c8a3780148c3e818a636fb05e1a0c84",
+      "sizeBytes": 179
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/host/tool_loop/tests.rs",
+      "sha256": "178b983f7d0de9494a44d3c738bfc686b8ae94ce32b92a31c4ea63bddcd266ad",
+      "sizeBytes": 1086
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/mod.rs",
+      "sha256": "f2155e94626c789c08fb52bac25cbcb5a0a4b365eb7ae2c4b153adffcc6811e3",
+      "sizeBytes": 2399
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/prompt_catalog.rs",
+      "sha256": "9b02f2dcf6263d00806875cd767bf3fec3e1bf683ac87ceeb9c2e4fa8acd7d20",
+      "sizeBytes": 10491
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/llm/tests.rs",
+      "sha256": "0ab04f6d7578864bf4b392208a29e28c4ab6d425203cc842ed7af0795aff8d60",
+      "sizeBytes": 2890
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/permission/actions.rs",
+      "sha256": "560cdf1a9bc94444e29d9ca0e82d9e94c13d1763738919bd91376a3961a55096",
+      "sizeBytes": 6855
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/permission/candidates.rs",
+      "sha256": "70073251340fef273d206b6b87b1a7f3a58c4616a97d000952fe9fef2f9e363e",
+      "sizeBytes": 9105
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/permission/evaluator.rs",
+      "sha256": "bcc119e5f9a578da4166f433477ac60619691b3302e72530b878f3e2897f1571",
+      "sizeBytes": 15487
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/permission/mod.rs",
+      "sha256": "8ec0b03c3df1f9374f027df6e4407cedec3f944dce3cec677f6b4870f1d27659",
+      "sizeBytes": 884
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/permission/types.rs",
+      "sha256": "44e3d469ab594b2e5f01d1b5dffeaaf0406762f7aeadef87f5fa0c23e5b00247",
+      "sizeBytes": 4904
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/constants.rs",
+      "sha256": "a21aa8607f51d788553cf46eaa0b95fd1d27a9b3e6b5860ad6caa3801ab03762",
+      "sizeBytes": 685
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/coordination_lease.rs",
+      "sha256": "4f461ae99b905b59ee0a707a5eb480fe310ec9902847e473b6987a3c37fb307f",
+      "sizeBytes": 4347
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/doc_compactor.rs",
+      "sha256": "145405f22a623428bca2021e856793f9cc1479c661132a824d1c7d656814bfa9",
+      "sizeBytes": 11224
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/doc_storage.rs",
+      "sha256": "c33d7082fed919a6db8f2ae88c38886f688b016a4568f569d9b00e0ec6a3f954",
+      "sizeBytes": 3862
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/gate.rs",
+      "sha256": "4c33e811eca25178b49d2ffb217bba7281a8b1ed0ff950ec5756db6aa7249ee9",
+      "sizeBytes": 2452
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/housekeeping.rs",
+      "sha256": "d3cc1f7d2bb0dc2cf18ca6e24e942313ab031272d7ba34b72b99b4ec5a65f988",
+      "sizeBytes": 2106
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/mod.rs",
+      "sha256": "577be88f26f1f93f1120fb4f7a1151bb8d20a7a58ea6f187d2109b206db70104",
+      "sizeBytes": 3480
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/rolling_quota/invite_abuse_actions.rs",
+      "sha256": "d928a47763591f3f7258e7a49dbe62bad767a374abd6fe5da15169a6ac456985",
+      "sizeBytes": 7714
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/rolling_quota/mail_delivery.rs",
+      "sha256": "fc8374ccb87135f9723e3b60a6951a6bf1fc7501249aaee607cf2b0b42950830",
+      "sizeBytes": 5544
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/rolling_quota/mod.rs",
+      "sha256": "d2e9c7cff4ec6d2ded9749890c6de2330fccf3507289c46c68d977f3ce19da06",
+      "sizeBytes": 5549
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/rolling_quota/reservation.rs",
+      "sha256": "7fadb3f326177d39bdb152203ffff4b0b0bf6ee8a00b2896f67d94e43b13106a",
+      "sizeBytes": 10783
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/rolling_quota/workspace_invite.rs",
+      "sha256": "40716ffd8b71874dfbfe3fe4b8e3ad6b7b0507a4cabd2335a141ac87799d4642",
+      "sizeBytes": 15182
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/rolling_quota/workspace_invite_policy.rs",
+      "sha256": "a7e74e8a9284f7c3f74b41c2f5a8e520a8d8add6e1e8cef08e3d7de5c22d271c",
+      "sizeBytes": 18934
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/runtime_state/auth_challenge.rs",
+      "sha256": "97883ae90e6fd4b8e924d53b13ab92b918e4610e42e441bfec82e4d677ae459b",
+      "sizeBytes": 941
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/runtime_state/byok_local_lease.rs",
+      "sha256": "b1dfa8de973d18ed2f3b0a1ce59a9298894b37c5ac86885db0ea3bc14b93333f",
+      "sizeBytes": 3805
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/runtime_state/dto.rs",
+      "sha256": "d1cae435e0d361152266b4b5c536d1f0bea8cc09641df75cb5ff556fa870d591",
+      "sizeBytes": 12103
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/runtime_state/invite_link.rs",
+      "sha256": "fb35498a91b8aeaa7dff92fe4fd1f418feefea8af51006460f6e9c3a47a073b9",
+      "sizeBytes": 5741
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/runtime_state/magic_link_otp.rs",
+      "sha256": "2f0338f40ededce1ec0ec5f6f56f36758600b4ad51400f81a0058cd34b1cbc05",
+      "sizeBytes": 4624
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/runtime_state/mod.rs",
+      "sha256": "2fc7f2b300734728d2b7c6d2f99185b75e38b2dd06d2ddeb2400cc48c43c045e",
+      "sizeBytes": 7416
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/runtime_state/store.rs",
+      "sha256": "5b3cd06fa787fba0755681d740f75015f33ac97edcb927b8961a961bc81c8fdb",
+      "sizeBytes": 4139
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/runtime_state/verification_token.rs",
+      "sha256": "99cfab5526a69bfbc52a13c5571636ce728d026485a156fec81d3854334e074b",
+      "sizeBytes": 4014
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/tests.rs",
+      "sha256": "844f52a7e5f64225ffe4725228c71aaf6626e69cc9cc62069e154ced3fbda65b",
+      "sizeBytes": 23241
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/backend_runtime/workspace_stats.rs",
+      "sha256": "8831464d3bfcaa15db2f8309295a5d4eec66c9a1c2b4df6087babd550ace4fb7",
+      "sizeBytes": 14341
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/config.rs",
+      "sha256": "2cda4fd9184656a7297261cfab4c874d89e511e20b600e176b73f33c20e433fd",
+      "sizeBytes": 8602
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/error.rs",
+      "sha256": "327e823e5ba587655314bc504f21b37179fdd8c6dfff29c8b58632b78cad3c92",
+      "sizeBytes": 3080
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/mod.rs",
+      "sha256": "4b4dee927443f3d3eff96cc25694e93add20dddd013041517b26ce5b3b58c6f7",
+      "sizeBytes": 292
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/storage_runtime/assetpack.rs",
+      "sha256": "e05ef72a9bb8e6ef569c8388f78647632b90c19b7ab3494a02ea0ede93514750",
+      "sizeBytes": 11545
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/storage_runtime/blob_cleanup.rs",
+      "sha256": "b2a37054048ede1d44f7e84a76384285b4efe1ad1dc5aab20309a4af90db61b5",
+      "sizeBytes": 22683
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/storage_runtime/blob_reclaimer.rs",
+      "sha256": "f24c3fdd53f6d6d903b0cd0f223a7c857bb87d2b9eeacb2b8fcedc615d5033d9",
+      "sizeBytes": 5434
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/storage_runtime/blob_reconciliation.rs",
+      "sha256": "67203125d315b4311ef3e760ffc3d4153f20a554815e24b9ee13760048800171",
+      "sizeBytes": 8777
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/storage_runtime/doc_blob_refs.rs",
+      "sha256": "691db31ca6458e11ffdb0f2cbfa8a154bc8330a04ed543251d99a4bb4e51d186",
+      "sizeBytes": 12978
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/storage_runtime/document_cleanup.rs",
+      "sha256": "83ef16ab157986e609976480bdf417f7d1197c514c3f8eb3a592a312ddd10546",
+      "sizeBytes": 54467
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/storage_runtime/mod.rs",
+      "sha256": "f1e03ae8d2abcd0bfd9bfb56bc0988c7c811bb784f56e36405f762acde539136",
+      "sizeBytes": 64196
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/storage_runtime/object_storage/client.rs",
+      "sha256": "47e521c55f5def84b360c73d50f0baf6615fedc1010d0c0a2be035dcc1e5b556",
+      "sizeBytes": 35729
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/storage_runtime/object_storage/config.rs",
+      "sha256": "2ab2f4edd77a4a411bb7a02fdc8a270e93da0e0d8b651580a425736f121d9939",
+      "sizeBytes": 7622
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/storage_runtime/object_storage/error.rs",
+      "sha256": "84853bc6e936b796ea963c163c262f731fb6d1c2e88ebc18a98255c7bf8999ca",
+      "sizeBytes": 1925
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/storage_runtime/object_storage/mod.rs",
+      "sha256": "6a63b1fa9bbc32f941bfd4a55c124551bbe9ce5bc73281b0424e934ec7aee893",
+      "sizeBytes": 204
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/storage_runtime/object_storage/tests.rs",
+      "sha256": "949e436ce4cbc4ac2b23f313d9eda83ece2558f3462850407d01fab569af31ee",
+      "sizeBytes": 10790
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/storage_runtime/object_storage/types.rs",
+      "sha256": "4d96fcb8a51c3444d67827787ee23e7966b0b4b565286bad76acd4434208860e",
+      "sizeBytes": 5227
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/runtime/types.rs",
+      "sha256": "6998307d26d955c989cf7734e3d826ca4e38c293cc522081328c4da459e78be7",
+      "sizeBytes": 8139
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/safe_fetch.rs",
+      "sha256": "34a95651ba2d15a2e4161d872444be1a453cea927373c855a2fb379b305cebb2",
+      "sizeBytes": 7195
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/tiktoken.rs",
+      "sha256": "93524ac6635251edfb82e87e579eae24f19230eb94d41ed4d1c82b6b36fbb398",
+      "sizeBytes": 1170
+    },
+    {
+      "path": "Codebase/packages/backend/native/src/utils.rs",
+      "sha256": "ec17190d4cb3252c6114be3c9f1f30ec5c304c84e5b06ffed28b8d8018de1ba0",
+      "sizeBytes": 2436
+    },
+    {
+      "path": "Codebase/packages/backend/server/ava.config.js",
+      "sha256": "bcfd8e2dd10504115dfd2d9183a7a9ac2770a75de77fba84edc943e87472d1c2",
+      "sizeBytes": 721
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/app.controller.ts",
+      "sha256": "f071ce3f5fc2e60e8c08be582952f30999f92b7ccd1cf79e8f0adbcf8b0b4101",
+      "sizeBytes": 395
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/app.module.ts",
+      "sha256": "f04fc6097ca761de55fb1a4bd2b6133d1065d3882920d0cc035fa969b5dfd3db",
+      "sizeBytes": 7078
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/cache/index.ts",
+      "sha256": "7428b1d351b7b013147da1f579097978d2a906600c120b6d5932402d6771764a",
+      "sizeBytes": 462
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/cache/instances.ts",
+      "sha256": "f1ee4733e31c2f270e0915715b9204e025378d29b76c5027f2b6cdef395be73c",
+      "sizeBytes": 386
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/cache/interceptor.ts",
+      "sha256": "ba21303be5b1785e0a726dc1e4babf4a5fadc3cb93ee2e0fcab55aa186c5ee53",
+      "sizeBytes": 2518
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/cache/provider.ts",
+      "sha256": "fd15a00b7eacd2a950dddb1dc30cfffcca8fd7fc190edeb7a1449c98e84353db",
+      "sizeBytes": 5804
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/config/config.ts",
+      "sha256": "c2e5a88feb7d4041146bdee9a75764012aa16c5b9d3a34f05f10c48e9856cf70",
+      "sizeBytes": 93
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/config/env.ts",
+      "sha256": "4e38acbb73352711cfa2c27eafe41a3a6a18ef75e0204a416679e63acd124459",
+      "sizeBytes": 736
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/config/factory.ts",
+      "sha256": "205ee128347cfd9d458bb60ada93b788b27ca70e8f8ae55628aac3198458ce1b",
+      "sizeBytes": 1899
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/config/index.ts",
+      "sha256": "95058628e5c33ac21389fbc422237c22186b06535b180c85204feef878fae4c9",
+      "sizeBytes": 798
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/config/provider.ts",
+      "sha256": "8e5a5b6ef31be77fd37952d4428543b9c283cfba431595c4d75b1c201fbaace9",
+      "sizeBytes": 304
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/config/register.ts",
+      "sha256": "73a5fa2f99a96c4b101510588cd43e0b196ae0b081b711c6ec352c9edf05d52a",
+      "sizeBytes": 7957
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/config/types.ts",
+      "sha256": "3a38f09152e529bcb8e1dacb15485856bc6dedb6eef38a45af49b537e7a08869",
+      "sizeBytes": 559
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/cors.ts",
+      "sha256": "f121e0c39b06fc60d796e230cc2fc8c86cfc44597157b1c6220e70a5b95c7379",
+      "sizeBytes": 2754
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/error/def.ts",
+      "sha256": "b6a0f1e625dc7b4c6d8e0361df022aeea3f3e9cffe60567b321eab49aee7f0cc",
+      "sizeBytes": 31135
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/error/index.ts",
+      "sha256": "f891c42adeb4a3eab3524d1c3b60bab7eb8b75d771396fb1a1893ede96725ab3",
+      "sizeBytes": 1099
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/event/def.ts",
+      "sha256": "1dd2509077f614d265e346007a411bf9cfb1362af71b815193b75130dac9af31",
+      "sizeBytes": 1083
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/event/eventbus.ts",
+      "sha256": "da3f4c6ec380f3e4d6cb33a51cc72e9bbfe8dc4442bf92458c0303efb8d58426",
+      "sizeBytes": 5683
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/event/index.ts",
+      "sha256": "10ac0ce9c7f99a08739de0935f94dd184ce5568ae33e66a53b896cc38eda8252",
+      "sizeBytes": 501
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/event/scanner.ts",
+      "sha256": "3ab2db15e01a9998d5314c640281a1120524d9dc9d586bf6b24b52e4062389d1",
+      "sizeBytes": 1898
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/graphql/config.ts",
+      "sha256": "eecba5a49d37cf84a90bebcaec9cadb81f0761da98c9406d01a1122030ea633c",
+      "sizeBytes": 567
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/graphql/index.ts",
+      "sha256": "c55080aaa0921eb2c45a7ed8e40e754648fb3a5bb866f11c6bb44e47b0211853",
+      "sizeBytes": 2117
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/graphql/logger-plugin.ts",
+      "sha256": "f6d492ae0d8c0cc9f56f648de0e62be8bc9a0e1325ef92d4ef68ae124988387e",
+      "sizeBytes": 2127
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/graphql/pagination.ts",
+      "sha256": "88b6b807c183ef757a7d40a7f94401ea7271cba1621686b85be5a2b10065237d",
+      "sizeBytes": 4541
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/graphql/register.ts",
+      "sha256": "701cb96e6282a32f6fcbef7b46a3c01f5f294fa40ed318d80e9e45b41c2b651a",
+      "sizeBytes": 497
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/guard/guard.ts",
+      "sha256": "469dbb597b40e1fc86b168001ad520994a6dfb1fbc1b80d771c86a4490520a87",
+      "sizeBytes": 1360
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/guard/index.ts",
+      "sha256": "c195ad537c1f85110bfe8f43a645564ceb20dea291f71f5f15d441df814c2ae1",
+      "sizeBytes": 109
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/guard/provider.ts",
+      "sha256": "035921581537f3170dd305a47facc050091ea98b7c2ad11676de73f8b4ce7afe",
+      "sizeBytes": 669
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/helpers/config.ts",
+      "sha256": "01ead0c81b8354f33d67540f61442ce135a53e037d26613b6ba216fd339296c7",
+      "sizeBytes": 386
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/helpers/crypto.ts",
+      "sha256": "35c770903e3582cea5daf86fb0cd51e9b2a0940a581b51ffce7cb619dfd3770e",
+      "sizeBytes": 8582
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/helpers/index.ts",
+      "sha256": "dcee55cfc398744db28586747a4e805e999eebfce09c80aae7771054f7ab5696",
+      "sizeBytes": 315
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/helpers/url.ts",
+      "sha256": "5418cacb280cb8fbcc9cc77b83195fb798775fc06fbaa2fbb704a6516ee49d3a",
+      "sizeBytes": 6197
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/index.ts",
+      "sha256": "2fd77010506f3e41f59cfae6916ee7d93ab0df9b49dde26e9a6676e46f9bd524",
+      "sizeBytes": 917
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/job/index.ts",
+      "sha256": "b7510c224594195d61c6166d86584599001f3d38f20e2a61eb66526eabdbbcdb",
+      "sizeBytes": 66
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/job/queue/config.ts",
+      "sha256": "48d079e3343374cfc94581736610444948384eb453ac8ba77a9cc5fdaa4d70da",
+      "sizeBytes": 2355
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/job/queue/def.ts",
+      "sha256": "5bb20ec0d096601eb314f5fd5e8c4df9928b337b02e062032c53deeb224f57bc",
+      "sizeBytes": 1756
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/job/queue/executor.ts",
+      "sha256": "e786c27561e838e9b6c036bf7df45d3d4c1eaddbc65acd733d4eff6a0a6e28a7",
+      "sizeBytes": 5667
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/job/queue/index.ts",
+      "sha256": "faf8b3fd289ab298e2efde0b4f51f0033bed2f1834a049c2768ba5bc0609e75f",
+      "sizeBytes": 1779
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/job/queue/queue.ts",
+      "sha256": "5ec0f6bd43eadfbbfeb4b30cfffd1d00c9e425f8b4e2d61372f60d77e0f15032",
+      "sizeBytes": 3773
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/job/queue/scanner.ts",
+      "sha256": "d7ff5e82cbc5d0c53381b542f2435cff0388c732c60cace888447d0b7069211c",
+      "sizeBytes": 2276
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/logger/index.ts",
+      "sha256": "472864a1958910e9d50dc1583a34f470112b27566e18f5c0a8171a1250ac530a",
+      "sizeBytes": 313
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/logger/service.ts",
+      "sha256": "7949fe812dc544bc858ae06b92847c9355c74d8e6d6d9eb8807e1d6fd91ed51c",
+      "sizeBytes": 1772
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/metrics/config.ts",
+      "sha256": "1f30aaa1918cc9735692b0fe271280bd1325571a0420ea23837fdd0ebf08ac89",
+      "sizeBytes": 273
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/metrics/index.ts",
+      "sha256": "b842c29768655bafb583190ac25af81f572f03682bc0a3d7dfdbb5a1484b87fb",
+      "sizeBytes": 417
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/metrics/metrics.ts",
+      "sha256": "0ff54d6f3ab6debb65ecbf3b258ef0dfbf016cbfed97b180c94f64a9bd8bb39c",
+      "sizeBytes": 3282
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/metrics/opentelemetry.ts",
+      "sha256": "910d9333071b77512940d1d9497d2b30595931b18ddf094359ddaf060eb21e0f",
+      "sizeBytes": 4367
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/metrics/prisma.ts",
+      "sha256": "ee1915b7db4646f845f18ccc1ff9af416b164afaa3b13ffc128eff2490a27bb5",
+      "sizeBytes": 3460
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/metrics/utils.ts",
+      "sha256": "8579e586c0dda3d93fd7b0711f4f475fba638aa346afbac618631d5ec67480cf",
+      "sizeBytes": 1372
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/mutex/index.ts",
+      "sha256": "7d26f107e254b7268c5d54a4e87f1a08f15dfd30da0d2bf381dbed664b05f718",
+      "sizeBytes": 334
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/mutex/lock.ts",
+      "sha256": "7f1644189edcb4aa439be14019caeb32a53828cf31f02bc3c987cced356dcca1",
+      "sizeBytes": 461
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/mutex/locker.ts",
+      "sha256": "51d9b4ce01591330d3e890c8a1cb92b1ab264701b9482e38e20581279460439a",
+      "sizeBytes": 1831
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/mutex/mutex.ts",
+      "sha256": "b1d201a6b595b6946504ca87c85766a1d4b147912a5d428e090c64f997a219fa",
+      "sizeBytes": 2743
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/nestjs/decorator.ts",
+      "sha256": "6eeb7e9053c883b05afd1c6c2b065fef21d74ec36293d99c3070946bc2f10468",
+      "sizeBytes": 1232
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/nestjs/exception.ts",
+      "sha256": "dff8451b9b16fa41bcf417511bdc2ecc3048f18486d135d4d3847c18c0af6bf9",
+      "sizeBytes": 5251
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/nestjs/index.ts",
+      "sha256": "599bd874e5b0d52b4b9d57ceaa4c8af076b04da43e67422bcc42100ea4b16056",
+      "sizeBytes": 85
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/nestjs/scanner.ts",
+      "sha256": "f37672c0e6594dfed351aeed9a9c0f049154857f234c64d4327868072cc1ef98",
+      "sizeBytes": 1364
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/prisma/config.ts",
+      "sha256": "a4ec69f759540031020efe0dff8fafd934e55c40977b5cafb12f46cc38598f50",
+      "sizeBytes": 659
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/prisma/factory.ts",
+      "sha256": "8d7ac18d77621090fb4074259ecb9f18d202e2be74e6dde152f915756cc0b08d",
+      "sizeBytes": 638
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/prisma/index.ts",
+      "sha256": "2934fd22cae795efce8d4f6f29c9cf1050135f3bb45fb6d570d327c531d290e5",
+      "sizeBytes": 626
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/redis/config.ts",
+      "sha256": "a95dbc61e8f589fb05824c772eb8f910d6e8efa15ba4cdbd6b099689397c9641",
+      "sizeBytes": 1317
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/redis/index.ts",
+      "sha256": "05031999aa0bdef60ab71b981db0a3b0c4a792a0553b7373bb1c227ff443d8b3",
+      "sizeBytes": 413
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/redis/instances.ts",
+      "sha256": "48a284c4a6d59b9c91942b99a3560fc0580d2fb1b3c9f0e4af8de2c582bb3a23",
+      "sizeBytes": 2154
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/storage/index.ts",
+      "sha256": "1c431de36bf6e37114833b3a1992bd07bc025f4b52d6c421ee0b3526298ae68c",
+      "sizeBytes": 84
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/storage/providers/index.ts",
+      "sha256": "95317cb8feb3446e81c4ec92a1cf78d96bf032114a9c7c4c9005db4c84240aa4",
+      "sizeBytes": 6573
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/storage/types.ts",
+      "sha256": "6611394c368b99e572f7cd56ed5e504166f17a64fa300ecd82b0f2b8dd2a290a",
+      "sizeBytes": 658
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/storage/utils.ts",
+      "sha256": "cab914e21334b61f29649d190c2bea66a1e87506090ae34b0c34fbad7fa1fe31",
+      "sizeBytes": 2038
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/throttler/config.ts",
+      "sha256": "2737088f91a8710b7bbdf7c701c7b09614de4badda2ac157bd08dafa0269f242",
+      "sizeBytes": 735
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/throttler/decorators.ts",
+      "sha256": "387d5de5650b1485ffbc2aab40868a3456e5e4c8e1c32f2804ce7ee75ca2cf1a",
+      "sizeBytes": 1395
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/throttler/index.ts",
+      "sha256": "f929b74e1357cf8975c4625fb8e64f5c8c93f1f34d1dac6085c1610556eba047",
+      "sizeBytes": 5328
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/utils/client-version.ts",
+      "sha256": "8c12df46dd8c545cd35aff8545d7ce7dd7abf41350e8742780d981e680916777",
+      "sizeBytes": 2874
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/utils/duration.ts",
+      "sha256": "4b981e55193b63242300ee50ebbe9ded7d0724bdfbe5b0b0771a248a3356e4f5",
+      "sizeBytes": 2132
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/utils/index.ts",
+      "sha256": "e5f15fba2154c0abadd2631f6ce52e5bcf9e4deaa84b18b745e3d5df35b7e603",
+      "sizeBytes": 250
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/utils/promise.ts",
+      "sha256": "8aa8e13802dd48a26bd0a18c867e6891b8fd515a62f8cf0c018f431ea88aca74",
+      "sizeBytes": 2301
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/utils/request-tracker.ts",
+      "sha256": "96f9ec79edfb6d8819c50c02a5883849ece2a5cbe076e76852ab1d9c6946d54c",
+      "sizeBytes": 935
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/utils/request.ts",
+      "sha256": "0b1160be9f3ac291123594fe1e40ccfa31af9eba606140b459d1f9638007fad7",
+      "sizeBytes": 4582
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/utils/ssrf.ts",
+      "sha256": "2cc75bd8144ed5d38d3c4364179827dec5bde8c0ee852c32cf9e985bac1b3391",
+      "sizeBytes": 4347
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/utils/stream.ts",
+      "sha256": "8c466a96aeac3bccac31cbe49e2e19c586b85902139d1e7a37dccc4415eda98c",
+      "sizeBytes": 1846
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/utils/types.ts",
+      "sha256": "685ee7ffada369169a9470ff7b61592e0ae728ceb2534d26e81b006ef5b43e04",
+      "sizeBytes": 1536
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/utils/unit.ts",
+      "sha256": "b075ba422138b39ca85779b8ee4eafd2ce9595f53dd1c816c49d802c4417d82c",
+      "sizeBytes": 319
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/websocket/adapter.ts",
+      "sha256": "a694fbad4249ec5a850f1abdeb0f4865ce3faee757586c95cd0c1c3e5bb33db3",
+      "sizeBytes": 2566
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/websocket/config.ts",
+      "sha256": "61c4986001e775b8b92115ee2699ccea0454722f2f8f13ba397987c32dcabab9",
+      "sizeBytes": 920
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/websocket/index.ts",
+      "sha256": "a5decc0bafc7248a92ad89381714faa2a0ff63a645ef00d22b3cd080517969b7",
+      "sizeBytes": 337
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/base/websocket/options.ts",
+      "sha256": "d8b6ca52a2f249745947a2a0cc3e64bef915769fd9ad698fddb181eb8796d778",
+      "sizeBytes": 333
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/cli.ts",
+      "sha256": "3086daf069345a901aa62a2e762a3ef14972ad87615f32db7a04f9f906bfca6c",
+      "sizeBytes": 2568
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/access-token.ts",
+      "sha256": "5c661cf8042c7d326637d9317fb9abd8235ab14353fe412d2db0ab365971e412",
+      "sizeBytes": 3585
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/auth-session.ts",
+      "sha256": "cfd49d1f1f4174ccfeb94fd30e0464ec3995ff6860e8e76d9c55251044c1659a",
+      "sizeBytes": 11233
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/challenge-store.ts",
+      "sha256": "b534225f5eef269fc5b28f6f6a74196af2a475409d8373b295adf8af564600ad",
+      "sizeBytes": 1457
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/config.ts",
+      "sha256": "d4421c67f279cb43d2fe0410f075c4b002158e1aa5be775fd351a859b0f66eb4",
+      "sizeBytes": 3992
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/controller.ts",
+      "sha256": "b2124a6683a3787696b6fa1babf95f505d052ea752b67c55f684a2b62bdf6929",
+      "sizeBytes": 10998
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/dev.ts",
+      "sha256": "3d21c5daa67fe43c43b0b139995e615f773d467241f8f17d26b9f9629efdac54",
+      "sizeBytes": 3262
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/email-domain.ts",
+      "sha256": "2da5ad16d27aa2692e9c48b0f898fc2fa5aaac380b2c50b9e7cff2461f2118cc",
+      "sizeBytes": 1884
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/guard.ts",
+      "sha256": "e1d791baad695c7004fdbd85a3fe437a1a45b5919a5b9cbcdb9b6d0b349d3a45",
+      "sizeBytes": 10320
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/identity.ts",
+      "sha256": "43b64ef436065f56f02c71763fae8525a1ad2378779f43b94bff32903ed78bc3",
+      "sizeBytes": 204
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/index.ts",
+      "sha256": "84b38c74959ea4814f573d497b0e3ed5ce49c8ed285374045a5368a630b6164f",
+      "sizeBytes": 2521
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/input.ts",
+      "sha256": "dc7f47693cdca8a80c9dd19046c74d87be2355e2eae4b9ba4d722a14fb780bda",
+      "sizeBytes": 3087
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/job.ts",
+      "sha256": "96970075f5e7b509dd784220af93309214428784639f1517200c3da1cbe39372",
+      "sizeBytes": 1070
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/magic-link.ts",
+      "sha256": "14b65beb69e346aea4926d90513fc54d2326fb9a1788fcc3dea34ea3be0195c3",
+      "sizeBytes": 3608
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/methods.ts",
+      "sha256": "6e1da19df8519c41f80c0006d1641e3c7bd751006c4eab5f6dc80d1a0a2d43e9",
+      "sizeBytes": 3373
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/open-app.ts",
+      "sha256": "c90f9f6213b15ca14ca0112a4ded775839b318ce6392acd56573a625c1b3acab",
+      "sizeBytes": 850
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/resolver.ts",
+      "sha256": "178a900bd6f1d7571d7c9d3b95b0f13375256a5832389c17e7bdd1cac14b0550",
+      "sizeBytes": 8618
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/service.ts",
+      "sha256": "12ca188be213ae4311739e323f01d578888891fed7dbc123c7d2902501cc305a",
+      "sizeBytes": 10694
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/session-exchange.ts",
+      "sha256": "7732e2a57972ba86b26edc5d4b9cf98abff90030da367695a78af09b6ffa2e89",
+      "sizeBytes": 4759
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/session-issuer.ts",
+      "sha256": "0aab9e662e22b5c0481a32e8b14a0898b51c307ff8931a1fa9e1c02d1db2ff11",
+      "sizeBytes": 1998
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/session.ts",
+      "sha256": "64f2dda1217c5cd463b23835026e67962f65462f7303f01cf83bbd8ea0c18058",
+      "sizeBytes": 1679
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/signing-key-resolver.ts",
+      "sha256": "717c6615a2e32657cb9d36ab3727c907fd9bb0ecbbe4bc9917d5d1b9e6823260",
+      "sizeBytes": 1342
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/signing-key.ts",
+      "sha256": "d61c4480e91bef4b20a129a2961321764f2b82139ae3a676fedd3c1ca20b9d25",
+      "sizeBytes": 8377
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/auth/token.ts",
+      "sha256": "f971391e1fce5f1ad13391375a2e21c3e7ea21568bf874f3b70157155e86eccf",
+      "sizeBytes": 215
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/backend-runtime/index.ts",
+      "sha256": "5da0226074ec85999ee8e3da123b940b94293630301be5f5e20e643dfd19b2e3",
+      "sizeBytes": 731
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/backend-runtime/job.ts",
+      "sha256": "5b1bec6991a02df1246e16bf96031eb2188701bd2cdeba94c82516026477c08b",
+      "sizeBytes": 1584
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/backend-runtime/provider.ts",
+      "sha256": "e328cf35324b4815429d25dff4791caf8512cb91766341f0b35ebbe012414a4f",
+      "sizeBytes": 10192
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/comment/index.ts",
+      "sha256": "a6304bd88841618882674ad290b83e24f135db04cabd592e8c9ce723e3feaabb",
+      "sizeBytes": 686
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/comment/realtime.module.ts",
+      "sha256": "d7c60de8c9061dba0918b0bf2304e92e6e8d33b7588223626ded00d030c2bd63",
+      "sizeBytes": 358
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/comment/realtime.ts",
+      "sha256": "73a543b2ac4c6c26b42813ebf8a5b6703daba93a0584687c376eab79ac0a3565",
+      "sizeBytes": 3262
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/comment/resolver.ts",
+      "sha256": "f5eb86ab8e15e24dfa1f993019f3390698a9fab0bd1bc4ed3847d5f9d8c47292",
+      "sizeBytes": 13211
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/comment/service.ts",
+      "sha256": "f545663fb93632a9c02ae4405b146f80e3eb884b96ae3570713ce4b3de6095fe",
+      "sizeBytes": 3061
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/comment/types.ts",
+      "sha256": "d5b9ed739b9e5bf99e8af0073e8dbfe95493b125ae3cfee4b793ce6a227d6870",
+      "sizeBytes": 4640
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/common/admin-guard.ts",
+      "sha256": "df2383adf3fd54f6c9b4b6c286a704dac6d9845f3f0f252003e0618d3a384520",
+      "sizeBytes": 1201
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/common/index.ts",
+      "sha256": "a1ca4b861d86928f69b069fc93096ba6d8a73452d85bb1dc3f41a888dfc3bc4c",
+      "sizeBytes": 31
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/config/config.ts",
+      "sha256": "9756d52835e0202a9b9e246b128e421c100f243c013b342ac65b8bd150a8abe4",
+      "sizeBytes": 2095
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/config/index.ts",
+      "sha256": "9f238a1b1cfbfc38a3d5b41ef7ad7108dce9ba6113853cb4d8608faed4fcd744",
+      "sizeBytes": 576
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/config/resolver.ts",
+      "sha256": "53596ff9a286cba85612910c2763f52b519040e5220e0de91e3906987b64e7dc",
+      "sizeBytes": 6039
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/config/service.ts",
+      "sha256": "0e34e0bc1a7275b3ba8d014c0a160c27fe779539d52fc5c8edb37c91410636d3",
+      "sizeBytes": 4057
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/config/types.ts",
+      "sha256": "226a83454eba04981c1de40c6f466b31885c368563ab726a2c6f279ce7d8a137",
+      "sizeBytes": 996
+    },
+    {
+      "path": "Codebase/packages/backend/server/src/core/content-policy.ts",
+      "sha256": "48e7f22f1263fef19316cb1eecb29aa0e0ba1627a65ca2b3410f86c39fe9647d",
+      "sizeBytes": 386
+    }
+  ],
+  "inputFingerprint": "225b36053a0d54895d6d9581c3c494b1639ca306fceaefc04d7bb94cb6cc1dd8",
+  "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0006.json",
+  "outputSha256": "d7903c1929f9407e3137a1c4f4ee1239940b991883c882f8e696431f839bd6b9",
+  "nodeCount": 4470,
+  "edgeCount": 13848,
+  "inputTokens": 0,
+  "outputTokens": 0,
+  "cacheDecision": "REEXTRACTED",
+  "cacheInvalidationReason": "input fingerprint changed",
+  "completedAt": "2026-07-28T10:28:49.785Z"
+}

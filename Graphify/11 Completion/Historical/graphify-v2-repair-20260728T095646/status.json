@@ -1,0 +1,32 @@
+{
+  "project": "MindRoom",
+  "schemaVersion": 2,
+  "projectPhase": "GRAPHIFY_MAPPING",
+  "currentBatchId": null,
+  "currentTaskId": null,
+  "lastCompletedTaskId": "task-map-0002",
+  "lastUpdatedAt": "2026-07-29T08:46:38.879Z",
+  "repositoryRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom",
+  "codebaseRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Codebase",
+  "graphifyRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify",
+  "gitStatus": "MISSING",
+  "graphifyStatus": "AVAILABLE",
+  "ponytailStatus": "AVAILABLE",
+  "subagentStatus": "AVAILABLE",
+  "releaseGateStatus": "LOCKED",
+  "runId": "graphify-v2-repair-20260728T095646",
+  "codebaseBaseline": "135fbaacd841e5e4c271b046eda4b1613da83122e08c464904d395cd93ae5a04",
+  "masterPlanHashes": {
+    "01-EVERYTHING-WE-ARE-KEEPING.md": "9EBC9C47CF89F98F19CCB039D26031CD7D85E466B57C3A38FD3338EAC618D2E0",
+    "02-EVERYTHING-WE-ARE-DELETING.md": "9065986168858C42E6E4CA7C7050E189265F619C9CB0C902F9BE276A99C08043",
+    "03-HOW-WE-WILL-KEEP-DELETE-AND-IMPLEMENT.md": "8AA9DAB09A432361B6CD0CEB26F6911AAF36BAFDE8ED5634C9A687A4774D2D49"
+  },
+  "mappingStatus": "VERIFIED_COMPLETE",
+  "v2Repair": {
+    "lastCompletedStep": "GRAPHIFY_MAPPING_VERIFIED_COMPLETE",
+    "affineArchiveStatus": "REFERENCE_VERIFIED",
+    "independentReviewStatus": "APPROVED",
+    "openMappingBlockers": [],
+    "implementationPerformed": false
+  }
+}

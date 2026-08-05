@@ -1,0 +1,35 @@
+{
+  "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+  "scannerPolicy": "LANGUAGE_FILE_ROLE_AND_RECOGNIZED_RUNTIME_CONSTRUCT",
+  "scannedAuthoredCodeFiles": 6086,
+  "suppressedNonCodeFiles": 3063,
+  "suppressedTestFixtureOrConfigFiles": 931,
+  "suppressedAmbiguousPathPropertyCandidates": 0,
+  "packageSwiftPathLiteralsSuppressed": 4,
+  "registrationCount": 643,
+  "registrationTypeCounts": {
+    "DI_REGISTRATION": 408,
+    "WORKER_REGISTRATION": 10,
+    "SCHEMA_REGISTRATION": 3,
+    "ROUTE_REGISTRATION": 82,
+    "GRAPHQL_RESOLVER": 45,
+    "BACKGROUND_JOB": 21,
+    "MENU_REGISTRATION": 5,
+    "APPLICATION_EVENT": 10,
+    "IPC_REGISTRATION": 3,
+    "PROTOCOL_REGISTRATION": 1,
+    "PRELOAD_EXPOSURE": 4,
+    "IPC_EVENT_LISTENER": 4,
+    "COMMAND_REGISTRATION": 47
+  },
+  "consumerCoverage": 641,
+  "capabilityCoverage": 116,
+  "entrypointCoverage": 639,
+  "assertions": {
+    "zeroPackageSwiftRoutes": true,
+    "zeroPodfileLockConfigRoutes": true,
+    "zeroUrlOrCommentRoutes": true,
+    "zeroPlaceholderIdentifiers": true,
+    "allDiscoveryFieldsContractValid": true
+  }
+}

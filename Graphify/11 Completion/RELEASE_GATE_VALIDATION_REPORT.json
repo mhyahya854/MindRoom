@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:39:03.427Z",
+  "waveCount": 6,
+  "releaseGateCount": 6,
+  "wavesWithoutEntryGates": [],
+  "wavesWithoutExitGates": [],
+  "gatesWithoutTests": [],
+  "gatesWithoutReceipts": [],
+  "gatesIncorrectlyMarkedPassed": [],
+  "applicationReleaseStillLocked": true,
+  "codebaseModified": false
+}

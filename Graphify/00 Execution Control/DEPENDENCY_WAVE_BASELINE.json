@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:33:51.559Z",
+  "totalCapabilities": 161,
+  "totalTasks": 162,
+  "primaryTaskCount": 161,
+  "supportTaskCount": 1,
+  "unknownCapabilityDependenciesBefore": 0,
+  "unknownTaskDependenciesBefore": 0,
+  "capabilityCyclesBefore": [],
+  "taskCyclesBefore": [],
+  "backwardWaveDependenciesBefore": [],
+  "capabilitiesWithoutPrimaryTasksBefore": 0,
+  "primaryTasksWithoutCapabilitiesBefore": 0,
+  "supportTasksWithoutOwnersBefore": 0
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "timestamp": "2026-07-30T18:33:52.209Z",
+  "capabilityCount": 161,
+  "primaryTaskCount": 161,
+  "supportTaskCount": 1,
+  "totalTaskCount": 162,
+  "capabilityDependencyEdges": 176,
+  "taskDependencyEdges": 337,
+  "unknownCapabilityDependenciesBefore": 0,
+  "unknownCapabilityDependenciesAfter": 0,
+  "unknownTaskDependenciesBefore": 0,
+  "unknownTaskDependenciesAfter": 0,
+  "capabilityCyclesBefore": [],
+  "capabilityCyclesAfter": [],
+  "taskCyclesBefore": [],
+  "taskCyclesAfter": [],
+  "backwardWaveDependenciesBefore": [],
+  "backwardWaveDependenciesAfter": [],
+  "sameWaveDependencies": [
+    {
+      "dependent": "MR-IMPL-015",
+      "prerequisite": "MR-IMPL-001",
+      "wave": "WAVE_1",
+      "executionOrder": 1,
+      "reasonSameWaveIsSafe": "MR-IMPL-001 establishes file-backed identity before calendar core."
+    },
+    {
+      "dependent": "MR-IMPL-016",
+      "prerequisite": "MR-IMPL-001",
+      "wave": "WAVE_1",
+      "executionOrder": 1,
+      "reasonSameWaveIsSafe": "MR-IMPL-001 establishes file-backed identity before finance ledger core."
+    }
+  ],
+  "packageCycles": [],
+  "wave0PrerequisiteDefects": [],
+  "codebaseModified": false
+}

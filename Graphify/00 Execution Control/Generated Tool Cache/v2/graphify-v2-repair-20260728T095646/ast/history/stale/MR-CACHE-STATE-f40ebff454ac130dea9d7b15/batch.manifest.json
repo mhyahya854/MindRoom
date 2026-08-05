@@ -1,0 +1,2023 @@
+{
+  "policyVersion": "mindroom-graphify-v2-layered-directed-1",
+  "extractor": "graphify.extract.extract",
+  "extractorVersion": "unknown",
+  "runnerSha256": "2adcfbd68a8a4e2b407bba8c37b6f81fb5b31a74fa570e70359e0283bf7f33ec",
+  "classificationResolverSha256": "675743d8d1e0f47c12ac4b2678077ed0ee0f06c0ccb6755505ffdc22bbfdaf55",
+  "codebaseRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Codebase",
+  "layer": "AUTHORED_RUNTIME",
+  "batchIndex": 15,
+  "batchSizePolicy": 400,
+  "files": [
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/stores/user-settings.ts",
+      "sha256": "28c21222a65a0fe3ab6450d2c402e165e695149e4431a36f29e937eae807dbad",
+      "sizeBytes": 1179
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/types.ts",
+      "sha256": "2a87118e83b03091cddc3e9af2e8842e54b774f369d4cf280d6ff64c37592503",
+      "sizeBytes": 457
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/views/public-user.css.ts",
+      "sha256": "d92e5f8d73ad78e50f2f5903f144d5d9c1dc3865d26c10d0f1da1392ab7dd05e",
+      "sizeBytes": 534
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/cloud/views/public-user.tsx",
+      "sha256": "1571d8b76effe9c8f6df588e4a006d2f9d94c3107993bd992fd532cccf48fc37",
+      "sizeBytes": 2043
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/code-block-preview-renderer/bridge.ts",
+      "sha256": "39a1ad51de475a14d4f865981e6e7922115fb7f6864413540f4d4565da7c9b06",
+      "sizeBytes": 1206
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/code-block-preview-renderer/classic-mermaid.ts",
+      "sha256": "d9c8c78cd064f22086d4d8b57879ee5c1f2198dc84948329a60ec16439aeb9e1",
+      "sizeBytes": 1872
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/code-block-preview-renderer/index.ts",
+      "sha256": "f3a1973601fb173705a883940f87b26bc91d6f55827b55d42d036190e1420512",
+      "sizeBytes": 547
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/code-block-preview-renderer/platform-backend.desktop.ts",
+      "sha256": "e0739025f5aee789818a3e619f3ff29db29d842fa6297110d288e28fb9469b22",
+      "sizeBytes": 1654
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/code-block-preview-renderer/platform-backend.mobile.ts",
+      "sha256": "e5415a4edf582f44a2797c4900b237f8b3cc5bc84f893a0fd9e193bfea5287c0",
+      "sizeBytes": 857
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/code-block-preview-renderer/platform-backend.ts",
+      "sha256": "47ee73906aa889b9697b84cf9515690234ff25d0789f2499f375a531e381bd79",
+      "sizeBytes": 832
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/code-block-preview-renderer/runtime-config.ts",
+      "sha256": "43d10272bcbf78d575bcae8ff4e0ebb132d645056b632da09a2078e6f4fae40f",
+      "sizeBytes": 1043
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/code-block-preview-renderer/services/preview-renderer-feature-sync.ts",
+      "sha256": "d8faee4fb04cb85bdad383e2ce3f4feccdbdf9d12427e93566a11530d7be52b5",
+      "sizeBytes": 905
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/code-block-preview-renderer/types.ts",
+      "sha256": "d76b05402156e40dca05947a860b5ba49ae5b05f58353cd62578be90f925ba6e",
+      "sizeBytes": 421
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/checkbox.ts",
+      "sha256": "4d43d6311c52f18eb8b3d46d08fe1201462154f34b4abd9557c45b7d05dbdbab",
+      "sizeBytes": 1488
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/created-at.ts",
+      "sha256": "3fa1d6c1b6e8f5ab62b093b23fb98973c7665c0358ffdd116e7b74bd42d59423",
+      "sizeBytes": 686
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/created-by.ts",
+      "sha256": "6adce2cd646297738edb8953ea08d34f83620b6cded7b96124221ddec0654bc1",
+      "sizeBytes": 1132
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/date.ts",
+      "sha256": "186b88f8c4ff3bffa269086efdf1d9f44558d37a98687b9dadc4a929d207764b",
+      "sizeBytes": 4917
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/doc-primary-mode.ts",
+      "sha256": "2c7def643b5c86d2be7b78e47a62fb64711b60b1dd48906c44bc59a09e890f07",
+      "sizeBytes": 1455
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/edgeless-theme.ts",
+      "sha256": "649381ad1fb997e157687847d6b436b144cb48b6d4026f8513f96e270923d592",
+      "sizeBytes": 1471
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/empty-journal.ts",
+      "sha256": "a078f4bebb15fda1414baf8cfb06c34b8adca52ad9f85293564d57d23f600615",
+      "sizeBytes": 1141
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/favorite.ts",
+      "sha256": "fd8788ec8324b9584d3d0ad7b41d5d05f74ca4c54d7fdde4bff0fb4d36416a66",
+      "sizeBytes": 1634
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/integration-type.ts",
+      "sha256": "9c4e648328ad90594400daae93678aaf8e86858a32d6eda671f9a7fd080a7c96",
+      "sizeBytes": 1326
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/journal.ts",
+      "sha256": "fc944d58d489d7a98ba26438f47b6a79cfbf64e984a3502e6bdcdfba9f01c531",
+      "sizeBytes": 1464
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/number.ts",
+      "sha256": "5e8cef07ae5f180294d7f37e1800a1aee238679d31f20cd77762d841f81dbfd2",
+      "sizeBytes": 2886
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/page-width.ts",
+      "sha256": "6747bc6fb838316429a6d0425681f357ec8a459a4b1efffe79240f9b54810a59",
+      "sizeBytes": 1445
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/property.ts",
+      "sha256": "91c92d77af8f90da5993a91dbf762fbf7f14cb159d225bdd1c9c782f1c6b9c3f",
+      "sizeBytes": 1064
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/shared.ts",
+      "sha256": "370ed0364f7d24dd8f9c94a3c624a1f723846fed048a33cbd79e45e56a781907",
+      "sizeBytes": 1673
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/system.ts",
+      "sha256": "248e186db98612669a4d203f92e49eca0192eab4188ebac523e171f3fe95f7ec",
+      "sizeBytes": 562
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/tags.ts",
+      "sha256": "b9f4e9672aa661289befed01d315f3b371e10dbb4f30b1bf52304beb15372649",
+      "sizeBytes": 3923
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/template.ts",
+      "sha256": "65de607b831854a95bc900c7ba28f5c967d2340687e32caadd774b7b3e28d6c4",
+      "sizeBytes": 1455
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/text.ts",
+      "sha256": "22fac4070dcaf0cbd751494e92c83f26889d3ed296b3af5580577bc06a4cbfb0",
+      "sizeBytes": 2101
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/title.ts",
+      "sha256": "87956683e7e66694980dae7ea9a1f337b721c2c14ed1532a817b6e98f853e68c",
+      "sizeBytes": 768
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/trash.ts",
+      "sha256": "bdb455cd05620f0bacc230558ba3fd645cc10f5149fc34e86dd1dab0eb86d076",
+      "sizeBytes": 711
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/updated-at.ts",
+      "sha256": "ff6f9d8ca44c1a9c2c811832b21f1fabccc9db90fc48f3617e1c61ea78f380a9",
+      "sizeBytes": 687
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/filters/updated-by.ts",
+      "sha256": "d9bcac9d7089acead3d09c06bbbf254d2d3dd8289818ecc0fb5e9111c7dc8bad",
+      "sizeBytes": 1131
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/group-by/checkbox.ts",
+      "sha256": "6a47c01d7151445451322ab161a0d7ca11dee1a17c7700e54749367e262d134c",
+      "sizeBytes": 1051
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/group-by/created-at.ts",
+      "sha256": "fe6504748a32667ffd0949c47b0dce2a218d549b9b019f4e53c1b349350bb1ad",
+      "sizeBytes": 1210
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/group-by/created-by.ts",
+      "sha256": "c099da42a2403ded55108d7abbb0372a655432a58cd31bc40d94e619485fdd76",
+      "sizeBytes": 963
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/group-by/date.ts",
+      "sha256": "3406c62b78dc4588316da4440fd27cc33e9d965b3a3d139c9ed18896513ffb11",
+      "sizeBytes": 977
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/group-by/doc-primary-mode.ts",
+      "sha256": "2c931ad300e878203f567e8fc002e4dcbb107a0ce20e3aa85ce825155608c130",
+      "sizeBytes": 981
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/group-by/edgeless-theme.ts",
+      "sha256": "3f75bd6738c61543eea8437f5edb9d449c4e0463c6772ff8e2dd5d7d9d5e116d",
+      "sizeBytes": 993
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/group-by/integration-type.ts",
+      "sha256": "f94ac92bcc71fb92246a315a345e7429213245d95bc4b12743a31dc6daf59dac",
+      "sizeBytes": 1088
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/group-by/journal.ts",
+      "sha256": "6835ba76c3a8d4c02ab118c8d34dae1a690f724d22d30a7a453704c1b9aa80f5",
+      "sizeBytes": 995
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/group-by/number.ts",
+      "sha256": "804032d51be145eb751b544628bfa97ec9accb8c3ae1b59f96d5df46ad4d7586",
+      "sizeBytes": 1113
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/group-by/page-width.ts",
+      "sha256": "9921effdb928af93765523afe292980f9a3e5003b8ff0ee77abc7dff9e6d2cce",
+      "sizeBytes": 998
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/group-by/property.ts",
+      "sha256": "828856746b719adeb0cae65b5f9e4e72126c424571141b18f974be53f233cdaa",
+      "sizeBytes": 1156
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/group-by/system.ts",
+      "sha256": "84954815f67381e995042a72bad1c9974765d16c4cc4a2b8a6f171d9961294c6",
+      "sizeBytes": 638
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/group-by/tags.ts",
+      "sha256": "516e3418697d296f73656adcc93bf1defc07997097d16f2c03ee4770305bdd01",
+      "sizeBytes": 1242
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/group-by/template.ts",
+      "sha256": "9c2430f23d418ea25acda25795383b4ade365cb27edcdd68a39dd8e2dc469214",
+      "sizeBytes": 1007
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/group-by/text.ts",
+      "sha256": "628d9a1d360a61c37a4754e0b32149b95deb1b91accf5175a58531bdc02f8c67",
+      "sizeBytes": 977
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/group-by/updated-at.ts",
+      "sha256": "511a7d89e2bc75b25fef2796d409637837982bdf23dbed6f24b179ae0c634ba4",
+      "sizeBytes": 1251
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/group-by/updated-by.ts",
+      "sha256": "70c6b54787341744d80e7f96f6cc326a19b54d7121b58d1e37f0256eadd3b583",
+      "sizeBytes": 963
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/order-by/checkbox.ts",
+      "sha256": "0e5bb8c2c1e9c0015833b1435f651977c5f75c2b3555eadc2dacb4ba5189da5e",
+      "sizeBytes": 1221
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/order-by/created-at.ts",
+      "sha256": "54c2c3cfdd3980c74bcde945574173de3132a373ab3085f3a9404c41c8aa51f0",
+      "sizeBytes": 931
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/order-by/created-by.ts",
+      "sha256": "8bba6abac9cfafb5e5861e4f4d48065ea71815fe354e3c88d939b0298850745d",
+      "sizeBytes": 923
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/order-by/date.ts",
+      "sha256": "5960bc8f1bbb69241ee7fdfe7b386ac8f3008810826760a7b01066ecda4b1bf0",
+      "sizeBytes": 937
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/order-by/doc-primary-mode.ts",
+      "sha256": "fc6937ae6ac3981984fc44a3a48aa2e34d601eb6a2e96dd3acc019690a81769d",
+      "sizeBytes": 1047
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/order-by/edgeless-theme.ts",
+      "sha256": "a78b7c79363cfed82d9144897e6b7197854e063714776d0cf15c1222bf18076c",
+      "sizeBytes": 1060
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/order-by/integration-type.ts",
+      "sha256": "d7bcbac464cf967d25d1d244346f70597c671c1f6f5feba7a7501a5120dea02b",
+      "sizeBytes": 1123
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/order-by/journal.ts",
+      "sha256": "7e6df5ca73c91708e577e54cf806d2cb3ee49724451924c6d5ff3f94e92713fb",
+      "sizeBytes": 1010
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/order-by/number.ts",
+      "sha256": "30c6cceac3b574f4b3bf034ff02404f5bc388ef9861c3ba9c5dc6d285f0fd001",
+      "sizeBytes": 925
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/order-by/page-width.ts",
+      "sha256": "595a78bb8a8cb762cafdf7119b80cd613ffffae6fd84179e6128585b202ba7bc",
+      "sizeBytes": 1049
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/order-by/property.ts",
+      "sha256": "27b9a98f84ae253a2b9106eb5438dac6e41888e16c91b7fb339c3251ee65fe62",
+      "sizeBytes": 1117
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/order-by/system.ts",
+      "sha256": "7071349a85ba3ed9a14c4f416b9d4e3d5d459326d2a2eda17de681d4fe6455fa",
+      "sizeBytes": 622
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/order-by/tags.ts",
+      "sha256": "d1f7f4d51b049f63ad1aaec7f323520d569130411a934cae1b8b7d92b205cc0f",
+      "sizeBytes": 1358
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/order-by/template.ts",
+      "sha256": "efb4d41445a072c089d9d5fca33e7f6ed3984db295edac23758da38c23524667",
+      "sizeBytes": 1079
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/order-by/text.ts",
+      "sha256": "2bc441886836ca6977331e50db70b848cf70006d625d4d4b4877d8401d083f30",
+      "sizeBytes": 937
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/order-by/title.ts",
+      "sha256": "6ffbb448b660ae5b2581d33a5894d65493ba9707f0b603aadfd865914771fd9b",
+      "sizeBytes": 837
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/order-by/updated-at.ts",
+      "sha256": "2a71f94e6eb9ff2ad5b9aa9da428252afdc9644b00f47134f0dc9ecc794b2570",
+      "sizeBytes": 1023
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/impls/order-by/updated-by.ts",
+      "sha256": "e231fb2ae29cbd89da6b54313c033f5475880612c9b42e658c893eab1bf5628b",
+      "sizeBytes": 923
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/index.ts",
+      "sha256": "ffcdde2572cc39f963e0a8bc7c19fc2865296c981af475b98e7f171feafbbbfa",
+      "sizeBytes": 14034
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/provider/index.ts",
+      "sha256": "f6000d8a7634327f594225197a82405b39a6d6af366bcc4dc9272614838317d2",
+      "sizeBytes": 825
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/services/collection-rules.ts",
+      "sha256": "23d22321a1be6fca583ec70caf68d1a7aecaba3806dc0ef4c013b2046af9cedf",
+      "sizeBytes": 8470
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection-rules/types.ts",
+      "sha256": "8af2c742650e6d8580cf8b073834749fdbef1c1e7d2b5daa7bdc968f07b1f5c4",
+      "sizeBytes": 253
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection/entities/collection.ts",
+      "sha256": "742ab9426f442d309db4116de3b75b757e939b0780929643f66202af9e5554ae",
+      "sizeBytes": 2452
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection/index.ts",
+      "sha256": "53260042b0bcbb2fc5f4340e7353a5faffa331d1b874056b80e115c385eac833",
+      "sizeBytes": 1304
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection/services/collection.ts",
+      "sha256": "1a6b97c1f9753c9ee94e26741e4726be4220fe071d609f108c5f523d7002d4b3",
+      "sizeBytes": 2250
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection/services/pinned-collection.ts",
+      "sha256": "75b787a434e7459dfc2c2a91a6e8f78fdbd3722c5446aa09bc8a3a8e144bda62",
+      "sizeBytes": 2269
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection/stores/collection.ts",
+      "sha256": "0ad268ebe1aaa3d2553e688db0ba12c9d97fcb4e6eae11fb1dd8f8d8b497a99d",
+      "sizeBytes": 8686
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/collection/stores/pinned-collection.ts",
+      "sha256": "54dd2c59aad4d060622b6c6a7753156d5a0457b054a40247d9fa2689ee735902",
+      "sizeBytes": 933
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/comment/entities/doc-comment-store.ts",
+      "sha256": "fed52c1f1826bd55a11fdb45ab1fba7f365b0fe061fb349e8e2310068c5446c5",
+      "sizeBytes": 8927
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/comment/entities/doc-comment.ts",
+      "sha256": "1fbc31b5e7f192371aa21b1df558501ae547765f9f6bd7a55c70725ff4ac9abd",
+      "sizeBytes": 21081
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/comment/entities/utils.ts",
+      "sha256": "d3cf3268c5f9d271ce17e9dc528f78ff4a2cd1f1220d2f17c0935b25da082a01",
+      "sizeBytes": 925
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/comment/index.ts",
+      "sha256": "66daad7a9fa0027edc57de2df98cc16cce1c47a17aaf8c2a065cb6ae1c85b811",
+      "sizeBytes": 1211
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/comment/services/comment-panel-service.ts",
+      "sha256": "0cb70e914c865211def9807b5045ad5612ac3e17cef192a15b77a165e969223f",
+      "sizeBytes": 1493
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/comment/services/doc-comment-manager.ts",
+      "sha256": "0a8d407358e12fa6f0b52ca851d5c41d96d0b11637b83f92c86ca6a7da3e2714",
+      "sizeBytes": 1056
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/comment/services/snapshot-helper.ts",
+      "sha256": "f2faef69e1af191bb792ebbb2e2c3f16769e77c06e89a2170dfbc433fd219bbe",
+      "sizeBytes": 5128
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/comment/types.ts",
+      "sha256": "e2ece03c56118ca6975adfe27ff9cc2e7782593090eb94f7debc13749c5a4794",
+      "sizeBytes": 1723
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/db/entities/db.ts",
+      "sha256": "4d477ae10c184c38dd83f4706d0db51e3f30800dd59d0f7894242ecd53a93bd7",
+      "sizeBytes": 854
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/db/entities/table.ts",
+      "sha256": "71c1483138418fbbd104711a4c13f3282d0f579356e8bb89bf72cd24be460049",
+      "sizeBytes": 2015
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/db/index.ts",
+      "sha256": "37743c123951b832b9630638749a9be37200a493c9ae77d4d506256c2a9e710f",
+      "sizeBytes": 732
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/db/services/db.ts",
+      "sha256": "cb4400205a5e0a15fa61d588d841c7a89f12617f8a266a005a0120a9a49c03fb",
+      "sizeBytes": 3946
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/db/utils.ts",
+      "sha256": "2205870de948aa250583ee6cdb5421e2419fbf12c787c4c1e3256d1c5d80dd75",
+      "sizeBytes": 1125
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/desktop-api/entities/electron-api.ts",
+      "sha256": "b865c17c8690f1cab6dcfe6fa5f3052e88bd2a5d1794b35713d86a76d32349b4",
+      "sizeBytes": 811
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/desktop-api/impl/index.ts",
+      "sha256": "729521592af5689de024035fb92287a967758c625319ad0eecc1dda155800125",
+      "sizeBytes": 576
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/desktop-api/index.ts",
+      "sha256": "2b86d9543756c324cf6a15a21be911456dd8b50856d9082a88dca28221459274",
+      "sizeBytes": 618
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/desktop-api/provider/index.ts",
+      "sha256": "a4af8c27d268082011d90d7346393089c5338fe8699e64b605f88eb353a78e1c",
+      "sizeBytes": 470
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/desktop-api/service/desktop-api.ts",
+      "sha256": "33cc02a544216b9332f298b66e5ff696b4d139931d605393090441e68456a834",
+      "sizeBytes": 5013
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/dialogs/constant.ts",
+      "sha256": "60d99c9374d0c59c97462a3b9d03283b6efc584deb40ccde001d75c37808a811",
+      "sizeBytes": 2147
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/dialogs/index.ts",
+      "sha256": "672817279d07cfe8183ac9024aaea240442323206a29aced72360b4f9c9b0a40",
+      "sizeBytes": 667
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/dialogs/services/dialog.ts",
+      "sha256": "74bffbc42d0d1a37bf173e7196373c478d43825bf7eb6f92fce3d9c4cdb565b1",
+      "sizeBytes": 1075
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/dialogs/services/workspace-dialog.ts",
+      "sha256": "44aa5e8a3f55029d428d5bbeb3802824253af16623279a385fc58c497131ca77",
+      "sizeBytes": 1226
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/dialogs/types.ts",
+      "sha256": "94e67da92877c0bfc8c722164c96710179213dc1897ec537cd803ecb26c3df10",
+      "sizeBytes": 467
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/dnd/index.ts",
+      "sha256": "389cf03f183e52f2ad1daef5540b17a6930ba86864d8dcbfff1af367086f5f5c",
+      "sizeBytes": 439
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/dnd/services/index.ts",
+      "sha256": "8a3b536c33547c67c4e34777592fcaeb16945ff386d799e1e1fd34d496418562",
+      "sizeBytes": 9966
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-display-meta/index.ts",
+      "sha256": "9422ebe0668cb8bbedffc22019434f2faae84d9e22146e8ace9d5d2186575b97",
+      "sizeBytes": 652
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-display-meta/services/doc-display-meta.ts",
+      "sha256": "50447a2d5fdb9025930ebe9bbebe92e7222e79c8f6f454f5292ee9339cc87b66",
+      "sizeBytes": 7105
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-display-meta/services/icon.tsx",
+      "sha256": "dbd1f69261be42513376f4dee74151b4d8e563b11a420e576ca8b0229cb33199",
+      "sizeBytes": 842
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/index.ts",
+      "sha256": "63e870c407a3ba209748f3846be381597c1387a64983001756d3ce0148799036",
+      "sizeBytes": 568
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/services/doc-database-backlinks.ts",
+      "sha256": "b1aa2f6a347de9e57db6b2fed69fa7e28477c9abf2b097ba52810d455f46d001",
+      "sizeBytes": 5269
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/types.ts",
+      "sha256": "71ae01789cf385b71c17aecaea4f69d38d0757d60a74a27f0d817bf9d44a6f00",
+      "sizeBytes": 1105
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/use-std.ts",
+      "sha256": "abfdeccbd577db0d3aecc51ef3b897951d5fabbb21ff8247d150fa68116b7a9c",
+      "sizeBytes": 678
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/utils.ts",
+      "sha256": "456ffde8944a572a3b3dec981f94fed208b84c2298f5c5d3630000a840b98743",
+      "sizeBytes": 898
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/views/database-properties/cells/checkbox.tsx",
+      "sha256": "9928ba0bc41a6c40999764b0f9123880268858691f2efa2b867e94e3b953673d",
+      "sizeBytes": 704
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/views/database-properties/cells/date.tsx",
+      "sha256": "481ef7c5d2746f7470830d5423afc7c9e012ac5e58e260e9e0607a05172b235a",
+      "sizeBytes": 1075
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/views/database-properties/cells/link.css.ts",
+      "sha256": "90229630458714081ef2e39745e181b377a4b97b120481e8106058c02d7310c5",
+      "sizeBytes": 1812
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/views/database-properties/cells/link.tsx",
+      "sha256": "576ebdc2ab11fe73ec9d7e56871be0606f158360434f1336ba2a2cd5235323cd",
+      "sizeBytes": 4748
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/views/database-properties/cells/number.tsx",
+      "sha256": "b504fa0db7f74a640d39a8f0ef0eac4c05bc99b96c68e256b4a2bcb6beee4200",
+      "sizeBytes": 629
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/views/database-properties/cells/progress.css.ts",
+      "sha256": "44aa7ae7d82e03a9ae63160ecb9e7b85251e8475eb9c9f3e411fa86933bfcc3e",
+      "sizeBytes": 200
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/views/database-properties/cells/progress.tsx",
+      "sha256": "f0c0ae49fb9701e9e2955d3c11955eb4e179218ad2089bab2e5dc9cf2a591c13",
+      "sizeBytes": 2286
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/views/database-properties/cells/rich-text.css.ts",
+      "sha256": "50fe8634b04a9c45d7dd5d13ff732f9e6f878992a6056d4b0f2269ec5ccab26a",
+      "sizeBytes": 123
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/views/database-properties/cells/rich-text.tsx",
+      "sha256": "203247fa026efdb0009f1ce77cc03b1854b13bdaf686d4c471279563dfea8777",
+      "sizeBytes": 3717
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/views/database-properties/cells/select.css.ts",
+      "sha256": "49a96226e1dac819cc0613abfc48b423fbc6bb5b1a634eb246fd9c0c840f2a3d",
+      "sizeBytes": 209
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/views/database-properties/cells/select.tsx",
+      "sha256": "8ffce8c0965241e74dea80418ceaaab937561d537c8ee64cd88c8c16ed0d4411",
+      "sizeBytes": 7810
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/views/database-properties/constant.tsx",
+      "sha256": "7298a8d7cbba64126c7cfc0af02872acbb2c11955b91b1bb314b04c8c28f68fc",
+      "sizeBytes": 1974
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/views/database-properties/doc-database-backlink-info.css.ts",
+      "sha256": "25317289d74f0cb5a66e159d6ca63fe33108f1974273c3636288db3e145077e9",
+      "sizeBytes": 1156
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-info/views/database-properties/doc-database-backlink-info.tsx",
+      "sha256": "d4beb9a84ff87c0299468ad888118df1117b441e3673186f49731239a61625f2",
+      "sizeBytes": 5968
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-link/entities/doc-backlinks.ts",
+      "sha256": "6dd1c0006a6cc3fc3d7b946358e87e8130bc3d53fd65668711283752368b0d69",
+      "sizeBytes": 4882
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-link/entities/doc-links.ts",
+      "sha256": "25f65d2dbd1ca7e5e1687fc524497e0d526d06d71c3fbad19d00469c7b4c58b8",
+      "sizeBytes": 547
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-link/index.ts",
+      "sha256": "8a88f5d14c4e499cebcd7d7b583b65afb4a09840e9cb2d95f41f42f69d4642dd",
+      "sizeBytes": 1061
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-link/services/doc-links.ts",
+      "sha256": "d50bdff1c0afdca27ed44b1900cb72a61bbffe7b4ed7d8d4f0e0c6c68a2c842b",
+      "sizeBytes": 312
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-summary/index.ts",
+      "sha256": "3abead0a3c1249c0532751aa320b20aa5c6974f34dac27a21da3ea63e4f8e5d1",
+      "sizeBytes": 749
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-summary/services/doc-summary.ts",
+      "sha256": "b6ba92ed57e1c3f3ff9464525c442d350ba83de27211e3035437d7e2dc7c370f",
+      "sizeBytes": 3133
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc-summary/stores/doc-summary.ts",
+      "sha256": "e22bc938cb34d65c0510f1810de2235b03fd91a2abe0960deb86e239180a17e4",
+      "sizeBytes": 2338
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc/entities/doc.ts",
+      "sha256": "1b1e64f7f405bfad859d37825c9c8289082987c8cc311efc1ce0fa0ffebf52bf",
+      "sizeBytes": 3942
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc/entities/record-list.ts",
+      "sha256": "2c5849436ea92e2b243b3286c1c95d0f6f551f2b394b854579f1993d47ca53e9",
+      "sizeBytes": 2304
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc/entities/record.ts",
+      "sha256": "d07a9e8846dbaa5c4e18376c453cda3308a14d116b25d1e7483f937fcd0dbab5",
+      "sizeBytes": 3101
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc/events/index.ts",
+      "sha256": "a4b3a36e7075241dd6d45ed5a001bf1ff743ef2c4f1120b65fb7fa0af73213c4",
+      "sizeBytes": 381
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc/index.ts",
+      "sha256": "ca2dd99b9a4c5e6ed84ea9e5df668c835be81761bf061a5cb9247002c79babc2",
+      "sizeBytes": 1625
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc/providers/doc-create-middleware.ts",
+      "sha256": "2bf53436860ef3128ba9588ecd0f33d7476e4d6bc082bccce7ea2413005abbd5",
+      "sizeBytes": 457
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc/scopes/doc.ts",
+      "sha256": "f022027a2a47755b8eaa2776851f421b4cc9f0ff54064fdd9489cd286dcd5af5",
+      "sizeBytes": 261
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc/services/doc.ts",
+      "sha256": "f042f411b47bbd78eb02348a2e1a8179bc3069270f5d90af6be384219afe6e34",
+      "sizeBytes": 263
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc/services/docs.ts",
+      "sha256": "4077869495c9f4b2faa54c1d21d77abc03117ecc4814c8f6b560e2b6774a56dd",
+      "sizeBytes": 11742
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc/services/duplicate-title.ts",
+      "sha256": "86b7dd007d76c2be14a4549b5d654e15437456f93bf613fd492bcac6e748c47e",
+      "sizeBytes": 342
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc/stores/doc-properties.ts",
+      "sha256": "e6de75180aab48d9fd763f41de6adf45cafbda22a67433f0d40c43ec243989d9",
+      "sizeBytes": 3303
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc/stores/docs.ts",
+      "sha256": "994ed658d3798b8402fd130b507d52696dba84592b73fe9a6651dd7f1d76915d",
+      "sizeBytes": 6964
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/doc/types.ts",
+      "sha256": "b8f6edd8bd5941e8c93478dc50991f16d2b2d88a358b0c1c859116ae14828999",
+      "sizeBytes": 295
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/docs-search/index.ts",
+      "sha256": "4783be33a01afaab21e66921cd6014a829c5590f2ba40c2f0ae8a2311eb72552",
+      "sizeBytes": 484
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/docs-search/services/docs-search.ts",
+      "sha256": "2eb3a699caa6dceed0ead0a1ee11db4af578a248c94c6ee4df6e0c821f7a168b",
+      "sizeBytes": 12108
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/editor-setting/entities/editor-setting.ts",
+      "sha256": "0cd275fe23c0d1962aaae347596d5edecd3879a3295cfa0e77479c25ddd1d297",
+      "sizeBytes": 2813
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/editor-setting/impls/doc-create-middleware.ts",
+      "sha256": "d06eb4d5d21d7dbe1c19c87e763fd6186d8613e8240dcaa2e3412559efc3892a",
+      "sizeBytes": 1915
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/editor-setting/impls/global-state.ts",
+      "sha256": "2c3ad7034226540a3a094635b65cd1aa595d2f9f09d2475a04eb181041a8675f",
+      "sizeBytes": 1014
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/editor-setting/impls/user-db.ts",
+      "sha256": "d2b592157eada8c9edc737846ae4108a7d5158bed74e66666107e41b65b19000",
+      "sizeBytes": 2722
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/editor-setting/index.ts",
+      "sha256": "22bae42df336c388961587269355f560849afe08cdc4886c492febfa2426c691",
+      "sizeBytes": 1928
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/editor-setting/provider/editor-setting-provider.ts",
+      "sha256": "3998d6b9e1476a2b4b588e503b3adbc0179029bfffa5ae65e391f49a03b0a13e",
+      "sizeBytes": 339
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/editor-setting/schema.ts",
+      "sha256": "576f68ae5eb1a7dbe80dbc275d3198faf97e0bd1a415e26ed83bb1b9b76fddf8",
+      "sizeBytes": 2053
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/editor-setting/services/editor-setting.ts",
+      "sha256": "2ddcd0f75fad05d105429b586e28339864f394925b0d4adb0c43c5470f0856c0",
+      "sizeBytes": 281
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/editor-setting/services/spell-check-setting.ts",
+      "sha256": "2c3a82f0ebe1a769689b75d5058435c357899b8aba8b95e4f92d1f2a44704d82",
+      "sizeBytes": 1285
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/editor-setting/services/tray-settings.ts",
+      "sha256": "f5508c579fc55d72ed39aa413161e502f8852163f2e5eaa94d8ef62967f0b66b",
+      "sizeBytes": 1935
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/editor-setting/utils/date-title.ts",
+      "sha256": "b940eb258166cf2941f377eb13b76427c481cf3baf8190f2588cf52a486002b6",
+      "sizeBytes": 1350
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/editor/entities/editor.ts",
+      "sha256": "332a86bcfbf91c72c47f766b39ecb68a5c1ea4131ab086259ff38d7d54ce073e",
+      "sizeBytes": 13111
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/editor/events/index.ts",
+      "sha256": "a1f2451b6c258e4271827e34fb34874b40e927f91a7769a3b85361e7a7fc6ce0",
+      "sizeBytes": 178
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/editor/index.ts",
+      "sha256": "11aed974423257db0a21dcd95b30a977fa4288b9fe5ff04afd400474ff599710",
+      "sizeBytes": 879
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/editor/scopes/editor.ts",
+      "sha256": "e32925c045459eb4441859f553cba3ba72cee6c00088a7e5ea84f0c120a0389b",
+      "sizeBytes": 162
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/editor/services/editor.ts",
+      "sha256": "6b3b18c1bd5a8fab865913d63d950974b4b6c2ff0f5c27f08adb26e8ad88e6bb",
+      "sizeBytes": 257
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/editor/services/editors.ts",
+      "sha256": "75c944c88daf93d39597ae69bf4fa420b4d196d86f9c859fdf413167f4c0ae32",
+      "sizeBytes": 342
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/editor/types.ts",
+      "sha256": "bbbc3f930b252468bd348ea77dc53f14e3a4667351fa697d2406df72529a7d1a",
+      "sizeBytes": 127
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/explorer-icon/index.ts",
+      "sha256": "6c57dd1d1a2facb6cfc1ed6de0183c068c052f5fce9495aa97aa763d8c99a11e",
+      "sizeBytes": 487
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/explorer-icon/services/explorer-icon.ts",
+      "sha256": "c2a4c81c402044633ed4eb978f052585ab57d654fdcce1bd08522c02d04579a4",
+      "sizeBytes": 579
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/explorer-icon/store/explorer-icon.ts",
+      "sha256": "5bdd9ee84f5f52a18a4c9ab38db8c43be6bb9ce658a4b8f215f895dd5e3d6830",
+      "sizeBytes": 929
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/favorite/constant.ts",
+      "sha256": "4cc2282d7dae94475edfa1713d1ebbe93fec0aadf14e7d9cc865e809f171adbd",
+      "sizeBytes": 334
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/favorite/entities/favorite-list.ts",
+      "sha256": "e9e6c68428ad822299286f2d1b4bdf163cfd5426e6f0a0b32bf25497bc613afa",
+      "sizeBytes": 2768
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/favorite/index.ts",
+      "sha256": "60b788d60779662810afb5d200b63df9b24fd1cef119ff35b49c51efd6dafb83",
+      "sizeBytes": 1130
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/favorite/services/favorite.ts",
+      "sha256": "17b61f6826719f6318a391c24a8bc04cfd27cc04f0f2a403c994d4f082c33c3a",
+      "sizeBytes": 216
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/favorite/services/old/adapter.ts",
+      "sha256": "882b61a274265b3960e9856d2c6052b89501dd1201baca0ca605cc3211412779",
+      "sizeBytes": 6810
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/favorite/services/old/schema.ts",
+      "sha256": "2caba2616f7d5d53bbe30d2e1a3b22409bab105ccb146301a7a1e069effa7e6b",
+      "sizeBytes": 3609
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/favorite/stores/favorite.ts",
+      "sha256": "ec477131fac91e057bffeaeb2252343a4af7fa1008b09c43326e6bf08ad9d9e5",
+      "sizeBytes": 2797
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/feature-flag/constant.ts",
+      "sha256": "2c03d7a77d4a6cc420e89458c30ff6aa18a48fda08a0bbd61e481ca66c7dff85",
+      "sizeBytes": 11790
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/feature-flag/entities/flags.ts",
+      "sha256": "b5ad6ef5ad9f285cf107436a897f78c4ef901c1f12c5b863a57cb8075bf5d0b2",
+      "sizeBytes": 1989
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/feature-flag/index.ts",
+      "sha256": "0c95bed4a1a8962c39145cc5f93014c32b0e61377c217f2baa8ef4ecbe9d7d14",
+      "sizeBytes": 548
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/feature-flag/services/feature-flag.ts",
+      "sha256": "aca2cffcb3fe7cd2a51972e34f025994f40e707da792bef1a470c8a69d9b617e",
+      "sizeBytes": 617
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/feature-flag/types.ts",
+      "sha256": "16d27349953c51d62fd7266fe83db8f9366fe39a6ee7b271174963f07d2d9612",
+      "sizeBytes": 591
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/find-in-page/entities/find-in-page.ts",
+      "sha256": "c740a3578d660b549ceeec1d39f8283677469befbe57e07c29c925139444ad3d",
+      "sizeBytes": 3051
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/find-in-page/index.ts",
+      "sha256": "c3e65bae3f980abb89b775f6f9274a945b3ad953af8042b19265e5a783bbe469",
+      "sizeBytes": 433
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/find-in-page/services/find-in-page.ts",
+      "sha256": "506548b2862ed8f74ce05cfd1c1642c23391be10c4538463f58ae471965a2b29",
+      "sizeBytes": 227
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/global-context/entities/global-context.ts",
+      "sha256": "2e3742960624d222395b8ffc668f8a469db7173930e9e0a73aa5bfce1a726635",
+      "sizeBytes": 1382
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/global-context/index.ts",
+      "sha256": "b31a4b1543a81f25c16a1b93f439973082e3f0cb049a13c112e1ae6075ea6087",
+      "sizeBytes": 384
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/global-context/services/global-context.ts",
+      "sha256": "4c51da5bc995278ebbeb458e4263aa3274a9b258fc0a2b40423e5793d13332c5",
+      "sizeBytes": 225
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/i18n/context.tsx",
+      "sha256": "206db9a13a7c3f1f518ce199312c8d1855f71b4aed5358c13dff63c3a251eda3",
+      "sizeBytes": 446
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/i18n/entities/i18n.ts",
+      "sha256": "6fa5f6689ae8d07f8ac3f81e54321cfee58d509835dab835ae8d973928c3e693",
+      "sizeBytes": 2360
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/i18n/index.ts",
+      "sha256": "a1d24e35444ac957286da68212f4788f660ce4adc1db25943f1dcaff42cffb79",
+      "sizeBytes": 434
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/i18n/services/i18n.ts",
+      "sha256": "f629516dc7565ae0e140662dfd92ec13acc05ed336916c063170787cf406b63c",
+      "sizeBytes": 195
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/icon-picker/index.ts",
+      "sha256": "ee03b0176ceac686edfbf4b7c5c6561a12c4fa8ad767db2fb14c63c733919824",
+      "sizeBytes": 285
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/icon-picker/services/icon-picker.ts",
+      "sha256": "d36a9ff4693994d774bf7a7b534ff27b901c1c9e2416650eb983b02d542a0e0d",
+      "sizeBytes": 669
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/import-clipper/index.ts",
+      "sha256": "c725250fa6f8be466501cbce5676752df393707ec0ac0992b4b70901381e2be2",
+      "sizeBytes": 377
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/import-clipper/services/import.ts",
+      "sha256": "e5169b63f5508e1de93fcc7b875d95719442d55d41de22d512841cdfcf89eb7d",
+      "sizeBytes": 2737
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/import-template/entities/downloader.ts",
+      "sha256": "45a15c0cff89811ed7f0d6b55d440ace5caf2241d58822830bbee9c614e8870e",
+      "sizeBytes": 1074
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/import-template/index.ts",
+      "sha256": "356c4491fc8d02b7926382317c827318eade53323f00d39a8d6465fe747a70e6",
+      "sizeBytes": 758
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/import-template/services/downloader.ts",
+      "sha256": "584c687fbf4caf23dead351db2f895d0a58ee673b7f7f44eba4a89d1bbbea201",
+      "sizeBytes": 233
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/import-template/services/import.ts",
+      "sha256": "63510141eb8563708f026d1ade981dd4268836a718446dd9ee96a432d256be77",
+      "sizeBytes": 2148
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/import-template/store/downloader.ts",
+      "sha256": "7e1779a1733decbd6bcfa6ef4e7d4c9454b6d141aa34bf6de47b512cc3e73551",
+      "sizeBytes": 384
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/import/index.ts",
+      "sha256": "f7df32d14bfb4154a12efd86f3dc5ca84270079cbc98405a726abcb71f1790b0",
+      "sizeBytes": 930
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/import/runtime-config.ts",
+      "sha256": "0eba5b23e528a4163db96eda5c5ababf9f7a9f7115fca502c69c5848f09d6651",
+      "sizeBytes": 519
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/import/services/service.ts",
+      "sha256": "bd141b84c102558a0666659e3ca503226f7692b72821182104e18683d3d9c012",
+      "sizeBytes": 7051
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/index.ts",
+      "sha256": "3bea74f8551e51e7e5625209745203e40faa8fbe4e9c97263a90c50614b9685f",
+      "sizeBytes": 6300
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/constant.ts",
+      "sha256": "1a880862bf44fe51bf44fb9ea2c682702e2ad56cfa51401472c7ebb667217044",
+      "sizeBytes": 1483
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/entities/calendar.ts",
+      "sha256": "dee00e0a591103f60b8d6bfe70b338aab064c84dd82ea6eac4b5a046ca110b09",
+      "sizeBytes": 6571
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/entities/readwise-crawler.ts",
+      "sha256": "6840359dbc3f4d684dc0f9e36ad886449bee53cba9390ff505495c15ba4dbbb0",
+      "sizeBytes": 4577
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/entities/readwise.ts",
+      "sha256": "aa58494b7c2b6b2c50c06d234d9491256d6ff663ebf9fbb3ec1b85f420d65ed3",
+      "sizeBytes": 7007
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/entities/writer.ts",
+      "sha256": "918358e3e7be0f9d06088ad6ded5d870fae5d75a8e691f972983c3a65ff9f4f0",
+      "sizeBytes": 3308
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/index.ts",
+      "sha256": "33c937fa4d34ae218c5241f4085d1a28aebb42342c54ae7439d8cf58b9ebeea5",
+      "sizeBytes": 1886
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/services/integration-property.ts",
+      "sha256": "0b1461d5e9beeacfdb3d2053ae508aa40f2daeaa1570f3c532117f471e4ca7cf",
+      "sizeBytes": 1433
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/services/integration.ts",
+      "sha256": "582397c5ee4e708d45c9e40bee7fade9ce57b4b99c272caa4b491468a0931c8c",
+      "sizeBytes": 631
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/store/calendar.ts",
+      "sha256": "e0dfe8f3f15017a344f2171c73e6f211c78061762fafe72cbce9cecc6926f6fa",
+      "sizeBytes": 2668
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/store/integration-ref.ts",
+      "sha256": "8bfa31e2cd5798b30f74e1a3ee68b6dc04cf70eb7d23672b1058696d207b2b03",
+      "sizeBytes": 1253
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/store/readwise.ts",
+      "sha256": "b34faefe78cf182bc50f5cdc5b28706b60b548f80d738d83c0cbe4b561df188a",
+      "sizeBytes": 2511
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/type.ts",
+      "sha256": "678124e00d6dcefe4d09bc9fc0b15163eeac4f0790975f10c6d1c385784495c8",
+      "sizeBytes": 2612
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/utils/encrypt.ts",
+      "sha256": "4fa7a5b15485cf1136c49e340866043d1dcad1f60a98e11589c93adb7aeccb5e",
+      "sizeBytes": 614
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/views/icon.tsx",
+      "sha256": "121b0460263fa039f35885d80e233f2000a5db77ea361d1588a9cb63274d17db",
+      "sizeBytes": 339
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/views/properties-table.tsx",
+      "sha256": "5f6832e44545a853990688ee93b257775efbf4d5bdbb06750fbf8747901b4b39",
+      "sizeBytes": 2187
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/views/property-values/date-value.tsx",
+      "sha256": "43edd1ee61e602995385696db21c48b6e67ed1f5f279e02cfc1b3f4015ead6e4",
+      "sizeBytes": 737
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/views/property-values/index.tsx",
+      "sha256": "b9bf8b79bd6b06d42202051a0f2811ebd2aa0b9a973f3446f111423814a70684",
+      "sizeBytes": 1426
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/views/property-values/link-value.tsx",
+      "sha256": "c4ee54910ab797f3d5476398f4b091f42b7cb77418369dccd8ee22465578143f",
+      "sizeBytes": 426
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/views/property-values/source-value.tsx",
+      "sha256": "83199cbeb441c8f0499cc50025070d8bb55dd6b7b6dcb853681c7d8424cfe2c0",
+      "sizeBytes": 735
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/views/property-values/styles.css.ts",
+      "sha256": "65bc88ba374ea396a4852b36f2524370d80756758f39cae60066fd670a684f29",
+      "sizeBytes": 791
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/views/property-values/text-value.tsx",
+      "sha256": "b7955a3f1874dc6fc4a58885a420006c5c6e3003664c3e25e529d045e2b3e14a",
+      "sizeBytes": 270
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/integration/views/property-values/type.ts",
+      "sha256": "f507702184016f06ff3d788fb6e445eb2a7df641c782e5fa510311b8be8e2880",
+      "sizeBytes": 138
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/journal/index.ts",
+      "sha256": "a2723fc1e82057dbb2901f48955c31cbe881d5cfdb6a043673a0401d09aae22f",
+      "sizeBytes": 903
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/journal/services/journal-doc.ts",
+      "sha256": "d5002e326abc11074843cd33b28c1b5be15609b0aa42589f3cf96c50c2156534",
+      "sizeBytes": 530
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/journal/services/journal.ts",
+      "sha256": "926e470e90a0b448e7ad86ba121eb46c7f1ea99a5cc9c58eb2c9f62eca04eaff",
+      "sizeBytes": 2750
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/journal/store/journal.ts",
+      "sha256": "b4620faae5a4a21414ef0c0f13c159b2a22d7dcd4cd49952ad8c0ffcb084ced5",
+      "sizeBytes": 1897
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/journal/suggest-journal-date.ts",
+      "sha256": "0400e4ca84b5be149c2173e92cde9db7d43b1679b921b3642b53b651240472e7",
+      "sizeBytes": 3631
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/lifecycle/index.ts",
+      "sha256": "4622f3bf8f6db74a9fc3bfdddf39a480f394df48fd30686517a2a6a208936b05",
+      "sizeBytes": 322
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/lifecycle/service/lifecycle.ts",
+      "sha256": "eada1dfae0d8e47658d63b2ac9f06c4f86015f1addce41f0de668edf08423feb",
+      "sizeBytes": 668
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/media/entities/audio-attachment-block.ts",
+      "sha256": "43885de40a4cea12f49623b441f38d841215fdda7cacdaff13bcd3d6415d0ade",
+      "sizeBytes": 8984
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/media/entities/audio-media.ts",
+      "sha256": "aa03f893a9e7239a84248df3df9fda1cd4dc8f236fb4531a212e7fa59a24041d",
+      "sizeBytes": 13334
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/media/entities/audio-transcription-job-store.ts",
+      "sha256": "ceb2c360e29e3ede8b135995de1042e8807fd6cd4609fc0445b19f65eb133a65",
+      "sizeBytes": 3804
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/media/entities/audio-transcription-job.ts",
+      "sha256": "4183a40a77c603b207b86289224d6e3320559fa1fbaf487b6d1379385885d56a",
+      "sizeBytes": 10126
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/media/entities/transcription-result.ts",
+      "sha256": "545612d980952c4c6939f8a3e49c362567d8367104bc3eb5dc8190b998005b00",
+      "sizeBytes": 2237
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/media/entities/types.ts",
+      "sha256": "16b4c239c3ec1af84c73da591b931f57e165ea65fa7b683ca66bc2420842b42e",
+      "sizeBytes": 202
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/media/index.ts",
+      "sha256": "b85e0fd901065c6d866e9192302c6f15a41b60fb5d961d469c4dfd307d782d42",
+      "sizeBytes": 1984
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/media/providers/global-audio-state.ts",
+      "sha256": "2781df80a26899ba3c17a29f8fce94452514f4093e5a0d6121fe9dfe55c16a15",
+      "sizeBytes": 3649
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/media/services/audio-attachment.ts",
+      "sha256": "38fe7fc0e0c938fbe99ddaf9175a2c8f700b2ed6a5942d06cf52cb2727ecd009",
+      "sizeBytes": 1344
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/media/services/audio-media-manager.ts",
+      "sha256": "df4190b4561563a45413683a189de76b6a2183a8ed97e8adf1ec37e5f1aa30af",
+      "sizeBytes": 10814
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/media/services/meeting-settings.ts",
+      "sha256": "257c9a139215e4dcfd0d4c1e1b30933c00c58d78cb6876b404b459c601e76314",
+      "sizeBytes": 4837
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/media/utils.ts",
+      "sha256": "49c65cc75910433056033159ea710b14a803f4690e4b083f2cfd130c9ef37174",
+      "sizeBytes": 1446
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/mermaid/renderer/index.ts",
+      "sha256": "b3a6d4117a46b38705a2f935d5c3cc7645b88f5240fce25dafbd1d826daad61f",
+      "sizeBytes": 884
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/mermaid/renderer/mermaid.worker.ts",
+      "sha256": "44d6b5d81b936740566907ce4a93bea11847388b1e242ad9f27cdcea853dd7f4",
+      "sizeBytes": 1705
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/mermaid/renderer/types.ts",
+      "sha256": "a2c891a2d6980617e5c966f8fcaea496d2b9e2b97650bbf5e9d0c29f839e5273",
+      "sizeBytes": 712
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/navigation-panel/index.ts",
+      "sha256": "79d0e1d68a050e42c3e7e131d3214e3216a4a4c4f443e28ac8c937f8bd21b291",
+      "sizeBytes": 486
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/navigation-panel/services/navigation-panel.ts",
+      "sha256": "7dc78ff6b37e79262d495f90a71b4dc00f3aa5b932d292d704bc638d6e30a05e",
+      "sizeBytes": 1380
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/navigation/entities/navigator.ts",
+      "sha256": "138d985e1719979604b914c605b20955aa68ca47b93f58734f1833e72d8b5fab",
+      "sizeBytes": 1453
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/navigation/index.ts",
+      "sha256": "8902100e168a23dc818521ff532261afdf97d0b927dcca47dea557631cb8c31d",
+      "sizeBytes": 687
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/navigation/services/navigator.ts",
+      "sha256": "135ffe0073bd14799dacafca81aa8eaa5b03c0d922855195fe8b86f353f52c8a",
+      "sizeBytes": 220
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/navigation/utils.ts",
+      "sha256": "82f04753ed68d5728046f01d849d753a1979178435d611c3a15f42425eb8429e",
+      "sizeBytes": 5571
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/navigation/view/navigation-buttons.css.ts",
+      "sha256": "5df9d716b4e4fc131233a2d3fb4fac4d6a3e571820f41c80f6bc3d070250d60e",
+      "sizeBytes": 234
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/navigation/view/navigation-buttons.tsx",
+      "sha256": "faf8787c8c43a2a0da8876fe72f0a0f384a3e36ffab689eb56d9f47de52b0def",
+      "sizeBytes": 2244
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/navigation/view/use-register-navigation-commands.ts",
+      "sha256": "d13d87a8bbd2fb445e35f2bef0835ed0e9d19335d33c4fb9eeb9c12314bf6157",
+      "sizeBytes": 1369
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/notification/index.ts",
+      "sha256": "0e3be1d1b121726ffbd7d6cf23828fdac1c8960ef44134df8e97105f5ad726e0",
+      "sizeBytes": 1263
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/notification/services/count.ts",
+      "sha256": "5fc3dc9e08ce6caeabe6bd5161a37387b05285099973fa20bd13bce2c1743fb7",
+      "sizeBytes": 2541
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/notification/services/list.ts",
+      "sha256": "f815ae238bb40bca784cfe4030f593ba4171169dabd1d1e32a1e762d8793ce37",
+      "sizeBytes": 3054
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/notification/services/notification.ts",
+      "sha256": "d7e44e18012b12ce6401973dd9ccaede6c3ad17dafe6583cf7e6aee80b867b91",
+      "sizeBytes": 573
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/notification/stores/notification.ts",
+      "sha256": "4dfd11023ee2ae4d58a69c80a53b7c1e882ae0e9a376778cf627117a0b02ef47",
+      "sizeBytes": 2426
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/open-in-app/index.ts",
+      "sha256": "913e0d567fb9e166fbc5f1d104331db0675d15e29c5e7272a052fe7c838492cd",
+      "sizeBytes": 463
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/open-in-app/services/index.ts",
+      "sha256": "7eb3691ad211212efcb08640256816338d7755c7b13773e0f8a4139308c6aaf3",
+      "sizeBytes": 2720
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/open-in-app/utils.ts",
+      "sha256": "1a42cb5236c7018b74e0a2b88494d3135f739708d3c831cb37c04e07987f1033",
+      "sizeBytes": 2601
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/open-in-app/views/open-in-app-guard.tsx",
+      "sha256": "b5c82020820f7f0fe48dcc71b2b4d826a14f0b8497966b5af13557611de156fa",
+      "sizeBytes": 1160
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/open-in-app/views/open-in-app-page.css.ts",
+      "sha256": "d42c7739171782138d5cd74676773d32672f5b9ab9b688bc13d00bf694549580",
+      "sizeBytes": 1846
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/open-in-app/views/open-in-app-page.tsx",
+      "sha256": "ba4d6db1c09eb4869d11b897020dc918e0dcb1f8026434b7d5dd75c40b28c22d",
+      "sizeBytes": 4403
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/organize/constants.ts",
+      "sha256": "f770bd3aba86a90360b5258ed71a2763fc399b660c693570c4913783aa0dbb46",
+      "sizeBytes": 335
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/organize/entities/folder-node.ts",
+      "sha256": "6e8ad02de5ddc4ec4f1d5c88471981f8cdcb4e5a33c1819e2fd0c1edcb06c5df",
+      "sizeBytes": 4644
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/organize/entities/folder-tree.ts",
+      "sha256": "93ee1f3e18ce68d36090e7f4722389ce13e07c57a1922440858bdf0d7cdeaa0d",
+      "sizeBytes": 777
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/organize/index.ts",
+      "sha256": "346658fd2fae425bd77eaa215d97d2c245082623384f44314134713f9dd41325",
+      "sizeBytes": 729
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/organize/services/organize.ts",
+      "sha256": "d820ce6e8c46e22afe1cdcf0c98a2157d588cab64d6818b0255fb448252cdb6f",
+      "sizeBytes": 207
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/organize/stores/folder.ts",
+      "sha256": "6bbc90ea201f816991b25aceb5f6b168573dbfe4be8b0597867680a7abe48493",
+      "sizeBytes": 4009
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/organize/types.ts",
+      "sha256": "eef4b56a57ea7aed072c398245f7d0b4f3ec616608404bd1761eef15166c17be",
+      "sizeBytes": 153
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/paywall/index.ts",
+      "sha256": "cd3d90e947aab68cd9e2a0e23aff911b404ffb32044c3dbef0f3b6e49920f3a9",
+      "sizeBytes": 365
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/paywall/providers/native-paywall.ts",
+      "sha256": "e6808c817143194075443d7c94a2858f83ce5f0f2e13c87e6c35d95c66853bdd",
+      "sizeBytes": 258
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/paywall/services/native-paywall.ts",
+      "sha256": "c56f2e1570e1a0b82dbf1eec07ad559964d02431554eb0e7c3b1ded2c4bf07a6",
+      "sizeBytes": 305
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/pdf/cache/bitmap-cache.ts",
+      "sha256": "0cbac2e751619c20063c1c71f266bb4be84a41f67033b229967facd8b9fd871b",
+      "sizeBytes": 3695
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/pdf/entities/pdf-page.ts",
+      "sha256": "f53ec2f911b5b3e4a2a32f15718ebd8f5cbd5da4a126cae96170ccfbbbf89af5",
+      "sizeBytes": 1013
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/pdf/entities/pdf.ts",
+      "sha256": "bff127a7702d556a03dcb5f5cbc8b20089b427b899bc8972f5da02afb82b9030",
+      "sizeBytes": 2322
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/pdf/index.ts",
+      "sha256": "15a257c4e9d2d75ba047ae82289ffc00708926f72cd20890272430f2cab8f41e",
+      "sizeBytes": 656
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/pdf/renderer/index.ts",
+      "sha256": "fff065a4039830084c10b516d05142779638ef735c938adf2e85d8a522fdc8e9",
+      "sizeBytes": 289
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/pdf/renderer/pdf.worker.ts",
+      "sha256": "8da26acd072c9acb4553585d1c0f8d511c7c5a271990bc0a9cae12ba53731252",
+      "sizeBytes": 3845
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/pdf/renderer/types.ts",
+      "sha256": "ba904b02bec96fa11eb4c277f6ab4a3a3a5d017374f4092c0cc2b28d6c187942",
+      "sizeBytes": 536
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/pdf/services/pdf.ts",
+      "sha256": "2aa795222348225ae7edb05293b13125d2ac51e3f949175f8f4d2172eabcddc7",
+      "sizeBytes": 593
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/pdf/views/components.tsx",
+      "sha256": "0d6cbdd7270477d8451e738a2b7914345054e62ba29e2e1b1dde667c3c884659",
+      "sizeBytes": 4345
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/pdf/views/index.ts",
+      "sha256": "9973a939643797c75ff6898888151fe5f89c19bf07204483a208d6b78b9b23a2",
+      "sizeBytes": 254
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/pdf/views/page-renderer.tsx",
+      "sha256": "5534da2573bb6d7e96d19aad0099f7599e131cb3e9cefb1f02055975da14a06a",
+      "sizeBytes": 5344
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/pdf/views/styles.css.ts",
+      "sha256": "2dd66f191db7f56a8e22be21eb9f814a4dce9b062c4f3562ff218d06dcb34912",
+      "sizeBytes": 1057
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/peek-view/entities/peek-view.ts",
+      "sha256": "5a02fdb321ebdae5c4ffe50ddb11eb35e22d8441bc68ab09796f3ecd1bd32753",
+      "sizeBytes": 8179
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/peek-view/index.ts",
+      "sha256": "3a2ecab09d056bc2764bb134250384043bc1aa8dde8c8341f014f0fcf9b6beb3",
+      "sizeBytes": 577
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/peek-view/services/peek-view.ts",
+      "sha256": "3a6a3820f4716c44a3894fba98e2801e8febb5703125d24848944d1c94894a18",
+      "sizeBytes": 382
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/peek-view/view/ai-chat-block-peek-view/index.tsx",
+      "sha256": "f9ff8d3508f3c343f9fcee78210fbf83a370330e15bb274d5f5b9eb77a1684bb",
+      "sizeBytes": 2581
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/peek-view/view/attachment-preview/index.tsx",
+      "sha256": "59d7431f446dfbbd44fd2b3a4aff1454d6fa5b4fe29e8c2ad0942290ce1883e5",
+      "sizeBytes": 709
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/peek-view/view/doc-preview/doc-peek-view.css.ts",
+      "sha256": "b8ba64fb4b30b67a672f43eca80ccde786e50a35587e4fb6876fe304219463aa",
+      "sizeBytes": 677
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/peek-view/view/doc-preview/doc-peek-view.tsx",
+      "sha256": "75cbc1c39ca843f0b03ce2c3c8c8de67abea931dec1cd384a5c52b1b676c00df",
+      "sizeBytes": 7088
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/peek-view/view/doc-preview/index.ts",
+      "sha256": "eef19b65d3e17ddb6cb3274758eb9187b470e8e33b7d4f56a7d6a7d9b8a8d910",
+      "sizeBytes": 50
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/peek-view/view/image-preview/hooks/use-zoom.tsx",
+      "sha256": "f1d141541d1cdbe4c4cd13aee19dd8cf425df974bdbfbbde68dec405e98a0957",
+      "sizeBytes": 6860
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/peek-view/view/image-preview/index.css.ts",
+      "sha256": "546afba07194e57bc0ebfeaa9d2df26f7da51431d04d78555e25a736555426cd",
+      "sizeBytes": 3137
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/peek-view/view/image-preview/index.tsx",
+      "sha256": "6c81c8de02fe0b2d62ee8841a632267db4938a56e91ffcdca5ef7c730bc0de4a",
+      "sizeBytes": 13460
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/peek-view/view/index.ts",
+      "sha256": "61b9aaa6673318f450e98eb3fb4c8db5672ee510607a1be380b07520fe4f45b4",
+      "sizeBytes": 115
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/peek-view/view/modal-container.css.ts",
+      "sha256": "7edb5767e698b2287f81f884ea1fd6b82c26978bcd7f16fbb2baf40c862c3eb9",
+      "sizeBytes": 2737
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/peek-view/view/modal-container.tsx",
+      "sha256": "49a595a96a46fc8d332b03db47ce306744e016fdbbe0166cb94790caad5812a1",
+      "sizeBytes": 12968
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/peek-view/view/peek-view-controls.css.ts",
+      "sha256": "78ae8871c37ae87d76a0f27c4f9dafa801f615345135abac360882f70bc6434d",
+      "sizeBytes": 655
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/peek-view/view/peek-view-controls.tsx",
+      "sha256": "b3ac79382e57eb76d8f6062515f2dc9aaf429a72188bf83308c7dd0cb7294132",
+      "sizeBytes": 8108
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/peek-view/view/peek-view-manager.tsx",
+      "sha256": "01e529af25a89c660392ef092a6ac7d965f78a83e68124d9371d7b2e46ae8644",
+      "sizeBytes": 4399
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/peek-view/view/utils.ts",
+      "sha256": "0f28cffebb0e6c25bc8919b524aa3654f8d51a90feaef3308657e9d4d7b55537",
+      "sizeBytes": 2711
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/permissions/entities/members.ts",
+      "sha256": "ea3a71e33b0ed7ce5ebc9712a4e4a829d5e56094196543e705ba818146d27913",
+      "sizeBytes": 2294
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/permissions/entities/permission.ts",
+      "sha256": "75ae304f77b0e08f877889871823494265a6083be7f7daa923ffecb18a32d9bb",
+      "sizeBytes": 2860
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/permissions/index.ts",
+      "sha256": "19c5a9ff871d4b51c792aad0e8b2ef5710f5f93320c29a96f05763d4dff1c35e",
+      "sizeBytes": 2817
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/permissions/services/doc-granted-users.ts",
+      "sha256": "5f806fd5e8da0ca81cc070c8bfe54d6ad3176a4de0588ce031821754413fb618",
+      "sizeBytes": 4526
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/permissions/services/guard.ts",
+      "sha256": "29c6a7589d0226aa2e976c8bfa8983b76ce102e0326fd1ce2a48ad0b00818275",
+      "sizeBytes": 5491
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/permissions/services/member-search.ts",
+      "sha256": "cc0ec5160c1c54852c15183ee7cf096d6df85a1dac347c6f50bc393759cb27dc",
+      "sizeBytes": 2436
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/permissions/services/members.ts",
+      "sha256": "ca85ba946c96e0f826d44ae2b5485a0cf392fec9048202ee6dd9b62a9f699ddb",
+      "sizeBytes": 1562
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/permissions/services/permission.ts",
+      "sha256": "1aee5b66e9283732c502cac6f9e3f5b7d5cf080caa6ce30f8b397a0efa2824c3",
+      "sizeBytes": 807
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/permissions/stores/doc-granted-users.ts",
+      "sha256": "997f958170acf5a96b3cead03bf9b09783c4662055a19e8810a498ac1f10019a",
+      "sizeBytes": 3186
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/permissions/stores/guard.ts",
+      "sha256": "0423bf25d456280a13618c25caee708696281d04438e04583589a71dd270b0d1",
+      "sizeBytes": 1575
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/permissions/stores/member-search.ts",
+      "sha256": "03bde4852a4925128825b0fee8905f9d10748c5eac9e1b04842a3ef9f99c1132",
+      "sizeBytes": 901
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/permissions/stores/members.ts",
+      "sha256": "6ab3c2014456405f2f9d74eb4b9cc2ddfc262c6691bdb782747d47fd867a0926",
+      "sizeBytes": 3733
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/permissions/stores/permission.ts",
+      "sha256": "d9ffa0d6b5d2ca1a6ba12ce30b1b90ccac73664a215b8849cf897b6abf450e50",
+      "sizeBytes": 1702
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/permissions/stores/realtime-mappers.ts",
+      "sha256": "a1ddd679f5cf4f5ae6e919b29d170e601f549c14be2d5cf1ecd25df2faef2351",
+      "sizeBytes": 762
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/entities/quick-search.ts",
+      "sha256": "a5d21838f10e50a5b8a636e8b43ff3b85ef27bfc828fe7e00195258ad57c211b",
+      "sizeBytes": 3320
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/impls/collections.ts",
+      "sha256": "84706d77f8737057a60570b27511584a41ed1731acf2bddebf7240332511acd9",
+      "sizeBytes": 2408
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/impls/commands.ts",
+      "sha256": "65b58c80be4aa7086238622e8f5604e93b1e0b1779d37174fdd8c414f19b8356",
+      "sizeBytes": 6375
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/impls/creation.ts",
+      "sha256": "3bda359c2ae2679011f1be8ea946fe6ce1557c709e6307dcf2c6986bad8d7f79",
+      "sizeBytes": 1588
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/impls/docs.ts",
+      "sha256": "576d1739170871dc2b66101aa84167d2801fffbffad2282893e010bc5a43f543",
+      "sizeBytes": 7098
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/impls/external-links.ts",
+      "sha256": "d13c8c06ef3b4ea78b6b867a11efc49b0c92bacbb8b7148db6d8af84bdaee65c",
+      "sizeBytes": 1416
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/impls/journals.ts",
+      "sha256": "3ba39030f85ca97e80a51599448db43a81e9789db1a455e58b42dc6f91481723",
+      "sizeBytes": 2977
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/impls/links.ts",
+      "sha256": "5e3ba35478a8e5c232ad9aaa9edb950067289de1a1f2cd4d1c2a8fc52735be7d",
+      "sizeBytes": 2495
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/impls/recent-docs.ts",
+      "sha256": "40d53c959823b580981a80a9f4113bb4c18f049ee60d2612e6e3b560e0640513",
+      "sizeBytes": 1823
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/impls/tags.ts",
+      "sha256": "caf68562097235a2efe6947c2cf4ee03135084c9c44720755d7bbc2d99ecd440",
+      "sizeBytes": 2573
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/index.ts",
+      "sha256": "fd18a51d47799ef3b6ec77793cb70eaa9053f1fe5548f557d5a8321eb16c1f0d",
+      "sizeBytes": 3461
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/providers/quick-search-provider.ts",
+      "sha256": "106dd9233a29ad65a31c2c6a810b723c30ca2c292871038a68f664f547ee25ae",
+      "sizeBytes": 806
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/services/cmdk.ts",
+      "sha256": "3232902538426b0688ee4c0e32864ea0853a13a402f4d2a3e3cef2123a5317a2",
+      "sizeBytes": 4087
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/services/quick-search.ts",
+      "sha256": "818cfa4ed64f7c591d8a714281d4a1a2fae00d7997dc0fdf18a018bf7d1050db",
+      "sizeBytes": 231
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/services/recent-pages.ts",
+      "sha256": "872c0a5298e854a0a5cc7af8f86e22fda7d7b768b0e0714d311becf814368967",
+      "sizeBytes": 1128
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/types/group.ts",
+      "sha256": "e448b9302ee614f70b81d516d14fbaed19a6f7323a0025a52ac1c38a4229ba16",
+      "sizeBytes": 140
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/types/item.ts",
+      "sha256": "44d0c8c45f4cdda33082641a3eeb56db7890cf86de5c0497ff6d4fc60c977003",
+      "sizeBytes": 550
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/types/options.ts",
+      "sha256": "72897362503e7c38a68ee899219fff4469ce0ddab53b2914e09170345a02ecd4",
+      "sizeBytes": 164
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/utils/highlighter.ts",
+      "sha256": "479dcf3f29a8e5931d75ad75fa1d44955a245f337f37df598e405ea7e6890967",
+      "sizeBytes": 1709
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/views/cmdk.css.ts",
+      "sha256": "bb4a07d40a8dda637bea78c3b83e1acae812dface881847c41dc62028c35a0f4",
+      "sizeBytes": 4798
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/views/cmdk.tsx",
+      "sha256": "d489ab115bbde07af8cacf438825e2adb1783ae81d161fe60ac30be45063777b",
+      "sizeBytes": 9077
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/views/container.tsx",
+      "sha256": "b87f9b2b6507d6b20242e6d11571d38bf1a610e810e64a642b5cd0f1ce72ac00",
+      "sizeBytes": 2777
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/views/highlight-text.css.ts",
+      "sha256": "e9a7829a28ea765ac1b08d4078d4a0b65745713a689d51726840ac87470dbec8",
+      "sizeBytes": 448
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/views/highlight-text.tsx",
+      "sha256": "147d4219f5dc151fcf3648733ad9003729c1843a7ff6011e1aa4ed7ad5835567",
+      "sizeBytes": 974
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/views/modal.css.ts",
+      "sha256": "c4f07029506fcea812e5ef33a3e70c64c093ab78bfc82569bccca908b2b8d41b",
+      "sizeBytes": 1770
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/views/modal.tsx",
+      "sha256": "ac058c7c28f37249e10e71c1673254b382f10eac3b78acbbbfe18495e98c3b40",
+      "sizeBytes": 1368
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quicksearch/views/tag-icon.tsx",
+      "sha256": "6d24adfcb1187ff30119c06434b7b983bc5b5b70bda70a7fa66757049cbc8d17",
+      "sizeBytes": 271
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quota/entities/quota.ts",
+      "sha256": "cfe37ad5ef31bbb99c7954dbec3c1d01f10d2f387a190228ba73eeade2173e5f",
+      "sizeBytes": 5200
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quota/index.ts",
+      "sha256": "e3ab66ef0500d019a2f29d65557d7e19b0b0fa30b0b789e850ac5fcc95ad4874",
+      "sizeBytes": 696
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quota/services/quota.ts",
+      "sha256": "08ff70c4d6b1f8ec754e8bc891355a2e66ef51d05206912d5af7690ab947db62",
+      "sizeBytes": 271
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quota/stores/quota.ts",
+      "sha256": "b484c282e34bd6f6069f5b0f84cba3c6ec0f876f56f65df6857f7fa90d07553b",
+      "sizeBytes": 686
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quota/views/quota-check.tsx",
+      "sha256": "d9c820663c6115308b0beaeac555a50e065a88f028c51096f49e074e6ca0d202",
+      "sizeBytes": 6188
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/quota/views/styles.css.ts",
+      "sha256": "8fe7c79ac3264c5f6fa5786c9ebf285556abf3507992c5d5e6efc217154cec21",
+      "sizeBytes": 798
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/search-menu/index.ts",
+      "sha256": "ff7b9cad46419a1cc2e2eb6c51e3c7637c092a447a15654ced51ff26535edccc",
+      "sizeBytes": 714
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/search-menu/services/index.ts",
+      "sha256": "9e5a16fa1010e4afe6efb3cf5dee554b72d42b429cbddf1a9ff2ef24112cf210",
+      "sizeBytes": 10747
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-doc/entities/share-docs-list.ts",
+      "sha256": "151264f4cfbbd485cd686e6d8a64dbe52604b954dedcdafa46c329091d9ee56e",
+      "sizeBytes": 1754
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-doc/entities/share-info.ts",
+      "sha256": "2b806f420a387a0512a4075b06d3deacfa847bfeab33b33e93294389c8a79eae",
+      "sizeBytes": 2689
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-doc/index.ts",
+      "sha256": "b26e0ee40a34f09f1142ee4fb99d3741454672d6dda5ed315814ab06e1474a94",
+      "sizeBytes": 1261
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-doc/services/share-docs-list.ts",
+      "sha256": "8b428c01f87b59bda8ee13fa5a930a6121e9b42f725443facb2ff0f1d5e11744",
+      "sizeBytes": 508
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-doc/services/share-info.ts",
+      "sha256": "16fb5db2fd94bfa04cb9085357ab8cdfd4fd943fde027097c14323dff032d683",
+      "sizeBytes": 205
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-doc/stores/share-docs.ts",
+      "sha256": "66611db6701d4b3af89b37a771dbe815a417fff920a84c8f3a53c3495b27a31f",
+      "sizeBytes": 755
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-doc/stores/share.ts",
+      "sha256": "402fff98726377026076de5440ab15d57a362aa60341aa5a45876549e4a27db3",
+      "sizeBytes": 2147
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/index.ts",
+      "sha256": "20ffd57c8856a6017a38e92100641e78ddc37d824eeea53a71ab64dffe2afeb2",
+      "sizeBytes": 70
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/cloud-svg.tsx",
+      "sha256": "51b1040664dbe951781d5dc910820d8a8b5cc752d3ec77143731ecb094bc59a8",
+      "sizeBytes": 1217
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/index.tsx",
+      "sha256": "28593e07d80fc81e21edfcac22a5768db0fedeaae47b06b3aa4985f6509aff2a",
+      "sizeBytes": 1803
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/copy-link-button.css.ts",
+      "sha256": "36e9b7f53344e79f4db9588cdb80d77e7982076d4deff8ec33d680130a229140",
+      "sizeBytes": 3003
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/copy-link-button.tsx",
+      "sha256": "f8a8d9e3631024e1165a1a1afd7670667223976b21f698c8df12d5ba0a2d5e4c",
+      "sizeBytes": 3816
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/general-access/index.ts",
+      "sha256": "11fa6d0283337616a68cdaa1945f9d4d43ba41ec474e0cf18f8969a44021568c",
+      "sizeBytes": 76
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/general-access/members-permission.tsx",
+      "sha256": "8d01fd8281c9dbe9b495bcbda6145bae1c2ef46b4da07f1bae0774bc1aa5c7aa",
+      "sizeBytes": 6271
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/general-access/public-page-button.tsx",
+      "sha256": "b7b0f60969ec4a1bb7574ee9838e416eddbf3936f70308c14ad0803901a8ca3c",
+      "sizeBytes": 5146
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/general-access/styles.css.ts",
+      "sha256": "cd76e7e628da79e94113adcaa064623e95b2f889b018916c7d1ac734abde99ae",
+      "sizeBytes": 1473
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/index.css.ts",
+      "sha256": "5415f6d7a1fb7bc0d782cce43bbc390c9773f1fc7cac0960a73fa6471f81ae58",
+      "sizeBytes": 3283
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/index.jotai.ts",
+      "sha256": "3e89408d048e3c9647969fab0bca0a286894af46c0b53ee71d7ef9d1efd5c091",
+      "sizeBytes": 87
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/index.tsx",
+      "sha256": "8d428f0d12dd1f77f388bd98437d353fd1d9d007ecd99d5e90423f0ae9b6f347",
+      "sizeBytes": 30
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/invite-member-editor/index.tsx",
+      "sha256": "6b7c5f7f1d46ea1d515510e81f6ac197f66cce654ece5f5c967701ca989cd72d",
+      "sizeBytes": 639
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/invite-member-editor/invite-member-editor.css.ts",
+      "sha256": "c32c971229a7b029b3a3453ca2f2018f3e2528c0136ea6aa502ae11d9b1ec122",
+      "sizeBytes": 3290
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/invite-member-editor/invite-member-editor.tsx",
+      "sha256": "2769d9672d798842a28f9e7a98207da41f1d140a9453a587f4deb69a38603a01",
+      "sizeBytes": 11556
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/invite-member-editor/member-item.css.ts",
+      "sha256": "3ef72579886e995439f8141a1663085630fef3f26098590154797bf96d4ce7de",
+      "sizeBytes": 1387
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/invite-member-editor/member-item.tsx",
+      "sha256": "a79cf1ff2bc13c63930c38a2413cc9004f732dbae37b32c40cabc7b4ff3f780f",
+      "sizeBytes": 917
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/invite-member-editor/selected-member-item.css.ts",
+      "sha256": "ac0e511c644b372304f54fe4f4451cf65db6516fbf809fb5a33b113a605f6f3b",
+      "sizeBytes": 1222
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/invite-member-editor/selected-member-item.tsx",
+      "sha256": "4a46f18354a1dfc49ef5b76eeeab801fd7e2dc6428b3a284b1542109c19152d9",
+      "sizeBytes": 1023
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/invite-member-editor/styles.css.ts",
+      "sha256": "3c34b1bac08f1ea280921b71068a7cf52b222787c5483d98c919aaf170ae741d",
+      "sizeBytes": 302
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/member-management/index.tsx",
+      "sha256": "edc43be05ef33df07aa74800d2e823d8e45aed4b67be801bc83f560b7138b9e6",
+      "sizeBytes": 4575
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/member-management/member-item.css.ts",
+      "sha256": "bd62c2731c99a423ec292a0a23df1e70c36c7fc27f3051f26d10e2bb1fcf4fa7",
+      "sizeBytes": 1664
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/member-management/member-item.tsx",
+      "sha256": "1984a2597e74e7eb3fff6f3c11984c84a3eeb3c2ac451aa0c240597534036ccb",
+      "sizeBytes": 7925
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/member-management/member-management.css.ts",
+      "sha256": "03dcfb0f6f0e2f50261609197b155cc4cef6254c10ed33593dc36e62e369e3b3",
+      "sizeBytes": 1377
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/member-management/member-management.tsx",
+      "sha256": "9f7cb301076eef92d55fc1f8466503c639a6e3d502a4720535fede02abc58152",
+      "sizeBytes": 3954
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/member-management/styles.css.ts",
+      "sha256": "2473558eaf23e9cfb5aa3ff44e134d2affd8b685474ee7b3814c312d9a4e673d",
+      "sizeBytes": 1880
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/plan-tag.css.ts",
+      "sha256": "e530342732c2e8644768883ccacdfb5e9cd0e337ff0d5271ca4d2b2b5bb166fa",
+      "sizeBytes": 460
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/plan-tag.tsx",
+      "sha256": "6c0ff7c7b9cc43d68bb50e106ebcb73b9f3f9bbe664c1967987add6b98b1017d",
+      "sizeBytes": 136
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/scroller.css.ts",
+      "sha256": "c939ed7d4103775270e783f4e6bc387050b275b375815cdd76dc8ca94a3c236c",
+      "sizeBytes": 124
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/scroller.tsx",
+      "sha256": "bc1e1de173b5c5094cb72486c6a696a872a683d5bed5d402a4fd48bcb0aacca7",
+      "sizeBytes": 571
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/share-export.tsx",
+      "sha256": "3478c549a4eabe9c022741899a1871efd33478c1e9090a84c4ac246269e8ce63",
+      "sizeBytes": 1379
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/share-menu.tsx",
+      "sha256": "95642a9328759ad63df9322a1815cea01e9944fea074cf1fd38c695180471868",
+      "sizeBytes": 8998
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-menu/view/share-menu/share-page.tsx",
+      "sha256": "f4aa7edf77ef40e694b2eb0afa27ea303e48e26fae7e91db6642227f82b2e344",
+      "sizeBytes": 4157
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-setting/entities/share-setting.ts",
+      "sha256": "25808ea9a4cc4c17e88908566285d6727d30e16b4a6e9690b9d7e5c4bd9f680a",
+      "sizeBytes": 4929
+    },
+    {
+      "path": "Codebase/packages/frontend/core/src/modules/share-setting/index.ts",
+      "sha256": "cf6feba74ae83c7b4a12bf0c667bd95986d2207c181104cae0eb4cf24c0f661a",
+      "sizeBytes": 835
+    }
+  ],
+  "inputFingerprint": "c6d6b00dd6ae0e6b78af5e14b71f2f864646820696cb394ea275d3641b081abf",
+  "outputPath": "00 Execution Control/Generated Tool Cache/v2/graphify-v2-repair-20260728T095646/ast/batches/authored-runtime/batch-0015.json",
+  "outputSha256": "b71e842b73b66a536d91246f2c3f2c0bc1f0024429400a560b0b224f68dbc1fd",
+  "nodeCount": 2253,
+  "edgeCount": 8158,
+  "inputTokens": 0,
+  "outputTokens": 0,
+  "cacheDecision": "REEXTRACTED",
+  "cacheInvalidationReason": "input fingerprint changed",
+  "completedAt": "2026-07-28T10:33:56.197Z"
+}

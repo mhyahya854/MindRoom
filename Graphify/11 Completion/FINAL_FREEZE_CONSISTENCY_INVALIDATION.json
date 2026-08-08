@@ -25,6 +25,7 @@
     "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
     "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
   ],
-  "supersededByFreezeRunId": "mindroom-graphify-final-freeze-authoritative-20260801-084203",
-  "resolvedAt": "2026-08-01T08:42:03+03:00"
+  "supersededByFreezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
+  "resolvedAt": "2026-08-08T16:22:49.462002+00:00",
+  "authoritative": false
 }

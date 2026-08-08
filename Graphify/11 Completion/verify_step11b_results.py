@@ -23,8 +23,9 @@ CHALLENGE_RUNNER = ROOT / "11 Completion" / "run_final_freeze_challenges.py"
 CHALLENGES = ROOT / "11 Completion" / "FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
 VALIDATION_RESULT = ROOT / "00 Execution Control" / "FINAL_FREEZE_VALIDATION_RESULT.json"
 STATUS = ROOT / "00 Execution Control" / "STATUS.json"
-BACKUP_RECEIPT = ROOT / "00 Execution Control" / "FINAL_LONG_PATH_BACKUP_VERIFICATION.json"
-MANIFEST = ROOT / "11 Completion" / "FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"
+BACKUP_RECEIPT = ROOT / "00 Execution Control" / "FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
+CANDIDATE_MANIFEST = ROOT / "11 Completion" / "FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"
+FROZEN_MANIFEST = ROOT / "00 Execution Control" / "FROZEN_ARTIFACT_MANIFEST.jsonl"
 
 
 def load_module(name, path):
@@ -71,14 +72,16 @@ def main():
     runner = load_module("mindroom_graphify_challenge_runner", CHALLENGE_RUNNER)
     required_checks = validator.get_check_definitions("FULL_TECHNICAL_CERTIFICATION")
     required_challenges = [row["challengeId"] for row in runner.get_challenge_definitions()]
+    status = json.loads(STATUS.read_text(encoding="utf-8-sig"))
+    manifest_path = FROZEN_MANIFEST if status.get("planningFreezeStatus") == "FROZEN" else CANDIDATE_MANIFEST
+    manifest_relative = "00 Execution Control/FROZEN_ARTIFACT_MANIFEST.jsonl" if manifest_path == FROZEN_MANIFEST else "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"
 
-    for path in (CHALLENGES, VALIDATION_RESULT, STATUS, BACKUP_RECEIPT, MANIFEST):
+    for path in (CHALLENGES, VALIDATION_RESULT, STATUS, BACKUP_RECEIPT, manifest_path):
         if not path.exists():
             fail(f"Required result is missing: {path}")
 
     challenge_report = json.loads(CHALLENGES.read_text(encoding="utf-8-sig"))
     validation_report = json.loads(VALIDATION_RESULT.read_text(encoding="utf-8-sig"))
-    status = json.loads(STATUS.read_text(encoding="utf-8-sig"))
     receipt = json.loads(BACKUP_RECEIPT.read_text(encoding="utf-8-sig"))
 
     result = validation_report.get("validationResult") or {}
@@ -118,11 +121,13 @@ def main():
         fail("Baseline-failure subtraction was used in the challenge suite.")
     if challenge_report.get("documentedEnvironmentFailures") or challenge_report.get("environmentExemptions"):
         fail("Environment exemptions remain recorded in the challenge report.")
+    if challenge_report.get("backupUnchangedThroughoutChallenges") is not True or challenge_report.get("backupAggregateBeforeChallenges") != challenge_report.get("backupAggregateAfterChallenges"):
+        fail("Challenge execution did not independently prove that the active backup remained unchanged.")
 
     if validation_report.get("validationTarget") != "LIVE_REPOSITORY":
         fail("Persisted live validation target is not LIVE_REPOSITORY.")
-    if Path(str(validation_report.get("candidateRoot") or "")).resolve() != ROOT.resolve():
-        fail("Persisted live validation candidate root is not the Graphify root.")
+    if validation_report.get("candidateRootKind") != "REPOSITORY_RELATIVE" or validation_report.get("repositoryRelativeGraphifyRoot") != "Graphify":
+        fail("Persisted live validation candidate-root metadata is not repository-relative.")
     if validation_report.get("overridesUsed") is not False or validation_report.get("temporaryChallengeId") is not None:
         fail("Persisted live validation used overrides or a temporary challenge ID.")
     if (result.get("derived") or {}).get("validationMode") != "FULL_TECHNICAL_CERTIFICATION" or validation_report.get("validationMode") != "FULL_TECHNICAL_CERTIFICATION":
@@ -147,8 +152,67 @@ def main():
     failed_backup = [check.get("checkId") for check in result.get("checks", []) if check.get("status") == "FAIL" and str(check.get("checkId") or "").startswith("BAK-")]
     if failed_backup:
         fail(f"Backup checks failed in the live validation report: {failed_backup}")
-    if receipt.get("verified") is not True or not Path(str(receipt.get("backupRoot") or "")).exists():
-        fail("Backup receipt is not verified or the backup root is missing.")
+    history = receipt.get("backupHistory") or {}
+    original = history.get("historicalOriginalBackup", {})
+    replacement = history.get("replacementPreReviewBackup", {})
+    mutable_mirror = history.get("mutableWorkingMirror", {})
+    invalidated = history.get("invalidatedCandidateBackup", {})
+    active = history.get("activePreReviewBackup", {})
+    common_history_is_canonical = (
+        original.get("present") is False
+        and original.get("active") is False
+        and original.get("role") == "HISTORICAL_MISSING_NONACTIVE"
+        and replacement.get("present") is False
+        and replacement.get("verified") is False
+        and replacement.get("active") is False
+        and replacement.get("role") == "HISTORICAL_REPLACEMENT_PRE_REVIEW_BACKUP_MISSING_NONACTIVE"
+        and mutable_mirror.get("active") is False
+        and mutable_mirror.get("immutable") is False
+        and mutable_mirror.get("role") == "MUTABLE_WORKING_MIRROR_NOT_VALID_AS_IMMUTABLE_ROLLBACK_POINT"
+        and invalidated.get("present") is True
+        and invalidated.get("verified") is True
+        and invalidated.get("active") is False
+        and invalidated.get("immutable") is True
+        and invalidated.get("role") == "INVALIDATED_CANDIDATE_BACKUP"
+    )
+    if not common_history_is_canonical:
+        fail("Backup receipt does not distinguish the canonical historical, missing, mutable, and invalidated backup roles.")
+    if receipt.get("backupEvidence") is not None:
+        fail("Backup receipt contains a duplicate sibling backup authority summary.")
+
+    pending_state = receipt.get("backupState") == receipt.get("receiptState") == "PENDING_FINAL_CONVERGED_PRE_REVIEW_BACKUP"
+    active_state = receipt.get("backupState") == receipt.get("receiptState") == "VERIFIED_ACTIVE_PRE_REVIEW_BACKUP"
+    if pending_state:
+        if not (
+            set(history) == {"historicalOriginalBackup", "replacementPreReviewBackup", "mutableWorkingMirror", "invalidatedCandidateBackup"}
+            and receipt.get("verified") is False
+            and receipt.get("immutable") is False
+            and receipt.get("activeBackupRole") == "PENDING_FINAL_CONVERGED_PRE_REVIEW_BACKUP"
+            and receipt.get("backupRoot") is None
+            and receipt.get("backupPath") is None
+            and receipt.get("preFinalizationBackupPath") is None
+            and receipt.get("copyEvidencePath") is None
+            and receipt.get("backupManifestPath") is None
+        ):
+            fail("Pending backup receipt is not the exact fail-closed pre-Phase-9 state.")
+    elif active_state:
+        backup_root = Path(str(receipt.get("backupRoot") or ""))
+        if not (
+            set(history) == {"historicalOriginalBackup", "replacementPreReviewBackup", "mutableWorkingMirror", "invalidatedCandidateBackup", "activePreReviewBackup"}
+            and receipt.get("verified") is True
+            and receipt.get("immutable") is True
+            and receipt.get("activeBackupRole") == "IMMUTABLE_BOUND_PRE_REVIEW_BACKUP"
+            and backup_root.exists()
+            and active.get("path") == receipt.get("backupRoot")
+            and active.get("present") is True
+            and active.get("verified") is True
+            and active.get("active") is True
+            and active.get("immutable") is True
+            and active.get("role") == "IMMUTABLE_BOUND_PRE_REVIEW_BACKUP"
+        ):
+            fail("Verified active backup receipt is not the exact canonical post-Phase-9 state.")
+    else:
+        fail("Backup receipt is neither the canonical pending state nor the canonical verified active state.")
     for field in ("missingPaths", "extraPaths", "hashMismatches", "sizeMismatches", "directoryDifferences", "longPathOmissions", "unreadablePaths"):
         if receipt.get(field):
             fail(f"Backup receipt contains nonempty {field}.")
@@ -156,10 +220,10 @@ def main():
     failed_manifest = [check.get("checkId") for check in result.get("checks", []) if check.get("status") == "FAIL" and str(check.get("checkId") or "").startswith("MAN-")]
     if failed_manifest:
         fail(f"Candidate-manifest checks failed in the live validation report: {failed_manifest}")
-    manifest_rows = [json.loads(line) for line in MANIFEST.read_text(encoding="utf-8-sig").splitlines() if line.strip()]
-    manifest_self = [row.get("path") for row in manifest_rows if row.get("path") == "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"]
+    manifest_rows = [json.loads(line) for line in manifest_path.read_text(encoding="utf-8-sig").splitlines() if line.strip()]
+    manifest_self = [row.get("path") for row in manifest_rows if row.get("path") == manifest_relative]
     if manifest_self:
-        fail("Candidate manifest contains itself.")
+        fail("Active manifest contains itself.")
     manifest_mismatches = []
     for row in manifest_rows:
         path = ROOT / str(row.get("path"))
@@ -173,7 +237,7 @@ def main():
 
     if status.get("wave0Readiness") in {"WAVE_0_STARTED", "WAVE_0_COMPLETED"}:
         fail("Wave 0 has started; implementation must not proceed.")
-    if status.get("codebaseExecutionStatus") not in {None, "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION", "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR", "BLOCKED_PENDING_INDEPENDENT_LINEAGE_REVIEW"}:
+    if status.get("codebaseExecutionStatus") not in {None, "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION"}:
         fail("Codebase execution is not blocked.")
     if status.get("finalReleaseReceiptStatus") == "VERIFIED":
         fail("Application release is falsely verified.")

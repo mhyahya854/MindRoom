@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 3,
+  "receiptType": "FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION",
+  "backupPurpose": "FINAL_CONVERGED_PRE_REVIEW_RECOVERY_POINT",
+  "localMachineEvidence": true,
+  "sourceRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify",
+  "backupRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-final-converged-pre-review-backup-20260808-151008",
+  "copyMethod": "External long-path-safe binary copy with complete pre/post source scan and complete destination comparison; destination is immutable after verification.",
+  "copyCommand": "python copy_tree_verified.py --source <Graphify> --destination <external backup> --evidence-root <external work>",
+  "copyExitCode": 0,
+  "pathNormalization": "forward slashes",
+  "longPathPolicy": "Windows extended-length paths",
+  "policy": {
+    "pathNormalization": "forward slashes",
+    "hashAlgorithm": "SHA-256",
+    "copyReads": "binary",
+    "unreadablePathPolicy": "fail closed",
+    "excludedPaths": [],
+    "aggregateConstruction": "sorted normalized path:sha256 records joined with LF and no trailing LF",
+    "aggregateExcludesSelfReferentialArtifacts": [
+      "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
+      "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+      "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json",
+      "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl",
+      "11 Completion/FINAL_THREE_FILE_CERTIFICATION_REPAIR_REPORT.json"
+    ]
+  },
+  "backupHistory": {
+    "historicalOriginalBackup": {
+      "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-lineage-repair-20260801-190852",
+      "present": false,
+      "verified": false,
+      "active": false,
+      "role": "HISTORICAL_MISSING_NONACTIVE",
+      "supersededEvidence": true
+    },
+    "replacementPreReviewBackup": {
+      "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-pre-review-certification-20260805-092300",
+      "present": false,
+      "verified": false,
+      "active": false,
+      "role": "HISTORICAL_REPLACEMENT_PRE_REVIEW_BACKUP_MISSING_NONACTIVE",
+      "actualProvenSemantics": "Previously reported replacement path is absent from the recovery root in this run; its contents and historical identity are not used as current evidence."
+    },
+    "mutableWorkingMirror": {
+      "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-final-authoritative-freeze-20260806-152420",
+      "present": false,
+      "verified": false,
+      "active": false,
+      "immutable": false,
+      "role": "MUTABLE_WORKING_MIRROR_NOT_VALID_AS_IMMUTABLE_ROLLBACK_POINT"
+    },
+    "invalidatedCandidateBackup": {
+      "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-final-bound-pre-review-backup-20260808-115500",
+      "present": true,
+      "verified": true,
+      "active": false,
+      "immutable": true,
+      "role": "INVALIDATED_CANDIDATE_BACKUP",
+      "candidateCommitSha": "cc3199c063c444dc07058e54c1391d4dc23d08f6",
+      "classification": "HISTORICAL_SUPERSEDED"
+    },
+    "activePreReviewBackup": {
+      "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-final-converged-pre-review-backup-20260808-151008",
+      "present": true,
+      "verified": true,
+      "active": true,
+      "immutable": true,
+      "role": "IMMUTABLE_BOUND_PRE_REVIEW_BACKUP"
+    }
+  },
+  "sourceFileCount": 13446,
+  "backupFileCount": 13446,
+  "sourceDirectoryCount": 2818,
+  "backupDirectoryCount": 2818,
+  "sourceAggregateHash": "4cff66148793b58eaa7446241b8fb580130a43a364503b54233013bd23c49950",
+  "backupAggregateHash": "4cff66148793b58eaa7446241b8fb580130a43a364503b54233013bd23c49950",
+  "fullTreeAggregateBeforeReceipt": {
+    "source": "e8a0b5de6f1b7bb32c94fb90c30c8951bc57a7c20527425b16580f2740dc69c1",
+    "backup": "e8a0b5de6f1b7bb32c94fb90c30c8951bc57a7c20527425b16580f2740dc69c1"
+  },
+  "aggregatePolicy": "The recorded authoritative aggregate excludes exactly the self-referential artifacts listed above because the receipt records the tree aggregate, the candidate manifest records the receipt hash, and the live validation result records the manifest aggregate; no full-tree fixed point exists when regenerated reports carry fresh timestamps. Every per-file comparison and the external full-tree aggregate comparison cover every file byte-for-byte.",
+  "missingPaths": [],
+  "extraPaths": [],
+  "hashMismatches": [],
+  "sizeMismatches": [],
+  "directoryDifferences": [],
+  "longPathOmissions": [],
+  "unreadablePaths": [],
+  "verified": true,
+  "verifiedAt": "2026-08-08T12:33:19.846324+00:00",
+  "freezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
+  "officialValidatorRunId": "mindroom-graphify-final-freeze-20260808-185500-validation",
+  "externalReviewRunId": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
+  "mappingStatus": "COMPLETED_AND_FROZEN",
+  "independentReviewStatus": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
+  "planningFreezeStatus": "FROZEN",
+  "wave0Readiness": "READY_NOT_STARTED",
+  "codebaseExecutionStatus": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+  "finalReleaseReceiptStatus": "NOT_VERIFIED",
+  "canonicalCounts": {
+    "masterPlans": 3,
+    "requirements": 1782,
+    "supersessions": 278,
+    "legacyLineageRecords": 278,
+    "capabilities": 161,
+    "changeRecords": 161,
+    "tasks": 162,
+    "primaryTasks": 161,
+    "bootstrapTasks": 1,
+    "tests": 338,
+    "fixtureCategories": 6,
+    "canonicalFixtureRecords": 6,
+    "releaseWaves": 6,
+    "waveGates": 6,
+    "capabilityValidationGates": 161,
+    "applicationGates": 1,
+    "adrs": 14,
+    "publicEntrypoints": 161
+  },
+  "manifestRecordCount": 167,
+  "manifestAggregateHash": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
+  "codebaseFileCount": 10080,
+  "codebaseDirectoryCount": 2548,
+  "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+  "validatorCheckCount": 190,
+  "challengeTestCount": 81,
+  "blockingDefectCount": 0,
+  "timestamp": "2026-08-08T16:22:49.462002+00:00",
+  "lastUpdatedAt": "2026-08-06T13:24:12+00:00",
+  "repairRunId": "20260806-150031",
+  "candidateRunId": "mindroom-graphify-pre-bind-convergence-20260808-111839",
+  "gateTestSynchronizationStatus": "PASS",
+  "warningSummary": [
+    {
+      "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+      "releaseWave": "WAVE_1",
+      "blockingGateIds": [
+        "GATE-WAVE_1"
+      ]
+    },
+    {
+      "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+      "releaseWave": "WAVE_4",
+      "blockingGateIds": [
+        "GATE-WAVE_4"
+      ]
+    }
+  ],
+  "projectPhase": "GRAPHIFY_PLANNING_COMPLETE_AND_AUTHORITATIVELY_FROZEN",
+  "backupPath": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-final-converged-pre-review-backup-20260808-151008",
+  "replacementBackupPath": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-pre-review-certification-20260805-092300",
+  "preFinalizationBackupPath": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-final-converged-pre-review-backup-20260808-151008",
+  "historicalBackup": {
+    "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-lineage-repair-20260801-190852",
+    "present": false,
+    "status": "HISTORICAL_MISSING_NONACTIVE"
+  },
+  "validationTarget": "LIVE_REPOSITORY",
+  "repositoryRelativeGraphifyRoot": "Graphify",
+  "candidateRootKind": "REPOSITORY_RELATIVE",
+  "implementationPerformed": false,
+  "applicationReleased": false,
+  "validatorSourceHash": "0105adea158f9a52c7721b34954cb84ae66f0aca18c858140d062a64c92b04f4",
+  "challengeSourceHash": "db24d451163ef0df7f272ecf7f71f7c00a82b6c47166f2d6e213883fa8d8598b",
+  "verifierSourceHash": "bd10586ecdd6ac8e1710e5deaed19084e19b08d51a2431ffa2dd92bb677a8eb7",
+  "activeBackupRole": "IMMUTABLE_BOUND_PRE_REVIEW_BACKUP",
+  "immutable": true,
+  "copyEvidencePath": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\final-freeze-work\\20260806-150031\\active-backup-copy-20260808-151008\\copy-verification-summary.json",
+  "copyEvidenceSha256": "6f977d672128a70c46ebaf19ddccbd577b60919f3a1619a6c2ff6c9642f018b2",
+  "backupState": "VERIFIED_ACTIVE_PRE_REVIEW_BACKUP",
+  "receiptState": "VERIFIED_ACTIVE_PRE_REVIEW_BACKUP",
+  "backupManifestPath": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\final-freeze-work\\20260806-150031\\active-backup-copy-20260808-151008\\final-backup-scan-after-post-backup-challenge-report-sync-before-receipt-binding.json",
+  "backupManifestSha256": "916ab471574fef1c049dd6d134f7fc7dca77fa513fb0292feb4b7054b8668662",
+  "backupEvidenceAggregateHash": "4cff66148793b58eaa7446241b8fb580130a43a364503b54233013bd23c49950",
+  "preReviewBackupReceiptSha256": "7428285cd20d3d737f607120878768769239b3799c19483ee37dcdf0b1f7592f",
+  "preBindSynchronizationPolicy": "SYNCHRONIZED_CURRENT_RECOVERY_COPY_ONLY_UNTIL_CANDIDATE_BINDING",
+  "preBindSynchronizationHistory": [
+    {
+      "repairId": "PREBIND-TECH-002",
+      "synchronizedAt": "2026-08-08T13:10:58.568011+00:00",
+      "temporaryRole": "SYNCHRONIZED_CURRENT_RECOVERY_COPY_PENDING_CANDIDATE_BINDING",
+      "temporaryReceiptSha256": "8f7d6b6ebc5de6d998bc6e6f07f6560707e5f5b2d60143ed83b081ef5bfc0945",
+      "changedPaths": [
+        "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
+        "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+        "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+        "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
+        "00 Execution Control/STATUS.json",
+        "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json",
+        "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl",
+        "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+        "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+        "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+        "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+        "11 Completion/validate_final_graphify_freeze.py"
+      ],
+      "reason": "Validator backup count keys were derived from nonexistent fields instead of the complete enumerated file and directory lists."
+    },
+    {
+      "repairId": "PREBIND-POST-BACKUP-CHALLENGE-REPORT-SYNC",
+      "synchronizedAt": "2026-08-08T13:43:25.508527+00:00",
+      "temporaryRole": "SYNCHRONIZED_CURRENT_RECOVERY_COPY_PENDING_CANDIDATE_BINDING",
+      "temporaryReceiptSha256": "b15231591aab39c8e2be59a81409829cd347ba456233fab863395119caee67cc",
+      "changedPaths": [
+        "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+        "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+      ],
+      "reason": "The mandated fresh challenge execution persisted new live validation and challenge result reports after proving the backup unchanged throughout the mutation suite."
+    }
+  ],
+  "finalFreezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
+  "independentReviewDecision": "VERIFIED",
+  "reviewReportSha256": "eb0439a5e3bcc1c6c27712f5953d910e056aca20ad7db768db2d4151f8b6778f",
+  "candidateCommitSha": "16cd9496ab9d3bf59019a038a07e23251fc4d5b5",
+  "candidateTreeSha": "d31ce0aa54c2a79056ccfbb439dc8b214b107e0c",
+  "certificationTimestamp": "2026-08-08T16:22:49.462002+00:00"
+}

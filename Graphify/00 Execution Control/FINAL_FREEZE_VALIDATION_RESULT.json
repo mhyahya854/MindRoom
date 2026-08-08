@@ -1,11 +1,11 @@
 {
-  "freezeRunId": "mindroom-graphify-lineage-review-candidate-20260801-193148",
-  "officialValidatorRunId": "mindroom-graphify-lineage-validator-20260801-193148",
-  "externalReviewRunId": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
-  "mappingStatus": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
-  "independentReviewStatus": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
-  "planningFreezeStatus": "NOT_FROZEN",
-  "wave0Readiness": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+  "freezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
+  "officialValidatorRunId": "mindroom-graphify-final-freeze-20260808-185500-validation",
+  "externalReviewRunId": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
+  "mappingStatus": "COMPLETED_AND_FROZEN",
+  "independentReviewStatus": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
+  "planningFreezeStatus": "FROZEN",
+  "wave0Readiness": "READY_NOT_STARTED",
   "codebaseExecutionStatus": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
   "finalReleaseReceiptStatus": "NOT_VERIFIED",
   "canonicalCounts": {
@@ -28,15 +28,15 @@
     "adrs": 14,
     "publicEntrypoints": 161
   },
-  "manifestRecordCount": 166,
-  "manifestAggregateHash": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
+  "manifestRecordCount": 167,
+  "manifestAggregateHash": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
   "codebaseFileCount": 10080,
   "codebaseDirectoryCount": 2548,
   "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
-  "validatorCheckCount": 188,
-  "challengeTestCount": 79,
-  "blockingDefectCount": 3,
-  "repairRunId": "mindroom-graphify-lineage-repair-20260801-193148",
+  "validatorCheckCount": 190,
+  "challengeTestCount": 81,
+  "blockingDefectCount": 0,
+  "repairRunId": "20260806-150031",
   "gateTestSynchronizationStatus": "PASS",
   "warningSummary": [
     {
@@ -54,17 +54,18 @@
       ]
     }
   ],
-  "timestamp": "2026-08-05T14:52:11+03:00",
-  "validatorSourceHash": "333ff93c0263efae98731e6e7ff0ed97c7ac010af663d792926f05288c1fb9ec",
-  "challengeSourceHash": "a8e6750b0dee256513d56cf908ca701aad606c6f5c1a6b5b4cecbbab2602c48b",
-  "verifierSourceHash": "9f345bf1f907e061a957f8f9585e47dc9ab05d325ac7ccca5fe2babfdbe44b0d",
+  "timestamp": "2026-08-08T16:22:49.462002+00:00",
+  "validatorSourceHash": "0105adea158f9a52c7721b34954cb84ae66f0aca18c858140d062a64c92b04f4",
+  "challengeSourceHash": "db24d451163ef0df7f272ecf7f71f7c00a82b6c47166f2d6e213883fa8d8598b",
+  "verifierSourceHash": "bd10586ecdd6ac8e1710e5deaed19084e19b08d51a2431ffa2dd92bb677a8eb7",
   "validationTarget": "LIVE_REPOSITORY",
-  "candidateRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify",
+  "repositoryRelativeGraphifyRoot": "Graphify",
+  "candidateRootKind": "REPOSITORY_RELATIVE",
   "overridesUsed": false,
   "temporaryChallengeId": null,
   "validationMode": "FULL_TECHNICAL_CERTIFICATION",
   "validationResult": {
-    "freezeRunId": "mindroom-graphify-lineage-review-candidate-20260801-193148",
+    "freezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
     "status": "PASS",
     "failedChecksCount": 0,
     "checks": [
@@ -106,11 +107,12 @@
         "expected": [],
         "evidence": [
           "00 Execution Control/STATUS.json",
-          "11 Completion/FINAL_GATE_REPAIR_AUTHORITY_INVENTORY_CANDIDATE.jsonl",
-          "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl",
+          "00 Execution Control/FINAL_AUTHORITY_CLASSIFICATION.jsonl",
+          "11 Completion/FINAL_AUTHORITY_MIGRATION_REPORT.json",
           "11 Completion/validate_final_graphify_freeze.py",
           "11 Completion/run_final_freeze_challenges.py",
           "11 Completion/verify_step11b_results.py",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
           "03 Capability Map/CAPABILITY_REGISTRY.json",
           "09 Implementation/IMPLEMENTATION_TASKS.jsonl",
           "10 Verification/REQUIREMENT_TEST_MATRIX.jsonl",
@@ -118,9 +120,14 @@
           "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl",
           "11 Completion/FINAL_REQUIREMENT_LINEAGE_RECONCILIATION_REPORT.json",
           "11 Completion/FINAL_CAPABILITY_TASK_REQUIREMENT_TRACEABILITY_REPORT.json",
-          "00 Execution Control/FINAL_LONG_PATH_BACKUP_VERIFICATION.json",
-          "11 Completion/FINAL_LINEAGE_REPAIR_INDEPENDENT_REVIEW_PACKAGE.json",
-          "11 Completion/FINAL_LINEAGE_REPAIR_INDEPENDENT_REVIEW_REPORT.json"
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "00 Execution Control/FINAL_COMPLETE_AUTHORITY_INVENTORY.jsonl",
+          "00 Execution Control/FROZEN_ARTIFACT_MANIFEST.jsonl",
+          "11 Completion/FINAL_AUTHORITATIVE_FREEZE_INDEPENDENT_REVIEW_REPORT.json"
         ]
       },
       {
@@ -132,7 +139,8 @@
         "actual": [],
         "expected": [],
         "evidence": [
-          "00 Execution Control/FINAL_LONG_PATH_BACKUP_VERIFICATION.json",
+          "00 Execution Control/FINAL_AUTHORITY_CLASSIFICATION.jsonl",
+          "00 Execution Control/FINAL_COMPLETE_AUTHORITY_INVENTORY.jsonl",
           "00 Execution Control/schemas/capability-registry.schema.json",
           "00 Execution Control/schemas/deletion-candidate.schema.json",
           "00 Execution Control/schemas/deletion-receipt.schema.json",
@@ -198,8 +206,6 @@
           "05 Dependency and Impact/Knowledge Graph/EXCLUDED_SYSTEM_GRAPH.json",
           "05 Dependency and Impact/Knowledge Graph/GENERATED_CODE_GRAPH.json",
           "05 Dependency and Impact/Knowledge Graph/GENERATED_CODE_PROVENANCE.jsonl",
-          "05 Dependency and Impact/Knowledge Graph/graph.html",
-          "05 Dependency and Impact/Knowledge Graph/graph.json",
           "05 Dependency and Impact/Knowledge Graph/GRAPH_BUILD_EVIDENCE.json",
           "05 Dependency and Impact/Knowledge Graph/GRAPH_HEALTH.json",
           "05 Dependency and Impact/Knowledge Graph/GRAPH_INDEX.json",
@@ -207,13 +213,15 @@
           "05 Dependency and Impact/Knowledge Graph/GRAPH_REPORT.md",
           "05 Dependency and Impact/Knowledge Graph/GRAPH_VALIDATION.json",
           "05 Dependency and Impact/Knowledge Graph/MIGRATION_COMPATIBILITY_GRAPH.json",
-          "05 Dependency and Impact/Knowledge Graph/NODE_ID_REGISTRY.jsonl",
           "05 Dependency and Impact/Knowledge Graph/NODES.jsonl",
+          "05 Dependency and Impact/Knowledge Graph/NODE_ID_REGISTRY.jsonl",
           "05 Dependency and Impact/Knowledge Graph/PACKAGE_DEPENDENCY_GRAPH.json",
           "05 Dependency and Impact/Knowledge Graph/RUNTIME_REGISTRATION_GRAPH.json",
           "05 Dependency and Impact/Knowledge Graph/SELF_LOOP_CLASSIFICATION.jsonl",
           "05 Dependency and Impact/Knowledge Graph/TEST_COVERAGE_GRAPH.json",
           "05 Dependency and Impact/Knowledge Graph/VENDOR_TOOL_GRAPH.json",
+          "05 Dependency and Impact/Knowledge Graph/graph.html",
+          "05 Dependency and Impact/Knowledge Graph/graph.json",
           "05 Dependency and Impact/PLANNED_PACKAGE_DEPENDENCY_GRAPH.json",
           "05 Dependency and Impact/REMOVAL_BLAST_RADIUS.jsonl",
           "05 Dependency and Impact/REORGANISATION_BLAST_RADIUS.jsonl",
@@ -232,11 +240,11 @@
           "07 Reorganisation/REORGANISATION_LEDGER.jsonl",
           "07 Reorganisation/ROLLBACK_PLAN.jsonl",
           "08 Cleanup/CLEANUP_VALIDATION_RESULT.json",
-          "08 Cleanup/Deletion Receipts/deletion-receipt.schema.json",
           "08 Cleanup/DELETION_CANDIDATES.jsonl",
           "08 Cleanup/DELETION_PROOF_QUEUE.jsonl",
           "08 Cleanup/DELETION_RECEIPTS.jsonl",
           "08 Cleanup/DUPLICATE_CODE_CANDIDATES.jsonl",
+          "08 Cleanup/Deletion Receipts/deletion-receipt.schema.json",
           "08 Cleanup/PONYTAIL_AUDIT.jsonl",
           "08 Cleanup/PONYTAIL_AUDIT.md",
           "08 Cleanup/PONYTAIL_CANDIDATES.jsonl",
@@ -247,9 +255,9 @@
           "09 Implementation/IMPLEMENTATION_QUEUE.md",
           "09 Implementation/IMPLEMENTATION_TASKS.jsonl",
           "09 Implementation/NEW_CAPABILITY_TASKS.jsonl",
-          "09 Implementation/Transplant Receipts/transplant-receipt.schema.json",
           "09 Implementation/TRANSPLANT_RECEIPTS.jsonl",
           "09 Implementation/TRANSPLANT_SEARCH_QUEUE.jsonl",
+          "09 Implementation/Transplant Receipts/transplant-receipt.schema.json",
           "10 Verification/APP_DELETION_SURVIVAL_TEST_PLAN.md",
           "10 Verification/BASELINE_VERIFICATION_RESULTS.jsonl",
           "10 Verification/CROSS_PLATFORM_TEST_MATRIX.md",
@@ -262,10 +270,10 @@
           "10 Verification/ROLLBACK_VERIFICATION_PLAN.md",
           "10 Verification/TEST_COMMAND_REGISTRY.json",
           "10 Verification/TEST_RECEIPTS.jsonl",
+          "11 Completion/FINAL_AUTHORITATIVE_FREEZE_INDEPENDENT_REVIEW_REPORT.json",
+          "11 Completion/FINAL_AUTHORITY_MIGRATION_REPORT.json",
           "11 Completion/FINAL_CAPABILITY_TASK_REQUIREMENT_TRACEABILITY_REPORT.json",
           "11 Completion/FINAL_DEPENDENCY_ARCHITECTURE_REPORT.json",
-          "11 Completion/FINAL_GATE_REPAIR_AUTHORITY_INVENTORY_CANDIDATE.jsonl",
-          "11 Completion/FINAL_REPAIR_REPRODUCTION_REPORT.json",
           "11 Completion/FINAL_REQUIREMENT_LINEAGE_RECONCILIATION_REPORT.json",
           "11 Completion/FINAL_TEST_WAVE_OWNERSHIP.jsonl",
           "11 Completion/FINAL_WAVE_GATE_TEST_AUDIT.json",
@@ -341,6 +349,30 @@
         "evidence": []
       },
       {
+        "checkId": "AUTH-09",
+        "category": "authority",
+        "description": "The authority index, current classification, and pre-review/final manifest phase agree exactly",
+        "status": "PASS",
+        "method": "authority-map-to-classification join plus phase-specific candidate/final boundary equality",
+        "actual": {
+          "mappedNoncurrent": [],
+          "phaseClassificationIssues": [],
+          "phaseMapIssues": {
+            "missingExpected": [],
+            "forbiddenPresent": []
+          }
+        },
+        "expected": {
+          "mappedNoncurrent": [],
+          "phaseClassificationIssues": [],
+          "phaseMapIssues": {
+            "missingExpected": [],
+            "forbiddenPresent": []
+          }
+        },
+        "evidence": []
+      },
+      {
         "checkId": "MAN-01",
         "category": "manifest",
         "description": "Manifest does not contain itself",
@@ -406,7 +438,7 @@
         "description": "Candidate manifest aggregate hash is reproducible from live non-self-referential rows",
         "status": "PASS",
         "method": "independent sorted path:file-hash aggregate; protected governance receipts are not authoritative for the pre-review candidate aggregate because the candidate manifest is rebuilt last and those receipts cannot be modified in this repair",
-        "actual": "9c8a2376c1b4d85909826d836a54ef4615794417e6b606de43b1a937755fb889",
+        "actual": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
         "expected": "64-character SHA-256 aggregate",
         "evidence": [
           "MAN-01",
@@ -417,28 +449,30 @@
       {
         "checkId": "MAN-08",
         "category": "manifest",
-        "description": "Protected governance receipts agree with each other on the historical candidate manifest aggregate hash",
+        "description": "All current governance receipts agree with the live reproducible manifest aggregate hash",
         "status": "PASS",
-        "method": "cross-document protected-receipt consistency; the candidate manifest itself is rebuilt last and is not required to match protected receipts in this repair",
+        "method": "cross-document protected-receipt consistency against the live manifest aggregate; no historical split is permitted",
         "actual": {
-          "00 Execution Control/STATUS.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
-          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
-          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
-          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
-          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
-          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
-          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
-          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
-          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
-          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295"
+          "00 Execution Control/STATUS.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37"
         },
-        "expected": "one shared historical manifest aggregate hash",
+        "expected": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
         "evidence": [
           "00 Execution Control/STATUS.json",
           "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
@@ -1918,64 +1952,111 @@
           "missing": 0
         },
         "expected": {
-          "declared": 166,
+          "declared": 167,
           "duplicates": 0,
           "missing": 0
         },
         "evidence": [
           {
-            "path": "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl",
-            "classification": "CURRENT_DERIVED_COMPLETION_METADATA",
+            "path": "00 Execution Control/FROZEN_ARTIFACT_MANIFEST.jsonl",
+            "classification": "CURRENT_AUTHORITATIVE",
             "includedInFreeze": false,
-            "exclusionReason": "Derived completion metadata is validator-bound rather than a manifest subject, avoiding circular self-hashing.",
-            "sourceOfAuthority": "Authority boundary policy",
-            "recordCount": 166
+            "exclusionReason": "Self-reference is prohibited; MAN-* checks directly validate the manifest bytes and every subject hash.",
+            "sourceOfAuthority": "00 Execution Control/FINAL_AUTHORITY_CLASSIFICATION.jsonl",
+            "recordCount": 167
           }
         ]
       },
       {
         "checkId": "BAK-01",
         "category": "backup",
-        "description": "Backup root exists and the receipt references the real current Graphify source root",
+        "description": "Backup authority is either fail-closed pending before Phase 9 or one exact verified immutable pre-review backup",
         "status": "PASS",
-        "method": "filesystem existence, exact root identity, and replacement-backup purpose",
+        "method": "filesystem existence, phase-aware receipt state, and exact non-conflicting backup-role classification",
         "actual": {
+          "receiptState": "VERIFIED_ACTIVE_PRE_REVIEW_BACKUP",
           "sourceRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify",
-          "backupRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-pre-review-certification-20260805-092300",
+          "backupRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-final-converged-pre-review-backup-20260808-151008",
+          "backupHistory": {
+            "historicalOriginalBackup": {
+              "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-lineage-repair-20260801-190852",
+              "present": false,
+              "verified": false,
+              "active": false,
+              "role": "HISTORICAL_MISSING_NONACTIVE",
+              "supersededEvidence": true
+            },
+            "replacementPreReviewBackup": {
+              "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-pre-review-certification-20260805-092300",
+              "present": false,
+              "verified": false,
+              "active": false,
+              "role": "HISTORICAL_REPLACEMENT_PRE_REVIEW_BACKUP_MISSING_NONACTIVE",
+              "actualProvenSemantics": "Previously reported replacement path is absent from the recovery root in this run; its contents and historical identity are not used as current evidence."
+            },
+            "mutableWorkingMirror": {
+              "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-final-authoritative-freeze-20260806-152420",
+              "present": false,
+              "verified": false,
+              "active": false,
+              "immutable": false,
+              "role": "MUTABLE_WORKING_MIRROR_NOT_VALID_AS_IMMUTABLE_ROLLBACK_POINT"
+            },
+            "invalidatedCandidateBackup": {
+              "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-final-bound-pre-review-backup-20260808-115500",
+              "present": true,
+              "verified": true,
+              "active": false,
+              "immutable": true,
+              "role": "INVALIDATED_CANDIDATE_BACKUP",
+              "candidateCommitSha": "cc3199c063c444dc07058e54c1391d4dc23d08f6",
+              "classification": "HISTORICAL_SUPERSEDED"
+            },
+            "activePreReviewBackup": {
+              "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-final-converged-pre-review-backup-20260808-151008",
+              "present": true,
+              "verified": true,
+              "active": true,
+              "immutable": true,
+              "role": "IMMUTABLE_BOUND_PRE_REVIEW_BACKUP"
+            }
+          },
           "errors": []
         },
-        "expected": "two readable existing roots plus replacement-backup purpose",
+        "expected": "phase-aware pending or single verified active backup role",
         "evidence": []
       },
       {
         "checkId": "BAK-02",
         "category": "backup",
-        "description": "Backup file count matches live source and receipt",
+        "description": "Backup file counts are phase-correct and exact",
         "status": "PASS",
-        "method": "live source/backup enumeration plus receipt counts",
+        "method": "phase-aware live/backup/manifest enumeration",
         "actual": {
-          "receiptSource": 13443,
-          "receiptBackup": 13443,
-          "scannedSource": 13443,
-          "scannedBackup": 13443
+          "receiptSource": 13446,
+          "receiptBackup": 13446,
+          "scannedSource": 13447,
+          "scannedBackup": 13446,
+          "manifest": 13446
         },
-        "expected": 13443,
+        "expected": "pending nulls or exact verified counts",
         "evidence": []
       },
       {
         "checkId": "BAK-03",
         "category": "backup",
-        "description": "Backup directory count and set match live source and receipt",
+        "description": "Backup directory counts and sets are phase-correct and exact",
         "status": "PASS",
-        "method": "live source/backup directory-set equality plus receipt counts",
+        "method": "phase-aware directory-set equality",
         "actual": {
-          "receiptSource": 8497,
-          "receiptBackup": 8497,
-          "scannedSource": 8497,
-          "scannedBackup": 8497,
+          "receiptSource": 2818,
+          "receiptBackup": 2818,
+          "scannedSource": 2818,
+          "scannedBackup": 2818,
+          "manifest": 2818,
           "delta": []
         },
-        "expected": 8497,
+        "expected": "pending nulls or exact verified counts and set",
         "evidence": []
       },
       {
@@ -1983,7 +2064,7 @@
         "category": "backup",
         "description": "Backup has zero missing files",
         "status": "PASS",
-        "method": "live source/backup path difference",
+        "method": "phase-aware expected/backup path difference",
         "actual": {
           "receipt": [],
           "scanned": []
@@ -1996,7 +2077,7 @@
         "category": "backup",
         "description": "Backup has zero extra files",
         "status": "PASS",
-        "method": "live backup/source path difference",
+        "method": "phase-aware backup/expected path difference",
         "actual": {
           "receipt": [],
           "scanned": []
@@ -2009,7 +2090,7 @@
         "category": "backup",
         "description": "Backup has zero file hash mismatches",
         "status": "PASS",
-        "method": "per-file SHA-256 comparison",
+        "method": "per-file SHA-256 comparison against live pre-freeze or immutable manifest post-freeze",
         "actual": {
           "receipt": [],
           "scanned": []
@@ -2022,7 +2103,7 @@
         "category": "backup",
         "description": "Backup has zero file size mismatches",
         "status": "PASS",
-        "method": "per-file byte-size comparison",
+        "method": "per-file byte-size comparison against live pre-freeze or immutable manifest post-freeze",
         "actual": {
           "receipt": [],
           "scanned": []
@@ -2035,7 +2116,7 @@
         "category": "backup",
         "description": "Backup has zero long-path omissions",
         "status": "PASS",
-        "method": "receipt plus long-path subset of live path difference",
+        "method": "receipt plus long-path subset of phase-aware path difference",
         "actual": {
           "receipt": [],
           "scanned": []
@@ -2059,34 +2140,36 @@
       {
         "checkId": "BAK-10",
         "category": "backup",
-        "description": "Backup aggregate hash matches live source and receipt",
+        "description": "Backup aggregate is phase-correct and reproducible",
         "status": "PASS",
-        "method": "independent sorted path:file-hash aggregate over the tree excluding the backup receipt, candidate manifest, live validation result, challenge report, and three-file repair report. Those five generated artifacts are excluded because the receipt records the tree aggregate, the candidate manifest records the receipt hash, and the live validation result records the manifest aggregate: a full-tree fixed point that includes all five cannot exist when regenerated reports carry fresh timestamps. Every per-file check (BAK-04/05/06/07/12) and the external full-tree backup verification still cover all files byte-for-byte",
+        "method": "phase-aware sorted path:file-hash aggregate",
         "actual": {
-          "receiptSource": "002687ff47d3d87125a8926a7dedc0922c682dcde1e10767fc82af29fe275d1a",
-          "receiptBackup": "002687ff47d3d87125a8926a7dedc0922c682dcde1e10767fc82af29fe275d1a",
-          "scannedSource": "002687ff47d3d87125a8926a7dedc0922c682dcde1e10767fc82af29fe275d1a",
-          "scannedBackup": "002687ff47d3d87125a8926a7dedc0922c682dcde1e10767fc82af29fe275d1a"
+          "receiptSource": "4cff66148793b58eaa7446241b8fb580130a43a364503b54233013bd23c49950",
+          "receiptBackup": "4cff66148793b58eaa7446241b8fb580130a43a364503b54233013bd23c49950",
+          "receiptEvidence": "4cff66148793b58eaa7446241b8fb580130a43a364503b54233013bd23c49950",
+          "scannedSource": "aa748afff8e91d3bf449d45a7e644e232d0fe6369d937616942a47e9d6614a9d",
+          "scannedBackup": "4cff66148793b58eaa7446241b8fb580130a43a364503b54233013bd23c49950",
+          "manifestEvidence": "4cff66148793b58eaa7446241b8fb580130a43a364503b54233013bd23c49950"
         },
-        "expected": "002687ff47d3d87125a8926a7dedc0922c682dcde1e10767fc82af29fe275d1a",
+        "expected": "pending nulls, exact live equality pre-freeze, or exact immutable-manifest equality post-freeze",
         "evidence": []
       },
       {
         "checkId": "BAK-11",
         "category": "backup",
-        "description": "Backup receipt is a verified replacement recovery point",
+        "description": "Backup receipt is phase-correct and the immutable pre-review receipt remains cryptographically bound after freeze",
         "status": "PASS",
-        "method": "receipt verification fields",
+        "method": "phase-aware receipt verification fields plus backup-copy receipt SHA-256",
         "actual": {
+          "receiptState": "VERIFIED_ACTIVE_PRE_REVIEW_BACKUP",
           "verified": true,
-          "verifiedAt": "2026-08-05T14:35:53+03:00",
-          "copyExitCode": 0
+          "immutable": true,
+          "activeBackupRole": "IMMUTABLE_BOUND_PRE_REVIEW_BACKUP",
+          "verifiedAt": "2026-08-08T12:33:19.846324+00:00",
+          "copyExitCode": 0,
+          "preReviewBackupReceiptSha256": "7428285cd20d3d737f607120878768769239b3799c19483ee37dcdf0b1f7592f"
         },
-        "expected": {
-          "verified": true,
-          "verifiedAt": "nonempty",
-          "copyExitCode": "recorded"
-        },
+        "expected": "valid pending state or verified immutable active state with post-freeze receipt binding",
         "evidence": []
       },
       {
@@ -2094,12 +2177,28 @@
         "category": "backup",
         "description": "Receipt records zero directory-set differences",
         "status": "PASS",
-        "method": "receipt and live directory-set difference lists",
+        "method": "receipt and phase-aware directory-set difference lists",
         "actual": {
           "receipt": [],
           "scanned": []
         },
         "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "BAK-13",
+        "category": "backup",
+        "description": "The backup receipt contains one canonical role inventory with no sibling duplicate authority object or duplicate role path",
+        "status": "PASS",
+        "method": "single backupHistory authority object plus unique path-to-role mapping",
+        "actual": {
+          "backupEvidencePresent": false,
+          "duplicateRolePaths": []
+        },
+        "expected": {
+          "backupEvidencePresent": false,
+          "duplicateRolePaths": []
+        },
         "evidence": []
       },
       {
@@ -3377,8 +3476,8 @@
         "description": "Mapping status matches the current validated phase",
         "status": "PASS",
         "method": "exact phase-aware state check",
-        "actual": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
-        "expected": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
+        "actual": "COMPLETED_AND_FROZEN",
+        "expected": "COMPLETED_AND_FROZEN",
         "evidence": [
           "STATUS.json"
         ]
@@ -3389,8 +3488,8 @@
         "description": "Wave 0 has not started",
         "status": "PASS",
         "method": "exact phase-aware safety state",
-        "actual": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
-        "expected": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+        "actual": "READY_NOT_STARTED",
+        "expected": "READY_NOT_STARTED",
         "evidence": [
           "STATUS.json"
         ]
@@ -3434,19 +3533,18 @@
         "category": "independent_review",
         "description": "Independent review state is valid for the current phase",
         "status": "PASS",
-        "method": "phase-aware decision check with documented technical-repair condition",
+        "method": "phase-aware decision check; only a genuinely isolated VERIFIED review permits freezing",
         "actual": {
-          "finalMode": false,
-          "technicalMode": true,
+          "finalMode": true,
           "exists": true,
-          "decision": "FAILED"
+          "decision": "VERIFIED"
         },
         "expected": {
-          "finalMode": false,
-          "requiredDecision": "ABSENT_OR_VERIFIED_OR_FAILED"
+          "finalMode": true,
+          "requiredDecision": "VERIFIED"
         },
         "evidence": [
-          "FINAL_LINEAGE_REPAIR_INDEPENDENT_REVIEW_REPORT.json"
+          "FINAL_AUTHORITATIVE_FREEZE_INDEPENDENT_REVIEW_REPORT.json"
         ]
       },
       {
@@ -3466,7 +3564,7 @@
           "codebaseMutations": 0
         },
         "evidence": [
-          "FINAL_LINEAGE_REPAIR_INDEPENDENT_REVIEW_REPORT.json"
+          "FINAL_AUTHORITATIVE_FREEZE_INDEPENDENT_REVIEW_REPORT.json"
         ]
       },
       {
@@ -3475,10 +3573,10 @@
         "description": "Independent reviewer records a separate isolation method",
         "status": "PASS",
         "method": "isolation-method presence and impersonation guard",
-        "actual": "Separate read-only reviewer with no participation in the repair; independently parsed live artifacts, ran the exact production validator with PYTHONDONTWRITEBYTECODE=1, and compared complete Graphify and Codebase inventories before and after review.",
+        "actual": "Single isolated first-independent-review agent; exact bound detached candidate, immutable snapshot, active backup, package, Graphify, Codebase, Git index/refs, and repository were treated read-only; only the predetermined report path and designated evidence directory were writable; no delegation, repair, commit, push, LFS pull, worktree creation, snapshot creation, backup creation, or Graphify/Codebase mutation was performed.",
         "expected": "nonempty separate reviewer mechanism",
         "evidence": [
-          "POST_REPAIR_INDEPENDENT_REVIEW_REPORT.json"
+          "FINAL_AUTHORITATIVE_FREEZE_INDEPENDENT_REVIEW_REPORT.json"
         ]
       },
       {
@@ -3488,16 +3586,17 @@
         "status": "PASS",
         "method": "cross-document value comparison",
         "actual": {
-          "00 Execution Control/STATUS.json": "mindroom-graphify-lineage-review-candidate-20260801-193148",
-          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "mindroom-graphify-lineage-review-candidate-20260801-193148",
-          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-graphify-lineage-review-candidate-20260801-193148",
-          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "mindroom-graphify-lineage-review-candidate-20260801-193148",
-          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "mindroom-graphify-lineage-review-candidate-20260801-193148",
-          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-graphify-lineage-review-candidate-20260801-193148",
-          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "mindroom-graphify-lineage-review-candidate-20260801-193148",
-          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "mindroom-graphify-lineage-review-candidate-20260801-193148",
-          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "mindroom-graphify-lineage-review-candidate-20260801-193148",
-          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "mindroom-graphify-lineage-review-candidate-20260801-193148"
+          "00 Execution Control/STATUS.json": "mindroom-graphify-final-freeze-20260808-185500",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "mindroom-graphify-final-freeze-20260808-185500",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-graphify-final-freeze-20260808-185500",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "mindroom-graphify-final-freeze-20260808-185500",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "mindroom-graphify-final-freeze-20260808-185500",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "mindroom-graphify-final-freeze-20260808-185500",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-graphify-final-freeze-20260808-185500",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "mindroom-graphify-final-freeze-20260808-185500",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "mindroom-graphify-final-freeze-20260808-185500",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "mindroom-graphify-final-freeze-20260808-185500",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "mindroom-graphify-final-freeze-20260808-185500"
         },
         "expected": "one nonempty freezeRunId",
         "evidence": [
@@ -3506,6 +3605,7 @@
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
@@ -3520,24 +3620,26 @@
         "status": "PASS",
         "method": "cross-document value comparison",
         "actual": {
-          "00 Execution Control/STATUS.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
-          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
-          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
-          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
-          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
-          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
-          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
-          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
-          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
-          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW"
+          "00 Execution Control/STATUS.json": "COMPLETED_AND_FROZEN",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "COMPLETED_AND_FROZEN",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "COMPLETED_AND_FROZEN",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "COMPLETED_AND_FROZEN",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "COMPLETED_AND_FROZEN",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "COMPLETED_AND_FROZEN",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "COMPLETED_AND_FROZEN",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "COMPLETED_AND_FROZEN",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "COMPLETED_AND_FROZEN",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "COMPLETED_AND_FROZEN",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "COMPLETED_AND_FROZEN"
         },
-        "expected": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
+        "expected": "COMPLETED_AND_FROZEN",
         "evidence": [
           "00 Execution Control/STATUS.json",
           "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
@@ -3552,24 +3654,26 @@
         "status": "PASS",
         "method": "cross-document value comparison",
         "actual": {
-          "00 Execution Control/STATUS.json": "NOT_FROZEN",
-          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "NOT_FROZEN",
-          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "NOT_FROZEN",
-          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "NOT_FROZEN",
-          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "NOT_FROZEN",
-          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "NOT_FROZEN",
-          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "NOT_FROZEN",
-          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "NOT_FROZEN",
-          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "NOT_FROZEN",
-          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "NOT_FROZEN"
+          "00 Execution Control/STATUS.json": "FROZEN",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "FROZEN",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "FROZEN",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "FROZEN",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "FROZEN",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "FROZEN",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "FROZEN",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "FROZEN",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "FROZEN",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "FROZEN",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "FROZEN"
         },
-        "expected": "NOT_FROZEN",
+        "expected": "FROZEN",
         "evidence": [
           "00 Execution Control/STATUS.json",
           "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
@@ -3584,24 +3688,26 @@
         "status": "PASS",
         "method": "cross-document value comparison",
         "actual": {
-          "00 Execution Control/STATUS.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
-          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
-          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
-          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
-          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
-          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
-          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
-          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
-          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
-          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR"
+          "00 Execution Control/STATUS.json": "READY_NOT_STARTED",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "READY_NOT_STARTED",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "READY_NOT_STARTED",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "READY_NOT_STARTED",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "READY_NOT_STARTED",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "READY_NOT_STARTED",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "READY_NOT_STARTED",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "READY_NOT_STARTED",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "READY_NOT_STARTED",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "READY_NOT_STARTED",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "READY_NOT_STARTED"
         },
-        "expected": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+        "expected": "READY_NOT_STARTED",
         "evidence": [
           "00 Execution Control/STATUS.json",
           "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
@@ -3621,6 +3727,7 @@
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
@@ -3634,6 +3741,7 @@
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
@@ -3653,6 +3761,7 @@
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "NOT_VERIFIED",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "NOT_VERIFIED",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "NOT_VERIFIED",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "NOT_VERIFIED",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "NOT_VERIFIED",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "NOT_VERIFIED",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "NOT_VERIFIED",
@@ -3666,6 +3775,7 @@
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
@@ -3761,6 +3871,26 @@
             "publicEntrypoints": 161
           },
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": {
+            "masterPlans": 3,
+            "requirements": 1782,
+            "supersessions": 278,
+            "legacyLineageRecords": 278,
+            "capabilities": 161,
+            "changeRecords": 161,
+            "tasks": 162,
+            "primaryTasks": 161,
+            "bootstrapTasks": 1,
+            "tests": 338,
+            "fixtureCategories": 6,
+            "canonicalFixtureRecords": 6,
+            "releaseWaves": 6,
+            "waveGates": 6,
+            "capabilityValidationGates": 161,
+            "applicationGates": 1,
+            "adrs": 14,
+            "publicEntrypoints": 161
+          },
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": {
             "masterPlans": 3,
             "requirements": 1782,
             "supersessions": 278,
@@ -3907,6 +4037,7 @@
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
@@ -3926,6 +4057,7 @@
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
@@ -3939,6 +4071,7 @@
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
@@ -3949,28 +4082,30 @@
       {
         "checkId": "META-09",
         "category": "metadata",
-        "description": "All receipts report the phase-expected blocking defect count",
+        "description": "All receipts report zero blocking defects",
         "status": "PASS",
-        "method": "cross-document value comparison against the documented technical-repair condition",
+        "method": "cross-document value comparison; the final authoritative generation is defect-free",
         "actual": {
-          "00 Execution Control/STATUS.json": 3,
-          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": 3,
-          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": 3,
-          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": 3,
-          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": 3,
-          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": 3,
-          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": 3,
-          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": 3,
-          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": 3,
-          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": 3
+          "00 Execution Control/STATUS.json": 0,
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": 0,
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": 0,
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": 0,
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": 0,
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": 0,
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": 0,
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": 0,
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": 0,
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": 0,
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": 0
         },
-        "expected": 3,
+        "expected": 0,
         "evidence": [
           "00 Execution Control/STATUS.json",
           "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
@@ -3981,27 +4116,27 @@
       {
         "checkId": "META-10",
         "category": "metadata",
-        "description": "Challenge report is finalized with zero-failure baselines and all required challenges passed",
+        "description": "Challenge evidence is either fail-closed pending before the one fresh run or finalized with every zero-failure challenge passed",
         "status": "PASS",
-        "method": "challenge-report integrity, canonical challenge-set, and zero-failure baseline verification",
+        "method": "phase-aware challenge-report integrity, canonical challenge set, and zero-failure baseline verification",
         "actual": {
+          "state": "FRESH_CHALLENGE_EXECUTION_VERIFIED",
           "verdict": "PASS",
-          "executed": 79,
-          "required": 79,
+          "executed": 81,
+          "required": 81,
           "allPassed": true,
           "zeroFailureBaselines": true,
-          "validatorCheckCount": 188,
-          "challengeTestCount": 79,
+          "validatorCheckCount": 190,
+          "challengeTestCount": 81,
           "validatorSourceHashMatch": true
         },
         "expected": {
-          "verdict": "PASS",
-          "executed": 79,
-          "required": 79,
-          "allPassed": true,
-          "zeroFailureBaselines": true,
-          "validatorCheckCount": 188,
-          "challengeTestCount": 79,
+          "state": "PENDING_FRESH_CHALLENGE_EXECUTION or FRESH_CHALLENGE_EXECUTION_VERIFIED",
+          "verdict": "PENDING or PASS",
+          "executed": "0 before run or all required after run",
+          "required": 81,
+          "validatorCheckCount": 190,
+          "challengeTestCount": 81,
           "validatorSourceHashMatch": true
         },
         "evidence": [
@@ -4011,19 +4146,21 @@
       {
         "checkId": "META-17",
         "category": "metadata",
-        "description": "Persisted live validation report is direct live evidence with zero overrides",
+        "description": "Persisted live validation report is direct live evidence with zero overrides and relocation-safe candidate-root metadata",
         "status": "PASS",
-        "method": "validation-context and source-hash comparison; temporary overrides can never be persisted as live evidence",
+        "method": "validation-context and source-hash comparison; the live Graphify root is resolved at runtime and temporary overrides can never be persisted as live evidence",
         "actual": {
           "validationTarget": "LIVE_REPOSITORY",
-          "candidateRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify",
+          "candidateRootKind": "REPOSITORY_RELATIVE",
+          "repositoryRelativeGraphifyRoot": "Graphify",
           "overridesUsed": false,
           "temporaryChallengeId": null,
           "validatorSourceHashMatch": true
         },
         "expected": {
           "validationTarget": "LIVE_REPOSITORY",
-          "candidateRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify",
+          "candidateRootKind": "REPOSITORY_RELATIVE",
+          "repositoryRelativeGraphifyRoot": "Graphify",
           "overridesUsed": false,
           "temporaryChallengeId": null,
           "validatorSourceHashMatch": true
@@ -4035,27 +4172,27 @@
       {
         "checkId": "META-18",
         "category": "metadata",
-        "description": "Generated challenge and live reports agree and contain zero backup or manifest failures",
+        "description": "Generated challenge and live reports agree in pending or verified state and contain zero backup or manifest failures",
         "status": "PASS",
-        "method": "cross-report status, failure, and count consistency",
+        "method": "phase-aware cross-report status, failure, and count consistency",
         "actual": {
           "liveStatus": "PASS",
           "liveFailed": 0,
+          "challengeState": "FRESH_CHALLENGE_EXECUTION_VERIFIED",
           "challengeVerdict": "PASS",
           "backupOrManifestFailures": [],
           "counts": {
-            "live": 188,
-            "challenge": 188
+            "live": 190,
+            "challenge": 190
           }
         },
         "expected": {
-          "liveStatus": "PASS",
-          "liveFailed": 0,
-          "challengeVerdict": "PASS",
+          "liveStatus": "PENDING before challenge or PASS after challenge",
+          "challengeVerdict": "PENDING before challenge or PASS after challenge",
           "backupOrManifestFailures": [],
           "counts": {
-            "live": 188,
-            "challenge": 188
+            "live": 190,
+            "challenge": 190
           }
         },
         "evidence": [
@@ -4086,24 +4223,26 @@
         "status": "PASS",
         "method": "cross-document repair ID comparison",
         "actual": {
-          "00 Execution Control/STATUS.json": "mindroom-graphify-lineage-repair-20260801-193148",
-          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "mindroom-graphify-lineage-repair-20260801-193148",
-          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-graphify-lineage-repair-20260801-193148",
-          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "mindroom-graphify-lineage-repair-20260801-193148",
-          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "mindroom-graphify-lineage-repair-20260801-193148",
-          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-graphify-lineage-repair-20260801-193148",
-          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "mindroom-graphify-lineage-repair-20260801-193148",
-          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "mindroom-graphify-lineage-repair-20260801-193148",
-          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "mindroom-graphify-lineage-repair-20260801-193148",
-          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "mindroom-graphify-lineage-repair-20260801-193148"
+          "00 Execution Control/STATUS.json": "20260806-150031",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "20260806-150031",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "20260806-150031",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "20260806-150031",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "20260806-150031",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "20260806-150031",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "20260806-150031",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "20260806-150031",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "20260806-150031",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "20260806-150031",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "20260806-150031"
         },
-        "expected": "mindroom-graphify-lineage-repair-20260801-193148",
+        "expected": "20260806-150031",
         "evidence": [
           "00 Execution Control/STATUS.json",
           "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
@@ -4118,30 +4257,32 @@
         "status": "PASS",
         "method": "cross-document review session ID comparison",
         "actual": {
-          "00 Execution Control/STATUS.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
-          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
-          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
-          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
-          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
-          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
-          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
-          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
-          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
-          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013"
+          "00 Execution Control/STATUS.json": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "mindroom-first-independent-review-20260808-170415-4e4ab9fd"
         },
-        "expected": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
+        "expected": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
         "evidence": [
           "00 Execution Control/STATUS.json",
           "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
           "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json",
           "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json",
-          "POST_REPAIR_INDEPENDENT_REVIEW_REPORT.json"
+          "FINAL_AUTHORITATIVE_FREEZE_INDEPENDENT_REVIEW_REPORT.json"
         ]
       },
       {
@@ -4151,24 +4292,26 @@
         "status": "PASS",
         "method": "cross-document exact status comparison",
         "actual": {
-          "00 Execution Control/STATUS.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
-          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
-          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
-          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
-          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
-          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
-          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
-          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
-          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
-          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "FAILED_POST_REPAIR_EXTERNAL_REVIEW"
+          "00 Execution Control/STATUS.json": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW"
         },
-        "expected": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
+        "expected": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
         "evidence": [
           "00 Execution Control/STATUS.json",
           "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
@@ -4188,6 +4331,7 @@
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "PASS",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "PASS",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "PASS",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "PASS",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "PASS",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "PASS",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "PASS",
@@ -4201,6 +4345,7 @@
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
@@ -4280,6 +4425,22 @@
             }
           ],
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": [
+            {
+              "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+              "releaseWave": "WAVE_1",
+              "blockingGateIds": [
+                "GATE-WAVE_1"
+              ]
+            },
+            {
+              "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+              "releaseWave": "WAVE_4",
+              "blockingGateIds": [
+                "GATE-WAVE_4"
+              ]
+            }
+          ],
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": [
             {
               "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
               "releaseWave": "WAVE_1",
@@ -4398,6 +4559,7 @@
           "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
           "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
           "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
           "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
           "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
           "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
@@ -4407,7 +4569,8 @@
       }
     ],
     "validationTarget": "LIVE_REPOSITORY",
-    "candidateRoot": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom\\Graphify",
+    "repositoryRelativeGraphifyRoot": "Graphify",
+    "candidateRootKind": "REPOSITORY_RELATIVE",
     "overridesUsed": false,
     "temporaryChallengeId": null,
     "validationMode": "FULL_TECHNICAL_CERTIFICATION",
@@ -4430,8 +4593,8 @@
       "applicationGates": 1,
       "adrs": 14,
       "publicEntrypoints": 161,
-      "manifestRecordCount": 166,
-      "manifestAggregateHash": "9c8a2376c1b4d85909826d836a54ef4615794417e6b606de43b1a937755fb889",
+      "manifestRecordCount": 167,
+      "manifestAggregateHash": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
       "codebaseFileCount": 10080,
       "codebaseDirectoryCount": 2548,
       "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
@@ -4447,7 +4610,7 @@
       "baselineRelativeOnlyChecks": 0,
       "validatorWrites": 0,
       "validationMode": "FULL_TECHNICAL_CERTIFICATION",
-      "certificationClassification": "TECHNICAL_REPAIR_VALID"
+      "certificationClassification": "FINAL_FREEZE_CERTIFIED"
     }
   }
 }

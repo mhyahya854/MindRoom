@@ -1,11 +1,11 @@
 {
-  "freezeRunId": "mindroom-graphify-lineage-review-candidate-20260801-193148",
-  "officialValidatorRunId": "mindroom-graphify-lineage-validator-20260801-193148",
-  "externalReviewRunId": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
-  "mappingStatus": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
-  "independentReviewStatus": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
-  "planningFreezeStatus": "NOT_FROZEN",
-  "wave0Readiness": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+  "freezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
+  "officialValidatorRunId": "mindroom-graphify-final-freeze-20260808-185500-validation",
+  "externalReviewRunId": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
+  "mappingStatus": "COMPLETED_AND_FROZEN",
+  "independentReviewStatus": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
+  "planningFreezeStatus": "FROZEN",
+  "wave0Readiness": "READY_NOT_STARTED",
   "codebaseExecutionStatus": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
   "finalReleaseReceiptStatus": "NOT_VERIFIED",
   "canonicalCounts": {
@@ -28,15 +28,15 @@
     "adrs": 14,
     "publicEntrypoints": 161
   },
-  "manifestRecordCount": 166,
-  "manifestAggregateHash": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
+  "manifestRecordCount": 167,
+  "manifestAggregateHash": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
   "codebaseFileCount": 10080,
   "codebaseDirectoryCount": 2548,
   "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
-  "validatorCheckCount": 148,
-  "challengeTestCount": 50,
-  "blockingDefectCount": 3,
-  "timestamp": "2026-08-01T16:53:15Z",
+  "validatorCheckCount": 190,
+  "challengeTestCount": 81,
+  "blockingDefectCount": 0,
+  "timestamp": "2026-08-08T16:22:49.462002+00:00",
   "receiptType": "GRAPHIFY_MAPPING_FREEZE",
   "implementationPerformed": false,
   "applicationReleased": false,
@@ -44,7 +44,7 @@
     "FINDING-ADR-0011-PBKDF2-CALIBRATION",
     "FINDING-ADR-0013-ADAPTER-ISOLATION"
   ],
-  "repairRunId": "mindroom-graphify-lineage-repair-20260801-193148",
+  "repairRunId": "20260806-150031",
   "gateTestSynchronizationStatus": "PASS",
   "warningSummary": [
     {
@@ -61,5 +61,73 @@
         "GATE-WAVE_4"
       ]
     }
-  ]
+  ],
+  "lastUpdatedAt": "2026-08-06T13:24:12+00:00",
+  "candidateRunId": "mindroom-graphify-pre-bind-convergence-20260808-111839",
+  "projectPhase": "GRAPHIFY_PLANNING_COMPLETE_AND_AUTHORITATIVELY_FROZEN",
+  "backupPath": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-final-converged-pre-review-backup-20260808-151008",
+  "replacementBackupPath": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-pre-review-certification-20260805-092300",
+  "preFinalizationBackupPath": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-final-converged-pre-review-backup-20260808-151008",
+  "historicalBackup": {
+    "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-lineage-repair-20260801-190852",
+    "present": false,
+    "status": "HISTORICAL_MISSING_NONACTIVE"
+  },
+  "validationTarget": "LIVE_REPOSITORY",
+  "repositoryRelativeGraphifyRoot": "Graphify",
+  "candidateRootKind": "REPOSITORY_RELATIVE",
+  "validatorSourceHash": "0105adea158f9a52c7721b34954cb84ae66f0aca18c858140d062a64c92b04f4",
+  "challengeSourceHash": "db24d451163ef0df7f272ecf7f71f7c00a82b6c47166f2d6e213883fa8d8598b",
+  "verifierSourceHash": "bd10586ecdd6ac8e1710e5deaed19084e19b08d51a2431ffa2dd92bb677a8eb7",
+  "backupEvidence": {
+    "historicalOriginalBackup": {
+      "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-lineage-repair-20260801-190852",
+      "present": false,
+      "verified": false,
+      "active": false,
+      "role": "HISTORICAL_MISSING_NONACTIVE",
+      "supersededEvidence": true
+    },
+    "replacementPreReviewBackup": {
+      "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-pre-review-certification-20260805-092300",
+      "present": false,
+      "verified": false,
+      "active": false,
+      "role": "HISTORICAL_REPLACEMENT_PRE_REVIEW_BACKUP_MISSING_NONACTIVE",
+      "actualProvenSemantics": "Previously reported replacement path is absent from the recovery root in this run; its contents and historical identity are not used as current evidence."
+    },
+    "mutableWorkingMirror": {
+      "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-final-authoritative-freeze-20260806-152420",
+      "present": false,
+      "verified": false,
+      "active": false,
+      "immutable": false,
+      "role": "MUTABLE_WORKING_MIRROR_NOT_VALID_AS_IMMUTABLE_ROLLBACK_POINT"
+    },
+    "invalidatedCandidateBackup": {
+      "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-final-bound-pre-review-backup-20260808-115500",
+      "present": true,
+      "verified": true,
+      "active": false,
+      "immutable": true,
+      "role": "INVALIDATED_CANDIDATE_BACKUP",
+      "candidateCommitSha": "cc3199c063c444dc07058e54c1391d4dc23d08f6",
+      "classification": "HISTORICAL_SUPERSEDED"
+    },
+    "activePreReviewBackup": {
+      "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-final-converged-pre-review-backup-20260808-151008",
+      "present": true,
+      "verified": true,
+      "active": true,
+      "immutable": true,
+      "role": "IMMUTABLE_BOUND_PRE_REVIEW_BACKUP"
+    }
+  },
+  "backupState": "VERIFIED_ACTIVE_PRE_REVIEW_BACKUP",
+  "finalFreezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
+  "independentReviewDecision": "VERIFIED",
+  "reviewReportSha256": "eb0439a5e3bcc1c6c27712f5953d910e056aca20ad7db768db2d4151f8b6778f",
+  "candidateCommitSha": "16cd9496ab9d3bf59019a038a07e23251fc4d5b5",
+  "candidateTreeSha": "d31ce0aa54c2a79056ccfbb439dc8b214b107e0c",
+  "certificationTimestamp": "2026-08-08T16:22:49.462002+00:00"
 }

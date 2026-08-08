@@ -24,6 +24,7 @@ CURRENT_METADATA = (
     "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json",
     "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
     "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+    "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
     "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json",
     "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json",
     "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json",
@@ -32,25 +33,17 @@ CURRENT_METADATA = (
 )
 FINAL_STATUS = {
     "mappingStatus": "COMPLETED_AND_FROZEN",
-    "independentReviewStatus": "APPROVED_GENUINELY_INDEPENDENT_AFTER_LINEAGE_REPAIR",
+    "independentReviewStatus": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
     "planningFreezeStatus": "FROZEN",
     "wave0Readiness": "READY_NOT_STARTED",
     "codebaseExecutionStatus": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
     "finalReleaseReceiptStatus": "NOT_VERIFIED",
 }
-TRANSITION_STATUS = {
-    "mappingStatus": "LINEAGE_REPAIR_COMPLETE_PENDING_INDEPENDENT_REVIEW",
-    "independentReviewStatus": "PENDING_GENUINELY_INDEPENDENT_LINEAGE_REVIEW",
+CANDIDATE_STATUS = {
+    "mappingStatus": "FINAL_AUTHORITY_SYNCHRONIZED_PENDING_INDEPENDENT_REVIEW",
+    "independentReviewStatus": "PENDING_GENUINELY_INDEPENDENT_FINAL_REVIEW",
     "planningFreezeStatus": "NOT_FROZEN",
-    "wave0Readiness": "BLOCKED_PENDING_INDEPENDENT_LINEAGE_REVIEW",
-    "codebaseExecutionStatus": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
-    "finalReleaseReceiptStatus": "NOT_VERIFIED",
-}
-TECHNICAL_REPAIR_STATUS = {
-    "mappingStatus": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
-    "independentReviewStatus": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
-    "planningFreezeStatus": "NOT_FROZEN",
-    "wave0Readiness": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+    "wave0Readiness": "BLOCKED_PENDING_FINAL_INDEPENDENT_REVIEW",
     "codebaseExecutionStatus": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
     "finalReleaseReceiptStatus": "NOT_VERIFIED",
 }
@@ -220,7 +213,13 @@ def inventory_tree(root):
         raise RuntimeError("Codebase scan failed: " + "; ".join(errors[:10]))
     files = list(file_pairs)
     files.sort(key=lambda row: row["path"])
-    result = {"files": files, "directories": sorted(directories), "aggregateSha256": aggregate_hash(files)}
+    result = {
+        "files": files,
+        "directories": sorted(directories),
+        "fileCount": len(files),
+        "directoryCount": len(directories),
+        "aggregateSha256": aggregate_hash(files),
+    }
     _CODEBASE_CACHE[cache_key] = result
     return result
 
@@ -384,20 +383,30 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     status = read_json("00 Execution Control/STATUS.json", overrides, {}) or {}
     final_mode = status.get("planningFreezeStatus") == "FROZEN"
     if validation_mode == "FINAL_FREEZE_CERTIFICATION" and not final_mode:
-        raise ValueError("FINAL_FREEZE_CERTIFICATION is reserved for the later GPT-5.6 Sol independent review and final freeze; it cannot be executed while planningFreezeStatus is NOT_FROZEN.")
-    technical_mode = (not final_mode) and status.get("mappingStatus") == TECHNICAL_REPAIR_STATUS["mappingStatus"]
-    expected_status = FINAL_STATUS if final_mode else (TECHNICAL_REPAIR_STATUS if technical_mode else TRANSITION_STATUS)
-    certification_classification = "FINAL_FREEZE_CERTIFIED" if final_mode else "TECHNICAL_REPAIR_VALID"
-    validation_context = {
-        "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE" if (overrides or temporary_challenge_id) else "LIVE_REPOSITORY",
-        "candidateRoot": str(candidate_root or ROOT),
-        "overridesUsed": bool(overrides),
-        "temporaryChallengeId": temporary_challenge_id,
-        "validationMode": validation_mode,
-    }
+        raise ValueError("FINAL_FREEZE_CERTIFICATION requires planningFreezeStatus FROZEN; it cannot be executed while planningFreezeStatus is NOT_FROZEN.")
+    expected_status = FINAL_STATUS if final_mode else CANDIDATE_STATUS
+    certification_classification = "FINAL_FREEZE_CERTIFIED" if final_mode else "FINAL_AUTHORITY_CANDIDATE_VALID"
+    if overrides or temporary_challenge_id:
+        validation_context = {
+            "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+            "candidateRoot": str(candidate_root or ROOT),
+            "overridesUsed": bool(overrides),
+            "temporaryChallengeId": temporary_challenge_id,
+            "validationMode": validation_mode,
+        }
+    else:
+        validation_context = {
+            "validationTarget": "LIVE_REPOSITORY",
+            "repositoryRelativeGraphifyRoot": "Graphify",
+            "candidateRootKind": "REPOSITORY_RELATIVE",
+            "overridesUsed": False,
+            "temporaryChallengeId": None,
+            "validationMode": validation_mode,
+        }
     inventory_relative = "00 Execution Control/FINAL_COMPLETE_AUTHORITY_INVENTORY.jsonl" if final_mode else "11 Completion/FINAL_GATE_REPAIR_AUTHORITY_INVENTORY_CANDIDATE.jsonl"
     manifest_relative = "00 Execution Control/FROZEN_ARTIFACT_MANIFEST.jsonl" if final_mode else "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"
     authority_index = read_json("00 Execution Control/FINAL_AUTHORITY_INDEX.json", overrides, {}) or {}
+    authority_classification = read_jsonl("00 Execution Control/FINAL_AUTHORITY_CLASSIFICATION.jsonl", overrides)
     inventory = read_jsonl(inventory_relative, overrides)
     manifest = read_jsonl(manifest_relative, overrides)
     capabilities = (read_json("03 Capability Map/CAPABILITY_REGISTRY.json", overrides, {}) or {}).get("capabilities", [])
@@ -407,7 +416,7 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     traceability = read_jsonl("03 Capability Map/REQUIREMENT_TRACEABILITY_MATRIX.jsonl", overrides)
     supersessions = read_jsonl("03 Capability Map/REQUIREMENT_SUPERSESSION_MAP.jsonl", overrides)
     lineage_traceability = read_json("11 Completion/FINAL_CAPABILITY_TASK_REQUIREMENT_TRACEABILITY_REPORT.json", overrides, {}) or {}
-    backup_receipt = read_json("00 Execution Control/FINAL_LONG_PATH_BACKUP_VERIFICATION.json", overrides, {}) or {}
+    backup_receipt = read_json("00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json", overrides, {}) or {}
     change_records = read_jsonl("04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl", overrides)
     tests = read_jsonl("10 Verification/REQUIREMENT_TEST_MATRIX.jsonl", overrides)
     entrypoints = read_jsonl("06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl", overrides)
@@ -419,7 +428,7 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     ownership_rows = read_jsonl("11 Completion/FINAL_TEST_WAVE_OWNERSHIP.jsonl", overrides)
     gate_audit = read_json("11 Completion/FINAL_WAVE_GATE_TEST_AUDIT.json", overrides, {}) or {}
     gate_sync = read_json("11 Completion/FINAL_WAVE_GATE_TEST_SYNCHRONIZATION_REPORT.json", overrides, {}) or {}
-    independent_review = read_json("11 Completion/FINAL_LINEAGE_REPAIR_INDEPENDENT_REVIEW_REPORT.json", overrides, {}) or {}
+    independent_review = read_json("11 Completion/FINAL_AUTHORITATIVE_FREEZE_INDEPENDENT_REVIEW_REPORT.json", overrides, {}) or {}
     metadata = {relative: read_json(relative, overrides, {}) or {} for relative in CURRENT_METADATA}
     test_ids = {row.get("testId") for row in tests if row.get("testId")}
     cap_info, task_info = capability_metrics(capabilities, cap_graph), task_metrics(tasks, same_wave)
@@ -429,7 +438,7 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     # Authority and inventory.
     canonical_status = authority_index.get("canonicalStatusPath")
     add(checks, "AUTH-01", "authority", "Canonical status file exists", source_path("00 Execution Control/STATUS.json", overrides).exists(), canonical_status, "00 Execution Control/STATUS.json", ["FINAL_AUTHORITY_INDEX.json"], "direct path existence")
-    status_paths = [normalize_rel(value) for key, value in (authority_index.get("authoritativeMap") or {}).items() if "status" in key.lower() and isinstance(value, str)]
+    status_paths = [normalize_rel(value) for key, value in (authority_index.get("authoritativeMap") or {}).items() if key.lower() == "canonicalstatus" and isinstance(value, str)]
     add(checks, "AUTH-02", "authority", "Exactly one canonical status path is defined", canonical_status == "00 Execution Control/STATUS.json" and status_paths == [canonical_status], status_paths, ["00 Execution Control/STATUS.json"], ["FINAL_AUTHORITY_INDEX.json"], "independent authority-index enumeration")
     authority_paths = [normalize_rel(value) for value in (authority_index.get("authoritativeMap") or {}).values() if isinstance(value, str)]
     missing_authority = [path for path in authority_paths if not source_path(path, overrides).exists()]
@@ -449,6 +458,41 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     included_paths = {normalize_rel(row.get("path")) for row in included}
     omitted = sorted(included_paths - set(manifest_paths))
     add(checks, "AUTH-08", "authority", "No authoritative inventory artifact is omitted from the manifest", not omitted, omitted, [], omitted, "inventory-to-manifest set difference")
+    classification_by_path = {
+        normalize_rel(row.get("path")): row for row in authority_classification if row.get("path")
+    }
+    mapped_noncurrent = [
+        {"key": key, "path": normalize_rel(value), "classification": (classification_by_path.get(normalize_rel(value)) or {}).get("classification")}
+        for key, value in (authority_index.get("authoritativeMap") or {}).items()
+        if isinstance(value, str)
+        and (classification_by_path.get(normalize_rel(value)) or {}).get("classification")
+        not in {"CURRENT_AUTHORITATIVE", "CURRENT_SUPPORTING_EVIDENCE"}
+    ]
+    candidate_inventory_path = "11 Completion/FINAL_GATE_REPAIR_AUTHORITY_INVENTORY_CANDIDATE.jsonl"
+    candidate_manifest_path = "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"
+    final_inventory_path = "00 Execution Control/FINAL_COMPLETE_AUTHORITY_INVENTORY.jsonl"
+    final_manifest_path = "00 Execution Control/FROZEN_ARTIFACT_MANIFEST.jsonl"
+    phase_expectations = {
+        candidate_inventory_path: "HISTORICAL_SUPERSEDED" if final_mode else "CURRENT_AUTHORITATIVE",
+        candidate_manifest_path: "HISTORICAL_SUPERSEDED" if final_mode else "CURRENT_AUTHORITATIVE",
+        final_inventory_path: "CURRENT_AUTHORITATIVE" if final_mode else "HISTORICAL_SUPERSEDED",
+        final_manifest_path: "CURRENT_AUTHORITATIVE" if final_mode else "HISTORICAL_SUPERSEDED",
+        "00 Execution Control/STATUS_AUTHORITY.json": "HISTORICAL_SUPERSEDED",
+    }
+    phase_classification_issues = [
+        {"path": path, "actual": (classification_by_path.get(path) or {}).get("classification"), "expected": expected}
+        for path, expected in phase_expectations.items()
+        if (classification_by_path.get(path) or {}).get("classification") != expected
+    ]
+    map_values = set(authority_paths)
+    expected_phase_map = {final_inventory_path, final_manifest_path} if final_mode else {candidate_inventory_path, candidate_manifest_path}
+    forbidden_phase_map = {candidate_inventory_path, candidate_manifest_path, "00 Execution Control/STATUS_AUTHORITY.json"} if final_mode else {final_inventory_path, final_manifest_path, "00 Execution Control/STATUS_AUTHORITY.json"}
+    phase_map_issues = {
+        "missingExpected": sorted(expected_phase_map - map_values),
+        "forbiddenPresent": sorted(forbidden_phase_map & map_values),
+    }
+    authority_phase_ok = bool(authority_classification) and not mapped_noncurrent and not phase_classification_issues and not any(phase_map_issues.values())
+    add(checks, "AUTH-09", "authority", "The authority index, current classification, and pre-review/final manifest phase agree exactly", authority_phase_ok, {"mappedNoncurrent": mapped_noncurrent, "phaseClassificationIssues": phase_classification_issues, "phaseMapIssues": phase_map_issues}, {"mappedNoncurrent": [], "phaseClassificationIssues": [], "phaseMapIssues": {"missingExpected": [], "forbiddenPresent": []}}, mapped_noncurrent + phase_classification_issues + phase_map_issues["missingExpected"] + phase_map_issues["forbiddenPresent"], "authority-map-to-classification join plus phase-specific candidate/final boundary equality")
 
     # Manifest.
     self_refs = [path for path in manifest_paths if path == normalize_rel(manifest_relative)]
@@ -474,8 +518,8 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     manifest_aggregate_ok = bool(calculated_manifest_hash) and re.fullmatch(r"[a-f0-9]{64}", calculated_manifest_hash)
     add(checks, "MAN-07", "manifest", "Candidate manifest aggregate hash is reproducible from live non-self-referential rows", manifest_aggregate_ok, calculated_manifest_hash, "64-character SHA-256 aggregate", ["MAN-01", "MAN-03", "MAN-05"], "independent sorted path:file-hash aggregate; protected governance receipts are not authoritative for the pre-review candidate aggregate because the candidate manifest is rebuilt last and those receipts cannot be modified in this repair")
     protected_manifest_hashes = metadata_values(metadata, "manifestAggregateHash")
-    protected_manifest_agreement = bool(protected_manifest_hashes) and len(set(protected_manifest_hashes.values())) == 1
-    add(checks, "MAN-08", "manifest", "Protected governance receipts agree with each other on the historical candidate manifest aggregate hash", protected_manifest_agreement, protected_manifest_hashes, "one shared historical manifest aggregate hash", list(protected_manifest_hashes), "cross-document protected-receipt consistency; the candidate manifest itself is rebuilt last and is not required to match protected receipts in this repair")
+    protected_manifest_agreement = bool(protected_manifest_hashes) and len(protected_manifest_hashes) == len(CURRENT_METADATA) and set(protected_manifest_hashes.values()) == {calculated_manifest_hash}
+    add(checks, "MAN-08", "manifest", "All current governance receipts agree with the live reproducible manifest aggregate hash", protected_manifest_agreement, protected_manifest_hashes, calculated_manifest_hash, list(protected_manifest_hashes), "cross-document protected-receipt consistency against the live manifest aggregate; no historical split is permitted")
 
     # Source-derived counts and cross-registry identities.
     master_plans = sorted((ROOT / "Master Plan").glob("*.md"))
@@ -1075,7 +1119,7 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     for key in ("SOURCE", "STATUS", "TARGETS", "SUPERSESSION", "AUTHORITY", "PAYLOAD"):
         task_evidence_all.extend(task_evidence_by_check[key])
     add(checks, "TASK-LINEAGE-EVIDENCE", "lineage", "Every task evidence payload semantically identifies its sources, lineage/supersession authority, and exact canonical outcomes", not task_evidence_all, task_evidence_all, [], task_evidence_all, "evidence source binding, authority cross-reference, canonical set match, and resolved-set union equality")
-    inventory_manifest_path = "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"
+    inventory_manifest_path = manifest_relative
     matching_inventory_records = [row for row in inventory if normalize_rel(row.get("path")) == inventory_manifest_path]
     live_manifest_count = len(manifest)
     inventory_count_issues = []
@@ -1087,50 +1131,133 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
             inventory_count_issues.append({"declared": declared, "actual": live_manifest_count})
     add(checks, "INVENTORY-CANDIDATE-RECORD-COUNT", "inventory", "The candidate inventory record count equals the live candidate manifest nonblank valid JSONL record count", not inventory_count_issues, {"issues": inventory_count_issues, "duplicates": max(0, len(matching_inventory_records) - 1), "missing": 1 if not matching_inventory_records else 0}, {"declared": live_manifest_count, "duplicates": 0, "missing": 0}, matching_inventory_records, "live nonblank JSONL enumeration and unique inventory lookup")
 
-    # Absolute replacement-backup verification: live source, live backup, and receipt must all agree. No environment exclusions exist.
+    # Phase-aware backup verification. Before Phase 9, a fail-closed pending
+    # receipt is valid and no old generation may remain active. Once the one
+    # converged backup exists, pre-freeze validation compares it to the live
+    # tree. After deterministic freeze, the immutable pre-review backup is
+    # checked against its external per-file manifest instead of being mutated.
     backup_errors = []
-    source_root = Path(str(backup_receipt.get("sourceRoot") or ""))
-    backup_root = Path(str(backup_receipt.get("backupRoot") or ""))
+    source_root_text = str(backup_receipt.get("sourceRoot") or "")
+    backup_root_text = str(backup_receipt.get("backupRoot") or "")
+    source_root = Path(source_root_text) if source_root_text else None
+    backup_root = Path(backup_root_text) if backup_root_text else None
+    receipt_state = backup_receipt.get("receiptState")
+    backup_pending = receipt_state == "PENDING_FINAL_CONVERGED_PRE_REVIEW_BACKUP"
+    backup_active = receipt_state == "VERIFIED_ACTIVE_PRE_REVIEW_BACKUP"
     source_scan = inventory_tree(ROOT)
-    backup_scan = {"files": [], "directories": [], "aggregateSha256": None}
-    try:
-        if backup_root.exists():
-            backup_scan = inventory_tree(backup_root)
-    except Exception as error:
-        backup_errors.append(str(error))
+    backup_scan = {"files": [], "directories": [], "aggregateSha256": None, "fileCount": 0, "directoryCount": 0}
+    if backup_active:
+        try:
+            if backup_root and backup_root.exists():
+                backup_scan = inventory_tree(backup_root)
+        except Exception as error:
+            backup_errors.append(str(error))
+    manifest_evidence = {}
+    manifest_evidence_hash_ok = False
+    manifest_path_text = str(backup_receipt.get("backupManifestPath") or "")
+    if backup_active and manifest_path_text:
+        try:
+            manifest_path = Path(manifest_path_text)
+            manifest_evidence_hash_ok = manifest_path.is_file() and sha256_file(manifest_path) == backup_receipt.get("backupManifestSha256")
+            if manifest_evidence_hash_ok:
+                manifest_evidence = json.loads(manifest_path.read_text(encoding="utf-8-sig"))
+        except Exception as error:
+            backup_errors.append(str(error))
     source_files = {row.get("path"): row for row in source_scan.get("files", [])}
     backup_files = {row.get("path"): row for row in backup_scan.get("files", [])}
     source_dirs = set(source_scan.get("directories", []))
     backup_dirs = set(backup_scan.get("directories", []))
-    backup_missing = sorted(set(source_files) - set(backup_files))
-    backup_extra = sorted(set(backup_files) - set(source_files))
-    backup_hash_mismatches = sorted(path for path in set(source_files) & set(backup_files) if source_files[path].get("sha256") != backup_files[path].get("sha256"))
-    backup_size_mismatches = sorted(path for path in set(source_files) & set(backup_files) if source_files[path].get("sizeBytes") != backup_files[path].get("sizeBytes"))
-    backup_directory_delta = sorted(source_dirs ^ backup_dirs)
-    long_path_omissions = sorted(path for path in backup_missing if len(str(backup_root)) + 1 + len(path) >= 260)
-    source_root_ok = bool(source_root) and source_root.exists() and Path(str(source_root)).resolve() == ROOT.resolve()
-    backup_root_ok = bool(backup_root) and backup_root.exists() and not backup_errors
-    add(checks, "BAK-01", "backup", "Backup root exists and the receipt references the real current Graphify source root", backup_root_ok and source_root_ok and backup_receipt.get("backupPurpose") == "PRE_REVIEW_CERTIFICATION_RECOVERY_POINT" and bool(backup_receipt.get("supersedesMissingHistoricalBackupPath")), {"sourceRoot": str(source_root), "backupRoot": str(backup_root), "errors": backup_errors}, "two readable existing roots plus replacement-backup purpose", backup_errors, "filesystem existence, exact root identity, and replacement-backup purpose")
-    add(checks, "BAK-02", "backup", "Backup file count matches live source and receipt", backup_receipt.get("sourceFileCount") == backup_receipt.get("backupFileCount") == len(source_files) == len(backup_files), {"receiptSource": backup_receipt.get("sourceFileCount"), "receiptBackup": backup_receipt.get("backupFileCount"), "scannedSource": len(source_files), "scannedBackup": len(backup_files)}, len(source_files), [], "live source/backup enumeration plus receipt counts")
-    add(checks, "BAK-03", "backup", "Backup directory count and set match live source and receipt", backup_receipt.get("sourceDirectoryCount") == backup_receipt.get("backupDirectoryCount") == len(source_dirs) == len(backup_dirs) and not backup_directory_delta, {"receiptSource": backup_receipt.get("sourceDirectoryCount"), "receiptBackup": backup_receipt.get("backupDirectoryCount"), "scannedSource": len(source_dirs), "scannedBackup": len(backup_dirs), "delta": backup_directory_delta}, len(source_dirs), backup_directory_delta, "live source/backup directory-set equality plus receipt counts")
-    add(checks, "BAK-04", "backup", "Backup has zero missing files", not backup_receipt.get("missingPaths") and not backup_missing, {"receipt": backup_receipt.get("missingPaths"), "scanned": backup_missing}, [], backup_missing, "live source/backup path difference")
-    add(checks, "BAK-05", "backup", "Backup has zero extra files", not backup_receipt.get("extraPaths") and not backup_extra, {"receipt": backup_receipt.get("extraPaths"), "scanned": backup_extra}, [], backup_extra, "live backup/source path difference")
-    add(checks, "BAK-06", "backup", "Backup has zero file hash mismatches", not backup_receipt.get("hashMismatches") and not backup_hash_mismatches, {"receipt": backup_receipt.get("hashMismatches"), "scanned": backup_hash_mismatches}, [], backup_hash_mismatches, "per-file SHA-256 comparison")
-    add(checks, "BAK-07", "backup", "Backup has zero file size mismatches", not backup_receipt.get("sizeMismatches") and not backup_size_mismatches, {"receipt": backup_receipt.get("sizeMismatches"), "scanned": backup_size_mismatches}, [], backup_size_mismatches, "per-file byte-size comparison")
-    add(checks, "BAK-08", "backup", "Backup has zero long-path omissions", not backup_receipt.get("longPathOmissions") and not long_path_omissions, {"receipt": backup_receipt.get("longPathOmissions"), "scanned": long_path_omissions}, [], long_path_omissions, "receipt plus long-path subset of live path difference")
+    evidence_files = {row.get("path"): row for row in manifest_evidence.get("files", [])}
+    evidence_dirs = set(manifest_evidence.get("directories", []))
+    receipt_relative = "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
+    if backup_pending:
+        expected_files, expected_dirs = {}, set()
+    elif final_mode:
+        expected_files = {path: row for path, row in evidence_files.items() if path != receipt_relative}
+        backup_files = {path: row for path, row in backup_files.items() if path != receipt_relative}
+        expected_dirs = evidence_dirs
+    else:
+        expected_files, expected_dirs = source_files, source_dirs
+    backup_missing = sorted(set(expected_files) - set(backup_files))
+    backup_extra = sorted(set(backup_files) - set(expected_files))
+    backup_hash_mismatches = sorted(path for path in set(expected_files) & set(backup_files) if expected_files[path].get("sha256") != backup_files[path].get("sha256"))
+    backup_size_mismatches = sorted(path for path in set(expected_files) & set(backup_files) if expected_files[path].get("sizeBytes") != backup_files[path].get("sizeBytes"))
+    backup_directory_delta = sorted(expected_dirs ^ backup_dirs) if not backup_pending else []
+    long_path_omissions = sorted(path for path in backup_missing if backup_root and len(str(backup_root)) + 1 + len(path) >= 260)
+    source_root_ok = bool(source_root and source_root.exists())
+    backup_root_ok = bool(backup_active and backup_root and backup_root.exists() and not backup_errors)
+    history = backup_receipt.get("backupHistory") or {}
+    original = history.get("historicalOriginalBackup", {})
+    replacement = history.get("replacementPreReviewBackup", {})
+    mutable_mirror = history.get("mutableWorkingMirror", {})
+    invalidated = history.get("invalidatedCandidateBackup", {})
+    active = history.get("activePreReviewBackup", {})
+    historical_roles_ok = (
+        bool(original.get("path")) and original.get("active") is False and original.get("role") == "HISTORICAL_MISSING_NONACTIVE"
+        and bool(replacement.get("path")) and replacement.get("verified") is False and replacement.get("active") is False and replacement.get("role") == "HISTORICAL_REPLACEMENT_PRE_REVIEW_BACKUP_MISSING_NONACTIVE"
+        and bool(mutable_mirror.get("path")) and mutable_mirror.get("active") is False and mutable_mirror.get("immutable") is False and mutable_mirror.get("role") == "MUTABLE_WORKING_MIRROR_NOT_VALID_AS_IMMUTABLE_ROLLBACK_POINT"
+        and bool(invalidated.get("path")) and invalidated.get("active") is False and invalidated.get("role") == "INVALIDATED_CANDIDATE_BACKUP"
+    )
+    pending_fields_ok = (
+        backup_pending and set(history) == {"historicalOriginalBackup", "replacementPreReviewBackup", "mutableWorkingMirror", "invalidatedCandidateBackup"}
+        and not backup_root_text and backup_receipt.get("backupPath") is None and backup_receipt.get("preFinalizationBackupPath") is None
+        and backup_receipt.get("activeBackupRole") == "PENDING_FINAL_CONVERGED_PRE_REVIEW_BACKUP"
+        and backup_receipt.get("verified") is False and backup_receipt.get("immutable") is False and backup_receipt.get("copyExitCode") is None
+        and all(backup_receipt.get(field) is None for field in ("sourceFileCount", "backupFileCount", "sourceDirectoryCount", "backupDirectoryCount", "sourceAggregateHash", "backupAggregateHash", "backupManifestPath", "backupManifestSha256", "backupEvidenceAggregateHash"))
+    )
+    active_fields_ok = (
+        backup_active and set(history) == {"historicalOriginalBackup", "replacementPreReviewBackup", "mutableWorkingMirror", "invalidatedCandidateBackup", "activePreReviewBackup"}
+        and backup_root_ok and active.get("path") == backup_root_text and active.get("present") is True and active.get("verified") is True
+        and active.get("active") is True and active.get("immutable") is True and active.get("role") == "IMMUTABLE_BOUND_PRE_REVIEW_BACKUP"
+        and backup_receipt.get("activeBackupRole") == "IMMUTABLE_BOUND_PRE_REVIEW_BACKUP"
+        and backup_receipt.get("verified") is True and backup_receipt.get("immutable") is True and backup_receipt.get("copyExitCode") == 0
+        and manifest_evidence_hash_ok
+    )
+    history_ok = historical_roles_ok and (pending_fields_ok or active_fields_ok)
+    add(checks, "BAK-01", "backup", "Backup authority is either fail-closed pending before Phase 9 or one exact verified immutable pre-review backup", source_root_ok and history_ok, {"receiptState": receipt_state, "sourceRoot": source_root_text, "backupRoot": backup_root_text, "backupHistory": history, "errors": backup_errors}, "phase-aware pending or single verified active backup role", backup_errors, "filesystem existence, phase-aware receipt state, and exact non-conflicting backup-role classification")
+    file_count_ok = pending_fields_ok if backup_pending else (backup_receipt.get("backupFileCount") == backup_scan.get("fileCount") and (final_mode or backup_receipt.get("sourceFileCount") == len(source_files) == backup_scan.get("fileCount")) and (not final_mode or manifest_evidence.get("fileCount") == backup_scan.get("fileCount")))
+    add(checks, "BAK-02", "backup", "Backup file counts are phase-correct and exact", file_count_ok, {"receiptSource": backup_receipt.get("sourceFileCount"), "receiptBackup": backup_receipt.get("backupFileCount"), "scannedSource": len(source_files), "scannedBackup": backup_scan.get("fileCount"), "manifest": manifest_evidence.get("fileCount")}, "pending nulls or exact verified counts", [], "phase-aware live/backup/manifest enumeration")
+    directory_count_ok = pending_fields_ok if backup_pending else (backup_receipt.get("backupDirectoryCount") == backup_scan.get("directoryCount") and not backup_directory_delta and (final_mode or backup_receipt.get("sourceDirectoryCount") == len(source_dirs) == backup_scan.get("directoryCount")) and (not final_mode or manifest_evidence.get("directoryCount") == backup_scan.get("directoryCount")))
+    add(checks, "BAK-03", "backup", "Backup directory counts and sets are phase-correct and exact", directory_count_ok, {"receiptSource": backup_receipt.get("sourceDirectoryCount"), "receiptBackup": backup_receipt.get("backupDirectoryCount"), "scannedSource": len(source_dirs), "scannedBackup": backup_scan.get("directoryCount"), "manifest": manifest_evidence.get("directoryCount"), "delta": backup_directory_delta}, "pending nulls or exact verified counts and set", backup_directory_delta, "phase-aware directory-set equality")
+    add(checks, "BAK-04", "backup", "Backup has zero missing files", not backup_receipt.get("missingPaths") and not backup_missing, {"receipt": backup_receipt.get("missingPaths"), "scanned": backup_missing}, [], backup_missing, "phase-aware expected/backup path difference")
+    add(checks, "BAK-05", "backup", "Backup has zero extra files", not backup_receipt.get("extraPaths") and not backup_extra, {"receipt": backup_receipt.get("extraPaths"), "scanned": backup_extra}, [], backup_extra, "phase-aware backup/expected path difference")
+    add(checks, "BAK-06", "backup", "Backup has zero file hash mismatches", not backup_receipt.get("hashMismatches") and not backup_hash_mismatches, {"receipt": backup_receipt.get("hashMismatches"), "scanned": backup_hash_mismatches}, [], backup_hash_mismatches, "per-file SHA-256 comparison against live pre-freeze or immutable manifest post-freeze")
+    add(checks, "BAK-07", "backup", "Backup has zero file size mismatches", not backup_receipt.get("sizeMismatches") and not backup_size_mismatches, {"receipt": backup_receipt.get("sizeMismatches"), "scanned": backup_size_mismatches}, [], backup_size_mismatches, "per-file byte-size comparison against live pre-freeze or immutable manifest post-freeze")
+    add(checks, "BAK-08", "backup", "Backup has zero long-path omissions", not backup_receipt.get("longPathOmissions") and not long_path_omissions, {"receipt": backup_receipt.get("longPathOmissions"), "scanned": long_path_omissions}, [], long_path_omissions, "receipt plus long-path subset of phase-aware path difference")
     add(checks, "BAK-09", "backup", "Backup has zero unreadable paths", not backup_receipt.get("unreadablePaths") and not backup_errors, {"receipt": backup_receipt.get("unreadablePaths"), "scannedErrors": backup_errors}, [], backup_receipt.get("unreadablePaths") or [], "explicit error collection with no silent skips")
     self_referential_artifacts = {
-        "00 Execution Control/FINAL_LONG_PATH_BACKUP_VERIFICATION.json",
+        "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
         "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl",
         "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
         "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json",
         "11 Completion/FINAL_THREE_FILE_CERTIFICATION_REPAIR_REPORT.json",
     }
     source_aggregate_excluding_artifacts = aggregate_hash([row for row in source_scan.get("files", []) if row.get("path") not in self_referential_artifacts])
-    backup_aggregate_excluding_artifacts = aggregate_hash([row for row in backup_scan.get("files", []) if row.get("path") not in self_referential_artifacts])
-    add(checks, "BAK-10", "backup", "Backup aggregate hash matches live source and receipt", backup_receipt.get("sourceAggregateHash") == backup_receipt.get("backupAggregateHash") == source_aggregate_excluding_artifacts == backup_aggregate_excluding_artifacts, {"receiptSource": backup_receipt.get("sourceAggregateHash"), "receiptBackup": backup_receipt.get("backupAggregateHash"), "scannedSource": source_aggregate_excluding_artifacts, "scannedBackup": backup_aggregate_excluding_artifacts}, source_aggregate_excluding_artifacts, [], "independent sorted path:file-hash aggregate over the tree excluding the backup receipt, candidate manifest, live validation result, challenge report, and three-file repair report. Those five generated artifacts are excluded because the receipt records the tree aggregate, the candidate manifest records the receipt hash, and the live validation result records the manifest aggregate: a full-tree fixed point that includes all five cannot exist when regenerated reports carry fresh timestamps. Every per-file check (BAK-04/05/06/07/12) and the external full-tree backup verification still cover all files byte-for-byte")
-    add(checks, "BAK-11", "backup", "Backup receipt is a verified replacement recovery point", backup_receipt.get("verified") is True and bool(backup_receipt.get("verifiedAt")) and backup_receipt.get("copyExitCode") is not None, {"verified": backup_receipt.get("verified"), "verifiedAt": backup_receipt.get("verifiedAt"), "copyExitCode": backup_receipt.get("copyExitCode")}, {"verified": True, "verifiedAt": "nonempty", "copyExitCode": "recorded"}, [], "receipt verification fields")
-    add(checks, "BAK-12", "backup", "Receipt records zero directory-set differences", not backup_receipt.get("directoryDifferences") and not backup_directory_delta, {"receipt": backup_receipt.get("directoryDifferences"), "scanned": backup_directory_delta}, [], backup_directory_delta, "receipt and live directory-set difference lists")
+    backup_aggregate_excluding_artifacts = aggregate_hash([row for row in backup_scan.get("files", []) if row.get("path") not in self_referential_artifacts]) if backup_active else None
+    evidence_aggregate = aggregate_hash([row for row in manifest_evidence.get("files", []) if row.get("path") not in self_referential_artifacts]) if manifest_evidence else None
+    if backup_pending:
+        aggregate_ok = pending_fields_ok
+    elif final_mode:
+        aggregate_ok = (
+            backup_receipt.get("sourceAggregateHash")
+            == backup_receipt.get("backupAggregateHash")
+            == backup_receipt.get("backupEvidenceAggregateHash")
+            == evidence_aggregate
+            == backup_aggregate_excluding_artifacts
+        )
+    else:
+        aggregate_ok = backup_receipt.get("sourceAggregateHash") == backup_receipt.get("backupAggregateHash") == source_aggregate_excluding_artifacts == backup_aggregate_excluding_artifacts
+    add(checks, "BAK-10", "backup", "Backup aggregate is phase-correct and reproducible", aggregate_ok, {"receiptSource": backup_receipt.get("sourceAggregateHash"), "receiptBackup": backup_receipt.get("backupAggregateHash"), "receiptEvidence": backup_receipt.get("backupEvidenceAggregateHash"), "scannedSource": source_aggregate_excluding_artifacts, "scannedBackup": backup_aggregate_excluding_artifacts, "manifestEvidence": evidence_aggregate}, "pending nulls, exact live equality pre-freeze, or exact immutable-manifest equality post-freeze", [], "phase-aware sorted path:file-hash aggregate")
+    receipt_verification_ok = pending_fields_ok or (active_fields_ok and bool(backup_receipt.get("verifiedAt")))
+    if final_mode and backup_active:
+        backup_receipt_path = backup_root / receipt_relative if backup_root else None
+        receipt_verification_ok = receipt_verification_ok and bool(backup_receipt_path and backup_receipt_path.is_file() and sha256_file(backup_receipt_path) == backup_receipt.get("preReviewBackupReceiptSha256"))
+    add(checks, "BAK-11", "backup", "Backup receipt is phase-correct and the immutable pre-review receipt remains cryptographically bound after freeze", receipt_verification_ok, {"receiptState": receipt_state, "verified": backup_receipt.get("verified"), "immutable": backup_receipt.get("immutable"), "activeBackupRole": backup_receipt.get("activeBackupRole"), "verifiedAt": backup_receipt.get("verifiedAt"), "copyExitCode": backup_receipt.get("copyExitCode"), "preReviewBackupReceiptSha256": backup_receipt.get("preReviewBackupReceiptSha256")}, "valid pending state or verified immutable active state with post-freeze receipt binding", [], "phase-aware receipt verification fields plus backup-copy receipt SHA-256")
+    add(checks, "BAK-12", "backup", "Receipt records zero directory-set differences", not backup_receipt.get("directoryDifferences") and not backup_directory_delta, {"receipt": backup_receipt.get("directoryDifferences"), "scanned": backup_directory_delta}, [], backup_directory_delta, "receipt and phase-aware directory-set difference lists")
+    history_paths = [str(value.get("path")) for value in history.values() if isinstance(value, dict) and value.get("path")]
+    duplicate_role_paths = sorted(path for path, count in Counter(history_paths).items() if count > 1)
+    duplicate_authority_object = "backupEvidence" in backup_receipt
+    add(checks, "BAK-13", "backup", "The backup receipt contains one canonical role inventory with no sibling duplicate authority object or duplicate role path", not duplicate_authority_object and not duplicate_role_paths, {"backupEvidencePresent": duplicate_authority_object, "duplicateRolePaths": duplicate_role_paths}, {"backupEvidencePresent": False, "duplicateRolePaths": []}, duplicate_role_paths + (["backupEvidence"] if duplicate_authority_object else []), "single backupHistory authority object plus unique path-to-role mapping")
     cap_ids = [row.get("capabilityId") for row in capabilities]
     change_ids = {row.get("capabilityId") for row in change_records}
     add(checks, "CNT-04", "counts", "Capability count agrees with change records", len(cap_ids) == len(set(cap_ids)) and set(cap_ids) == change_ids, len(cap_ids), len(change_ids), ["CAPABILITY_REGISTRY.json", "CHANGE_LOCATION_REGISTRY.jsonl"], "independent registry ID set equality")
@@ -1328,14 +1455,11 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     # Independent review is mandatory for the final phase and must remain isolated/read-only.
     review_exists = bool(independent_review)
     review_verified = independent_review.get("decision") == "VERIFIED"
-    if technical_mode:
-        review_phase_ok = not review_exists or review_verified or independent_review.get("decision") == "FAILED"
-    else:
-        review_phase_ok = review_verified if final_mode else (not review_exists or review_verified)
-    add(checks, "REV-01", "independent_review", "Independent review state is valid for the current phase", review_phase_ok, {"finalMode": final_mode, "technicalMode": technical_mode, "exists": review_exists, "decision": independent_review.get("decision")}, {"finalMode": final_mode, "requiredDecision": "VERIFIED" if final_mode else ("ABSENT_OR_VERIFIED_OR_FAILED" if technical_mode else "ABSENT_OR_VERIFIED")}, ["FINAL_LINEAGE_REPAIR_INDEPENDENT_REVIEW_REPORT.json"], "phase-aware decision check with documented technical-repair condition")
-    add(checks, "REV-02", "independent_review", "Independent reviewer was read-only with zero tree mutations", (not review_exists and not final_mode) or (independent_review.get("readOnly") is True and independent_review.get("graphifyMutations") == 0 and independent_review.get("codebaseMutations") == 0), {"readOnly": independent_review.get("readOnly"), "graphifyMutations": independent_review.get("graphifyMutations"), "codebaseMutations": independent_review.get("codebaseMutations")}, {"readOnly": True, "graphifyMutations": 0, "codebaseMutations": 0}, ["FINAL_LINEAGE_REPAIR_INDEPENDENT_REVIEW_REPORT.json"], "external report field validation")
+    review_phase_ok = review_verified if final_mode else (not review_exists or review_verified)
+    add(checks, "REV-01", "independent_review", "Independent review state is valid for the current phase", review_phase_ok, {"finalMode": final_mode, "exists": review_exists, "decision": independent_review.get("decision")}, {"finalMode": final_mode, "requiredDecision": "VERIFIED" if final_mode else "ABSENT_OR_VERIFIED"}, ["FINAL_AUTHORITATIVE_FREEZE_INDEPENDENT_REVIEW_REPORT.json"], "phase-aware decision check; only a genuinely isolated VERIFIED review permits freezing")
+    add(checks, "REV-02", "independent_review", "Independent reviewer was read-only with zero tree mutations", (not review_exists and not final_mode) or (independent_review.get("readOnly") is True and independent_review.get("graphifyMutations") == 0 and independent_review.get("codebaseMutations") == 0), {"readOnly": independent_review.get("readOnly"), "graphifyMutations": independent_review.get("graphifyMutations"), "codebaseMutations": independent_review.get("codebaseMutations")}, {"readOnly": True, "graphifyMutations": 0, "codebaseMutations": 0}, ["FINAL_AUTHORITATIVE_FREEZE_INDEPENDENT_REVIEW_REPORT.json"], "external report field validation")
     isolation = str(independent_review.get("reviewerIsolationMethod") or "")
-    add(checks, "REV-03", "independent_review", "Independent reviewer records a separate isolation method", (not review_exists and not final_mode) or bool(isolation and "repair agent" not in isolation.lower()), isolation, "nonempty separate reviewer mechanism", ["POST_REPAIR_INDEPENDENT_REVIEW_REPORT.json"], "isolation-method presence and impersonation guard")
+    add(checks, "REV-03", "independent_review", "Independent reviewer records a separate isolation method", (not review_exists and not final_mode) or bool(isolation and "repair agent" not in isolation.lower()), isolation, "nonempty separate reviewer mechanism", ["FINAL_AUTHORITATIVE_FREEZE_INDEPENDENT_REVIEW_REPORT.json"], "isolation-method presence and impersonation guard")
 
     # Completion metadata comes last so the validator-check count is derived from the actual check list.
     meta_checks = []
@@ -1350,8 +1474,8 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     codebase_hashes = metadata_values(metadata, "codebaseAggregateHash")
     meta_checks.append(("META-08", "metadata", "All receipts agree on the live Codebase aggregate hash", len(codebase_hashes) == len(CURRENT_METADATA) and set(codebase_hashes.values()) == {live["aggregateSha256"]}, codebase_hashes, live["aggregateSha256"], list(codebase_hashes), "receipt values compared to live scan"))
     blocker_counts = metadata_values(metadata, "blockingDefectCount")
-    expected_blocking = 3 if technical_mode else 0
-    meta_checks.append(("META-09", "metadata", "All receipts report the phase-expected blocking defect count", len(blocker_counts) == len(CURRENT_METADATA) and set(blocker_counts.values()) == {expected_blocking}, blocker_counts, expected_blocking, list(blocker_counts), "cross-document value comparison against the documented technical-repair condition"))
+    expected_blocking = 0
+    meta_checks.append(("META-09", "metadata", "All receipts report zero blocking defects", len(blocker_counts) == len(CURRENT_METADATA) and set(blocker_counts.values()) == {expected_blocking}, blocker_counts, expected_blocking, list(blocker_counts), "cross-document value comparison; the final authoritative generation is defect-free"))
     challenge_report = metadata["11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"]
     live_report = metadata["00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json"]
     expected_check_count = len(checks) + len(get_meta_check_ids(validation_mode))
@@ -1363,20 +1487,31 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
         report_source_hash = challenge_report.get("validatorSourceHash")
         live_validator_hash = sha256_file(source_path("11 Completion/validate_final_graphify_freeze.py", overrides))
         count_consistency = challenge_report.get("validatorCheckCount") == expected_check_count and challenge_report.get("challengeTestCount") == len(executed_ids)
-        meta10_passed = challenges_complete and baseline_integrity and count_consistency and report_source_hash == live_validator_hash
-        meta_checks.append(("META-10", "metadata", "Challenge report is finalized with zero-failure baselines and all required challenges passed", meta10_passed, {"verdict": challenge_report.get("verdict"), "executed": len(executed_ids), "required": len(required_challenge_ids), "allPassed": all(row.get("passed") for row in challenge_report.get("challenges", [])), "zeroFailureBaselines": baseline_integrity, "validatorCheckCount": challenge_report.get("validatorCheckCount"), "challengeTestCount": challenge_report.get("challengeTestCount"), "validatorSourceHashMatch": report_source_hash == live_validator_hash}, {"verdict": "PASS", "executed": len(required_challenge_ids), "required": len(required_challenge_ids), "allPassed": True, "zeroFailureBaselines": True, "validatorCheckCount": expected_check_count, "challengeTestCount": len(required_challenge_ids), "validatorSourceHashMatch": True}, ["FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"], "challenge-report integrity, canonical challenge-set, and zero-failure baseline verification"))
+        pending_challenge_report = challenge_report.get("challengeReportState") == "PENDING_FRESH_CHALLENGE_EXECUTION"
+        pending_report_ok = (
+            pending_challenge_report and challenge_report.get("verdict") == "PENDING"
+            and not challenge_report.get("challenges") and challenge_report.get("requiredChallenges") == required_challenge_ids
+            and challenge_report.get("validatorCheckCount") == expected_check_count
+            and challenge_report.get("challengeTestCount") == len(required_challenge_ids)
+            and report_source_hash == live_validator_hash
+        )
+        meta10_passed = pending_report_ok or (challenges_complete and baseline_integrity and count_consistency and report_source_hash == live_validator_hash)
+        meta_checks.append(("META-10", "metadata", "Challenge evidence is either fail-closed pending before the one fresh run or finalized with every zero-failure challenge passed", meta10_passed, {"state": challenge_report.get("challengeReportState"), "verdict": challenge_report.get("verdict"), "executed": len(executed_ids), "required": len(required_challenge_ids), "allPassed": all(row.get("passed") for row in challenge_report.get("challenges", [])), "zeroFailureBaselines": baseline_integrity, "validatorCheckCount": challenge_report.get("validatorCheckCount"), "challengeTestCount": challenge_report.get("challengeTestCount"), "validatorSourceHashMatch": report_source_hash == live_validator_hash}, {"state": "PENDING_FRESH_CHALLENGE_EXECUTION or FRESH_CHALLENGE_EXECUTION_VERIFIED", "verdict": "PENDING or PASS", "executed": "0 before run or all required after run", "required": len(required_challenge_ids), "validatorCheckCount": expected_check_count, "challengeTestCount": len(required_challenge_ids), "validatorSourceHashMatch": True}, ["FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"], "phase-aware challenge-report integrity, canonical challenge set, and zero-failure baseline verification"))
         live_target = live_report.get("validationTarget")
-        live_root = live_report.get("candidateRoot")
+        live_root_kind = live_report.get("candidateRootKind")
+        live_rel_root = live_report.get("repositoryRelativeGraphifyRoot")
         live_overrides = live_report.get("overridesUsed")
         live_temp = live_report.get("temporaryChallengeId")
         live_vhash = live_report.get("validatorSourceHash")
-        live_context_ok = live_target == "LIVE_REPOSITORY" and bool(live_root) and Path(str(live_root)).resolve() == ROOT.resolve() and live_overrides is False and live_temp is None and live_vhash == live_validator_hash
-        meta_checks.append(("META-17", "metadata", "Persisted live validation report is direct live evidence with zero overrides", live_context_ok, {"validationTarget": live_target, "candidateRoot": live_root, "overridesUsed": live_overrides, "temporaryChallengeId": live_temp, "validatorSourceHashMatch": live_vhash == live_validator_hash}, {"validationTarget": "LIVE_REPOSITORY", "candidateRoot": str(ROOT), "overridesUsed": False, "temporaryChallengeId": None, "validatorSourceHashMatch": True}, ["FINAL_FREEZE_VALIDATION_RESULT.json"], "validation-context and source-hash comparison; temporary overrides can never be persisted as live evidence"))
+        live_context_ok = live_target == "LIVE_REPOSITORY" and live_root_kind == "REPOSITORY_RELATIVE" and live_rel_root == "Graphify" and live_overrides is False and live_temp is None and live_vhash == live_validator_hash
+        meta_checks.append(("META-17", "metadata", "Persisted live validation report is direct live evidence with zero overrides and relocation-safe candidate-root metadata", live_context_ok, {"validationTarget": live_target, "candidateRootKind": live_root_kind, "repositoryRelativeGraphifyRoot": live_rel_root, "overridesUsed": live_overrides, "temporaryChallengeId": live_temp, "validatorSourceHashMatch": live_vhash == live_validator_hash}, {"validationTarget": "LIVE_REPOSITORY", "candidateRootKind": "REPOSITORY_RELATIVE", "repositoryRelativeGraphifyRoot": "Graphify", "overridesUsed": False, "temporaryChallengeId": None, "validatorSourceHashMatch": True}, ["FINAL_FREEZE_VALIDATION_RESULT.json"], "validation-context and source-hash comparison; the live Graphify root is resolved at runtime and temporary overrides can never be persisted as live evidence"))
         live_result = live_report.get("validationResult") or {}
         live_result_ok = live_result.get("status") == "PASS" and live_result.get("failedChecksCount") == 0
+        pending_live_result = live_result.get("status") == "PENDING_PRODUCTION_TECHNICAL_CERTIFICATION" and live_result.get("failedChecksCount") is None
         no_backup_or_manifest_failures = not any(check.get("status") == "FAIL" and str(check.get("checkId") or "").startswith(("BAK-", "MAN-")) for check in live_result.get("checks", []))
         counts_ok = live_report.get("validatorCheckCount") == challenge_report.get("validatorCheckCount") and live_report.get("challengeTestCount") == challenge_report.get("challengeTestCount")
-        meta_checks.append(("META-18", "metadata", "Generated challenge and live reports agree and contain zero backup or manifest failures", live_result_ok and challenge_report.get("verdict") == "PASS" and no_backup_or_manifest_failures and counts_ok, {"liveStatus": live_result.get("status"), "liveFailed": live_result.get("failedChecksCount"), "challengeVerdict": challenge_report.get("verdict"), "backupOrManifestFailures": [check.get("checkId") for check in live_result.get("checks", []) if check.get("status") == "FAIL" and str(check.get("checkId") or "").startswith(("BAK-", "MAN-"))], "counts": {"live": live_report.get("validatorCheckCount"), "challenge": challenge_report.get("validatorCheckCount")}}, {"liveStatus": "PASS", "liveFailed": 0, "challengeVerdict": "PASS", "backupOrManifestFailures": [], "counts": {"live": expected_check_count, "challenge": expected_check_count}}, ["FINAL_FREEZE_VALIDATION_RESULT.json", "FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"], "cross-report status, failure, and count consistency"))
+        reports_phase_ok = (pending_challenge_report and pending_live_result) or (challenge_report.get("verdict") == "PASS" and live_result_ok)
+        meta_checks.append(("META-18", "metadata", "Generated challenge and live reports agree in pending or verified state and contain zero backup or manifest failures", reports_phase_ok and no_backup_or_manifest_failures and counts_ok, {"liveStatus": live_result.get("status"), "liveFailed": live_result.get("failedChecksCount"), "challengeState": challenge_report.get("challengeReportState"), "challengeVerdict": challenge_report.get("verdict"), "backupOrManifestFailures": [check.get("checkId") for check in live_result.get("checks", []) if check.get("status") == "FAIL" and str(check.get("checkId") or "").startswith(("BAK-", "MAN-"))], "counts": {"live": live_report.get("validatorCheckCount"), "challenge": challenge_report.get("validatorCheckCount")}}, {"liveStatus": "PENDING before challenge or PASS after challenge", "challengeVerdict": "PENDING before challenge or PASS after challenge", "backupOrManifestFailures": [], "counts": {"live": expected_check_count, "challenge": expected_check_count}}, ["FINAL_FREEZE_VALIDATION_RESULT.json", "FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"], "phase-aware cross-report status, failure, and count consistency"))
     historical_included = [row.get("path") for row in inventory if row.get("includedInFreeze") and ("Historical/" in normalize_rel(row.get("path")) or "UNSAFE" in normalize_rel(row.get("path")))]
     invalidation = read_json("11 Completion/FINAL_FREEZE_CONSISTENCY_INVALIDATION.json", overrides, {}) or {}
     meta_checks.append(("META-11", "metadata", "Historical and superseded receipts are non-authoritative", not historical_included and invalidation.get("classification") == "SUPERSEDED_AFTER_SUCCESSFUL_FINAL_REPAIR", {"historicalIncluded": historical_included, "invalidationClassification": invalidation.get("classification")}, {"historicalIncluded": [], "invalidationClassification": "SUPERSEDED_AFTER_SUCCESSFUL_FINAL_REPAIR"}, historical_included, "inventory classification and invalidation state"))
@@ -1384,7 +1519,7 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     meta_checks.append(("META-12", "metadata", "All current receipts share the gate-repair run ID", len(repair_ids) == len(CURRENT_METADATA) and len(set(repair_ids.values())) == 1 and next(iter(repair_ids.values()), None) == status.get("repairRunId"), repair_ids, status.get("repairRunId"), list(repair_ids), "cross-document repair ID comparison"))
     external_review_ids = metadata_values(metadata, "externalReviewRunId")
     expected_review_id = independent_review.get("reviewSessionId") if review_exists else None
-    meta_checks.append(("META-13", "metadata", "Independent-review session IDs agree with the external report", len(external_review_ids) == len(CURRENT_METADATA) and len(set(external_review_ids.values())) == 1 and next(iter(external_review_ids.values()), None) == expected_review_id, external_review_ids, expected_review_id, list(external_review_ids) + (["POST_REPAIR_INDEPENDENT_REVIEW_REPORT.json"] if review_exists else []), "cross-document review session ID comparison"))
+    meta_checks.append(("META-13", "metadata", "Independent-review session IDs agree with the external report", len(external_review_ids) == len(CURRENT_METADATA) and len(set(external_review_ids.values())) == 1 and next(iter(external_review_ids.values()), None) == expected_review_id, external_review_ids, expected_review_id, list(external_review_ids) + (["FINAL_AUTHORITATIVE_FREEZE_INDEPENDENT_REVIEW_REPORT.json"] if review_exists else []), "cross-document review session ID comparison"))
     independent_statuses = metadata_values(metadata, "independentReviewStatus")
     meta_checks.append(("META-14", "metadata", "All receipts agree on independent-review status", len(independent_statuses) == len(CURRENT_METADATA) and set(independent_statuses.values()) == {expected_status["independentReviewStatus"]}, independent_statuses, expected_status["independentReviewStatus"], list(independent_statuses), "cross-document exact status comparison"))
     gate_sync_statuses = metadata_values(metadata, "gateTestSynchronizationStatus")

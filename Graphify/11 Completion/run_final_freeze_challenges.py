@@ -9,7 +9,6 @@ import json
 import shutil
 import sys
 import tempfile
-from datetime import datetime
 from pathlib import Path
 
 sys.dont_write_bytecode = True
@@ -21,12 +20,13 @@ REPORT_PATH = ROOT / "11 Completion" / "FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.
 VALIDATION_RESULT_PATH = ROOT / "00 Execution Control" / "FINAL_FREEZE_VALIDATION_RESULT.json"
 
 MANIFEST_RELATIVE = "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"
+FROZEN_MANIFEST_RELATIVE = "00 Execution Control/FROZEN_ARTIFACT_MANIFEST.jsonl"
 CAPABILITY_PATH = "03 Capability Map/CAPABILITY_REGISTRY.json"
 TASK_PATH = "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
 LINEAGE_PATH = "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
 GATE_PATH = "10 Verification/RELEASE_GATE_MATRIX.json"
 TEST_PATH = "10 Verification/REQUIREMENT_TEST_MATRIX.jsonl"
-BACKUP_RECEIPT_PATH = "00 Execution Control/FINAL_LONG_PATH_BACKUP_VERIFICATION.json"
+BACKUP_RECEIPT_PATH = "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
 LIVE_REPORT_PATH = "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json"
 
 
@@ -63,7 +63,10 @@ def copy_overrides(temp_root, relatives):
         destination = temp_root / relative.replace("/", "__")
         shutil.copy2(ROOT / relative, destination)
         overrides[relative] = str(destination)
-        temporary.append(str(destination))
+        # Persist only the logical source path. The random external temporary
+        # root is execution detail and must not make certification receipts
+        # nondeterministic across otherwise identical runs.
+        temporary.append(relative)
     return overrides, temporary
 
 
@@ -89,6 +92,14 @@ def common_metadata(status):
         "challengeTestCount", "blockingDefectCount", "repairRunId",
         "gateTestSynchronizationStatus", "warningSummary",
     )}
+
+
+def certification_timestamp(status):
+    """Return the phase timestamp fixed by governance finalization."""
+    value = status.get("certificationTimestamp") or status.get("timestamp") or status.get("lastUpdatedAt")
+    if not isinstance(value, str) or not value.strip():
+        raise RuntimeError("A stable certification timestamp is required in canonical status metadata.")
+    return value
 
 
 def alias_row(legacy_id, target, node_id, ev_target):
@@ -197,6 +208,7 @@ CHALLENGE_DEFINITIONS = [
     ]))),
     definition("CHALLENGE-008", "Make a Wave 0 capability depend on a Wave 1 capability", ["05 Dependency and Impact/CAPABILITY_DEPENDENCY_GRAPH.json"], ["DEP-04"], lambda o: mutate_json(Path(o["05 Dependency and Impact/CAPABILITY_DEPENDENCY_GRAPH.json"]), lambda data: data.setdefault("edges", []).append({"sourceNodeId": "MR-CAP-001", "targetNodeId": "MR-CAP-007", "relation": "DEPENDS_ON"}))),
     definition("CHALLENGE-009", "Point the authority index at a missing file", ["00 Execution Control/FINAL_AUTHORITY_INDEX.json"], ["AUTH-03"], lambda o: mutate_json(Path(o["00 Execution Control/FINAL_AUTHORITY_INDEX.json"]), lambda data: data["authoritativeMap"].__setitem__("strictValidator", "11 Completion/NO_SUCH_VALIDATOR.py"))),
+    definition("CHALLENGE-AUTHORITY-CLASSIFICATION-001", "Point the current authority map at an existing historical status artifact", ["00 Execution Control/FINAL_AUTHORITY_INDEX.json"], ["AUTH-09"], lambda o: mutate_json(Path(o["00 Execution Control/FINAL_AUTHORITY_INDEX.json"]), lambda data: data["authoritativeMap"].__setitem__("statusAuthority", "00 Execution Control/STATUS_AUTHORITY.json"))),
     definition("CHALLENGE-010", "Replace one frozen artifact SHA-256", [MANIFEST_RELATIVE], ["MAN-03"], lambda o: mutate_jsonl(Path(o[MANIFEST_RELATIVE]), lambda rows: rows[0].__setitem__("sha256", "0" * 64))),
     definition("CHALLENGE-011", "Insert the active manifest into itself", [MANIFEST_RELATIVE], ["MAN-01"], lambda o: mutate_jsonl(Path(o[MANIFEST_RELATIVE]), lambda rows: rows.append({"path": MANIFEST_RELATIVE, "sha256": "0" * 64}))),
     definition("CHALLENGE-012", "Break the protected-governance manifest hash agreement", ["00 Execution Control/STATUS.json"], ["MAN-08"], lambda o: mutate_json(Path(o["00 Execution Control/STATUS.json"]), lambda data: data.__setitem__("manifestAggregateHash", "0" * 64))),
@@ -269,6 +281,7 @@ CHALLENGE_DEFINITIONS = [
     definition("CHALLENGE-BACKUP-PATH-001", "Point the backup receipt at a missing directory", [BACKUP_RECEIPT_PATH], ["BAK-01"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data.__setitem__("backupRoot", "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\NO_SUCH_BACKUP_DIRECTORY"))),
     definition("CHALLENGE-BACKUP-HASH-001", "Corrupt the backup aggregate hash", [BACKUP_RECEIPT_PATH], ["BAK-10"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data.__setitem__("backupAggregateHash", "0" * 64))),
     definition("CHALLENGE-BACKUP-MISSING-FILE-001", "Report one missing backup file", [BACKUP_RECEIPT_PATH], ["BAK-04"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data["missingPaths"].append("14 AFFiNE Reference/artificial-long-path-omission"))),
+    definition("CHALLENGE-BACKUP-AUTHORITY-DUPLICATE-001", "Add a sibling backupEvidence authority object that duplicates backupHistory", [BACKUP_RECEIPT_PATH], ["BAK-13"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data.__setitem__("backupEvidence", copy.deepcopy(data["backupHistory"])))),
     definition("CHALLENGE-LIVE-REPORT-OVERRIDE-001", "Set the live validation report's overridesUsed to true", [LIVE_REPORT_PATH], ["META-17"], lambda o: mutate_json(Path(o[LIVE_REPORT_PATH]), lambda data: data.__setitem__("overridesUsed", True)), validation_mode="FULL_TECHNICAL_CERTIFICATION"),
     definition("CHALLENGE-MANIFEST-VALIDATOR-HASH-001", "Set the candidate manifest's validator SHA-256 to a stale value", [MANIFEST_RELATIVE], ["MAN-03"], lambda o: mutate_jsonl(Path(o[MANIFEST_RELATIVE]), lambda rows: next(row for row in rows if row.get("path") == "11 Completion/validate_final_graphify_freeze.py").__setitem__("sha256", "0" * 64))),
 ]
@@ -311,6 +324,8 @@ def verify_existing_report():
         failures.append("baseline-failure subtraction was used")
     if report.get("documentedEnvironmentFailures") or report.get("environmentExemptions"):
         failures.append("environment exemptions remain recorded")
+    if report.get("backupUnchangedThroughoutChallenges") is not True or report.get("backupAggregateBeforeChallenges") != report.get("backupAggregateAfterChallenges"):
+        failures.append("active backup immutability was not reproduced across challenge execution")
     if report.get("validatorSourceHash") != sha256_file(VALIDATOR_PATH):
         failures.append("validator source hash does not match the live validator")
     if failures:
@@ -339,12 +354,13 @@ def main():
             **common_metadata(status),
             "validatorCheckCount": validator_check_count,
             "challengeTestCount": len(required_challenge_ids),
-            "timestamp": datetime.now().astimezone().isoformat(timespec="seconds"),
+            "timestamp": certification_timestamp(status),
             "validatorSourceHash": validator_hash,
             "challengeSourceHash": challenge_hash,
             "verifierSourceHash": verifier_hash,
             "validationTarget": "LIVE_REPOSITORY",
-            "candidateRoot": str(ROOT),
+            "repositoryRelativeGraphifyRoot": "Graphify",
+            "candidateRootKind": "REPOSITORY_RELATIVE",
             "overridesUsed": False,
             "temporaryChallengeId": None,
             "validationMode": "FULL_TECHNICAL_CERTIFICATION",
@@ -355,6 +371,24 @@ def main():
         raise SystemExit(0 if full["status"] == "PASS" else 1)
     validator = load_validator()
     status = json.loads((ROOT / "00 Execution Control" / "STATUS.json").read_text(encoding="utf-8-sig"))
+    backup_receipt = json.loads((ROOT / "00 Execution Control" / "FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json").read_text(encoding="utf-8-sig"))
+    backup_root_text = str(backup_receipt.get("backupRoot") or "")
+    backup_root = Path(backup_root_text) if backup_root_text else None
+    backup_pending = backup_receipt.get("receiptState") == "PENDING_FINAL_CONVERGED_PRE_REVIEW_BACKUP"
+    if backup_pending:
+        backup_before_challenges = {"receiptState": "PENDING_FINAL_CONVERGED_PRE_REVIEW_BACKUP", "aggregateSha256": None}
+    else:
+        if not backup_root or not backup_root.is_dir():
+            raise RuntimeError("Active backup root is missing before challenge execution.")
+        backup_before_challenges = validator.inventory_tree(backup_root)
+    global MANIFEST_RELATIVE
+    if status.get("planningFreezeStatus") == "FROZEN":
+        MANIFEST_RELATIVE = FROZEN_MANIFEST_RELATIVE
+    for row in CHALLENGE_DEFINITIONS:
+        row["relatives"] = [
+            MANIFEST_RELATIVE if rel == "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl" else rel
+            for rel in row["relatives"]
+        ]
     required_challenge_ids = [row["challengeId"] for row in CHALLENGE_DEFINITIONS]
     core = validator.do_strict_validation(validation_mode="CORE_PRE_CHALLENGE")
     core_failures = sorted(failed_ids(core))
@@ -364,7 +398,7 @@ def main():
     if core_failures:
         report = {
             **common_metadata(status),
-            "timestamp": datetime.now().astimezone().isoformat(timespec="seconds"),
+            "timestamp": certification_timestamp(status),
             "validatorSourceHash": validator_hash,
             "challengeSourceHash": challenge_hash,
             "verifierSourceHash": verifier_hash,
@@ -421,9 +455,10 @@ def main():
         validator_check_count = len(core["checks"]) + len(full_only_meta)
         challenge_report = {
             **common_metadata(status),
+            "challengeReportState": "FRESH_CHALLENGE_EXECUTION_VERIFIED",
             "validatorCheckCount": validator_check_count,
             "challengeTestCount": challenge_count,
-            "timestamp": datetime.now().astimezone().isoformat(timespec="seconds"),
+            "timestamp": certification_timestamp(status),
             "validatorSourceHash": validator_hash,
             "challengeSourceHash": challenge_hash,
             "verifierSourceHash": verifier_hash,
@@ -445,46 +480,51 @@ def main():
             "environmentExemptions": [],
             "verdict": "PASS" if challenge_set_ok else "FAIL",
         }
-        write_json(REPORT_PATH, challenge_report)
         if not challenge_set_ok:
+            write_json(REPORT_PATH, challenge_report)
             print(json.dumps(challenge_report, indent=2, ensure_ascii=False))
             raise SystemExit(1)
-        preliminary_live = {
-            **common_metadata(status),
-            "validatorCheckCount": validator_check_count,
-            "challengeTestCount": challenge_count,
-            "timestamp": datetime.now().astimezone().isoformat(timespec="seconds"),
-            "validatorSourceHash": validator_hash,
-            "challengeSourceHash": challenge_hash,
-            "verifierSourceHash": verifier_hash,
-            "validationTarget": "LIVE_REPOSITORY",
-            "candidateRoot": str(ROOT),
-            "overridesUsed": False,
-            "temporaryChallengeId": None,
-            "validationMode": "FULL_TECHNICAL_CERTIFICATION",
-            "validationResult": core,
-        }
-        write_json(VALIDATION_RESULT_PATH, preliminary_live)
+        # Before freeze, keep the previously certified live reports byte-stable
+        # while FULL validation runs because they are mirrored by the active
+        # backup. After freeze, the challenge report is explicitly mutable
+        # current metadata excluded from the frozen subject manifest, so write
+        # the new all-PASS evidence first. This also makes a deterministic retry
+        # converge after a prior failed run without accepting stale FAIL state.
+        if status.get("planningFreezeStatus") == "FROZEN":
+            write_json(REPORT_PATH, challenge_report)
         full = validator.do_strict_validation(validation_mode="FULL_TECHNICAL_CERTIFICATION")
         full_failures = sorted(failed_ids(full))
+        if backup_pending:
+            backup_after_challenges = {"receiptState": "PENDING_FINAL_CONVERGED_PRE_REVIEW_BACKUP", "aggregateSha256": None}
+        else:
+            backup_cache_key = str(backup_root.resolve())
+            validator._CODEBASE_CACHE.pop(backup_cache_key, None)
+            backup_after_challenges = validator.inventory_tree(backup_root)
+        backup_unchanged = backup_before_challenges == backup_after_challenges
+        if not backup_unchanged:
+            full_failures.append("BACKUP-MUTATION-DURING-CHALLENGES")
         challenge_report.update({
             "fullCertificationStatus": "PASS" if not full_failures else "FAIL",
             "fullCertificationFailedCheckIds": full_failures,
             "fullCertificationEnvironmentFailures": [],
+            "backupUnchangedThroughoutChallenges": backup_unchanged,
+            "backupAggregateBeforeChallenges": backup_before_challenges.get("aggregateSha256"),
+            "backupAggregateAfterChallenges": backup_after_challenges.get("aggregateSha256"),
             "verdict": "PASS" if not full_failures else "FAIL",
-            "timestamp": datetime.now().astimezone().isoformat(timespec="seconds"),
+            "timestamp": certification_timestamp(status),
         })
         write_json(REPORT_PATH, challenge_report)
         final_live = {
             **common_metadata(status),
             "validatorCheckCount": validator_check_count,
             "challengeTestCount": challenge_count,
-            "timestamp": datetime.now().astimezone().isoformat(timespec="seconds"),
+            "timestamp": certification_timestamp(status),
             "validatorSourceHash": validator_hash,
             "challengeSourceHash": challenge_hash,
             "verifierSourceHash": verifier_hash,
             "validationTarget": "LIVE_REPOSITORY",
-            "candidateRoot": str(ROOT),
+            "repositoryRelativeGraphifyRoot": "Graphify",
+            "candidateRootKind": "REPOSITORY_RELATIVE",
             "overridesUsed": False,
             "temporaryChallengeId": None,
             "validationMode": "FULL_TECHNICAL_CERTIFICATION",

@@ -1,0 +1,27 @@
+{
+  "reportType": "FINAL_AUTHORITY_MIGRATION_REPORT",
+  "generatedAt": "2026-08-08T16:22:49.462002+00:00",
+  "filesClassified": 13447,
+  "currentAuthoritativeFiles": 178,
+  "currentSupportingEvidenceFiles": 1,
+  "historicalSupersededFiles": 880,
+  "referenceOnlyFiles": 10126,
+  "generatedNonauthoritativeFiles": 98,
+  "cacheOrRuntimeFiles": 2164,
+  "unclassifiedFiles": 0,
+  "conflictingCurrentAuthorityFiles": 0,
+  "duplicateCanonicalStatusFiles": 0,
+  "canonicalStatusPath": "00 Execution Control/STATUS.json",
+  "conflicts": [],
+  "classificationSummary": {
+    "CACHE_OR_RUNTIME": 2164,
+    "CURRENT_AUTHORITATIVE": 178,
+    "CURRENT_SUPPORTING_EVIDENCE": 1,
+    "GENERATED_NONAUTHORITATIVE": 98,
+    "HISTORICAL_SUPERSEDED": 880,
+    "REFERENCE_ONLY": 10126
+  },
+  "finalFreezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
+  "independentReviewSessionId": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
+  "candidateAuthorityBoundarySynchronized": true
+}

@@ -1,11 +1,11 @@
 {
-  "freezeRunId": "mindroom-graphify-lineage-review-candidate-20260801-193148",
-  "officialValidatorRunId": "mindroom-graphify-lineage-validator-20260801-193148",
-  "externalReviewRunId": "mindroom-lineage-independent-review-20260801T164927Z-257f8f1e4013",
-  "mappingStatus": "FINAL_GATE_REPAIR_FAILED_INDEPENDENT_REVIEW",
-  "independentReviewStatus": "FAILED_POST_REPAIR_EXTERNAL_REVIEW",
-  "planningFreezeStatus": "NOT_FROZEN",
-  "wave0Readiness": "BLOCKED_PENDING_INDEPENDENT_REVIEW_DEFECT_REPAIR",
+  "freezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
+  "officialValidatorRunId": "mindroom-graphify-final-freeze-20260808-185500-validation",
+  "externalReviewRunId": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
+  "mappingStatus": "COMPLETED_AND_FROZEN",
+  "independentReviewStatus": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
+  "planningFreezeStatus": "FROZEN",
+  "wave0Readiness": "READY_NOT_STARTED",
   "codebaseExecutionStatus": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
   "finalReleaseReceiptStatus": "NOT_VERIFIED",
   "canonicalCounts": {
@@ -28,15 +28,15 @@
     "adrs": 14,
     "publicEntrypoints": 161
   },
-  "manifestRecordCount": 166,
-  "manifestAggregateHash": "b785dfce59408eff9a2fdcbfd465c3a06aae681f479d7a04858fdb6716fbb295",
+  "manifestRecordCount": 167,
+  "manifestAggregateHash": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
   "codebaseFileCount": 10080,
   "codebaseDirectoryCount": 2548,
   "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
-  "validatorCheckCount": 188,
-  "challengeTestCount": 79,
-  "blockingDefectCount": 3,
-  "repairRunId": "mindroom-graphify-lineage-repair-20260801-193148",
+  "validatorCheckCount": 190,
+  "challengeTestCount": 81,
+  "blockingDefectCount": 0,
+  "repairRunId": "20260806-150031",
   "gateTestSynchronizationStatus": "PASS",
   "warningSummary": [
     {
@@ -54,10 +54,11 @@
       ]
     }
   ],
-  "timestamp": "2026-08-05T14:52:11+03:00",
-  "validatorSourceHash": "333ff93c0263efae98731e6e7ff0ed97c7ac010af663d792926f05288c1fb9ec",
-  "challengeSourceHash": "a8e6750b0dee256513d56cf908ca701aad606c6f5c1a6b5b4cecbbab2602c48b",
-  "verifierSourceHash": "9f345bf1f907e061a957f8f9585e47dc9ab05d325ac7ccca5fe2babfdbe44b0d",
+  "challengeReportState": "FRESH_CHALLENGE_EXECUTION_VERIFIED",
+  "timestamp": "2026-08-08T16:22:49.462002+00:00",
+  "validatorSourceHash": "0105adea158f9a52c7721b34954cb84ae66f0aca18c858140d062a64c92b04f4",
+  "challengeSourceHash": "db24d451163ef0df7f272ecf7f71f7c00a82b6c47166f2d6e213883fa8d8598b",
+  "verifierSourceHash": "bd10586ecdd6ac8e1710e5deaed19084e19b08d51a2431ffa2dd92bb677a8eb7",
   "requiredChallenges": [
     "CHALLENGE-001",
     "CHALLENGE-002",
@@ -68,6 +69,7 @@
     "CHALLENGE-007",
     "CHALLENGE-008",
     "CHALLENGE-009",
+    "CHALLENGE-AUTHORITY-CLASSIFICATION-001",
     "CHALLENGE-010",
     "CHALLENGE-011",
     "CHALLENGE-012",
@@ -136,6 +138,7 @@
     "CHALLENGE-BACKUP-PATH-001",
     "CHALLENGE-BACKUP-HASH-001",
     "CHALLENGE-BACKUP-MISSING-FILE-001",
+    "CHALLENGE-BACKUP-AUTHORITY-DUPLICATE-001",
     "CHALLENGE-LIVE-REPORT-OVERRIDE-001",
     "CHALLENGE-MANIFEST-VALIDATOR-HASH-001"
   ],
@@ -144,7 +147,7 @@
       "challengeId": "CHALLENGE-001",
       "mutation": "Remove one requirement while independent traceability retains it",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__REQUIREMENT_REGISTRY.jsonl"
+        "03 Capability Map/REQUIREMENT_REGISTRY.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -177,7 +180,7 @@
       "challengeId": "CHALLENGE-002",
       "mutation": "Duplicate a capability ID",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__CAPABILITY_REGISTRY.json"
+        "03 Capability Map/CAPABILITY_REGISTRY.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -210,7 +213,7 @@
       "challengeId": "CHALLENGE-003",
       "mutation": "Add an unknown MR-IMPL task dependency",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -241,7 +244,7 @@
       "challengeId": "CHALLENGE-004",
       "mutation": "Add a task self-dependency",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -272,7 +275,7 @@
       "challengeId": "CHALLENGE-005",
       "mutation": "Create a two-task dependency cycle",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -305,7 +308,7 @@
       "challengeId": "CHALLENGE-006",
       "mutation": "Make a Wave 0 task depend on a Wave 1 task",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -337,7 +340,7 @@
       "challengeId": "CHALLENGE-007",
       "mutation": "Create a two-capability execution cycle",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\05 Dependency and Impact__CAPABILITY_DEPENDENCY_GRAPH.json"
+        "05 Dependency and Impact/CAPABILITY_DEPENDENCY_GRAPH.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -368,7 +371,7 @@
       "challengeId": "CHALLENGE-008",
       "mutation": "Make a Wave 0 capability depend on a Wave 1 capability",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\05 Dependency and Impact__CAPABILITY_DEPENDENCY_GRAPH.json"
+        "05 Dependency and Impact/CAPABILITY_DEPENDENCY_GRAPH.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -399,7 +402,7 @@
       "challengeId": "CHALLENGE-009",
       "mutation": "Point the authority index at a missing file",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\00 Execution Control__FINAL_AUTHORITY_INDEX.json"
+        "00 Execution Control/FINAL_AUTHORITY_INDEX.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -407,7 +410,8 @@
         "AUTH-03"
       ],
       "actualFailedCheckIds": [
-        "AUTH-03"
+        "AUTH-03",
+        "AUTH-09"
       ],
       "baselineStatus": "PASS",
       "baselineFailedCheckIds": [],
@@ -427,10 +431,41 @@
       "passed": true
     },
     {
+      "challengeId": "CHALLENGE-AUTHORITY-CLASSIFICATION-001",
+      "mutation": "Point the current authority map at an existing historical status artifact",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITY_INDEX.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "AUTH-09"
+      ],
+      "actualFailedCheckIds": [
+        "AUTH-09"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-AUTHORITY-CLASSIFICATION-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "AUTH-09"
+        ]
+      },
+      "passed": true
+    },
+    {
       "challengeId": "CHALLENGE-010",
       "mutation": "Replace one frozen artifact SHA-256",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\11 Completion__FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"
+        "00 Execution Control/FROZEN_ARTIFACT_MANIFEST.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -438,7 +473,8 @@
         "MAN-03"
       ],
       "actualFailedCheckIds": [
-        "MAN-03"
+        "MAN-03",
+        "MAN-08"
       ],
       "baselineStatus": "PASS",
       "baselineFailedCheckIds": [],
@@ -461,7 +497,7 @@
       "challengeId": "CHALLENGE-011",
       "mutation": "Insert the active manifest into itself",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\11 Completion__FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"
+        "00 Execution Control/FROZEN_ARTIFACT_MANIFEST.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -472,7 +508,8 @@
         "INVENTORY-CANDIDATE-RECORD-COUNT",
         "MAN-01",
         "MAN-03",
-        "MAN-04"
+        "MAN-04",
+        "MAN-08"
       ],
       "baselineStatus": "PASS",
       "baselineFailedCheckIds": [],
@@ -495,7 +532,7 @@
       "challengeId": "CHALLENGE-012",
       "mutation": "Break the protected-governance manifest hash agreement",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\00 Execution Control__STATUS.json"
+        "00 Execution Control/STATUS.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -526,7 +563,7 @@
       "challengeId": "CHALLENGE-013",
       "mutation": "Restore the forbidden generic planned-capability phrase",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__CAPABILITY_REGISTRY.json"
+        "03 Capability Map/CAPABILITY_REGISTRY.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -557,7 +594,7 @@
       "challengeId": "CHALLENGE-014",
       "mutation": "Change an embedded capability wave",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__CAPABILITY_REGISTRY.json"
+        "03 Capability Map/CAPABILITY_REGISTRY.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -588,7 +625,7 @@
       "challengeId": "CHALLENGE-015",
       "mutation": "Change an embedded task wave",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -619,7 +656,7 @@
       "challengeId": "CHALLENGE-016",
       "mutation": "Assign PBKDF2 evidence to an unrelated task",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\11 Completion__FINAL_WARNING_OWNERSHIP_RESOLUTION.json"
+        "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -650,7 +687,7 @@
       "challengeId": "CHALLENGE-017",
       "mutation": "Remove one PBKDF2 owning-wave gate",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\11 Completion__FINAL_WARNING_OWNERSHIP_RESOLUTION.json"
+        "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -682,7 +719,7 @@
       "challengeId": "CHALLENGE-018",
       "mutation": "Assign adapter isolation to the wrong wave",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\11 Completion__FINAL_WARNING_OWNERSHIP_RESOLUTION.json"
+        "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -714,7 +751,7 @@
       "challengeId": "CHALLENGE-019",
       "mutation": "Replace CalDAV ownership with an unrelated finance capability",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\11 Completion__FINAL_WARNING_OWNERSHIP_RESOLUTION.json"
+        "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -748,7 +785,7 @@
       "challengeId": "CHALLENGE-020",
       "mutation": "Report zero release waves in a completion receipt",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\11 Completion__GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json"
+        "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -779,7 +816,7 @@
       "challengeId": "CHALLENGE-021",
       "mutation": "Use a conflicting freeze run ID",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\00 Execution Control__STATUS.json"
+        "00 Execution Control/STATUS.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -810,7 +847,7 @@
       "challengeId": "CHALLENGE-022",
       "mutation": "Falsely verify application release",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\00 Execution Control__STATUS.json"
+        "00 Execution Control/STATUS.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -844,7 +881,7 @@
       "challengeId": "CHALLENGE-023",
       "mutation": "Prematurely start Wave 0",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\00 Execution Control__STATUS.json"
+        "00 Execution Control/STATUS.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -878,7 +915,7 @@
       "challengeId": "CHALLENGE-024",
       "mutation": "Replace the captured Codebase after hash",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\00 Execution Control__FINAL_CODEBASE_PRESERVATION_RECEIPT.json"
+        "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -909,7 +946,7 @@
       "challengeId": "CHALLENGE-025",
       "mutation": "Remove one Codebase file from the captured baseline manifest",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\00 Execution Control__FINAL_CODEBASE_PRESERVATION_RECEIPT.json"
+        "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -943,7 +980,7 @@
       "challengeId": "CHALLENGE-GATE-001",
       "mutation": "Remove a required test from its correct wave gate",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\10 Verification__RELEASE_GATE_MATRIX.json"
+        "10 Verification/RELEASE_GATE_MATRIX.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -979,7 +1016,7 @@
       "challengeId": "CHALLENGE-GATE-002",
       "mutation": "Add a WAVE_2 test to WAVE_1",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\10 Verification__RELEASE_GATE_MATRIX.json"
+        "10 Verification/RELEASE_GATE_MATRIX.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1015,7 +1052,7 @@
       "challengeId": "CHALLENGE-GATE-003",
       "mutation": "Duplicate one requiredTestId",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\10 Verification__RELEASE_GATE_MATRIX.json"
+        "10 Verification/RELEASE_GATE_MATRIX.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1047,7 +1084,7 @@
       "challengeId": "CHALLENGE-GATE-004",
       "mutation": "Add an unknown test ID",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\10 Verification__RELEASE_GATE_MATRIX.json"
+        "10 Verification/RELEASE_GATE_MATRIX.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1083,7 +1120,7 @@
       "challengeId": "CHALLENGE-GATE-005",
       "mutation": "Assign a test to the wrong explicit owning wave",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\10 Verification__REQUIREMENT_TEST_MATRIX.jsonl"
+        "10 Verification/REQUIREMENT_TEST_MATRIX.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1115,7 +1152,7 @@
       "challengeId": "CHALLENGE-GATE-006",
       "mutation": "Remove an entire wave gate",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\10 Verification__RELEASE_GATE_MATRIX.json"
+        "10 Verification/RELEASE_GATE_MATRIX.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1151,7 +1188,7 @@
       "challengeId": "CHALLENGE-GATE-007",
       "mutation": "Change gateId without changing gate wave",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\10 Verification__RELEASE_GATE_MATRIX.json"
+        "10 Verification/RELEASE_GATE_MATRIX.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1183,7 +1220,7 @@
       "challengeId": "CHALLENGE-GATE-008",
       "mutation": "Mark a wrong-wave test as shared without evidence",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\10 Verification__RELEASE_GATE_MATRIX.json"
+        "10 Verification/RELEASE_GATE_MATRIX.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1220,7 +1257,7 @@
       "challengeId": "CHALLENGE-GATE-009",
       "mutation": "Create conflicting task and capability ownership waves",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1259,7 +1296,7 @@
       "challengeId": "CHALLENGE-GATE-010",
       "mutation": "Make a completion receipt claim zero synchronized gates",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\11 Completion__GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json"
+        "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1290,7 +1327,7 @@
       "challengeId": "CHALLENGE-LINEAGE-001",
       "mutation": "Add an unknown legacy sourceRequirementId to a capability",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__CAPABILITY_REGISTRY.json"
+        "03 Capability Map/CAPABILITY_REGISTRY.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1327,7 +1364,7 @@
       "challengeId": "CHALLENGE-LINEAGE-002",
       "mutation": "Add an unknown sourceRequirements ID to a task",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1364,7 +1401,7 @@
       "challengeId": "CHALLENGE-LINEAGE-003",
       "mutation": "Remove a referenced legacy ID from the lineage map",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1404,7 +1441,7 @@
       "challengeId": "CHALLENGE-LINEAGE-004",
       "mutation": "Map a legacy ID to a non-existent canonical requirement",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1446,7 +1483,7 @@
       "challengeId": "CHALLENGE-LINEAGE-005",
       "mutation": "Create two conflicting mappings for one legacy ID",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1490,7 +1527,7 @@
       "challengeId": "CHALLENGE-LINEAGE-006",
       "mutation": "Set resolutionStatus to DIRECT with zero canonical targets",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1526,7 +1563,7 @@
       "challengeId": "CHALLENGE-LINEAGE-007",
       "mutation": "Set resolutionStatus to SPLIT with one canonical target",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1562,7 +1599,7 @@
       "challengeId": "CHALLENGE-LINEAGE-008",
       "mutation": "Mark a lineage mapping UNRESOLVED",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1602,7 +1639,7 @@
       "challengeId": "CHALLENGE-LINEAGE-009",
       "mutation": "Change a capability resolved canonical set away from lineage expansion",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__CAPABILITY_REGISTRY.json"
+        "03 Capability Map/CAPABILITY_REGISTRY.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1636,7 +1673,7 @@
       "challengeId": "CHALLENGE-LINEAGE-010",
       "mutation": "Change a task resolved canonical set away from lineage expansion",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1670,7 +1707,7 @@
       "challengeId": "CHALLENGE-LINEAGE-011",
       "mutation": "Silently remove one original capability source ID",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__CAPABILITY_REGISTRY.json"
+        "03 Capability Map/CAPABILITY_REGISTRY.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1706,7 +1743,7 @@
       "challengeId": "CHALLENGE-LINEAGE-012",
       "mutation": "Silently remove one original task source ID",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1740,7 +1777,7 @@
       "challengeId": "CHALLENGE-LINEAGE-013",
       "mutation": "Reference a missing supersession record",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1777,7 +1814,7 @@
       "challengeId": "CHALLENGE-LINEAGE-014",
       "mutation": "Create a low-confidence review-required mapping",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1810,7 +1847,7 @@
       "challengeId": "CHALLENGE-LINEAGE-015",
       "mutation": "Corrupt the backup receipt with a missing long-path file",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\00 Execution Control__FINAL_LONG_PATH_BACKUP_VERIFICATION.json"
+        "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1841,7 +1878,7 @@
       "challengeId": "CHALLENGE-LINEAGE-STATUS-001",
       "mutation": "Set resolutionStatus to an unknown value",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1876,7 +1913,7 @@
       "challengeId": "CHALLENGE-LINEAGE-RECLASSIFIED-001",
       "mutation": "Create an invalid RECLASSIFIED record without prior/new classification evidence",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1910,7 +1947,7 @@
       "challengeId": "CHALLENGE-LINEAGE-ALIAS-001",
       "mutation": "Create an alias pointing to a missing canonical target",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1947,7 +1984,7 @@
       "challengeId": "CHALLENGE-LINEAGE-ALIAS-002",
       "mutation": "Create an alias cycle",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -1984,7 +2021,7 @@
       "challengeId": "CHALLENGE-LINEAGE-MERGED-001",
       "mutation": "Corrupt MERGED evidence so it refers to another legacy source ID",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2015,7 +2052,7 @@
       "challengeId": "CHALLENGE-LINEAGE-MERGED-002",
       "mutation": "Remove one declared canonical target from MERGED evidence",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2046,7 +2083,7 @@
       "challengeId": "CHALLENGE-LINEAGE-PROHIBITED-001",
       "mutation": "Create a PROHIBITED record with unrelated prohibition evidence",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2080,7 +2117,7 @@
       "challengeId": "CHALLENGE-LINEAGE-EXCLUDED-001",
       "mutation": "Create an EXCLUDED record without authoritative exclusion evidence",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2115,7 +2152,7 @@
       "challengeId": "CHALLENGE-CAPABILITY-EVIDENCE-001",
       "mutation": "Change capability lineage evidence to cite the wrong source ID",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__CAPABILITY_REGISTRY.json"
+        "03 Capability Map/CAPABILITY_REGISTRY.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2149,7 +2186,7 @@
       "challengeId": "CHALLENGE-CAPABILITY-EVIDENCE-002",
       "mutation": "Change capability lineage evidence to cite an extra canonical target",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__CAPABILITY_REGISTRY.json"
+        "03 Capability Map/CAPABILITY_REGISTRY.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2181,7 +2218,7 @@
       "challengeId": "CHALLENGE-TASK-EVIDENCE-001",
       "mutation": "Change task lineage evidence to cite the wrong lineage-map record",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2213,7 +2250,7 @@
       "challengeId": "CHALLENGE-TASK-EVIDENCE-002",
       "mutation": "Remove one task canonical target from its evidence payload",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2245,7 +2282,7 @@
       "challengeId": "CHALLENGE-LINEAGE-CONFIDENCE-001",
       "mutation": "Set a lineage mapping confidence to LOW",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2277,7 +2314,7 @@
       "challengeId": "CHALLENGE-LINEAGE-REVIEW-001",
       "mutation": "Set a lineage mapping reviewRequired to true",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2310,7 +2347,7 @@
       "challengeId": "CHALLENGE-CAP-EVIDENCE-STATUS-001",
       "mutation": "Change capability evidence to another allowed but incorrect status",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__CAPABILITY_REGISTRY.json"
+        "03 Capability Map/CAPABILITY_REGISTRY.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2342,7 +2379,7 @@
       "challengeId": "CHALLENGE-TASK-EVIDENCE-STATUS-001",
       "mutation": "Change task evidence to another allowed but incorrect status",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2374,7 +2411,7 @@
       "challengeId": "CHALLENGE-CAP-EVIDENCE-SOURCE-001",
       "mutation": "Change capability evidence to another source ID",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__CAPABILITY_REGISTRY.json"
+        "03 Capability Map/CAPABILITY_REGISTRY.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2411,7 +2448,7 @@
       "challengeId": "CHALLENGE-TASK-EVIDENCE-SOURCE-001",
       "mutation": "Change task evidence to another source ID",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2448,7 +2485,7 @@
       "challengeId": "CHALLENGE-CAP-EVIDENCE-TARGET-001",
       "mutation": "Add an extra capability canonical target",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__CAPABILITY_REGISTRY.json"
+        "03 Capability Map/CAPABILITY_REGISTRY.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2480,7 +2517,7 @@
       "challengeId": "CHALLENGE-TASK-EVIDENCE-TARGET-001",
       "mutation": "Remove a required task canonical target",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\09 Implementation__IMPLEMENTATION_TASKS.jsonl"
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2512,7 +2549,7 @@
       "challengeId": "CHALLENGE-ALIAS-SOURCE-001",
       "mutation": "Use the wrong legacy source in alias evidence",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2547,7 +2584,7 @@
       "challengeId": "CHALLENGE-ALIAS-TARGET-001",
       "mutation": "Use the wrong canonical target in alias evidence",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2582,7 +2619,7 @@
       "challengeId": "CHALLENGE-RECLASSIFIED-SOURCE-001",
       "mutation": "Use the wrong source ID in reclassification evidence",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2617,7 +2654,7 @@
       "challengeId": "CHALLENGE-RECLASSIFIED-TARGET-001",
       "mutation": "Use the wrong canonical/control target",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\03 Capability Map__LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
+        "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2652,7 +2689,7 @@
       "challengeId": "CHALLENGE-BACKUP-PATH-001",
       "mutation": "Point the backup receipt at a missing directory",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\00 Execution Control__FINAL_LONG_PATH_BACKUP_VERIFICATION.json"
+        "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2666,6 +2703,7 @@
         "BAK-04",
         "BAK-08",
         "BAK-10",
+        "BAK-11",
         "BAK-12"
       ],
       "baselineStatus": "PASS",
@@ -2689,7 +2727,7 @@
       "challengeId": "CHALLENGE-BACKUP-HASH-001",
       "mutation": "Corrupt the backup aggregate hash",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\00 Execution Control__FINAL_LONG_PATH_BACKUP_VERIFICATION.json"
+        "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2720,7 +2758,7 @@
       "challengeId": "CHALLENGE-BACKUP-MISSING-FILE-001",
       "mutation": "Report one missing backup file",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\00 Execution Control__FINAL_LONG_PATH_BACKUP_VERIFICATION.json"
+        "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2748,10 +2786,41 @@
       "passed": true
     },
     {
+      "challengeId": "CHALLENGE-BACKUP-AUTHORITY-DUPLICATE-001",
+      "mutation": "Add a sibling backupEvidence authority object that duplicates backupHistory",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "BAK-13"
+      ],
+      "actualFailedCheckIds": [
+        "BAK-13"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-BACKUP-AUTHORITY-DUPLICATE-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "BAK-13"
+        ]
+      },
+      "passed": true
+    },
+    {
       "challengeId": "CHALLENGE-LIVE-REPORT-OVERRIDE-001",
       "mutation": "Set the live validation report's overridesUsed to true",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\00 Execution Control__FINAL_FREEZE_VALIDATION_RESULT.json"
+        "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2760,7 +2829,8 @@
       ],
       "actualFailedCheckIds": [
         "META-10",
-        "META-17"
+        "META-17",
+        "META-18"
       ],
       "baselineStatus": "PASS",
       "baselineFailedCheckIds": [],
@@ -2783,7 +2853,7 @@
       "challengeId": "CHALLENGE-MANIFEST-VALIDATOR-HASH-001",
       "mutation": "Set the candidate manifest's validator SHA-256 to a stale value",
       "temporaryFiles": [
-        "C:\\Users\\mhyah\\AppData\\Local\\Temp\\mindroom-graphify-freeze-challenges-l9n3mdzu\\11 Completion__FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"
+        "00 Execution Control/FROZEN_ARTIFACT_MANIFEST.jsonl"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
@@ -2791,7 +2861,8 @@
         "MAN-03"
       ],
       "actualFailedCheckIds": [
-        "MAN-03"
+        "MAN-03",
+        "MAN-08"
       ],
       "baselineStatus": "PASS",
       "baselineFailedCheckIds": [],
@@ -2816,9 +2887,9 @@
   "lineageChallengesPassed": 25,
   "lineageChallengeFailures": 0,
   "lineageSemanticChallengesExecuted": 24,
-  "challengesUsingProductionValidator": 79,
-  "challengesWithIndependentExpectedEvidence": 79,
-  "challengesWithZeroFailureBaseline": 79,
+  "challengesUsingProductionValidator": 81,
+  "challengesWithIndependentExpectedEvidence": 81,
+  "challengesWithZeroFailureBaseline": 81,
   "challengesUsingBaselineFailureSubtraction": 0,
   "baselineFailuresSubtracted": false,
   "coreBaselineStatus": "PASS",
@@ -2828,5 +2899,8 @@
   "verdict": "PASS",
   "fullCertificationStatus": "PASS",
   "fullCertificationFailedCheckIds": [],
-  "fullCertificationEnvironmentFailures": []
+  "fullCertificationEnvironmentFailures": [],
+  "backupUnchangedThroughoutChallenges": true,
+  "backupAggregateBeforeChallenges": "6f1aa4dfc27430deb7c211f879d00f7fd74d593444d5ec4b8a4343b635a4434e",
+  "backupAggregateAfterChallenges": "6f1aa4dfc27430deb7c211f879d00f7fd74d593444d5ec4b8a4343b635a4434e"
 }

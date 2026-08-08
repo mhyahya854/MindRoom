@@ -1,6 +1,6 @@
 {
   "freezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
-  "officialValidatorRunId": "mindroom-graphify-final-freeze-20260808-185500-validation",
+  "officialValidatorRunId": "mindroom-post-freeze-metadata-repair-20260808-213217-validation",
   "externalReviewRunId": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
   "mappingStatus": "COMPLETED_AND_FROZEN",
   "independentReviewStatus": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
@@ -29,14 +29,14 @@
     "publicEntrypoints": 161
   },
   "manifestRecordCount": 167,
-  "manifestAggregateHash": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
+  "manifestAggregateHash": "46ce3ec1a441feaf7dbf00e90330a4201bde41fcdb9725a11cb534968a119c7c",
   "codebaseFileCount": 10080,
   "codebaseDirectoryCount": 2548,
   "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
-  "validatorCheckCount": 190,
-  "challengeTestCount": 81,
+  "validatorCheckCount": 196,
+  "challengeTestCount": 87,
   "blockingDefectCount": 0,
-  "repairRunId": "20260806-150031",
+  "repairRunId": "mindroom-post-freeze-metadata-repair-20260808-213217",
   "gateTestSynchronizationStatus": "PASS",
   "warningSummary": [
     {
@@ -54,16 +54,16 @@
       ]
     }
   ],
-  "timestamp": "2026-08-08T16:22:49.462002+00:00",
-  "validatorSourceHash": "0105adea158f9a52c7721b34954cb84ae66f0aca18c858140d062a64c92b04f4",
-  "challengeSourceHash": "db24d451163ef0df7f272ecf7f71f7c00a82b6c47166f2d6e213883fa8d8598b",
-  "verifierSourceHash": "bd10586ecdd6ac8e1710e5deaed19084e19b08d51a2431ffa2dd92bb677a8eb7",
+  "timestamp": "2026-08-08T21:32:17+00:00",
+  "validatorSourceHash": "80e3fe99c3e4edc23025be469dffb287cb1871d794bbe654fdbd3f95ffff705a",
+  "challengeSourceHash": "c6609e172faa7fe9b0762093628c7fb1a8d89760a63630edb633b703a50623d1",
+  "verifierSourceHash": "3ade1f90f9a547dd60d52b5b37941cf2bcf152c318a93c4623419401f16790c2",
   "validationTarget": "LIVE_REPOSITORY",
   "repositoryRelativeGraphifyRoot": "Graphify",
   "candidateRootKind": "REPOSITORY_RELATIVE",
   "overridesUsed": false,
   "temporaryChallengeId": null,
-  "validationMode": "FULL_TECHNICAL_CERTIFICATION",
+  "validationMode": "FINAL_FREEZE_CERTIFICATION",
   "validationResult": {
     "freezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
     "status": "PASS",
@@ -438,7 +438,7 @@
         "description": "Candidate manifest aggregate hash is reproducible from live non-self-referential rows",
         "status": "PASS",
         "method": "independent sorted path:file-hash aggregate; protected governance receipts are not authoritative for the pre-review candidate aggregate because the candidate manifest is rebuilt last and those receipts cannot be modified in this repair",
-        "actual": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
+        "actual": "46ce3ec1a441feaf7dbf00e90330a4201bde41fcdb9725a11cb534968a119c7c",
         "expected": "64-character SHA-256 aggregate",
         "evidence": [
           "MAN-01",
@@ -453,19 +453,19 @@
         "status": "PASS",
         "method": "cross-document protected-receipt consistency against the live manifest aggregate; no historical split is permitted",
         "actual": {
-          "00 Execution Control/STATUS.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
-          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
-          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
-          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
-          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
-          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
-          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
-          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
-          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
-          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
-          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37"
+          "00 Execution Control/STATUS.json": "46ce3ec1a441feaf7dbf00e90330a4201bde41fcdb9725a11cb534968a119c7c",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "46ce3ec1a441feaf7dbf00e90330a4201bde41fcdb9725a11cb534968a119c7c",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "46ce3ec1a441feaf7dbf00e90330a4201bde41fcdb9725a11cb534968a119c7c",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "46ce3ec1a441feaf7dbf00e90330a4201bde41fcdb9725a11cb534968a119c7c",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "46ce3ec1a441feaf7dbf00e90330a4201bde41fcdb9725a11cb534968a119c7c",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "46ce3ec1a441feaf7dbf00e90330a4201bde41fcdb9725a11cb534968a119c7c",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "46ce3ec1a441feaf7dbf00e90330a4201bde41fcdb9725a11cb534968a119c7c",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "46ce3ec1a441feaf7dbf00e90330a4201bde41fcdb9725a11cb534968a119c7c",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "46ce3ec1a441feaf7dbf00e90330a4201bde41fcdb9725a11cb534968a119c7c",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "46ce3ec1a441feaf7dbf00e90330a4201bde41fcdb9725a11cb534968a119c7c",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "46ce3ec1a441feaf7dbf00e90330a4201bde41fcdb9725a11cb534968a119c7c"
         },
-        "expected": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
+        "expected": "46ce3ec1a441feaf7dbf00e90330a4201bde41fcdb9725a11cb534968a119c7c",
         "evidence": [
           "00 Execution Control/STATUS.json",
           "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
@@ -2147,7 +2147,7 @@
           "receiptSource": "4cff66148793b58eaa7446241b8fb580130a43a364503b54233013bd23c49950",
           "receiptBackup": "4cff66148793b58eaa7446241b8fb580130a43a364503b54233013bd23c49950",
           "receiptEvidence": "4cff66148793b58eaa7446241b8fb580130a43a364503b54233013bd23c49950",
-          "scannedSource": "aa748afff8e91d3bf449d45a7e644e232d0fe6369d937616942a47e9d6614a9d",
+          "scannedSource": "ee17a9c25db03955740b01cc33b522599bbb89cd17f2f9ac208715f2e0a03a5c",
           "scannedBackup": "4cff66148793b58eaa7446241b8fb580130a43a364503b54233013bd23c49950",
           "manifestEvidence": "4cff66148793b58eaa7446241b8fb580130a43a364503b54233013bd23c49950"
         },
@@ -3529,6 +3529,81 @@
         "evidence": []
       },
       {
+        "checkId": "SAFE-06",
+        "category": "status",
+        "description": "Candidate-only status exactly matches the governance phase",
+        "status": "PASS",
+        "method": "exact phase-aware boolean check",
+        "actual": false,
+        "expected": false,
+        "evidence": [
+          "STATUS.json"
+        ]
+      },
+      {
+        "checkId": "SYNC-01",
+        "category": "metadata",
+        "description": "Synchronization generation exactly matches the governance phase",
+        "status": "PASS",
+        "method": "exact phase-aware generation check",
+        "actual": "FINAL_AUTHORITY_FROZEN",
+        "expected": "FINAL_AUTHORITY_FROZEN",
+        "evidence": [
+          "FINAL_SYNCHRONIZATION_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "SYNC-02",
+        "category": "metadata",
+        "description": "Synchronization pending-review flag exactly matches independent-review completion",
+        "status": "PASS",
+        "method": "exact phase-aware boolean check",
+        "actual": false,
+        "expected": false,
+        "evidence": [
+          "FINAL_SYNCHRONIZATION_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "SYNC-03",
+        "category": "metadata",
+        "description": "Synchronization Wave 0 review-block flag exactly matches canonical readiness",
+        "status": "PASS",
+        "method": "exact phase-aware boolean check",
+        "actual": false,
+        "expected": false,
+        "evidence": [
+          "FINAL_SYNCHRONIZATION_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "SYNC-04",
+        "category": "metadata",
+        "description": "Synchronization manifest path exactly matches the active phase manifest",
+        "status": "PASS",
+        "method": "exact phase-aware authority-path check",
+        "actual": "00 Execution Control/FROZEN_ARTIFACT_MANIFEST.jsonl",
+        "expected": "00 Execution Control/FROZEN_ARTIFACT_MANIFEST.jsonl",
+        "evidence": [
+          "FINAL_SYNCHRONIZATION_REPORT.json"
+        ]
+      },
+      {
+        "checkId": "CERT-01",
+        "category": "metadata",
+        "description": "Persisted authoritative validation mode exactly matches the governance phase",
+        "status": "PASS",
+        "method": "phase-aware top-level and derived-mode comparison",
+        "actual": {
+          "report": "FINAL_FREEZE_CERTIFICATION",
+          "derived": "FINAL_FREEZE_CERTIFICATION"
+        },
+        "expected": "FINAL_FREEZE_CERTIFICATION",
+        "evidence": [
+          "FINAL_FREEZE_VALIDATION_RESULT.json"
+        ]
+      },
+      {
         "checkId": "REV-01",
         "category": "independent_review",
         "description": "Independent review state is valid for the current phase",
@@ -4122,21 +4197,21 @@
         "actual": {
           "state": "FRESH_CHALLENGE_EXECUTION_VERIFIED",
           "verdict": "PASS",
-          "executed": 81,
-          "required": 81,
+          "executed": 87,
+          "required": 87,
           "allPassed": true,
           "zeroFailureBaselines": true,
-          "validatorCheckCount": 190,
-          "challengeTestCount": 81,
+          "validatorCheckCount": 196,
+          "challengeTestCount": 87,
           "validatorSourceHashMatch": true
         },
         "expected": {
           "state": "PENDING_FRESH_CHALLENGE_EXECUTION or FRESH_CHALLENGE_EXECUTION_VERIFIED",
           "verdict": "PENDING or PASS",
           "executed": "0 before run or all required after run",
-          "required": 81,
-          "validatorCheckCount": 190,
-          "challengeTestCount": 81,
+          "required": 87,
+          "validatorCheckCount": 196,
+          "challengeTestCount": 87,
           "validatorSourceHashMatch": true
         },
         "evidence": [
@@ -4182,8 +4257,8 @@
           "challengeVerdict": "PASS",
           "backupOrManifestFailures": [],
           "counts": {
-            "live": 190,
-            "challenge": 190
+            "live": 196,
+            "challenge": 196
           }
         },
         "expected": {
@@ -4191,8 +4266,8 @@
           "challengeVerdict": "PENDING before challenge or PASS after challenge",
           "backupOrManifestFailures": [],
           "counts": {
-            "live": 190,
-            "challenge": 190
+            "live": 196,
+            "challenge": 196
           }
         },
         "evidence": [
@@ -4223,19 +4298,19 @@
         "status": "PASS",
         "method": "cross-document repair ID comparison",
         "actual": {
-          "00 Execution Control/STATUS.json": "20260806-150031",
-          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "20260806-150031",
-          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "20260806-150031",
-          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "20260806-150031",
-          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "20260806-150031",
-          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "20260806-150031",
-          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "20260806-150031",
-          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "20260806-150031",
-          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "20260806-150031",
-          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "20260806-150031",
-          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "20260806-150031"
+          "00 Execution Control/STATUS.json": "mindroom-post-freeze-metadata-repair-20260808-213217",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "mindroom-post-freeze-metadata-repair-20260808-213217",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-post-freeze-metadata-repair-20260808-213217",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "mindroom-post-freeze-metadata-repair-20260808-213217",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "mindroom-post-freeze-metadata-repair-20260808-213217",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "mindroom-post-freeze-metadata-repair-20260808-213217",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-post-freeze-metadata-repair-20260808-213217",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "mindroom-post-freeze-metadata-repair-20260808-213217",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "mindroom-post-freeze-metadata-repair-20260808-213217",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "mindroom-post-freeze-metadata-repair-20260808-213217",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "mindroom-post-freeze-metadata-repair-20260808-213217"
         },
-        "expected": "20260806-150031",
+        "expected": "mindroom-post-freeze-metadata-repair-20260808-213217",
         "evidence": [
           "00 Execution Control/STATUS.json",
           "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
@@ -4573,7 +4648,7 @@
     "candidateRootKind": "REPOSITORY_RELATIVE",
     "overridesUsed": false,
     "temporaryChallengeId": null,
-    "validationMode": "FULL_TECHNICAL_CERTIFICATION",
+    "validationMode": "FINAL_FREEZE_CERTIFICATION",
     "derived": {
       "masterPlans": 3,
       "requirements": 1782,
@@ -4594,7 +4669,7 @@
       "adrs": 14,
       "publicEntrypoints": 161,
       "manifestRecordCount": 167,
-      "manifestAggregateHash": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
+      "manifestAggregateHash": "46ce3ec1a441feaf7dbf00e90330a4201bde41fcdb9725a11cb534968a119c7c",
       "codebaseFileCount": 10080,
       "codebaseDirectoryCount": 2548,
       "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
@@ -4609,7 +4684,7 @@
       "tautologicalChecks": 0,
       "baselineRelativeOnlyChecks": 0,
       "validatorWrites": 0,
-      "validationMode": "FULL_TECHNICAL_CERTIFICATION",
+      "validationMode": "FINAL_FREEZE_CERTIFICATION",
       "certificationClassification": "FINAL_FREEZE_CERTIFIED"
     }
   }

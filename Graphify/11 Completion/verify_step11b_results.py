@@ -55,9 +55,11 @@ def fail(message):
 
 def main():
     verify_only = "--verify-only" in sys.argv[1:]
+    status = json.loads(STATUS.read_text(encoding="utf-8-sig"))
+    certification_mode = "FINAL_FREEZE_CERTIFICATION" if status.get("planningFreezeStatus") == "FROZEN" else "FULL_TECHNICAL_CERTIFICATION"
     if not verify_only:
         process = subprocess.run(
-            [sys.executable, str(VALIDATOR), "--mode", "FULL_TECHNICAL_CERTIFICATION", "--verify-only"],
+            [sys.executable, str(VALIDATOR), "--mode", certification_mode, "--verify-only"],
             capture_output=True,
             text=True,
         )
@@ -66,13 +68,12 @@ def main():
         if process.stderr:
             print(process.stderr, file=sys.stderr)
         if process.returncode:
-            fail("Production FULL_TECHNICAL_CERTIFICATION validation failed.")
+            fail(f"Production {certification_mode} validation failed.")
 
     validator = load_module("mindroom_strict_validator", VALIDATOR)
     runner = load_module("mindroom_graphify_challenge_runner", CHALLENGE_RUNNER)
-    required_checks = validator.get_check_definitions("FULL_TECHNICAL_CERTIFICATION")
+    required_checks = validator.get_check_definitions(certification_mode)
     required_challenges = [row["challengeId"] for row in runner.get_challenge_definitions()]
-    status = json.loads(STATUS.read_text(encoding="utf-8-sig"))
     manifest_path = FROZEN_MANIFEST if status.get("planningFreezeStatus") == "FROZEN" else CANDIDATE_MANIFEST
     manifest_relative = "00 Execution Control/FROZEN_ARTIFACT_MANIFEST.jsonl" if manifest_path == FROZEN_MANIFEST else "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"
 
@@ -108,6 +109,8 @@ def main():
         fail("Challenge report verdict is not PASS.")
     if challenge_report.get("fullCertificationStatus") != "PASS" or (challenge_report.get("fullCertificationFailedCheckIds") or []):
         fail("Challenge report full-certification status is not a zero-failure PASS.")
+    if status.get("planningFreezeStatus") == "FROZEN" and (challenge_report.get("finalFreezeCertificationStatus") != "PASS" or (challenge_report.get("finalFreezeCertificationFailedCheckIds") or [])):
+        fail("Challenge report final-freeze certification status is not a zero-failure PASS.")
     for row in challenge_report.get("challenges", []):
         if not row.get("passed"):
             fail(f"Challenge {row.get('challengeId')} did not pass.")
@@ -130,8 +133,8 @@ def main():
         fail("Persisted live validation candidate-root metadata is not repository-relative.")
     if validation_report.get("overridesUsed") is not False or validation_report.get("temporaryChallengeId") is not None:
         fail("Persisted live validation used overrides or a temporary challenge ID.")
-    if (result.get("derived") or {}).get("validationMode") != "FULL_TECHNICAL_CERTIFICATION" or validation_report.get("validationMode") != "FULL_TECHNICAL_CERTIFICATION":
-        fail("Persisted live validation mode is not FULL_TECHNICAL_CERTIFICATION.")
+    if (result.get("derived") or {}).get("validationMode") != certification_mode or validation_report.get("validationMode") != certification_mode:
+        fail(f"Persisted live validation mode is not {certification_mode}.")
 
     validator_hash = sha256_file(VALIDATOR)
     challenge_hash = sha256_file(CHALLENGE_RUNNER)

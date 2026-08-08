@@ -284,6 +284,12 @@ CHALLENGE_DEFINITIONS = [
     definition("CHALLENGE-BACKUP-AUTHORITY-DUPLICATE-001", "Add a sibling backupEvidence authority object that duplicates backupHistory", [BACKUP_RECEIPT_PATH], ["BAK-13"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data.__setitem__("backupEvidence", copy.deepcopy(data["backupHistory"])))),
     definition("CHALLENGE-LIVE-REPORT-OVERRIDE-001", "Set the live validation report's overridesUsed to true", [LIVE_REPORT_PATH], ["META-17"], lambda o: mutate_json(Path(o[LIVE_REPORT_PATH]), lambda data: data.__setitem__("overridesUsed", True)), validation_mode="FULL_TECHNICAL_CERTIFICATION"),
     definition("CHALLENGE-MANIFEST-VALIDATOR-HASH-001", "Set the candidate manifest's validator SHA-256 to a stale value", [MANIFEST_RELATIVE], ["MAN-03"], lambda o: mutate_jsonl(Path(o[MANIFEST_RELATIVE]), lambda rows: next(row for row in rows if row.get("path") == "11 Completion/validate_final_graphify_freeze.py").__setitem__("sha256", "0" * 64))),
+    definition("CHALLENGE-FROZEN-CANDIDATE-FLAG-001", "Regress frozen status to candidate-only", ["00 Execution Control/STATUS.json"], ["SAFE-06"], lambda o: mutate_json(Path(o["00 Execution Control/STATUS.json"]), lambda data: data.__setitem__("freezeCandidateOnly", True))),
+    definition("CHALLENGE-FROZEN-PENDING-REVIEW-001", "Regress final synchronization to pending independent review", ["11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"], ["SYNC-02"], lambda o: mutate_json(Path(o["11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"]), lambda data: data.__setitem__("pendingIndependentReview", True))),
+    definition("CHALLENGE-FROZEN-WAVE0-BLOCKED-001", "Regress final synchronization to review-blocked Wave 0", ["11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"], ["SYNC-03"], lambda o: mutate_json(Path(o["11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"]), lambda data: data.__setitem__("wave0Blocked", True))),
+    definition("CHALLENGE-FROZEN-SYNC-GENERATION-001", "Regress final synchronization generation to candidate", ["11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"], ["SYNC-01"], lambda o: mutate_json(Path(o["11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"]), lambda data: data.__setitem__("synchronizationGeneration", "FINAL_AUTHORITY_CANDIDATE"))),
+    definition("CHALLENGE-FROZEN-SYNC-MANIFEST-001", "Regress final synchronization to the candidate manifest", ["11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"], ["SYNC-04"], lambda o: mutate_json(Path(o["11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"]), lambda data: data.__setitem__("manifestPath", "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"))),
+    definition("CHALLENGE-FROZEN-VALIDATION-MODE-001", "Regress the persisted frozen validation result to full technical mode", [LIVE_REPORT_PATH], ["CERT-01"], lambda o: mutate_json(Path(o[LIVE_REPORT_PATH]), lambda data: (data.__setitem__("validationMode", "FULL_TECHNICAL_CERTIFICATION"), (data.get("validationResult") or {}).setdefault("derived", {}).__setitem__("validationMode", "FULL_TECHNICAL_CERTIFICATION")))),
 ]
 
 
@@ -343,7 +349,8 @@ def main():
         validator = load_validator()
         status = json.loads((ROOT / "00 Execution Control" / "STATUS.json").read_text(encoding="utf-8-sig"))
         core = validator.do_strict_validation(validation_mode="CORE_PRE_CHALLENGE")
-        full = validator.do_strict_validation(validation_mode="FULL_TECHNICAL_CERTIFICATION")
+        certification_mode = "FINAL_FREEZE_CERTIFICATION" if status.get("planningFreezeStatus") == "FROZEN" else "FULL_TECHNICAL_CERTIFICATION"
+        certification = validator.do_strict_validation(validation_mode=certification_mode)
         validator_hash = sha256_file(VALIDATOR_PATH)
         challenge_hash = sha256_file(Path(__file__).resolve())
         verifier_hash = sha256_file(ROOT / "11 Completion" / "verify_step11b_results.py")
@@ -363,12 +370,12 @@ def main():
             "candidateRootKind": "REPOSITORY_RELATIVE",
             "overridesUsed": False,
             "temporaryChallengeId": None,
-            "validationMode": "FULL_TECHNICAL_CERTIFICATION",
-            "validationResult": full,
+            "validationMode": certification_mode,
+            "validationResult": certification,
         }
         write_json(VALIDATION_RESULT_PATH, live)
         print(json.dumps(live, indent=2, ensure_ascii=False))
-        raise SystemExit(0 if full["status"] == "PASS" else 1)
+        raise SystemExit(0 if certification["status"] == "PASS" else 1)
     validator = load_validator()
     status = json.loads((ROOT / "00 Execution Control" / "STATUS.json").read_text(encoding="utf-8-sig"))
     backup_receipt = json.loads((ROOT / "00 Execution Control" / "FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json").read_text(encoding="utf-8-sig"))
@@ -484,16 +491,12 @@ def main():
             write_json(REPORT_PATH, challenge_report)
             print(json.dumps(challenge_report, indent=2, ensure_ascii=False))
             raise SystemExit(1)
-        # Before freeze, keep the previously certified live reports byte-stable
-        # while FULL validation runs because they are mirrored by the active
-        # backup. After freeze, the challenge report is explicitly mutable
-        # current metadata excluded from the frozen subject manifest, so write
-        # the new all-PASS evidence first. This also makes a deterministic retry
-        # converge after a prior failed run without accepting stale FAIL state.
-        if status.get("planningFreezeStatus") == "FROZEN":
-            write_json(REPORT_PATH, challenge_report)
+        # Certify the coherent fail-closed pending report pair first. Publishing
+        # only one side of the final pair would correctly fail META-18.
         full = validator.do_strict_validation(validation_mode="FULL_TECHNICAL_CERTIFICATION")
         full_failures = sorted(failed_ids(full))
+        final_freeze = validator.do_strict_validation(validation_mode="FINAL_FREEZE_CERTIFICATION") if status.get("planningFreezeStatus") == "FROZEN" else full
+        final_freeze_failures = sorted(failed_ids(final_freeze))
         if backup_pending:
             backup_after_challenges = {"receiptState": "PENDING_FINAL_CONVERGED_PRE_REVIEW_BACKUP", "aggregateSha256": None}
         else:
@@ -503,14 +506,19 @@ def main():
         backup_unchanged = backup_before_challenges == backup_after_challenges
         if not backup_unchanged:
             full_failures.append("BACKUP-MUTATION-DURING-CHALLENGES")
+            final_freeze_failures.append("BACKUP-MUTATION-DURING-CHALLENGES")
+        certification_failures = sorted(set(full_failures + final_freeze_failures))
         challenge_report.update({
             "fullCertificationStatus": "PASS" if not full_failures else "FAIL",
             "fullCertificationFailedCheckIds": full_failures,
             "fullCertificationEnvironmentFailures": [],
+            "finalFreezeCertificationStatus": "PASS" if not final_freeze_failures else "FAIL",
+            "finalFreezeCertificationFailedCheckIds": final_freeze_failures,
+            "finalFreezeCertificationEnvironmentFailures": [],
             "backupUnchangedThroughoutChallenges": backup_unchanged,
             "backupAggregateBeforeChallenges": backup_before_challenges.get("aggregateSha256"),
             "backupAggregateAfterChallenges": backup_after_challenges.get("aggregateSha256"),
-            "verdict": "PASS" if not full_failures else "FAIL",
+            "verdict": "PASS" if not certification_failures else "FAIL",
             "timestamp": certification_timestamp(status),
         })
         write_json(REPORT_PATH, challenge_report)
@@ -527,12 +535,31 @@ def main():
             "candidateRootKind": "REPOSITORY_RELATIVE",
             "overridesUsed": False,
             "temporaryChallengeId": None,
-            "validationMode": "FULL_TECHNICAL_CERTIFICATION",
-            "validationResult": full,
+            "validationMode": "FINAL_FREEZE_CERTIFICATION" if status.get("planningFreezeStatus") == "FROZEN" else "FULL_TECHNICAL_CERTIFICATION",
+            "validationResult": final_freeze,
         }
         write_json(VALIDATION_RESULT_PATH, final_live)
+        if not certification_failures:
+            # Revalidate the exact coherent PASS pair that will remain on disk,
+            # then persist that post-publication result as the live authority.
+            full = validator.do_strict_validation(validation_mode="FULL_TECHNICAL_CERTIFICATION")
+            final_freeze = validator.do_strict_validation(validation_mode="FINAL_FREEZE_CERTIFICATION") if status.get("planningFreezeStatus") == "FROZEN" else full
+            full_failures = sorted(failed_ids(full))
+            final_freeze_failures = sorted(failed_ids(final_freeze))
+            certification_failures = sorted(set(full_failures + final_freeze_failures))
+            challenge_report.update({
+                "fullCertificationStatus": "PASS" if not full_failures else "FAIL",
+                "fullCertificationFailedCheckIds": full_failures,
+                "finalFreezeCertificationStatus": "PASS" if not final_freeze_failures else "FAIL",
+                "finalFreezeCertificationFailedCheckIds": final_freeze_failures,
+                "postPublicationCertificationRevalidated": not certification_failures,
+                "verdict": "PASS" if not certification_failures else "FAIL",
+            })
+            write_json(REPORT_PATH, challenge_report)
+            final_live["validationResult"] = final_freeze
+            write_json(VALIDATION_RESULT_PATH, final_live)
         print(json.dumps(challenge_report, indent=2, ensure_ascii=False))
-        raise SystemExit(0 if not full_failures else 1)
+        raise SystemExit(0 if not certification_failures else 1)
     finally:
         shutil.rmtree(temp_root, ignore_errors=True)
 

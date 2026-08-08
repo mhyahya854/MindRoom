@@ -1451,6 +1451,27 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     add(checks, "SAFE-04", "status", "Application release remains NOT_VERIFIED", status.get("finalReleaseReceiptStatus") == expected_status["finalReleaseReceiptStatus"], status.get("finalReleaseReceiptStatus"), expected_status["finalReleaseReceiptStatus"], ["STATUS.json"], "exact safety state")
     implementation_events = list((ROOT / "00 Execution Control").glob("*IMPLEMENTATION_START_EVENT*")) + list((ROOT / "11 Completion").glob("*IMPLEMENTATION_START_EVENT*"))
     add(checks, "SAFE-05", "status", "No implementation-start event exists", not implementation_events, [str(path) for path in implementation_events], [], [str(path) for path in implementation_events], "live filename scan")
+    expected_candidate_only = not final_mode
+    add(checks, "SAFE-06", "status", "Candidate-only status exactly matches the governance phase", status.get("freezeCandidateOnly") is expected_candidate_only, status.get("freezeCandidateOnly"), expected_candidate_only, ["STATUS.json"], "exact phase-aware boolean check")
+
+    # Final synchronization metadata must converge with the canonical phase.
+    synchronization = metadata["11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"]
+    expected_sync_generation = "FINAL_AUTHORITY_FROZEN" if final_mode else "FINAL_AUTHORITY_CANDIDATE"
+    expected_sync_manifest = "00 Execution Control/FROZEN_ARTIFACT_MANIFEST.jsonl" if final_mode else "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"
+    expected_pending_review = not final_mode
+    expected_wave0_blocked = not final_mode
+    add(checks, "SYNC-01", "metadata", "Synchronization generation exactly matches the governance phase", synchronization.get("synchronizationGeneration") == expected_sync_generation, synchronization.get("synchronizationGeneration"), expected_sync_generation, ["FINAL_SYNCHRONIZATION_REPORT.json"], "exact phase-aware generation check")
+    add(checks, "SYNC-02", "metadata", "Synchronization pending-review flag exactly matches independent-review completion", synchronization.get("pendingIndependentReview") is expected_pending_review, synchronization.get("pendingIndependentReview"), expected_pending_review, ["FINAL_SYNCHRONIZATION_REPORT.json"], "exact phase-aware boolean check")
+    add(checks, "SYNC-03", "metadata", "Synchronization Wave 0 review-block flag exactly matches canonical readiness", synchronization.get("wave0Blocked") is expected_wave0_blocked, synchronization.get("wave0Blocked"), expected_wave0_blocked, ["FINAL_SYNCHRONIZATION_REPORT.json"], "exact phase-aware boolean check")
+    add(checks, "SYNC-04", "metadata", "Synchronization manifest path exactly matches the active phase manifest", normalize_rel(synchronization.get("manifestPath")) == expected_sync_manifest, normalize_rel(synchronization.get("manifestPath")), expected_sync_manifest, ["FINAL_SYNCHRONIZATION_REPORT.json"], "exact phase-aware authority-path check")
+
+    # The persisted authoritative result must represent the frozen generation,
+    # even when a caller is running a different read-only diagnostic mode.
+    live_validation_report = metadata["00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json"]
+    persisted_result = live_validation_report.get("validationResult") or {}
+    persisted_derived_mode = (persisted_result.get("derived") or {}).get("validationMode")
+    expected_persisted_mode = "FINAL_FREEZE_CERTIFICATION" if final_mode else "FULL_TECHNICAL_CERTIFICATION"
+    add(checks, "CERT-01", "metadata", "Persisted authoritative validation mode exactly matches the governance phase", live_validation_report.get("validationMode") == expected_persisted_mode and persisted_derived_mode == expected_persisted_mode, {"report": live_validation_report.get("validationMode"), "derived": persisted_derived_mode}, expected_persisted_mode, ["FINAL_FREEZE_VALIDATION_RESULT.json"], "phase-aware top-level and derived-mode comparison")
 
     # Independent review is mandatory for the final phase and must remain isolated/read-only.
     review_exists = bool(independent_review)

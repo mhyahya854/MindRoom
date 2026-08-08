@@ -1,6 +1,6 @@
 {
   "freezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
-  "officialValidatorRunId": "mindroom-graphify-final-freeze-20260808-185500-validation",
+  "officialValidatorRunId": "mindroom-post-freeze-metadata-repair-20260808-213217-validation",
   "externalReviewRunId": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
   "mappingStatus": "COMPLETED_AND_FROZEN",
   "independentReviewStatus": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
@@ -29,14 +29,14 @@
     "publicEntrypoints": 161
   },
   "manifestRecordCount": 167,
-  "manifestAggregateHash": "1b65b6051667d775a40ab04705e9c74edaa6aeda7a31a63df37457ef5ae6ac37",
+  "manifestAggregateHash": "46ce3ec1a441feaf7dbf00e90330a4201bde41fcdb9725a11cb534968a119c7c",
   "codebaseFileCount": 10080,
   "codebaseDirectoryCount": 2548,
   "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
-  "validatorCheckCount": 190,
-  "challengeTestCount": 81,
+  "validatorCheckCount": 196,
+  "challengeTestCount": 87,
   "blockingDefectCount": 0,
-  "repairRunId": "20260806-150031",
+  "repairRunId": "mindroom-post-freeze-metadata-repair-20260808-213217",
   "gateTestSynchronizationStatus": "PASS",
   "warningSummary": [
     {
@@ -55,10 +55,10 @@
     }
   ],
   "challengeReportState": "FRESH_CHALLENGE_EXECUTION_VERIFIED",
-  "timestamp": "2026-08-08T16:22:49.462002+00:00",
-  "validatorSourceHash": "0105adea158f9a52c7721b34954cb84ae66f0aca18c858140d062a64c92b04f4",
-  "challengeSourceHash": "db24d451163ef0df7f272ecf7f71f7c00a82b6c47166f2d6e213883fa8d8598b",
-  "verifierSourceHash": "bd10586ecdd6ac8e1710e5deaed19084e19b08d51a2431ffa2dd92bb677a8eb7",
+  "timestamp": "2026-08-08T21:32:17+00:00",
+  "validatorSourceHash": "80e3fe99c3e4edc23025be469dffb287cb1871d794bbe654fdbd3f95ffff705a",
+  "challengeSourceHash": "c6609e172faa7fe9b0762093628c7fb1a8d89760a63630edb633b703a50623d1",
+  "verifierSourceHash": "3ade1f90f9a547dd60d52b5b37941cf2bcf152c318a93c4623419401f16790c2",
   "requiredChallenges": [
     "CHALLENGE-001",
     "CHALLENGE-002",
@@ -140,7 +140,13 @@
     "CHALLENGE-BACKUP-MISSING-FILE-001",
     "CHALLENGE-BACKUP-AUTHORITY-DUPLICATE-001",
     "CHALLENGE-LIVE-REPORT-OVERRIDE-001",
-    "CHALLENGE-MANIFEST-VALIDATOR-HASH-001"
+    "CHALLENGE-MANIFEST-VALIDATOR-HASH-001",
+    "CHALLENGE-FROZEN-CANDIDATE-FLAG-001",
+    "CHALLENGE-FROZEN-PENDING-REVIEW-001",
+    "CHALLENGE-FROZEN-WAVE0-BLOCKED-001",
+    "CHALLENGE-FROZEN-SYNC-GENERATION-001",
+    "CHALLENGE-FROZEN-SYNC-MANIFEST-001",
+    "CHALLENGE-FROZEN-VALIDATION-MODE-001"
   ],
   "challenges": [
     {
@@ -2828,9 +2834,7 @@
         "META-17"
       ],
       "actualFailedCheckIds": [
-        "META-10",
-        "META-17",
-        "META-18"
+        "META-17"
       ],
       "baselineStatus": "PASS",
       "baselineFailedCheckIds": [],
@@ -2880,6 +2884,192 @@
         ]
       },
       "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-FROZEN-CANDIDATE-FLAG-001",
+      "mutation": "Regress frozen status to candidate-only",
+      "temporaryFiles": [
+        "00 Execution Control/STATUS.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "SAFE-06"
+      ],
+      "actualFailedCheckIds": [
+        "SAFE-06"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-FROZEN-CANDIDATE-FLAG-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "SAFE-06"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-FROZEN-PENDING-REVIEW-001",
+      "mutation": "Regress final synchronization to pending independent review",
+      "temporaryFiles": [
+        "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "SYNC-02"
+      ],
+      "actualFailedCheckIds": [
+        "SYNC-02"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-FROZEN-PENDING-REVIEW-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "SYNC-02"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-FROZEN-WAVE0-BLOCKED-001",
+      "mutation": "Regress final synchronization to review-blocked Wave 0",
+      "temporaryFiles": [
+        "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "SYNC-03"
+      ],
+      "actualFailedCheckIds": [
+        "SYNC-03"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-FROZEN-WAVE0-BLOCKED-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "SYNC-03"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-FROZEN-SYNC-GENERATION-001",
+      "mutation": "Regress final synchronization generation to candidate",
+      "temporaryFiles": [
+        "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "SYNC-01"
+      ],
+      "actualFailedCheckIds": [
+        "SYNC-01"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-FROZEN-SYNC-GENERATION-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "SYNC-01"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-FROZEN-SYNC-MANIFEST-001",
+      "mutation": "Regress final synchronization to the candidate manifest",
+      "temporaryFiles": [
+        "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "SYNC-04"
+      ],
+      "actualFailedCheckIds": [
+        "SYNC-04"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-FROZEN-SYNC-MANIFEST-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "SYNC-04"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-FROZEN-VALIDATION-MODE-001",
+      "mutation": "Regress the persisted frozen validation result to full technical mode",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "CERT-01"
+      ],
+      "actualFailedCheckIds": [
+        "CERT-01"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-FROZEN-VALIDATION-MODE-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "CERT-01"
+        ]
+      },
+      "passed": true
     }
   ],
   "gateSpecificChallenges": 10,
@@ -2887,9 +3077,9 @@
   "lineageChallengesPassed": 25,
   "lineageChallengeFailures": 0,
   "lineageSemanticChallengesExecuted": 24,
-  "challengesUsingProductionValidator": 81,
-  "challengesWithIndependentExpectedEvidence": 81,
-  "challengesWithZeroFailureBaseline": 81,
+  "challengesUsingProductionValidator": 87,
+  "challengesWithIndependentExpectedEvidence": 87,
+  "challengesWithZeroFailureBaseline": 87,
   "challengesUsingBaselineFailureSubtraction": 0,
   "baselineFailuresSubtracted": false,
   "coreBaselineStatus": "PASS",
@@ -2900,7 +3090,11 @@
   "fullCertificationStatus": "PASS",
   "fullCertificationFailedCheckIds": [],
   "fullCertificationEnvironmentFailures": [],
+  "finalFreezeCertificationStatus": "PASS",
+  "finalFreezeCertificationFailedCheckIds": [],
+  "finalFreezeCertificationEnvironmentFailures": [],
   "backupUnchangedThroughoutChallenges": true,
   "backupAggregateBeforeChallenges": "6f1aa4dfc27430deb7c211f879d00f7fd74d593444d5ec4b8a4343b635a4434e",
-  "backupAggregateAfterChallenges": "6f1aa4dfc27430deb7c211f879d00f7fd74d593444d5ec4b8a4343b635a4434e"
+  "backupAggregateAfterChallenges": "6f1aa4dfc27430deb7c211f879d00f7fd74d593444d5ec4b8a4343b635a4434e",
+  "postPublicationCertificationRevalidated": true
 }

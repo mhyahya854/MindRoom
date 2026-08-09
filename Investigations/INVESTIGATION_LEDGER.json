@@ -1,0 +1,423 @@
+{
+  "schemaVersion": 1,
+  "project": "MindRoom",
+  "frozenPlanningBaseline": "bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd",
+  "currentRemoteMainAtLastRun": "bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd",
+  "stage": "PRE_CODE_INVESTIGATION",
+  "lastRunAt": "2026-08-09T07:11:46.5815105Z",
+  "investigations": [
+    {
+      "id": "MR-INV-001",
+      "title": "Shared package bootstrap boundary and ownership",
+      "sourceReferences": [
+        "Graphify/00 Execution Control/PACKAGE_BOUNDARY_BASELINE.json",
+        "Graphify/03 Capability Map/CAPABILITY_REGISTRY.json",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+        "Graphify/09 Implementation/IMPLEMENTATION_QUEUE.md",
+        "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl",
+        "Graphify/10 Verification/RELEASE_GATE_MATRIX.json",
+        "Graphify/11 Completion/TASK_EXECUTION_DEPENDENCY_AUDIT.jsonl",
+        "Graphify/12 Source Documents/AFFINE_PROVENANCE.md",
+        "Codebase/package.json",
+        "Codebase/.yarnrc.yml",
+        "Codebase/.nvmrc",
+        "Codebase/tsconfig.json",
+        "Codebase/tools/cli/src/init.ts"
+      ],
+      "relatedCapabilities": [
+        "MR-CAP-001",
+        "MR-CAP-160"
+      ],
+      "relatedImplementationTasks": [
+        "MR-IMPL-BOOTSTRAP-001",
+        "MR-IMPL-001",
+        "MR-IMPL-160"
+      ],
+      "relatedReleaseGates": [
+        "GATE-WAVE_0"
+      ],
+      "question": "Can @mindroom/common be bootstrapped at the frozen target with a coherent workspace boundary, build contract, and unambiguous capability ownership before any Codebase mutation?",
+      "whyRequiredBeforeCode": "The bootstrap task is a prerequisite for all Wave 0 tasks and the wider implementation graph; an incorrect package boundary or capability owner would contaminate every downstream task and its receipts.",
+      "acceptanceCriteria": [
+        "The active Yarn workspace topology discovers Codebase/packages/common/mindroom without a root workspace-pattern change.",
+        "The pinned AFFiNE reference and active Codebase agree on the relevant Yarn, Node, and packages/common topology.",
+        "The planned package path and @mindroom/common name have no active or pinned-reference collision.",
+        "The package can remain isolated from @affine/core and renderer-only dependencies using existing repository conventions.",
+        "The frozen capability owner, contract, acceptance test, queue entry, and downstream dependency evidence identify one coherent bootstrap scope.",
+        "No proof step modifies Codebase."
+      ],
+      "priority": "CRITICAL",
+      "blockingLevel": "HARD",
+      "status": "BLOCKED",
+      "decision": "FROZEN_PLAN_CHANGE_CONTROL_REQUIRED. The workspace/package boundary is feasible, but MR-IMPL-BOOTSTRAP-001 is assigned to MR-CAP-160 by task.capabilityId, contract.capabilityId, and IMPLEMENTATION_QUEUE.md while task.capabilityIds and TEST-MR-BOOTSTRAP-001 assign it to MR-CAP-001; MR-CAP-160 already has primary task MR-IMPL-160 for Stable Identity Across File Movement. Mandatory post-step validation also fails because the recorded active immutable backup is absent and the live Graphify filesystem no longer matches the frozen backup receipt.",
+      "evidencePaths": [
+        "Investigations/Evidence/MR-INV-001/REPORT.md",
+        "Investigations/Evidence/MR-INV-001/EVIDENCE.json"
+      ],
+      "primarySources": [
+        "Graphify/14 AFFiNE Reference/Reference Tree/package.json",
+        "Graphify/12 Source Documents/AFFINE_PROVENANCE.md"
+      ],
+      "codebaseChangeRequiredNext": false,
+      "frozenPlanContradiction": true,
+      "notes": "Change control must reconcile the bootstrap support-task ownership and all duplicated contract/queue fields before Wave 0 authorization can be acted upon. FINAL_FREEZE_CERTIFICATION failed checks BAK-01, BAK-02, BAK-03, BAK-10, and BAK-11; Step 11b also failed because the verified active backup receipt is not the exact canonical post-Phase-9 state. The default shell Node v24.18.0 differs from Codebase/.nvmrc 22.23.1; that environment question remains assigned to MR-INV-006."
+    },
+    {
+      "id": "MR-INV-002",
+      "title": "Wave 0 application architecture preservation boundary",
+      "sourceReferences": [
+        "Graphify/02 Architecture Map/ARCHITECTURE_MAP.md",
+        "Graphify/02 Architecture Map/ENTRYPOINT_AND_BOOTSTRAP_REGISTRY.jsonl",
+        "Graphify/04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+      ],
+      "relatedCapabilities": [
+        "MR-CAP-001"
+      ],
+      "relatedImplementationTasks": [
+        "MR-IMPL-001"
+      ],
+      "relatedReleaseGates": [
+        "GATE-WAVE_0"
+      ],
+      "question": "Which application entrypoints, package boundaries, and registrations must Wave 0 preserve, and which exact changes are actually required by MR-IMPL-001?",
+      "whyRequiredBeforeCode": "MR-IMPL-001 unlocks Electron main, renderer, preload, testing, performance, office, and runtime-bundling work; an overbroad architecture edit would violate the KEEP contract.",
+      "acceptanceCriteria": [
+        "All active application entrypoints and runtime registrations mapped to MR-CAP-001 are verified against Codebase.",
+        "Required Wave 0 mutations are separated from already-correct preserved behavior.",
+        "Allowed, generated, and forbidden paths are reconciled with the actual build graph.",
+        "No unresolved architecture ownership ambiguity remains."
+      ],
+      "priority": "CRITICAL",
+      "blockingLevel": "HARD",
+      "status": "PENDING",
+      "decision": "",
+      "evidencePaths": [],
+      "primarySources": [],
+      "codebaseChangeRequiredNext": false,
+      "frozenPlanContradiction": false,
+      "notes": "Derived from the MR-IMPL-001 KEEP contract and its critical graph risk."
+    },
+    {
+      "id": "MR-INV-003",
+      "title": "Electron main, preload, renderer, and IPC trust boundaries",
+      "sourceReferences": [
+        "Graphify/02 Architecture Map/IPC_AND_PRELOAD_MAP.jsonl",
+        "Graphify/02 Architecture Map/COMMAND_AND_EVENT_MAP.jsonl",
+        "Graphify/02 Architecture Map/NETWORK_BOUNDARY_MAP.jsonl",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+      ],
+      "relatedCapabilities": [
+        "MR-CAP-002",
+        "MR-CAP-003",
+        "MR-CAP-004"
+      ],
+      "relatedImplementationTasks": [
+        "MR-IMPL-002",
+        "MR-IMPL-003",
+        "MR-IMPL-004"
+      ],
+      "relatedReleaseGates": [
+        "GATE-WAVE_0"
+      ],
+      "question": "What are the actual Electron process, privilege, preload exposure, and IPC registration boundaries that Wave 0 must preserve or constrain?",
+      "whyRequiredBeforeCode": "Privileged filesystem and credential operations must remain outside the renderer, and the three tasks have explicit dependency order and security invariants.",
+      "acceptanceCriteria": [
+        "BrowserWindow security settings and runtime process owners are proven from Codebase.",
+        "Every preload exposure and corresponding main-process handler family is mapped.",
+        "Renderer access to privileged operations is classified and bounded.",
+        "No unresolved IPC or security architecture risk remains before mutation."
+      ],
+      "priority": "CRITICAL",
+      "blockingLevel": "HARD",
+      "status": "PENDING",
+      "decision": "",
+      "evidencePaths": [],
+      "primarySources": [],
+      "codebaseChangeRequiredNext": false,
+      "frozenPlanContradiction": false,
+      "notes": "Tightly couples MR-IMPL-002, MR-IMPL-003, and MR-IMPL-004 because separating the bridge endpoints from their process owners would make the evidence incomplete."
+    },
+    {
+      "id": "MR-INV-004",
+      "title": "BlockSuite and page-mode integration surface",
+      "sourceReferences": [
+        "Graphify/03 Capability Map/CAPABILITY_EVIDENCE.jsonl",
+        "Graphify/05 Dependency and Impact/CAPABILITY_DEPENDENCY_GRAPH.json",
+        "Graphify/05 Dependency and Impact/Knowledge Graph/graph.json",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+      ],
+      "relatedCapabilities": [
+        "MR-CAP-005",
+        "MR-CAP-006"
+      ],
+      "relatedImplementationTasks": [
+        "MR-IMPL-005",
+        "MR-IMPL-006"
+      ],
+      "relatedReleaseGates": [
+        "GATE-WAVE_0"
+      ],
+      "question": "Which BlockSuite packages, editor specs, registrations, and page-mode APIs are the compatible preserved foundation for Wave 0?",
+      "whyRequiredBeforeCode": "MR-IMPL-005 is the prerequisite for page mode and multiple Wave 1 editing/canvas capabilities; version or API mistakes would invalidate downstream work.",
+      "acceptanceCriteria": [
+        "Active BlockSuite package versions and workspace boundaries are identified.",
+        "Page editor construction and spec registration paths are proven from Codebase.",
+        "AI-specific adjacent paths are separated from the non-AI foundation.",
+        "The KEEP decision is compatible with the pinned AFFiNE reference and licensing boundary."
+      ],
+      "priority": "CRITICAL",
+      "blockingLevel": "HARD",
+      "status": "PENDING",
+      "decision": "",
+      "evidencePaths": [],
+      "primarySources": [],
+      "codebaseChangeRequiredNext": false,
+      "frozenPlanContradiction": false,
+      "notes": "Derived from the MR-CAP-005 -> MR-CAP-006 dependency and the critical graph risk on both capabilities."
+    },
+    {
+      "id": "MR-INV-005",
+      "title": "Wave 0 local-first and offline sequencing",
+      "sourceReferences": [
+        "Graphify/02 Architecture Map/NETWORK_BOUNDARY_MAP.jsonl",
+        "Graphify/05 Dependency and Impact/EXCLUDED_SYSTEM_BOUNDARY_MAP.jsonl",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+        "Graphify/10 Verification/OFFLINE_TEST_PLAN.md"
+      ],
+      "relatedCapabilities": [
+        "MR-CAP-001",
+        "MR-CAP-002",
+        "MR-CAP-003",
+        "MR-CAP-004",
+        "MR-CAP-005",
+        "MR-CAP-006",
+        "MR-CAP-099"
+      ],
+      "relatedImplementationTasks": [
+        "MR-IMPL-001",
+        "MR-IMPL-002",
+        "MR-IMPL-003",
+        "MR-IMPL-004",
+        "MR-IMPL-005",
+        "MR-IMPL-006",
+        "MR-IMPL-099"
+      ],
+      "relatedReleaseGates": [
+        "GATE-WAVE_0",
+        "GATE-WAVE_1"
+      ],
+      "question": "Can Wave 0 satisfy its no-cloud, no-telemetry, offline-capable invariants while local-only network enforcement is scheduled in Wave 1?",
+      "whyRequiredBeforeCode": "The active AFFiNE-derived shell contains cloud-adjacent systems, while every Wave 0 contract asserts local-only behavior; a sequencing contradiction would block Wave 0 completion.",
+      "acceptanceCriteria": [
+        "Boot-time and core-path network dependencies are enumerated from actual registrations.",
+        "Optional/deferred network adapters are separated from mandatory runtime paths.",
+        "Wave 0 gate criteria are reconciled with MR-IMPL-099's Wave 1 placement.",
+        "No unresolved offline-first sequencing contradiction remains."
+      ],
+      "priority": "CRITICAL",
+      "blockingLevel": "HARD",
+      "status": "PENDING",
+      "decision": "",
+      "evidencePaths": [],
+      "primarySources": [],
+      "codebaseChangeRequiredNext": false,
+      "frozenPlanContradiction": false,
+      "notes": "Derived from explicit Wave 0 invariants and the frozen placement of local-only network enforcement in Wave 1."
+    },
+    {
+      "id": "MR-INV-006",
+      "title": "Wave 0 toolchain and cross-platform build compatibility",
+      "sourceReferences": [
+        "Graphify/00 Execution Control/PACKAGE_BOUNDARY_BASELINE.json",
+        "Graphify/02 Architecture Map/BUILD_AND_PACKAGING_MAP.md",
+        "Graphify/10 Verification/CROSS_PLATFORM_TEST_MATRIX.md",
+        "Graphify/10 Verification/TEST_COMMAND_REGISTRY.json",
+        "Codebase/package.json",
+        "Codebase/.nvmrc",
+        "Codebase/.yarnrc.yml"
+      ],
+      "relatedCapabilities": [
+        "MR-CAP-001",
+        "MR-CAP-002",
+        "MR-CAP-003",
+        "MR-CAP-004",
+        "MR-CAP-005",
+        "MR-CAP-006"
+      ],
+      "relatedImplementationTasks": [
+        "MR-IMPL-BOOTSTRAP-001",
+        "MR-IMPL-001",
+        "MR-IMPL-002",
+        "MR-IMPL-003",
+        "MR-IMPL-004",
+        "MR-IMPL-005",
+        "MR-IMPL-006"
+      ],
+      "relatedReleaseGates": [
+        "GATE-WAVE_0"
+      ],
+      "question": "Are the pinned Node, Yarn, TypeScript, Electron, native-module, and platform command assumptions available and mutually compatible for Wave 0 verification?",
+      "whyRequiredBeforeCode": "The active default Node v24.18.0 is outside the repository's >=22.12.0 <23.0.0 engine range and .nvmrc pins 22.23.1; execution must not begin with an unsupported toolchain.",
+      "acceptanceCriteria": [
+        "The exact supported runtime and package-manager versions are proven from repository files.",
+        "A compatible Node runtime is available or a deterministic pre-Wave-0 setup action is established.",
+        "Wave 0 build and test commands are portable or have explicit platform-specific owners.",
+        "Native/Electron module compatibility has no unresolved hard blocker."
+      ],
+      "priority": "HIGH",
+      "blockingLevel": "HARD",
+      "status": "PENDING",
+      "decision": "",
+      "evidencePaths": [],
+      "primarySources": [],
+      "codebaseChangeRequiredNext": false,
+      "frozenPlanContradiction": false,
+      "notes": "The runtime mismatch was observed during MR-INV-001 but is intentionally left for this separate investigation."
+    },
+    {
+      "id": "MR-INV-007",
+      "title": "Wave 0 test harness and release-gate evidence",
+      "sourceReferences": [
+        "Graphify/10 Verification/RELEASE_GATE_MATRIX.json",
+        "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl",
+        "Graphify/10 Verification/TEST_COMMAND_REGISTRY.json",
+        "Graphify/10 Verification/FIXTURE_QA_MATRIX.md",
+        "Graphify/11 Completion/FINAL_TEST_WAVE_OWNERSHIP.jsonl"
+      ],
+      "relatedCapabilities": [
+        "MR-CAP-001",
+        "MR-CAP-002",
+        "MR-CAP-003",
+        "MR-CAP-004",
+        "MR-CAP-005",
+        "MR-CAP-006"
+      ],
+      "relatedImplementationTasks": [
+        "MR-IMPL-BOOTSTRAP-001",
+        "MR-IMPL-001",
+        "MR-IMPL-002",
+        "MR-IMPL-003",
+        "MR-IMPL-004",
+        "MR-IMPL-005",
+        "MR-IMPL-006"
+      ],
+      "relatedReleaseGates": [
+        "GATE-WAVE_0"
+      ],
+      "question": "Can all 13 Wave 0 acceptance tests and VERIFY_WAVE_0_RECEIPT be executed with real repository commands and evidence without inventing a test harness?",
+      "whyRequiredBeforeCode": "GATE-WAVE_0 cannot pass on mapped test names alone; command ownership, fixtures, negative checks, and receipt production must be known before mutation.",
+      "acceptanceCriteria": [
+        "Every Wave 0 test ID maps to an executable repository-discovered command and owner.",
+        "Required fixtures and offline/cross-platform conditions are available or explicitly implementation-bound.",
+        "Receipt format and independent review responsibility are unambiguous.",
+        "No release-gate prerequisite is impossible before Wave 0 completion."
+      ],
+      "priority": "HIGH",
+      "blockingLevel": "HARD",
+      "status": "PENDING",
+      "decision": "",
+      "evidencePaths": [],
+      "primarySources": [],
+      "codebaseChangeRequiredNext": false,
+      "frozenPlanContradiction": false,
+      "notes": "The frozen matrix currently has 7 Wave 0 tasks, 13 tests, and one wave receipt."
+    },
+    {
+      "id": "MR-INV-008",
+      "title": "Pinned AFFiNE parity, transplant, and licence boundary",
+      "sourceReferences": [
+        "Graphify/12 Source Documents/AFFINE_PROVENANCE.md",
+        "Graphify/12 Source Documents/LICENCE_AND_ATTRIBUTION_MAP.md",
+        "Graphify/12 Source Documents/THIRD_PARTY_CODE_REGISTER.jsonl",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+        "Graphify/14 AFFiNE Reference/Reference Tree/package.json"
+      ],
+      "relatedCapabilities": [
+        "MR-CAP-001",
+        "MR-CAP-002",
+        "MR-CAP-003",
+        "MR-CAP-004",
+        "MR-CAP-005",
+        "MR-CAP-006"
+      ],
+      "relatedImplementationTasks": [
+        "MR-IMPL-BOOTSTRAP-001",
+        "MR-IMPL-001",
+        "MR-IMPL-002",
+        "MR-IMPL-003",
+        "MR-IMPL-004",
+        "MR-IMPL-005",
+        "MR-IMPL-006"
+      ],
+      "relatedReleaseGates": [
+        "GATE-WAVE_0"
+      ],
+      "question": "Do Wave 0 KEEP/ADAPT decisions rely only on legally usable, pinned AFFiNE/BlockSuite evidence, and does any task require a transplant-vs-invention receipt before code?",
+      "whyRequiredBeforeCode": "Every Wave 0 task requires pinned-reference searches, and restricted backend/native or embedded third-party scopes cannot be copied by assumption.",
+      "acceptanceCriteria": [
+        "The pinned upstream commit/tree/archive evidence is verified from the frozen repository.",
+        "Active-vs-reference deltas are classified for all Wave 0 target families.",
+        "MIT, mixed AFFiNE EE/MPL, and embedded third-party boundaries are separated.",
+        "Every transplant or invention decision required before Wave 0 is either approved or proven unnecessary."
+      ],
+      "priority": "HIGH",
+      "blockingLevel": "HARD",
+      "status": "PENDING",
+      "decision": "",
+      "evidencePaths": [],
+      "primarySources": [],
+      "codebaseChangeRequiredNext": false,
+      "frozenPlanContradiction": false,
+      "notes": "Restricted backend/native scopes are relevant to architecture and Electron boundaries even when the initial decision is KEEP_EXISTING."
+    },
+    {
+      "id": "MR-INV-009",
+      "title": "Wave 0 execution order and rollback checkpoints",
+      "sourceReferences": [
+        "Graphify/00 Execution Control/DEPENDENCY_WAVE_BASELINE.json",
+        "Graphify/05 Dependency and Impact/SAME_WAVE_EXECUTION_ORDER.json",
+        "Graphify/07 Reorganisation/BATCH_EXECUTION_PLAN.md",
+        "Graphify/07 Reorganisation/ROLLBACK_PLAN.jsonl",
+        "Graphify/11 Completion/TASK_EXECUTION_DEPENDENCY_AUDIT.jsonl"
+      ],
+      "relatedCapabilities": [
+        "MR-CAP-001",
+        "MR-CAP-002",
+        "MR-CAP-003",
+        "MR-CAP-004",
+        "MR-CAP-005",
+        "MR-CAP-006"
+      ],
+      "relatedImplementationTasks": [
+        "MR-IMPL-BOOTSTRAP-001",
+        "MR-IMPL-001",
+        "MR-IMPL-002",
+        "MR-IMPL-003",
+        "MR-IMPL-004",
+        "MR-IMPL-005",
+        "MR-IMPL-006"
+      ],
+      "relatedReleaseGates": [
+        "GATE-WAVE_0"
+      ],
+      "question": "What exact Wave 0 micro-batch order and reversible checkpoints satisfy the frozen dependency graph without mixing independent implementation tasks?",
+      "whyRequiredBeforeCode": "The bootstrap is audited as a prerequisite to every Wave 0 task, while Electron and page-mode tasks have additional same-wave dependencies; rollback must preserve the frozen Codebase baseline and user data.",
+      "acceptanceCriteria": [
+        "A deterministic topological order exists for all seven Wave 0 tasks.",
+        "Parallel-safe and strictly sequential task boundaries are identified.",
+        "Each micro-batch has scoped pre/post hashes, tests, receipts, and rollback actions.",
+        "No same-wave ordering artifact contradicts the canonical task dependency audit."
+      ],
+      "priority": "HIGH",
+      "blockingLevel": "HARD",
+      "status": "PENDING",
+      "decision": "",
+      "evidencePaths": [],
+      "primarySources": [],
+      "codebaseChangeRequiredNext": false,
+      "frozenPlanContradiction": false,
+      "notes": "Derived from the canonical dependency audit, which makes the bootstrap a prerequisite of all six primary Wave 0 tasks."
+    }
+  ]
+}

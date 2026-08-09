@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "project": "MindRoom",
+  "investigationId": "MR-INV-001",
+  "title": "Shared package bootstrap boundary and ownership",
+  "startedFromCommit": "bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd",
+  "observedRemoteMain": "bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd",
+  "completedAt": "2026-08-09T07:11:46.5815105Z",
+  "status": "BLOCKED",
+  "decision": "FROZEN_PLAN_CHANGE_CONTROL_REQUIRED",
+  "classification": "FROZEN_PLAN_CONTRADICTION",
+  "question": "Can @mindroom/common be bootstrapped at the frozen target with a coherent workspace boundary, build contract, and unambiguous capability ownership before any Codebase mutation?",
+  "conclusions": [
+    {
+      "id": "MR-INV-001-C01",
+      "statement": "The existing packages/*/* workspace glob includes the planned packages/common/mindroom path without a root workspace-pattern edit.",
+      "classification": "PROVEN_FROM_REPOSITORY",
+      "evidence": [
+        "Codebase/package.json#/workspaces",
+        "Graphify/00 Execution Control/PACKAGE_BOUNDARY_BASELINE.json#/workspacePatterns"
+      ]
+    },
+    {
+      "id": "MR-INV-001-C02",
+      "statement": "The tracked Yarn 4.13.0 CLI is present and read-only workspace listing discovers the existing packages/common packages.",
+      "classification": "EMPIRICALLY_VERIFIED_READ_ONLY",
+      "evidence": [
+        "Codebase/.yarnrc.yml#/yarnPath",
+        "Codebase/.yarn/releases/yarn-4.13.0.cjs"
+      ]
+    },
+    {
+      "id": "MR-INV-001-C03",
+      "statement": "The planned @mindroom/common name and packages/common/mindroom path are absent from the active Codebase and the pinned AFFiNE reference.",
+      "classification": "PROVEN_FROM_REPOSITORY",
+      "evidence": [
+        "Codebase/packages/common",
+        "Graphify/14 AFFiNE Reference/Reference Tree/packages/common"
+      ]
+    },
+    {
+      "id": "MR-INV-001-C04",
+      "statement": "Existing common-package conventions permit an isolated ESM TypeScript package with typed source exports and no @affine/core dependency.",
+      "classification": "PROVEN_FROM_REPOSITORY",
+      "evidence": [
+        "Codebase/packages/common/auth/package.json",
+        "Codebase/packages/common/error/package.json",
+        "Codebase/packages/common/error/tsconfig.json",
+        "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl:338"
+      ]
+    },
+    {
+      "id": "MR-INV-001-C05",
+      "statement": "MR-IMPL-BOOTSTRAP-001 has incompatible capability owners inside the frozen authority.",
+      "classification": "PROVEN_FROM_REPOSITORY",
+      "evidence": [
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1#/capabilityId",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1#/capabilityIds",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1#/contract/capabilityId",
+        "Graphify/09 Implementation/IMPLEMENTATION_QUEUE.md:9",
+        "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl:338#/capabilityIds",
+        "Graphify/03 Capability Map/CAPABILITY_REGISTRY.json#/capabilities/0/contract/acceptanceTests"
+      ]
+    },
+    {
+      "id": "MR-INV-001-C06",
+      "statement": "MR-CAP-160 already has primary task MR-IMPL-160 for Stable Identity Across File Movement, so assigning the bootstrap contract to MR-CAP-160 is not an innocuous alias.",
+      "classification": "PROVEN_FROM_REPOSITORY",
+      "evidence": [
+        "Graphify/03 Capability Map/CAPABILITY_REGISTRY.json#/capabilities/159",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:161"
+      ]
+    },
+    {
+      "id": "MR-INV-001-C07",
+      "statement": "No frozen authority rule was found that permits selecting one of the contradictory bootstrap capability owners by interpretation.",
+      "classification": "UNRESOLVED",
+      "evidence": [
+        "Graphify/11 Completion/TASK_OWNERSHIP_REPORT.json",
+        "Graphify/11 Completion/TASK_EXECUTION_DEPENDENCY_AUDIT.jsonl"
+      ]
+    },
+    {
+      "id": "MR-INV-001-C08",
+      "statement": "Mandatory frozen-plan verification fails because the recorded active immutable backup is absent and the current Graphify filesystem does not reproduce the backup receipt.",
+      "classification": "EMPIRICALLY_VERIFIED_READ_ONLY",
+      "evidence": [
+        "Graphify/00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
+        "Graphify/11 Completion/validate_final_graphify_freeze.py",
+        "Graphify/11 Completion/verify_step11b_results.py"
+      ]
+    }
+  ],
+  "contradiction": {
+    "present": true,
+    "severity": "HARD",
+    "left": {
+      "capabilityId": "MR-CAP-160",
+      "sources": [
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1#/capabilityId",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1#/contract/capabilityId",
+        "Graphify/09 Implementation/IMPLEMENTATION_QUEUE.md:9"
+      ]
+    },
+    "right": {
+      "capabilityId": "MR-CAP-001",
+      "sources": [
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1#/capabilityIds/0",
+        "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl:338#/capabilityIds/0",
+        "Graphify/03 Capability Map/CAPABILITY_REGISTRY.json#/capabilities/0/contract/acceptanceTests"
+      ]
+    },
+    "collision": {
+      "capabilityId": "MR-CAP-160",
+      "existingPrimaryTaskId": "MR-IMPL-160",
+      "existingPrimaryTaskPurpose": "Stable Identity Across File Movement",
+      "source": "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:161"
+    },
+    "changeControlRequired": true
+  },
+  "acceptanceCriteria": [
+    {
+      "criterion": "Workspace topology discovers the planned path without a root pattern change.",
+      "result": "PASS",
+      "classification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "criterion": "Active and pinned reference agree on relevant topology/tool versions.",
+      "result": "PASS",
+      "classification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "criterion": "Planned path and package name have no collision.",
+      "result": "PASS",
+      "classification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "criterion": "Package can be isolated from renderer/core dependencies.",
+      "result": "PASS_TO_PRE_CODE_LIMIT",
+      "classification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "criterion": "Frozen ownership and receipt scope identify one coherent capability.",
+      "result": "FAIL",
+      "classification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "criterion": "No proof step modifies Codebase.",
+      "result": "PASS",
+      "classification": "EMPIRICALLY_VERIFIED_READ_ONLY"
+    }
+  ],
+  "commands": [
+    "git status --short --branch",
+    "git fetch origin",
+    "git rev-parse HEAD",
+    "git rev-parse origin/main",
+    "git ls-remote origin refs/heads/main",
+    "git diff -- Codebase",
+    "git status --short -- Codebase",
+    "node Codebase/.yarn/releases/yarn-4.13.0.cjs --version",
+    "node Codebase/.yarn/releases/yarn-4.13.0.cjs workspaces list --json",
+    "read-only JSON/JSONL parsing of frozen task, capability, test, gate, provenance, and dependency artifacts",
+    "python Graphify/11 Completion/validate_final_graphify_freeze.py --mode FINAL_FREEZE_CERTIFICATION --verify-only",
+    "python Graphify/11 Completion/verify_step11b_results.py --verify-only"
+  ],
+  "fileHashes": {
+    "Codebase/package.json": "6ce694262f8b3df1ca4bcf54acac62d60ef4bf7784419f1bfefb9858077e4ddf",
+    "Codebase/.yarnrc.yml": "ccc952998c861a4979579f0ee46db8188d2ff531c015bedea4da59f8f26a0c63",
+    "Codebase/.nvmrc": "7d2df647f25529bd87500319c41564e032e2be642e565350fa6136d7a1ec4d10",
+    "Codebase/tsconfig.json": "ab93b55858d2328b14aecc5d7c7477d108078fd92b1fa16941e3fabfa1eb2af9",
+    "Graphify/14 AFFiNE Reference/Reference Tree/package.json": "729e6593cb5c203606dc938ae318bf1a06f1f955b05833eb74a354feeb2909b5",
+    "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl": "dd10d1d3d9350bbd0997577dccf20fe11eac745ff5e78d97df9ffa12ba6a0412",
+    "Graphify/03 Capability Map/CAPABILITY_REGISTRY.json": "58e136494d09fa10404e2a9d0a51c5ac800860c17025c0c48c377df0466d7afa",
+    "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl": "75d6813eb5062cbc6f70c453df01f7f9d6687b17d48f5ef75a44770fb803bba0"
+  },
+  "toolchainObservation": {
+    "repositoryNodeEngine": ">=22.12.0 <23.0.0",
+    "repositoryNvmrc": "22.23.1",
+    "repositoryYarn": "4.13.0",
+    "defaultNodeObserved": "24.18.0",
+    "codexBundledNodeObserved": "24.14.0",
+    "classification": "DEFERRED_TO_MR_INV_006"
+  },
+  "frozenValidation": {
+    "finalFreezeCertification": {
+      "status": "FAIL",
+      "exitCode": 1,
+      "failedChecks": [
+        "BAK-01",
+        "BAK-02",
+        "BAK-03",
+        "BAK-10",
+        "BAK-11"
+      ],
+      "receiptSourceFileCount": 13446,
+      "receiptBackupFileCount": 13446,
+      "scannedSourceFileCount": 13447,
+      "scannedBackupFileCount": 0,
+      "activeBackupPath": "C:/Users/mhyah/Downloads/Code/MindRoom-Recovery/Graphify-final-converged-pre-review-backup-20260808-151008",
+      "activeBackupExists": false
+    },
+    "step11b": {
+      "status": "FAIL",
+      "exitCode": 1,
+      "reason": "Verified active backup receipt is not the exact canonical post-Phase-9 state."
+    },
+    "graphifyGitModified": false,
+    "graphifyFilesystemCertified": false
+  },
+  "codebaseIntegrity": {
+    "gitTreeAtStart": "bbf383e3418da4f613f58719160bb7cbd5709ffc",
+    "gitDiffEmpty": true,
+    "gitStatusShortEmpty": true,
+    "frozenBaselineFileCount": 10080,
+    "frozenBaselineDirectoryCount": 2548,
+    "frozenBaselineAggregateSha256": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748"
+  },
+  "projectProgress": {
+    "investigationsResolved": 0,
+    "investigationsTotal": 9,
+    "investigationPercent": 0.0,
+    "hardBlockers": 2,
+    "canonicalImplementationTasksCompleted": 0,
+    "canonicalImplementationTasksTotal": 162,
+    "canonicalImplementationPercent": 0.0,
+    "waveGatesPassed": 0,
+    "waveGatesTotal": 6,
+    "capabilityValidationGatesPassed": 0,
+    "capabilityValidationGatesTotal": 161,
+    "applicationReleaseGatesPassed": 0,
+    "applicationReleaseGatesTotal": 1,
+    "allCanonicalGatesPassed": 0,
+    "allCanonicalGatesTotal": 168
+  },
+  "hardBlockerIds": [
+    "MR-BLOCK-001",
+    "MR-BLOCK-002"
+  ],
+  "frozenPlanContradiction": true,
+  "codebaseChangeRequiredNext": false,
+  "codebaseModified": false
+}

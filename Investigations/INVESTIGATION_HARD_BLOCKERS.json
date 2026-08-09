@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "project": "MindRoom",
+  "stage": "PRE_CODE_INVESTIGATION",
+  "lastUpdatedAt": "2026-08-09T07:11:46.5815105Z",
+  "blockers": [
+    {
+      "blockerId": "MR-BLOCK-001",
+      "investigationId": "MR-INV-001",
+      "description": "The frozen bootstrap task has contradictory capability ownership: MR-IMPL-BOOTSTRAP-001.task.capabilityId, contract.capabilityId, and IMPLEMENTATION_QUEUE.md identify MR-CAP-160, while task.capabilityIds, TEST-MR-BOOTSTRAP-001, and MR-CAP-001's acceptance-test contract identify MR-CAP-001. MR-CAP-160 already has primary task MR-IMPL-160 for Stable Identity Across File Movement.",
+      "sourceEvidence": [
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:161",
+        "Graphify/09 Implementation/IMPLEMENTATION_QUEUE.md:9",
+        "Graphify/03 Capability Map/CAPABILITY_REGISTRY.json#/capabilities/0",
+        "Graphify/03 Capability Map/CAPABILITY_REGISTRY.json#/capabilities/159",
+        "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl:338",
+        "Investigations/Evidence/MR-INV-001/EVIDENCE.json"
+      ],
+      "whyItBlocksImplementation": "Wave 0 cannot produce trustworthy task, capability, test, and release-gate receipts when the foundational support task has two incompatible authoritative owners, one of which is already owned by a different primary implementation task.",
+      "resolutionRequired": "Run explicit frozen-plan change control to select and apply one bootstrap support-task capability owner consistently across IMPLEMENTATION_TASKS.jsonl, IMPLEMENTATION_QUEUE.md, implementation contracts, capability acceptance tests, dependency/ownership derivatives, and validators; then independently revalidate the full frozen authority.",
+      "frozenPlanChangeControlRequired": true,
+      "userInputRequired": false,
+      "externalDependencyRequired": false,
+      "status": "OPEN"
+    },
+    {
+      "blockerId": "MR-BLOCK-002",
+      "investigationId": "MR-INV-001",
+      "description": "Mandatory frozen Graphify verification fails. FINAL_FREEZE_CERTIFICATION reports failed checks BAK-01, BAK-02, BAK-03, BAK-10, and BAK-11: the recorded active immutable backup path is absent, the live Graphify scan has 13447 files versus the receipt's 13446, the backup scan has zero files, and live/backup aggregates do not reproduce the receipt. Step 11b also exits 1 because the verified active backup receipt is not the exact canonical post-Phase-9 state.",
+      "sourceEvidence": [
+        "Graphify/00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
+        "Graphify/00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json",
+        "Graphify/11 Completion/validate_final_graphify_freeze.py",
+        "Graphify/11 Completion/verify_step11b_results.py",
+        "Investigations/Evidence/MR-INV-001/EVIDENCE.json"
+      ],
+      "whyItBlocksImplementation": "The frozen planning authority cannot be certified as the exact protected post-Phase-9 state, so it is not safe to use it as the authoritative mutation boundary for Codebase execution.",
+      "resolutionRequired": "Use explicit frozen-plan recovery/change control to restore or recreate a genuinely immutable bound backup, remove or formally account for non-authoritative filesystem drift, regenerate cryptographically bound backup evidence, rerun FINAL_FREEZE_CERTIFICATION and Step 11b to PASS, and independently review the repaired frozen state. Do not delete or rewrite Graphify artifacts inside this investigation loop.",
+      "frozenPlanChangeControlRequired": true,
+      "userInputRequired": false,
+      "externalDependencyRequired": true,
+      "status": "OPEN"
+    }
+  ]
+}

@@ -1,5 +1,32 @@
 # MR-INV-001 — Shared package bootstrap boundary and ownership
 
+## Authorized change-control resolution
+
+Status: `COMPLETE`
+
+The original investigation correctly stopped after discovering two hard blockers. Explicit frozen-plan change control subsequently moved both through `DISCOVERED → CHANGE_CONTROL_AUTHORIZED → RESOLVED` without modifying `Codebase/`.
+
+- Canonical bootstrap owner: `MR-CAP-001` (Application architecture).
+- Previous contradiction: task root/contract/queue used `MR-CAP-160`; owner set/test/capability contract used `MR-CAP-001`.
+- `MR-CAP-160` retains its own primary task, `MR-IMPL-160` (Stable Identity Across File Movement).
+- Current backup backend: `GITHUB_NATIVE_IMMUTABLE_GIT_REF`.
+- Persistent laptop backup required: `false`.
+- Verified pre-change tag: `mindroom-backup/change-control/20260809-103711` → `7b311585f94bc7c251c79e2f8ff67a12ef30d113`.
+- Frozen certification: core PASS; full PASS; final PASS; 198 checks and zero failures.
+- Adversarial suite: 95/95 PASS; zero exemptions; zero baseline subtraction.
+- Step 11b: PASS with 198 validator IDs and 95 challenge IDs; zero missing, unexpected, duplicate, or failed IDs.
+- Codebase: 10,080 files; 2,548 directories; aggregate `91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748`; Git tree `bbf383e3418da4f613f58719160bb7cbd5709ffc`; zero modifications.
+- Wave 0: `READY_NOT_STARTED`; implementation performed: `false`; application released: `false`.
+- MR-INV-002 was not started.
+
+All six MR-INV-001 acceptance criteria now pass at the pre-code boundary.
+
+---
+
+## Original invocation record (preserved verbatim)
+
+# MR-INV-001 — Shared package bootstrap boundary and ownership
+
 ## Investigation ID
 
 `MR-INV-001`

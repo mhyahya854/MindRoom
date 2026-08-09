@@ -6,7 +6,7 @@ Wave 0 remains READY_NOT_STARTED and all Codebase execution remains blocked pend
 
 ## WAVE_0
 
-- `MR-IMPL-BOOTSTRAP-001` — Bootstrap @mindroom/common Shared Package (MR-CAP-160)
+- `MR-IMPL-BOOTSTRAP-001` — Bootstrap @mindroom/common Shared Package (MR-CAP-001)
 - `MR-IMPL-001` — Application architecture (MR-CAP-001)
 - `MR-IMPL-002` — Electron main (MR-CAP-002)
 - `MR-IMPL-003` — Renderer (MR-CAP-003)

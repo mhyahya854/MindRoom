@@ -1,48 +1,47 @@
 # MindRoom Pre-Code Investigation Status
 
-Updated: 2026-08-09T07:11:46.5815105Z
+Updated: 2026-08-09T16:28:13+03:00
 
 ## Control state
 
-- Frozen planning baseline: `bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd`
-- Current GitHub main observed before publication: `bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd`
+- Starting GitHub main: `7b311585f94bc7c251c79e2f8ff67a12ef30d113`
 - Investigation stage: `PRE_CODE_INVESTIGATION`
-- Current investigation: `MR-INV-001 — Shared package bootstrap boundary and ownership`
-- Next investigation: none until `MR-BLOCK-001` is resolved; then revalidate `MR-INV-001`
+- Completed investigation: `MR-INV-001 — Shared package bootstrap boundary and ownership`
+- Next eligible investigation: `MR-INV-002` (**not started in this run**)
 - Wave 0 authorized: **NO**
+- Wave 0 state: `READY_NOT_STARTED`
+- Codebase execution: `BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION`
 - Codebase modified: **NO**
 
 ## Investigation progress
 
 - Total investigations: **9**
-- Complete: **0**
+- Complete: **1**
 - Pending: **8**
-- Blocked: **1**
-- Not required: **0**
-- Resolved: **0 / 9**
-- Investigation completion: **0.00%**
-- Investigations remaining: **9**
-- Hard blockers: **2**
+- Blocked: **0**
+- Investigation completion: **11.11%**
+- Investigations remaining: **8**
+- Active hard blockers: **0**
 
-`BLOCKED` does not count as resolved.
+## Resolved change control
 
-## Frozen planning
-
-- Mapping/freeze state: `FROZEN`
-- Readiness: **BLOCKED — frozen-plan change control required**
-- Blocking contradiction: `MR-BLOCK-001`
-- Frozen validation failure: `MR-BLOCK-002`
-- Final-freeze validation: **FAIL** (`BAK-01`, `BAK-02`, `BAK-03`, `BAK-10`, `BAK-11`)
-- Step 11b: **FAIL** (`Verified active backup receipt is not the exact canonical post-Phase-9 state.`)
-- Wave 0 state: `READY_NOT_STARTED`
-- Codebase execution: `BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION`
+- `MR-BLOCK-001`: **RESOLVED** — bootstrap ownership is canonically `MR-CAP-001`; `MR-CAP-160` retains primary task `MR-IMPL-160`.
+- `MR-BLOCK-002`: **RESOLVED** — current backup backend is `GITHUB_NATIVE_IMMUTABLE_GIT_REF`; historical laptop paths are nonactive.
+- Pre-change GitHub tag: `mindroom-backup/change-control/20260809-103711` (**VERIFIED**)
+- Persistent laptop backup required: **FALSE**
+- Core certification: **PASS**
+- Full certification: **PASS**
+- Final freeze certification: **PASS** (198 checks, 0 failures)
+- Challenges: **PASS** (95/95, 0 exemptions, 0 baseline subtraction)
+- Step 11b: **PASS**
 
 ## Canonical implementation progress
 
 - Canonical implementation tasks completed: **0 / 162**
-- Canonical implementation task completion: **0.00%**
+- Implementation completion: **0.00%**
 - Implementation tasks remaining: **162**
-- This is task-count completion, not an effort estimate.
+- Implementation performed: **NO**
+- Application released: **NO**
 
 ## Release-gate progress
 
@@ -54,13 +53,12 @@ Updated: 2026-08-09T07:11:46.5815105Z
 
 ## Distance from 100%
 
-- Planning/freeze remaining: **2 hard blockers requiring frozen-plan recovery/change control**
-- Investigations remaining: **9**
-- Hard blockers remaining: **2**
+- Planning/freeze remaining: **0 change-control blockers; frozen state re-certified**
+- Investigations remaining: **8**
+- Canonical implementation remaining: **100.00%**
 - Implementation tasks remaining: **162**
 - Release gates remaining: **168**
-- Overall canonical implementation completion: **0.00%**
 
 ## Current decision
 
-The `@mindroom/common` workspace location and build boundary are feasible from repository evidence. Implementation must nevertheless remain stopped because the frozen plan assigns `MR-IMPL-BOOTSTRAP-001` to both `MR-CAP-160` and `MR-CAP-001` across canonical task, queue, capability, and test artifacts. Mandatory frozen validation also fails because the recorded active immutable backup is absent and the live Graphify filesystem no longer reproduces its receipt. Neither condition can be repaired or interpreted inside the investigation stage.
+`MR-INV-001 = COMPLETE`. Do not begin Codebase changes, Wave 0, or MR-INV-002 without the separately required authorization/workflow.

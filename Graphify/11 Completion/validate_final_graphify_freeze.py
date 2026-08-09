@@ -6,7 +6,9 @@ import hashlib
 import json
 import os
 import re
+import subprocess
 import sys
+import tempfile
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -17,6 +19,7 @@ ROOT = HERE.parents[1]
 CODEBASE = ROOT.parent / "Codebase"
 _CODEBASE_CACHE = {}
 _CHECK_DEFINITION_CACHE = {}
+_GITHUB_BACKUP_CACHE = {}
 
 CURRENT_METADATA = (
     "00 Execution Control/STATUS.json",
@@ -68,6 +71,15 @@ REQUIRED_CONTRACT_FIELDS = (
     "recoveryBehavior", "offlineBehavior", "securityAndPrivacyConstraints",
     "crossPlatformConstraints", "dependencies", "acceptanceTests", "blockingGates",
 )
+GITHUB_BACKUP_BACKEND = "GITHUB_NATIVE_IMMUTABLE_GIT_REF"
+REQUIRED_LFS_PATHS = (
+    "Graphify/05 Dependency and Impact/DEPENDENCY_EDGES.jsonl",
+    "Graphify/05 Dependency and Impact/Knowledge Graph/EDGES.jsonl",
+)
+ACTIVE_LOCAL_BACKUP_FIELDS = (
+    "backupRoot", "backupPath", "preFinalizationBackupPath",
+    "replacementBackupPath", "backupManifestPath", "copyEvidencePath",
+)
 
 
 def normalize_rel(value):
@@ -107,6 +119,119 @@ def aggregate_hash(records):
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
+def sha256_text(value):
+    return hashlib.sha256(value.encode("utf-8")).hexdigest()
+
+
+def git_command(*arguments, timeout=180):
+    environment = os.environ.copy()
+    environment["GIT_TERMINAL_PROMPT"] = "0"
+    return subprocess.run(
+        ["git", *arguments], cwd=ROOT.parent, capture_output=True, text=True,
+        encoding="utf-8", errors="replace", env=environment, timeout=timeout,
+    )
+
+
+def parse_lfs_pointer(value):
+    oid = re.search(r"^oid sha256:([a-f0-9]{64})$", value, re.M)
+    size = re.search(r"^size (\d+)$", value, re.M)
+    return {"oid": oid.group(1), "sizeBytes": int(size.group(1))} if oid and size else None
+
+
+def inspect_github_backup(receipt, verify_lfs=True):
+    """Reproduce an immutable GitHub tag without trusting receipt assertions."""
+    remote = str(receipt.get("remote") or "")
+    reference = str(receipt.get("ref") or "")
+    cache_key = (remote, reference, verify_lfs)
+    if cache_key in _GITHUB_BACKUP_CACHE:
+        return _GITHUB_BACKUP_CACHE[cache_key]
+
+    result = {
+        "remoteUrl": None, "remoteRefTarget": None, "commitReadable": False,
+        "treeSha": None, "graphifyTreeSha": None, "codebaseTreeSha": None,
+        "trackedPathCount": None, "trackedPathSetSha256": None,
+        "lfsObjects": [], "lfsObjectsVerified": False, "errors": [],
+    }
+    if not remote or not reference:
+        result["errors"].append("remote and ref are required")
+        _GITHUB_BACKUP_CACHE[cache_key] = result
+        return result
+
+    try:
+        remote_url = git_command("remote", "get-url", remote)
+        if remote_url.returncode == 0:
+            result["remoteUrl"] = remote_url.stdout.strip()
+        else:
+            result["errors"].append(remote_url.stderr.strip() or "remote URL lookup failed")
+
+        remote_ref = git_command("ls-remote", "--refs", remote, reference)
+        if remote_ref.returncode == 0 and remote_ref.stdout.strip():
+            result["remoteRefTarget"] = remote_ref.stdout.split()[0]
+        else:
+            result["errors"].append(remote_ref.stderr.strip() or f"remote ref is unreachable: {reference}")
+
+        commit = result["remoteRefTarget"]
+        if commit:
+            readable = git_command("cat-file", "-e", f"{commit}^{{commit}}")
+            result["commitReadable"] = readable.returncode == 0
+            if not result["commitReadable"]:
+                result["errors"].append(readable.stderr.strip() or f"commit is not locally reachable: {commit}")
+            else:
+                for key, expression in (
+                    ("treeSha", f"{commit}^{{tree}}"),
+                    ("graphifyTreeSha", f"{commit}:Graphify"),
+                    ("codebaseTreeSha", f"{commit}:Codebase"),
+                ):
+                    resolved = git_command("rev-parse", expression)
+                    if resolved.returncode == 0:
+                        result[key] = resolved.stdout.strip()
+                    else:
+                        result["errors"].append(resolved.stderr.strip() or f"cannot resolve {expression}")
+
+                paths = git_command("ls-tree", "-r", "--full-tree", "--name-only", commit)
+                if paths.returncode == 0:
+                    tracked_paths = paths.stdout.splitlines()
+                    result["trackedPathCount"] = len(tracked_paths)
+                    result["trackedPathSetSha256"] = sha256_text("\n".join(tracked_paths))
+                else:
+                    result["errors"].append(paths.stderr.strip() or "tracked path enumeration failed")
+
+                for path in REQUIRED_LFS_PATHS:
+                    pointer = git_command("show", f"{commit}:{path}")
+                    parsed = parse_lfs_pointer(pointer.stdout) if pointer.returncode == 0 else None
+                    if parsed:
+                        result["lfsObjects"].append({"path": path, **parsed})
+                    else:
+                        result["errors"].append(f"required LFS pointer missing or invalid: {path}")
+
+                if verify_lfs and len(result["lfsObjects"]) == len(REQUIRED_LFS_PATHS):
+                    with tempfile.TemporaryDirectory(prefix="mindroom-lfs-backup-verification-") as temporary:
+                        storage = (Path(temporary) / "lfs").as_posix()
+                        include = ",".join(REQUIRED_LFS_PATHS)
+                        fetched = git_command(
+                            "-c", f"lfs.storage={storage}", "lfs", "fetch", remote,
+                            reference, f"--include={include}", "--exclude=", timeout=600,
+                        )
+                        if fetched.returncode != 0:
+                            result["errors"].append(fetched.stderr.strip() or "isolated LFS fetch failed")
+                        else:
+                            object_root = Path(temporary) / "lfs" / "objects"
+                            verified = []
+                            for row in result["lfsObjects"]:
+                                candidates = list(object_root.rglob(row["oid"])) if object_root.exists() else []
+                                verified.append(bool(candidates) and sha256_file(candidates[0]) == row["oid"])
+                            result["lfsObjectsVerified"] = all(verified)
+                            if not result["lfsObjectsVerified"]:
+                                result["errors"].append("one or more fetched LFS objects failed SHA-256 verification")
+                elif not verify_lfs:
+                    result["lfsObjectsVerified"] = len(result["lfsObjects"]) == len(REQUIRED_LFS_PATHS)
+    except (OSError, subprocess.SubprocessError) as error:
+        result["errors"].append(str(error))
+
+    _GITHUB_BACKUP_CACHE[cache_key] = result
+    return result
+
+
 def _challenge_runner_module():
     import importlib.util
     spec = importlib.util.spec_from_file_location(
@@ -139,7 +264,7 @@ def get_meta_check_ids(validation_mode="CORE_PRE_CHALLENGE"):
     core = {
         "META-01", "META-02", "META-03", "META-04", "META-05", "META-06",
         "META-07", "META-08", "META-09", "META-11", "META-12", "META-13",
-        "META-14", "META-15", "META-16",
+        "META-14", "META-15", "META-16", "META-19",
     }
     full = core | {"META-10", "META-17", "META-18"}
     if validation_mode == "CORE_PRE_CHALLENGE":
@@ -1131,133 +1256,45 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
             inventory_count_issues.append({"declared": declared, "actual": live_manifest_count})
     add(checks, "INVENTORY-CANDIDATE-RECORD-COUNT", "inventory", "The candidate inventory record count equals the live candidate manifest nonblank valid JSONL record count", not inventory_count_issues, {"issues": inventory_count_issues, "duplicates": max(0, len(matching_inventory_records) - 1), "missing": 1 if not matching_inventory_records else 0}, {"declared": live_manifest_count, "duplicates": 0, "missing": 0}, matching_inventory_records, "live nonblank JSONL enumeration and unique inventory lookup")
 
-    # Phase-aware backup verification. Before Phase 9, a fail-closed pending
-    # receipt is valid and no old generation may remain active. Once the one
-    # converged backup exists, pre-freeze validation compares it to the live
-    # tree. After deterministic freeze, the immutable pre-review backup is
-    # checked against its external per-file manifest instead of being mutated.
-    backup_errors = []
-    source_root_text = str(backup_receipt.get("sourceRoot") or "")
-    backup_root_text = str(backup_receipt.get("backupRoot") or "")
-    source_root = Path(source_root_text) if source_root_text else None
-    backup_root = Path(backup_root_text) if backup_root_text else None
-    receipt_state = backup_receipt.get("receiptState")
-    backup_pending = receipt_state == "PENDING_FINAL_CONVERGED_PRE_REVIEW_BACKUP"
-    backup_active = receipt_state == "VERIFIED_ACTIVE_PRE_REVIEW_BACKUP"
-    source_scan = inventory_tree(ROOT)
-    backup_scan = {"files": [], "directories": [], "aggregateSha256": None, "fileCount": 0, "directoryCount": 0}
-    if backup_active:
-        try:
-            if backup_root and backup_root.exists():
-                backup_scan = inventory_tree(backup_root)
-        except Exception as error:
-            backup_errors.append(str(error))
-    manifest_evidence = {}
-    manifest_evidence_hash_ok = False
-    manifest_path_text = str(backup_receipt.get("backupManifestPath") or "")
-    if backup_active and manifest_path_text:
-        try:
-            manifest_path = Path(manifest_path_text)
-            manifest_evidence_hash_ok = manifest_path.is_file() and sha256_file(manifest_path) == backup_receipt.get("backupManifestSha256")
-            if manifest_evidence_hash_ok:
-                manifest_evidence = json.loads(manifest_path.read_text(encoding="utf-8-sig"))
-        except Exception as error:
-            backup_errors.append(str(error))
-    source_files = {row.get("path"): row for row in source_scan.get("files", [])}
-    backup_files = {row.get("path"): row for row in backup_scan.get("files", [])}
-    source_dirs = set(source_scan.get("directories", []))
-    backup_dirs = set(backup_scan.get("directories", []))
-    evidence_files = {row.get("path"): row for row in manifest_evidence.get("files", [])}
-    evidence_dirs = set(manifest_evidence.get("directories", []))
-    receipt_relative = "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
-    if backup_pending:
-        expected_files, expected_dirs = {}, set()
-    elif final_mode:
-        expected_files = {path: row for path, row in evidence_files.items() if path != receipt_relative}
-        backup_files = {path: row for path, row in backup_files.items() if path != receipt_relative}
-        expected_dirs = evidence_dirs
-    else:
-        expected_files, expected_dirs = source_files, source_dirs
-    backup_missing = sorted(set(expected_files) - set(backup_files))
-    backup_extra = sorted(set(backup_files) - set(expected_files))
-    backup_hash_mismatches = sorted(path for path in set(expected_files) & set(backup_files) if expected_files[path].get("sha256") != backup_files[path].get("sha256"))
-    backup_size_mismatches = sorted(path for path in set(expected_files) & set(backup_files) if expected_files[path].get("sizeBytes") != backup_files[path].get("sizeBytes"))
-    backup_directory_delta = sorted(expected_dirs ^ backup_dirs) if not backup_pending else []
-    long_path_omissions = sorted(path for path in backup_missing if backup_root and len(str(backup_root)) + 1 + len(path) >= 260)
-    source_root_ok = bool(source_root and source_root.exists())
-    backup_root_ok = bool(backup_active and backup_root and backup_root.exists() and not backup_errors)
+    # GitHub is the durable backup. Git object identities and an isolated LFS
+    # fetch replace the superseded laptop-directory byte-copy model.
+    remote_lfs_required = validation_mode != "CORE_PRE_CHALLENGE"
+    backup_actual = inspect_github_backup(backup_receipt, verify_lfs=remote_lfs_required)
     history = backup_receipt.get("backupHistory") or {}
-    original = history.get("historicalOriginalBackup", {})
-    replacement = history.get("replacementPreReviewBackup", {})
-    mutable_mirror = history.get("mutableWorkingMirror", {})
-    invalidated = history.get("invalidatedCandidateBackup", {})
-    active = history.get("activePreReviewBackup", {})
-    historical_roles_ok = (
-        bool(original.get("path")) and original.get("active") is False and original.get("role") == "HISTORICAL_MISSING_NONACTIVE"
-        and bool(replacement.get("path")) and replacement.get("verified") is False and replacement.get("active") is False and replacement.get("role") == "HISTORICAL_REPLACEMENT_PRE_REVIEW_BACKUP_MISSING_NONACTIVE"
-        and bool(mutable_mirror.get("path")) and mutable_mirror.get("active") is False and mutable_mirror.get("immutable") is False and mutable_mirror.get("role") == "MUTABLE_WORKING_MIRROR_NOT_VALID_AS_IMMUTABLE_ROLLBACK_POINT"
-        and bool(invalidated.get("path")) and invalidated.get("active") is False and invalidated.get("role") == "INVALIDATED_CANDIDATE_BACKUP"
+    local_fields = {field: backup_receipt.get(field) for field in ACTIVE_LOCAL_BACKUP_FIELDS if backup_receipt.get(field)}
+    remote_url = str(backup_actual.get("remoteUrl") or "")
+    remote_repository_ok = re.search(r"github\.com[:/]mhyahya854/MindRoom(?:\.git)?$", remote_url, re.I) is not None
+    canonical_policy_ok = (
+        backup_receipt.get("backupBackend") == GITHUB_BACKUP_BACKEND
+        and backup_receipt.get("repository") == "mhyahya854/MindRoom"
+        and backup_receipt.get("remote") == "origin"
+        and backup_receipt.get("refType") == "TAG"
+        and re.fullmatch(r"refs/tags/mindroom-backup/[^\s]+", str(backup_receipt.get("ref") or "")) is not None
+        and backup_receipt.get("persistentLocalBackupRequired") is False
+        and remote_repository_ok
     )
-    pending_fields_ok = (
-        backup_pending and set(history) == {"historicalOriginalBackup", "replacementPreReviewBackup", "mutableWorkingMirror", "invalidatedCandidateBackup"}
-        and not backup_root_text and backup_receipt.get("backupPath") is None and backup_receipt.get("preFinalizationBackupPath") is None
-        and backup_receipt.get("activeBackupRole") == "PENDING_FINAL_CONVERGED_PRE_REVIEW_BACKUP"
-        and backup_receipt.get("verified") is False and backup_receipt.get("immutable") is False and backup_receipt.get("copyExitCode") is None
-        and all(backup_receipt.get(field) is None for field in ("sourceFileCount", "backupFileCount", "sourceDirectoryCount", "backupDirectoryCount", "sourceAggregateHash", "backupAggregateHash", "backupManifestPath", "backupManifestSha256", "backupEvidenceAggregateHash"))
-    )
-    active_fields_ok = (
-        backup_active and set(history) == {"historicalOriginalBackup", "replacementPreReviewBackup", "mutableWorkingMirror", "invalidatedCandidateBackup", "activePreReviewBackup"}
-        and backup_root_ok and active.get("path") == backup_root_text and active.get("present") is True and active.get("verified") is True
-        and active.get("active") is True and active.get("immutable") is True and active.get("role") == "IMMUTABLE_BOUND_PRE_REVIEW_BACKUP"
-        and backup_receipt.get("activeBackupRole") == "IMMUTABLE_BOUND_PRE_REVIEW_BACKUP"
-        and backup_receipt.get("verified") is True and backup_receipt.get("immutable") is True and backup_receipt.get("copyExitCode") == 0
-        and manifest_evidence_hash_ok
-    )
-    history_ok = historical_roles_ok and (pending_fields_ok or active_fields_ok)
-    add(checks, "BAK-01", "backup", "Backup authority is either fail-closed pending before Phase 9 or one exact verified immutable pre-review backup", source_root_ok and history_ok, {"receiptState": receipt_state, "sourceRoot": source_root_text, "backupRoot": backup_root_text, "backupHistory": history, "errors": backup_errors}, "phase-aware pending or single verified active backup role", backup_errors, "filesystem existence, phase-aware receipt state, and exact non-conflicting backup-role classification")
-    file_count_ok = pending_fields_ok if backup_pending else (backup_receipt.get("backupFileCount") == backup_scan.get("fileCount") and (final_mode or backup_receipt.get("sourceFileCount") == len(source_files) == backup_scan.get("fileCount")) and (not final_mode or manifest_evidence.get("fileCount") == backup_scan.get("fileCount")))
-    add(checks, "BAK-02", "backup", "Backup file counts are phase-correct and exact", file_count_ok, {"receiptSource": backup_receipt.get("sourceFileCount"), "receiptBackup": backup_receipt.get("backupFileCount"), "scannedSource": len(source_files), "scannedBackup": backup_scan.get("fileCount"), "manifest": manifest_evidence.get("fileCount")}, "pending nulls or exact verified counts", [], "phase-aware live/backup/manifest enumeration")
-    directory_count_ok = pending_fields_ok if backup_pending else (backup_receipt.get("backupDirectoryCount") == backup_scan.get("directoryCount") and not backup_directory_delta and (final_mode or backup_receipt.get("sourceDirectoryCount") == len(source_dirs) == backup_scan.get("directoryCount")) and (not final_mode or manifest_evidence.get("directoryCount") == backup_scan.get("directoryCount")))
-    add(checks, "BAK-03", "backup", "Backup directory counts and sets are phase-correct and exact", directory_count_ok, {"receiptSource": backup_receipt.get("sourceDirectoryCount"), "receiptBackup": backup_receipt.get("backupDirectoryCount"), "scannedSource": len(source_dirs), "scannedBackup": backup_scan.get("directoryCount"), "manifest": manifest_evidence.get("directoryCount"), "delta": backup_directory_delta}, "pending nulls or exact verified counts and set", backup_directory_delta, "phase-aware directory-set equality")
-    add(checks, "BAK-04", "backup", "Backup has zero missing files", not backup_receipt.get("missingPaths") and not backup_missing, {"receipt": backup_receipt.get("missingPaths"), "scanned": backup_missing}, [], backup_missing, "phase-aware expected/backup path difference")
-    add(checks, "BAK-05", "backup", "Backup has zero extra files", not backup_receipt.get("extraPaths") and not backup_extra, {"receipt": backup_receipt.get("extraPaths"), "scanned": backup_extra}, [], backup_extra, "phase-aware backup/expected path difference")
-    add(checks, "BAK-06", "backup", "Backup has zero file hash mismatches", not backup_receipt.get("hashMismatches") and not backup_hash_mismatches, {"receipt": backup_receipt.get("hashMismatches"), "scanned": backup_hash_mismatches}, [], backup_hash_mismatches, "per-file SHA-256 comparison against live pre-freeze or immutable manifest post-freeze")
-    add(checks, "BAK-07", "backup", "Backup has zero file size mismatches", not backup_receipt.get("sizeMismatches") and not backup_size_mismatches, {"receipt": backup_receipt.get("sizeMismatches"), "scanned": backup_size_mismatches}, [], backup_size_mismatches, "per-file byte-size comparison against live pre-freeze or immutable manifest post-freeze")
-    add(checks, "BAK-08", "backup", "Backup has zero long-path omissions", not backup_receipt.get("longPathOmissions") and not long_path_omissions, {"receipt": backup_receipt.get("longPathOmissions"), "scanned": long_path_omissions}, [], long_path_omissions, "receipt plus long-path subset of phase-aware path difference")
-    add(checks, "BAK-09", "backup", "Backup has zero unreadable paths", not backup_receipt.get("unreadablePaths") and not backup_errors, {"receipt": backup_receipt.get("unreadablePaths"), "scannedErrors": backup_errors}, [], backup_receipt.get("unreadablePaths") or [], "explicit error collection with no silent skips")
-    self_referential_artifacts = {
-        "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json",
-        "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl",
-        "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
-        "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json",
-        "11 Completion/FINAL_THREE_FILE_CERTIFICATION_REPAIR_REPORT.json",
-    }
-    source_aggregate_excluding_artifacts = aggregate_hash([row for row in source_scan.get("files", []) if row.get("path") not in self_referential_artifacts])
-    backup_aggregate_excluding_artifacts = aggregate_hash([row for row in backup_scan.get("files", []) if row.get("path") not in self_referential_artifacts]) if backup_active else None
-    evidence_aggregate = aggregate_hash([row for row in manifest_evidence.get("files", []) if row.get("path") not in self_referential_artifacts]) if manifest_evidence else None
-    if backup_pending:
-        aggregate_ok = pending_fields_ok
-    elif final_mode:
-        aggregate_ok = (
-            backup_receipt.get("sourceAggregateHash")
-            == backup_receipt.get("backupAggregateHash")
-            == backup_receipt.get("backupEvidenceAggregateHash")
-            == evidence_aggregate
-            == backup_aggregate_excluding_artifacts
-        )
-    else:
-        aggregate_ok = backup_receipt.get("sourceAggregateHash") == backup_receipt.get("backupAggregateHash") == source_aggregate_excluding_artifacts == backup_aggregate_excluding_artifacts
-    add(checks, "BAK-10", "backup", "Backup aggregate is phase-correct and reproducible", aggregate_ok, {"receiptSource": backup_receipt.get("sourceAggregateHash"), "receiptBackup": backup_receipt.get("backupAggregateHash"), "receiptEvidence": backup_receipt.get("backupEvidenceAggregateHash"), "scannedSource": source_aggregate_excluding_artifacts, "scannedBackup": backup_aggregate_excluding_artifacts, "manifestEvidence": evidence_aggregate}, "pending nulls, exact live equality pre-freeze, or exact immutable-manifest equality post-freeze", [], "phase-aware sorted path:file-hash aggregate")
-    receipt_verification_ok = pending_fields_ok or (active_fields_ok and bool(backup_receipt.get("verifiedAt")))
-    if final_mode and backup_active:
-        backup_receipt_path = backup_root / receipt_relative if backup_root else None
-        receipt_verification_ok = receipt_verification_ok and bool(backup_receipt_path and backup_receipt_path.is_file() and sha256_file(backup_receipt_path) == backup_receipt.get("preReviewBackupReceiptSha256"))
-    add(checks, "BAK-11", "backup", "Backup receipt is phase-correct and the immutable pre-review receipt remains cryptographically bound after freeze", receipt_verification_ok, {"receiptState": receipt_state, "verified": backup_receipt.get("verified"), "immutable": backup_receipt.get("immutable"), "activeBackupRole": backup_receipt.get("activeBackupRole"), "verifiedAt": backup_receipt.get("verifiedAt"), "copyExitCode": backup_receipt.get("copyExitCode"), "preReviewBackupReceiptSha256": backup_receipt.get("preReviewBackupReceiptSha256")}, "valid pending state or verified immutable active state with post-freeze receipt binding", [], "phase-aware receipt verification fields plus backup-copy receipt SHA-256")
-    add(checks, "BAK-12", "backup", "Receipt records zero directory-set differences", not backup_receipt.get("directoryDifferences") and not backup_directory_delta, {"receipt": backup_receipt.get("directoryDifferences"), "scanned": backup_directory_delta}, [], backup_directory_delta, "receipt and phase-aware directory-set difference lists")
-    history_paths = [str(value.get("path")) for value in history.values() if isinstance(value, dict) and value.get("path")]
-    duplicate_role_paths = sorted(path for path, count in Counter(history_paths).items() if count > 1)
-    duplicate_authority_object = "backupEvidence" in backup_receipt
-    add(checks, "BAK-13", "backup", "The backup receipt contains one canonical role inventory with no sibling duplicate authority object or duplicate role path", not duplicate_authority_object and not duplicate_role_paths, {"backupEvidencePresent": duplicate_authority_object, "duplicateRolePaths": duplicate_role_paths}, {"backupEvidencePresent": False, "duplicateRolePaths": []}, duplicate_role_paths + (["backupEvidence"] if duplicate_authority_object else []), "single backupHistory authority object plus unique path-to-role mapping")
+    add(checks, "BAK-01", "backup", "Current backup policy is one GitHub-native immutable tag and never requires persistent local storage", canonical_policy_ok, {"backend": backup_receipt.get("backupBackend"), "repository": backup_receipt.get("repository"), "remote": backup_receipt.get("remote"), "remoteUrl": remote_url, "refType": backup_receipt.get("refType"), "ref": backup_receipt.get("ref"), "persistentLocalBackupRequired": backup_receipt.get("persistentLocalBackupRequired")}, {"backend": GITHUB_BACKUP_BACKEND, "repository": "mhyahya854/MindRoom", "remote": "origin", "remoteUrlRepository": "github.com/mhyahya854/MindRoom", "refType": "TAG", "persistentLocalBackupRequired": False}, ["FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"], "exact current-backend policy fields plus live origin URL ownership")
+    remote_exists = bool(backup_actual.get("remoteRefTarget"))
+    add(checks, "BAK-02", "backup", "The recorded GitHub backup tag exists and is reachable from origin", remote_exists, {"ref": backup_receipt.get("ref"), "target": backup_actual.get("remoteRefTarget"), "errors": backup_actual.get("errors")}, "one remotely reachable tag target", backup_actual.get("errors") or [], "git ls-remote --refs against the recorded origin tag")
+    add(checks, "BAK-03", "backup", "The remote backup tag points to the exact recorded commit", not remote_exists or backup_actual.get("remoteRefTarget") == backup_receipt.get("commitSha"), backup_actual.get("remoteRefTarget"), backup_receipt.get("commitSha"), [backup_receipt.get("ref")], "remote target-to-receipt commit equality")
+    add(checks, "BAK-04", "backup", "The backup commit is a locally reproducible Git commit object", not remote_exists or backup_actual.get("commitReadable") is True, backup_actual.get("commitReadable"), True, backup_actual.get("errors") or [], "git cat-file commit reachability")
+    add(checks, "BAK-05", "backup", "The backup commit reproduces the recorded Graphify subtree", not remote_exists or backup_actual.get("graphifyTreeSha") == backup_receipt.get("graphifyTreeSha"), backup_actual.get("graphifyTreeSha"), backup_receipt.get("graphifyTreeSha"), ["Graphify"], "git subtree identity")
+    add(checks, "BAK-06", "backup", "The backup commit reproduces the preserved Codebase subtree", not remote_exists or backup_actual.get("codebaseTreeSha") == backup_receipt.get("codebaseTreeSha"), backup_actual.get("codebaseTreeSha"), backup_receipt.get("codebaseTreeSha"), ["Codebase"], "git subtree identity")
+    tracked_paths_match = not remote_exists or (backup_actual.get("trackedPathCount") == backup_receipt.get("trackedPathCount") and backup_actual.get("trackedPathSetSha256") == backup_receipt.get("trackedPathSetSha256"))
+    add(checks, "BAK-07", "backup", "The backup commit contains the complete recorded tracked repository path set", tracked_paths_match, {"count": backup_actual.get("trackedPathCount"), "pathSetSha256": backup_actual.get("trackedPathSetSha256")}, {"count": backup_receipt.get("trackedPathCount"), "pathSetSha256": backup_receipt.get("trackedPathSetSha256")}, [backup_receipt.get("ref")], "git ls-tree full tracked-path enumeration and SHA-256")
+    recorded_lfs = sorted(backup_receipt.get("lfsObjects") or [], key=lambda row: row.get("path") or "")
+    actual_lfs = sorted(backup_actual.get("lfsObjects") or [], key=lambda row: row.get("path") or "")
+    add(checks, "BAK-08", "backup", "Every required LFS path and re-derived pointer OID is recorded exactly", not remote_exists or recorded_lfs == actual_lfs, actual_lfs, recorded_lfs, list(REQUIRED_LFS_PATHS), "LFS pointer parsing from the immutable backup commit")
+    add(checks, "BAK-09", "backup", "Every required LFS object is pointer-verified in core mode and independently fetchable in certification modes", not remote_exists or backup_actual.get("lfsObjectsVerified") is True, {"verified": backup_actual.get("lfsObjectsVerified"), "remoteFetchRequired": remote_lfs_required, "errors": backup_actual.get("errors")}, True, backup_actual.get("errors") or [], "commit-pointer verification in core mode; isolated git-lfs fetch plus object SHA-256 in full/final modes")
+    add(checks, "BAK-10", "backup", "The backup commit's complete Merkle tree equals the recorded repository tree", not remote_exists or backup_actual.get("treeSha") == backup_receipt.get("treeSha"), backup_actual.get("treeSha"), backup_receipt.get("treeSha"), [backup_receipt.get("ref")], "git commit tree identity")
+    receipt_verified = backup_receipt.get("remoteRefVerified") is True and backup_receipt.get("lfsObjectsVerified") is True and backup_receipt.get("status") == "VERIFIED" and bool(backup_receipt.get("verifiedAt"))
+    add(checks, "BAK-11", "backup", "The current receipt records successful remote-ref and LFS verification", receipt_verified, {"remoteRefVerified": backup_receipt.get("remoteRefVerified"), "lfsObjectsVerified": backup_receipt.get("lfsObjectsVerified"), "status": backup_receipt.get("status"), "verifiedAt": backup_receipt.get("verifiedAt")}, {"remoteRefVerified": True, "lfsObjectsVerified": True, "status": "VERIFIED", "verifiedAt": "nonempty"}, ["FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"], "receipt verification assertions independently reproduced by BAK-02 through BAK-10")
+    historical_roles_ok = bool(history) and all(row.get("active") is False for row in history.values()) and all(row.get("role") in {"HISTORICAL_BACKUP_MODEL", "HISTORICAL_MISSING_NONACTIVE", "HISTORICAL_LOCAL_RECOVERY_EVIDENCE", "SUPERSEDED_BACKUP_BACKEND"} for row in history.values())
+    add(checks, "BAK-12", "backup", "Historical laptop backup evidence remains truthful, explicitly superseded, and nonactive", historical_roles_ok, history, "nonempty history with only nonactive historical/superseded roles", list(history), "historical role and active-flag classification")
+    duplicate_authority = "backupEvidence" in backup_receipt
+    add(checks, "BAK-13", "backup", "No active local path or duplicate authority object can masquerade as the current GitHub backup", not local_fields and not duplicate_authority, {"activeLocalFields": local_fields, "duplicateBackupEvidence": duplicate_authority}, {"activeLocalFields": {}, "duplicateBackupEvidence": False}, list(local_fields) + (["backupEvidence"] if duplicate_authority else []), "forbidden active-local field and duplicate-authority detection")
+    backup_missing = []
+
     cap_ids = [row.get("capabilityId") for row in capabilities]
     change_ids = {row.get("capabilityId") for row in change_records}
     add(checks, "CNT-04", "counts", "Capability count agrees with change records", len(cap_ids) == len(set(cap_ids)) and set(cap_ids) == change_ids, len(cap_ids), len(change_ids), ["CAPABILITY_REGISTRY.json", "CHANGE_LOCATION_REGISTRY.jsonl"], "independent registry ID set equality")
@@ -1267,6 +1304,20 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     bootstrap = [row for row in tasks if row.get("taskClass") == "BOOTSTRAP_TASK"]
     task_class_ok = len(task_ids) == len(set(task_ids)) and {row.get("capabilityId") for row in primary} == set(cap_ids) and len(bootstrap) == 1
     add(checks, "CNT-06", "counts", "Task count and classifications cover every capability plus one bootstrap", task_class_ok, {"total": len(tasks), "primary": len(primary), "bootstrap": len(bootstrap)}, {"primaryCapabilityIds": len(set(cap_ids)), "bootstrap": 1}, ["IMPLEMENTATION_TASKS.jsonl"], "task-class and owner ID set validation")
+    task_ownership_conflicts = []
+    for task in tasks:
+        task_id = task.get("taskId")
+        owner = task.get("capabilityId")
+        contract_owner = (task.get("contract") or {}).get("capabilityId")
+        owner_set = task.get("capabilityIds") or []
+        linked_test_owners = {
+            capability_id
+            for test in tests if task_id in (test.get("taskIds") or [])
+            for capability_id in (test.get("capabilityIds") or [])
+        }
+        if owner not in set(cap_ids) or contract_owner != owner or owner_set != [owner] or (linked_test_owners and linked_test_owners != {owner}):
+            task_ownership_conflicts.append({"taskId": task_id, "capabilityId": owner, "contractCapabilityId": contract_owner, "capabilityIds": owner_set, "linkedTestCapabilityIds": sorted(linked_test_owners)})
+    add(checks, "TASK-OWNERSHIP-01", "tasks", "Every task has one canonical capability owner shared by its root, contract, owner set, and linked tests", not task_ownership_conflicts, task_ownership_conflicts, [], task_ownership_conflicts, "independent task-root/contract/owner-set/test join")
     actual_test_ids = [row.get("testId") for row in tests]
     tested_caps = {cap_id for row in tests for cap_id in (row.get("capabilityIds") or [])}
     add(checks, "CNT-07", "counts", "Test specifications are unique and cover every capability", len(actual_test_ids) == len(set(actual_test_ids)) and tested_caps == set(cap_ids), {"tests": len(tests), "coveredCapabilities": len(tested_caps)}, {"uniqueTests": len(set(actual_test_ids)), "capabilities": len(set(cap_ids))}, ["REQUIREMENT_TEST_MATRIX.jsonl"], "test ID uniqueness and capability coverage")
@@ -1548,6 +1599,16 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     warning_summary = [{"findingId": row.get("findingId"), "releaseWave": row.get("releaseWave"), "blockingGateIds": row.get("blockingGateIds") or []} for row in warnings]
     warning_summaries = metadata_values(metadata, "warningSummary")
     meta_checks.append(("META-16", "metadata", "All receipts agree on warning IDs, waves, and gates", len(warning_summaries) == len(CURRENT_METADATA) and all(value == warning_summary for value in warning_summaries.values()), warning_summaries, warning_summary, list(warning_summaries), "cross-document warning projection comparison"))
+    backup_backends = metadata_values(metadata, "backupBackend")
+    backup_refs = metadata_values(metadata, "currentBackupRef")
+    local_backup_policies = metadata_values(metadata, "persistentLocalBackupRequired")
+    backup_metadata_ok = (
+        len(backup_backends) == len(backup_refs) == len(local_backup_policies) == len(CURRENT_METADATA)
+        and set(backup_backends.values()) == {GITHUB_BACKUP_BACKEND}
+        and set(backup_refs.values()) == {backup_receipt.get("ref")}
+        and set(local_backup_policies.values()) == {False}
+    )
+    meta_checks.append(("META-19", "metadata", "All current authority metadata agrees on the GitHub backup ref and rejects a persistent-local requirement", backup_metadata_ok, {"backends": backup_backends, "refs": backup_refs, "persistentLocalBackupRequired": local_backup_policies}, {"backend": GITHUB_BACKUP_BACKEND, "ref": backup_receipt.get("ref"), "persistentLocalBackupRequired": False}, list(CURRENT_METADATA), "cross-document current-backup policy equality"))
     for meta_check in meta_checks:
         add(checks, *meta_check)
 

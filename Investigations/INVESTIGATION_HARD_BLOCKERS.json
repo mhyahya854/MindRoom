@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "project": "MindRoom",
   "stage": "PRE_CODE_INVESTIGATION",
-  "lastUpdatedAt": "2026-08-09T07:11:46.5815105Z",
+  "lastUpdatedAt": "2026-08-09T16:28:13+03:00",
   "blockers": [
     {
       "blockerId": "MR-BLOCK-001",
@@ -22,7 +22,28 @@
       "frozenPlanChangeControlRequired": true,
       "userInputRequired": false,
       "externalDependencyRequired": false,
-      "status": "OPEN"
+      "status": "RESOLVED",
+      "lifecycle": [
+        {
+          "state": "DISCOVERED",
+          "evidenceCommit": "7b311585f94bc7c251c79e2f8ff67a12ef30d113",
+          "meaning": "Original MR-INV-001 invocation proved the contradiction and missing active laptop backup."
+        },
+        {
+          "state": "CHANGE_CONTROL_AUTHORIZED",
+          "authorization": "Explicit user frozen-plan change-control request",
+          "preChangeBackupTag": "mindroom-backup/change-control/20260809-103711"
+        },
+        {
+          "state": "RESOLVED",
+          "resolvedAt": "2026-08-09T16:28:13+03:00",
+          "canonicalCapabilityId": "MR-CAP-001",
+          "backupBackend": "GITHUB_NATIVE_IMMUTABLE_GIT_REF"
+        }
+      ],
+      "resolvedAt": "2026-08-09T16:28:13+03:00",
+      "resolvedBy": "EXPLICIT_FROZEN_PLAN_CHANGE_CONTROL",
+      "resolution": "MR-IMPL-BOOTSTRAP-001 now identifies MR-CAP-001 in task root, task owner set, contract, queue, linked test, and capability acceptance-test evidence. MR-CAP-160 retains only MR-IMPL-160 as its primary task. TASK-OWNERSHIP-01 and an adversarial conflict challenge enforce the join."
     },
     {
       "blockerId": "MR-BLOCK-002",
@@ -40,7 +61,30 @@
       "frozenPlanChangeControlRequired": true,
       "userInputRequired": false,
       "externalDependencyRequired": true,
-      "status": "OPEN"
+      "status": "RESOLVED",
+      "lifecycle": [
+        {
+          "state": "DISCOVERED",
+          "evidenceCommit": "7b311585f94bc7c251c79e2f8ff67a12ef30d113",
+          "meaning": "Original MR-INV-001 invocation proved the contradiction and missing active laptop backup."
+        },
+        {
+          "state": "CHANGE_CONTROL_AUTHORIZED",
+          "authorization": "Explicit user frozen-plan change-control request",
+          "preChangeBackupTag": "mindroom-backup/change-control/20260809-103711"
+        },
+        {
+          "state": "RESOLVED",
+          "resolvedAt": "2026-08-09T16:28:13+03:00",
+          "canonicalCapabilityId": "MR-CAP-001",
+          "backupBackend": "GITHUB_NATIVE_IMMUTABLE_GIT_REF"
+        }
+      ],
+      "resolvedAt": "2026-08-09T16:28:13+03:00",
+      "resolvedBy": "EXPLICIT_FROZEN_PLAN_CHANGE_CONTROL",
+      "resolution": "The current backup backend is GITHUB_NATIVE_IMMUTABLE_GIT_REF at the verified pre-change tag. Historical local paths remain truthful and nonactive. BAK-01 through BAK-13, isolated LFS fetches, 95 challenges, final freeze, and Step 11b all pass."
     }
-  ]
+  ],
+  "activeBlockerCount": 0,
+  "resolvedBlockerCount": 2
 }

@@ -82,6 +82,18 @@ def sha256_file(path):
     return digest.hexdigest()
 
 
+def github_backup_snapshot(validator, receipt):
+    actual = validator.inspect_github_backup(receipt, verify_lfs=False)
+    if not actual.get("remoteRefTarget") or actual.get("errors"):
+        raise RuntimeError(f"GitHub backup is not reproducible before challenge execution: {actual.get('errors')}")
+    identity = {key: actual.get(key) for key in (
+        "remoteRefTarget", "treeSha", "graphifyTreeSha", "codebaseTreeSha",
+        "trackedPathCount", "trackedPathSetSha256", "lfsObjects",
+    )}
+    identity["aggregateSha256"] = hashlib.sha256(json.dumps(identity, sort_keys=True, separators=(",", ":")).encode("utf-8")).hexdigest()
+    return identity
+
+
 def common_metadata(status):
     return {key: status.get(key) for key in (
         "freezeRunId", "officialValidatorRunId", "externalReviewRunId", "mappingStatus",
@@ -90,7 +102,8 @@ def common_metadata(status):
         "manifestRecordCount", "manifestAggregateHash", "codebaseFileCount",
         "codebaseDirectoryCount", "codebaseAggregateHash", "validatorCheckCount",
         "challengeTestCount", "blockingDefectCount", "repairRunId",
-        "gateTestSynchronizationStatus", "warningSummary",
+        "gateTestSynchronizationStatus", "warningSummary", "backupBackend",
+        "currentBackupRef", "persistentLocalBackupRequired",
     )}
 
 
@@ -251,7 +264,6 @@ CHALLENGE_DEFINITIONS = [
     definition("CHALLENGE-LINEAGE-012", "Silently remove one original task source ID", [TASK_PATH], ["LIN-22"], lambda o: mutate_jsonl(Path(o[TASK_PATH]), lambda rows: rows[0]["sourceRequirements"].pop())),
     definition("CHALLENGE-LINEAGE-013", "Reference a missing supersession record", [LINEAGE_PATH], ["LIN-04"], lambda o: mutate_jsonl(Path(o[LINEAGE_PATH]), lambda rows: rows[0].__setitem__("supersessionRecordIds", ["MR-SUP-NOT-DEFINED"]))),
     definition("CHALLENGE-LINEAGE-014", "Create a low-confidence review-required mapping", [LINEAGE_PATH], ["LIN-13"], lambda o: mutate_jsonl(Path(o[LINEAGE_PATH]), lambda rows: rows[0].update({"confidence": "LOW", "reviewRequired": True}))),
-    definition("CHALLENGE-LINEAGE-015", "Corrupt the backup receipt with a missing long-path file", [BACKUP_RECEIPT_PATH], ["BAK-08"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data["longPathOmissions"].append("14 AFFiNE Reference/artificial-long-path-omission"))),
 
     definition("CHALLENGE-LINEAGE-STATUS-001", "Set resolutionStatus to an unknown value", [LINEAGE_PATH], ["LINEAGE-STATUS-ENUM"], lambda o: mutate_jsonl(Path(o[LINEAGE_PATH]), lambda rows: rows[0].__setitem__("resolutionStatus", "NOT_A_REAL_STATUS"))),
     definition("CHALLENGE-LINEAGE-RECLASSIFIED-001", "Create an invalid RECLASSIFIED record without prior/new classification evidence", [LINEAGE_PATH], ["LINEAGE-RECLASSIFIED-SEMANTICS"], lambda o: mutate_jsonl(Path(o[LINEAGE_PATH]), lambda rows: rows.append({"legacyRequirementId": "MR-RECLASS-TEST-001", "legacyRequirementType": "ADD", "legacySourceArtifact": "05 Dependency and Impact/Knowledge Graph/NODES.jsonl", "legacySourceLocation": "jsonl:1", "resolutionStatus": "RECLASSIFIED", "canonicalRequirementIds": ["MR-KEEP-002"], "supersessionRecordIds": [], "normalizationEvidence": [{"evidenceType": "RECLASSIFICATION_DECISION", "nodeId": "MR-RECLASS-TEST-001", "canonicalRequirementId": "MR-KEEP-002"}], "resolutionReason": "Reclassified without prior or new classification evidence", "confidence": "HIGH", "reviewRequired": False}))),
@@ -278,10 +290,19 @@ CHALLENGE_DEFINITIONS = [
     definition("CHALLENGE-ALIAS-TARGET-001", "Use the wrong canonical target in alias evidence", [LINEAGE_PATH], ["LINEAGE-ALIAS-TARGET"], lambda o: mutate_jsonl(Path(o[LINEAGE_PATH]), lambda rows: rows.append(alias_row("MR-ALIAS-TEST-003", "MR-KEEP-002", "MR-ALIAS-TEST-003", "MR-KEEP-003")))),
     definition("CHALLENGE-RECLASSIFIED-SOURCE-001", "Use the wrong source ID in reclassification evidence", [LINEAGE_PATH], ["LINEAGE-RECLASSIFIED-SOURCE"], lambda o: mutate_jsonl(Path(o[LINEAGE_PATH]), lambda rows: rows.append(reclassified_row("MR-RECLASS-TEST-002", "MR-KEEP-002", "MR-OTHER-LEGACY-998", "MR-KEEP-002")))),
     definition("CHALLENGE-RECLASSIFIED-TARGET-001", "Use the wrong canonical/control target", [LINEAGE_PATH], ["LINEAGE-RECLASSIFIED-TARGET"], lambda o: mutate_jsonl(Path(o[LINEAGE_PATH]), lambda rows: rows.append(reclassified_row("MR-RECLASS-TEST-003", "MR-KEEP-002", "MR-RECLASS-TEST-003", "MR-KEEP-003")))),
-    definition("CHALLENGE-BACKUP-PATH-001", "Point the backup receipt at a missing directory", [BACKUP_RECEIPT_PATH], ["BAK-01"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data.__setitem__("backupRoot", "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\NO_SUCH_BACKUP_DIRECTORY"))),
-    definition("CHALLENGE-BACKUP-HASH-001", "Corrupt the backup aggregate hash", [BACKUP_RECEIPT_PATH], ["BAK-10"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data.__setitem__("backupAggregateHash", "0" * 64))),
-    definition("CHALLENGE-BACKUP-MISSING-FILE-001", "Report one missing backup file", [BACKUP_RECEIPT_PATH], ["BAK-04"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data["missingPaths"].append("14 AFFiNE Reference/artificial-long-path-omission"))),
+    definition("CHALLENGE-BACKUP-MISSING-REF-001", "Remove the required GitHub backup ref", [BACKUP_RECEIPT_PATH], ["BAK-01", "BAK-02", "META-19"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data.__setitem__("ref", ""))),
+    definition("CHALLENGE-BACKUP-UNREACHABLE-REF-001", "Point at a syntactically valid but unreachable GitHub backup tag", [BACKUP_RECEIPT_PATH], ["BAK-02", "META-19"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data.__setitem__("ref", "refs/tags/mindroom-backup/change-control/NO-SUCH-TAG"))),
+    definition("CHALLENGE-BACKUP-WRONG-COMMIT-001", "Record a commit that differs from the remote tag target", [BACKUP_RECEIPT_PATH], ["BAK-03"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data.__setitem__("commitSha", "0" * 40))),
+    definition("CHALLENGE-BACKUP-WRONG-TREE-001", "Corrupt the recorded complete Git tree", [BACKUP_RECEIPT_PATH], ["BAK-10"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data.__setitem__("treeSha", "0" * 40))),
+    definition("CHALLENGE-BACKUP-WRONG-GRAPHIFY-001", "Corrupt the recorded Graphify subtree", [BACKUP_RECEIPT_PATH], ["BAK-05"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data.__setitem__("graphifyTreeSha", "0" * 40))),
+    definition("CHALLENGE-BACKUP-WRONG-CODEBASE-001", "Corrupt the recorded Codebase subtree", [BACKUP_RECEIPT_PATH], ["BAK-06"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data.__setitem__("codebaseTreeSha", "0" * 40))),
+    definition("CHALLENGE-BACKUP-INCOMPLETE-PATH-SET-001", "Corrupt the recorded tracked repository path-set identity", [BACKUP_RECEIPT_PATH], ["BAK-07"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data.__setitem__("trackedPathSetSha256", "0" * 64))),
+    definition("CHALLENGE-BACKUP-MISSING-LFS-001", "Remove one required LFS object from the receipt", [BACKUP_RECEIPT_PATH], ["BAK-08"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data["lfsObjects"].pop())),
+    definition("CHALLENGE-BACKUP-LOCAL-REQUIRED-001", "Regress the current policy to require a persistent laptop backup", [BACKUP_RECEIPT_PATH], ["BAK-01", "META-19"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data.__setitem__("persistentLocalBackupRequired", True))),
+    definition("CHALLENGE-BACKUP-LOCAL-MASQUERADE-001", "Add an active local backup path to the GitHub receipt", [BACKUP_RECEIPT_PATH], ["BAK-13"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data.__setitem__("backupRoot", "C:\\MindRoom-Recovery\\masquerade"))),
+    definition("CHALLENGE-BACKUP-VERIFICATION-001", "Regress the current backup receipt verification status", [BACKUP_RECEIPT_PATH], ["BAK-11"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data.__setitem__("status", "PENDING"))),
     definition("CHALLENGE-BACKUP-AUTHORITY-DUPLICATE-001", "Add a sibling backupEvidence authority object that duplicates backupHistory", [BACKUP_RECEIPT_PATH], ["BAK-13"], lambda o: mutate_json(Path(o[BACKUP_RECEIPT_PATH]), lambda data: data.__setitem__("backupEvidence", copy.deepcopy(data["backupHistory"])))),
+    definition("CHALLENGE-TASK-OWNERSHIP-CONFLICT-001", "Give the bootstrap task a root owner that conflicts with its contract, owner set, and test", [TASK_PATH], ["TASK-OWNERSHIP-01"], lambda o: mutate_jsonl(Path(o[TASK_PATH]), lambda rows: next(row for row in rows if row.get("taskId") == "MR-IMPL-BOOTSTRAP-001").__setitem__("capabilityId", "MR-CAP-160"))),
     definition("CHALLENGE-LIVE-REPORT-OVERRIDE-001", "Set the live validation report's overridesUsed to true", [LIVE_REPORT_PATH], ["META-17"], lambda o: mutate_json(Path(o[LIVE_REPORT_PATH]), lambda data: data.__setitem__("overridesUsed", True)), validation_mode="FULL_TECHNICAL_CERTIFICATION"),
     definition("CHALLENGE-MANIFEST-VALIDATOR-HASH-001", "Set the candidate manifest's validator SHA-256 to a stale value", [MANIFEST_RELATIVE], ["MAN-03"], lambda o: mutate_jsonl(Path(o[MANIFEST_RELATIVE]), lambda rows: next(row for row in rows if row.get("path") == "11 Completion/validate_final_graphify_freeze.py").__setitem__("sha256", "0" * 64))),
     definition("CHALLENGE-FROZEN-CANDIDATE-FLAG-001", "Regress frozen status to candidate-only", ["00 Execution Control/STATUS.json"], ["SAFE-06"], lambda o: mutate_json(Path(o["00 Execution Control/STATUS.json"]), lambda data: data.__setitem__("freezeCandidateOnly", True))),
@@ -379,15 +400,7 @@ def main():
     validator = load_validator()
     status = json.loads((ROOT / "00 Execution Control" / "STATUS.json").read_text(encoding="utf-8-sig"))
     backup_receipt = json.loads((ROOT / "00 Execution Control" / "FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json").read_text(encoding="utf-8-sig"))
-    backup_root_text = str(backup_receipt.get("backupRoot") or "")
-    backup_root = Path(backup_root_text) if backup_root_text else None
-    backup_pending = backup_receipt.get("receiptState") == "PENDING_FINAL_CONVERGED_PRE_REVIEW_BACKUP"
-    if backup_pending:
-        backup_before_challenges = {"receiptState": "PENDING_FINAL_CONVERGED_PRE_REVIEW_BACKUP", "aggregateSha256": None}
-    else:
-        if not backup_root or not backup_root.is_dir():
-            raise RuntimeError("Active backup root is missing before challenge execution.")
-        backup_before_challenges = validator.inventory_tree(backup_root)
+    backup_before_challenges = github_backup_snapshot(validator, backup_receipt)
     global MANIFEST_RELATIVE
     if status.get("planningFreezeStatus") == "FROZEN":
         MANIFEST_RELATIVE = FROZEN_MANIFEST_RELATIVE
@@ -497,12 +510,8 @@ def main():
         full_failures = sorted(failed_ids(full))
         final_freeze = validator.do_strict_validation(validation_mode="FINAL_FREEZE_CERTIFICATION") if status.get("planningFreezeStatus") == "FROZEN" else full
         final_freeze_failures = sorted(failed_ids(final_freeze))
-        if backup_pending:
-            backup_after_challenges = {"receiptState": "PENDING_FINAL_CONVERGED_PRE_REVIEW_BACKUP", "aggregateSha256": None}
-        else:
-            backup_cache_key = str(backup_root.resolve())
-            validator._CODEBASE_CACHE.pop(backup_cache_key, None)
-            backup_after_challenges = validator.inventory_tree(backup_root)
+        validator._GITHUB_BACKUP_CACHE.clear()
+        backup_after_challenges = github_backup_snapshot(validator, backup_receipt)
         backup_unchanged = backup_before_challenges == backup_after_challenges
         if not backup_unchanged:
             full_failures.append("BACKUP-MUTATION-DURING-CHALLENGES")

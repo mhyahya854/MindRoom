@@ -5,10 +5,10 @@
   "title": "Shared package bootstrap boundary and ownership",
   "startedFromCommit": "bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd",
   "observedRemoteMain": "bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd",
-  "completedAt": "2026-08-09T07:11:46.5815105Z",
-  "status": "BLOCKED",
-  "decision": "FROZEN_PLAN_CHANGE_CONTROL_REQUIRED",
-  "classification": "FROZEN_PLAN_CONTRADICTION",
+  "completedAt": "2026-08-09T16:28:13+03:00",
+  "status": "COMPLETE",
+  "decision": "COMPLETE_AFTER_AUTHORIZED_CHANGE_CONTROL",
+  "classification": "CHANGE_CONTROL_VERIFIED",
   "question": "Can @mindroom/common be bootstrapped at the frozen target with a coherent workspace boundary, build contract, and unambiguous capability ownership before any Codebase mutation?",
   "conclusions": [
     {
@@ -89,34 +89,89 @@
         "Graphify/11 Completion/validate_final_graphify_freeze.py",
         "Graphify/11 Completion/verify_step11b_results.py"
       ]
+    },
+    {
+      "id": "MR-INV-001-C09",
+      "statement": "Authorized change control selected MR-CAP-001 as the canonical bootstrap owner from Wave 0, package-boundary, acceptance-test, capability-contract, and primary-task evidence.",
+      "classification": "CHANGE_CONTROL_VERIFIED",
+      "evidence": [
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1",
+        "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl:338"
+      ]
+    },
+    {
+      "id": "MR-INV-001-C10",
+      "statement": "MR-CAP-160 retains MR-IMPL-160 as its sole primary task; the bootstrap is no longer represented as its task.",
+      "classification": "CHANGE_CONTROL_VERIFIED",
+      "evidence": [
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:161"
+      ]
+    },
+    {
+      "id": "MR-INV-001-C11",
+      "statement": "Current backup authority is a verified immutable GitHub tag; persistent laptop backup storage is not required.",
+      "classification": "EMPIRICALLY_VERIFIED",
+      "evidence": [
+        "Graphify/00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
+      ]
+    },
+    {
+      "id": "MR-INV-001-C12",
+      "statement": "Core, full, final, all 95 adversarial challenges, and dynamic Step 11b pass with zero exemptions or baseline subtraction.",
+      "classification": "EMPIRICALLY_VERIFIED",
+      "evidence": [
+        "Graphify/00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json",
+        "Graphify/11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json"
+      ]
+    },
+    {
+      "id": "MR-INV-001-C13",
+      "statement": "No Codebase file changed; Wave 0 and implementation remain not started.",
+      "classification": "EMPIRICALLY_VERIFIED_READ_ONLY",
+      "evidence": [
+        "Graphify/00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json"
+      ]
     }
   ],
   "contradiction": {
-    "present": true,
-    "severity": "HARD",
-    "left": {
-      "capabilityId": "MR-CAP-160",
-      "sources": [
-        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1#/capabilityId",
-        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1#/contract/capabilityId",
-        "Graphify/09 Implementation/IMPLEMENTATION_QUEUE.md:9"
-      ]
+    "present": false,
+    "resolved": true,
+    "canonicalCapabilityId": "MR-CAP-001",
+    "previousContradiction": {
+      "present": true,
+      "severity": "HARD",
+      "left": {
+        "capabilityId": "MR-CAP-160",
+        "sources": [
+          "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1#/capabilityId",
+          "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1#/contract/capabilityId",
+          "Graphify/09 Implementation/IMPLEMENTATION_QUEUE.md:9"
+        ]
+      },
+      "right": {
+        "capabilityId": "MR-CAP-001",
+        "sources": [
+          "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1#/capabilityIds/0",
+          "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl:338#/capabilityIds/0",
+          "Graphify/03 Capability Map/CAPABILITY_REGISTRY.json#/capabilities/0/contract/acceptanceTests"
+        ]
+      },
+      "collision": {
+        "capabilityId": "MR-CAP-160",
+        "existingPrimaryTaskId": "MR-IMPL-160",
+        "existingPrimaryTaskPurpose": "Stable Identity Across File Movement",
+        "source": "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:161"
+      },
+      "changeControlRequired": true
     },
-    "right": {
-      "capabilityId": "MR-CAP-001",
-      "sources": [
-        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1#/capabilityIds/0",
-        "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl:338#/capabilityIds/0",
-        "Graphify/03 Capability Map/CAPABILITY_REGISTRY.json#/capabilities/0/contract/acceptanceTests"
-      ]
-    },
-    "collision": {
-      "capabilityId": "MR-CAP-160",
-      "existingPrimaryTaskId": "MR-IMPL-160",
-      "existingPrimaryTaskPurpose": "Stable Identity Across File Movement",
-      "source": "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:161"
-    },
-    "changeControlRequired": true
+    "resolutionEvidence": [
+      "Graphify/09 Implementation/NEW_CAPABILITY_TASKS.jsonl:1",
+      "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1",
+      "Graphify/09 Implementation/IMPLEMENTATION_QUEUE.md:9",
+      "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl:338",
+      "Graphify/11 Completion/validate_final_graphify_freeze.py#TASK-OWNERSHIP-01"
+    ]
   },
   "acceptanceCriteria": [
     {
@@ -136,13 +191,13 @@
     },
     {
       "criterion": "Package can be isolated from renderer/core dependencies.",
-      "result": "PASS_TO_PRE_CODE_LIMIT",
+      "result": "PASS",
       "classification": "PROVEN_FROM_REPOSITORY"
     },
     {
       "criterion": "Frozen ownership and receipt scope identify one coherent capability.",
-      "result": "FAIL",
-      "classification": "PROVEN_FROM_REPOSITORY"
+      "result": "PASS",
+      "classification": "CHANGE_CONTROL_VERIFIED"
     },
     {
       "criterion": "No proof step modifies Codebase.",
@@ -170,9 +225,13 @@
     "Codebase/.nvmrc": "7d2df647f25529bd87500319c41564e032e2be642e565350fa6136d7a1ec4d10",
     "Codebase/tsconfig.json": "ab93b55858d2328b14aecc5d7c7477d108078fd92b1fa16941e3fabfa1eb2af9",
     "Graphify/14 AFFiNE Reference/Reference Tree/package.json": "729e6593cb5c203606dc938ae318bf1a06f1f955b05833eb74a354feeb2909b5",
-    "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl": "dd10d1d3d9350bbd0997577dccf20fe11eac745ff5e78d97df9ffa12ba6a0412",
+    "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl": "3ad60bc0504dee78eb08488753d28a5e439df7a01f988530d3e02c4c64868de2",
     "Graphify/03 Capability Map/CAPABILITY_REGISTRY.json": "58e136494d09fa10404e2a9d0a51c5ac800860c17025c0c48c377df0466d7afa",
-    "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl": "75d6813eb5062cbc6f70c453df01f7f9d6687b17d48f5ef75a44770fb803bba0"
+    "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl": "75d6813eb5062cbc6f70c453df01f7f9d6687b17d48f5ef75a44770fb803bba0",
+    "Graphify/00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "555f2041e26208d35a4e7717f34f72883b03ce3b6a319619a7f725e794bf5b1b",
+    "Graphify/11 Completion/validate_final_graphify_freeze.py": "b2fe87ea8e391f639d374ef67a703d001ba9e90e5d0bb5896d0ec111a0e7a660",
+    "Graphify/11 Completion/run_final_freeze_challenges.py": "23b17369a10edc4535151272a9b5297a0e97aea329b55820edf16464cdf5a134",
+    "Graphify/11 Completion/verify_step11b_results.py": "27a9859659e4834b9bdfc23391f51dcba0c977af4c1dbc7fa327e84e871141d4"
   },
   "toolchainObservation": {
     "repositoryNodeEngine": ">=22.12.0 <23.0.0",
@@ -183,30 +242,36 @@
     "classification": "DEFERRED_TO_MR_INV_006"
   },
   "frozenValidation": {
+    "core": {
+      "status": "PASS",
+      "failedChecks": []
+    },
+    "fullTechnicalCertification": {
+      "status": "PASS",
+      "failedChecks": []
+    },
     "finalFreezeCertification": {
-      "status": "FAIL",
-      "exitCode": 1,
-      "failedChecks": [
-        "BAK-01",
-        "BAK-02",
-        "BAK-03",
-        "BAK-10",
-        "BAK-11"
-      ],
-      "receiptSourceFileCount": 13446,
-      "receiptBackupFileCount": 13446,
-      "scannedSourceFileCount": 13447,
-      "scannedBackupFileCount": 0,
-      "activeBackupPath": "C:/Users/mhyah/Downloads/Code/MindRoom-Recovery/Graphify-final-converged-pre-review-backup-20260808-151008",
-      "activeBackupExists": false
+      "status": "PASS",
+      "validatorChecks": 198,
+      "failedChecks": [],
+      "backupFailures": []
+    },
+    "challenges": {
+      "status": "PASS",
+      "executed": 95,
+      "failed": 0,
+      "environmentExemptions": 0,
+      "baselineFailureSubtraction": 0
     },
     "step11b": {
-      "status": "FAIL",
-      "exitCode": 1,
-      "reason": "Verified active backup receipt is not the exact canonical post-Phase-9 state."
+      "status": "PASS",
+      "validatorIds": 198,
+      "challengeIds": 95,
+      "missingIds": 0,
+      "unexpectedIds": 0,
+      "duplicateIds": 0
     },
-    "graphifyGitModified": false,
-    "graphifyFilesystemCertified": false
+    "graphifyFilesystemCertified": true
   },
   "codebaseIntegrity": {
     "gitTreeAtStart": "bbf383e3418da4f613f58719160bb7cbd5709ffc",
@@ -214,13 +279,18 @@
     "gitStatusShortEmpty": true,
     "frozenBaselineFileCount": 10080,
     "frozenBaselineDirectoryCount": 2548,
-    "frozenBaselineAggregateSha256": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748"
+    "frozenBaselineAggregateSha256": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+    "gitTreeAfterChangeControl": "bbf383e3418da4f613f58719160bb7cbd5709ffc",
+    "filesystemFileCount": 10080,
+    "filesystemDirectoryCount": 2548,
+    "filesystemAggregateSha256": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+    "modifiedPaths": []
   },
   "projectProgress": {
-    "investigationsResolved": 0,
+    "investigationsResolved": 1,
     "investigationsTotal": 9,
-    "investigationPercent": 0.0,
-    "hardBlockers": 2,
+    "investigationPercent": 11.11,
+    "hardBlockers": 0,
     "canonicalImplementationTasksCompleted": 0,
     "canonicalImplementationTasksTotal": 162,
     "canonicalImplementationPercent": 0.0,
@@ -233,11 +303,104 @@
     "allCanonicalGatesPassed": 0,
     "allCanonicalGatesTotal": 168
   },
-  "hardBlockerIds": [
+  "hardBlockerIds": [],
+  "frozenPlanContradiction": false,
+  "codebaseChangeRequiredNext": false,
+  "codebaseModified": false,
+  "originalInvocation": {
+    "status": "BLOCKED",
+    "decision": "FROZEN_PLAN_CHANGE_CONTROL_REQUIRED",
+    "contradiction": {
+      "present": true,
+      "severity": "HARD",
+      "left": {
+        "capabilityId": "MR-CAP-160",
+        "sources": [
+          "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1#/capabilityId",
+          "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1#/contract/capabilityId",
+          "Graphify/09 Implementation/IMPLEMENTATION_QUEUE.md:9"
+        ]
+      },
+      "right": {
+        "capabilityId": "MR-CAP-001",
+        "sources": [
+          "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:1#/capabilityIds/0",
+          "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl:338#/capabilityIds/0",
+          "Graphify/03 Capability Map/CAPABILITY_REGISTRY.json#/capabilities/0/contract/acceptanceTests"
+        ]
+      },
+      "collision": {
+        "capabilityId": "MR-CAP-160",
+        "existingPrimaryTaskId": "MR-IMPL-160",
+        "existingPrimaryTaskPurpose": "Stable Identity Across File Movement",
+        "source": "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:161"
+      },
+      "changeControlRequired": true
+    },
+    "frozenValidation": {
+      "finalFreezeCertification": {
+        "status": "FAIL",
+        "exitCode": 1,
+        "failedChecks": [
+          "BAK-01",
+          "BAK-02",
+          "BAK-03",
+          "BAK-10",
+          "BAK-11"
+        ],
+        "receiptSourceFileCount": 13446,
+        "receiptBackupFileCount": 13446,
+        "scannedSourceFileCount": 13447,
+        "scannedBackupFileCount": 0,
+        "activeBackupPath": "C:/Users/mhyah/Downloads/Code/MindRoom-Recovery/Graphify-final-converged-pre-review-backup-20260808-151008",
+        "activeBackupExists": false
+      },
+      "step11b": {
+        "status": "FAIL",
+        "exitCode": 1,
+        "reason": "Verified active backup receipt is not the exact canonical post-Phase-9 state."
+      },
+      "graphifyGitModified": false,
+      "graphifyFilesystemCertified": false
+    },
+    "hardBlockerIds": [
+      "MR-BLOCK-001",
+      "MR-BLOCK-002"
+    ],
+    "meaning": "Preserved discovery evidence; these were accurate blocking results before authorized change control."
+  },
+  "changeControlLifecycle": [
+    {
+      "state": "DISCOVERED",
+      "evidenceCommit": "7b311585f94bc7c251c79e2f8ff67a12ef30d113",
+      "meaning": "Original MR-INV-001 invocation proved the contradiction and missing active laptop backup."
+    },
+    {
+      "state": "CHANGE_CONTROL_AUTHORIZED",
+      "authorization": "Explicit user frozen-plan change-control request",
+      "preChangeBackupTag": "mindroom-backup/change-control/20260809-103711"
+    },
+    {
+      "state": "RESOLVED",
+      "resolvedAt": "2026-08-09T16:28:13+03:00",
+      "canonicalCapabilityId": "MR-CAP-001",
+      "backupBackend": "GITHUB_NATIVE_IMMUTABLE_GIT_REF"
+    }
+  ],
+  "backupMigration": {
+    "oldBackend": "SUPERSEDED_LOCAL_FILESYSTEM_COPY",
+    "newBackend": "GITHUB_NATIVE_IMMUTABLE_GIT_REF",
+    "persistentLocalBackupRequired": false,
+    "preChangeBackupTag": "mindroom-backup/change-control/20260809-103711",
+    "preChangeTagVerified": true,
+    "commitSha": "7b311585f94bc7c251c79e2f8ff67a12ef30d113",
+    "treeSha": "a097d5d9d72e7ef465288fb95e0b8ade79205897",
+    "graphifyTreeSha": "f9ca1df91adb2c87d8e13aa664b5ea9b635bde9c",
+    "codebaseTreeSha": "bbf383e3418da4f613f58719160bb7cbd5709ffc",
+    "lfsObjectsVerified": true
+  },
+  "resolvedHardBlockerIds": [
     "MR-BLOCK-001",
     "MR-BLOCK-002"
-  ],
-  "frozenPlanContradiction": true,
-  "codebaseChangeRequiredNext": false,
-  "codebaseModified": false
+  ]
 }

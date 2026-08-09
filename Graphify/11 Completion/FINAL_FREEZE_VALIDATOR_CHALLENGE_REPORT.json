@@ -1,6 +1,6 @@
 {
   "freezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
-  "officialValidatorRunId": "mindroom-post-freeze-metadata-repair-20260808-213217-validation",
+  "officialValidatorRunId": "mindroom-mr-inv-001-change-control-20260809-080238-validation",
   "externalReviewRunId": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
   "mappingStatus": "COMPLETED_AND_FROZEN",
   "independentReviewStatus": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
@@ -29,14 +29,14 @@
     "publicEntrypoints": 161
   },
   "manifestRecordCount": 167,
-  "manifestAggregateHash": "46ce3ec1a441feaf7dbf00e90330a4201bde41fcdb9725a11cb534968a119c7c",
+  "manifestAggregateHash": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
   "codebaseFileCount": 10080,
   "codebaseDirectoryCount": 2548,
   "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
-  "validatorCheckCount": 196,
-  "challengeTestCount": 87,
+  "validatorCheckCount": 198,
+  "challengeTestCount": 95,
   "blockingDefectCount": 0,
-  "repairRunId": "mindroom-post-freeze-metadata-repair-20260808-213217",
+  "repairRunId": "mindroom-mr-inv-001-change-control-20260809-080238",
   "gateTestSynchronizationStatus": "PASS",
   "warningSummary": [
     {
@@ -54,11 +54,14 @@
       ]
     }
   ],
+  "backupBackend": "GITHUB_NATIVE_IMMUTABLE_GIT_REF",
+  "currentBackupRef": "refs/tags/mindroom-backup/change-control/20260809-103711",
+  "persistentLocalBackupRequired": false,
   "challengeReportState": "FRESH_CHALLENGE_EXECUTION_VERIFIED",
-  "timestamp": "2026-08-08T21:32:17+00:00",
-  "validatorSourceHash": "80e3fe99c3e4edc23025be469dffb287cb1871d794bbe654fdbd3f95ffff705a",
-  "challengeSourceHash": "c6609e172faa7fe9b0762093628c7fb1a8d89760a63630edb633b703a50623d1",
-  "verifierSourceHash": "3ade1f90f9a547dd60d52b5b37941cf2bcf152c318a93c4623419401f16790c2",
+  "timestamp": "2026-08-09T11:02:38+03:00",
+  "validatorSourceHash": "b2fe87ea8e391f639d374ef67a703d001ba9e90e5d0bb5896d0ec111a0e7a660",
+  "challengeSourceHash": "23b17369a10edc4535151272a9b5297a0e97aea329b55820edf16464cdf5a134",
+  "verifierSourceHash": "27a9859659e4834b9bdfc23391f51dcba0c977af4c1dbc7fa327e84e871141d4",
   "requiredChallenges": [
     "CHALLENGE-001",
     "CHALLENGE-002",
@@ -110,7 +113,6 @@
     "CHALLENGE-LINEAGE-012",
     "CHALLENGE-LINEAGE-013",
     "CHALLENGE-LINEAGE-014",
-    "CHALLENGE-LINEAGE-015",
     "CHALLENGE-LINEAGE-STATUS-001",
     "CHALLENGE-LINEAGE-RECLASSIFIED-001",
     "CHALLENGE-LINEAGE-ALIAS-001",
@@ -135,10 +137,19 @@
     "CHALLENGE-ALIAS-TARGET-001",
     "CHALLENGE-RECLASSIFIED-SOURCE-001",
     "CHALLENGE-RECLASSIFIED-TARGET-001",
-    "CHALLENGE-BACKUP-PATH-001",
-    "CHALLENGE-BACKUP-HASH-001",
-    "CHALLENGE-BACKUP-MISSING-FILE-001",
+    "CHALLENGE-BACKUP-MISSING-REF-001",
+    "CHALLENGE-BACKUP-UNREACHABLE-REF-001",
+    "CHALLENGE-BACKUP-WRONG-COMMIT-001",
+    "CHALLENGE-BACKUP-WRONG-TREE-001",
+    "CHALLENGE-BACKUP-WRONG-GRAPHIFY-001",
+    "CHALLENGE-BACKUP-WRONG-CODEBASE-001",
+    "CHALLENGE-BACKUP-INCOMPLETE-PATH-SET-001",
+    "CHALLENGE-BACKUP-MISSING-LFS-001",
+    "CHALLENGE-BACKUP-LOCAL-REQUIRED-001",
+    "CHALLENGE-BACKUP-LOCAL-MASQUERADE-001",
+    "CHALLENGE-BACKUP-VERIFICATION-001",
     "CHALLENGE-BACKUP-AUTHORITY-DUPLICATE-001",
+    "CHALLENGE-TASK-OWNERSHIP-CONFLICT-001",
     "CHALLENGE-LIVE-REPORT-OVERRIDE-001",
     "CHALLENGE-MANIFEST-VALIDATOR-HASH-001",
     "CHALLENGE-FROZEN-CANDIDATE-FLAG-001",
@@ -1850,37 +1861,6 @@
       "passed": true
     },
     {
-      "challengeId": "CHALLENGE-LINEAGE-015",
-      "mutation": "Corrupt the backup receipt with a missing long-path file",
-      "temporaryFiles": [
-        "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
-      ],
-      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
-      "productionValidatorInvoked": true,
-      "expectedFailedCheckIds": [
-        "BAK-08"
-      ],
-      "actualFailedCheckIds": [
-        "BAK-08"
-      ],
-      "baselineStatus": "PASS",
-      "baselineFailedCheckIds": [],
-      "documentedEnvironmentFailures": [],
-      "environmentExemptions": [],
-      "expectedStatus": "FAIL",
-      "actualStatus": "FAIL",
-      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
-      "overridesUsed": true,
-      "temporaryChallengeId": "CHALLENGE-LINEAGE-015",
-      "independentExpectedEvidence": {
-        "source": "immutable challenge specification",
-        "checkIds": [
-          "BAK-08"
-        ]
-      },
-      "passed": true
-    },
-    {
       "challengeId": "CHALLENGE-LINEAGE-STATUS-001",
       "mutation": "Set resolutionStatus to an unknown value",
       "temporaryFiles": [
@@ -2692,25 +2672,22 @@
       "passed": true
     },
     {
-      "challengeId": "CHALLENGE-BACKUP-PATH-001",
-      "mutation": "Point the backup receipt at a missing directory",
+      "challengeId": "CHALLENGE-BACKUP-MISSING-REF-001",
+      "mutation": "Remove the required GitHub backup ref",
       "temporaryFiles": [
         "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
       "expectedFailedCheckIds": [
-        "BAK-01"
+        "BAK-01",
+        "BAK-02",
+        "META-19"
       ],
       "actualFailedCheckIds": [
         "BAK-01",
         "BAK-02",
-        "BAK-03",
-        "BAK-04",
-        "BAK-08",
-        "BAK-10",
-        "BAK-11",
-        "BAK-12"
+        "META-19"
       ],
       "baselineStatus": "PASS",
       "baselineFailedCheckIds": [],
@@ -2720,18 +2697,85 @@
       "actualStatus": "FAIL",
       "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
       "overridesUsed": true,
-      "temporaryChallengeId": "CHALLENGE-BACKUP-PATH-001",
+      "temporaryChallengeId": "CHALLENGE-BACKUP-MISSING-REF-001",
       "independentExpectedEvidence": {
         "source": "immutable challenge specification",
         "checkIds": [
-          "BAK-01"
+          "BAK-01",
+          "BAK-02",
+          "META-19"
         ]
       },
       "passed": true
     },
     {
-      "challengeId": "CHALLENGE-BACKUP-HASH-001",
-      "mutation": "Corrupt the backup aggregate hash",
+      "challengeId": "CHALLENGE-BACKUP-UNREACHABLE-REF-001",
+      "mutation": "Point at a syntactically valid but unreachable GitHub backup tag",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "BAK-02",
+        "META-19"
+      ],
+      "actualFailedCheckIds": [
+        "BAK-02",
+        "META-19"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-BACKUP-UNREACHABLE-REF-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "BAK-02",
+          "META-19"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-BACKUP-WRONG-COMMIT-001",
+      "mutation": "Record a commit that differs from the remote tag target",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "BAK-03"
+      ],
+      "actualFailedCheckIds": [
+        "BAK-03"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-BACKUP-WRONG-COMMIT-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "BAK-03"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-BACKUP-WRONG-TREE-001",
+      "mutation": "Corrupt the recorded complete Git tree",
       "temporaryFiles": [
         "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
       ],
@@ -2751,7 +2795,7 @@
       "actualStatus": "FAIL",
       "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
       "overridesUsed": true,
-      "temporaryChallengeId": "CHALLENGE-BACKUP-HASH-001",
+      "temporaryChallengeId": "CHALLENGE-BACKUP-WRONG-TREE-001",
       "independentExpectedEvidence": {
         "source": "immutable challenge specification",
         "checkIds": [
@@ -2761,18 +2805,18 @@
       "passed": true
     },
     {
-      "challengeId": "CHALLENGE-BACKUP-MISSING-FILE-001",
-      "mutation": "Report one missing backup file",
+      "challengeId": "CHALLENGE-BACKUP-WRONG-GRAPHIFY-001",
+      "mutation": "Corrupt the recorded Graphify subtree",
       "temporaryFiles": [
         "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
       ],
       "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
       "productionValidatorInvoked": true,
       "expectedFailedCheckIds": [
-        "BAK-04"
+        "BAK-05"
       ],
       "actualFailedCheckIds": [
-        "BAK-04"
+        "BAK-05"
       ],
       "baselineStatus": "PASS",
       "baselineFailedCheckIds": [],
@@ -2782,11 +2826,200 @@
       "actualStatus": "FAIL",
       "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
       "overridesUsed": true,
-      "temporaryChallengeId": "CHALLENGE-BACKUP-MISSING-FILE-001",
+      "temporaryChallengeId": "CHALLENGE-BACKUP-WRONG-GRAPHIFY-001",
       "independentExpectedEvidence": {
         "source": "immutable challenge specification",
         "checkIds": [
-          "BAK-04"
+          "BAK-05"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-BACKUP-WRONG-CODEBASE-001",
+      "mutation": "Corrupt the recorded Codebase subtree",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "BAK-06"
+      ],
+      "actualFailedCheckIds": [
+        "BAK-06"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-BACKUP-WRONG-CODEBASE-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "BAK-06"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-BACKUP-INCOMPLETE-PATH-SET-001",
+      "mutation": "Corrupt the recorded tracked repository path-set identity",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "BAK-07"
+      ],
+      "actualFailedCheckIds": [
+        "BAK-07"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-BACKUP-INCOMPLETE-PATH-SET-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "BAK-07"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-BACKUP-MISSING-LFS-001",
+      "mutation": "Remove one required LFS object from the receipt",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "BAK-08"
+      ],
+      "actualFailedCheckIds": [
+        "BAK-08"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-BACKUP-MISSING-LFS-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "BAK-08"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-BACKUP-LOCAL-REQUIRED-001",
+      "mutation": "Regress the current policy to require a persistent laptop backup",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "BAK-01",
+        "META-19"
+      ],
+      "actualFailedCheckIds": [
+        "BAK-01",
+        "META-19"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-BACKUP-LOCAL-REQUIRED-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "BAK-01",
+          "META-19"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-BACKUP-LOCAL-MASQUERADE-001",
+      "mutation": "Add an active local backup path to the GitHub receipt",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "BAK-13"
+      ],
+      "actualFailedCheckIds": [
+        "BAK-13"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-BACKUP-LOCAL-MASQUERADE-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "BAK-13"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-BACKUP-VERIFICATION-001",
+      "mutation": "Regress the current backup receipt verification status",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "BAK-11"
+      ],
+      "actualFailedCheckIds": [
+        "BAK-11"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-BACKUP-VERIFICATION-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "BAK-11"
         ]
       },
       "passed": true
@@ -2818,6 +3051,37 @@
         "source": "immutable challenge specification",
         "checkIds": [
           "BAK-13"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-TASK-OWNERSHIP-CONFLICT-001",
+      "mutation": "Give the bootstrap task a root owner that conflicts with its contract, owner set, and test",
+      "temporaryFiles": [
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "TASK-OWNERSHIP-01"
+      ],
+      "actualFailedCheckIds": [
+        "TASK-OWNERSHIP-01"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-TASK-OWNERSHIP-CONFLICT-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "TASK-OWNERSHIP-01"
         ]
       },
       "passed": true
@@ -3073,13 +3337,13 @@
     }
   ],
   "gateSpecificChallenges": 10,
-  "lineageChallengesExecuted": 25,
-  "lineageChallengesPassed": 25,
+  "lineageChallengesExecuted": 24,
+  "lineageChallengesPassed": 24,
   "lineageChallengeFailures": 0,
   "lineageSemanticChallengesExecuted": 24,
-  "challengesUsingProductionValidator": 87,
-  "challengesWithIndependentExpectedEvidence": 87,
-  "challengesWithZeroFailureBaseline": 87,
+  "challengesUsingProductionValidator": 95,
+  "challengesWithIndependentExpectedEvidence": 95,
+  "challengesWithZeroFailureBaseline": 95,
   "challengesUsingBaselineFailureSubtraction": 0,
   "baselineFailuresSubtracted": false,
   "coreBaselineStatus": "PASS",
@@ -3094,7 +3358,7 @@
   "finalFreezeCertificationFailedCheckIds": [],
   "finalFreezeCertificationEnvironmentFailures": [],
   "backupUnchangedThroughoutChallenges": true,
-  "backupAggregateBeforeChallenges": "6f1aa4dfc27430deb7c211f879d00f7fd74d593444d5ec4b8a4343b635a4434e",
-  "backupAggregateAfterChallenges": "6f1aa4dfc27430deb7c211f879d00f7fd74d593444d5ec4b8a4343b635a4434e",
+  "backupAggregateBeforeChallenges": "154c30f3841f3a6b1f5e8d7d8422e28bb21ce423274ffe169e95b25b11594cd2",
+  "backupAggregateAfterChallenges": "154c30f3841f3a6b1f5e8d7d8422e28bb21ce423274ffe169e95b25b11594cd2",
   "postPublicationCertificationRevalidated": true
 }

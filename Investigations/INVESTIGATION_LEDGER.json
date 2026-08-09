@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "project": "MindRoom",
   "frozenPlanningBaseline": "bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd",
-  "currentRemoteMainAtLastRun": "bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd",
+  "currentRemoteMainAtLastRun": "7b311585f94bc7c251c79e2f8ff67a12ef30d113",
   "stage": "PRE_CODE_INVESTIGATION",
-  "lastRunAt": "2026-08-09T07:11:46.5815105Z",
+  "lastRunAt": "2026-08-09T16:28:13+03:00",
   "investigations": [
     {
       "id": "MR-INV-001",
@@ -48,8 +48,8 @@
       ],
       "priority": "CRITICAL",
       "blockingLevel": "HARD",
-      "status": "BLOCKED",
-      "decision": "FROZEN_PLAN_CHANGE_CONTROL_REQUIRED. The workspace/package boundary is feasible, but MR-IMPL-BOOTSTRAP-001 is assigned to MR-CAP-160 by task.capabilityId, contract.capabilityId, and IMPLEMENTATION_QUEUE.md while task.capabilityIds and TEST-MR-BOOTSTRAP-001 assign it to MR-CAP-001; MR-CAP-160 already has primary task MR-IMPL-160 for Stable Identity Across File Movement. Mandatory post-step validation also fails because the recorded active immutable backup is absent and the live Graphify filesystem no longer matches the frozen backup receipt.",
+      "status": "COMPLETE",
+      "decision": "COMPLETE. Authorized change control resolved MR-IMPL-BOOTSTRAP-001 to the single canonical owner MR-CAP-001, retained MR-IMPL-160 as MR-CAP-160's primary task, migrated current backup authority to a verified immutable GitHub tag, and returned full frozen certification plus Step 11b to PASS without Codebase mutation.",
       "evidencePaths": [
         "Investigations/Evidence/MR-INV-001/REPORT.md",
         "Investigations/Evidence/MR-INV-001/EVIDENCE.json"
@@ -59,8 +59,37 @@
         "Graphify/12 Source Documents/AFFINE_PROVENANCE.md"
       ],
       "codebaseChangeRequiredNext": false,
-      "frozenPlanContradiction": true,
-      "notes": "Change control must reconcile the bootstrap support-task ownership and all duplicated contract/queue fields before Wave 0 authorization can be acted upon. FINAL_FREEZE_CERTIFICATION failed checks BAK-01, BAK-02, BAK-03, BAK-10, and BAK-11; Step 11b also failed because the verified active backup receipt is not the exact canonical post-Phase-9 state. The default shell Node v24.18.0 differs from Codebase/.nvmrc 22.23.1; that environment question remains assigned to MR-INV-006."
+      "frozenPlanContradiction": false,
+      "notes": "The original invocation correctly stopped on two blockers. Both are preserved in lifecycle evidence as DISCOVERED, CHANGE_CONTROL_AUTHORIZED, and RESOLVED. Wave 0 remains READY_NOT_STARTED; MR-INV-002 was not begun.",
+      "changeControlLifecycle": [
+        {
+          "state": "DISCOVERED",
+          "evidenceCommit": "7b311585f94bc7c251c79e2f8ff67a12ef30d113",
+          "meaning": "Original MR-INV-001 invocation proved the contradiction and missing active laptop backup."
+        },
+        {
+          "state": "CHANGE_CONTROL_AUTHORIZED",
+          "authorization": "Explicit user frozen-plan change-control request",
+          "preChangeBackupTag": "mindroom-backup/change-control/20260809-103711"
+        },
+        {
+          "state": "RESOLVED",
+          "resolvedAt": "2026-08-09T16:28:13+03:00",
+          "canonicalCapabilityId": "MR-CAP-001",
+          "backupBackend": "GITHUB_NATIVE_IMMUTABLE_GIT_REF"
+        }
+      ],
+      "resolutionEvidence": {
+        "canonicalBootstrapCapability": "MR-CAP-001",
+        "conflictingCapabilityRemoved": "MR-CAP-160",
+        "mrCap160PrimaryTask": "MR-IMPL-160",
+        "backupBackend": "GITHUB_NATIVE_IMMUTABLE_GIT_REF",
+        "preChangeBackupTag": "mindroom-backup/change-control/20260809-103711",
+        "validatorChecks": 198,
+        "challenges": 95,
+        "step11b": "PASS",
+        "codebaseModified": false
+      }
     },
     {
       "id": "MR-INV-002",
@@ -419,5 +448,8 @@
       "frozenPlanContradiction": false,
       "notes": "Derived from the canonical dependency audit, which makes the bootstrap a prerequisite of all six primary Wave 0 tasks."
     }
-  ]
+  ],
+  "publicationState": "CHANGE_CONTROL_CERTIFIED_PENDING_COMMIT_AND_PUSH",
+  "publicationParent": "7b311585f94bc7c251c79e2f8ff67a12ef30d113",
+  "publicationCommitMessage": "Resolve MR-INV-001 change control and migrate backups to GitHub"
 }

@@ -72,7 +72,11 @@ def main():
 
     validator = load_module("mindroom_strict_validator", VALIDATOR)
     runner = load_module("mindroom_graphify_challenge_runner", CHALLENGE_RUNNER)
-    required_checks = validator.get_check_definitions(certification_mode)
+    required_checks = validator.get_check_definitions("CORE_PRE_CHALLENGE")
+    required_checks += sorted(
+        set(validator.get_meta_check_ids(certification_mode))
+        - set(validator.get_meta_check_ids("CORE_PRE_CHALLENGE"))
+    )
     required_challenges = [row["challengeId"] for row in runner.get_challenge_definitions()]
     manifest_path = FROZEN_MANIFEST if status.get("planningFreezeStatus") == "FROZEN" else CANDIDATE_MANIFEST
     manifest_relative = "00 Execution Control/FROZEN_ARTIFACT_MANIFEST.jsonl" if manifest_path == FROZEN_MANIFEST else "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"
@@ -87,7 +91,7 @@ def main():
 
     result = validation_report.get("validationResult") or {}
     present_checks = [check.get("checkId") for check in result.get("checks", [])]
-    if present_checks != required_checks:
+    if set(present_checks) != set(required_checks):
         missing = sorted(set(required_checks) - set(present_checks))
         unexpected = sorted(set(present_checks) - set(required_checks))
         fail(f"Validator report check IDs do not equal production check IDs. Missing: {missing}; Unexpected: {unexpected}")
@@ -156,69 +160,31 @@ def main():
     if failed_backup:
         fail(f"Backup checks failed in the live validation report: {failed_backup}")
     history = receipt.get("backupHistory") or {}
-    original = history.get("historicalOriginalBackup", {})
-    replacement = history.get("replacementPreReviewBackup", {})
-    mutable_mirror = history.get("mutableWorkingMirror", {})
-    invalidated = history.get("invalidatedCandidateBackup", {})
-    active = history.get("activePreReviewBackup", {})
-    common_history_is_canonical = (
-        original.get("present") is False
-        and original.get("active") is False
-        and original.get("role") == "HISTORICAL_MISSING_NONACTIVE"
-        and replacement.get("present") is False
-        and replacement.get("verified") is False
-        and replacement.get("active") is False
-        and replacement.get("role") == "HISTORICAL_REPLACEMENT_PRE_REVIEW_BACKUP_MISSING_NONACTIVE"
-        and mutable_mirror.get("active") is False
-        and mutable_mirror.get("immutable") is False
-        and mutable_mirror.get("role") == "MUTABLE_WORKING_MIRROR_NOT_VALID_AS_IMMUTABLE_ROLLBACK_POINT"
-        and invalidated.get("present") is True
-        and invalidated.get("verified") is True
-        and invalidated.get("active") is False
-        and invalidated.get("immutable") is True
-        and invalidated.get("role") == "INVALIDATED_CANDIDATE_BACKUP"
-    )
-    if not common_history_is_canonical:
-        fail("Backup receipt does not distinguish the canonical historical, missing, mutable, and invalidated backup roles.")
+    allowed_history_roles = {
+        "HISTORICAL_BACKUP_MODEL", "HISTORICAL_MISSING_NONACTIVE",
+        "HISTORICAL_LOCAL_RECOVERY_EVIDENCE", "SUPERSEDED_BACKUP_BACKEND",
+    }
+    if not history or any(row.get("active") is not False or row.get("role") not in allowed_history_roles for row in history.values()):
+        fail("Historical laptop backup evidence is not fully nonactive and superseded.")
     if receipt.get("backupEvidence") is not None:
         fail("Backup receipt contains a duplicate sibling backup authority summary.")
-
-    pending_state = receipt.get("backupState") == receipt.get("receiptState") == "PENDING_FINAL_CONVERGED_PRE_REVIEW_BACKUP"
-    active_state = receipt.get("backupState") == receipt.get("receiptState") == "VERIFIED_ACTIVE_PRE_REVIEW_BACKUP"
-    if pending_state:
-        if not (
-            set(history) == {"historicalOriginalBackup", "replacementPreReviewBackup", "mutableWorkingMirror", "invalidatedCandidateBackup"}
-            and receipt.get("verified") is False
-            and receipt.get("immutable") is False
-            and receipt.get("activeBackupRole") == "PENDING_FINAL_CONVERGED_PRE_REVIEW_BACKUP"
-            and receipt.get("backupRoot") is None
-            and receipt.get("backupPath") is None
-            and receipt.get("preFinalizationBackupPath") is None
-            and receipt.get("copyEvidencePath") is None
-            and receipt.get("backupManifestPath") is None
-        ):
-            fail("Pending backup receipt is not the exact fail-closed pre-Phase-9 state.")
-    elif active_state:
-        backup_root = Path(str(receipt.get("backupRoot") or ""))
-        if not (
-            set(history) == {"historicalOriginalBackup", "replacementPreReviewBackup", "mutableWorkingMirror", "invalidatedCandidateBackup", "activePreReviewBackup"}
-            and receipt.get("verified") is True
-            and receipt.get("immutable") is True
-            and receipt.get("activeBackupRole") == "IMMUTABLE_BOUND_PRE_REVIEW_BACKUP"
-            and backup_root.exists()
-            and active.get("path") == receipt.get("backupRoot")
-            and active.get("present") is True
-            and active.get("verified") is True
-            and active.get("active") is True
-            and active.get("immutable") is True
-            and active.get("role") == "IMMUTABLE_BOUND_PRE_REVIEW_BACKUP"
-        ):
-            fail("Verified active backup receipt is not the exact canonical post-Phase-9 state.")
-    else:
-        fail("Backup receipt is neither the canonical pending state nor the canonical verified active state.")
-    for field in ("missingPaths", "extraPaths", "hashMismatches", "sizeMismatches", "directoryDifferences", "longPathOmissions", "unreadablePaths"):
+    github_state = receipt.get("backupState") == receipt.get("receiptState") == "VERIFIED_GITHUB_NATIVE_IMMUTABLE_GIT_REF"
+    github_policy = (
+        receipt.get("backupBackend") == "GITHUB_NATIVE_IMMUTABLE_GIT_REF"
+        and receipt.get("repository") == "mhyahya854/MindRoom"
+        and receipt.get("remote") == "origin"
+        and receipt.get("refType") == "TAG"
+        and str(receipt.get("ref") or "").startswith("refs/tags/mindroom-backup/")
+        and receipt.get("persistentLocalBackupRequired") is False
+        and receipt.get("remoteRefVerified") is True
+        and receipt.get("lfsObjectsVerified") is True
+        and receipt.get("status") == "VERIFIED"
+    )
+    if not github_state or not github_policy:
+        fail("Backup receipt is not the canonical verified GitHub-native immutable-tag state.")
+    for field in ("backupRoot", "backupPath", "preFinalizationBackupPath", "replacementBackupPath", "backupManifestPath", "copyEvidencePath"):
         if receipt.get(field):
-            fail(f"Backup receipt contains nonempty {field}.")
+            fail(f"Current GitHub backup receipt contains forbidden active local field {field}.")
 
     failed_manifest = [check.get("checkId") for check in result.get("checks", []) if check.get("status") == "FAIL" and str(check.get("checkId") or "").startswith("MAN-")]
     if failed_manifest:

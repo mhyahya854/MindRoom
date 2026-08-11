@@ -1,13 +1,13 @@
 # MindRoom Pre-Code Investigation Status
 
-Updated: 2026-08-09T16:28:13+03:00
+Updated: 2026-08-11T10:41:25+03:00
 
 ## Control state
 
-- Starting GitHub main: `7b311585f94bc7c251c79e2f8ff67a12ef30d113`
+- Starting GitHub main: `fcd5fd2448ab6301b4e9233a87c93d9919c5cf6b`
 - Investigation stage: `PRE_CODE_INVESTIGATION`
 - Completed investigation: `MR-INV-001 — Shared package bootstrap boundary and ownership`
-- Next eligible investigation: `MR-INV-002` (**not started in this run**)
+- Selected investigation: `MR-INV-002 — Wave 0 application architecture preservation boundary` (`BLOCKED`)
 - Wave 0 authorized: **NO**
 - Wave 0 state: `READY_NOT_STARTED`
 - Codebase execution: `BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION`
@@ -17,11 +17,18 @@ Updated: 2026-08-09T16:28:13+03:00
 
 - Total investigations: **9**
 - Complete: **1**
-- Pending: **8**
-- Blocked: **0**
+- Pending: **7**
+- Blocked: **1**
 - Investigation completion: **11.11%**
 - Investigations remaining: **8**
-- Active hard blockers: **0**
+- Active hard blockers: **1**
+
+## Active hard blocker
+
+- `MR-BLOCK-003`: **ACTIVE** — the frozen `MR-CAP-001`/`MR-IMPL-001` exact-location, owner, path-boundary, build-entry, and acceptance-test semantics contradict the hash-matching Codebase. Explicit frozen-plan change control is required.
+- Codebase decision: **KEEP EXISTING; NO CODEBASE MUTATION**.
+- Frozen-plan contradiction: **YES**.
+- User decision required: **NO**.
 
 ## Resolved change control
 
@@ -34,6 +41,8 @@ Updated: 2026-08-09T16:28:13+03:00
 - Final freeze certification: **PASS** (198 checks, 0 failures)
 - Challenges: **PASS** (95/95, 0 exemptions, 0 baseline subtraction)
 - Step 11b: **PASS**
+
+The passing structural certification does not validate literal source-anchor existence or semantic agreement between the capability owner and task allowed paths. `MR-INV-002` independently proved that gap.
 
 ## Canonical implementation progress
 
@@ -53,7 +62,7 @@ Updated: 2026-08-09T16:28:13+03:00
 
 ## Distance from 100%
 
-- Planning/freeze remaining: **0 change-control blockers; frozen state re-certified**
+- Planning/freeze remaining: **1 active frozen-plan change-control blocker; structural frozen certification still passes**
 - Investigations remaining: **8**
 - Canonical implementation remaining: **100.00%**
 - Implementation tasks remaining: **162**
@@ -61,4 +70,4 @@ Updated: 2026-08-09T16:28:13+03:00
 
 ## Current decision
 
-`MR-INV-001 = COMPLETE`. Do not begin Codebase changes, Wave 0, or MR-INV-002 without the separately required authorization/workflow.
+`MR-INV-002 = BLOCKED`. Do not begin another investigation or Wave 0. Publish and resolve `MR-BLOCK-003` through explicit frozen-plan change control, then independently re-certify before continuation.

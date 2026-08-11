@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 1,
+  "project": "MindRoom",
+  "investigationId": "MR-INV-002",
+  "title": "Wave 0 application architecture preservation boundary",
+  "question": "Which application entrypoints, package boundaries, and registrations must Wave 0 preserve, and which exact changes are actually required by MR-IMPL-001?",
+  "startedAt": "2026-08-11T10:22:43+03:00",
+  "completedAt": "2026-08-11T10:41:25+03:00",
+  "startingSha": "fcd5fd2448ab6301b4e9233a87c93d9919c5cf6b",
+  "status": "BLOCKED",
+  "blockingLevel": "HARD",
+  "selectedInvestigationOnly": true,
+  "codebaseModified": false,
+  "graphifyModified": false,
+  "implementationPerformed": false,
+  "applicationReleased": false,
+  "wave0Authorized": false,
+  "preInvestigationBackup": {
+    "tag": "mindroom-backup/pre-investigation/MR-INV-002-20260811-102243",
+    "target": "fcd5fd2448ab6301b4e9233a87c93d9919c5cf6b",
+    "remoteVerified": true
+  },
+  "frozenPlan": {
+    "capabilityId": "MR-CAP-001",
+    "taskId": "MR-IMPL-001",
+    "classification": "KEEP",
+    "preliminaryAffineDecision": "KEEP_EXISTING",
+    "runtimeOwner": "RENDERER",
+    "contractOwnedPackageOrModule": "Codebase/packages/frontend/core/package.json",
+    "taskExactCurrentPathCount": 12,
+    "taskAllowedPathCount": 12,
+    "taskRuntimeRegistrationCount": 33,
+    "exactRequiredChange": "Preserve the mapped implementation and its runtime registrations while future changes remain within the locked plan boundary."
+  },
+  "preservedArchitecture": {
+    "workspaceManager": "Yarn 4.13.0",
+    "workspacePatterns": [
+      "packages/*/*",
+      "packages/frontend/apps/*"
+    ],
+    "applicationPackages": [
+      "@affine/web",
+      "@affine/mobile",
+      "@affine/ios",
+      "@affine/android",
+      "@affine/electron-renderer"
+    ],
+    "sharedRendererPackage": "@affine/core",
+    "sharedRendererExports": [
+      "./*",
+      "./bootstrap"
+    ],
+    "rspackEntrypoints": [
+      "Codebase/packages/frontend/apps/web/src/index.tsx",
+      "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+      "Codebase/packages/frontend/apps/ios/src/index.tsx",
+      "Codebase/packages/frontend/apps/android/src/index.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts"
+    ],
+    "compositionRoots": [
+      "Codebase/packages/frontend/apps/android/src/app.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+      "Codebase/packages/frontend/apps/ios/src/app.tsx",
+      "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+      "Codebase/packages/frontend/apps/web/src/app.tsx"
+    ],
+    "generatedOutputBoundary": "Each production frontend bundle cleans and recreates its package dist directory; dist output is generated and non-authoritative."
+  },
+  "runtimeRegistrationVerification": {
+    "classification": "EMPIRICALLY_VERIFIED_READ_ONLY",
+    "declared": 33,
+    "resolved": 33,
+    "declaringPathsExist": 33,
+    "sourceLineEvidenceExact": 33,
+    "registeredIdentifiersPresent": 33,
+    "runtimeEntrypointsExist": 33,
+    "failures": 0,
+    "types": {
+      "DI_REGISTRATION": 27,
+      "WORKER_REGISTRATION": 6
+    },
+    "registrationIds": [
+      "MR-REG-19254409a75692172d12720d",
+      "MR-REG-1b10a6305ebb39e200f8d353",
+      "MR-REG-2bf9c1327e9c8149744e5c0f",
+      "MR-REG-372539ab1f77a6438c0a6b2b",
+      "MR-REG-3ada9327e967b275cb3fdd2b",
+      "MR-REG-5723306f6f698a0e439bba94",
+      "MR-REG-5ad8538f336751f4f5afc2a6",
+      "MR-REG-5bbfc3653aad2a4e7ad7e1f6",
+      "MR-REG-6378bf522cd994df026f0b8d",
+      "MR-REG-7aca871a979152612fea1fee",
+      "MR-REG-801ac1cf6c44830c19967cde",
+      "MR-REG-8a2facc4825f0f1682a080b8",
+      "MR-REG-8bd5bb6b19abf0db9c0d42e7",
+      "MR-REG-8e178046bb9789c3fbd9aab7",
+      "MR-REG-a1fa6ebd379f1b77bbbc0bd4",
+      "MR-REG-a66ed8e480083331f763b4ad",
+      "MR-REG-ae460af8369cdd2260233e09",
+      "MR-REG-ae9fef910e9998e1c4deefb0",
+      "MR-REG-b264d1b48f843a960384e9b7",
+      "MR-REG-b3b787d5bc5def1e6d21e44f",
+      "MR-REG-b9477c3a790a86ed0718b53b",
+      "MR-REG-be4bd5f7a25a3bae9e24cd6c",
+      "MR-REG-c57851ccf51d367ac5ffe61f",
+      "MR-REG-c78c6bd6b0e21cc9427234f3",
+      "MR-REG-cc13e3ddf7ab56a70226e872",
+      "MR-REG-cc979c9f442fa8ee65bca6bc",
+      "MR-REG-ce318d22ed72d779f6afe607",
+      "MR-REG-d34026ea14d86a1eda226b28",
+      "MR-REG-d693594df0a62d7270491077",
+      "MR-REG-e7398f1ff86cb27de47ba3c5",
+      "MR-REG-fc72d9c36ad99b8e6d9f2d6d",
+      "MR-REG-fcbdf2e51d6ac4edd15a9654",
+      "MR-REG-fd033c93693b589ebeb216aa"
+    ]
+  },
+  "pathReconciliation": {
+    "classification": "EMPIRICALLY_VERIFIED_READ_ONLY",
+    "actualRspackEntrypoints": 8,
+    "actualRspackEntrypointsExisting": 8,
+    "actualRspackEntrypointsInTaskAllowedPaths": 0,
+    "contractOwner": "Codebase/packages/frontend/core/package.json",
+    "contractOwnerInTaskAllowedPaths": false,
+    "contractOwnerForbiddenByCatchAll": true,
+    "explicitTaskGeneratedPathPolicy": false,
+    "conclusion": "The task path boundary does not reconcile with its contract owner or the actual build entry graph."
+  },
+  "taskPathVerification": {
+    "classification": "EMPIRICALLY_VERIFIED_READ_ONLY",
+    "declared": 12,
+    "existing": 12,
+    "paths": [
+      {"path": "Codebase/package.json", "sha256": "6ce694262f8b3df1ca4bcf54acac62d60ef4bf7784419f1bfefb9858077e4ddf"},
+      {"path": "Codebase/packages/frontend/apps/android/src/app.tsx", "sha256": "21aa38c14c96df89e3a435cedcf079cb52bad410da64c5044c47ddc1a6e71e5a"},
+      {"path": "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx", "sha256": "c0b348f75bb550a3f6018f2667a135896992ba52794c399d39e203f2575157dd"},
+      {"path": "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx", "sha256": "ce42201da73a61dd4c1db09cc98490b0d3251ddd1885a90fa998975a50635571"},
+      {"path": "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx", "sha256": "181ea92e0ea7628782edd6017c27a9889ec5ad84b928e76511cb4ffb85fa2b39"},
+      {"path": "Codebase/packages/frontend/apps/ios/src/app.tsx", "sha256": "39e5f335ef568ab3a644d807ad967168a9e58c685f3302bba3e234a321f42475"},
+      {"path": "Codebase/packages/frontend/apps/mobile/src/app.tsx", "sha256": "b59b37dad1390304f667d3ce19e3cfd2d071a9fe74f60a688b2b575ae0535cdb"},
+      {"path": "Codebase/packages/frontend/apps/web/src/app.tsx", "sha256": "c8d4a30481ab50ed1883c1a0da36cb1851e267da997a1b5caa91c056bc8577c0"},
+      {"path": "Codebase/packages/frontend/apps/android/package.json", "sha256": "0b5242f0909329ffdea8797e57b7089db40fdce18e56e793c5b1dbacc7bb3303"},
+      {"path": "Codebase/packages/frontend/apps/android/tsconfig.json", "sha256": "f691e92bba121757d769c6a9a08726dff6d0a32117af25df65a2804f954dc86c"},
+      {"path": "Codebase/packages/frontend/apps/electron-renderer/package.json", "sha256": "e75eaaad3271badefbf664a2ececf4fdbba0c0733b07cd2f0c0a585bf5f63f6f"},
+      {"path": "Codebase/packages/frontend/apps/electron-renderer/tsconfig.json", "sha256": "3b1f9ec7df9a25bfd7da6842ac6fa052a59dca4fa73e9bbdc5179bd8fd76f797"}
+    ]
+  },
+  "externalPrimaryEvidence": {
+    "classification": "PROVEN_FROM_PRIMARY_EXTERNAL_SOURCE",
+    "repository": "toeverything/AFFiNE",
+    "commit": "da7781a75171140fd966c6cfbe05da9f1fb111d6",
+    "tree": "4f7b0d6657efa7e9ee0c1e3359e09a21eb8e145f",
+    "packageVersion": "0.26.3",
+    "archiveSha256": "1fc573a2143f664d4944df4e82570651f54c75ba8a891c546fe9153820a597c9",
+    "targetedFilesCompared": 16,
+    "byteIdentical": 12,
+    "versionDeltas": 4,
+    "conclusion": "The official pinned source confirms the index.tsx-to-App and multi-entry Electron renderer topology."
+  },
+  "materialConclusions": [
+    {
+      "id": "MR-INV-002-CONCLUSION-001",
+      "classification": "EMPIRICALLY_VERIFIED_READ_ONLY",
+      "conclusion": "All 33 task-linked runtime registrations are current and exact."
+    },
+    {
+      "id": "MR-INV-002-CONCLUSION-002",
+      "classification": "PROVEN_FROM_REPOSITORY",
+      "conclusion": "MR-IMPL-001 is a KEEP task whose current and target path sets are identical; no Codebase rewrite is justified."
+    },
+    {
+      "id": "MR-INV-002-CONCLUSION-003",
+      "classification": "EMPIRICALLY_VERIFIED_READ_ONLY",
+      "conclusion": "The hash-matching @affine/core/package.json contains neither the claimed MR_CAP_001_CoreSymbol nor its claimed export-interface anchor."
+    },
+    {
+      "id": "MR-INV-002-CONCLUSION-004",
+      "classification": "PROVEN_FROM_REPOSITORY",
+      "conclusion": "The capability owner, task allowed paths, actual build entrypoints, and acceptance tests are semantically inconsistent."
+    },
+    {
+      "id": "MR-INV-002-CONCLUSION-005",
+      "classification": "INFERENCE",
+      "conclusion": "After authorized repair, MR-IMPL-001 should execute as a preservation/verification gate with zero application source mutations unless later evidence proves a scoped adaptation necessary."
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "MR-INV-002-CONT-001",
+      "description": "Frozen authority claims a TypeScript interface in a JSON manifest where the literal symbol and anchor do not exist.",
+      "sources": [
+        "Graphify/03 Capability Map/CAPABILITY_REGISTRY.json#/capabilities/0",
+        "Graphify/04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json#/locations/MR-CAP-001",
+        "Graphify/04 Exact Location Registry/SYMBOL_REGISTRY.jsonl:1",
+        "Codebase/packages/frontend/core/package.json"
+      ]
+    },
+    {
+      "id": "MR-INV-002-CONT-002",
+      "description": "The contract owner path is absent from task allowed paths and is therefore forbidden by the catch-all rule, while the task paths point elsewhere.",
+      "sources": [
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:5",
+        "Graphify/03 Capability Map/CAPABILITY_REGISTRY.json#/capabilities/0"
+      ]
+    },
+    {
+      "id": "MR-INV-002-CONT-003",
+      "description": "Eight actual Rspack entry source files are proven by the build map and live bundler but omitted from the task exact/allowed path sets.",
+      "sources": [
+        "Graphify/02 Architecture Map/BUILD_AND_PACKAGING_MAP.md:28",
+        "Codebase/tools/cli/src/bundle.ts:107",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl:5"
+      ]
+    },
+    {
+      "id": "MR-INV-002-CONT-004",
+      "description": "The unit test requires the nonexistent symbol, and the integration test requires undefined generic state persistence for a KEEP architecture capability.",
+      "sources": [
+        "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl#TEST-MR-CAP-001-UNIT-001",
+        "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl#TEST-MR-CAP-001-INTEG-002"
+      ]
+    }
+  ],
+  "acceptanceCriteria": [
+    {
+      "criterion": "All active application entrypoints and runtime registrations mapped to MR-CAP-001 are verified against Codebase.",
+      "status": "PASS",
+      "evidence": "Eight live Rspack entry sources, seven composition roots, and 33/33 task-linked registrations were verified read-only."
+    },
+    {
+      "criterion": "Required Wave 0 mutations are separated from already-correct preserved behavior.",
+      "status": "PASS",
+      "evidence": "The task is KEEP_EXISTING; existing paths and registrations are intact; zero Codebase changes are justified."
+    },
+    {
+      "criterion": "Allowed, generated, and forbidden paths are reconciled with the actual build graph.",
+      "status": "FAIL",
+      "evidence": "The owner path and eight Rspack entry sources are outside the 12 allowed paths; generated dist handling is not task-scoped."
+    },
+    {
+      "criterion": "No unresolved architecture ownership ambiguity remains.",
+      "status": "FAIL",
+      "evidence": "Capability owner, exact-location symbol, task path boundary, build entries, and acceptance tests disagree."
+    }
+  ],
+  "acceptanceSummary": {
+    "passed": 2,
+    "total": 4
+  },
+  "hardBlockers": [
+    {
+      "blockerId": "MR-BLOCK-003",
+      "reason": "The frozen MR-CAP-001/MR-IMPL-001 architecture owner and proof boundary are semantically contradictory and cannot produce truthful Wave 0 receipts.",
+      "frozenPlanChangeControlRequired": true,
+      "userDecisionRequired": false
+    }
+  ],
+  "softRisks": [
+    "Four of sixteen targeted active/reference files are version deltas; they need ordinary Wave 0 preservation checks after authority repair.",
+    "Offline/cloud-adjacent registrations remain assigned to MR-INV-005 and were not reclassified here."
+  ],
+  "frozenPlanContradiction": true,
+  "decision": "BLOCKED. Preserve the current application architecture and make no Codebase change. Explicit frozen-plan change control must repair MR-CAP-001/MR-IMPL-001 exact-location, ownership, path-boundary, build-entry, acceptance-test, and validator semantics before Wave 0.",
+  "implementationConsequence": "NO CODEBASE MUTATION. After authorized change control, MR-IMPL-001 should be a preservation/verification gate unless new scoped evidence proves an adaptation is required.",
+  "requiredResolution": [
+    "Replace the nonexistent MR_CAP_001_CoreSymbol with truthful source anchors or an explicit non-symbol preservation marker.",
+    "Reconcile capability ownership with task exact/current/target/allowed paths and actual Rspack entries.",
+    "Classify true entry sources, worker inputs, and generated dist outputs.",
+    "Rewrite the two MR-CAP-001 acceptance tests around the real architecture contract.",
+    "Add literal-anchor and owner/path semantic validator challenges.",
+    "Rerun full authorized frozen change-control certification and independent review."
+  ],
+  "verification": {
+    "finalFreezeCertification": {
+      "status": "PASS",
+      "checks": 198,
+      "failures": 0,
+      "validationMode": "FINAL_FREEZE_CERTIFICATION"
+    },
+    "step11b": {
+      "status": "PASS",
+      "validatorIds": "198/198",
+      "challengeIds": "95/95"
+    },
+    "codebasePreservation": {
+      "files": 10080,
+      "directories": 2548,
+      "aggregateSha256": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+      "status": "PASS"
+    },
+    "semanticValidatorGap": "The passing certification does not validate literal source-anchor existence or owner/allowed-path semantic agreement."
+  },
+  "progressAfterInvestigation": {
+    "investigationsResolved": 1,
+    "investigationsTotal": 9,
+    "investigationsRemaining": 8,
+    "investigationCompletionPercent": 11.11,
+    "blockedInvestigations": 1,
+    "activeHardBlockers": 1,
+    "implementationTasksCompleted": 0,
+    "implementationTasksTotal": 162,
+    "implementationTasksRemaining": 162,
+    "implementationCompletionPercent": 0.0,
+    "releaseGatesPassed": 0,
+    "releaseGatesTotal": 168,
+    "releaseGatesRemaining": 168
+  }
+}

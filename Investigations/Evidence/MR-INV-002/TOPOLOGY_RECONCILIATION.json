@@ -1,0 +1,519 @@
+{
+  "schemaVersion": 1,
+  "project": "MindRoom",
+  "investigationId": "MR-INV-002",
+  "blockerId": "MR-BLOCK-003",
+  "status": "PASS",
+  "generatedAt": "2026-08-11T14:13:58+03:00",
+  "derivationAuthority": "CURRENT_CODEBASE_SOURCE_BYTES",
+  "selectionRule": "Select immediate Codebase/packages/frontend/apps/* package manifests whose scripts.build is exactly 'affine bundle' and whose dependency declarations directly include @affine/core; join them to RSPACK_SUPPORTED_PACKAGES, bundle.ts switch cases, getBaseWorkerConfigs, HTML/worker target calls, and Rspack helper entry assignments.",
+  "sourceFiles": {
+    "Codebase/packages/frontend/core/package.json": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+    "Codebase/tools/cli/src/bundle-shared.ts": "1743a940fd575f7e1274f0e1dac6111801eadf3da7f2d8927418980f40024631",
+    "Codebase/tools/cli/src/bundle.ts": "2fa9bfce758f511e35a1e3a58cf08ac3304b8936a38cbdc2e357194596e79f25",
+    "Codebase/tools/cli/src/rspack/index.ts": "068fa7b26ba671db9b1caa75c311d008bb2ff05b27a67fd7d20afb441eb107ef",
+    "Codebase/packages/frontend/apps/web/package.json": "4bbfaa8b5c124c6f5b57592327039ad2ebb6543105735368cb2143a4c065e9e7",
+    "Codebase/packages/frontend/apps/mobile/package.json": "8d6179b8ff00596e9cbae944c223eaf23c4abf43d7ab23bd5389b1fb75f119c2",
+    "Codebase/packages/frontend/apps/ios/package.json": "79bb14ed75a989c93994a8111364f95f2ef88a7588568440f4dee89055d716a7",
+    "Codebase/packages/frontend/apps/android/package.json": "0b5242f0909329ffdea8797e57b7089db40fdce18e56e793c5b1dbacc7bb3303",
+    "Codebase/packages/frontend/apps/electron-renderer/package.json": "e75eaaad3271badefbf664a2ececf4fdbba0c0733b07cd2f0c0a585bf5f63f6f"
+  },
+  "validatorSource": "Graphify/11 Completion/validate_final_graphify_freeze.py",
+  "validatorSha256": "dcdaf828067cfbe472cedfdec7a25888127153713419fe2e2d27f7d7f84ce038",
+  "derived": {
+    "buildPackages": [
+      {
+        "packageName": "@affine/android",
+        "packageRoot": "Codebase/packages/frontend/apps/android"
+      },
+      {
+        "packageName": "@affine/electron-renderer",
+        "packageRoot": "Codebase/packages/frontend/apps/electron-renderer"
+      },
+      {
+        "packageName": "@affine/ios",
+        "packageRoot": "Codebase/packages/frontend/apps/ios"
+      },
+      {
+        "packageName": "@affine/mobile",
+        "packageRoot": "Codebase/packages/frontend/apps/mobile"
+      },
+      {
+        "packageName": "@affine/web",
+        "packageRoot": "Codebase/packages/frontend/apps/web"
+      }
+    ],
+    "buildPackageTopology": [
+      {
+        "packageName": "@affine/android",
+        "packageRoot": "Codebase/packages/frontend/apps/android",
+        "applicationEntryPaths": [
+          "Codebase/packages/frontend/apps/android/src/index.tsx"
+        ],
+        "workerEntryPaths": [
+          "Codebase/packages/frontend/apps/android/src/nbstore.worker.ts",
+          "Codebase/packages/frontend/core/src/blocksuite/view-extensions/turbo-renderer/turbo-painter.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/pdf/renderer/pdf.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/workspace-engine/impls/workspace-profile.worker.ts"
+        ],
+        "allConfiguredEntryPaths": [
+          "Codebase/packages/frontend/apps/android/src/index.tsx",
+          "Codebase/packages/frontend/apps/android/src/nbstore.worker.ts",
+          "Codebase/packages/frontend/core/src/blocksuite/view-extensions/turbo-renderer/turbo-painter.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/pdf/renderer/pdf.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/workspace-engine/impls/workspace-profile.worker.ts"
+        ]
+      },
+      {
+        "packageName": "@affine/electron-renderer",
+        "packageRoot": "Codebase/packages/frontend/apps/electron-renderer",
+        "applicationEntryPaths": [
+          "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+          "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx"
+        ],
+        "workerEntryPaths": [
+          "Codebase/packages/frontend/core/src/blocksuite/view-extensions/turbo-renderer/turbo-painter.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/pdf/renderer/pdf.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/workspace-engine/impls/workspace-profile.worker.ts"
+        ],
+        "allConfiguredEntryPaths": [
+          "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+          "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+          "Codebase/packages/frontend/core/src/blocksuite/view-extensions/turbo-renderer/turbo-painter.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/pdf/renderer/pdf.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/workspace-engine/impls/workspace-profile.worker.ts"
+        ]
+      },
+      {
+        "packageName": "@affine/ios",
+        "packageRoot": "Codebase/packages/frontend/apps/ios",
+        "applicationEntryPaths": [
+          "Codebase/packages/frontend/apps/ios/src/index.tsx"
+        ],
+        "workerEntryPaths": [
+          "Codebase/packages/frontend/apps/ios/src/nbstore.worker.ts",
+          "Codebase/packages/frontend/core/src/blocksuite/view-extensions/turbo-renderer/turbo-painter.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/pdf/renderer/pdf.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/workspace-engine/impls/workspace-profile.worker.ts"
+        ],
+        "allConfiguredEntryPaths": [
+          "Codebase/packages/frontend/apps/ios/src/index.tsx",
+          "Codebase/packages/frontend/apps/ios/src/nbstore.worker.ts",
+          "Codebase/packages/frontend/core/src/blocksuite/view-extensions/turbo-renderer/turbo-painter.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/pdf/renderer/pdf.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/workspace-engine/impls/workspace-profile.worker.ts"
+        ]
+      },
+      {
+        "packageName": "@affine/mobile",
+        "packageRoot": "Codebase/packages/frontend/apps/mobile",
+        "applicationEntryPaths": [
+          "Codebase/packages/frontend/apps/mobile/src/index.tsx"
+        ],
+        "workerEntryPaths": [
+          "Codebase/packages/frontend/apps/mobile/src/nbstore.worker.ts",
+          "Codebase/packages/frontend/core/src/blocksuite/view-extensions/turbo-renderer/turbo-painter.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/mermaid/renderer/mermaid.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/pdf/renderer/pdf.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/typst/renderer/typst.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/workspace-engine/impls/workspace-profile.worker.ts"
+        ],
+        "allConfiguredEntryPaths": [
+          "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+          "Codebase/packages/frontend/apps/mobile/src/nbstore.worker.ts",
+          "Codebase/packages/frontend/core/src/blocksuite/view-extensions/turbo-renderer/turbo-painter.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/mermaid/renderer/mermaid.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/pdf/renderer/pdf.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/typst/renderer/typst.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/workspace-engine/impls/workspace-profile.worker.ts"
+        ]
+      },
+      {
+        "packageName": "@affine/web",
+        "packageRoot": "Codebase/packages/frontend/apps/web",
+        "applicationEntryPaths": [
+          "Codebase/packages/frontend/apps/web/src/index.tsx"
+        ],
+        "workerEntryPaths": [
+          "Codebase/packages/frontend/apps/web/src/nbstore.worker.ts",
+          "Codebase/packages/frontend/core/src/blocksuite/view-extensions/turbo-renderer/turbo-painter.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/mermaid/renderer/mermaid.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/pdf/renderer/pdf.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/typst/renderer/typst.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/workspace-engine/impls/workspace-profile.worker.ts"
+        ],
+        "allConfiguredEntryPaths": [
+          "Codebase/packages/frontend/apps/web/src/index.tsx",
+          "Codebase/packages/frontend/apps/web/src/nbstore.worker.ts",
+          "Codebase/packages/frontend/core/src/blocksuite/view-extensions/turbo-renderer/turbo-painter.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/mermaid/renderer/mermaid.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/pdf/renderer/pdf.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/typst/renderer/typst.worker.ts",
+          "Codebase/packages/frontend/core/src/modules/workspace-engine/impls/workspace-profile.worker.ts"
+        ]
+      }
+    ],
+    "applicationEntryPaths": [
+      "Codebase/packages/frontend/apps/android/src/index.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+      "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+      "Codebase/packages/frontend/apps/ios/src/index.tsx",
+      "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+      "Codebase/packages/frontend/apps/web/src/index.tsx"
+    ],
+    "workerEntryPaths": [
+      "Codebase/packages/frontend/apps/android/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/apps/ios/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/apps/mobile/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/apps/web/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/core/src/blocksuite/view-extensions/turbo-renderer/turbo-painter.worker.ts",
+      "Codebase/packages/frontend/core/src/modules/mermaid/renderer/mermaid.worker.ts",
+      "Codebase/packages/frontend/core/src/modules/pdf/renderer/pdf.worker.ts",
+      "Codebase/packages/frontend/core/src/modules/typst/renderer/typst.worker.ts",
+      "Codebase/packages/frontend/core/src/modules/workspace-engine/impls/workspace-profile.worker.ts"
+    ],
+    "allConfiguredEntryPaths": [
+      "Codebase/packages/frontend/apps/android/src/index.tsx",
+      "Codebase/packages/frontend/apps/android/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+      "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+      "Codebase/packages/frontend/apps/ios/src/index.tsx",
+      "Codebase/packages/frontend/apps/ios/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+      "Codebase/packages/frontend/apps/mobile/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/apps/web/src/index.tsx",
+      "Codebase/packages/frontend/apps/web/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/core/src/blocksuite/view-extensions/turbo-renderer/turbo-painter.worker.ts",
+      "Codebase/packages/frontend/core/src/modules/mermaid/renderer/mermaid.worker.ts",
+      "Codebase/packages/frontend/core/src/modules/pdf/renderer/pdf.worker.ts",
+      "Codebase/packages/frontend/core/src/modules/typst/renderer/typst.worker.ts",
+      "Codebase/packages/frontend/core/src/modules/workspace-engine/impls/workspace-profile.worker.ts"
+    ],
+    "compositionRoots": [
+      "Codebase/packages/frontend/apps/android/src/app.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+      "Codebase/packages/frontend/apps/ios/src/app.tsx",
+      "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+      "Codebase/packages/frontend/apps/web/src/app.tsx"
+    ],
+    "bootstrapConsumerPaths": [
+      "Codebase/packages/frontend/apps/android/src/setup-worker.ts",
+      "Codebase/packages/frontend/apps/android/src/setup.ts",
+      "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts",
+      "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+      "Codebase/packages/frontend/apps/electron-renderer/src/popup/setup.ts",
+      "Codebase/packages/frontend/apps/electron-renderer/src/shell/setup.ts",
+      "Codebase/packages/frontend/apps/ios/src/setup-worker.ts",
+      "Codebase/packages/frontend/apps/ios/src/setup.ts",
+      "Codebase/packages/frontend/apps/mobile/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/apps/mobile/src/setup.ts",
+      "Codebase/packages/frontend/apps/web/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/apps/web/src/setup.ts"
+    ],
+    "bootstrapTargets": [
+      "Codebase/packages/frontend/core/src/bootstrap/browser.ts",
+      "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts",
+      "Codebase/packages/frontend/core/src/bootstrap/electron.ts"
+    ],
+    "bootstrapImports": [
+      {
+        "consumerPath": "Codebase/packages/frontend/apps/android/src/setup-worker.ts",
+        "specifier": "@affine/core/bootstrap/browser",
+        "targetPath": "Codebase/packages/frontend/core/src/bootstrap/browser.ts"
+      },
+      {
+        "consumerPath": "Codebase/packages/frontend/apps/android/src/setup.ts",
+        "specifier": "@affine/core/bootstrap/browser",
+        "targetPath": "Codebase/packages/frontend/core/src/bootstrap/browser.ts"
+      },
+      {
+        "consumerPath": "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts",
+        "specifier": "@affine/core/bootstrap/cleanup",
+        "targetPath": "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts"
+      },
+      {
+        "consumerPath": "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts",
+        "specifier": "@affine/core/bootstrap/electron",
+        "targetPath": "Codebase/packages/frontend/core/src/bootstrap/electron.ts"
+      },
+      {
+        "consumerPath": "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+        "specifier": "@affine/core/bootstrap/electron",
+        "targetPath": "Codebase/packages/frontend/core/src/bootstrap/electron.ts"
+      },
+      {
+        "consumerPath": "Codebase/packages/frontend/apps/electron-renderer/src/popup/setup.ts",
+        "specifier": "@affine/core/bootstrap/electron",
+        "targetPath": "Codebase/packages/frontend/core/src/bootstrap/electron.ts"
+      },
+      {
+        "consumerPath": "Codebase/packages/frontend/apps/electron-renderer/src/shell/setup.ts",
+        "specifier": "@affine/core/bootstrap/electron",
+        "targetPath": "Codebase/packages/frontend/core/src/bootstrap/electron.ts"
+      },
+      {
+        "consumerPath": "Codebase/packages/frontend/apps/ios/src/setup-worker.ts",
+        "specifier": "@affine/core/bootstrap/browser",
+        "targetPath": "Codebase/packages/frontend/core/src/bootstrap/browser.ts"
+      },
+      {
+        "consumerPath": "Codebase/packages/frontend/apps/ios/src/setup.ts",
+        "specifier": "@affine/core/bootstrap/browser",
+        "targetPath": "Codebase/packages/frontend/core/src/bootstrap/browser.ts"
+      },
+      {
+        "consumerPath": "Codebase/packages/frontend/apps/ios/src/setup.ts",
+        "specifier": "@affine/core/bootstrap/cleanup",
+        "targetPath": "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts"
+      },
+      {
+        "consumerPath": "Codebase/packages/frontend/apps/mobile/src/nbstore.worker.ts",
+        "specifier": "@affine/core/bootstrap/browser",
+        "targetPath": "Codebase/packages/frontend/core/src/bootstrap/browser.ts"
+      },
+      {
+        "consumerPath": "Codebase/packages/frontend/apps/mobile/src/setup.ts",
+        "specifier": "@affine/core/bootstrap/browser",
+        "targetPath": "Codebase/packages/frontend/core/src/bootstrap/browser.ts"
+      },
+      {
+        "consumerPath": "Codebase/packages/frontend/apps/mobile/src/setup.ts",
+        "specifier": "@affine/core/bootstrap/cleanup",
+        "targetPath": "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts"
+      },
+      {
+        "consumerPath": "Codebase/packages/frontend/apps/web/src/nbstore.worker.ts",
+        "specifier": "@affine/core/bootstrap/browser",
+        "targetPath": "Codebase/packages/frontend/core/src/bootstrap/browser.ts"
+      },
+      {
+        "consumerPath": "Codebase/packages/frontend/apps/web/src/setup.ts",
+        "specifier": "@affine/core/bootstrap/browser",
+        "targetPath": "Codebase/packages/frontend/core/src/bootstrap/browser.ts"
+      },
+      {
+        "consumerPath": "Codebase/packages/frontend/apps/web/src/setup.ts",
+        "specifier": "@affine/core/bootstrap/cleanup",
+        "targetPath": "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts"
+      }
+    ],
+    "generatedPaths": [
+      "Codebase/packages/frontend/apps/android/dist/**",
+      "Codebase/packages/frontend/apps/electron-renderer/dist/**",
+      "Codebase/packages/frontend/apps/ios/dist/**",
+      "Codebase/packages/frontend/apps/mobile/dist/**",
+      "Codebase/packages/frontend/apps/web/dist/**",
+      "Codebase/packages/frontend/core/dist/**"
+    ],
+    "runtimeRegistrationIds": [
+      "MR-REG-19254409a75692172d12720d",
+      "MR-REG-1b10a6305ebb39e200f8d353",
+      "MR-REG-2bf9c1327e9c8149744e5c0f",
+      "MR-REG-372539ab1f77a6438c0a6b2b",
+      "MR-REG-3ada9327e967b275cb3fdd2b",
+      "MR-REG-5723306f6f698a0e439bba94",
+      "MR-REG-5ad8538f336751f4f5afc2a6",
+      "MR-REG-5bbfc3653aad2a4e7ad7e1f6",
+      "MR-REG-6378bf522cd994df026f0b8d",
+      "MR-REG-7aca871a979152612fea1fee",
+      "MR-REG-801ac1cf6c44830c19967cde",
+      "MR-REG-8a2facc4825f0f1682a080b8",
+      "MR-REG-8bd5bb6b19abf0db9c0d42e7",
+      "MR-REG-8e178046bb9789c3fbd9aab7",
+      "MR-REG-a1fa6ebd379f1b77bbbc0bd4",
+      "MR-REG-a66ed8e480083331f763b4ad",
+      "MR-REG-ae460af8369cdd2260233e09",
+      "MR-REG-ae9fef910e9998e1c4deefb0",
+      "MR-REG-b264d1b48f843a960384e9b7",
+      "MR-REG-b3b787d5bc5def1e6d21e44f",
+      "MR-REG-b9477c3a790a86ed0718b53b",
+      "MR-REG-be4bd5f7a25a3bae9e24cd6c",
+      "MR-REG-c57851ccf51d367ac5ffe61f",
+      "MR-REG-c78c6bd6b0e21cc9427234f3",
+      "MR-REG-cc13e3ddf7ab56a70226e872",
+      "MR-REG-cc979c9f442fa8ee65bca6bc",
+      "MR-REG-ce318d22ed72d779f6afe607",
+      "MR-REG-d34026ea14d86a1eda226b28",
+      "MR-REG-d693594df0a62d7270491077",
+      "MR-REG-e7398f1ff86cb27de47ba3c5",
+      "MR-REG-fc72d9c36ad99b8e6d9f2d6d",
+      "MR-REG-fcbdf2e51d6ac4edd15a9654",
+      "MR-REG-fd033c93693b589ebeb216aa"
+    ]
+  },
+  "declared": {
+    "applicationEntryPaths": [
+      "Codebase/packages/frontend/apps/android/src/index.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+      "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+      "Codebase/packages/frontend/apps/ios/src/index.tsx",
+      "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+      "Codebase/packages/frontend/apps/web/src/index.tsx"
+    ],
+    "workerEntryPaths": [
+      "Codebase/packages/frontend/apps/android/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/apps/ios/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/apps/mobile/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/apps/web/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/core/src/blocksuite/view-extensions/turbo-renderer/turbo-painter.worker.ts",
+      "Codebase/packages/frontend/core/src/modules/mermaid/renderer/mermaid.worker.ts",
+      "Codebase/packages/frontend/core/src/modules/pdf/renderer/pdf.worker.ts",
+      "Codebase/packages/frontend/core/src/modules/typst/renderer/typst.worker.ts",
+      "Codebase/packages/frontend/core/src/modules/workspace-engine/impls/workspace-profile.worker.ts"
+    ],
+    "allConfiguredEntryPaths": [
+      "Codebase/packages/frontend/apps/android/src/index.tsx",
+      "Codebase/packages/frontend/apps/android/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+      "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+      "Codebase/packages/frontend/apps/ios/src/index.tsx",
+      "Codebase/packages/frontend/apps/ios/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+      "Codebase/packages/frontend/apps/mobile/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/apps/web/src/index.tsx",
+      "Codebase/packages/frontend/apps/web/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/core/src/blocksuite/view-extensions/turbo-renderer/turbo-painter.worker.ts",
+      "Codebase/packages/frontend/core/src/modules/mermaid/renderer/mermaid.worker.ts",
+      "Codebase/packages/frontend/core/src/modules/pdf/renderer/pdf.worker.ts",
+      "Codebase/packages/frontend/core/src/modules/typst/renderer/typst.worker.ts",
+      "Codebase/packages/frontend/core/src/modules/workspace-engine/impls/workspace-profile.worker.ts"
+    ],
+    "compositionRoots": [
+      "Codebase/packages/frontend/apps/android/src/app.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+      "Codebase/packages/frontend/apps/ios/src/app.tsx",
+      "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+      "Codebase/packages/frontend/apps/web/src/app.tsx"
+    ],
+    "bootstrapConsumerPaths": [
+      "Codebase/packages/frontend/apps/android/src/setup-worker.ts",
+      "Codebase/packages/frontend/apps/android/src/setup.ts",
+      "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts",
+      "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+      "Codebase/packages/frontend/apps/electron-renderer/src/popup/setup.ts",
+      "Codebase/packages/frontend/apps/electron-renderer/src/shell/setup.ts",
+      "Codebase/packages/frontend/apps/ios/src/setup-worker.ts",
+      "Codebase/packages/frontend/apps/ios/src/setup.ts",
+      "Codebase/packages/frontend/apps/mobile/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/apps/mobile/src/setup.ts",
+      "Codebase/packages/frontend/apps/web/src/nbstore.worker.ts",
+      "Codebase/packages/frontend/apps/web/src/setup.ts"
+    ],
+    "bootstrapTargets": [
+      "Codebase/packages/frontend/core/src/bootstrap/browser.ts",
+      "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts",
+      "Codebase/packages/frontend/core/src/bootstrap/electron.ts"
+    ],
+    "generatedPaths": [
+      "Codebase/packages/frontend/core/dist/**",
+      "Codebase/packages/frontend/apps/web/dist/**",
+      "Codebase/packages/frontend/apps/mobile/dist/**",
+      "Codebase/packages/frontend/apps/ios/dist/**",
+      "Codebase/packages/frontend/apps/android/dist/**",
+      "Codebase/packages/frontend/apps/electron-renderer/dist/**"
+    ],
+    "runtimeRegistrationIds": [
+      "MR-REG-19254409a75692172d12720d",
+      "MR-REG-1b10a6305ebb39e200f8d353",
+      "MR-REG-2bf9c1327e9c8149744e5c0f",
+      "MR-REG-372539ab1f77a6438c0a6b2b",
+      "MR-REG-3ada9327e967b275cb3fdd2b",
+      "MR-REG-5723306f6f698a0e439bba94",
+      "MR-REG-5ad8538f336751f4f5afc2a6",
+      "MR-REG-5bbfc3653aad2a4e7ad7e1f6",
+      "MR-REG-6378bf522cd994df026f0b8d",
+      "MR-REG-7aca871a979152612fea1fee",
+      "MR-REG-801ac1cf6c44830c19967cde",
+      "MR-REG-8a2facc4825f0f1682a080b8",
+      "MR-REG-8bd5bb6b19abf0db9c0d42e7",
+      "MR-REG-8e178046bb9789c3fbd9aab7",
+      "MR-REG-a1fa6ebd379f1b77bbbc0bd4",
+      "MR-REG-a66ed8e480083331f763b4ad",
+      "MR-REG-ae460af8369cdd2260233e09",
+      "MR-REG-ae9fef910e9998e1c4deefb0",
+      "MR-REG-b264d1b48f843a960384e9b7",
+      "MR-REG-b3b787d5bc5def1e6d21e44f",
+      "MR-REG-b9477c3a790a86ed0718b53b",
+      "MR-REG-be4bd5f7a25a3bae9e24cd6c",
+      "MR-REG-c57851ccf51d367ac5ffe61f",
+      "MR-REG-c78c6bd6b0e21cc9427234f3",
+      "MR-REG-cc13e3ddf7ab56a70226e872",
+      "MR-REG-cc979c9f442fa8ee65bca6bc",
+      "MR-REG-ce318d22ed72d779f6afe607",
+      "MR-REG-d34026ea14d86a1eda226b28",
+      "MR-REG-d693594df0a62d7270491077",
+      "MR-REG-e7398f1ff86cb27de47ba3c5",
+      "MR-REG-fc72d9c36ad99b8e6d9f2d6d",
+      "MR-REG-fcbdf2e51d6ac4edd15a9654",
+      "MR-REG-fd033c93693b589ebeb216aa"
+    ]
+  },
+  "reconciliation": {
+    "applicationEntryPaths": {
+      "missing": [],
+      "unexpected": []
+    },
+    "workerEntryPaths": {
+      "missing": [],
+      "unexpected": []
+    },
+    "allConfiguredEntryPaths": {
+      "missing": [],
+      "unexpected": []
+    },
+    "compositionRoots": {
+      "missing": [],
+      "unexpected": []
+    },
+    "bootstrapConsumerPaths": {
+      "missing": [],
+      "unexpected": []
+    },
+    "bootstrapTargets": {
+      "missing": [],
+      "unexpected": []
+    },
+    "generatedPaths": {
+      "missing": [],
+      "unexpected": []
+    },
+    "runtimeRegistrationIds": {
+      "missing": [],
+      "unexpected": []
+    }
+  },
+  "summary": {
+    "applicationEntries": 8,
+    "workerEntries": 9,
+    "allConfiguredEntries": 17,
+    "compositionRoots": 7,
+    "bootstrapConsumers": 12,
+    "bootstrapImports": 16,
+    "runtimeRegistrations": 33,
+    "missing": 0,
+    "unexpected": 0
+  },
+  "codebasePreservation": {
+    "gitTree": "bbf383e3418da4f613f58719160bb7cbd5709ffc",
+    "fileCount": 10080,
+    "directoryCount": 2548,
+    "aggregateSha256": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+    "modified": false
+  }
+}

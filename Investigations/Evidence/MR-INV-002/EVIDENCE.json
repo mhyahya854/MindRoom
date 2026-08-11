@@ -11,7 +11,7 @@
   "blockingLevel": "HARD",
   "selectedInvestigationOnly": true,
   "codebaseModified": false,
-  "graphifyModified": false,
+  "graphifyModified": true,
   "implementationPerformed": false,
   "applicationReleased": false,
   "wave0Authorized": false,
@@ -136,18 +136,54 @@
     "declared": 12,
     "existing": 12,
     "paths": [
-      {"path": "Codebase/package.json", "sha256": "6ce694262f8b3df1ca4bcf54acac62d60ef4bf7784419f1bfefb9858077e4ddf"},
-      {"path": "Codebase/packages/frontend/apps/android/src/app.tsx", "sha256": "21aa38c14c96df89e3a435cedcf079cb52bad410da64c5044c47ddc1a6e71e5a"},
-      {"path": "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx", "sha256": "c0b348f75bb550a3f6018f2667a135896992ba52794c399d39e203f2575157dd"},
-      {"path": "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx", "sha256": "ce42201da73a61dd4c1db09cc98490b0d3251ddd1885a90fa998975a50635571"},
-      {"path": "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx", "sha256": "181ea92e0ea7628782edd6017c27a9889ec5ad84b928e76511cb4ffb85fa2b39"},
-      {"path": "Codebase/packages/frontend/apps/ios/src/app.tsx", "sha256": "39e5f335ef568ab3a644d807ad967168a9e58c685f3302bba3e234a321f42475"},
-      {"path": "Codebase/packages/frontend/apps/mobile/src/app.tsx", "sha256": "b59b37dad1390304f667d3ce19e3cfd2d071a9fe74f60a688b2b575ae0535cdb"},
-      {"path": "Codebase/packages/frontend/apps/web/src/app.tsx", "sha256": "c8d4a30481ab50ed1883c1a0da36cb1851e267da997a1b5caa91c056bc8577c0"},
-      {"path": "Codebase/packages/frontend/apps/android/package.json", "sha256": "0b5242f0909329ffdea8797e57b7089db40fdce18e56e793c5b1dbacc7bb3303"},
-      {"path": "Codebase/packages/frontend/apps/android/tsconfig.json", "sha256": "f691e92bba121757d769c6a9a08726dff6d0a32117af25df65a2804f954dc86c"},
-      {"path": "Codebase/packages/frontend/apps/electron-renderer/package.json", "sha256": "e75eaaad3271badefbf664a2ececf4fdbba0c0733b07cd2f0c0a585bf5f63f6f"},
-      {"path": "Codebase/packages/frontend/apps/electron-renderer/tsconfig.json", "sha256": "3b1f9ec7df9a25bfd7da6842ac6fa052a59dca4fa73e9bbdc5179bd8fd76f797"}
+      {
+        "path": "Codebase/package.json",
+        "sha256": "6ce694262f8b3df1ca4bcf54acac62d60ef4bf7784419f1bfefb9858077e4ddf"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/android/src/app.tsx",
+        "sha256": "21aa38c14c96df89e3a435cedcf079cb52bad410da64c5044c47ddc1a6e71e5a"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+        "sha256": "c0b348f75bb550a3f6018f2667a135896992ba52794c399d39e203f2575157dd"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+        "sha256": "ce42201da73a61dd4c1db09cc98490b0d3251ddd1885a90fa998975a50635571"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+        "sha256": "181ea92e0ea7628782edd6017c27a9889ec5ad84b928e76511cb4ffb85fa2b39"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/ios/src/app.tsx",
+        "sha256": "39e5f335ef568ab3a644d807ad967168a9e58c685f3302bba3e234a321f42475"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+        "sha256": "b59b37dad1390304f667d3ce19e3cfd2d071a9fe74f60a688b2b575ae0535cdb"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/web/src/app.tsx",
+        "sha256": "c8d4a30481ab50ed1883c1a0da36cb1851e267da997a1b5caa91c056bc8577c0"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/android/package.json",
+        "sha256": "0b5242f0909329ffdea8797e57b7089db40fdce18e56e793c5b1dbacc7bb3303"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/android/tsconfig.json",
+        "sha256": "f691e92bba121757d769c6a9a08726dff6d0a32117af25df65a2804f954dc86c"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/electron-renderer/package.json",
+        "sha256": "e75eaaad3271badefbf664a2ececf4fdbba0c0733b07cd2f0c0a585bf5f63f6f"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/electron-renderer/tsconfig.json",
+        "sha256": "3b1f9ec7df9a25bfd7da6842ac6fa052a59dca4fa73e9bbdc5179bd8fd76f797"
+      }
     ]
   },
   "externalPrimaryEvidence": {
@@ -309,5 +345,82 @@
     "releaseGatesPassed": 0,
     "releaseGatesTotal": 168,
     "releaseGatesRemaining": 168
+  },
+  "changeControlRetry": {
+    "authorization": "EXPLICIT_USER_FROZEN_PLAN_CHANGE_CONTROL_RETRY",
+    "status": "REPAIR_CANDIDATE_APPLIED_FULL_CERTIFICATION_AND_ONE_FRESH_REVIEW_PENDING",
+    "startingMain": "23398958f7e9485c58629e51c3f1db4b65182208",
+    "preChangeBackupTag": "mindroom-backup/change-control/MR-INV-002-retry-20260811-134452",
+    "failedCandidateWip": {
+      "branch": "wip/MR-INV-002-failed-change-control-20260811-134350",
+      "commit": "d0f492c830247a050b76ac5b29a19746de79c3fa",
+      "classification": "HISTORICAL_FAILED_CANDIDATE_NON_AUTHORITATIVE_DO_NOT_MERGE_WHOLESALE"
+    },
+    "repair": {
+      "fakeSymbolAction": "RECLASSIFIED_AS_HISTORICAL_SUPERSEDED; current authority uses non-symbol package/source anchors",
+      "exactPaths": 53,
+      "ownedPaths": 20,
+      "referencePaths": 33,
+      "generatedPaths": 6,
+      "sourceAnchors": 50,
+      "topologyReconciliation": "Investigations/Evidence/MR-INV-002/TOPOLOGY_RECONCILIATION.json"
+    },
+    "certification": "PENDING",
+    "freshIndependentReviewAttemptsAuthorizedThisRetry": 1,
+    "freshIndependentReviewAttemptsUsedThisRetry": 0
+  },
+  "changeControlHistory": [
+    {
+      "state": "MR_BLOCK_003_DISCOVERED",
+      "at": "2026-08-11T10:41:25+03:00",
+      "evidence": "Original MR-INV-002 evidence remains authoritative discovery history."
+    },
+    {
+      "state": "FIRST_CHANGE_CONTROL_REPAIR_ATTEMPTED",
+      "outcome": "FAILED_INDEPENDENT_REVIEW",
+      "defect": "The first repair declared only eight HTML/application entries and seven bootstrap consumers; it omitted nine configured worker sources and five active bootstrap-consumer files, while ARCH-04/ARCH-08 trusted the incomplete declarations."
+    },
+    {
+      "state": "FAILED_CANDIDATE_PRESERVED",
+      "branch": "wip/MR-INV-002-failed-change-control-20260811-134350",
+      "commit": "d0f492c830247a050b76ac5b29a19746de79c3fa"
+    },
+    {
+      "state": "RETRY_CHANGE_CONTROL_AUTHORIZED",
+      "preChangeBackupTag": "mindroom-backup/change-control/MR-INV-002-retry-20260811-134452"
+    },
+    {
+      "state": "SECOND_REPAIR_CANDIDATE_APPLIED",
+      "at": "2026-08-11T14:13:58+03:00",
+      "meaning": "Complete source-derived application/worker/bootstrap topology and source-independent validator checks are present; blocker remains ACTIVE until full certification and one fresh independent review pass."
+    }
+  ],
+  "retryAcceptanceCriteria": [
+    {
+      "criterion": "Active application entries, worker entries, bootstrap consumers, and capability-linked runtime registrations are verified from source.",
+      "status": "PENDING_FINAL_ACCEPTANCE",
+      "candidateEvidence": "8 application + 9 worker = 17 configured entries; 12 consumers/16 imports; 33 registrations; zero reconciliation deltas."
+    },
+    {
+      "criterion": "Required Codebase mutation is separated from preserved behavior.",
+      "status": "PENDING_FINAL_ACCEPTANCE",
+      "candidateEvidence": "KEEP_EXISTING; no Codebase mutation required or performed."
+    },
+    {
+      "criterion": "Allowed/generated/forbidden paths reconcile with the complete entry graph.",
+      "status": "PENDING_FINAL_ACCEPTANCE",
+      "candidateEvidence": "53 exact/allowed, 20 owned, 33 referenced, six generated/forbidden dist roots; source-derived equality passes."
+    },
+    {
+      "criterion": "Architecture ownership and acceptance-test ambiguity are fully resolved.",
+      "status": "PENDING_FINAL_ACCEPTANCE",
+      "candidateEvidence": "Owner is allowed/owned/not forbidden; 50 literal anchors resolve; tests are architecture-specific; final certification and fresh independent review pending."
+    }
+  ],
+  "retryAcceptanceSummary": {
+    "passed": 0,
+    "pending": 4,
+    "total": 4,
+    "finalizationRule": "Mark 4/4 PASS only after complete certification and one fresh independent VERIFIED review."
   }
 }

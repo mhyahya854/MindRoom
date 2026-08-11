@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "project": "MindRoom",
   "stage": "PRE_CODE_INVESTIGATION",
-  "lastUpdatedAt": "2026-08-11T10:41:25+03:00",
+  "lastUpdatedAt": "2026-08-11T14:13:58+03:00",
   "blockers": [
     {
       "blockerId": "MR-BLOCK-001",
@@ -112,6 +112,26 @@
           "discoveredAt": "2026-08-11T10:41:25+03:00",
           "evidencePath": "Investigations/Evidence/MR-INV-002/EVIDENCE.json",
           "meaning": "MR-INV-002 proved the current Codebase architecture is preservable but the frozen owner, exact-location, task-path, build-entry, and test records are not semantically coherent."
+        },
+        {
+          "state": "CHANGE_CONTROL_AUTHORIZED",
+          "authorization": "Explicit user frozen-plan change-control request",
+          "meaning": "First repair attempt authorized."
+        },
+        {
+          "state": "FIRST_REPAIR_REVIEW_FAILED",
+          "defect": "Worker-entry and bootstrap-consumer omissions plus self-referential ARCH-04/ARCH-08 derivations.",
+          "failedCandidateBranch": "wip/MR-INV-002-failed-change-control-20260811-134350",
+          "failedCandidateCommit": "d0f492c830247a050b76ac5b29a19746de79c3fa"
+        },
+        {
+          "state": "RETRY_CHANGE_CONTROL_AUTHORIZED",
+          "preChangeBackupTag": "mindroom-backup/change-control/MR-INV-002-retry-20260811-134452"
+        },
+        {
+          "state": "RETRY_REPAIR_CANDIDATE_APPLIED",
+          "at": "2026-08-11T14:13:58+03:00",
+          "meaning": "Complete source-derived topology candidate present; ACTIVE pending full recertification and one fresh review."
         }
       ]
     }

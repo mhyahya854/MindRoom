@@ -1,6 +1,6 @@
 {
-  "freezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
-  "officialValidatorRunId": "mindroom-mr-inv-001-change-control-20260809-080238-validation",
+  "freezeRunId": "mindroom-mr-inv-002-retry-recertified-freeze-20260811-141708",
+  "officialValidatorRunId": "mindroom-mr-inv-002-retry-change-control-20260811-141708-validation",
   "externalReviewRunId": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
   "mappingStatus": "COMPLETED_AND_FROZEN",
   "independentReviewStatus": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
@@ -29,14 +29,14 @@
     "publicEntrypoints": 161
   },
   "manifestRecordCount": 167,
-  "manifestAggregateHash": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
+  "manifestAggregateHash": "565b4bbebb267bbd43a4664dcf7e87353fabc5fb86ef973cf26fe03ebbf44923",
   "codebaseFileCount": 10080,
   "codebaseDirectoryCount": 2548,
   "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
-  "validatorCheckCount": 198,
-  "challengeTestCount": 95,
+  "validatorCheckCount": 207,
+  "challengeTestCount": 103,
   "blockingDefectCount": 0,
-  "repairRunId": "mindroom-mr-inv-001-change-control-20260809-080238",
+  "repairRunId": "mindroom-mr-inv-002-retry-change-control-20260811-141708",
   "gateTestSynchronizationStatus": "PASS",
   "warningSummary": [
     {
@@ -55,11 +55,11 @@
     }
   ],
   "backupBackend": "GITHUB_NATIVE_IMMUTABLE_GIT_REF",
-  "currentBackupRef": "refs/tags/mindroom-backup/change-control/20260809-103711",
+  "currentBackupRef": "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452",
   "persistentLocalBackupRequired": false,
   "timestamp": "2026-08-09T11:02:38+03:00",
-  "validatorSourceHash": "b2fe87ea8e391f639d374ef67a703d001ba9e90e5d0bb5896d0ec111a0e7a660",
-  "challengeSourceHash": "23b17369a10edc4535151272a9b5297a0e97aea329b55820edf16464cdf5a134",
+  "validatorSourceHash": "dcdaf828067cfbe472cedfdec7a25888127153713419fe2e2d27f7d7f84ce038",
+  "challengeSourceHash": "c26fcbab90fba07470f7ccba30d1c28d47882583f5beac1e2cc12a6cc1f69ac9",
   "verifierSourceHash": "27a9859659e4834b9bdfc23391f51dcba0c977af4c1dbc7fa327e84e871141d4",
   "validationTarget": "LIVE_REPOSITORY",
   "repositoryRelativeGraphifyRoot": "Graphify",
@@ -68,7 +68,7 @@
   "temporaryChallengeId": null,
   "validationMode": "FINAL_FREEZE_CERTIFICATION",
   "validationResult": {
-    "freezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
+    "freezeRunId": "mindroom-mr-inv-002-retry-recertified-freeze-20260811-141708",
     "status": "PASS",
     "failedChecksCount": 0,
     "checks": [
@@ -441,7 +441,7 @@
         "description": "Candidate manifest aggregate hash is reproducible from live non-self-referential rows",
         "status": "PASS",
         "method": "independent sorted path:file-hash aggregate; protected governance receipts are not authoritative for the pre-review candidate aggregate because the candidate manifest is rebuilt last and those receipts cannot be modified in this repair",
-        "actual": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
+        "actual": "565b4bbebb267bbd43a4664dcf7e87353fabc5fb86ef973cf26fe03ebbf44923",
         "expected": "64-character SHA-256 aggregate",
         "evidence": [
           "MAN-01",
@@ -456,19 +456,19 @@
         "status": "PASS",
         "method": "cross-document protected-receipt consistency against the live manifest aggregate; no historical split is permitted",
         "actual": {
-          "00 Execution Control/STATUS.json": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
-          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
-          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
-          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
-          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
-          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
-          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
-          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
-          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
-          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
-          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f"
+          "00 Execution Control/STATUS.json": "565b4bbebb267bbd43a4664dcf7e87353fabc5fb86ef973cf26fe03ebbf44923",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "565b4bbebb267bbd43a4664dcf7e87353fabc5fb86ef973cf26fe03ebbf44923",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "565b4bbebb267bbd43a4664dcf7e87353fabc5fb86ef973cf26fe03ebbf44923",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "565b4bbebb267bbd43a4664dcf7e87353fabc5fb86ef973cf26fe03ebbf44923",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "565b4bbebb267bbd43a4664dcf7e87353fabc5fb86ef973cf26fe03ebbf44923",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "565b4bbebb267bbd43a4664dcf7e87353fabc5fb86ef973cf26fe03ebbf44923",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "565b4bbebb267bbd43a4664dcf7e87353fabc5fb86ef973cf26fe03ebbf44923",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "565b4bbebb267bbd43a4664dcf7e87353fabc5fb86ef973cf26fe03ebbf44923",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "565b4bbebb267bbd43a4664dcf7e87353fabc5fb86ef973cf26fe03ebbf44923",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "565b4bbebb267bbd43a4664dcf7e87353fabc5fb86ef973cf26fe03ebbf44923",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "565b4bbebb267bbd43a4664dcf7e87353fabc5fb86ef973cf26fe03ebbf44923"
         },
-        "expected": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
+        "expected": "565b4bbebb267bbd43a4664dcf7e87353fabc5fb86ef973cf26fe03ebbf44923",
         "evidence": [
           "00 Execution Control/STATUS.json",
           "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
@@ -1982,7 +1982,7 @@
           "remote": "origin",
           "remoteUrl": "https://github.com/mhyahya854/MindRoom.git",
           "refType": "TAG",
-          "ref": "refs/tags/mindroom-backup/change-control/20260809-103711",
+          "ref": "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452",
           "persistentLocalBackupRequired": false
         },
         "expected": {
@@ -2004,8 +2004,8 @@
         "status": "PASS",
         "method": "git ls-remote --refs against the recorded origin tag",
         "actual": {
-          "ref": "refs/tags/mindroom-backup/change-control/20260809-103711",
-          "target": "7b311585f94bc7c251c79e2f8ff67a12ef30d113",
+          "ref": "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452",
+          "target": "5d2a42d0e5ee6cc9161c31b269473d277a8ddf39",
           "errors": []
         },
         "expected": "one remotely reachable tag target",
@@ -2017,10 +2017,10 @@
         "description": "The remote backup tag points to the exact recorded commit",
         "status": "PASS",
         "method": "remote target-to-receipt commit equality",
-        "actual": "7b311585f94bc7c251c79e2f8ff67a12ef30d113",
-        "expected": "7b311585f94bc7c251c79e2f8ff67a12ef30d113",
+        "actual": "5d2a42d0e5ee6cc9161c31b269473d277a8ddf39",
+        "expected": "5d2a42d0e5ee6cc9161c31b269473d277a8ddf39",
         "evidence": [
-          "refs/tags/mindroom-backup/change-control/20260809-103711"
+          "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452"
         ]
       },
       {
@@ -2039,8 +2039,8 @@
         "description": "The backup commit reproduces the recorded Graphify subtree",
         "status": "PASS",
         "method": "git subtree identity",
-        "actual": "f9ca1df91adb2c87d8e13aa664b5ea9b635bde9c",
-        "expected": "f9ca1df91adb2c87d8e13aa664b5ea9b635bde9c",
+        "actual": "886b37a2618ff3d97c3e3b27672a9a1529a2327c",
+        "expected": "886b37a2618ff3d97c3e3b27672a9a1529a2327c",
         "evidence": [
           "Graphify"
         ]
@@ -2064,15 +2064,15 @@
         "status": "PASS",
         "method": "git ls-tree full tracked-path enumeration and SHA-256",
         "actual": {
-          "count": 23533,
-          "pathSetSha256": "a394448e4cd8da3536757108153a31860e017c30edd750062deace803f568e9c"
+          "count": 23535,
+          "pathSetSha256": "7775362aa6ac35335942428feb15b6cbfa6330053a461b24284e8045abc49c42"
         },
         "expected": {
-          "count": 23533,
-          "pathSetSha256": "a394448e4cd8da3536757108153a31860e017c30edd750062deace803f568e9c"
+          "count": 23535,
+          "pathSetSha256": "7775362aa6ac35335942428feb15b6cbfa6330053a461b24284e8045abc49c42"
         },
         "evidence": [
-          "refs/tags/mindroom-backup/change-control/20260809-103711"
+          "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452"
         ]
       },
       {
@@ -2130,10 +2130,10 @@
         "description": "The backup commit's complete Merkle tree equals the recorded repository tree",
         "status": "PASS",
         "method": "git commit tree identity",
-        "actual": "a097d5d9d72e7ef465288fb95e0b8ade79205897",
-        "expected": "a097d5d9d72e7ef465288fb95e0b8ade79205897",
+        "actual": "f3740115ba384495b617ce757b077751f7efa735",
+        "expected": "f3740115ba384495b617ce757b077751f7efa735",
         "evidence": [
-          "refs/tags/mindroom-backup/change-control/20260809-103711"
+          "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452"
         ]
       },
       {
@@ -2146,7 +2146,7 @@
           "remoteRefVerified": true,
           "lfsObjectsVerified": true,
           "status": "VERIFIED",
-          "verifiedAt": "2026-08-09T11:02:38+03:00"
+          "verifiedAt": "2026-08-11T14:17:08+03:00"
         },
         "expected": {
           "remoteRefVerified": true,
@@ -2538,6 +2538,102 @@
         "evidence": []
       },
       {
+        "checkId": "ARCH-01",
+        "category": "architecture",
+        "description": "Every current-authoritative literal source anchor exists, matches its line and hashes, and is compatible with its semantic type",
+        "status": "PASS",
+        "method": "live source bytes, literal line binding, SHA-256, JSON parsing, and semantic-type compatibility",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "ARCH-02",
+        "category": "architecture",
+        "description": "Every architecture-preservation contract owner is allowed and is owned or explicitly referenced",
+        "status": "PASS",
+        "method": "contract-owner join against allowedPaths plus ownedPaths/referencePaths",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "ARCH-03",
+        "category": "architecture",
+        "description": "No architecture-preservation contract owner is forbidden explicitly or by a catch-all boundary",
+        "status": "PASS",
+        "method": "exact/glob forbidden-path matching plus catch-all evaluation against allowedPaths",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "ARCH-04",
+        "category": "architecture",
+        "description": "Declared application, worker, per-package, and combined preservation entry sets exactly equal the topology derived from live package manifests, bundle.ts, and Rspack helpers",
+        "status": "PASS",
+        "method": "independent application-package selection plus createRspackHTMLTargetConfig, createRspackWorkerTargetConfig, getBaseWorkerConfigs condition parsing, Rspack entry semantics, and exact boundary membership",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "ARCH-05",
+        "category": "architecture",
+        "description": "Source-derived generated dist outputs are explicitly classified and never canonical exact, allowed, owned, or reference inputs",
+        "status": "PASS",
+        "method": "independent selected-package root derivation, exact set equality, glob overlap, and forbidden-source classification",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "ARCH-06",
+        "category": "architecture",
+        "description": "Every architecture-preservation acceptance test has executable source-specific assertions and every assertion passes",
+        "status": "PASS",
+        "method": "recognized executable assertion evaluation against live source, task, exact-location, and runtime authorities",
+        "actual": {
+          "missingExecutableSpecifications": [],
+          "assertionIssues": []
+        },
+        "expected": {
+          "missingExecutableSpecifications": [],
+          "assertionIssues": []
+        },
+        "evidence": []
+      },
+      {
+        "checkId": "ARCH-07",
+        "category": "architecture",
+        "description": "Every capability-linked architecture runtime registration is declared exactly once and resolves with exact source-line evidence and existing runtime entrypoints",
+        "status": "PASS",
+        "method": "capabilityIds-to-registration source join, declared set equality, source-line evidence comparison, and runtime-entrypoint existence",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "ARCH-08",
+        "category": "architecture",
+        "description": "Package exports plus source-derived composition-root, bootstrap-consumer, bootstrap-target, and import-map sets exactly equal the declared preservation boundary",
+        "status": "PASS",
+        "method": "independent selected-package source scan, relative app-import resolution, package wildcard-export resolution, exact set equality, and boundary membership",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
+        "checkId": "ARCH-09",
+        "category": "architecture",
+        "description": "No current-authoritative exact-location capability retains a synthetic MR_CAP_*_CoreSymbol as an active symbol",
+        "status": "PASS",
+        "method": "current-symbol projections across capability, exact-location, symbol, evidence, search-receipt, and change registries",
+        "actual": [],
+        "expected": [],
+        "evidence": []
+      },
+      {
         "checkId": "GATE-01",
         "category": "gates",
         "description": "Exactly six named wave gates exist and none is missing",
@@ -2721,13 +2817,13 @@
         "actual": {
           "status": "PASS",
           "gateHash": "e1f22a5949f1ad8f94090dd1be5170092440105b1b62cd449a809567c6e63727",
-          "testHash": "75d6813eb5062cbc6f70c453df01f7f9d6687b17d48f5ef75a44770fb803bba0",
+          "testHash": "90f5048974b9cff105dbabb7e7b342d72bb57fb1552e075b71680bf37a6ea98e",
           "blockingDefects": []
         },
         "expected": {
           "status": "PASS",
           "gateHash": "e1f22a5949f1ad8f94090dd1be5170092440105b1b62cd449a809567c6e63727",
-          "testHash": "75d6813eb5062cbc6f70c453df01f7f9d6687b17d48f5ef75a44770fb803bba0",
+          "testHash": "90f5048974b9cff105dbabb7e7b342d72bb57fb1552e075b71680bf37a6ea98e",
           "blockingDefects": []
         },
         "evidence": [
@@ -3697,17 +3793,17 @@
         "status": "PASS",
         "method": "cross-document value comparison",
         "actual": {
-          "00 Execution Control/STATUS.json": "mindroom-graphify-final-freeze-20260808-185500",
-          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "mindroom-graphify-final-freeze-20260808-185500",
-          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-graphify-final-freeze-20260808-185500",
-          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "mindroom-graphify-final-freeze-20260808-185500",
-          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "mindroom-graphify-final-freeze-20260808-185500",
-          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "mindroom-graphify-final-freeze-20260808-185500",
-          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-graphify-final-freeze-20260808-185500",
-          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "mindroom-graphify-final-freeze-20260808-185500",
-          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "mindroom-graphify-final-freeze-20260808-185500",
-          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "mindroom-graphify-final-freeze-20260808-185500",
-          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "mindroom-graphify-final-freeze-20260808-185500"
+          "00 Execution Control/STATUS.json": "mindroom-mr-inv-002-retry-recertified-freeze-20260811-141708",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "mindroom-mr-inv-002-retry-recertified-freeze-20260811-141708",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-mr-inv-002-retry-recertified-freeze-20260811-141708",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "mindroom-mr-inv-002-retry-recertified-freeze-20260811-141708",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "mindroom-mr-inv-002-retry-recertified-freeze-20260811-141708",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "mindroom-mr-inv-002-retry-recertified-freeze-20260811-141708",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-mr-inv-002-retry-recertified-freeze-20260811-141708",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "mindroom-mr-inv-002-retry-recertified-freeze-20260811-141708",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "mindroom-mr-inv-002-retry-recertified-freeze-20260811-141708",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "mindroom-mr-inv-002-retry-recertified-freeze-20260811-141708",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "mindroom-mr-inv-002-retry-recertified-freeze-20260811-141708"
         },
         "expected": "one nonempty freezeRunId",
         "evidence": [
@@ -4233,21 +4329,21 @@
         "actual": {
           "state": "FRESH_CHALLENGE_EXECUTION_VERIFIED",
           "verdict": "PASS",
-          "executed": 95,
-          "required": 95,
+          "executed": 103,
+          "required": 103,
           "allPassed": true,
           "zeroFailureBaselines": true,
-          "validatorCheckCount": 198,
-          "challengeTestCount": 95,
+          "validatorCheckCount": 207,
+          "challengeTestCount": 103,
           "validatorSourceHashMatch": true
         },
         "expected": {
           "state": "PENDING_FRESH_CHALLENGE_EXECUTION or FRESH_CHALLENGE_EXECUTION_VERIFIED",
           "verdict": "PENDING or PASS",
           "executed": "0 before run or all required after run",
-          "required": 95,
-          "validatorCheckCount": 198,
-          "challengeTestCount": 95,
+          "required": 103,
+          "validatorCheckCount": 207,
+          "challengeTestCount": 103,
           "validatorSourceHashMatch": true
         },
         "evidence": [
@@ -4293,8 +4389,8 @@
           "challengeVerdict": "PASS",
           "backupOrManifestFailures": [],
           "counts": {
-            "live": 198,
-            "challenge": 198
+            "live": 207,
+            "challenge": 207
           }
         },
         "expected": {
@@ -4302,8 +4398,8 @@
           "challengeVerdict": "PENDING before challenge or PASS after challenge",
           "backupOrManifestFailures": [],
           "counts": {
-            "live": 198,
-            "challenge": 198
+            "live": 207,
+            "challenge": 207
           }
         },
         "evidence": [
@@ -4334,19 +4430,19 @@
         "status": "PASS",
         "method": "cross-document repair ID comparison",
         "actual": {
-          "00 Execution Control/STATUS.json": "mindroom-mr-inv-001-change-control-20260809-080238",
-          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "mindroom-mr-inv-001-change-control-20260809-080238",
-          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-mr-inv-001-change-control-20260809-080238",
-          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "mindroom-mr-inv-001-change-control-20260809-080238",
-          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "mindroom-mr-inv-001-change-control-20260809-080238",
-          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "mindroom-mr-inv-001-change-control-20260809-080238",
-          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-mr-inv-001-change-control-20260809-080238",
-          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "mindroom-mr-inv-001-change-control-20260809-080238",
-          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "mindroom-mr-inv-001-change-control-20260809-080238",
-          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "mindroom-mr-inv-001-change-control-20260809-080238",
-          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "mindroom-mr-inv-001-change-control-20260809-080238"
+          "00 Execution Control/STATUS.json": "mindroom-mr-inv-002-retry-change-control-20260811-141708",
+          "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "mindroom-mr-inv-002-retry-change-control-20260811-141708",
+          "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-mr-inv-002-retry-change-control-20260811-141708",
+          "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "mindroom-mr-inv-002-retry-change-control-20260811-141708",
+          "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "mindroom-mr-inv-002-retry-change-control-20260811-141708",
+          "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "mindroom-mr-inv-002-retry-change-control-20260811-141708",
+          "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "mindroom-mr-inv-002-retry-change-control-20260811-141708",
+          "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "mindroom-mr-inv-002-retry-change-control-20260811-141708",
+          "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "mindroom-mr-inv-002-retry-change-control-20260811-141708",
+          "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "mindroom-mr-inv-002-retry-change-control-20260811-141708",
+          "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "mindroom-mr-inv-002-retry-change-control-20260811-141708"
         },
-        "expected": "mindroom-mr-inv-001-change-control-20260809-080238",
+        "expected": "mindroom-mr-inv-002-retry-change-control-20260811-141708",
         "evidence": [
           "00 Execution Control/STATUS.json",
           "00 Execution Control/FINAL_AUTHORITY_INDEX.json",
@@ -4699,17 +4795,17 @@
             "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "GITHUB_NATIVE_IMMUTABLE_GIT_REF"
           },
           "refs": {
-            "00 Execution Control/STATUS.json": "refs/tags/mindroom-backup/change-control/20260809-103711",
-            "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "refs/tags/mindroom-backup/change-control/20260809-103711",
-            "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "refs/tags/mindroom-backup/change-control/20260809-103711",
-            "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "refs/tags/mindroom-backup/change-control/20260809-103711",
-            "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "refs/tags/mindroom-backup/change-control/20260809-103711",
-            "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "refs/tags/mindroom-backup/change-control/20260809-103711",
-            "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "refs/tags/mindroom-backup/change-control/20260809-103711",
-            "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "refs/tags/mindroom-backup/change-control/20260809-103711",
-            "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "refs/tags/mindroom-backup/change-control/20260809-103711",
-            "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "refs/tags/mindroom-backup/change-control/20260809-103711",
-            "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "refs/tags/mindroom-backup/change-control/20260809-103711"
+            "00 Execution Control/STATUS.json": "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452",
+            "00 Execution Control/FINAL_AUTHORITY_INDEX.json": "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452",
+            "00 Execution Control/GRAPHIFY_MAPPING_RECEIPT.json": "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452",
+            "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json": "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452",
+            "00 Execution Control/FINAL_CODEBASE_PRESERVATION_RECEIPT.json": "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452",
+            "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json": "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452",
+            "11 Completion/GRAPHIFY_MAPPING_RECEIPT.json": "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452",
+            "11 Completion/GRAPHIFY_PLANNING_COMPLETION_RECEIPT.json": "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452",
+            "11 Completion/FINAL_SYNCHRONIZATION_REPORT.json": "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452",
+            "11 Completion/FINAL_WARNING_OWNERSHIP_RESOLUTION.json": "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452",
+            "11 Completion/FINAL_FREEZE_VALIDATOR_CHALLENGE_REPORT.json": "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452"
           },
           "persistentLocalBackupRequired": {
             "00 Execution Control/STATUS.json": false,
@@ -4727,7 +4823,7 @@
         },
         "expected": {
           "backend": "GITHUB_NATIVE_IMMUTABLE_GIT_REF",
-          "ref": "refs/tags/mindroom-backup/change-control/20260809-103711",
+          "ref": "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452",
           "persistentLocalBackupRequired": false
         },
         "evidence": [
@@ -4771,7 +4867,7 @@
       "adrs": 14,
       "publicEntrypoints": 161,
       "manifestRecordCount": 167,
-      "manifestAggregateHash": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
+      "manifestAggregateHash": "565b4bbebb267bbd43a4664dcf7e87353fabc5fb86ef973cf26fe03ebbf44923",
       "codebaseFileCount": 10080,
       "codebaseDirectoryCount": 2548,
       "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",

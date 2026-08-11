@@ -1,20 +1,20 @@
 {
   "schemaVersion": 4,
   "receiptType": "FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION",
-  "backupPurpose": "FROZEN_PLAN_CHANGE_CONTROL_PRE_CHANGE_RECOVERY_POINT",
+  "backupPurpose": "MR_INV_002_RETRY_FROZEN_PLAN_CHANGE_CONTROL_PRE_CHANGE_RECOVERY_POINT",
   "backupBackend": "GITHUB_NATIVE_IMMUTABLE_GIT_REF",
   "repository": "mhyahya854/MindRoom",
   "remote": "origin",
-  "remoteUrl": "https://github.com/mhyahya854/MindRoom.git",
+  "remoteUrl": "git@github.com:mhyahya854/MindRoom.git",
   "refType": "TAG",
-  "ref": "refs/tags/mindroom-backup/change-control/20260809-103711",
-  "currentBackupRef": "refs/tags/mindroom-backup/change-control/20260809-103711",
-  "commitSha": "7b311585f94bc7c251c79e2f8ff67a12ef30d113",
-  "treeSha": "a097d5d9d72e7ef465288fb95e0b8ade79205897",
-  "graphifyTreeSha": "f9ca1df91adb2c87d8e13aa664b5ea9b635bde9c",
+  "ref": "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452",
+  "currentBackupRef": "refs/tags/mindroom-backup/change-control/MR-INV-002-retry-20260811-134452",
+  "commitSha": "5d2a42d0e5ee6cc9161c31b269473d277a8ddf39",
+  "treeSha": "f3740115ba384495b617ce757b077751f7efa735",
+  "graphifyTreeSha": "886b37a2618ff3d97c3e3b27672a9a1529a2327c",
   "codebaseTreeSha": "bbf383e3418da4f613f58719160bb7cbd5709ffc",
-  "trackedPathCount": 23533,
-  "trackedPathSetSha256": "a394448e4cd8da3536757108153a31860e017c30edd750062deace803f568e9c",
+  "trackedPathCount": 23535,
+  "trackedPathSetSha256": "7775362aa6ac35335942428feb15b6cbfa6330053a461b24284e8045abc49c42",
   "lfsObjects": [
     {
       "path": "Graphify/05 Dependency and Impact/DEPENDENCY_EDGES.jsonl",
@@ -31,7 +31,7 @@
   "persistentLocalBackupRequired": false,
   "lfsObjectsVerified": true,
   "status": "VERIFIED",
-  "verifiedAt": "2026-08-09T11:02:38+03:00",
+  "verifiedAt": "2026-08-11T14:17:08+03:00",
   "backupHistory": {
     "historicalOriginalBackup": {
       "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-lineage-repair-20260801-190852",
@@ -76,7 +76,7 @@
     "reuseAllowed": false,
     "automaticDeletionAllowed": false
   },
-  "freezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
+  "freezeRunId": "mindroom-mr-inv-002-retry-recertified-freeze-20260811-141708",
   "externalReviewRunId": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
   "mappingStatus": "COMPLETED_AND_FROZEN",
   "independentReviewStatus": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
@@ -130,27 +130,27 @@
   "finalFreezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
   "independentReviewDecision": "VERIFIED",
   "reviewReportSha256": "eb0439a5e3bcc1c6c27712f5953d910e056aca20ad7db768db2d4151f8b6778f",
-  "officialValidatorRunId": "mindroom-mr-inv-001-change-control-20260809-080238-validation",
-  "repairRunId": "mindroom-mr-inv-001-change-control-20260809-080238",
+  "officialValidatorRunId": "mindroom-mr-inv-002-retry-change-control-20260811-141708-validation",
+  "repairRunId": "mindroom-mr-inv-002-retry-change-control-20260811-141708",
   "backupState": "VERIFIED_GITHUB_NATIVE_IMMUTABLE_GIT_REF",
   "receiptState": "VERIFIED_GITHUB_NATIVE_IMMUTABLE_GIT_REF",
-  "timestamp": "2026-08-09T11:02:38+03:00",
-  "lastUpdatedAt": "2026-08-09T11:02:38+03:00",
+  "timestamp": "2026-08-11T14:17:08+03:00",
+  "lastUpdatedAt": "2026-08-11T14:17:08+03:00",
   "changeControl": {
-    "investigationId": "MR-INV-001",
-    "ownershipBefore": [
-      "MR-CAP-160",
-      "MR-CAP-001"
-    ],
-    "ownershipAfter": "MR-CAP-001",
-    "authorization": "EXPLICIT_USER_FROZEN_PLAN_CHANGE_CONTROL"
+    "investigationId": "MR-INV-002",
+    "blockerId": "MR-BLOCK-003",
+    "authorization": "EXPLICIT_USER_FROZEN_PLAN_CHANGE_CONTROL_RETRY",
+    "preChangeMain": "23398958f7e9485c58629e51c3f1db4b65182208",
+    "failedCandidateWipBranch": "wip/MR-INV-002-failed-change-control-20260811-134350",
+    "failedCandidateWipCommit": "d0f492c830247a050b76ac5b29a19746de79c3fa"
   },
   "manifestRecordCount": 167,
-  "manifestAggregateHash": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
-  "validatorCheckCount": 198,
-  "challengeTestCount": 95,
+  "manifestAggregateHash": "565b4bbebb267bbd43a4664dcf7e87353fabc5fb86ef973cf26fe03ebbf44923",
+  "validatorCheckCount": 207,
+  "challengeTestCount": 103,
   "blockingDefectCount": 0,
-  "validatorSourceHash": "b2fe87ea8e391f639d374ef67a703d001ba9e90e5d0bb5896d0ec111a0e7a660",
-  "challengeSourceHash": "23b17369a10edc4535151272a9b5297a0e97aea329b55820edf16464cdf5a134",
-  "verifierSourceHash": "27a9859659e4834b9bdfc23391f51dcba0c977af4c1dbc7fa327e84e871141d4"
+  "validatorSourceHash": "dcdaf828067cfbe472cedfdec7a25888127153713419fe2e2d27f7d7f84ce038",
+  "challengeSourceHash": "c26fcbab90fba07470f7ccba30d1c28d47882583f5beac1e2cc12a6cc1f69ac9",
+  "verifierSourceHash": "27a9859659e4834b9bdfc23391f51dcba0c977af4c1dbc7fa327e84e871141d4",
+  "changeControlStatus": "MR_INV_002_RETRY_CANDIDATE_TECHNICAL_CERTIFICATION_PENDING_FRESH_REVIEW"
 }

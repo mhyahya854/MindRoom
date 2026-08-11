@@ -26,6 +26,7 @@ TASK_PATH = "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
 LINEAGE_PATH = "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
 GATE_PATH = "10 Verification/RELEASE_GATE_MATRIX.json"
 TEST_PATH = "10 Verification/REQUIREMENT_TEST_MATRIX.jsonl"
+EXACT_LOCATION_PATH = "04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json"
 BACKUP_RECEIPT_PATH = "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
 LIVE_REPORT_PATH = "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json"
 
@@ -197,6 +198,78 @@ def change_evidence_source(data, rows, owner_key, evidence_key, wrong_source):
     items[0]["sourceRequirementId"] = wrong_source
 
 
+def mr_impl_001(rows):
+    return next(row for row in rows if row.get("taskId") == "MR-IMPL-001")
+
+
+def mutate_missing_current_anchor(data):
+    row = data["locations"]["MR-CAP-001"]["sourceAnchors"][0]
+    row.update({
+        "semanticType": "TYPESCRIPT_EXPORTED_SYMBOL",
+        "literal": "export interface MR_CAP_001_AdversarialMissingSymbol",
+    })
+
+
+def mutate_owner_not_allowed(rows):
+    task = mr_impl_001(rows)
+    owner = task["contract"]["ownedPackageOrModule"]
+    task["allowedPaths"].remove(owner)
+
+
+def mutate_owner_caught_by_catchall(rows):
+    task = mr_impl_001(rows)
+    owner = task["contract"]["ownedPackageOrModule"]
+    task["allowedPaths"].remove(owner)
+    task["forbiddenPaths"].append("All paths not listed in allowedPaths")
+
+
+def mutate_required_build_entry_omitted(rows):
+    task = mr_impl_001(rows)
+    task["architecturePreservationContract"]["buildEntryPaths"].pop(0)
+
+
+def mutate_generated_output_as_canonical(rows):
+    task = mr_impl_001(rows)
+    generated_file = task["architecturePreservationContract"]["generatedOutputRoots"][0] + "/dist/adversarial.js"
+    task["allowedPaths"].append(generated_file)
+    task["ownedPaths"].append(generated_file)
+
+
+def mutate_acceptance_missing_anchor(rows):
+    test = next(row for row in rows if row.get("testId") == "TEST-MR-CAP-001-UNIT-001")
+    test["executableAssertions"][0] = {
+        "assertion": "SOURCE_LITERAL_PRESENT",
+        "path": "Codebase/packages/frontend/core/package.json",
+        "literal": "MR_CAP_001_AdversarialAcceptanceAnchor",
+    }
+
+
+def remove_path_identity(value, target):
+    """Remove a source path from every temporary Graphify projection."""
+    if isinstance(value, list):
+        retained = []
+        for item in value:
+            if isinstance(item, str) and (item == target or item.startswith(target + "::") or item.startswith(target + "#")):
+                continue
+            if isinstance(item, dict) and any(item.get(key) == target for key in ("path", "currentPath", "consumerPath", "entryPath")):
+                continue
+            retained.append(remove_path_identity(item, target))
+        value[:] = retained
+    elif isinstance(value, dict):
+        for key in list(value):
+            value[key] = remove_path_identity(value[key], target)
+    return value
+
+
+def mutate_remove_path_from_all_overrides(overrides, target):
+    for relative, path_value in overrides.items():
+        path = Path(path_value)
+        if relative.endswith(".jsonl"):
+            mutate_jsonl(path, lambda rows: remove_path_identity(rows, target))
+        elif relative.endswith(".json"):
+            mutate_json(path, lambda data: remove_path_identity(data, target))
+
+
 def definition(challenge_id, mutation, relatives, expected, mutator, validation_mode="CORE_PRE_CHALLENGE"):
     return {
         "challengeId": challenge_id,
@@ -311,6 +384,14 @@ CHALLENGE_DEFINITIONS = [
     definition("CHALLENGE-FROZEN-SYNC-GENERATION-001", "Regress final synchronization generation to candidate", ["11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"], ["SYNC-01"], lambda o: mutate_json(Path(o["11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"]), lambda data: data.__setitem__("synchronizationGeneration", "FINAL_AUTHORITY_CANDIDATE"))),
     definition("CHALLENGE-FROZEN-SYNC-MANIFEST-001", "Regress final synchronization to the candidate manifest", ["11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"], ["SYNC-04"], lambda o: mutate_json(Path(o["11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"]), lambda data: data.__setitem__("manifestPath", "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"))),
     definition("CHALLENGE-FROZEN-VALIDATION-MODE-001", "Regress the persisted frozen validation result to full technical mode", [LIVE_REPORT_PATH], ["CERT-01"], lambda o: mutate_json(Path(o[LIVE_REPORT_PATH]), lambda data: (data.__setitem__("validationMode", "FULL_TECHNICAL_CERTIFICATION"), (data.get("validationResult") or {}).setdefault("derived", {}).__setitem__("validationMode", "FULL_TECHNICAL_CERTIFICATION")))),
+    definition("CHALLENGE-ARCH-001", "Claim a nonexistent TypeScript literal symbol in a current-authoritative JSON exact-location record", [EXACT_LOCATION_PATH], ["ARCH-01"], lambda o: mutate_json(Path(o[EXACT_LOCATION_PATH]), mutate_missing_current_anchor)),
+    definition("CHALLENGE-ARCH-002", "Exclude the architecture contract owner from allowedPaths", [TASK_PATH], ["ARCH-02"], lambda o: mutate_jsonl(Path(o[TASK_PATH]), mutate_owner_not_allowed)),
+    definition("CHALLENGE-ARCH-003", "Catch the architecture contract owner with the forbidden catch-all", [TASK_PATH], ["ARCH-02", "ARCH-03"], lambda o: mutate_jsonl(Path(o[TASK_PATH]), mutate_owner_caught_by_catchall)),
+    definition("CHALLENGE-ARCH-004", "Omit one source-required Rspack entry from the declared preservation boundary", [TASK_PATH], ["ARCH-04"], lambda o: mutate_jsonl(Path(o[TASK_PATH]), mutate_required_build_entry_omitted)),
+    definition("CHALLENGE-ARCH-005", "Treat a generated dist file as an allowed owned canonical source", [TASK_PATH], ["ARCH-05"], lambda o: mutate_jsonl(Path(o[TASK_PATH]), mutate_generated_output_as_canonical)),
+    definition("CHALLENGE-ARCH-006", "Make an MR-CAP-001 acceptance test require a nonexistent literal source anchor", [TEST_PATH], ["ARCH-06"], lambda o: mutate_jsonl(Path(o[TEST_PATH]), mutate_acceptance_missing_anchor)),
+    definition("CHALLENGE-ARCH-007", "Remove a live configured worker entry from every temporary Graphify declaration while leaving Codebase source intact", [CAPABILITY_PATH, "03 Capability Map/CAPABILITY_EVIDENCE.jsonl", "03 Capability Map/CAPABILITY_SOURCE_SEARCH_RECEIPTS.jsonl", "04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl", EXACT_LOCATION_PATH, "06 Folder Ownership/CAPABILITY_TO_PATH_MAP.json", "06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl", "07 Reorganisation/MOVE_PLAN.jsonl", TASK_PATH, "09 Implementation/TRANSPLANT_RECEIPTS.jsonl", "09 Implementation/TRANSPLANT_SEARCH_QUEUE.jsonl", "02 Architecture Map/WORKER_MAP.jsonl"], ["ARCH-04"], lambda o: mutate_remove_path_from_all_overrides(o, "Codebase/packages/frontend/apps/android/src/nbstore.worker.ts")),
+    definition("CHALLENGE-ARCH-008", "Remove a live bootstrap consumer from every temporary Graphify declaration while leaving Codebase source intact", [CAPABILITY_PATH, "03 Capability Map/CAPABILITY_EVIDENCE.jsonl", "03 Capability Map/CAPABILITY_SOURCE_SEARCH_RECEIPTS.jsonl", "04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl", EXACT_LOCATION_PATH, "06 Folder Ownership/CAPABILITY_TO_PATH_MAP.json", "06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl", "07 Reorganisation/MOVE_PLAN.jsonl", TASK_PATH, "09 Implementation/TRANSPLANT_RECEIPTS.jsonl", "09 Implementation/TRANSPLANT_SEARCH_QUEUE.jsonl"], ["ARCH-08"], lambda o: mutate_remove_path_from_all_overrides(o, "Codebase/packages/frontend/apps/android/src/setup-worker.ts")),
 ]
 
 

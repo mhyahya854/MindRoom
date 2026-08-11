@@ -157,3 +157,16 @@ Result: **2 / 4 passed**.
 `Codebase modified = NO`
 
 `Graphify modified = NO`
+
+## Frozen-plan change-control retry candidate
+
+
+Status: `BLOCKED — repair candidate awaiting full certification and one fresh independent review`.
+
+The original `MR-BLOCK-003` discovery above remains historical evidence. The first authorized repair attempt was rejected by its independent reviewer because it represented only eight HTML/application entries and seven bootstrap consumers, omitted nine configured worker source paths and five active bootstrap-consumer files, and let `ARCH-04`/`ARCH-08` trust those incomplete declarations. That exact failed candidate is preserved as non-authoritative WIP branch `wip/MR-INV-002-failed-change-control-20260811-134350` at commit `d0f492c830247a050b76ac5b29a19746de79c3fa`.
+
+The retry derives the live topology independently from package manifests, `bundle-shared.ts`, `bundle.ts`, `getBaseWorkerConfigs`, both Rspack target helpers, source-relative application imports, all active `@affine/core/bootstrap/*` imports, and the capability-linked runtime registry. The candidate reconciles 8 application entries, 9 unique worker entries, 17 total configured entries, 7 composition roots, 12 bootstrap consumers (16 imports), 3 bootstrap targets, 33 registrations, and 6 generated `dist/**` roots with zero missing or unexpected records. See `TOPOLOGY_RECONCILIATION.json`.
+
+Current authority contains no active `MR_CAP_001_CoreSymbol`. The truthful owner is `Codebase/packages/frontend/core/package.json`; it is exact, allowed, owned, and not forbidden. The task has 53 exact/allowed source inputs split into 20 owned and 33 read-only references. Application implementation remains `NONE`; Codebase tree `bbf383e3418da4f613f58719160bb7cbd5709ffc` and filesystem aggregate `91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748` remain unchanged.
+
+This candidate does not resolve the blocker by editing alone. `MR-INV-002` remains `BLOCKED` and `MR-BLOCK-003` remains `ACTIVE` until full certification, Step 11b, the dedicated reconciliation report, and exactly one fresh isolated review all pass.

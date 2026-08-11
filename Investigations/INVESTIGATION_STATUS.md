@@ -1,13 +1,11 @@
 # MindRoom Pre-Code Investigation Status
 
-Updated: 2026-08-11T10:41:25+03:00
+Updated: 2026-08-11T11:44:49+03:00
 
 ## Control state
 
-- Starting GitHub main: `fcd5fd2448ab6301b4e9233a87c93d9919c5cf6b`
-- Investigation stage: `PRE_CODE_INVESTIGATION`
-- Completed investigation: `MR-INV-001 — Shared package bootstrap boundary and ownership`
-- Selected investigation: `MR-INV-002 — Wave 0 application architecture preservation boundary` (`BLOCKED`)
+- Starting GitHub main: `23398958f7e9485c58629e51c3f1db4b65182208`
+- Selected investigation: `MR-INV-002 — Wave 0 application architecture preservation boundary` (`BLOCKED_PENDING_ONE_FRESH_INDEPENDENT_REVIEW`)
 - Wave 0 authorized: **NO**
 - Wave 0 state: `READY_NOT_STARTED`
 - Codebase execution: `BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION`
@@ -23,26 +21,21 @@ Updated: 2026-08-11T10:41:25+03:00
 - Investigations remaining: **8**
 - Active hard blockers: **1**
 
-## Active hard blocker
+## MR-INV-002 change-control candidate
 
-- `MR-BLOCK-003`: **ACTIVE** — the frozen `MR-CAP-001`/`MR-IMPL-001` exact-location, owner, path-boundary, build-entry, and acceptance-test semantics contradict the hash-matching Codebase. Explicit frozen-plan change control is required.
-- Codebase decision: **KEEP EXISTING; NO CODEBASE MUTATION**.
-- Frozen-plan contradiction: **YES**.
-- User decision required: **NO**.
-
-## Resolved change control
-
-- `MR-BLOCK-001`: **RESOLVED** — bootstrap ownership is canonically `MR-CAP-001`; `MR-CAP-160` retains primary task `MR-IMPL-160`.
-- `MR-BLOCK-002`: **RESOLVED** — current backup backend is `GITHUB_NATIVE_IMMUTABLE_GIT_REF`; historical laptop paths are nonactive.
-- Pre-change GitHub tag: `mindroom-backup/change-control/20260809-103711` (**VERIFIED**)
-- Persistent laptop backup required: **FALSE**
-- Core certification: **PASS**
-- Full certification: **PASS**
-- Final freeze certification: **PASS** (198 checks, 0 failures)
-- Challenges: **PASS** (95/95, 0 exemptions, 0 baseline subtraction)
-- Step 11b: **PASS**
-
-The passing structural certification does not validate literal source-anchor existence or semantic agreement between the capability owner and task allowed paths. `MR-INV-002` independently proved that gap.
+- Acceptance criteria: **4 / 4 PASS**
+- `MR-BLOCK-003`: **ACTIVE PENDING ONE FRESH INDEPENDENT REVIEW**
+- Old authority: `MR_CAP_001_CoreSymbol` (**SUPERSEDED / NOT CURRENT**)
+- New authority: source-derived package/export, build-entry, composition-root, bootstrap, and registration preservation boundary
+- Real Rspack entries: **8 / 8**
+- Composition roots: **7 / 7**
+- Runtime registrations: **33 / 33**
+- Generated paths: **6**, all non-authoritative `dist/**`
+- Validator: **207 / 207 PASS**
+- Challenges: **101 / 101 PASS**
+- Environment exemptions: **0**
+- Baseline subtraction: **0**
+- Pre-change GitHub tag: `mindroom-backup/change-control/MR-INV-002-20260811-110104` (**VERIFIED**)
 
 ## Canonical implementation progress
 
@@ -54,20 +47,9 @@ The passing structural certification does not validate literal source-anchor exi
 
 ## Release-gate progress
 
-- Wave gates passed: **0 / 6**
-- Capability validation gates passed: **0 / 161**
-- Application release gates passed: **0 / 1**
 - All canonical gates passed: **0 / 168**
 - Canonical gates remaining: **168**
 
-## Distance from 100%
-
-- Planning/freeze remaining: **1 active frozen-plan change-control blocker; structural frozen certification still passes**
-- Investigations remaining: **8**
-- Canonical implementation remaining: **100.00%**
-- Implementation tasks remaining: **162**
-- Release gates remaining: **168**
-
 ## Current decision
 
-`MR-INV-002 = BLOCKED`. Do not begin another investigation or Wave 0. Publish and resolve `MR-BLOCK-003` through explicit frozen-plan change control, then independently re-certify before continuation.
+Do not begin MR-INV-003 or Wave 0. Bind `MR-INV-002 = COMPLETE` and `MR-BLOCK-003 = RESOLVED` only if the one authorized fresh independent review returns `VERIFIED`, then run final Step 11b and publication checks.

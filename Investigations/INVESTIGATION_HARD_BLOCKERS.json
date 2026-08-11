@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "project": "MindRoom",
   "stage": "PRE_CODE_INVESTIGATION",
-  "lastUpdatedAt": "2026-08-11T10:41:25+03:00",
+  "lastUpdatedAt": "2026-08-11T11:44:49+03:00",
   "blockers": [
     {
       "blockerId": "MR-BLOCK-001",
@@ -105,15 +105,33 @@
       "frozenPlanChangeControlRequired": true,
       "userInputRequired": false,
       "externalDependencyRequired": false,
-      "status": "ACTIVE",
+      "status": "ACTIVE_PENDING_ONE_FRESH_INDEPENDENT_REVIEW",
       "lifecycle": [
         {
           "state": "DISCOVERED",
           "discoveredAt": "2026-08-11T10:41:25+03:00",
           "evidencePath": "Investigations/Evidence/MR-INV-002/EVIDENCE.json",
           "meaning": "MR-INV-002 proved the current Codebase architecture is preservable but the frozen owner, exact-location, task-path, build-entry, and test records are not semantically coherent."
+        },
+        {
+          "state": "CHANGE_CONTROL_AUTHORIZED",
+          "authorization": "Explicit user frozen-plan change-control request",
+          "preChangeBackupTag": "mindroom-backup/change-control/MR-INV-002-20260811-110104"
+        },
+        {
+          "state": "REPAIR_APPLIED",
+          "appliedAt": "2026-08-11T11:44:49+03:00",
+          "codebaseModified": false
+        },
+        {
+          "state": "REVALIDATED_PENDING_INDEPENDENT_REVIEW",
+          "validatedAt": "2026-08-11T11:44:49+03:00",
+          "validator": "207/207",
+          "challenges": "101/101",
+          "acceptanceCriteria": "4/4"
         }
-      ]
+      ],
+      "pendingGate": "ONE_FRESH_INDEPENDENT_REVIEW_MUST_RETURN_VERIFIED"
     }
   ],
   "activeBlockerCount": 1,

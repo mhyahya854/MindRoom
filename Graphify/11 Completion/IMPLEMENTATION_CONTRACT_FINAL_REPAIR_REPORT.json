@@ -13,5 +13,20 @@
   "invalidAcceptanceTestReferences": [],
   "capabilityContractWaveMismatches": [],
   "taskContractWaveMismatches": [],
-  "manualHighFrequencyTemplateInspection": "No behavior template group exceeded five after IDs, names, paths, and waves were normalized."
+  "manualHighFrequencyTemplateInspection": "No behavior template group exceeded five after IDs, names, paths, and waves were normalized.",
+  "mrInv002ChangeControl": {
+    "investigationId": "MR-INV-002",
+    "blockerId": "MR-BLOCK-003",
+    "authorization": "EXPLICIT_USER_FROZEN_PLAN_CHANGE_CONTROL",
+    "oldAuthority": "MR_CAP_001_CoreSymbol",
+    "action": "RECLASSIFIED_TO_NON_SYMBOL_PACKAGE_AND_SOURCE_DERIVED_PRESERVATION_BOUNDARY",
+    "contractOwner": "Codebase/packages/frontend/core/package.json",
+    "canonicalPathCount": 40,
+    "buildEntryCount": 8,
+    "compositionRootCount": 7,
+    "runtimeRegistrationCount": 33,
+    "generatedPathCount": 6,
+    "codebaseMutation": false,
+    "timestamp": "2026-08-11T11:19:43+03:00"
+  }
 }

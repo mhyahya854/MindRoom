@@ -157,3 +157,24 @@ Result: **2 / 4 passed**.
 `Codebase modified = NO`
 
 `Graphify modified = NO`
+
+
+---
+
+## Authorized frozen-plan change-control candidate
+
+Updated: `2026-08-11T11:44:49+03:00`
+
+The original `BLOCKED` finding above remains the immutable discovery history. Explicit user change control was subsequently authorized and the repair candidate now:
+
+- reclassifies `MR_CAP_001_CoreSymbol` as historical/superseded and uses a truthful non-symbol `@affine/core` package-manifest anchor;
+- binds MR-CAP-001/MR-IMPL-001 to 40 exact source/configuration inputs, including all eight source-derived Rspack entries and seven composition roots;
+- keeps the manifest owner exact, allowed, owned, and not forbidden;
+- classifies six package `dist/**` roots as generated/disposable and non-authoritative;
+- preserves and re-verifies 33/33 registrations;
+- replaces the fake-symbol and generic-persistence tests with executable package/export and application-composition assertions;
+- adds production checks `ARCH-01` through `ARCH-09` and challenges `CHALLENGE-ARCH-001` through `006`.
+
+Technical evidence: CORE `204/204`, FULL/FINAL `207/207`, challenges `101/101`, zero exemptions, zero baseline subtraction, and unchanged Codebase tree `bbf383e3418da4f613f58719160bb7cbd5709ffc`.
+
+The four investigation acceptance criteria now pass technically (`4 / 4`). The status remains fail-closed as `BLOCKED` and `MR-BLOCK-003` remains active only until the one authorized fresh independent review returns `VERIFIED`; no MR-INV-003 or Wave 0 work may start.

@@ -10,6 +10,7 @@ import subprocess
 import sys
 import tempfile
 from collections import Counter, defaultdict
+from fnmatch import fnmatchcase
 from pathlib import Path
 
 sys.dont_write_bytecode = True
@@ -349,6 +350,314 @@ def inventory_tree(root):
     return result
 
 
+def codebase_source_path(relative):
+    relative = str(relative or "").replace("\\", "/").removeprefix("./")
+    return ROOT.parent / relative
+
+
+def json_pointer_value(document, pointer):
+    if pointer == "":
+        return document
+    if not isinstance(pointer, str) or not pointer.startswith("/"):
+        raise ValueError(f"invalid JSON pointer: {pointer!r}")
+    current = document
+    for raw in pointer[1:].split("/"):
+        key = raw.replace("~1", "/").replace("~0", "~")
+        current = current[int(key)] if isinstance(current, list) else current[key]
+    return current
+
+
+def path_matches_pattern(path, pattern):
+    path = str(path or "").replace("\\", "/")
+    pattern = str(pattern or "").replace("\\", "/")
+    return path == pattern or fnmatchcase(path, pattern) or fnmatchcase(path, pattern.replace("**", "*"))
+
+
+def owner_path_issues(task):
+    owner = str((task.get("contract") or {}).get("ownedPackageOrModule") or "")
+    allowed = set(task.get("allowedPaths") or [])
+    owned = set(task.get("ownedPaths") or [])
+    references = set(task.get("referencePaths") or [])
+    issues = []
+    if not owner:
+        issues.append({"taskId": task.get("taskId"), "issue": "missing contract owner"})
+    elif owner not in allowed or owner not in owned | references:
+        issues.append({
+            "taskId": task.get("taskId"), "owner": owner,
+            "allowed": owner in allowed, "ownedOrReferenced": owner in owned | references,
+        })
+    return issues
+
+
+def owner_forbidden_issues(task):
+    owner = str((task.get("contract") or {}).get("ownedPackageOrModule") or "")
+    allowed = set(task.get("allowedPaths") or [])
+    matched = []
+    for pattern in task.get("forbiddenPaths") or []:
+        if pattern == "All paths not listed in allowedPaths":
+            if owner and owner not in allowed:
+                matched.append(pattern)
+        elif owner and path_matches_pattern(owner, pattern):
+            matched.append(pattern)
+    return [{"taskId": task.get("taskId"), "owner": owner, "matchedForbiddenPaths": matched}] if matched else []
+
+
+def derive_rspack_entry_paths(task):
+    architecture = task.get("architecturePreservationContract") or {}
+    source = codebase_source_path(architecture.get("buildTopologySource"))
+    issues = []
+    if not source.is_file():
+        return [], [{"taskId": task.get("taskId"), "issue": "build topology source missing", "path": str(source)}]
+    text = source.read_text(encoding="utf-8-sig")
+    groups = []
+    pattern = re.compile(
+        r"(?P<cases>(?:^\s{4}case\s+'[^']+':(?:\s*\{)?\s*\r?\n)+)(?P<body>.*?)(?=^\s{4}case\s+'|^\s{4}default:|\Z)",
+        re.M | re.S,
+    )
+    for match in pattern.finditer(text):
+        names = re.findall(r"case\s+'([^']+)'", match.group("cases"))
+        groups.append((names, match.group("body")))
+    entries = []
+    for package in architecture.get("buildPackages") or []:
+        name, root = package.get("packageName"), str(package.get("packageRoot") or "").rstrip("/")
+        group = next((body for names, body in groups if name in names), None)
+        manifest = codebase_source_path(f"{root}/package.json")
+        if not manifest.is_file():
+            issues.append({"packageName": name, "issue": "package manifest missing", "path": f"{root}/package.json"})
+            continue
+        try:
+            actual_name = json.loads(manifest.read_text(encoding="utf-8-sig")).get("name")
+        except (OSError, json.JSONDecodeError) as error:
+            issues.append({"packageName": name, "issue": f"package manifest unreadable: {error}"})
+            continue
+        if actual_name != name:
+            issues.append({"packageName": name, "issue": "package identity mismatch", "actual": actual_name})
+        if group is None:
+            issues.append({"packageName": name, "issue": "package case absent from build switch"})
+            continue
+        call = re.search(r"createRspackHTMLTargetConfig\(\s*pkg,\s*(?P<argument>\{.*?\}|pkg\.srcPath\.join\('[^']+'\)\.value)", group, re.S)
+        if not call:
+            issues.append({"packageName": name, "issue": "HTML target entry argument not derivable"})
+            continue
+        argument = call.group("argument")
+        paths = re.findall(r"pkg\.srcPath\.join\('([^']+)'\)", argument)
+        if not paths:
+            issues.append({"packageName": name, "issue": "entry path absent from HTML target argument"})
+            continue
+        entries.extend(f"{root}/src/{value}" for value in paths)
+    return sorted(set(entries)), issues
+
+
+def architecture_build_issues(task):
+    architecture = task.get("architecturePreservationContract") or {}
+    derived, issues = derive_rspack_entry_paths(task)
+    declared = sorted(set(architecture.get("buildEntryPaths") or task.get("buildEntryPaths") or []))
+    if derived != declared:
+        issues.append({
+            "taskId": task.get("taskId"), "issue": "source-derived and declared entry sets differ",
+            "missing": sorted(set(derived) - set(declared)), "unexpected": sorted(set(declared) - set(derived)),
+        })
+    for path in declared:
+        absent = [field for field in ("exactCurrentPaths", "exactTargetPaths", "allowedPaths", "ownedPaths") if path not in (task.get(field) or [])]
+        if absent or not codebase_source_path(path).is_file():
+            issues.append({"taskId": task.get("taskId"), "path": path, "missingFrom": absent, "sourceExists": codebase_source_path(path).is_file()})
+    return issues
+
+
+def generated_output_issues(task):
+    architecture = task.get("architecturePreservationContract") or {}
+    generated = list(task.get("generatedPaths") or [])
+    expected = [f"{str(root).rstrip('/')}/dist/**" for root in (architecture.get("generatedOutputRoots") or [])]
+    issues = []
+    if sorted(generated) != sorted(expected):
+        issues.append({"taskId": task.get("taskId"), "issue": "generated path set mismatch", "actual": sorted(generated), "expected": sorted(expected)})
+    canonical = []
+    for field in ("exactCurrentPaths", "exactTargetPaths", "allowedPaths", "ownedPaths", "referencePaths"):
+        canonical.extend({"field": field, "path": path} for path in (task.get(field) or []))
+    overlaps = [row for row in canonical if any(path_matches_pattern(row["path"], pattern) for pattern in generated)]
+    if overlaps:
+        issues.append({"taskId": task.get("taskId"), "issue": "generated output classified as canonical input", "overlaps": overlaps})
+    forbidden = task.get("forbiddenPaths") or []
+    unclassified = [pattern for pattern in generated if pattern not in forbidden]
+    if unclassified:
+        issues.append({"taskId": task.get("taskId"), "issue": "generated output not forbidden as canonical input", "paths": unclassified})
+    return issues
+
+
+def composition_bootstrap_issues(task):
+    architecture = task.get("architecturePreservationContract") or {}
+    issues = []
+    roots = architecture.get("compositionRoots") or task.get("compositionRoots") or []
+    for path in roots:
+        source = codebase_source_path(path)
+        absent = [field for field in ("exactCurrentPaths", "exactTargetPaths", "allowedPaths", "ownedPaths") if path not in (task.get(field) or [])]
+        literal = source.read_text(encoding="utf-8-sig") if source.is_file() else ""
+        if absent or "export function App()" not in literal:
+            issues.append({"path": path, "missingFrom": absent, "compositionAnchorPresent": "export function App()" in literal})
+    targets = architecture.get("bootstrapTargets") or task.get("bootstrapTargets") or []
+    for path in targets:
+        absent = [field for field in ("exactCurrentPaths", "exactTargetPaths", "allowedPaths", "referencePaths") if path not in (task.get(field) or [])]
+        if absent or not codebase_source_path(path).is_file():
+            issues.append({"path": path, "missingFrom": absent, "sourceExists": codebase_source_path(path).is_file()})
+    known_targets = {Path(path).stem for path in targets}
+    consumers = architecture.get("bootstrapConsumerPaths") or task.get("bootstrapConsumerPaths") or []
+    for path in consumers:
+        source = codebase_source_path(path)
+        text = source.read_text(encoding="utf-8-sig") if source.is_file() else ""
+        imports = re.findall(r"@affine/core/bootstrap/([^'\"]+)", text)
+        unresolved = sorted(set(imports) - known_targets)
+        if not source.is_file() or not imports or unresolved:
+            issues.append({"path": path, "sourceExists": source.is_file(), "bootstrapImports": imports, "unresolved": unresolved})
+    package = architecture.get("packageManifest") or {}
+    manifest_path = codebase_source_path(package.get("path"))
+    try:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8-sig"))
+    except (OSError, json.JSONDecodeError) as error:
+        issues.append({"path": package.get("path"), "issue": f"package manifest unreadable: {error}"})
+    else:
+        if manifest.get("name") != package.get("packageName"):
+            issues.append({"path": package.get("path"), "issue": "package identity mismatch"})
+        for export in package.get("requiredExports") or []:
+            if (manifest.get("exports") or {}).get(export.get("key")) != export.get("target"):
+                issues.append({"path": package.get("path"), "issue": "required export mismatch", "export": export})
+        for export in package.get("declaredNonRequiredExports") or []:
+            target = str(export.get("target") or "").removeprefix("./")
+            actual_exists = (manifest_path.parent / target).is_file()
+            if (manifest.get("exports") or {}).get(export.get("key")) != export.get("target") or actual_exists is not export.get("targetExists"):
+                issues.append({"path": package.get("path"), "issue": "declared non-required export classification mismatch", "export": export, "actualTargetExists": actual_exists})
+    return issues
+
+
+def runtime_registration_issues(task, registration_map):
+    architecture = task.get("architecturePreservationContract") or {}
+    declared = list(task.get("runtimeRegistrations") or [])
+    expected = list(architecture.get("runtimeRegistrationIds") or [])
+    issues = []
+    if declared != expected or len(declared) != len(set(declared)):
+        issues.append({"taskId": task.get("taskId"), "issue": "registration ID set mismatch or duplicate", "declared": len(declared), "expected": len(expected)})
+    for registration_id in declared:
+        row = registration_map.get(registration_id)
+        if not row:
+            issues.append({"registrationId": registration_id, "issue": "registry row missing"})
+            continue
+        path = codebase_source_path(row.get("declaringPath"))
+        lines = path.read_text(encoding="utf-8-sig").splitlines() if path.is_file() else []
+        match = re.match(r"(\d+)", str(row.get("lineRange") or ""))
+        line_number = int(match.group(1)) if match else 0
+        evidence = next((value for value in (row.get("evidence") or []) if f":L{line_number}: " in value), None)
+        expected_line = evidence.split(f":L{line_number}: ", 1)[1] if evidence else None
+        line_ok = 0 < line_number <= len(lines) and (expected_line is None or lines[line_number - 1].strip() == expected_line.strip())
+        entrypoints_ok = all(codebase_source_path(value).is_file() for value in (row.get("runtimeEntrypoints") or []))
+        if not path.is_file() or not line_ok or not entrypoints_ok:
+            issues.append({"registrationId": registration_id, "declaringPathExists": path.is_file(), "lineEvidenceExact": line_ok, "runtimeEntrypointsExist": entrypoints_ok})
+    return issues
+
+
+def current_anchor_issues(exact_locations):
+    issues = []
+    for capability_id, location in (exact_locations.get("locations") or {}).items():
+        if location.get("authorityStatus") != "CURRENT_AUTHORITATIVE":
+            continue
+        anchors = location.get("sourceAnchors") or []
+        if not anchors:
+            issues.append({"capabilityId": capability_id, "issue": "current authority has no source anchors"})
+        for row in anchors:
+            path = codebase_source_path(row.get("path"))
+            literal = str(row.get("literal") or "")
+            text = path.read_text(encoding="utf-8-sig") if path.is_file() else ""
+            lines = text.splitlines()
+            line_number = row.get("lineStart")
+            line_ok = isinstance(line_number, int) and 0 < line_number <= len(lines) and literal in lines[line_number - 1]
+            semantic = row.get("semanticType")
+            semantic_ok = True
+            if semantic in {"PACKAGE_MANIFEST", "PACKAGE_EXPORT_BOUNDARY"}:
+                try:
+                    json.loads(text)
+                except (TypeError, json.JSONDecodeError):
+                    semantic_ok = False
+            if semantic == "TYPESCRIPT_EXPORTED_SYMBOL":
+                semantic_ok = path.suffix in {".ts", ".tsx"} and re.search(r"\bexport\s+(?:interface|class|function|const|type|enum)\b", literal) is not None
+            literal_hash_ok = hashlib.sha256(literal.encode("utf-8")).hexdigest() == row.get("literalSha256")
+            file_hash_ok = path.is_file() and sha256_file(path) == row.get("fileSha256")
+            if not path.is_file() or literal not in text or not line_ok or not semantic_ok or not literal_hash_ok or not file_hash_ok:
+                issues.append({
+                    "capabilityId": capability_id, "anchorId": row.get("anchorId"), "path": row.get("path"),
+                    "sourceExists": path.is_file(), "literalPresent": literal in text, "lineExact": line_ok,
+                    "semanticCompatible": semantic_ok, "literalHashExact": literal_hash_ok, "fileHashExact": file_hash_ok,
+                })
+    return issues
+
+
+def current_symbol_issues(capability_map, exact_locations, symbol_rows, evidence_rows, receipt_rows, change_records):
+    issues = []
+    for capability_id, location in (exact_locations.get("locations") or {}).items():
+        if location.get("authorityStatus") != "CURRENT_AUTHORITATIVE":
+            continue
+        capability = capability_map.get(capability_id) or {}
+        active = list(capability.get("currentSymbols") or []) + list(capability.get("exactSymbols") or []) + list(location.get("symbols") or [])
+        active.extend(row.get("qualifiedName") for row in symbol_rows if row.get("capabilityId") == capability_id and row.get("recordType") != "NON_SYMBOL_SOURCE_ANCHOR")
+        active.extend(row.get("symbol") for row in evidence_rows if row.get("capabilityId") == capability_id and row.get("symbol"))
+        active.extend(row.get("verifiedSymbol") for row in receipt_rows if row.get("capabilityId") == capability_id and row.get("verifiedSymbol"))
+        active.extend(value for row in change_records if row.get("capabilityId") == capability_id for value in (row.get("symbols") or []))
+        synthetic = [value for value in active if re.fullmatch(r"MR_CAP_\d+_CoreSymbol", str(value or ""))]
+        if synthetic:
+            issues.append({"capabilityId": capability_id, "activeSyntheticSymbols": synthetic})
+    return issues
+
+
+def acceptance_assertion_issues(tests, task_map, capability_map, exact_locations, symbol_rows, evidence_rows, receipt_rows, change_records, registration_map):
+    issues = []
+    current_symbols = current_symbol_issues(capability_map, exact_locations, symbol_rows, evidence_rows, receipt_rows, change_records)
+    synthetic_caps = {row["capabilityId"] for row in current_symbols}
+    for test in tests:
+        assertions = test.get("executableAssertions")
+        if not assertions:
+            continue
+        for index, assertion in enumerate(assertions):
+            kind = assertion.get("assertion")
+            passed, detail = False, None
+            try:
+                if kind == "JSON_POINTER_EQUALS":
+                    document = json.loads(codebase_source_path(assertion.get("path")).read_text(encoding="utf-8-sig"))
+                    actual = json_pointer_value(document, assertion.get("jsonPointer"))
+                    passed, detail = actual == assertion.get("expected"), {"actual": actual, "expected": assertion.get("expected")}
+                elif kind == "PATH_EXISTS":
+                    passed = codebase_source_path(assertion.get("path")).is_file()
+                elif kind == "SOURCE_LITERAL_PRESENT":
+                    passed = assertion.get("literal") in codebase_source_path(assertion.get("path")).read_text(encoding="utf-8-sig")
+                elif kind == "TASK_OWNER_ALLOWED_AND_NOT_FORBIDDEN":
+                    task = task_map.get(assertion.get("taskId")) or {}
+                    detail = owner_path_issues(task) + owner_forbidden_issues(task)
+                    passed = not detail
+                elif kind == "NO_CURRENT_ACTIVE_SYMBOL":
+                    passed = assertion.get("capabilityId") not in synthetic_caps
+                elif kind == "BUILD_ENTRY_SET_EQUALS_SOURCE":
+                    detail = architecture_build_issues(task_map.get(assertion.get("taskId")) or {})
+                    passed = not detail
+                elif kind == "COMPOSITION_ROOTS_RESOLVE":
+                    task = task_map.get(assertion.get("taskId")) or {}
+                    detail = composition_bootstrap_issues(task)
+                    count = len((task.get("architecturePreservationContract") or {}).get("compositionRoots") or [])
+                    passed = not detail and count == assertion.get("expectedCount")
+                elif kind == "BOOTSTRAP_CONNECTIONS_RESOLVE":
+                    detail = composition_bootstrap_issues(task_map.get(assertion.get("taskId")) or {})
+                    passed = not detail
+                elif kind == "RUNTIME_REGISTRATIONS_RESOLVE":
+                    task = task_map.get(assertion.get("taskId")) or {}
+                    detail = runtime_registration_issues(task, registration_map)
+                    passed = not detail and len(task.get("runtimeRegistrations") or []) == assertion.get("expectedCount")
+                elif kind == "GENERATED_OUTPUTS_NON_AUTHORITATIVE":
+                    detail = generated_output_issues(task_map.get(assertion.get("taskId")) or {})
+                    passed = not detail
+                else:
+                    detail = {"issue": "unknown executable assertion"}
+            except (OSError, KeyError, IndexError, TypeError, ValueError, json.JSONDecodeError) as error:
+                detail = {"exception": str(error)}
+            if not passed:
+                issues.append({"testId": test.get("testId"), "assertionIndex": index, "assertion": assertion, "detail": detail})
+    return issues
+
+
 def add(checks, check_id, category, description, passed, actual, expected, evidence, method):
     checks.append({
         "checkId": check_id, "category": category, "description": description,
@@ -543,6 +852,11 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     lineage_traceability = read_json("11 Completion/FINAL_CAPABILITY_TASK_REQUIREMENT_TRACEABILITY_REPORT.json", overrides, {}) or {}
     backup_receipt = read_json("00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json", overrides, {}) or {}
     change_records = read_jsonl("04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl", overrides)
+    exact_locations = read_json("04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json", overrides, {}) or {}
+    symbol_rows = read_jsonl("04 Exact Location Registry/SYMBOL_REGISTRY.jsonl", overrides)
+    capability_evidence_rows = read_jsonl("03 Capability Map/CAPABILITY_EVIDENCE.jsonl", overrides)
+    capability_source_receipts = read_jsonl("03 Capability Map/CAPABILITY_SOURCE_SEARCH_RECEIPTS.jsonl", overrides)
+    runtime_registration_rows = read_jsonl("02 Architecture Map/RUNTIME_REGISTRATION_REGISTRY.jsonl", overrides)
     tests = read_jsonl("10 Verification/REQUIREMENT_TEST_MATRIX.jsonl", overrides)
     entrypoints = read_jsonl("06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl", overrides)
     release_matrix = read_json("10 Verification/RELEASE_GATE_MATRIX.json", overrides, {}) or {}
@@ -557,6 +871,7 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     metadata = {relative: read_json(relative, overrides, {}) or {} for relative in CURRENT_METADATA}
     test_ids = {row.get("testId") for row in tests if row.get("testId")}
     cap_info, task_info = capability_metrics(capabilities, cap_graph), task_metrics(tasks, same_wave)
+    registration_map = {row.get("registrationId"): row for row in runtime_registration_rows if row.get("registrationId")}
     cap_contracts, task_contracts = contract_metrics(capabilities, "capabilityId", test_ids), contract_metrics(tasks, "taskId", test_ids)
     derived_ownership, ownership_issues = derive_test_ownership(tests, cap_info["capabilityMap"], task_info["taskMap"])
 
@@ -1368,6 +1683,32 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     add(checks, "TEST-06", "tests", "Every test has a valid test type", not invalid_test_types, invalid_test_types, sorted(VALID_TEST_TYPES), invalid_test_types, "absolute test-type enumeration")
     add(checks, "TEST-07", "tests", "Every required acceptance-test reference exists", not unknown_acceptance_refs, unknown_acceptance_refs, [], unknown_acceptance_refs, "contract reference membership in test registry")
     add(checks, "TEST-08", "tests", "Every explicit test wave matches its independently derived owner wave", not test_wave_mismatches, test_wave_mismatches, [], test_wave_mismatches, "test field compared to task/capability owner waves")
+
+    # Source-truth and preservation-boundary checks. These apply generally to
+    # records that explicitly opt into current source-anchor or architecture-
+    # preservation semantics, without silently reinterpreting legacy records.
+    architecture_tasks = [row for row in tasks if row.get("architecturePreservationContract")]
+    anchor_issues = current_anchor_issues(exact_locations)
+    add(checks, "ARCH-01", "architecture", "Every current-authoritative literal source anchor exists, matches its line and hashes, and is compatible with its semantic type", not anchor_issues, anchor_issues, [], anchor_issues, "live source bytes, literal line binding, SHA-256, JSON parsing, and semantic-type compatibility")
+    owner_issues = [issue for task in architecture_tasks for issue in owner_path_issues(task)]
+    add(checks, "ARCH-02", "architecture", "Every architecture-preservation contract owner is allowed and is owned or explicitly referenced", bool(architecture_tasks) and not owner_issues, owner_issues, [], owner_issues, "contract-owner join against allowedPaths plus ownedPaths/referencePaths")
+    forbidden_owner_issues = [issue for task in architecture_tasks for issue in owner_forbidden_issues(task)]
+    add(checks, "ARCH-03", "architecture", "No architecture-preservation contract owner is forbidden explicitly or by a catch-all boundary", bool(architecture_tasks) and not forbidden_owner_issues, forbidden_owner_issues, [], forbidden_owner_issues, "exact/glob forbidden-path matching plus catch-all evaluation against allowedPaths")
+    build_issues = [issue for task in architecture_tasks for issue in architecture_build_issues(task)]
+    add(checks, "ARCH-04", "architecture", "Declared preservation build entries exactly equal entries derived from the live package manifests and Rspack build switch and are fully inside the task boundary", bool(architecture_tasks) and not build_issues, build_issues, [], build_issues, "source-derived package-name and createRspackHTMLTargetConfig entry parsing plus exact boundary membership")
+    generated_issues = [issue for task in architecture_tasks for issue in generated_output_issues(task)]
+    add(checks, "ARCH-05", "architecture", "Generated dist outputs are explicitly classified and never canonical exact, allowed, owned, or reference inputs", bool(architecture_tasks) and not generated_issues, generated_issues, [], generated_issues, "generated-root derivation, exact set equality, glob overlap, and forbidden-source classification")
+    assertion_issues = acceptance_assertion_issues(tests, task_info["taskMap"], cap_info["capabilityMap"], exact_locations, symbol_rows, capability_evidence_rows, capability_source_receipts, change_records, registration_map)
+    architecture_task_ids = {task.get("taskId") for task in architecture_tasks}
+    architecture_test_ids = {test.get("testId") for test in tests if architecture_task_ids & set(test.get("taskIds") or [])}
+    executable_architecture_test_ids = {test.get("testId") for test in tests if test.get("executableAssertions") and test.get("testId") in architecture_test_ids}
+    add(checks, "ARCH-06", "architecture", "Every architecture-preservation acceptance test has executable source-specific assertions and every assertion passes", bool(architecture_test_ids) and architecture_test_ids == executable_architecture_test_ids and not assertion_issues, {"missingExecutableSpecifications": sorted(architecture_test_ids - executable_architecture_test_ids), "assertionIssues": assertion_issues}, {"missingExecutableSpecifications": [], "assertionIssues": []}, sorted(architecture_test_ids - executable_architecture_test_ids) + assertion_issues, "recognized executable assertion evaluation against live source, task, exact-location, and runtime authorities")
+    runtime_issues = [issue for task in architecture_tasks for issue in runtime_registration_issues(task, registration_map)]
+    add(checks, "ARCH-07", "architecture", "Every architecture-preservation runtime registration resolves with exact source-line evidence and existing runtime entrypoints", bool(architecture_tasks) and not runtime_issues, runtime_issues, [], runtime_issues, "registration ID equality, registry join, source-line evidence comparison, and runtime-entrypoint existence")
+    composition_issues = [issue for task in architecture_tasks for issue in composition_bootstrap_issues(task)]
+    add(checks, "ARCH-08", "architecture", "Package exports, composition roots, bootstrap targets, and bootstrap consumers resolve inside the declared preservation boundary", bool(architecture_tasks) and not composition_issues, composition_issues, [], composition_issues, "package JSON equality, source existence, literal composition anchors, bootstrap import resolution, and boundary membership")
+    synthetic_symbol_issues = current_symbol_issues(cap_info["capabilityMap"], exact_locations, symbol_rows, capability_evidence_rows, capability_source_receipts, change_records)
+    add(checks, "ARCH-09", "architecture", "No current-authoritative exact-location capability retains a synthetic MR_CAP_*_CoreSymbol as an active symbol", not synthetic_symbol_issues, synthetic_symbol_issues, [], synthetic_symbol_issues, "current-symbol projections across capability, exact-location, symbol, evidence, search-receipt, and change registries")
 
     # Exact gate-test sets. Expected sets never use current requiredTestIds.
     expected_by_wave = {wave: {test_id for test_id, owner in derived_ownership.items() if owner["owningWave"] == wave} for wave in EXPECTED_WAVES}

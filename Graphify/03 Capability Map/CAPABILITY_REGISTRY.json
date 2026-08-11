@@ -23,7 +23,7 @@
     {
       "capabilityId": "MR-CAP-001",
       "name": "Application architecture",
-      "description": "affine preserve or adapt capability required by the locked MindRoom plans.",
+      "description": "Existing AFFiNE application architecture preservation boundary derived from the live package, bundler, bootstrap, composition-root, and registration graph.",
       "mandatoryCapabilityClass": "AFFINE_PRESERVE_OR_ADAPT",
       "sourceRequirementIds": [
         "MR-KEEP-001",
@@ -53,32 +53,92 @@
       "currentStatus": "MAPPED",
       "implementationStatus": "NOT_STARTED",
       "currentPaths": [
-        "Codebase/packages/frontend/core/package.json"
+        "Codebase/package.json",
+        "Codebase/packages/frontend/apps/android/package.json",
+        "Codebase/packages/frontend/apps/android/src/app.tsx",
+        "Codebase/packages/frontend/apps/android/src/index.tsx",
+        "Codebase/packages/frontend/apps/android/src/setup.ts",
+        "Codebase/packages/frontend/apps/android/tsconfig.json",
+        "Codebase/packages/frontend/apps/electron-renderer/package.json",
+        "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+        "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+        "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts",
+        "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+        "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+        "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+        "Codebase/packages/frontend/apps/electron-renderer/src/popup/setup.ts",
+        "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+        "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+        "Codebase/packages/frontend/apps/electron-renderer/src/shell/setup.ts",
+        "Codebase/packages/frontend/apps/electron-renderer/tsconfig.json",
+        "Codebase/packages/frontend/apps/ios/package.json",
+        "Codebase/packages/frontend/apps/ios/src/app.tsx",
+        "Codebase/packages/frontend/apps/ios/src/index.tsx",
+        "Codebase/packages/frontend/apps/ios/src/setup.ts",
+        "Codebase/packages/frontend/apps/ios/tsconfig.json",
+        "Codebase/packages/frontend/apps/mobile/package.json",
+        "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+        "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+        "Codebase/packages/frontend/apps/mobile/src/setup.ts",
+        "Codebase/packages/frontend/apps/mobile/tsconfig.json",
+        "Codebase/packages/frontend/apps/web/package.json",
+        "Codebase/packages/frontend/apps/web/src/app.tsx",
+        "Codebase/packages/frontend/apps/web/src/index.tsx",
+        "Codebase/packages/frontend/apps/web/src/setup.ts",
+        "Codebase/packages/frontend/apps/web/tsconfig.json",
+        "Codebase/packages/frontend/core/package.json",
+        "Codebase/packages/frontend/core/src/bootstrap/browser.ts",
+        "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts",
+        "Codebase/packages/frontend/core/src/bootstrap/electron.ts",
+        "Codebase/packages/frontend/core/tsconfig.json",
+        "Codebase/tools/cli/src/bundle.ts",
+        "Codebase/tools/utils/src/package.ts"
       ],
-      "currentSymbols": [
-        "MR_CAP_001_CoreSymbol"
-      ],
+      "currentSymbols": [],
       "runtimeRegistrations": [
-        {
-          "registrationType": "CORE_REGISTRATION",
-          "declaringPath": "Codebase/packages/frontend/core/package.json",
-          "declaringSymbol": "MR_CAP_001_CoreSymbol",
-          "lineStart": 1,
-          "lineEnd": 20,
-          "registeredIdentifier": "MR-CAP-001",
-          "implementationPaths": [
-            "Codebase/packages/frontend/core/package.json"
-          ],
-          "consumerPaths": [],
-          "evidence": [
-            "AUTHORITATIVE_CORE_IMPLEMENTATION"
-          ]
-        }
+        "MR-REG-19254409a75692172d12720d",
+        "MR-REG-1b10a6305ebb39e200f8d353",
+        "MR-REG-2bf9c1327e9c8149744e5c0f",
+        "MR-REG-372539ab1f77a6438c0a6b2b",
+        "MR-REG-3ada9327e967b275cb3fdd2b",
+        "MR-REG-5723306f6f698a0e439bba94",
+        "MR-REG-5ad8538f336751f4f5afc2a6",
+        "MR-REG-5bbfc3653aad2a4e7ad7e1f6",
+        "MR-REG-6378bf522cd994df026f0b8d",
+        "MR-REG-7aca871a979152612fea1fee",
+        "MR-REG-801ac1cf6c44830c19967cde",
+        "MR-REG-8a2facc4825f0f1682a080b8",
+        "MR-REG-8bd5bb6b19abf0db9c0d42e7",
+        "MR-REG-8e178046bb9789c3fbd9aab7",
+        "MR-REG-a1fa6ebd379f1b77bbbc0bd4",
+        "MR-REG-a66ed8e480083331f763b4ad",
+        "MR-REG-ae460af8369cdd2260233e09",
+        "MR-REG-ae9fef910e9998e1c4deefb0",
+        "MR-REG-b264d1b48f843a960384e9b7",
+        "MR-REG-b3b787d5bc5def1e6d21e44f",
+        "MR-REG-b9477c3a790a86ed0718b53b",
+        "MR-REG-be4bd5f7a25a3bae9e24cd6c",
+        "MR-REG-c57851ccf51d367ac5ffe61f",
+        "MR-REG-c78c6bd6b0e21cc9427234f3",
+        "MR-REG-cc13e3ddf7ab56a70226e872",
+        "MR-REG-cc979c9f442fa8ee65bca6bc",
+        "MR-REG-ce318d22ed72d779f6afe607",
+        "MR-REG-d34026ea14d86a1eda226b28",
+        "MR-REG-d693594df0a62d7270491077",
+        "MR-REG-e7398f1ff86cb27de47ba3c5",
+        "MR-REG-fc72d9c36ad99b8e6d9f2d6d",
+        "MR-REG-fcbdf2e51d6ac4edd15a9654",
+        "MR-REG-fd033c93693b589ebeb216aa"
       ],
       "tests": [
         {
-          "testPath": "Codebase/tests/mr-cap-001_unit_test.ts",
+          "testId": "TEST-MR-CAP-001-UNIT-001",
           "testKind": "UNIT",
+          "testStatus": "PLANNED"
+        },
+        {
+          "testId": "TEST-MR-CAP-001-INTEG-002",
+          "testKind": "INTEGRATION",
           "testStatus": "PLANNED"
         }
       ],
@@ -93,13 +153,13 @@
         "MR-CAP-076",
         "MR-CAP-100"
       ],
-      "currentOwner": "AFFiNE monorepo application composition",
-      "intendedOwner": "Retained AFFiNE/MindRoom capability owner: Application architecture",
-      "intendedFinalPath": "PLANNED_RETAIN_IN:Codebase/package.json and existing useful monorepo package boundaries",
-      "publicEntryPoint": "UNRESOLVED_PENDING_EXACT_LOCATION_AND_RUNTIME_REGISTRATION_MAPPING",
-      "sourceOfTruthBehaviour": "Retain current AFFiNE behaviour unless the plans explicitly require a file-backed or offline adaptation.",
+      "currentOwner": "AFFiNE monorepo application composition and @affine/core package boundary",
+      "intendedOwner": "Preserved existing application architecture; no new product owner or package is introduced",
+      "intendedFinalPath": "PRESERVE_EXISTING_SOURCE_DERIVED_APPLICATION_BOUNDARY",
+      "publicEntryPoint": "PACKAGE_EXPORT_AND_BUILD_ENTRY_PRESERVATION_BOUNDARY",
+      "sourceOfTruthBehaviour": "The current Codebase package manifest, Rspack switch, application entries, composition roots, bootstrap imports, and registration source lines are authoritative.",
       "requiredAdaptations": [
-        "Preserve current behaviour and useful package boundaries."
+        "None while the existing source-derived architecture boundary remains intact; execute deterministic preservation verification only."
       ],
       "prohibitedChanges": [
         "Do not claim implementation from mapping evidence.",
@@ -110,8 +170,10 @@
       "replacementCapabilityId": null,
       "affineReferenceCandidates": [],
       "verificationRequirements": [
-        "Exact location and runtime registration mapping",
-        "Scoped tests using repository-discovered commands",
+        "Literal source-anchor verification",
+        "Source-derived Rspack entry-set equality",
+        "33/33 runtime-registration resolution",
+        "Generated-output non-authority verification",
         "Independent review by a different agent"
       ],
       "riskLevel": "MEDIUM",
@@ -124,165 +186,391 @@
         "MR-EVID-CAP-001-001"
       ],
       "reviewStatus": "NOT_REVIEWED",
-      "currentLocationStatus": "AUTHORITATIVE_IMPLEMENTATION_PRESENT",
+      "currentLocationStatus": "MULTIPLE_PRESENT_SOURCE_VERIFIED",
       "currentLocationEvidence": {
-        "runId": "mindroom-graphify-forensic-finalization-20260730-150956",
+        "runId": "mindroom-mr-inv-002-change-control-20260811",
         "searchedCodebase": true,
         "matchedExistingPaths": [
           "Codebase/package.json",
-          "Codebase/packages/frontend/apps/android/src/app.tsx",
-          "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
-          "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
-          "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
-          "Codebase/packages/frontend/apps/ios/src/app.tsx",
-          "Codebase/packages/frontend/apps/mobile/src/app.tsx",
-          "Codebase/packages/frontend/apps/web/src/app.tsx",
           "Codebase/packages/frontend/apps/android/package.json",
+          "Codebase/packages/frontend/apps/android/src/app.tsx",
+          "Codebase/packages/frontend/apps/android/src/index.tsx",
+          "Codebase/packages/frontend/apps/android/src/setup.ts",
           "Codebase/packages/frontend/apps/android/tsconfig.json",
           "Codebase/packages/frontend/apps/electron-renderer/package.json",
-          "Codebase/packages/frontend/apps/electron-renderer/tsconfig.json"
+          "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts",
+          "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+          "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/popup/setup.ts",
+          "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/shell/setup.ts",
+          "Codebase/packages/frontend/apps/electron-renderer/tsconfig.json",
+          "Codebase/packages/frontend/apps/ios/package.json",
+          "Codebase/packages/frontend/apps/ios/src/app.tsx",
+          "Codebase/packages/frontend/apps/ios/src/index.tsx",
+          "Codebase/packages/frontend/apps/ios/src/setup.ts",
+          "Codebase/packages/frontend/apps/ios/tsconfig.json",
+          "Codebase/packages/frontend/apps/mobile/package.json",
+          "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+          "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+          "Codebase/packages/frontend/apps/mobile/src/setup.ts",
+          "Codebase/packages/frontend/apps/mobile/tsconfig.json",
+          "Codebase/packages/frontend/apps/web/package.json",
+          "Codebase/packages/frontend/apps/web/src/app.tsx",
+          "Codebase/packages/frontend/apps/web/src/index.tsx",
+          "Codebase/packages/frontend/apps/web/src/setup.ts",
+          "Codebase/packages/frontend/apps/web/tsconfig.json",
+          "Codebase/packages/frontend/core/package.json",
+          "Codebase/packages/frontend/core/src/bootstrap/browser.ts",
+          "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts",
+          "Codebase/packages/frontend/core/src/bootstrap/electron.ts",
+          "Codebase/packages/frontend/core/tsconfig.json",
+          "Codebase/tools/cli/src/bundle.ts",
+          "Codebase/tools/utils/src/package.ts"
         ],
-        "specialSemanticSearch": false,
-        "searchTerms": [],
+        "specialSemanticSearch": true,
+        "searchTerms": [
+          "@affine/core",
+          "createRspackHTMLTargetConfig",
+          "src/index.tsx",
+          "bootstrap/browser",
+          "bootstrap/electron"
+        ],
         "mappingBlocker": false
       },
       "currentAnchors": [
-        "Codebase/packages/frontend/core/package.json::MR_CAP_001_CoreSymbol@1-20"
+        "Codebase/packages/frontend/core/package.json::PACKAGE_MANIFEST:\"name\": \"@affine/core\"@2-2",
+        "Codebase/packages/frontend/core/package.json::PACKAGE_EXPORT_BOUNDARY:\"./*\": \"./src/*\"@7-7",
+        "Codebase/tools/cli/src/bundle.ts::BUILD_ENTRY_BOUNDARY:function getRspackBundleConfigs@96-96",
+        "Codebase/tools/utils/src/package.ts::GENERATED_OUTPUT_CLASSIFICATION:this.distPath = this.path.join('dist');@63-63",
+        "Codebase/tools/cli/src/bundle.ts::GENERATED_OUTPUT_CLASSIFICATION:rmSync(pkg.distPath.value, { recursive: true, force: true });@241-241",
+        "Codebase/packages/frontend/apps/web/src/index.tsx::BUILD_ENTRY_BOUNDARY:import './setup';@1-1",
+        "Codebase/packages/frontend/apps/mobile/src/index.tsx::BUILD_ENTRY_BOUNDARY:import './setup';@1-1",
+        "Codebase/packages/frontend/apps/ios/src/index.tsx::BUILD_ENTRY_BOUNDARY:import './setup';@1-1",
+        "Codebase/packages/frontend/apps/android/src/index.tsx::BUILD_ENTRY_BOUNDARY:import './setup';@1-1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx::BUILD_ENTRY_BOUNDARY:import './setup';@1-1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx::BUILD_ENTRY_BOUNDARY:import './setup';@1-1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx::BUILD_ENTRY_BOUNDARY:import './setup';@1-1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts::BUILD_ENTRY_BOUNDARY:import '@affine/core/bootstrap/electron';@1-1",
+        "Codebase/packages/frontend/apps/android/src/app.tsx::APPLICATION_COMPOSITION_ROOT:export function App()@471-471",
+        "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx::APPLICATION_COMPOSITION_ROOT:export function App()@42-42",
+        "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx::APPLICATION_COMPOSITION_ROOT:export function App()@23-23",
+        "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx::APPLICATION_COMPOSITION_ROOT:export function App()@29-29",
+        "Codebase/packages/frontend/apps/ios/src/app.tsx::APPLICATION_COMPOSITION_ROOT:export function App()@621-621",
+        "Codebase/packages/frontend/apps/mobile/src/app.tsx::APPLICATION_COMPOSITION_ROOT:export function App()@149-149",
+        "Codebase/packages/frontend/apps/web/src/app.tsx::APPLICATION_COMPOSITION_ROOT:export function App()@98-98",
+        "Codebase/packages/frontend/apps/web/src/setup.ts::PACKAGE_EXPORT_CONSUMER:import '@affine/core/bootstrap/browser';@1-1",
+        "Codebase/packages/frontend/apps/mobile/src/setup.ts::PACKAGE_EXPORT_CONSUMER:import '@affine/core/bootstrap/browser';@1-1",
+        "Codebase/packages/frontend/apps/ios/src/setup.ts::PACKAGE_EXPORT_CONSUMER:import '@affine/core/bootstrap/browser';@1-1",
+        "Codebase/packages/frontend/apps/android/src/setup.ts::PACKAGE_EXPORT_CONSUMER:import '@affine/core/bootstrap/browser';@1-1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts::PACKAGE_EXPORT_CONSUMER:import '@affine/core/bootstrap/electron';@1-1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/shell/setup.ts::PACKAGE_EXPORT_CONSUMER:import '@affine/core/bootstrap/electron';@1-1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/popup/setup.ts::PACKAGE_EXPORT_CONSUMER:import '@affine/core/bootstrap/electron';@1-1",
+        "Codebase/packages/frontend/core/src/bootstrap/browser.ts::PRESERVATION_ANCHOR:import './env';@2-2",
+        "Codebase/packages/frontend/core/src/bootstrap/electron.ts::PRESERVATION_ANCHOR:import './env';@2-2",
+        "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts::PRESERVATION_ANCHOR:function cleanupUnusedIndexedDB()@1-1"
       ],
       "configurationReferences": [
-        "Codebase/packages/frontend/core/package.json"
+        "Codebase/package.json",
+        "Codebase/packages/frontend/apps/android/package.json",
+        "Codebase/packages/frontend/apps/android/tsconfig.json",
+        "Codebase/packages/frontend/apps/electron-renderer/package.json",
+        "Codebase/packages/frontend/apps/electron-renderer/tsconfig.json",
+        "Codebase/packages/frontend/apps/ios/package.json",
+        "Codebase/packages/frontend/apps/ios/tsconfig.json",
+        "Codebase/packages/frontend/apps/mobile/package.json",
+        "Codebase/packages/frontend/apps/mobile/tsconfig.json",
+        "Codebase/packages/frontend/apps/web/package.json",
+        "Codebase/packages/frontend/apps/web/tsconfig.json",
+        "Codebase/packages/frontend/core/package.json",
+        "Codebase/packages/frontend/core/tsconfig.json"
       ],
-      "exactRequiredChange": "Preserve the mapped implementation and its runtime registrations while future changes remain within the locked plan boundary. Capability: Application architecture (MR-CAP-001). Current scope: Codebase/package.json, Codebase/packages/frontend/apps/android/src/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx, Codebase/packages/frontend/apps/ios/src/app.tsx, Codebase/packages/frontend/apps/mobile/src/app.tsx, Codebase/packages/frontend/apps/web/src/app.tsx. Future target: Codebase/package.json, Codebase/packages/frontend/apps/android/src/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx, Codebase/packages/frontend/apps/ios/src/app.tsx, Codebase/packages/frontend/apps/mobile/src/app.tsx, Codebase/packages/frontend/apps/web/src/app.tsx, Codebase/packages/frontend/apps/android/package.json, Codebase/packages/frontend/apps/android/tsconfig.json, Codebase/packages/frontend/apps/electron-renderer/package.json, Codebase/packages/frontend/apps/electron-renderer/tsconfig.json.",
+      "exactRequiredChange": "KEEP_EXISTING preservation/verification only: prove the source-derived application architecture boundary remains intact; no Codebase rewrite is currently required.",
       "locationMappingRunId": "graphify-v2-repair-20260728T095646",
       "locationReviewStatus": "PENDING_INDEPENDENT_REVIEW",
-      "exactSymbols": [
-        {
-          "path": "Codebase/packages/frontend/core/package.json",
-          "qualifiedName": "MR_CAP_001_CoreSymbol",
-          "symbolKind": "interface",
-          "lineStart": 1,
-          "lineEnd": 20,
-          "uniqueAnchor": "export interface MR_CAP_001_CoreSymbol",
-          "anchorSha256": "63a11e50d3d85ef4f5eb67df232a5126853bd07503a5c19ec016951910aadada",
-          "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
-          "evidenceClassification": "AUTHORITATIVE_CORE_IMPLEMENTATION",
-          "reasonRelevant": "Core retained capability MR-CAP-001 symbol."
-        }
-      ],
+      "exactSymbols": [],
       "exactAnchors": [
-        "Codebase/packages/frontend/core/package.json::MR_CAP_001_CoreSymbol@1-20"
+        "Codebase/packages/frontend/core/package.json::PACKAGE_MANIFEST:\"name\": \"@affine/core\"@2-2",
+        "Codebase/packages/frontend/core/package.json::PACKAGE_EXPORT_BOUNDARY:\"./*\": \"./src/*\"@7-7",
+        "Codebase/tools/cli/src/bundle.ts::BUILD_ENTRY_BOUNDARY:function getRspackBundleConfigs@96-96",
+        "Codebase/tools/utils/src/package.ts::GENERATED_OUTPUT_CLASSIFICATION:this.distPath = this.path.join('dist');@63-63",
+        "Codebase/tools/cli/src/bundle.ts::GENERATED_OUTPUT_CLASSIFICATION:rmSync(pkg.distPath.value, { recursive: true, force: true });@241-241",
+        "Codebase/packages/frontend/apps/web/src/index.tsx::BUILD_ENTRY_BOUNDARY:import './setup';@1-1",
+        "Codebase/packages/frontend/apps/mobile/src/index.tsx::BUILD_ENTRY_BOUNDARY:import './setup';@1-1",
+        "Codebase/packages/frontend/apps/ios/src/index.tsx::BUILD_ENTRY_BOUNDARY:import './setup';@1-1",
+        "Codebase/packages/frontend/apps/android/src/index.tsx::BUILD_ENTRY_BOUNDARY:import './setup';@1-1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx::BUILD_ENTRY_BOUNDARY:import './setup';@1-1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx::BUILD_ENTRY_BOUNDARY:import './setup';@1-1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx::BUILD_ENTRY_BOUNDARY:import './setup';@1-1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts::BUILD_ENTRY_BOUNDARY:import '@affine/core/bootstrap/electron';@1-1",
+        "Codebase/packages/frontend/apps/android/src/app.tsx::APPLICATION_COMPOSITION_ROOT:export function App()@471-471",
+        "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx::APPLICATION_COMPOSITION_ROOT:export function App()@42-42",
+        "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx::APPLICATION_COMPOSITION_ROOT:export function App()@23-23",
+        "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx::APPLICATION_COMPOSITION_ROOT:export function App()@29-29",
+        "Codebase/packages/frontend/apps/ios/src/app.tsx::APPLICATION_COMPOSITION_ROOT:export function App()@621-621",
+        "Codebase/packages/frontend/apps/mobile/src/app.tsx::APPLICATION_COMPOSITION_ROOT:export function App()@149-149",
+        "Codebase/packages/frontend/apps/web/src/app.tsx::APPLICATION_COMPOSITION_ROOT:export function App()@98-98",
+        "Codebase/packages/frontend/apps/web/src/setup.ts::PACKAGE_EXPORT_CONSUMER:import '@affine/core/bootstrap/browser';@1-1",
+        "Codebase/packages/frontend/apps/mobile/src/setup.ts::PACKAGE_EXPORT_CONSUMER:import '@affine/core/bootstrap/browser';@1-1",
+        "Codebase/packages/frontend/apps/ios/src/setup.ts::PACKAGE_EXPORT_CONSUMER:import '@affine/core/bootstrap/browser';@1-1",
+        "Codebase/packages/frontend/apps/android/src/setup.ts::PACKAGE_EXPORT_CONSUMER:import '@affine/core/bootstrap/browser';@1-1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts::PACKAGE_EXPORT_CONSUMER:import '@affine/core/bootstrap/electron';@1-1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/shell/setup.ts::PACKAGE_EXPORT_CONSUMER:import '@affine/core/bootstrap/electron';@1-1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/popup/setup.ts::PACKAGE_EXPORT_CONSUMER:import '@affine/core/bootstrap/electron';@1-1",
+        "Codebase/packages/frontend/core/src/bootstrap/browser.ts::PRESERVATION_ANCHOR:import './env';@2-2",
+        "Codebase/packages/frontend/core/src/bootstrap/electron.ts::PRESERVATION_ANCHOR:import './env';@2-2",
+        "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts::PRESERVATION_ANCHOR:function cleanupUnusedIndexedDB()@1-1"
       ],
       "sourceSpans": [
-        "Codebase/packages/frontend/core/package.json#L1-L20"
+        "Codebase/packages/frontend/core/package.json#L2-L2",
+        "Codebase/packages/frontend/core/package.json#L7-L7",
+        "Codebase/tools/cli/src/bundle.ts#L96-L96",
+        "Codebase/tools/utils/src/package.ts#L63-L63",
+        "Codebase/tools/cli/src/bundle.ts#L241-L241",
+        "Codebase/packages/frontend/apps/web/src/index.tsx#L1-L1",
+        "Codebase/packages/frontend/apps/mobile/src/index.tsx#L1-L1",
+        "Codebase/packages/frontend/apps/ios/src/index.tsx#L1-L1",
+        "Codebase/packages/frontend/apps/android/src/index.tsx#L1-L1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx#L1-L1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx#L1-L1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx#L1-L1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts#L1-L1",
+        "Codebase/packages/frontend/apps/android/src/app.tsx#L471-L471",
+        "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx#L42-L42",
+        "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx#L23-L23",
+        "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx#L29-L29",
+        "Codebase/packages/frontend/apps/ios/src/app.tsx#L621-L621",
+        "Codebase/packages/frontend/apps/mobile/src/app.tsx#L149-L149",
+        "Codebase/packages/frontend/apps/web/src/app.tsx#L98-L98",
+        "Codebase/packages/frontend/apps/web/src/setup.ts#L1-L1",
+        "Codebase/packages/frontend/apps/mobile/src/setup.ts#L1-L1",
+        "Codebase/packages/frontend/apps/ios/src/setup.ts#L1-L1",
+        "Codebase/packages/frontend/apps/android/src/setup.ts#L1-L1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts#L1-L1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/shell/setup.ts#L1-L1",
+        "Codebase/packages/frontend/apps/electron-renderer/src/popup/setup.ts#L1-L1",
+        "Codebase/packages/frontend/core/src/bootstrap/browser.ts#L2-L2",
+        "Codebase/packages/frontend/core/src/bootstrap/electron.ts#L2-L2",
+        "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts#L1-L1"
       ],
       "exportedEntrypoints": [
-        "MR_CAP_001_CoreSymbol"
+        "@affine/core/*",
+        "Codebase/packages/frontend/apps/web/src/index.tsx",
+        "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+        "Codebase/packages/frontend/apps/ios/src/index.tsx",
+        "Codebase/packages/frontend/apps/android/src/index.tsx",
+        "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+        "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+        "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+        "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts"
       ],
-      "storageBoundaries": [
-        "Codebase/packages/frontend/core/package.json"
-      ],
+      "storageBoundaries": [],
       "importExportBoundaries": [
-        "Codebase/packages/frontend/core/package.json"
+        "Codebase/packages/frontend/core/package.json",
+        "Codebase/packages/frontend/apps/web/src/setup.ts",
+        "Codebase/packages/frontend/apps/mobile/src/setup.ts",
+        "Codebase/packages/frontend/apps/ios/src/setup.ts",
+        "Codebase/packages/frontend/apps/android/src/setup.ts",
+        "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts",
+        "Codebase/packages/frontend/apps/electron-renderer/src/shell/setup.ts",
+        "Codebase/packages/frontend/apps/electron-renderer/src/popup/setup.ts",
+        "Codebase/packages/frontend/core/src/bootstrap/browser.ts",
+        "Codebase/packages/frontend/core/src/bootstrap/electron.ts",
+        "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts"
       ],
       "evidenceClassifications": [
-        "AUTHORITATIVE_CORE_IMPLEMENTATION"
+        "SOURCE_DERIVED_ARCHITECTURE_PRESERVATION"
       ],
       "plannedTargetPaths": [
-        "Codebase/packages/frontend/core/package.json"
+        "Codebase/package.json",
+        "Codebase/packages/frontend/apps/android/package.json",
+        "Codebase/packages/frontend/apps/android/src/app.tsx",
+        "Codebase/packages/frontend/apps/android/src/index.tsx",
+        "Codebase/packages/frontend/apps/android/src/setup.ts",
+        "Codebase/packages/frontend/apps/android/tsconfig.json",
+        "Codebase/packages/frontend/apps/electron-renderer/package.json",
+        "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+        "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+        "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts",
+        "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+        "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+        "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+        "Codebase/packages/frontend/apps/electron-renderer/src/popup/setup.ts",
+        "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+        "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+        "Codebase/packages/frontend/apps/electron-renderer/src/shell/setup.ts",
+        "Codebase/packages/frontend/apps/electron-renderer/tsconfig.json",
+        "Codebase/packages/frontend/apps/ios/package.json",
+        "Codebase/packages/frontend/apps/ios/src/app.tsx",
+        "Codebase/packages/frontend/apps/ios/src/index.tsx",
+        "Codebase/packages/frontend/apps/ios/src/setup.ts",
+        "Codebase/packages/frontend/apps/ios/tsconfig.json",
+        "Codebase/packages/frontend/apps/mobile/package.json",
+        "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+        "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+        "Codebase/packages/frontend/apps/mobile/src/setup.ts",
+        "Codebase/packages/frontend/apps/mobile/tsconfig.json",
+        "Codebase/packages/frontend/apps/web/package.json",
+        "Codebase/packages/frontend/apps/web/src/app.tsx",
+        "Codebase/packages/frontend/apps/web/src/index.tsx",
+        "Codebase/packages/frontend/apps/web/src/setup.ts",
+        "Codebase/packages/frontend/apps/web/tsconfig.json",
+        "Codebase/packages/frontend/core/package.json",
+        "Codebase/packages/frontend/core/src/bootstrap/browser.ts",
+        "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts",
+        "Codebase/packages/frontend/core/src/bootstrap/electron.ts",
+        "Codebase/packages/frontend/core/tsconfig.json",
+        "Codebase/tools/cli/src/bundle.ts",
+        "Codebase/tools/utils/src/package.ts"
       ],
       "contract": {
         "capabilityId": "MR-CAP-001",
         "taskId": "MR-IMPL-001",
         "releaseWave": "WAVE_0",
-        "purpose": "Preserve the mapped implementation and its runtime registrations while future changes remain within the locked plan boundary. Capability: Application architecture (MR-CAP-001). Current scope: Codebase/package.json, Codebase/packages/frontend/apps/android/src/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx, Codebase/packages/frontend/apps/ios/src/app.tsx, Codebase/packages/frontend/apps/mobile/src/app.tsx, Codebase/packages/frontend/apps/web/src/app.tsx. Future target: Codebase/package.json, Codebase/packages/frontend/apps/android/src/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx, Codebase/packages/frontend/apps/ios/src/app.tsx, Codebase/packages/frontend/apps/mobile/src/app.tsx, Codebase/packages/frontend/apps/web/src/app.tsx, Codebase/packages/frontend/apps/android/package.json, Codebase/packages/frontend/apps/android/tsconfig.json, Codebase/packages/frontend/apps/electron-renderer/package.json, Codebase/packages/frontend/apps/electron-renderer/tsconfig.json.",
+        "purpose": "Verify and preserve the existing @affine/core package/export boundary, source-derived Rspack application entries, platform composition roots, bootstrap connections, and 33 runtime registrations. No application source rewrite is required.",
         "scope": {
           "included": [
+            "Codebase/package.json",
+            "Codebase/packages/frontend/apps/android/package.json",
+            "Codebase/packages/frontend/apps/android/src/app.tsx",
+            "Codebase/packages/frontend/apps/android/src/index.tsx",
+            "Codebase/packages/frontend/apps/android/src/setup.ts",
+            "Codebase/packages/frontend/apps/android/tsconfig.json",
+            "Codebase/packages/frontend/apps/electron-renderer/package.json",
+            "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts",
+            "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+            "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/popup/setup.ts",
+            "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/shell/setup.ts",
+            "Codebase/packages/frontend/apps/electron-renderer/tsconfig.json",
+            "Codebase/packages/frontend/apps/ios/package.json",
+            "Codebase/packages/frontend/apps/ios/src/app.tsx",
+            "Codebase/packages/frontend/apps/ios/src/index.tsx",
+            "Codebase/packages/frontend/apps/ios/src/setup.ts",
+            "Codebase/packages/frontend/apps/ios/tsconfig.json",
+            "Codebase/packages/frontend/apps/mobile/package.json",
+            "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+            "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+            "Codebase/packages/frontend/apps/mobile/src/setup.ts",
+            "Codebase/packages/frontend/apps/mobile/tsconfig.json",
+            "Codebase/packages/frontend/apps/web/package.json",
+            "Codebase/packages/frontend/apps/web/src/app.tsx",
+            "Codebase/packages/frontend/apps/web/src/index.tsx",
+            "Codebase/packages/frontend/apps/web/src/setup.ts",
+            "Codebase/packages/frontend/apps/web/tsconfig.json",
             "Codebase/packages/frontend/core/package.json",
-            "Preserve current behaviour and useful package boundaries."
+            "Codebase/packages/frontend/core/src/bootstrap/browser.ts",
+            "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts",
+            "Codebase/packages/frontend/core/src/bootstrap/electron.ts",
+            "Codebase/packages/frontend/core/tsconfig.json",
+            "Codebase/tools/cli/src/bundle.ts",
+            "Codebase/tools/utils/src/package.ts"
           ],
           "excluded": [
-            "Do not claim implementation from mapping evidence.",
-            "Do not mutate Codebase during the Graphify-only phase.",
-            "Do not rewrite a coherent AFFiNE implementation merely for originality or repository aesthetics."
+            "Codebase/packages/frontend/core/dist/**",
+            "Codebase/packages/frontend/apps/web/dist/**",
+            "Codebase/packages/frontend/apps/mobile/dist/**",
+            "Codebase/packages/frontend/apps/ios/dist/**",
+            "Codebase/packages/frontend/apps/android/dist/**",
+            "Codebase/packages/frontend/apps/electron-renderer/dist/**",
+            "Graphify/Master Plan/**",
+            "User data outside this workspace"
           ]
         },
         "ownedPackageOrModule": "Codebase/packages/frontend/core/package.json",
-        "runtimeOwner": "RENDERER",
+        "runtimeOwner": "RENDERER_AND_BUILD_ENTRY_CONFIGURATION",
         "publicOperations": [
-          "composeApplicationShell",
-          "resolvePlatformEntrypoint",
-          "validatePackageBoundary"
+          "verifyCorePackageExportBoundary",
+          "deriveRspackApplicationEntrypoints",
+          "verifyPlatformCompositionRoots"
         ],
         "domainModels": [
           {
-            "model": "ApplicationarchitectureState",
+            "model": "ApplicationArchitectureBoundary",
             "requiredFields": [
-              "entrypoint",
-              "runtimeBoundary",
-              "registeredModules",
-              "schemaVersion"
+              "packageManifest",
+              "buildEntrypoints",
+              "compositionRoots",
+              "runtimeRegistrations",
+              "generatedOutputs"
             ]
           }
         ],
         "persistentState": [
           {
-            "authoritativeStorage": "Mapped local files",
+            "authoritativeStorage": "NONE_ARCHITECTURE_PRESERVATION_ONLY",
             "fileOwnership": [
+              "Codebase/packages/frontend/apps/android/src/app.tsx",
+              "Codebase/packages/frontend/apps/android/src/index.tsx",
+              "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+              "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+              "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+              "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+              "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+              "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+              "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+              "Codebase/packages/frontend/apps/ios/src/app.tsx",
+              "Codebase/packages/frontend/apps/ios/src/index.tsx",
+              "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+              "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+              "Codebase/packages/frontend/apps/web/src/app.tsx",
+              "Codebase/packages/frontend/apps/web/src/index.tsx",
               "Codebase/packages/frontend/core/package.json"
             ],
-            "atomicWriteRequirement": true,
-            "appDeletionSurvival": "MUST_SURVIVE_IN_USER_OWNED_FILES"
+            "atomicWriteRequirement": false,
+            "appDeletionSurvival": "NOT_APPLICABLE"
           }
         ],
         "inputs": [
           {
-            "name": "composeApplicationShellInput",
-            "validation": "schema, stable-ID, ownership, and path-boundary validation"
+            "name": "CorePackageManifest",
+            "validation": "JSON package identity and required export mapping"
           },
           {
-            "name": "resolvePlatformEntrypointInput",
-            "validation": "schema, stable-ID, ownership, and path-boundary validation"
+            "name": "RspackBundleTopology",
+            "validation": "derive configured HTML entry sources from the live bundle switch"
           },
           {
-            "name": "validatePackageBoundaryInput",
-            "validation": "schema, stable-ID, ownership, and path-boundary validation"
+            "name": "ApplicationCompositionSources",
+            "validation": "literal source anchors and runtime-registration evidence"
           }
         ],
         "outputs": [
           {
-            "name": "composeApplicationShellResult",
-            "guarantee": "typed result or explicit recoverable failure; no partial authoritative write"
-          },
-          {
-            "name": "resolvePlatformEntrypointResult",
-            "guarantee": "typed result or explicit recoverable failure; no partial authoritative write"
-          },
-          {
-            "name": "validatePackageBoundaryResult",
-            "guarantee": "typed result or explicit recoverable failure; no partial authoritative write"
+            "name": "ArchitecturePreservationReceipt",
+            "guarantee": "zero-mutation proof that declared entries, roots, bootstrap connections, and registrations equal live source"
           }
         ],
         "invariants": [
-          "Application architecture preserves the mapped AFFiNE behavior and stable public boundary required by the Master Plans.",
-          "Application architecture remains offline-capable and does not introduce cloud identity, telemetry, billing, or remote-AI dependencies."
+          "The @affine/core manifest owner is inside the task's exact, allowed, and owned path boundary.",
+          "The declared build entry set exactly equals the entry set derived from the live Rspack bundle topology for the five preserved application packages.",
+          "Generated dist output is disposable build output and never canonical architecture source.",
+          "MR-IMPL-001 remains KEEP_EXISTING and performs no application rewrite while the preserved boundary is intact."
         ],
         "failureModes": [
-          "Application architecture input fails schema, identity, or integrity validation.",
-          "Application architecture persistence, runtime registration, or recovery cannot complete without risking partial state."
+          "A required package/export, entry source, composition root, bootstrap target, or runtime registration cannot resolve.",
+          "The owner is excluded or forbidden, a source-derived entry is omitted, or generated output is classified as canonical input."
         ],
         "recoveryBehavior": [
-          "Rollback partial writes, quarantine corrupt input, restore backup, and rebuild derived state."
+          "Block Wave 0, preserve Codebase unchanged, and repair only the contradictory planning authority under explicit change control."
         ],
         "offlineBehavior": [
-          "All core operations remain available without network access; optional adapters degrade to local-only behavior."
+          "All preservation checks inspect local source and configuration without network-dependent product behavior."
         ],
         "securityAndPrivacyConstraints": [
-          "Single-user local scope; no telemetry, billing, cloud identity, or remote AI dependency.",
-          "Privileged filesystem and credential operations stay outside the renderer trust boundary."
+          "The verification task reads repository source only and writes no user or application state."
         ],
         "crossPlatformConstraints": [
-          "Use portable relative paths and atomic-replace semantics on Windows, macOS, and Linux.",
-          "Preserve stable IDs, Unicode names, timezone values, and file contents across platforms."
+          "Normalize repository-relative paths with forward slashes and compare case-safely on Windows while preserving exact source spelling."
         ],
         "dependencies": [],
         "acceptanceTests": [
@@ -292,101 +580,632 @@
         ],
         "blockingGates": [
           "GATE-WAVE_0"
-        ]
+        ],
+        "architecturePreservationContract": {
+          "authorityStatus": "CURRENT_AUTHORITATIVE",
+          "decision": "KEEP_EXISTING",
+          "authorityTypes": [
+            "PACKAGE_MANIFEST",
+            "PACKAGE_EXPORT_BOUNDARY",
+            "BUILD_ENTRY_BOUNDARY",
+            "APPLICATION_COMPOSITION_ROOT",
+            "PRESERVATION_ANCHOR"
+          ],
+          "contractOwner": "Codebase/packages/frontend/core/package.json",
+          "packageManifest": {
+            "path": "Codebase/packages/frontend/core/package.json",
+            "packageName": "@affine/core",
+            "requiredExports": [
+              {
+                "key": "./*",
+                "target": "./src/*",
+                "status": "ACTIVE_PATTERN"
+              }
+            ],
+            "declaredNonRequiredExports": [
+              {
+                "key": "./bootstrap",
+                "target": "./src/bootstrap/index.ts",
+                "targetExists": false,
+                "activeExactImports": 0,
+                "classification": "DECLARED_UNUSED_TARGET_NOT_REQUIRED_BY_ACTIVE_ENTRY_GRAPH"
+              }
+            ]
+          },
+          "buildTopologySource": "Codebase/tools/cli/src/bundle.ts",
+          "buildPackages": [
+            {
+              "packageName": "@affine/web",
+              "packageRoot": "Codebase/packages/frontend/apps/web"
+            },
+            {
+              "packageName": "@affine/mobile",
+              "packageRoot": "Codebase/packages/frontend/apps/mobile"
+            },
+            {
+              "packageName": "@affine/ios",
+              "packageRoot": "Codebase/packages/frontend/apps/ios"
+            },
+            {
+              "packageName": "@affine/android",
+              "packageRoot": "Codebase/packages/frontend/apps/android"
+            },
+            {
+              "packageName": "@affine/electron-renderer",
+              "packageRoot": "Codebase/packages/frontend/apps/electron-renderer"
+            }
+          ],
+          "buildEntryPaths": [
+            "Codebase/packages/frontend/apps/web/src/index.tsx",
+            "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+            "Codebase/packages/frontend/apps/ios/src/index.tsx",
+            "Codebase/packages/frontend/apps/android/src/index.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts"
+          ],
+          "compositionRoots": [
+            "Codebase/packages/frontend/apps/android/src/app.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+            "Codebase/packages/frontend/apps/ios/src/app.tsx",
+            "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+            "Codebase/packages/frontend/apps/web/src/app.tsx"
+          ],
+          "bootstrapTargets": [
+            "Codebase/packages/frontend/core/src/bootstrap/browser.ts",
+            "Codebase/packages/frontend/core/src/bootstrap/electron.ts",
+            "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts"
+          ],
+          "bootstrapConsumerPaths": [
+            "Codebase/packages/frontend/apps/web/src/setup.ts",
+            "Codebase/packages/frontend/apps/mobile/src/setup.ts",
+            "Codebase/packages/frontend/apps/ios/src/setup.ts",
+            "Codebase/packages/frontend/apps/android/src/setup.ts",
+            "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts",
+            "Codebase/packages/frontend/apps/electron-renderer/src/shell/setup.ts",
+            "Codebase/packages/frontend/apps/electron-renderer/src/popup/setup.ts"
+          ],
+          "workerRegistrationPaths": [
+            "Codebase/packages/frontend/apps/android/src/app.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+            "Codebase/packages/frontend/apps/ios/src/app.tsx",
+            "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+            "Codebase/packages/frontend/apps/web/src/app.tsx"
+          ],
+          "runtimeRegistrationIds": [
+            "MR-REG-19254409a75692172d12720d",
+            "MR-REG-1b10a6305ebb39e200f8d353",
+            "MR-REG-2bf9c1327e9c8149744e5c0f",
+            "MR-REG-372539ab1f77a6438c0a6b2b",
+            "MR-REG-3ada9327e967b275cb3fdd2b",
+            "MR-REG-5723306f6f698a0e439bba94",
+            "MR-REG-5ad8538f336751f4f5afc2a6",
+            "MR-REG-5bbfc3653aad2a4e7ad7e1f6",
+            "MR-REG-6378bf522cd994df026f0b8d",
+            "MR-REG-7aca871a979152612fea1fee",
+            "MR-REG-801ac1cf6c44830c19967cde",
+            "MR-REG-8a2facc4825f0f1682a080b8",
+            "MR-REG-8bd5bb6b19abf0db9c0d42e7",
+            "MR-REG-8e178046bb9789c3fbd9aab7",
+            "MR-REG-a1fa6ebd379f1b77bbbc0bd4",
+            "MR-REG-a66ed8e480083331f763b4ad",
+            "MR-REG-ae460af8369cdd2260233e09",
+            "MR-REG-ae9fef910e9998e1c4deefb0",
+            "MR-REG-b264d1b48f843a960384e9b7",
+            "MR-REG-b3b787d5bc5def1e6d21e44f",
+            "MR-REG-b9477c3a790a86ed0718b53b",
+            "MR-REG-be4bd5f7a25a3bae9e24cd6c",
+            "MR-REG-c57851ccf51d367ac5ffe61f",
+            "MR-REG-c78c6bd6b0e21cc9427234f3",
+            "MR-REG-cc13e3ddf7ab56a70226e872",
+            "MR-REG-cc979c9f442fa8ee65bca6bc",
+            "MR-REG-ce318d22ed72d779f6afe607",
+            "MR-REG-d34026ea14d86a1eda226b28",
+            "MR-REG-d693594df0a62d7270491077",
+            "MR-REG-e7398f1ff86cb27de47ba3c5",
+            "MR-REG-fc72d9c36ad99b8e6d9f2d6d",
+            "MR-REG-fcbdf2e51d6ac4edd15a9654",
+            "MR-REG-fd033c93693b589ebeb216aa"
+          ],
+          "generatedOutputRoots": [
+            "Codebase/packages/frontend/core",
+            "Codebase/packages/frontend/apps/web",
+            "Codebase/packages/frontend/apps/mobile",
+            "Codebase/packages/frontend/apps/ios",
+            "Codebase/packages/frontend/apps/android",
+            "Codebase/packages/frontend/apps/electron-renderer"
+          ],
+          "generatedPaths": [
+            "Codebase/packages/frontend/core/dist/**",
+            "Codebase/packages/frontend/apps/web/dist/**",
+            "Codebase/packages/frontend/apps/mobile/dist/**",
+            "Codebase/packages/frontend/apps/ios/dist/**",
+            "Codebase/packages/frontend/apps/android/dist/**",
+            "Codebase/packages/frontend/apps/electron-renderer/dist/**"
+          ],
+          "sourceAnchors": [
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-001",
+              "semanticType": "PACKAGE_MANIFEST",
+              "path": "Codebase/packages/frontend/core/package.json",
+              "literal": "\"name\": \"@affine/core\"",
+              "lineStart": 2,
+              "lineEnd": 2,
+              "literalSha256": "147c97c1d17545da09ce9e5293014d8ecbb0fa4d080ec91e0adf827e6862890c",
+              "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-002",
+              "semanticType": "PACKAGE_EXPORT_BOUNDARY",
+              "path": "Codebase/packages/frontend/core/package.json",
+              "literal": "\"./*\": \"./src/*\"",
+              "lineStart": 7,
+              "lineEnd": 7,
+              "literalSha256": "7e99f344b4b71f438e8fdbecd3a4528ab829ad21f7835a1daff05ebefb4490a4",
+              "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-003",
+              "semanticType": "BUILD_ENTRY_BOUNDARY",
+              "path": "Codebase/tools/cli/src/bundle.ts",
+              "literal": "function getRspackBundleConfigs",
+              "lineStart": 96,
+              "lineEnd": 96,
+              "literalSha256": "c4e3320e5cf194255932b01d40cdbff1a4e31fa70208fca672310532ee612af0",
+              "fileSha256": "2fa9bfce758f511e35a1e3a58cf08ac3304b8936a38cbdc2e357194596e79f25",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-004",
+              "semanticType": "GENERATED_OUTPUT_CLASSIFICATION",
+              "path": "Codebase/tools/utils/src/package.ts",
+              "literal": "this.distPath = this.path.join('dist');",
+              "lineStart": 63,
+              "lineEnd": 63,
+              "literalSha256": "61b3c6f1e5d38f828900ff0499db466873a02007db6a45f1ae2abee139da2f7d",
+              "fileSha256": "6ab82fc286ebb0b9096b56f717692e373c05382934ff37cb1d03a215b943043d",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-005",
+              "semanticType": "GENERATED_OUTPUT_CLASSIFICATION",
+              "path": "Codebase/tools/cli/src/bundle.ts",
+              "literal": "rmSync(pkg.distPath.value, { recursive: true, force: true });",
+              "lineStart": 241,
+              "lineEnd": 241,
+              "literalSha256": "409ea4f82929dfa183b986bcff53cdff64a8428b4f145d3e117ca492d222f4e2",
+              "fileSha256": "2fa9bfce758f511e35a1e3a58cf08ac3304b8936a38cbdc2e357194596e79f25",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-006",
+              "semanticType": "BUILD_ENTRY_BOUNDARY",
+              "path": "Codebase/packages/frontend/apps/web/src/index.tsx",
+              "literal": "import './setup';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+              "fileSha256": "ace669a269a351ff63adc3cf1650662e93d03e4581032ec122d40bf0328fec04",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-007",
+              "semanticType": "BUILD_ENTRY_BOUNDARY",
+              "path": "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+              "literal": "import './setup';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+              "fileSha256": "3bcde91033c79ba81090d382e3c89f3920514ac34da931edcc28a96ce664c3d1",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-008",
+              "semanticType": "BUILD_ENTRY_BOUNDARY",
+              "path": "Codebase/packages/frontend/apps/ios/src/index.tsx",
+              "literal": "import './setup';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+              "fileSha256": "4e095c89d2e18012cceea9dfacb05f8b73e5af87f7d51ed2fed2359a1ef7d22f",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-009",
+              "semanticType": "BUILD_ENTRY_BOUNDARY",
+              "path": "Codebase/packages/frontend/apps/android/src/index.tsx",
+              "literal": "import './setup';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+              "fileSha256": "b4bc9351e115da5be308b8065dd8f6272445a36ebbf2c9f89036039d081b64af",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-010",
+              "semanticType": "BUILD_ENTRY_BOUNDARY",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+              "literal": "import './setup';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+              "fileSha256": "ca84f194209397b78fc5601e71d98c23c0b570e3392ae127ac0af5ed7148b425",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-011",
+              "semanticType": "BUILD_ENTRY_BOUNDARY",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+              "literal": "import './setup';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+              "fileSha256": "f745ee16838af266b2a7fadb7ff4b06e70ba78a7d5367bf73d3ef33f8bd878bf",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-012",
+              "semanticType": "BUILD_ENTRY_BOUNDARY",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+              "literal": "import './setup';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+              "fileSha256": "6c5c9a61c8b9dac7bb9c91ce811b982f4e617bcaaf0be125fba703d7f007b8e8",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-013",
+              "semanticType": "BUILD_ENTRY_BOUNDARY",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+              "literal": "import '@affine/core/bootstrap/electron';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "50c6292bc7a4697fbf45cb7e0027a82b55d99b9519493fe30a4798961db4f8f4",
+              "fileSha256": "0ffbbaf0b3b556a7fcfb2b565e26734389d2574c978b7d8c5df9e9eaab28d562",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-014",
+              "semanticType": "APPLICATION_COMPOSITION_ROOT",
+              "path": "Codebase/packages/frontend/apps/android/src/app.tsx",
+              "literal": "export function App()",
+              "lineStart": 471,
+              "lineEnd": 471,
+              "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+              "fileSha256": "21aa38c14c96df89e3a435cedcf079cb52bad410da64c5044c47ddc1a6e71e5a",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-015",
+              "semanticType": "APPLICATION_COMPOSITION_ROOT",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+              "literal": "export function App()",
+              "lineStart": 42,
+              "lineEnd": 42,
+              "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+              "fileSha256": "c0b348f75bb550a3f6018f2667a135896992ba52794c399d39e203f2575157dd",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-016",
+              "semanticType": "APPLICATION_COMPOSITION_ROOT",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+              "literal": "export function App()",
+              "lineStart": 23,
+              "lineEnd": 23,
+              "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+              "fileSha256": "ce42201da73a61dd4c1db09cc98490b0d3251ddd1885a90fa998975a50635571",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-017",
+              "semanticType": "APPLICATION_COMPOSITION_ROOT",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+              "literal": "export function App()",
+              "lineStart": 29,
+              "lineEnd": 29,
+              "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+              "fileSha256": "181ea92e0ea7628782edd6017c27a9889ec5ad84b928e76511cb4ffb85fa2b39",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-018",
+              "semanticType": "APPLICATION_COMPOSITION_ROOT",
+              "path": "Codebase/packages/frontend/apps/ios/src/app.tsx",
+              "literal": "export function App()",
+              "lineStart": 621,
+              "lineEnd": 621,
+              "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+              "fileSha256": "39e5f335ef568ab3a644d807ad967168a9e58c685f3302bba3e234a321f42475",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-019",
+              "semanticType": "APPLICATION_COMPOSITION_ROOT",
+              "path": "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+              "literal": "export function App()",
+              "lineStart": 149,
+              "lineEnd": 149,
+              "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+              "fileSha256": "b59b37dad1390304f667d3ce19e3cfd2d071a9fe74f60a688b2b575ae0535cdb",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-020",
+              "semanticType": "APPLICATION_COMPOSITION_ROOT",
+              "path": "Codebase/packages/frontend/apps/web/src/app.tsx",
+              "literal": "export function App()",
+              "lineStart": 98,
+              "lineEnd": 98,
+              "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+              "fileSha256": "c8d4a30481ab50ed1883c1a0da36cb1851e267da997a1b5caa91c056bc8577c0",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-021",
+              "semanticType": "PACKAGE_EXPORT_CONSUMER",
+              "path": "Codebase/packages/frontend/apps/web/src/setup.ts",
+              "literal": "import '@affine/core/bootstrap/browser';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "ad034d449a43339a72bb7a5fb2e4c8cfe9b6d5b72c96687966671b6479663a92",
+              "fileSha256": "263bf93b066ba290b7a1909a14922df8df238dd6f485200aab1d258a44bbe179",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-022",
+              "semanticType": "PACKAGE_EXPORT_CONSUMER",
+              "path": "Codebase/packages/frontend/apps/mobile/src/setup.ts",
+              "literal": "import '@affine/core/bootstrap/browser';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "ad034d449a43339a72bb7a5fb2e4c8cfe9b6d5b72c96687966671b6479663a92",
+              "fileSha256": "c64d850c672ebd94e7911e8e637aeb7e6d80dbb61b6aef72a9c9dff9f222fc66",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-023",
+              "semanticType": "PACKAGE_EXPORT_CONSUMER",
+              "path": "Codebase/packages/frontend/apps/ios/src/setup.ts",
+              "literal": "import '@affine/core/bootstrap/browser';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "ad034d449a43339a72bb7a5fb2e4c8cfe9b6d5b72c96687966671b6479663a92",
+              "fileSha256": "8e36e75656e89fe34acd978981eb102314cc44736669d7f874142d88c7910b6b",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-024",
+              "semanticType": "PACKAGE_EXPORT_CONSUMER",
+              "path": "Codebase/packages/frontend/apps/android/src/setup.ts",
+              "literal": "import '@affine/core/bootstrap/browser';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "ad034d449a43339a72bb7a5fb2e4c8cfe9b6d5b72c96687966671b6479663a92",
+              "fileSha256": "1b27e4c6dede97af083c6de4eee7da182226c3acf7216023a76cc26fb7479d85",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-025",
+              "semanticType": "PACKAGE_EXPORT_CONSUMER",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts",
+              "literal": "import '@affine/core/bootstrap/electron';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "50c6292bc7a4697fbf45cb7e0027a82b55d99b9519493fe30a4798961db4f8f4",
+              "fileSha256": "de121a1e96b8450d0309cd72b1d8def9e69d714d5d696858b08b934ca0974793",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-026",
+              "semanticType": "PACKAGE_EXPORT_CONSUMER",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/shell/setup.ts",
+              "literal": "import '@affine/core/bootstrap/electron';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "50c6292bc7a4697fbf45cb7e0027a82b55d99b9519493fe30a4798961db4f8f4",
+              "fileSha256": "f95c279f41d8157d27ac579ffd5a70dd8e367d0bf89dfb237caa2ea3d8fe0753",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-027",
+              "semanticType": "PACKAGE_EXPORT_CONSUMER",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/popup/setup.ts",
+              "literal": "import '@affine/core/bootstrap/electron';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "50c6292bc7a4697fbf45cb7e0027a82b55d99b9519493fe30a4798961db4f8f4",
+              "fileSha256": "3a43178431f60712c28c512534b01be231398541066ccc35e023e2e8c53823ff",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-028",
+              "semanticType": "PRESERVATION_ANCHOR",
+              "path": "Codebase/packages/frontend/core/src/bootstrap/browser.ts",
+              "literal": "import './env';",
+              "lineStart": 2,
+              "lineEnd": 2,
+              "literalSha256": "a17562bb8f5470f781035cc956f03cf270d792fe026ba64d66844de6c0c8a40f",
+              "fileSha256": "1402ab2397beb6ca8590b90493779c45f3d186edca0af853db788e6da618d799",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-029",
+              "semanticType": "PRESERVATION_ANCHOR",
+              "path": "Codebase/packages/frontend/core/src/bootstrap/electron.ts",
+              "literal": "import './env';",
+              "lineStart": 2,
+              "lineEnd": 2,
+              "literalSha256": "a17562bb8f5470f781035cc956f03cf270d792fe026ba64d66844de6c0c8a40f",
+              "fileSha256": "294f0eb7ca5ae774eb1daa2ca2d4a8eb2aa8502df07d5cf5410ddaee4fad34ef",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-030",
+              "semanticType": "PRESERVATION_ANCHOR",
+              "path": "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts",
+              "literal": "function cleanupUnusedIndexedDB()",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "c883367bcecb4ffd2f3a25f5ea7788ae2b447d2d51d639e4101fc58c30403cfd",
+              "fileSha256": "72274d71fd1e43638b4368c2417214692e851d65b5d673e7f629af1494aac6d8",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            }
+          ]
+        }
       },
       "implementationContract": {
         "capabilityId": "MR-CAP-001",
         "taskId": "MR-IMPL-001",
         "releaseWave": "WAVE_0",
-        "purpose": "Preserve the mapped implementation and its runtime registrations while future changes remain within the locked plan boundary. Capability: Application architecture (MR-CAP-001). Current scope: Codebase/package.json, Codebase/packages/frontend/apps/android/src/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx, Codebase/packages/frontend/apps/ios/src/app.tsx, Codebase/packages/frontend/apps/mobile/src/app.tsx, Codebase/packages/frontend/apps/web/src/app.tsx. Future target: Codebase/package.json, Codebase/packages/frontend/apps/android/src/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx, Codebase/packages/frontend/apps/ios/src/app.tsx, Codebase/packages/frontend/apps/mobile/src/app.tsx, Codebase/packages/frontend/apps/web/src/app.tsx, Codebase/packages/frontend/apps/android/package.json, Codebase/packages/frontend/apps/android/tsconfig.json, Codebase/packages/frontend/apps/electron-renderer/package.json, Codebase/packages/frontend/apps/electron-renderer/tsconfig.json.",
+        "purpose": "Verify and preserve the existing @affine/core package/export boundary, source-derived Rspack application entries, platform composition roots, bootstrap connections, and 33 runtime registrations. No application source rewrite is required.",
         "scope": {
           "included": [
+            "Codebase/package.json",
+            "Codebase/packages/frontend/apps/android/package.json",
+            "Codebase/packages/frontend/apps/android/src/app.tsx",
+            "Codebase/packages/frontend/apps/android/src/index.tsx",
+            "Codebase/packages/frontend/apps/android/src/setup.ts",
+            "Codebase/packages/frontend/apps/android/tsconfig.json",
+            "Codebase/packages/frontend/apps/electron-renderer/package.json",
+            "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts",
+            "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+            "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/popup/setup.ts",
+            "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/shell/setup.ts",
+            "Codebase/packages/frontend/apps/electron-renderer/tsconfig.json",
+            "Codebase/packages/frontend/apps/ios/package.json",
+            "Codebase/packages/frontend/apps/ios/src/app.tsx",
+            "Codebase/packages/frontend/apps/ios/src/index.tsx",
+            "Codebase/packages/frontend/apps/ios/src/setup.ts",
+            "Codebase/packages/frontend/apps/ios/tsconfig.json",
+            "Codebase/packages/frontend/apps/mobile/package.json",
+            "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+            "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+            "Codebase/packages/frontend/apps/mobile/src/setup.ts",
+            "Codebase/packages/frontend/apps/mobile/tsconfig.json",
+            "Codebase/packages/frontend/apps/web/package.json",
+            "Codebase/packages/frontend/apps/web/src/app.tsx",
+            "Codebase/packages/frontend/apps/web/src/index.tsx",
+            "Codebase/packages/frontend/apps/web/src/setup.ts",
+            "Codebase/packages/frontend/apps/web/tsconfig.json",
             "Codebase/packages/frontend/core/package.json",
-            "Preserve current behaviour and useful package boundaries."
+            "Codebase/packages/frontend/core/src/bootstrap/browser.ts",
+            "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts",
+            "Codebase/packages/frontend/core/src/bootstrap/electron.ts",
+            "Codebase/packages/frontend/core/tsconfig.json",
+            "Codebase/tools/cli/src/bundle.ts",
+            "Codebase/tools/utils/src/package.ts"
           ],
           "excluded": [
-            "Do not claim implementation from mapping evidence.",
-            "Do not mutate Codebase during the Graphify-only phase.",
-            "Do not rewrite a coherent AFFiNE implementation merely for originality or repository aesthetics."
+            "Codebase/packages/frontend/core/dist/**",
+            "Codebase/packages/frontend/apps/web/dist/**",
+            "Codebase/packages/frontend/apps/mobile/dist/**",
+            "Codebase/packages/frontend/apps/ios/dist/**",
+            "Codebase/packages/frontend/apps/android/dist/**",
+            "Codebase/packages/frontend/apps/electron-renderer/dist/**",
+            "Graphify/Master Plan/**",
+            "User data outside this workspace"
           ]
         },
         "ownedPackageOrModule": "Codebase/packages/frontend/core/package.json",
-        "runtimeOwner": "RENDERER",
+        "runtimeOwner": "RENDERER_AND_BUILD_ENTRY_CONFIGURATION",
         "publicOperations": [
-          "composeApplicationShell",
-          "resolvePlatformEntrypoint",
-          "validatePackageBoundary"
+          "verifyCorePackageExportBoundary",
+          "deriveRspackApplicationEntrypoints",
+          "verifyPlatformCompositionRoots"
         ],
         "domainModels": [
           {
-            "model": "ApplicationarchitectureState",
+            "model": "ApplicationArchitectureBoundary",
             "requiredFields": [
-              "entrypoint",
-              "runtimeBoundary",
-              "registeredModules",
-              "schemaVersion"
+              "packageManifest",
+              "buildEntrypoints",
+              "compositionRoots",
+              "runtimeRegistrations",
+              "generatedOutputs"
             ]
           }
         ],
         "persistentState": [
           {
-            "authoritativeStorage": "Mapped local files",
+            "authoritativeStorage": "NONE_ARCHITECTURE_PRESERVATION_ONLY",
             "fileOwnership": [
+              "Codebase/packages/frontend/apps/android/src/app.tsx",
+              "Codebase/packages/frontend/apps/android/src/index.tsx",
+              "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+              "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+              "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+              "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+              "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+              "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+              "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+              "Codebase/packages/frontend/apps/ios/src/app.tsx",
+              "Codebase/packages/frontend/apps/ios/src/index.tsx",
+              "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+              "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+              "Codebase/packages/frontend/apps/web/src/app.tsx",
+              "Codebase/packages/frontend/apps/web/src/index.tsx",
               "Codebase/packages/frontend/core/package.json"
             ],
-            "atomicWriteRequirement": true,
-            "appDeletionSurvival": "MUST_SURVIVE_IN_USER_OWNED_FILES"
+            "atomicWriteRequirement": false,
+            "appDeletionSurvival": "NOT_APPLICABLE"
           }
         ],
         "inputs": [
           {
-            "name": "composeApplicationShellInput",
-            "validation": "schema, stable-ID, ownership, and path-boundary validation"
+            "name": "CorePackageManifest",
+            "validation": "JSON package identity and required export mapping"
           },
           {
-            "name": "resolvePlatformEntrypointInput",
-            "validation": "schema, stable-ID, ownership, and path-boundary validation"
+            "name": "RspackBundleTopology",
+            "validation": "derive configured HTML entry sources from the live bundle switch"
           },
           {
-            "name": "validatePackageBoundaryInput",
-            "validation": "schema, stable-ID, ownership, and path-boundary validation"
+            "name": "ApplicationCompositionSources",
+            "validation": "literal source anchors and runtime-registration evidence"
           }
         ],
         "outputs": [
           {
-            "name": "composeApplicationShellResult",
-            "guarantee": "typed result or explicit recoverable failure; no partial authoritative write"
-          },
-          {
-            "name": "resolvePlatformEntrypointResult",
-            "guarantee": "typed result or explicit recoverable failure; no partial authoritative write"
-          },
-          {
-            "name": "validatePackageBoundaryResult",
-            "guarantee": "typed result or explicit recoverable failure; no partial authoritative write"
+            "name": "ArchitecturePreservationReceipt",
+            "guarantee": "zero-mutation proof that declared entries, roots, bootstrap connections, and registrations equal live source"
           }
         ],
         "invariants": [
-          "Application architecture preserves the mapped AFFiNE behavior and stable public boundary required by the Master Plans.",
-          "Application architecture remains offline-capable and does not introduce cloud identity, telemetry, billing, or remote-AI dependencies."
+          "The @affine/core manifest owner is inside the task's exact, allowed, and owned path boundary.",
+          "The declared build entry set exactly equals the entry set derived from the live Rspack bundle topology for the five preserved application packages.",
+          "Generated dist output is disposable build output and never canonical architecture source.",
+          "MR-IMPL-001 remains KEEP_EXISTING and performs no application rewrite while the preserved boundary is intact."
         ],
         "failureModes": [
-          "Application architecture input fails schema, identity, or integrity validation.",
-          "Application architecture persistence, runtime registration, or recovery cannot complete without risking partial state."
+          "A required package/export, entry source, composition root, bootstrap target, or runtime registration cannot resolve.",
+          "The owner is excluded or forbidden, a source-derived entry is omitted, or generated output is classified as canonical input."
         ],
         "recoveryBehavior": [
-          "Rollback partial writes, quarantine corrupt input, restore backup, and rebuild derived state."
+          "Block Wave 0, preserve Codebase unchanged, and repair only the contradictory planning authority under explicit change control."
         ],
         "offlineBehavior": [
-          "All core operations remain available without network access; optional adapters degrade to local-only behavior."
+          "All preservation checks inspect local source and configuration without network-dependent product behavior."
         ],
         "securityAndPrivacyConstraints": [
-          "Single-user local scope; no telemetry, billing, cloud identity, or remote AI dependency.",
-          "Privileged filesystem and credential operations stay outside the renderer trust boundary."
+          "The verification task reads repository source only and writes no user or application state."
         ],
         "crossPlatformConstraints": [
-          "Use portable relative paths and atomic-replace semantics on Windows, macOS, and Linux.",
-          "Preserve stable IDs, Unicode names, timezone values, and file contents across platforms."
+          "Normalize repository-relative paths with forward slashes and compare case-safely on Windows while preserving exact source spelling."
         ],
         "dependencies": [],
         "acceptanceTests": [
@@ -396,9 +1215,489 @@
         ],
         "blockingGates": [
           "GATE-WAVE_0"
-        ]
+        ],
+        "architecturePreservationContract": {
+          "authorityStatus": "CURRENT_AUTHORITATIVE",
+          "decision": "KEEP_EXISTING",
+          "authorityTypes": [
+            "PACKAGE_MANIFEST",
+            "PACKAGE_EXPORT_BOUNDARY",
+            "BUILD_ENTRY_BOUNDARY",
+            "APPLICATION_COMPOSITION_ROOT",
+            "PRESERVATION_ANCHOR"
+          ],
+          "contractOwner": "Codebase/packages/frontend/core/package.json",
+          "packageManifest": {
+            "path": "Codebase/packages/frontend/core/package.json",
+            "packageName": "@affine/core",
+            "requiredExports": [
+              {
+                "key": "./*",
+                "target": "./src/*",
+                "status": "ACTIVE_PATTERN"
+              }
+            ],
+            "declaredNonRequiredExports": [
+              {
+                "key": "./bootstrap",
+                "target": "./src/bootstrap/index.ts",
+                "targetExists": false,
+                "activeExactImports": 0,
+                "classification": "DECLARED_UNUSED_TARGET_NOT_REQUIRED_BY_ACTIVE_ENTRY_GRAPH"
+              }
+            ]
+          },
+          "buildTopologySource": "Codebase/tools/cli/src/bundle.ts",
+          "buildPackages": [
+            {
+              "packageName": "@affine/web",
+              "packageRoot": "Codebase/packages/frontend/apps/web"
+            },
+            {
+              "packageName": "@affine/mobile",
+              "packageRoot": "Codebase/packages/frontend/apps/mobile"
+            },
+            {
+              "packageName": "@affine/ios",
+              "packageRoot": "Codebase/packages/frontend/apps/ios"
+            },
+            {
+              "packageName": "@affine/android",
+              "packageRoot": "Codebase/packages/frontend/apps/android"
+            },
+            {
+              "packageName": "@affine/electron-renderer",
+              "packageRoot": "Codebase/packages/frontend/apps/electron-renderer"
+            }
+          ],
+          "buildEntryPaths": [
+            "Codebase/packages/frontend/apps/web/src/index.tsx",
+            "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+            "Codebase/packages/frontend/apps/ios/src/index.tsx",
+            "Codebase/packages/frontend/apps/android/src/index.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts"
+          ],
+          "compositionRoots": [
+            "Codebase/packages/frontend/apps/android/src/app.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+            "Codebase/packages/frontend/apps/ios/src/app.tsx",
+            "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+            "Codebase/packages/frontend/apps/web/src/app.tsx"
+          ],
+          "bootstrapTargets": [
+            "Codebase/packages/frontend/core/src/bootstrap/browser.ts",
+            "Codebase/packages/frontend/core/src/bootstrap/electron.ts",
+            "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts"
+          ],
+          "bootstrapConsumerPaths": [
+            "Codebase/packages/frontend/apps/web/src/setup.ts",
+            "Codebase/packages/frontend/apps/mobile/src/setup.ts",
+            "Codebase/packages/frontend/apps/ios/src/setup.ts",
+            "Codebase/packages/frontend/apps/android/src/setup.ts",
+            "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts",
+            "Codebase/packages/frontend/apps/electron-renderer/src/shell/setup.ts",
+            "Codebase/packages/frontend/apps/electron-renderer/src/popup/setup.ts"
+          ],
+          "workerRegistrationPaths": [
+            "Codebase/packages/frontend/apps/android/src/app.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+            "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+            "Codebase/packages/frontend/apps/ios/src/app.tsx",
+            "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+            "Codebase/packages/frontend/apps/web/src/app.tsx"
+          ],
+          "runtimeRegistrationIds": [
+            "MR-REG-19254409a75692172d12720d",
+            "MR-REG-1b10a6305ebb39e200f8d353",
+            "MR-REG-2bf9c1327e9c8149744e5c0f",
+            "MR-REG-372539ab1f77a6438c0a6b2b",
+            "MR-REG-3ada9327e967b275cb3fdd2b",
+            "MR-REG-5723306f6f698a0e439bba94",
+            "MR-REG-5ad8538f336751f4f5afc2a6",
+            "MR-REG-5bbfc3653aad2a4e7ad7e1f6",
+            "MR-REG-6378bf522cd994df026f0b8d",
+            "MR-REG-7aca871a979152612fea1fee",
+            "MR-REG-801ac1cf6c44830c19967cde",
+            "MR-REG-8a2facc4825f0f1682a080b8",
+            "MR-REG-8bd5bb6b19abf0db9c0d42e7",
+            "MR-REG-8e178046bb9789c3fbd9aab7",
+            "MR-REG-a1fa6ebd379f1b77bbbc0bd4",
+            "MR-REG-a66ed8e480083331f763b4ad",
+            "MR-REG-ae460af8369cdd2260233e09",
+            "MR-REG-ae9fef910e9998e1c4deefb0",
+            "MR-REG-b264d1b48f843a960384e9b7",
+            "MR-REG-b3b787d5bc5def1e6d21e44f",
+            "MR-REG-b9477c3a790a86ed0718b53b",
+            "MR-REG-be4bd5f7a25a3bae9e24cd6c",
+            "MR-REG-c57851ccf51d367ac5ffe61f",
+            "MR-REG-c78c6bd6b0e21cc9427234f3",
+            "MR-REG-cc13e3ddf7ab56a70226e872",
+            "MR-REG-cc979c9f442fa8ee65bca6bc",
+            "MR-REG-ce318d22ed72d779f6afe607",
+            "MR-REG-d34026ea14d86a1eda226b28",
+            "MR-REG-d693594df0a62d7270491077",
+            "MR-REG-e7398f1ff86cb27de47ba3c5",
+            "MR-REG-fc72d9c36ad99b8e6d9f2d6d",
+            "MR-REG-fcbdf2e51d6ac4edd15a9654",
+            "MR-REG-fd033c93693b589ebeb216aa"
+          ],
+          "generatedOutputRoots": [
+            "Codebase/packages/frontend/core",
+            "Codebase/packages/frontend/apps/web",
+            "Codebase/packages/frontend/apps/mobile",
+            "Codebase/packages/frontend/apps/ios",
+            "Codebase/packages/frontend/apps/android",
+            "Codebase/packages/frontend/apps/electron-renderer"
+          ],
+          "generatedPaths": [
+            "Codebase/packages/frontend/core/dist/**",
+            "Codebase/packages/frontend/apps/web/dist/**",
+            "Codebase/packages/frontend/apps/mobile/dist/**",
+            "Codebase/packages/frontend/apps/ios/dist/**",
+            "Codebase/packages/frontend/apps/android/dist/**",
+            "Codebase/packages/frontend/apps/electron-renderer/dist/**"
+          ],
+          "sourceAnchors": [
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-001",
+              "semanticType": "PACKAGE_MANIFEST",
+              "path": "Codebase/packages/frontend/core/package.json",
+              "literal": "\"name\": \"@affine/core\"",
+              "lineStart": 2,
+              "lineEnd": 2,
+              "literalSha256": "147c97c1d17545da09ce9e5293014d8ecbb0fa4d080ec91e0adf827e6862890c",
+              "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-002",
+              "semanticType": "PACKAGE_EXPORT_BOUNDARY",
+              "path": "Codebase/packages/frontend/core/package.json",
+              "literal": "\"./*\": \"./src/*\"",
+              "lineStart": 7,
+              "lineEnd": 7,
+              "literalSha256": "7e99f344b4b71f438e8fdbecd3a4528ab829ad21f7835a1daff05ebefb4490a4",
+              "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-003",
+              "semanticType": "BUILD_ENTRY_BOUNDARY",
+              "path": "Codebase/tools/cli/src/bundle.ts",
+              "literal": "function getRspackBundleConfigs",
+              "lineStart": 96,
+              "lineEnd": 96,
+              "literalSha256": "c4e3320e5cf194255932b01d40cdbff1a4e31fa70208fca672310532ee612af0",
+              "fileSha256": "2fa9bfce758f511e35a1e3a58cf08ac3304b8936a38cbdc2e357194596e79f25",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-004",
+              "semanticType": "GENERATED_OUTPUT_CLASSIFICATION",
+              "path": "Codebase/tools/utils/src/package.ts",
+              "literal": "this.distPath = this.path.join('dist');",
+              "lineStart": 63,
+              "lineEnd": 63,
+              "literalSha256": "61b3c6f1e5d38f828900ff0499db466873a02007db6a45f1ae2abee139da2f7d",
+              "fileSha256": "6ab82fc286ebb0b9096b56f717692e373c05382934ff37cb1d03a215b943043d",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-005",
+              "semanticType": "GENERATED_OUTPUT_CLASSIFICATION",
+              "path": "Codebase/tools/cli/src/bundle.ts",
+              "literal": "rmSync(pkg.distPath.value, { recursive: true, force: true });",
+              "lineStart": 241,
+              "lineEnd": 241,
+              "literalSha256": "409ea4f82929dfa183b986bcff53cdff64a8428b4f145d3e117ca492d222f4e2",
+              "fileSha256": "2fa9bfce758f511e35a1e3a58cf08ac3304b8936a38cbdc2e357194596e79f25",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-006",
+              "semanticType": "BUILD_ENTRY_BOUNDARY",
+              "path": "Codebase/packages/frontend/apps/web/src/index.tsx",
+              "literal": "import './setup';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+              "fileSha256": "ace669a269a351ff63adc3cf1650662e93d03e4581032ec122d40bf0328fec04",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-007",
+              "semanticType": "BUILD_ENTRY_BOUNDARY",
+              "path": "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+              "literal": "import './setup';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+              "fileSha256": "3bcde91033c79ba81090d382e3c89f3920514ac34da931edcc28a96ce664c3d1",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-008",
+              "semanticType": "BUILD_ENTRY_BOUNDARY",
+              "path": "Codebase/packages/frontend/apps/ios/src/index.tsx",
+              "literal": "import './setup';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+              "fileSha256": "4e095c89d2e18012cceea9dfacb05f8b73e5af87f7d51ed2fed2359a1ef7d22f",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-009",
+              "semanticType": "BUILD_ENTRY_BOUNDARY",
+              "path": "Codebase/packages/frontend/apps/android/src/index.tsx",
+              "literal": "import './setup';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+              "fileSha256": "b4bc9351e115da5be308b8065dd8f6272445a36ebbf2c9f89036039d081b64af",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-010",
+              "semanticType": "BUILD_ENTRY_BOUNDARY",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+              "literal": "import './setup';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+              "fileSha256": "ca84f194209397b78fc5601e71d98c23c0b570e3392ae127ac0af5ed7148b425",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-011",
+              "semanticType": "BUILD_ENTRY_BOUNDARY",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+              "literal": "import './setup';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+              "fileSha256": "f745ee16838af266b2a7fadb7ff4b06e70ba78a7d5367bf73d3ef33f8bd878bf",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-012",
+              "semanticType": "BUILD_ENTRY_BOUNDARY",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+              "literal": "import './setup';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+              "fileSha256": "6c5c9a61c8b9dac7bb9c91ce811b982f4e617bcaaf0be125fba703d7f007b8e8",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-013",
+              "semanticType": "BUILD_ENTRY_BOUNDARY",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+              "literal": "import '@affine/core/bootstrap/electron';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "50c6292bc7a4697fbf45cb7e0027a82b55d99b9519493fe30a4798961db4f8f4",
+              "fileSha256": "0ffbbaf0b3b556a7fcfb2b565e26734389d2574c978b7d8c5df9e9eaab28d562",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-014",
+              "semanticType": "APPLICATION_COMPOSITION_ROOT",
+              "path": "Codebase/packages/frontend/apps/android/src/app.tsx",
+              "literal": "export function App()",
+              "lineStart": 471,
+              "lineEnd": 471,
+              "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+              "fileSha256": "21aa38c14c96df89e3a435cedcf079cb52bad410da64c5044c47ddc1a6e71e5a",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-015",
+              "semanticType": "APPLICATION_COMPOSITION_ROOT",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+              "literal": "export function App()",
+              "lineStart": 42,
+              "lineEnd": 42,
+              "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+              "fileSha256": "c0b348f75bb550a3f6018f2667a135896992ba52794c399d39e203f2575157dd",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-016",
+              "semanticType": "APPLICATION_COMPOSITION_ROOT",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+              "literal": "export function App()",
+              "lineStart": 23,
+              "lineEnd": 23,
+              "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+              "fileSha256": "ce42201da73a61dd4c1db09cc98490b0d3251ddd1885a90fa998975a50635571",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-017",
+              "semanticType": "APPLICATION_COMPOSITION_ROOT",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+              "literal": "export function App()",
+              "lineStart": 29,
+              "lineEnd": 29,
+              "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+              "fileSha256": "181ea92e0ea7628782edd6017c27a9889ec5ad84b928e76511cb4ffb85fa2b39",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-018",
+              "semanticType": "APPLICATION_COMPOSITION_ROOT",
+              "path": "Codebase/packages/frontend/apps/ios/src/app.tsx",
+              "literal": "export function App()",
+              "lineStart": 621,
+              "lineEnd": 621,
+              "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+              "fileSha256": "39e5f335ef568ab3a644d807ad967168a9e58c685f3302bba3e234a321f42475",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-019",
+              "semanticType": "APPLICATION_COMPOSITION_ROOT",
+              "path": "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+              "literal": "export function App()",
+              "lineStart": 149,
+              "lineEnd": 149,
+              "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+              "fileSha256": "b59b37dad1390304f667d3ce19e3cfd2d071a9fe74f60a688b2b575ae0535cdb",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-020",
+              "semanticType": "APPLICATION_COMPOSITION_ROOT",
+              "path": "Codebase/packages/frontend/apps/web/src/app.tsx",
+              "literal": "export function App()",
+              "lineStart": 98,
+              "lineEnd": 98,
+              "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+              "fileSha256": "c8d4a30481ab50ed1883c1a0da36cb1851e267da997a1b5caa91c056bc8577c0",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-021",
+              "semanticType": "PACKAGE_EXPORT_CONSUMER",
+              "path": "Codebase/packages/frontend/apps/web/src/setup.ts",
+              "literal": "import '@affine/core/bootstrap/browser';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "ad034d449a43339a72bb7a5fb2e4c8cfe9b6d5b72c96687966671b6479663a92",
+              "fileSha256": "263bf93b066ba290b7a1909a14922df8df238dd6f485200aab1d258a44bbe179",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-022",
+              "semanticType": "PACKAGE_EXPORT_CONSUMER",
+              "path": "Codebase/packages/frontend/apps/mobile/src/setup.ts",
+              "literal": "import '@affine/core/bootstrap/browser';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "ad034d449a43339a72bb7a5fb2e4c8cfe9b6d5b72c96687966671b6479663a92",
+              "fileSha256": "c64d850c672ebd94e7911e8e637aeb7e6d80dbb61b6aef72a9c9dff9f222fc66",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-023",
+              "semanticType": "PACKAGE_EXPORT_CONSUMER",
+              "path": "Codebase/packages/frontend/apps/ios/src/setup.ts",
+              "literal": "import '@affine/core/bootstrap/browser';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "ad034d449a43339a72bb7a5fb2e4c8cfe9b6d5b72c96687966671b6479663a92",
+              "fileSha256": "8e36e75656e89fe34acd978981eb102314cc44736669d7f874142d88c7910b6b",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-024",
+              "semanticType": "PACKAGE_EXPORT_CONSUMER",
+              "path": "Codebase/packages/frontend/apps/android/src/setup.ts",
+              "literal": "import '@affine/core/bootstrap/browser';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "ad034d449a43339a72bb7a5fb2e4c8cfe9b6d5b72c96687966671b6479663a92",
+              "fileSha256": "1b27e4c6dede97af083c6de4eee7da182226c3acf7216023a76cc26fb7479d85",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-025",
+              "semanticType": "PACKAGE_EXPORT_CONSUMER",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts",
+              "literal": "import '@affine/core/bootstrap/electron';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "50c6292bc7a4697fbf45cb7e0027a82b55d99b9519493fe30a4798961db4f8f4",
+              "fileSha256": "de121a1e96b8450d0309cd72b1d8def9e69d714d5d696858b08b934ca0974793",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-026",
+              "semanticType": "PACKAGE_EXPORT_CONSUMER",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/shell/setup.ts",
+              "literal": "import '@affine/core/bootstrap/electron';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "50c6292bc7a4697fbf45cb7e0027a82b55d99b9519493fe30a4798961db4f8f4",
+              "fileSha256": "f95c279f41d8157d27ac579ffd5a70dd8e367d0bf89dfb237caa2ea3d8fe0753",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-027",
+              "semanticType": "PACKAGE_EXPORT_CONSUMER",
+              "path": "Codebase/packages/frontend/apps/electron-renderer/src/popup/setup.ts",
+              "literal": "import '@affine/core/bootstrap/electron';",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "50c6292bc7a4697fbf45cb7e0027a82b55d99b9519493fe30a4798961db4f8f4",
+              "fileSha256": "3a43178431f60712c28c512534b01be231398541066ccc35e023e2e8c53823ff",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-028",
+              "semanticType": "PRESERVATION_ANCHOR",
+              "path": "Codebase/packages/frontend/core/src/bootstrap/browser.ts",
+              "literal": "import './env';",
+              "lineStart": 2,
+              "lineEnd": 2,
+              "literalSha256": "a17562bb8f5470f781035cc956f03cf270d792fe026ba64d66844de6c0c8a40f",
+              "fileSha256": "1402ab2397beb6ca8590b90493779c45f3d186edca0af853db788e6da618d799",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-029",
+              "semanticType": "PRESERVATION_ANCHOR",
+              "path": "Codebase/packages/frontend/core/src/bootstrap/electron.ts",
+              "literal": "import './env';",
+              "lineStart": 2,
+              "lineEnd": 2,
+              "literalSha256": "a17562bb8f5470f781035cc956f03cf270d792fe026ba64d66844de6c0c8a40f",
+              "fileSha256": "294f0eb7ca5ae774eb1daa2ca2d4a8eb2aa8502df07d5cf5410ddaee4fad34ef",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            },
+            {
+              "anchorId": "MR-CAP-001-ANCHOR-030",
+              "semanticType": "PRESERVATION_ANCHOR",
+              "path": "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts",
+              "literal": "function cleanupUnusedIndexedDB()",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "literalSha256": "c883367bcecb4ffd2f3a25f5ea7788ae2b447d2d51d639e4101fc58c30403cfd",
+              "fileSha256": "72274d71fd1e43638b4368c2417214692e851d65b5d673e7f629af1494aac6d8",
+              "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+            }
+          ]
+        }
       },
-      "changeDescription": "Preserve the mapped implementation and its runtime registrations while future changes remain within the locked plan boundary. Capability: Application architecture (MR-CAP-001). Current scope: Codebase/package.json, Codebase/packages/frontend/apps/android/src/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx, Codebase/packages/frontend/apps/ios/src/app.tsx, Codebase/packages/frontend/apps/mobile/src/app.tsx, Codebase/packages/frontend/apps/web/src/app.tsx. Future target: Codebase/package.json, Codebase/packages/frontend/apps/android/src/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx, Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx, Codebase/packages/frontend/apps/ios/src/app.tsx, Codebase/packages/frontend/apps/mobile/src/app.tsx, Codebase/packages/frontend/apps/web/src/app.tsx, Codebase/packages/frontend/apps/android/package.json, Codebase/packages/frontend/apps/android/tsconfig.json, Codebase/packages/frontend/apps/electron-renderer/package.json, Codebase/packages/frontend/apps/electron-renderer/tsconfig.json.",
+      "changeDescription": "Preserve and verify the existing source-derived application architecture boundary without modifying application source.",
       "releaseWave": "WAVE_0",
       "resolvedCanonicalRequirementIds": [
         "MR-KEEP-001",
@@ -575,7 +1874,487 @@
           ],
           "supersessionRecordIds": []
         }
-      ]
+      ],
+      "architectureAuthority": {
+        "authorityStatus": "CURRENT_AUTHORITATIVE",
+        "decision": "KEEP_EXISTING",
+        "authorityTypes": [
+          "PACKAGE_MANIFEST",
+          "PACKAGE_EXPORT_BOUNDARY",
+          "BUILD_ENTRY_BOUNDARY",
+          "APPLICATION_COMPOSITION_ROOT",
+          "PRESERVATION_ANCHOR"
+        ],
+        "contractOwner": "Codebase/packages/frontend/core/package.json",
+        "packageManifest": {
+          "path": "Codebase/packages/frontend/core/package.json",
+          "packageName": "@affine/core",
+          "requiredExports": [
+            {
+              "key": "./*",
+              "target": "./src/*",
+              "status": "ACTIVE_PATTERN"
+            }
+          ],
+          "declaredNonRequiredExports": [
+            {
+              "key": "./bootstrap",
+              "target": "./src/bootstrap/index.ts",
+              "targetExists": false,
+              "activeExactImports": 0,
+              "classification": "DECLARED_UNUSED_TARGET_NOT_REQUIRED_BY_ACTIVE_ENTRY_GRAPH"
+            }
+          ]
+        },
+        "buildTopologySource": "Codebase/tools/cli/src/bundle.ts",
+        "buildPackages": [
+          {
+            "packageName": "@affine/web",
+            "packageRoot": "Codebase/packages/frontend/apps/web"
+          },
+          {
+            "packageName": "@affine/mobile",
+            "packageRoot": "Codebase/packages/frontend/apps/mobile"
+          },
+          {
+            "packageName": "@affine/ios",
+            "packageRoot": "Codebase/packages/frontend/apps/ios"
+          },
+          {
+            "packageName": "@affine/android",
+            "packageRoot": "Codebase/packages/frontend/apps/android"
+          },
+          {
+            "packageName": "@affine/electron-renderer",
+            "packageRoot": "Codebase/packages/frontend/apps/electron-renderer"
+          }
+        ],
+        "buildEntryPaths": [
+          "Codebase/packages/frontend/apps/web/src/index.tsx",
+          "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+          "Codebase/packages/frontend/apps/ios/src/index.tsx",
+          "Codebase/packages/frontend/apps/android/src/index.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts"
+        ],
+        "compositionRoots": [
+          "Codebase/packages/frontend/apps/android/src/app.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+          "Codebase/packages/frontend/apps/ios/src/app.tsx",
+          "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+          "Codebase/packages/frontend/apps/web/src/app.tsx"
+        ],
+        "bootstrapTargets": [
+          "Codebase/packages/frontend/core/src/bootstrap/browser.ts",
+          "Codebase/packages/frontend/core/src/bootstrap/electron.ts",
+          "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts"
+        ],
+        "bootstrapConsumerPaths": [
+          "Codebase/packages/frontend/apps/web/src/setup.ts",
+          "Codebase/packages/frontend/apps/mobile/src/setup.ts",
+          "Codebase/packages/frontend/apps/ios/src/setup.ts",
+          "Codebase/packages/frontend/apps/android/src/setup.ts",
+          "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts",
+          "Codebase/packages/frontend/apps/electron-renderer/src/shell/setup.ts",
+          "Codebase/packages/frontend/apps/electron-renderer/src/popup/setup.ts"
+        ],
+        "workerRegistrationPaths": [
+          "Codebase/packages/frontend/apps/android/src/app.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+          "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+          "Codebase/packages/frontend/apps/ios/src/app.tsx",
+          "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+          "Codebase/packages/frontend/apps/web/src/app.tsx"
+        ],
+        "runtimeRegistrationIds": [
+          "MR-REG-19254409a75692172d12720d",
+          "MR-REG-1b10a6305ebb39e200f8d353",
+          "MR-REG-2bf9c1327e9c8149744e5c0f",
+          "MR-REG-372539ab1f77a6438c0a6b2b",
+          "MR-REG-3ada9327e967b275cb3fdd2b",
+          "MR-REG-5723306f6f698a0e439bba94",
+          "MR-REG-5ad8538f336751f4f5afc2a6",
+          "MR-REG-5bbfc3653aad2a4e7ad7e1f6",
+          "MR-REG-6378bf522cd994df026f0b8d",
+          "MR-REG-7aca871a979152612fea1fee",
+          "MR-REG-801ac1cf6c44830c19967cde",
+          "MR-REG-8a2facc4825f0f1682a080b8",
+          "MR-REG-8bd5bb6b19abf0db9c0d42e7",
+          "MR-REG-8e178046bb9789c3fbd9aab7",
+          "MR-REG-a1fa6ebd379f1b77bbbc0bd4",
+          "MR-REG-a66ed8e480083331f763b4ad",
+          "MR-REG-ae460af8369cdd2260233e09",
+          "MR-REG-ae9fef910e9998e1c4deefb0",
+          "MR-REG-b264d1b48f843a960384e9b7",
+          "MR-REG-b3b787d5bc5def1e6d21e44f",
+          "MR-REG-b9477c3a790a86ed0718b53b",
+          "MR-REG-be4bd5f7a25a3bae9e24cd6c",
+          "MR-REG-c57851ccf51d367ac5ffe61f",
+          "MR-REG-c78c6bd6b0e21cc9427234f3",
+          "MR-REG-cc13e3ddf7ab56a70226e872",
+          "MR-REG-cc979c9f442fa8ee65bca6bc",
+          "MR-REG-ce318d22ed72d779f6afe607",
+          "MR-REG-d34026ea14d86a1eda226b28",
+          "MR-REG-d693594df0a62d7270491077",
+          "MR-REG-e7398f1ff86cb27de47ba3c5",
+          "MR-REG-fc72d9c36ad99b8e6d9f2d6d",
+          "MR-REG-fcbdf2e51d6ac4edd15a9654",
+          "MR-REG-fd033c93693b589ebeb216aa"
+        ],
+        "generatedOutputRoots": [
+          "Codebase/packages/frontend/core",
+          "Codebase/packages/frontend/apps/web",
+          "Codebase/packages/frontend/apps/mobile",
+          "Codebase/packages/frontend/apps/ios",
+          "Codebase/packages/frontend/apps/android",
+          "Codebase/packages/frontend/apps/electron-renderer"
+        ],
+        "generatedPaths": [
+          "Codebase/packages/frontend/core/dist/**",
+          "Codebase/packages/frontend/apps/web/dist/**",
+          "Codebase/packages/frontend/apps/mobile/dist/**",
+          "Codebase/packages/frontend/apps/ios/dist/**",
+          "Codebase/packages/frontend/apps/android/dist/**",
+          "Codebase/packages/frontend/apps/electron-renderer/dist/**"
+        ],
+        "sourceAnchors": [
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-001",
+            "semanticType": "PACKAGE_MANIFEST",
+            "path": "Codebase/packages/frontend/core/package.json",
+            "literal": "\"name\": \"@affine/core\"",
+            "lineStart": 2,
+            "lineEnd": 2,
+            "literalSha256": "147c97c1d17545da09ce9e5293014d8ecbb0fa4d080ec91e0adf827e6862890c",
+            "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-002",
+            "semanticType": "PACKAGE_EXPORT_BOUNDARY",
+            "path": "Codebase/packages/frontend/core/package.json",
+            "literal": "\"./*\": \"./src/*\"",
+            "lineStart": 7,
+            "lineEnd": 7,
+            "literalSha256": "7e99f344b4b71f438e8fdbecd3a4528ab829ad21f7835a1daff05ebefb4490a4",
+            "fileSha256": "08ef2498d84d2312b4fc252b4577987993bdd03db4840db795123e0c4e536739",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-003",
+            "semanticType": "BUILD_ENTRY_BOUNDARY",
+            "path": "Codebase/tools/cli/src/bundle.ts",
+            "literal": "function getRspackBundleConfigs",
+            "lineStart": 96,
+            "lineEnd": 96,
+            "literalSha256": "c4e3320e5cf194255932b01d40cdbff1a4e31fa70208fca672310532ee612af0",
+            "fileSha256": "2fa9bfce758f511e35a1e3a58cf08ac3304b8936a38cbdc2e357194596e79f25",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-004",
+            "semanticType": "GENERATED_OUTPUT_CLASSIFICATION",
+            "path": "Codebase/tools/utils/src/package.ts",
+            "literal": "this.distPath = this.path.join('dist');",
+            "lineStart": 63,
+            "lineEnd": 63,
+            "literalSha256": "61b3c6f1e5d38f828900ff0499db466873a02007db6a45f1ae2abee139da2f7d",
+            "fileSha256": "6ab82fc286ebb0b9096b56f717692e373c05382934ff37cb1d03a215b943043d",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-005",
+            "semanticType": "GENERATED_OUTPUT_CLASSIFICATION",
+            "path": "Codebase/tools/cli/src/bundle.ts",
+            "literal": "rmSync(pkg.distPath.value, { recursive: true, force: true });",
+            "lineStart": 241,
+            "lineEnd": 241,
+            "literalSha256": "409ea4f82929dfa183b986bcff53cdff64a8428b4f145d3e117ca492d222f4e2",
+            "fileSha256": "2fa9bfce758f511e35a1e3a58cf08ac3304b8936a38cbdc2e357194596e79f25",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-006",
+            "semanticType": "BUILD_ENTRY_BOUNDARY",
+            "path": "Codebase/packages/frontend/apps/web/src/index.tsx",
+            "literal": "import './setup';",
+            "lineStart": 1,
+            "lineEnd": 1,
+            "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+            "fileSha256": "ace669a269a351ff63adc3cf1650662e93d03e4581032ec122d40bf0328fec04",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-007",
+            "semanticType": "BUILD_ENTRY_BOUNDARY",
+            "path": "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+            "literal": "import './setup';",
+            "lineStart": 1,
+            "lineEnd": 1,
+            "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+            "fileSha256": "3bcde91033c79ba81090d382e3c89f3920514ac34da931edcc28a96ce664c3d1",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-008",
+            "semanticType": "BUILD_ENTRY_BOUNDARY",
+            "path": "Codebase/packages/frontend/apps/ios/src/index.tsx",
+            "literal": "import './setup';",
+            "lineStart": 1,
+            "lineEnd": 1,
+            "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+            "fileSha256": "4e095c89d2e18012cceea9dfacb05f8b73e5af87f7d51ed2fed2359a1ef7d22f",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-009",
+            "semanticType": "BUILD_ENTRY_BOUNDARY",
+            "path": "Codebase/packages/frontend/apps/android/src/index.tsx",
+            "literal": "import './setup';",
+            "lineStart": 1,
+            "lineEnd": 1,
+            "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+            "fileSha256": "b4bc9351e115da5be308b8065dd8f6272445a36ebbf2c9f89036039d081b64af",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-010",
+            "semanticType": "BUILD_ENTRY_BOUNDARY",
+            "path": "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+            "literal": "import './setup';",
+            "lineStart": 1,
+            "lineEnd": 1,
+            "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+            "fileSha256": "ca84f194209397b78fc5601e71d98c23c0b570e3392ae127ac0af5ed7148b425",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-011",
+            "semanticType": "BUILD_ENTRY_BOUNDARY",
+            "path": "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+            "literal": "import './setup';",
+            "lineStart": 1,
+            "lineEnd": 1,
+            "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+            "fileSha256": "f745ee16838af266b2a7fadb7ff4b06e70ba78a7d5367bf73d3ef33f8bd878bf",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-012",
+            "semanticType": "BUILD_ENTRY_BOUNDARY",
+            "path": "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+            "literal": "import './setup';",
+            "lineStart": 1,
+            "lineEnd": 1,
+            "literalSha256": "414dbb25f518136a774e56a34c4de179716a8a2e08b3632b16868a683c6cf274",
+            "fileSha256": "6c5c9a61c8b9dac7bb9c91ce811b982f4e617bcaaf0be125fba703d7f007b8e8",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-013",
+            "semanticType": "BUILD_ENTRY_BOUNDARY",
+            "path": "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts",
+            "literal": "import '@affine/core/bootstrap/electron';",
+            "lineStart": 1,
+            "lineEnd": 1,
+            "literalSha256": "50c6292bc7a4697fbf45cb7e0027a82b55d99b9519493fe30a4798961db4f8f4",
+            "fileSha256": "0ffbbaf0b3b556a7fcfb2b565e26734389d2574c978b7d8c5df9e9eaab28d562",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-014",
+            "semanticType": "APPLICATION_COMPOSITION_ROOT",
+            "path": "Codebase/packages/frontend/apps/android/src/app.tsx",
+            "literal": "export function App()",
+            "lineStart": 471,
+            "lineEnd": 471,
+            "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+            "fileSha256": "21aa38c14c96df89e3a435cedcf079cb52bad410da64c5044c47ddc1a6e71e5a",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-015",
+            "semanticType": "APPLICATION_COMPOSITION_ROOT",
+            "path": "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+            "literal": "export function App()",
+            "lineStart": 42,
+            "lineEnd": 42,
+            "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+            "fileSha256": "c0b348f75bb550a3f6018f2667a135896992ba52794c399d39e203f2575157dd",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-016",
+            "semanticType": "APPLICATION_COMPOSITION_ROOT",
+            "path": "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+            "literal": "export function App()",
+            "lineStart": 23,
+            "lineEnd": 23,
+            "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+            "fileSha256": "ce42201da73a61dd4c1db09cc98490b0d3251ddd1885a90fa998975a50635571",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-017",
+            "semanticType": "APPLICATION_COMPOSITION_ROOT",
+            "path": "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+            "literal": "export function App()",
+            "lineStart": 29,
+            "lineEnd": 29,
+            "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+            "fileSha256": "181ea92e0ea7628782edd6017c27a9889ec5ad84b928e76511cb4ffb85fa2b39",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-018",
+            "semanticType": "APPLICATION_COMPOSITION_ROOT",
+            "path": "Codebase/packages/frontend/apps/ios/src/app.tsx",
+            "literal": "export function App()",
+            "lineStart": 621,
+            "lineEnd": 621,
+            "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+            "fileSha256": "39e5f335ef568ab3a644d807ad967168a9e58c685f3302bba3e234a321f42475",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-019",
+            "semanticType": "APPLICATION_COMPOSITION_ROOT",
+            "path": "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+            "literal": "export function App()",
+            "lineStart": 149,
+            "lineEnd": 149,
+            "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+            "fileSha256": "b59b37dad1390304f667d3ce19e3cfd2d071a9fe74f60a688b2b575ae0535cdb",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-020",
+            "semanticType": "APPLICATION_COMPOSITION_ROOT",
+            "path": "Codebase/packages/frontend/apps/web/src/app.tsx",
+            "literal": "export function App()",
+            "lineStart": 98,
+            "lineEnd": 98,
+            "literalSha256": "1de8b69e48cf1ff7b3ff2843d0eff74d5b18d82081c9e9376d8a4f2e18093ada",
+            "fileSha256": "c8d4a30481ab50ed1883c1a0da36cb1851e267da997a1b5caa91c056bc8577c0",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-021",
+            "semanticType": "PACKAGE_EXPORT_CONSUMER",
+            "path": "Codebase/packages/frontend/apps/web/src/setup.ts",
+            "literal": "import '@affine/core/bootstrap/browser';",
+            "lineStart": 1,
+            "lineEnd": 1,
+            "literalSha256": "ad034d449a43339a72bb7a5fb2e4c8cfe9b6d5b72c96687966671b6479663a92",
+            "fileSha256": "263bf93b066ba290b7a1909a14922df8df238dd6f485200aab1d258a44bbe179",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-022",
+            "semanticType": "PACKAGE_EXPORT_CONSUMER",
+            "path": "Codebase/packages/frontend/apps/mobile/src/setup.ts",
+            "literal": "import '@affine/core/bootstrap/browser';",
+            "lineStart": 1,
+            "lineEnd": 1,
+            "literalSha256": "ad034d449a43339a72bb7a5fb2e4c8cfe9b6d5b72c96687966671b6479663a92",
+            "fileSha256": "c64d850c672ebd94e7911e8e637aeb7e6d80dbb61b6aef72a9c9dff9f222fc66",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-023",
+            "semanticType": "PACKAGE_EXPORT_CONSUMER",
+            "path": "Codebase/packages/frontend/apps/ios/src/setup.ts",
+            "literal": "import '@affine/core/bootstrap/browser';",
+            "lineStart": 1,
+            "lineEnd": 1,
+            "literalSha256": "ad034d449a43339a72bb7a5fb2e4c8cfe9b6d5b72c96687966671b6479663a92",
+            "fileSha256": "8e36e75656e89fe34acd978981eb102314cc44736669d7f874142d88c7910b6b",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-024",
+            "semanticType": "PACKAGE_EXPORT_CONSUMER",
+            "path": "Codebase/packages/frontend/apps/android/src/setup.ts",
+            "literal": "import '@affine/core/bootstrap/browser';",
+            "lineStart": 1,
+            "lineEnd": 1,
+            "literalSha256": "ad034d449a43339a72bb7a5fb2e4c8cfe9b6d5b72c96687966671b6479663a92",
+            "fileSha256": "1b27e4c6dede97af083c6de4eee7da182226c3acf7216023a76cc26fb7479d85",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-025",
+            "semanticType": "PACKAGE_EXPORT_CONSUMER",
+            "path": "Codebase/packages/frontend/apps/electron-renderer/src/app/setup.ts",
+            "literal": "import '@affine/core/bootstrap/electron';",
+            "lineStart": 1,
+            "lineEnd": 1,
+            "literalSha256": "50c6292bc7a4697fbf45cb7e0027a82b55d99b9519493fe30a4798961db4f8f4",
+            "fileSha256": "de121a1e96b8450d0309cd72b1d8def9e69d714d5d696858b08b934ca0974793",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-026",
+            "semanticType": "PACKAGE_EXPORT_CONSUMER",
+            "path": "Codebase/packages/frontend/apps/electron-renderer/src/shell/setup.ts",
+            "literal": "import '@affine/core/bootstrap/electron';",
+            "lineStart": 1,
+            "lineEnd": 1,
+            "literalSha256": "50c6292bc7a4697fbf45cb7e0027a82b55d99b9519493fe30a4798961db4f8f4",
+            "fileSha256": "f95c279f41d8157d27ac579ffd5a70dd8e367d0bf89dfb237caa2ea3d8fe0753",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-027",
+            "semanticType": "PACKAGE_EXPORT_CONSUMER",
+            "path": "Codebase/packages/frontend/apps/electron-renderer/src/popup/setup.ts",
+            "literal": "import '@affine/core/bootstrap/electron';",
+            "lineStart": 1,
+            "lineEnd": 1,
+            "literalSha256": "50c6292bc7a4697fbf45cb7e0027a82b55d99b9519493fe30a4798961db4f8f4",
+            "fileSha256": "3a43178431f60712c28c512534b01be231398541066ccc35e023e2e8c53823ff",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-028",
+            "semanticType": "PRESERVATION_ANCHOR",
+            "path": "Codebase/packages/frontend/core/src/bootstrap/browser.ts",
+            "literal": "import './env';",
+            "lineStart": 2,
+            "lineEnd": 2,
+            "literalSha256": "a17562bb8f5470f781035cc956f03cf270d792fe026ba64d66844de6c0c8a40f",
+            "fileSha256": "1402ab2397beb6ca8590b90493779c45f3d186edca0af853db788e6da618d799",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-029",
+            "semanticType": "PRESERVATION_ANCHOR",
+            "path": "Codebase/packages/frontend/core/src/bootstrap/electron.ts",
+            "literal": "import './env';",
+            "lineStart": 2,
+            "lineEnd": 2,
+            "literalSha256": "a17562bb8f5470f781035cc956f03cf270d792fe026ba64d66844de6c0c8a40f",
+            "fileSha256": "294f0eb7ca5ae774eb1daa2ca2d4a8eb2aa8502df07d5cf5410ddaee4fad34ef",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          },
+          {
+            "anchorId": "MR-CAP-001-ANCHOR-030",
+            "semanticType": "PRESERVATION_ANCHOR",
+            "path": "Codebase/packages/frontend/core/src/bootstrap/cleanup.ts",
+            "literal": "function cleanupUnusedIndexedDB()",
+            "lineStart": 1,
+            "lineEnd": 1,
+            "literalSha256": "c883367bcecb4ffd2f3a25f5ea7788ae2b447d2d51d639e4101fc58c30403cfd",
+            "fileSha256": "72274d71fd1e43638b4368c2417214692e851d65b5d673e7f629af1494aac6d8",
+            "currentAuthorityStatus": "CURRENT_AUTHORITATIVE"
+          }
+        ]
+      }
     },
     {
       "capabilityId": "MR-CAP-002",

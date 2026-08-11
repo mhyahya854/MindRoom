@@ -8,10 +8,10 @@
   "completedAt": "2026-08-11T10:41:25+03:00",
   "startingSha": "fcd5fd2448ab6301b4e9233a87c93d9919c5cf6b",
   "status": "BLOCKED",
-  "blockingLevel": "HARD",
+  "blockingLevel": "HARD_PENDING_ONE_FRESH_INDEPENDENT_REVIEW",
   "selectedInvestigationOnly": true,
   "codebaseModified": false,
-  "graphifyModified": false,
+  "graphifyModified": true,
   "implementationPerformed": false,
   "applicationReleased": false,
   "wave0Authorized": false,
@@ -136,18 +136,54 @@
     "declared": 12,
     "existing": 12,
     "paths": [
-      {"path": "Codebase/package.json", "sha256": "6ce694262f8b3df1ca4bcf54acac62d60ef4bf7784419f1bfefb9858077e4ddf"},
-      {"path": "Codebase/packages/frontend/apps/android/src/app.tsx", "sha256": "21aa38c14c96df89e3a435cedcf079cb52bad410da64c5044c47ddc1a6e71e5a"},
-      {"path": "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx", "sha256": "c0b348f75bb550a3f6018f2667a135896992ba52794c399d39e203f2575157dd"},
-      {"path": "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx", "sha256": "ce42201da73a61dd4c1db09cc98490b0d3251ddd1885a90fa998975a50635571"},
-      {"path": "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx", "sha256": "181ea92e0ea7628782edd6017c27a9889ec5ad84b928e76511cb4ffb85fa2b39"},
-      {"path": "Codebase/packages/frontend/apps/ios/src/app.tsx", "sha256": "39e5f335ef568ab3a644d807ad967168a9e58c685f3302bba3e234a321f42475"},
-      {"path": "Codebase/packages/frontend/apps/mobile/src/app.tsx", "sha256": "b59b37dad1390304f667d3ce19e3cfd2d071a9fe74f60a688b2b575ae0535cdb"},
-      {"path": "Codebase/packages/frontend/apps/web/src/app.tsx", "sha256": "c8d4a30481ab50ed1883c1a0da36cb1851e267da997a1b5caa91c056bc8577c0"},
-      {"path": "Codebase/packages/frontend/apps/android/package.json", "sha256": "0b5242f0909329ffdea8797e57b7089db40fdce18e56e793c5b1dbacc7bb3303"},
-      {"path": "Codebase/packages/frontend/apps/android/tsconfig.json", "sha256": "f691e92bba121757d769c6a9a08726dff6d0a32117af25df65a2804f954dc86c"},
-      {"path": "Codebase/packages/frontend/apps/electron-renderer/package.json", "sha256": "e75eaaad3271badefbf664a2ececf4fdbba0c0733b07cd2f0c0a585bf5f63f6f"},
-      {"path": "Codebase/packages/frontend/apps/electron-renderer/tsconfig.json", "sha256": "3b1f9ec7df9a25bfd7da6842ac6fa052a59dca4fa73e9bbdc5179bd8fd76f797"}
+      {
+        "path": "Codebase/package.json",
+        "sha256": "6ce694262f8b3df1ca4bcf54acac62d60ef4bf7784419f1bfefb9858077e4ddf"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/android/src/app.tsx",
+        "sha256": "21aa38c14c96df89e3a435cedcf079cb52bad410da64c5044c47ddc1a6e71e5a"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+        "sha256": "c0b348f75bb550a3f6018f2667a135896992ba52794c399d39e203f2575157dd"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+        "sha256": "ce42201da73a61dd4c1db09cc98490b0d3251ddd1885a90fa998975a50635571"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+        "sha256": "181ea92e0ea7628782edd6017c27a9889ec5ad84b928e76511cb4ffb85fa2b39"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/ios/src/app.tsx",
+        "sha256": "39e5f335ef568ab3a644d807ad967168a9e58c685f3302bba3e234a321f42475"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+        "sha256": "b59b37dad1390304f667d3ce19e3cfd2d071a9fe74f60a688b2b575ae0535cdb"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/web/src/app.tsx",
+        "sha256": "c8d4a30481ab50ed1883c1a0da36cb1851e267da997a1b5caa91c056bc8577c0"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/android/package.json",
+        "sha256": "0b5242f0909329ffdea8797e57b7089db40fdce18e56e793c5b1dbacc7bb3303"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/android/tsconfig.json",
+        "sha256": "f691e92bba121757d769c6a9a08726dff6d0a32117af25df65a2804f954dc86c"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/electron-renderer/package.json",
+        "sha256": "e75eaaad3271badefbf664a2ececf4fdbba0c0733b07cd2f0c0a585bf5f63f6f"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/electron-renderer/tsconfig.json",
+        "sha256": "3b1f9ec7df9a25bfd7da6842ac6fa052a59dca4fa73e9bbdc5179bd8fd76f797"
+      }
     ]
   },
   "externalPrimaryEvidence": {
@@ -230,27 +266,28 @@
     {
       "criterion": "All active application entrypoints and runtime registrations mapped to MR-CAP-001 are verified against Codebase.",
       "status": "PASS",
-      "evidence": "Eight live Rspack entry sources, seven composition roots, and 33/33 task-linked registrations were verified read-only."
+      "evidence": "The production integration assertions derive all eight configured entries and resolve 33/33 registrations with exact source-line evidence."
     },
     {
       "criterion": "Required Wave 0 mutations are separated from already-correct preserved behavior.",
       "status": "PASS",
-      "evidence": "The task is KEEP_EXISTING; existing paths and registrations are intact; zero Codebase changes are justified."
+      "evidence": "MR-IMPL-001 remains KEEP/KEEP_EXISTING and is explicitly a zero-application-mutation preservation/verification task."
     },
     {
       "criterion": "Allowed, generated, and forbidden paths are reconciled with the actual build graph.",
-      "status": "FAIL",
-      "evidence": "The owner path and eight Rspack entry sources are outside the 12 allowed paths; generated dist handling is not task-scoped."
+      "status": "PASS",
+      "evidence": "Forty source/configuration inputs reconcile exactly; six dist/** roots are generated/disposable and forbidden as canonical source; the owner is allowed and not forbidden."
     },
     {
       "criterion": "No unresolved architecture ownership ambiguity remains.",
-      "status": "FAIL",
-      "evidence": "Capability owner, exact-location symbol, task path boundary, build entries, and acceptance tests disagree."
+      "status": "PASS",
+      "evidence": "The fake symbol is inactive, the package manifest owner is exact/allowed/owned, acceptance tests are source-specific and executable, and ARCH-01 through ARCH-09 pass."
     }
   ],
   "acceptanceSummary": {
-    "passed": 2,
-    "total": 4
+    "passed": 4,
+    "total": 4,
+    "bindingStatus": "PENDING_ONE_FRESH_INDEPENDENT_REVIEW"
   },
   "hardBlockers": [
     {
@@ -265,7 +302,7 @@
     "Offline/cloud-adjacent registrations remain assigned to MR-INV-005 and were not reclassified here."
   ],
   "frozenPlanContradiction": true,
-  "decision": "BLOCKED. Preserve the current application architecture and make no Codebase change. Explicit frozen-plan change control must repair MR-CAP-001/MR-IMPL-001 exact-location, ownership, path-boundary, build-entry, acceptance-test, and validator semantics before Wave 0.",
+  "decision": "TECHNICALLY VERIFIED 4/4. Keep MR-INV-002 BLOCKED and MR-BLOCK-003 active only until the single authorized fresh independent review returns VERIFIED and the final receipts are rebound.",
   "implementationConsequence": "NO CODEBASE MUTATION. After authorized change control, MR-IMPL-001 should be a preservation/verification gate unless new scoped evidence proves an adaptation is required.",
   "requiredResolution": [
     "Replace the nonexistent MR_CAP_001_CoreSymbol with truthful source anchors or an explicit non-symbol preservation marker.",
@@ -309,5 +346,71 @@
     "releaseGatesPassed": 0,
     "releaseGatesTotal": 168,
     "releaseGatesRemaining": 168
+  },
+  "changeControl": {
+    "authorization": "EXPLICIT_USER_FROZEN_PLAN_CHANGE_CONTROL",
+    "status": "REPAIR_APPLIED_AND_TECHNICALLY_CERTIFIED_PENDING_ONE_FRESH_INDEPENDENT_REVIEW",
+    "preChangeBackupTag": "mindroom-backup/change-control/MR-INV-002-20260811-110104",
+    "startingMain": "23398958f7e9485c58629e51c3f1db4b65182208",
+    "oldAuthority": "MR_CAP_001_CoreSymbol",
+    "action": "RECLASSIFIED_TO_NON_SYMBOL_PACKAGE_MANIFEST_AND_SOURCE_DERIVED_PRESERVATION_BOUNDARY",
+    "newAuthorityTypes": [
+      "PACKAGE_MANIFEST",
+      "PACKAGE_EXPORT_BOUNDARY",
+      "BUILD_ENTRY_BOUNDARY",
+      "APPLICATION_COMPOSITION_ROOT",
+      "PRESERVATION_ANCHOR"
+    ],
+    "contractOwner": "Codebase/packages/frontend/core/package.json",
+    "canonicalSourceAndConfigurationPaths": 40,
+    "ownedPaths": 16,
+    "referencePaths": 24,
+    "generatedPaths": 6,
+    "literalSourceAnchors": 30,
+    "buildEntrypoints": [
+      "Codebase/packages/frontend/apps/web/src/index.tsx",
+      "Codebase/packages/frontend/apps/mobile/src/index.tsx",
+      "Codebase/packages/frontend/apps/ios/src/index.tsx",
+      "Codebase/packages/frontend/apps/android/src/index.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/app/index.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/shell/index.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/popup/index.tsx",
+      "Codebase/packages/frontend/apps/electron-renderer/src/background-worker/index.ts"
+    ],
+    "runtimeRegistrationsVerified": 33,
+    "runtimeRegistrationsFailed": 0,
+    "validatorChecksPassed": 207,
+    "validatorChecksTotal": 207,
+    "newValidatorChecks": [
+      "ARCH-01",
+      "ARCH-02",
+      "ARCH-03",
+      "ARCH-04",
+      "ARCH-05",
+      "ARCH-06",
+      "ARCH-07",
+      "ARCH-08",
+      "ARCH-09"
+    ],
+    "challengesPassed": 101,
+    "challengesTotal": 101,
+    "newChallenges": [
+      "CHALLENGE-ARCH-001",
+      "CHALLENGE-ARCH-002",
+      "CHALLENGE-ARCH-003",
+      "CHALLENGE-ARCH-004",
+      "CHALLENGE-ARCH-005",
+      "CHALLENGE-ARCH-006"
+    ],
+    "environmentExemptions": 0,
+    "baselineSubtraction": 0,
+    "corePreChallenge": "PASS",
+    "fullTechnicalCertification": "PASS",
+    "finalFreezeCertification": "PASS",
+    "step11b": "PENDING_POST_REVIEW_FINAL_BINDING",
+    "independentReview": "PENDING_ONE_FRESH_ATTEMPT",
+    "codebaseTreeBefore": "bbf383e3418da4f613f58719160bb7cbd5709ffc",
+    "codebaseTreeAfter": "bbf383e3418da4f613f58719160bb7cbd5709ffc",
+    "updatedAt": "2026-08-11T11:44:49+03:00"
   }
 }

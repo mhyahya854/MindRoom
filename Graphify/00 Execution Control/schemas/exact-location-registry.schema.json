@@ -1,33 +1,56 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MindRoom exact-location registry",
   "type": "object",
-  "required": ["project", "phase", "entityCount", "entities", "implementationPerformed", "deletionOrQuarantinePerformed"],
+  "required": ["schemaVersion", "locations"],
   "properties": {
-    "project": {"const": "MindRoom"},
-    "phase": {"enum": ["GRAPHIFY_MAPPING", "GRAPHIFY_V2_MAPPING", "PRODUCT_EXPANSION_MAPPING"]},
-    "entityCount": {"type": "integer", "minimum": 0},
-    "implementationPerformed": {"const": false},
-    "deletionOrQuarantinePerformed": {"const": false},
-    "entities": {
-      "type": "array",
-      "items": {
+    "schemaVersion": {"type": "integer", "minimum": 1},
+    "sourceAnchorSemanticsVersion": {"type": "integer", "minimum": 2},
+    "locations": {
+      "type": "object",
+      "additionalProperties": {
         "type": "object",
-        "required": ["entityId", "entityType", "capabilityId", "capabilityIds", "currentStatus", "currentPath", "symbol", "uniqueAnchor", "lineRange", "fileSha256", "package", "intendedOwner", "intendedFinalPath", "dependencies", "dependants", "runtimeRegistrations", "tests", "plannedChanges", "verificationRequirements", "evidence"],
+        "required": ["paths", "symbols", "anchors", "status"],
         "properties": {
-          "entityId": {"type": "string", "pattern": "^MR-(?:FILE|SYM-V2|REG|SCHEMA|MIGRATION|ASSET|VENDOR|LOC|LOC-V2|REF|SQL-COLUMN|SQL-INDEX)-"},
-          "capabilityIds": {"type": "array", "items": {"type": "string"}},
-          "currentPath": {"type": "string"},
-          "fileSha256": {"type": "string"},
-          "dependencies": {"type": "array"},
-          "dependants": {"type": "array"},
-          "runtimeRegistrations": {"type": "array"},
-          "tests": {"type": "array"},
-          "plannedChanges": {"type": "array"},
-          "verificationRequirements": {"type": "array"},
-          "evidence": {"type": "array"}
+          "paths": {"type": "array", "items": {"type": "string", "pattern": "^Codebase/"}},
+          "symbols": {"type": "array"},
+          "anchors": {"type": "array", "items": {"type": "string"}},
+          "authorityStatus": {"enum": ["CURRENT_AUTHORITATIVE", "HISTORICAL_SUPERSEDED", "LEGACY_UNVERIFIED"]},
+          "authorityTypes": {
+            "type": "array",
+            "items": {
+              "enum": ["PACKAGE_MANIFEST", "PACKAGE_EXPORT_BOUNDARY", "BUILD_ENTRY_BOUNDARY", "APPLICATION_COMPOSITION_ROOT", "PRESERVATION_ANCHOR"]
+            }
+          },
+          "sourceAnchors": {
+            "type": "array",
+            "items": {"$ref": "#/$defs/sourceAnchor"}
+          },
+          "status": {"type": "string", "minLength": 1}
         },
         "additionalProperties": true
       }
+    }
+  },
+  "$defs": {
+    "sourceAnchor": {
+      "description": "A literal source assertion. PACKAGE_MANIFEST and PACKAGE_EXPORT_BOUNDARY anchors are JSON facts, not TypeScript symbols.",
+      "type": "object",
+      "required": ["anchorId", "semanticType", "path", "literal", "lineStart", "lineEnd", "literalSha256", "fileSha256", "currentAuthorityStatus"],
+      "properties": {
+        "anchorId": {"type": "string", "minLength": 1},
+        "semanticType": {
+          "enum": ["PACKAGE_MANIFEST", "PACKAGE_EXPORT_BOUNDARY", "BUILD_ENTRY_BOUNDARY", "APPLICATION_COMPOSITION_ROOT", "PRESERVATION_ANCHOR", "PACKAGE_EXPORT_CONSUMER", "GENERATED_OUTPUT_CLASSIFICATION", "TYPESCRIPT_EXPORTED_SYMBOL"]
+        },
+        "path": {"type": "string", "pattern": "^Codebase/"},
+        "literal": {"type": "string", "minLength": 1},
+        "lineStart": {"type": "integer", "minimum": 1},
+        "lineEnd": {"type": "integer", "minimum": 1},
+        "literalSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "fileSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "currentAuthorityStatus": {"const": "CURRENT_AUTHORITATIVE"}
+      },
+      "additionalProperties": true
     }
   },
   "additionalProperties": true

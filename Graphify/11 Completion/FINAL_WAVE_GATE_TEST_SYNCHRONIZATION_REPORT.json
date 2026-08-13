@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "repairRunId": "mindroom-graphify-final-gate-repair-20260801-132409",
+  "repairRunId": "mindroom-mr-inv-002-fourth-authority-discovery-change-control-20260813-160114",
   "createdAt": "2026-08-01T13:44:51.302880Z",
   "testCount": 338,
   "testWaveMetadataCorrections": [
@@ -2043,7 +2043,7 @@
     }
   ],
   "releaseGateMatrixHash": "e1f22a5949f1ad8f94090dd1be5170092440105b1b62cd449a809567c6e63727",
-  "testMatrixHash": "75d6813eb5062cbc6f70c453df01f7f9d6687b17d48f5ef75a44770fb803bba0",
+  "testMatrixHash": "88cd29e17db8ee028f020007b8b05c873306a6ef9b6b8e2913adb3ed35921a4d",
   "blockingDefects": [],
   "status": "PASS",
   "testRequirementMetadataCorrections": [
@@ -2056,5 +2056,7 @@
         "MR-REQ-PROHIBITION-AI-REMOTE-001"
       ]
     }
-  ]
+  ],
+  "regeneratedAt": "2026-08-13T16:01:14+03:00",
+  "regenerationReason": "MR-INV-002 fourth change control: dynamically discover and validate every current-authoritative MR-CAP-001/MR-IMPL-001 projection, including PUBLIC_ENTRYPOINT_PLAN"
 }

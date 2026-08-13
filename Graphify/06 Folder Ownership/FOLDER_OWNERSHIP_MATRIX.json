@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "timestamp": "2026-07-30T18:22:05.771Z",
   "folderOwners": {
-    "MR-CAP-001": "MindRoom Core General Engine",
+    "MR-CAP-001": "AFFiNE monorepo application composition and @affine/core package boundary",
     "MR-CAP-002": "MindRoom Core General Engine",
     "MR-CAP-003": "MindRoom Core General Engine",
     "MR-CAP-004": "MindRoom Core General Engine",

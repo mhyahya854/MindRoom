@@ -26,8 +26,17 @@ TASK_PATH = "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
 LINEAGE_PATH = "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
 GATE_PATH = "10 Verification/RELEASE_GATE_MATRIX.json"
 TEST_PATH = "10 Verification/REQUIREMENT_TEST_MATRIX.jsonl"
+EXACT_LOCATION_PATH = "04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json"
+CHANGE_LOCATION_PATH = "04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl"
+PUBLIC_ENTRYPOINT_PATH = "06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl"
+CAPABILITY_PATH_MAP_PATH = "06 Folder Ownership/CAPABILITY_TO_PATH_MAP.json"
+FOLDER_OWNERSHIP_PATH = "06 Folder Ownership/FOLDER_OWNERSHIP_MATRIX.json"
+AUTHORITY_CLASSIFICATION_PATH = "00 Execution Control/FINAL_AUTHORITY_CLASSIFICATION.jsonl"
 BACKUP_RECEIPT_PATH = "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json"
 LIVE_REPORT_PATH = "00 Execution Control/FINAL_FREEZE_VALIDATION_RESULT.json"
+DYNAMIC_AUTHORITY_ARTIFACT = "11 Completion/DYNAMIC_AUTHORITY_PROJECTION_ADVERSARIAL.jsonl"
+KEYED_AUTHORITY_ARTIFACT = "11 Completion/KEYED_AUTHORITY_PROJECTION_ADVERSARIAL.json"
+KEYED_AUTHORITY_VALUE_ARTIFACT = "11 Completion/KEYED_AUTHORITY_VALUE_PROJECTION_ADVERSARIAL.json"
 
 
 def load_validator():
@@ -197,7 +206,288 @@ def change_evidence_source(data, rows, owner_key, evidence_key, wrong_source):
     items[0]["sourceRequirementId"] = wrong_source
 
 
-def definition(challenge_id, mutation, relatives, expected, mutator, validation_mode="CORE_PRE_CHALLENGE"):
+def mr_impl_001(rows):
+    return next(row for row in rows if row.get("taskId") == "MR-IMPL-001")
+
+
+def mutate_missing_current_anchor(data):
+    row = data["locations"]["MR-CAP-001"]["sourceAnchors"][0]
+    row.update({
+        "semanticType": "TYPESCRIPT_EXPORTED_SYMBOL",
+        "literal": "export interface MR_CAP_001_AdversarialMissingSymbol",
+    })
+
+
+def mutate_owner_not_allowed(rows):
+    task = mr_impl_001(rows)
+    owner = task["contract"]["ownedPackageOrModule"]
+    task["allowedPaths"].remove(owner)
+
+
+def mutate_owner_caught_by_catchall(rows):
+    task = mr_impl_001(rows)
+    owner = task["contract"]["ownedPackageOrModule"]
+    task["allowedPaths"].remove(owner)
+    task["forbiddenPaths"].append("All paths not listed in allowedPaths")
+
+
+def mutate_required_build_entry_omitted(rows):
+    task = mr_impl_001(rows)
+    task["architecturePreservationContract"]["buildEntryPaths"].pop(0)
+
+
+def mutate_generated_output_as_canonical(rows):
+    task = mr_impl_001(rows)
+    generated_file = task["architecturePreservationContract"]["generatedOutputRoots"][0] + "/dist/adversarial.js"
+    task["allowedPaths"].append(generated_file)
+    task["ownedPaths"].append(generated_file)
+
+
+def mutate_acceptance_missing_anchor(rows):
+    test = next(row for row in rows if row.get("testId") == "TEST-MR-CAP-001-UNIT-001")
+    test["executableAssertions"][0] = {
+        "assertion": "SOURCE_LITERAL_PRESENT",
+        "path": "Codebase/packages/frontend/core/package.json",
+        "literal": "MR_CAP_001_AdversarialAcceptanceAnchor",
+    }
+
+
+def mr_cap_001(data):
+    return next(row for row in data["capabilities"] if row.get("capabilityId") == "MR-CAP-001")
+
+
+def mr_cap_001_change(rows):
+    return next(row for row in rows if row.get("capabilityId") == "MR-CAP-001")
+
+
+def remove_one_worker(projection):
+    worker = "Codebase/packages/frontend/apps/android/src/nbstore.worker.ts"
+    for field in ("workerEntryPaths", "allConfiguredEntryPaths", "buildEntryPaths"):
+        if worker in (projection.get(field) or []):
+            projection[field].remove(worker)
+
+
+def mutate_stale_capability_projection(data):
+    remove_one_worker(mr_cap_001(data)["architectureAuthority"])
+
+
+def mutate_stale_location_projection(rows):
+    consumer = "Codebase/packages/frontend/apps/android/src/setup-worker.ts"
+    mr_cap_001_change(rows)["architectureAuthority"]["bootstrapConsumerPaths"].remove(consumer)
+
+
+def mutate_stale_nested_task_projection(rows):
+    remove_one_worker(mr_impl_001(rows)["contract"]["architecturePreservationContract"])
+
+
+def mutate_stale_public_entrypoint(rows):
+    remove_one_worker(next(row for row in rows if row.get("entrypointId") == "ENTRY_MR-CAP-001"))
+
+
+def add_dynamic_authority_artifact(overrides, artifact_row, classification, current_authority):
+    classification_path = Path(overrides[AUTHORITY_CLASSIFICATION_PATH])
+    artifact_path = classification_path.parent / "dynamic-authority-projection-adversarial.jsonl"
+    write_jsonl(artifact_path, [artifact_row])
+    overrides[DYNAMIC_AUTHORITY_ARTIFACT] = str(artifact_path)
+
+    def append_classification(rows):
+        rows.append({
+            "path": DYNAMIC_AUTHORITY_ARTIFACT,
+            "classification": classification,
+            "currentAuthority": current_authority,
+            "reason": "Temporary adversarial authority-discovery candidate",
+        })
+
+    mutate_jsonl(classification_path, append_classification)
+
+
+def add_registered_authority_artifact(overrides, relative, document, classification, current_authority):
+    classification_path = Path(overrides[AUTHORITY_CLASSIFICATION_PATH])
+    artifact_path = classification_path.parent / Path(relative).name
+    write_json(artifact_path, document)
+    overrides[relative] = str(artifact_path)
+
+    def append_classification(rows):
+        rows.append({
+            "path": relative,
+            "classification": classification,
+            "currentAuthority": current_authority,
+            "reason": "Temporary key-aware authority-discovery candidate",
+        })
+
+    mutate_jsonl(classification_path, append_classification)
+
+
+def canonical_mr_cap_001_paths():
+    rows = [json.loads(line) for line in (ROOT / TASK_PATH).read_text(encoding="utf-8-sig").splitlines() if line.strip()]
+    return list(mr_impl_001(rows)["exactCurrentPaths"])
+
+
+def mutate_valid_generic_keyed_authority(overrides):
+    add_registered_authority_artifact(
+        overrides, KEYED_AUTHORITY_ARTIFACT,
+        {"MR-CAP-001": {"paths": canonical_mr_cap_001_paths()}},
+        "CURRENT_AUTHORITATIVE", True,
+    )
+
+
+def mutate_unknown_generic_keyed_authority(overrides):
+    add_registered_authority_artifact(
+        overrides, KEYED_AUTHORITY_ARTIFACT,
+        {"MR-CAP-001": {"architectureProjectionMystery": {"workerSources": ["Codebase/packages/frontend/apps/android/src/nbstore.worker.ts"]}}},
+        "CURRENT_AUTHORITATIVE", True,
+    )
+
+
+def mutate_stale_generic_keyed_authority(overrides, classification="CURRENT_AUTHORITATIVE", current_authority=True):
+    paths = canonical_mr_cap_001_paths()
+    paths.pop(0)
+    add_registered_authority_artifact(
+        overrides, KEYED_AUTHORITY_ARTIFACT,
+        {"MR-CAP-001": {"paths": paths}}, classification, current_authority,
+    )
+
+
+def mutate_historical_generic_keyed_authority(overrides):
+    mutate_stale_generic_keyed_authority(overrides, "HISTORICAL_SUPERSEDED", False)
+
+
+def mutate_key_value_equivalent_authorities(overrides):
+    paths = canonical_mr_cap_001_paths()
+    add_registered_authority_artifact(
+        overrides, KEYED_AUTHORITY_ARTIFACT,
+        {"MR-CAP-001": {"paths": paths}}, "CURRENT_AUTHORITATIVE", True,
+    )
+    add_registered_authority_artifact(
+        overrides, KEYED_AUTHORITY_VALUE_ARTIFACT,
+        {"capabilityId": "MR-CAP-001", "paths": paths}, "CURRENT_AUTHORITATIVE", True,
+    )
+
+
+def mutate_key_value_duplicate_authority(overrides):
+    add_registered_authority_artifact(
+        overrides, KEYED_AUTHORITY_ARTIFACT,
+        {"MR-CAP-001": {"capabilityId": "MR-CAP-001", "paths": canonical_mr_cap_001_paths()}},
+        "CURRENT_AUTHORITATIVE", True,
+    )
+
+
+def mutate_stale_capability_path_map(data):
+    data["MR-CAP-001"].pop(0)
+
+
+def mutate_stale_folder_ownership(data):
+    data["folderOwners"]["MR-CAP-001"] = "MindRoom Core General Engine"
+
+
+def keyed_projection_assertion(result, expected_artifacts, expected_locations=None):
+    discovery = result.get("derived", {}).get("architectureAuthorityDiscovery", {})
+    projections = discovery.get("scopedProjectionInventory") or []
+    rows = [row for row in projections if row.get("filePath") in expected_artifacts]
+    if len(rows) != len(expected_artifacts) or any(row.get("status") != "PASS" for row in rows):
+        return False
+    if expected_locations and {row.get("identityLocation") for row in rows} != set(expected_locations):
+        return False
+    return True
+
+
+def generic_keyed_projection_assertion(result):
+    return keyed_projection_assertion(result, {KEYED_AUTHORITY_ARTIFACT}, {"KEY"})
+
+
+def key_value_equivalence_assertion(result):
+    return keyed_projection_assertion(
+        result,
+        {KEYED_AUTHORITY_ARTIFACT, KEYED_AUTHORITY_VALUE_ARTIFACT},
+        {"KEY", "VALUE"},
+    )
+
+
+def key_value_duplicate_assertion(result):
+    discovery = result.get("derived", {}).get("architectureAuthorityDiscovery", {})
+    refs = [row for row in (discovery.get("keyedReferences") or []) if row.get("artifactPath") == KEYED_AUTHORITY_ARTIFACT]
+    summary = discovery.get("referenceSummary") or {}
+    return len(refs) == 1 and refs[0].get("identityLocation") == "BOTH" and summary.get("keyValueDuplicateRecords", 0) > 0
+
+
+def mutate_unknown_current_authority(overrides):
+    add_dynamic_authority_artifact(overrides, {
+        "capabilityId": "MR-CAP-001",
+        "taskId": "MR-IMPL-001",
+        "architectureProjectionMystery": {
+            "workerSources": ["Codebase/packages/frontend/apps/android/src/nbstore.worker.ts"],
+        },
+    }, "CURRENT_AUTHORITATIVE", True)
+
+
+def stale_known_schema_row():
+    return {
+        "capabilityId": "MR-CAP-001",
+        "taskId": "MR-IMPL-001",
+        "workerEntryPaths": ["Codebase/packages/frontend/apps/web/src/nbstore.worker.ts"],
+    }
+
+
+def mutate_new_stale_known_current_authority(overrides):
+    add_dynamic_authority_artifact(overrides, stale_known_schema_row(), "CURRENT_AUTHORITATIVE", True)
+
+
+def mutate_stale_historical_authority(overrides):
+    add_dynamic_authority_artifact(overrides, stale_known_schema_row(), "HISTORICAL_SUPERSEDED", False)
+
+
+def mutate_all_noncanonical_copies_stale(overrides):
+    capability_path = Path(overrides[CAPABILITY_PATH])
+    capability_data = json.loads(capability_path.read_text(encoding="utf-8-sig"))
+    capability = mr_cap_001(capability_data)
+    for projection in (
+        capability["contract"]["architecturePreservationContract"],
+        capability["implementationContract"]["architecturePreservationContract"],
+        capability["architectureAuthority"],
+    ):
+        remove_one_worker(projection)
+    write_json(capability_path, capability_data)
+
+    location_path = Path(overrides[CHANGE_LOCATION_PATH])
+    location_rows = [json.loads(line) for line in location_path.read_text(encoding="utf-8-sig").splitlines() if line.strip()]
+    location = mr_cap_001_change(location_rows)
+    for projection in (location["contract"]["architecturePreservationContract"], location["architectureAuthority"]):
+        remove_one_worker(projection)
+    write_jsonl(location_path, location_rows)
+
+    task_path = Path(overrides[TASK_PATH])
+    task_rows = [json.loads(line) for line in task_path.read_text(encoding="utf-8-sig").splitlines() if line.strip()]
+    mutate_stale_nested_task_projection(task_rows)
+    write_jsonl(task_path, task_rows)
+
+
+def remove_path_identity(value, target):
+    """Remove a source path from every temporary Graphify projection."""
+    if isinstance(value, list):
+        retained = []
+        for item in value:
+            if isinstance(item, str) and (item == target or item.startswith(target + "::") or item.startswith(target + "#")):
+                continue
+            if isinstance(item, dict) and any(item.get(key) == target for key in ("path", "currentPath", "consumerPath", "entryPath")):
+                continue
+            retained.append(remove_path_identity(item, target))
+        value[:] = retained
+    elif isinstance(value, dict):
+        for key in list(value):
+            value[key] = remove_path_identity(value[key], target)
+    return value
+
+
+def mutate_remove_path_from_all_overrides(overrides, target):
+    for relative, path_value in overrides.items():
+        path = Path(path_value)
+        if relative.endswith(".jsonl"):
+            mutate_jsonl(path, lambda rows: remove_path_identity(rows, target))
+        elif relative.endswith(".json"):
+            mutate_json(path, lambda data: remove_path_identity(data, target))
+
+
+def definition(challenge_id, mutation, relatives, expected, mutator, validation_mode="CORE_PRE_CHALLENGE", expected_status="FAIL", result_assertion=None):
     return {
         "challengeId": challenge_id,
         "mutation": mutation,
@@ -205,6 +495,8 @@ def definition(challenge_id, mutation, relatives, expected, mutator, validation_
         "expectedFailedCheckIds": expected,
         "mutator": mutator,
         "validationMode": validation_mode,
+        "expectedStatus": expected_status,
+        "resultAssertion": result_assertion,
     }
 
 
@@ -311,6 +603,31 @@ CHALLENGE_DEFINITIONS = [
     definition("CHALLENGE-FROZEN-SYNC-GENERATION-001", "Regress final synchronization generation to candidate", ["11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"], ["SYNC-01"], lambda o: mutate_json(Path(o["11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"]), lambda data: data.__setitem__("synchronizationGeneration", "FINAL_AUTHORITY_CANDIDATE"))),
     definition("CHALLENGE-FROZEN-SYNC-MANIFEST-001", "Regress final synchronization to the candidate manifest", ["11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"], ["SYNC-04"], lambda o: mutate_json(Path(o["11 Completion/FINAL_SYNCHRONIZATION_REPORT.json"]), lambda data: data.__setitem__("manifestPath", "11 Completion/FINAL_GATE_REPAIR_MANIFEST_CANDIDATE.jsonl"))),
     definition("CHALLENGE-FROZEN-VALIDATION-MODE-001", "Regress the persisted frozen validation result to full technical mode", [LIVE_REPORT_PATH], ["CERT-01"], lambda o: mutate_json(Path(o[LIVE_REPORT_PATH]), lambda data: (data.__setitem__("validationMode", "FULL_TECHNICAL_CERTIFICATION"), (data.get("validationResult") or {}).setdefault("derived", {}).__setitem__("validationMode", "FULL_TECHNICAL_CERTIFICATION")))),
+    definition("CHALLENGE-ARCH-001", "Claim a nonexistent TypeScript literal symbol in a current-authoritative JSON exact-location record", [EXACT_LOCATION_PATH], ["ARCH-01"], lambda o: mutate_json(Path(o[EXACT_LOCATION_PATH]), mutate_missing_current_anchor)),
+    definition("CHALLENGE-ARCH-002", "Exclude the architecture contract owner from allowedPaths", [TASK_PATH], ["ARCH-02"], lambda o: mutate_jsonl(Path(o[TASK_PATH]), mutate_owner_not_allowed)),
+    definition("CHALLENGE-ARCH-003", "Catch the architecture contract owner with the forbidden catch-all", [TASK_PATH], ["ARCH-02", "ARCH-03"], lambda o: mutate_jsonl(Path(o[TASK_PATH]), mutate_owner_caught_by_catchall)),
+    definition("CHALLENGE-ARCH-004", "Omit one source-required Rspack entry from the declared preservation boundary", [TASK_PATH], ["ARCH-04"], lambda o: mutate_jsonl(Path(o[TASK_PATH]), mutate_required_build_entry_omitted)),
+    definition("CHALLENGE-ARCH-005", "Treat a generated dist file as an allowed owned canonical source", [TASK_PATH], ["ARCH-05"], lambda o: mutate_jsonl(Path(o[TASK_PATH]), mutate_generated_output_as_canonical)),
+    definition("CHALLENGE-ARCH-006", "Make an MR-CAP-001 acceptance test require a nonexistent literal source anchor", [TEST_PATH], ["ARCH-06"], lambda o: mutate_jsonl(Path(o[TEST_PATH]), mutate_acceptance_missing_anchor)),
+    definition("CHALLENGE-ARCH-007", "Remove a live configured worker entry from every temporary Graphify declaration while leaving Codebase source intact", [CAPABILITY_PATH, "03 Capability Map/CAPABILITY_EVIDENCE.jsonl", "03 Capability Map/CAPABILITY_SOURCE_SEARCH_RECEIPTS.jsonl", "04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl", EXACT_LOCATION_PATH, "06 Folder Ownership/CAPABILITY_TO_PATH_MAP.json", "06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl", "07 Reorganisation/MOVE_PLAN.jsonl", TASK_PATH, "09 Implementation/TRANSPLANT_RECEIPTS.jsonl", "09 Implementation/TRANSPLANT_SEARCH_QUEUE.jsonl", "02 Architecture Map/WORKER_MAP.jsonl"], ["ARCH-04"], lambda o: mutate_remove_path_from_all_overrides(o, "Codebase/packages/frontend/apps/android/src/nbstore.worker.ts")),
+    definition("CHALLENGE-ARCH-008", "Remove a live bootstrap consumer from every temporary Graphify declaration while leaving Codebase source intact", [CAPABILITY_PATH, "03 Capability Map/CAPABILITY_EVIDENCE.jsonl", "03 Capability Map/CAPABILITY_SOURCE_SEARCH_RECEIPTS.jsonl", "04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl", EXACT_LOCATION_PATH, "06 Folder Ownership/CAPABILITY_TO_PATH_MAP.json", "06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl", "07 Reorganisation/MOVE_PLAN.jsonl", TASK_PATH, "09 Implementation/TRANSPLANT_RECEIPTS.jsonl", "09 Implementation/TRANSPLANT_SEARCH_QUEUE.jsonl"], ["ARCH-08"], lambda o: mutate_remove_path_from_all_overrides(o, "Codebase/packages/frontend/apps/android/src/setup-worker.ts")),
+    definition("CHALLENGE-ARCH-009", "Remove one real worker from only the CAPABILITY_REGISTRY architecture projection while source and canonical task authority remain correct", [CAPABILITY_PATH], ["ARCH-11"], lambda o: mutate_json(Path(o[CAPABILITY_PATH]), mutate_stale_capability_projection)),
+    definition("CHALLENGE-ARCH-010", "Remove one real bootstrap consumer from only the CHANGE_LOCATION_REGISTRY architecture projection while canonical authority remains correct", [CHANGE_LOCATION_PATH], ["ARCH-12"], lambda o: mutate_jsonl(Path(o[CHANGE_LOCATION_PATH]), mutate_stale_location_projection)),
+    definition("CHALLENGE-ARCH-011", "Remove one real worker from only the nested MR-IMPL-001 contract while the top-level canonical contract remains correct", [TASK_PATH], ["ARCH-14"], lambda o: mutate_jsonl(Path(o[TASK_PATH]), mutate_stale_nested_task_projection)),
+    definition("CHALLENGE-ARCH-012", "Keep the top-level canonical task topology correct while all capability, location, and nested task copies are stale", [CAPABILITY_PATH, CHANGE_LOCATION_PATH, TASK_PATH], ["ARCH-11", "ARCH-12", "ARCH-14", "ARCH-17"], mutate_all_noncanonical_copies_stale),
+    definition("CHALLENGE-ARCH-013", "Remove one live worker only from PUBLIC_ENTRYPOINT_PLAN and require automatic dynamic discovery", [PUBLIC_ENTRYPOINT_PATH], ["ARCH-17", "ARCH-21", "ARCH-22"], lambda o: mutate_jsonl(Path(o[PUBLIC_ENTRYPOINT_PATH]), mutate_stale_public_entrypoint)),
+    definition("CHALLENGE-ARCH-014", "Add an unknown current-authoritative MR-CAP-001/MR-IMPL-001 semantic structure and require fail-closed classification", [AUTHORITY_CLASSIFICATION_PATH], ["ARCH-19", "ARCH-20"], mutate_unknown_current_authority),
+    definition("CHALLENGE-ARCH-015", "Add a new current-authoritative known-schema topology projection with a stale worker set", [AUTHORITY_CLASSIFICATION_PATH], ["ARCH-17", "ARCH-22"], mutate_new_stale_known_current_authority),
+    definition("CHALLENGE-ARCH-016", "Add a stale known-schema projection classified historical/superseded and prove it is excluded from current authority", [AUTHORITY_CLASSIFICATION_PATH], [], mutate_stale_historical_authority, expected_status="PASS"),
+    definition("CHALLENGE-ARCH-017", "Promote the same stale known-schema projection to current authority and require dynamic rejection", [AUTHORITY_CLASSIFICATION_PATH], ["ARCH-17", "ARCH-22"], mutate_new_stale_known_current_authority),
+    definition("CHALLENGE-KEY-001", "Register a filename-agnostic valid MR-CAP-001 dictionary-key path projection and prove automatic discovery, classification, and validation", [AUTHORITY_CLASSIFICATION_PATH], [], mutate_valid_generic_keyed_authority, expected_status="PASS", result_assertion=generic_keyed_projection_assertion),
+    definition("CHALLENGE-KEY-002", "Remove one canonical path only from the keyed CAPABILITY_TO_PATH_MAP MR-CAP-001 projection", [CAPABILITY_PATH_MAP_PATH], ["ARCH-24"], lambda o: mutate_json(Path(o[CAPABILITY_PATH_MAP_PATH]), mutate_stale_capability_path_map)),
+    definition("CHALLENGE-KEY-003", "Contradict only the keyed FOLDER_OWNERSHIP_MATRIX MR-CAP-001 owner projection", [FOLDER_OWNERSHIP_PATH], ["ARCH-25"], lambda o: mutate_json(Path(o[FOLDER_OWNERSHIP_PATH]), mutate_stale_folder_ownership)),
+    definition("CHALLENGE-KEY-004", "Register a new current-authoritative key-only MR-CAP-001 projection with unknown semantics and require fail-closed handling", [AUTHORITY_CLASSIFICATION_PATH], ["ARCH-19", "ARCH-20"], mutate_unknown_generic_keyed_authority),
+    definition("CHALLENGE-KEY-005", "Register a stale keyed MR-CAP-001 path projection as historical/superseded and prove it remains inactive", [AUTHORITY_CLASSIFICATION_PATH], [], mutate_historical_generic_keyed_authority, expected_status="PASS"),
+    definition("CHALLENGE-KEY-006", "Promote the stale keyed MR-CAP-001 path projection to current authority and require scoped rejection", [AUTHORITY_CLASSIFICATION_PATH], ["ARCH-17", "ARCH-22"], mutate_stale_generic_keyed_authority),
+    definition("CHALLENGE-KEY-007", "Register equivalent key-based and value-based MR-CAP-001 path projections and require equivalent validation", [AUTHORITY_CLASSIFICATION_PATH], [], mutate_key_value_equivalent_authorities, expected_status="PASS", result_assertion=key_value_equivalence_assertion),
+    definition("CHALLENGE-KEY-008", "Register one MR-CAP-001 path record carrying the identity in both key and value and require one deduplicated semantic record", [AUTHORITY_CLASSIFICATION_PATH], [], mutate_key_value_duplicate_authority, expected_status="PASS", result_assertion=key_value_duplicate_assertion),
 ]
 
 
@@ -322,6 +639,7 @@ def get_challenge_definitions():
             "mutation": row["mutation"],
             "relatives": list(row["relatives"]),
             "expectedFailedCheckIds": list(row["expectedFailedCheckIds"]),
+            "expectedStatus": row["expectedStatus"],
         }
         for row in CHALLENGE_DEFINITIONS
     ]
@@ -438,17 +756,26 @@ def main():
     challenges = []
     try:
         for challenge_definition in CHALLENGE_DEFINITIONS:
-            overrides, temporary = copy_overrides(temp_root, challenge_definition["relatives"])
+            challenge_root = temp_root / challenge_definition["challengeId"]
+            challenge_root.mkdir(parents=True, exist_ok=True)
+            overrides, temporary = copy_overrides(challenge_root, challenge_definition["relatives"])
             challenge_definition["mutator"](overrides)
+            temporary = sorted(overrides)
             result = validator.do_strict_validation(
                 overrides,
                 validation_mode=challenge_definition["validationMode"],
-                candidate_root=temp_root,
+                candidate_root=challenge_root,
                 temporary_challenge_id=challenge_definition["challengeId"],
             )
             actual = sorted(failed_ids(result))
             expected = sorted(challenge_definition["expectedFailedCheckIds"])
-            passed = result["status"] == "FAIL" and set(expected).issubset(actual)
+            expected_status = challenge_definition["expectedStatus"]
+            result_assertion = challenge_definition.get("resultAssertion")
+            result_assertion_passed = result_assertion is None or bool(result_assertion(result))
+            passed = result["status"] == expected_status and (
+                (expected_status == "PASS" and not actual)
+                or (expected_status == "FAIL" and set(expected).issubset(actual))
+            ) and result_assertion_passed
             challenges.append({
                 "challengeId": challenge_definition["challengeId"],
                 "mutation": challenge_definition["mutation"],
@@ -461,12 +788,14 @@ def main():
                 "baselineFailedCheckIds": [],
                 "documentedEnvironmentFailures": [],
                 "environmentExemptions": [],
-                "expectedStatus": "FAIL",
+                "expectedStatus": expected_status,
                 "actualStatus": result["status"],
                 "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
                 "overridesUsed": True,
                 "temporaryChallengeId": challenge_definition["challengeId"],
                 "independentExpectedEvidence": {"source": "immutable challenge specification", "checkIds": expected},
+                "resultAssertionRequired": result_assertion is not None,
+                "resultAssertionPassed": result_assertion_passed,
                 "passed": passed,
             })
         challenge_count = len(challenges)

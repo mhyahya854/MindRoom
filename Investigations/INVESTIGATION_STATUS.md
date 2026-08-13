@@ -1,73 +1,64 @@
 # MindRoom Pre-Code Investigation Status
 
-Updated: 2026-08-11T10:41:25+03:00
+Updated: 2026-08-13T22:56:09+03:00
 
 ## Control state
 
-- Starting GitHub main: `fcd5fd2448ab6301b4e9233a87c93d9919c5cf6b`
-- Investigation stage: `PRE_CODE_INVESTIGATION`
-- Completed investigation: `MR-INV-001 — Shared package bootstrap boundary and ownership`
-- Selected investigation: `MR-INV-002 — Wave 0 application architecture preservation boundary` (`BLOCKED`)
-- Wave 0 authorized: **NO**
-- Wave 0 state: `READY_NOT_STARTED`
-- Codebase execution: `BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION`
-- Codebase modified: **NO**
-
-## Investigation progress
-
-- Total investigations: **9**
-- Complete: **1**
-- Pending: **7**
-- Blocked: **1**
-- Investigation completion: **11.11%**
-- Investigations remaining: **8**
-- Active hard blockers: **1**
-
-## Active hard blocker
-
-- `MR-BLOCK-003`: **ACTIVE** — the frozen `MR-CAP-001`/`MR-IMPL-001` exact-location, owner, path-boundary, build-entry, and acceptance-test semantics contradict the hash-matching Codebase. Explicit frozen-plan change control is required.
-- Codebase decision: **KEEP EXISTING; NO CODEBASE MUTATION**.
-- Frozen-plan contradiction: **YES**.
-- User decision required: **NO**.
-
-## Resolved change control
-
-- `MR-BLOCK-001`: **RESOLVED** — bootstrap ownership is canonically `MR-CAP-001`; `MR-CAP-160` retains primary task `MR-IMPL-160`.
-- `MR-BLOCK-002`: **RESOLVED** — current backup backend is `GITHUB_NATIVE_IMMUTABLE_GIT_REF`; historical laptop paths are nonactive.
-- Pre-change GitHub tag: `mindroom-backup/change-control/20260809-103711` (**VERIFIED**)
-- Persistent laptop backup required: **FALSE**
-- Core certification: **PASS**
-- Full certification: **PASS**
-- Final freeze certification: **PASS** (198 checks, 0 failures)
-- Challenges: **PASS** (95/95, 0 exemptions, 0 baseline subtraction)
-- Step 11b: **PASS**
-
-The passing structural certification does not validate literal source-anchor existence or semantic agreement between the capability owner and task allowed paths. `MR-INV-002` independently proved that gap.
-
-## Canonical implementation progress
-
-- Canonical implementation tasks completed: **0 / 162**
-- Implementation completion: **0.00%**
-- Implementation tasks remaining: **162**
+- Published starting main: `23398958f7e9485c58629e51c3f1db4b65182208`
+- Selected investigation: `MR-INV-002` (`COMPLETE`)
+- `MR-BLOCK-003`: `RESOLVED`
+- Fifth-attempt backup tag: `mindroom-backup/change-control/MR-INV-002-key-aware-discovery-20260813-220037` (`VERIFIED`)
+- Failed fourth candidate: `wip/MR-INV-002-fourth-failed-change-control-20260813-215856` at `9a4ab6b7d9a4f39b93d97d02e10c2a324535b9c8` (`HISTORICAL_FAILED_CANDIDATE`, non-authoritative, do not merge wholesale)
+- Earlier failed candidates remain preserved in the investigation ledger.
+- Wave 0 started: **NO**
 - Implementation performed: **NO**
 - Application released: **NO**
+- Codebase modified: **NO**
 
-## Release-gate progress
+## Fifth key-aware change control
 
-- Wave gates passed: **0 / 6**
-- Capability validation gates passed: **0 / 161**
-- Application release gates passed: **0 / 1**
-- All canonical gates passed: **0 / 168**
-- Canonical gates remaining: **168**
+- Source-derived entries: **8 application + 9 worker = 17 configured**
+- Composition roots: **7**
+- Bootstrap consumers/imports/targets: **12 / 16 / 3**
+- Runtime registrations: **33 / 33**
+- Generated roots: **6**
+- Current-authority artifacts: **178**
+- Structured artifacts traversed: **133 / 133**
+- Relevant current-authority artifacts: **47**
+- Key-discovered relevant artifacts: **3**
+- Value-discovered relevant artifacts: **45**
+- Reviewed semantic references: **3149 / 3149 classified and validated**
+- Unclassified / unvalidated / silently ignored: **0 / 0 / 0**
+- Validator vs independent pre-review artifacts: **47 / 47; missing 0; unexpected 0**
+- `CAPABILITY_TO_PATH_MAP`: **automatically key-discovered; 53 / 53 paths; PASS**
+- `FOLDER_OWNERSHIP_MATRIX`: **automatically key-discovered; scoped owner agreement; PASS**
+- `PUBLIC_ENTRYPOINT_PLAN`: **value-discovered and synchronized; PASS**
+- Validator: **224 / 224 PASS**
+- Production challenges: **120 / 120 PASS**
+- New keyed challenges: **8 / 8 PASS**
+- Environment exemptions / baseline subtraction: **0 / 0**
+- Step 11b: **PASS**
+- Fresh fifth-attempt independent reviews authorized / used: **1 / 1**
+- Independent verdict: **VERIFIED**
+- Acceptance criteria: **4 / 4 PASS**
 
-## Distance from 100%
+## Preservation
 
-- Planning/freeze remaining: **1 active frozen-plan change-control blocker; structural frozen certification still passes**
-- Investigations remaining: **8**
-- Canonical implementation remaining: **100.00%**
-- Implementation tasks remaining: **162**
-- Release gates remaining: **168**
+- Codebase Git tree before/after: `bbf383e3418da4f613f58719160bb7cbd5709ffc`
+- Files/directories: **10080 / 2548**
+- Aggregate SHA-256: `91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748`
+- Codebase diff/staged paths: **0 / 0**
+- `MR-IMPL-001` action: `KEEP_EXISTING`
+- Wave 0: `READY_NOT_STARTED`
 
-## Current decision
+## Progress
 
-`MR-INV-002 = BLOCKED`. Do not begin another investigation or Wave 0. Publish and resolve `MR-BLOCK-003` through explicit frozen-plan change control, then independently re-certify before continuation.
+- Investigations complete: **2 / 9**
+- Investigations blocked: **0**
+- Investigations remaining: **7**
+- Canonical implementation: **0 / 162**
+- Canonical release gates passed: **0 / 168**
+
+## Stop condition
+
+`MR-INV-002` is complete and `MR-BLOCK-003` is resolved. Stop before `MR-INV-003` and before Wave 0.

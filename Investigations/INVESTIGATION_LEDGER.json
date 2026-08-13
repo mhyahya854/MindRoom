@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "project": "MindRoom",
   "frozenPlanningBaseline": "bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd",
-  "currentRemoteMainAtLastRun": "fcd5fd2448ab6301b4e9233a87c93d9919c5cf6b",
+  "currentRemoteMainAtLastRun": "23398958f7e9485c58629e51c3f1db4b65182208",
   "stage": "PRE_CODE_INVESTIGATION",
-  "lastRunAt": "2026-08-11T10:41:25+03:00",
+  "lastRunAt": "2026-08-13T22:56:09+03:00",
   "investigations": [
     {
       "id": "MR-INV-001",
@@ -123,12 +123,14 @@
         "No unresolved architecture ownership ambiguity remains."
       ],
       "priority": "CRITICAL",
-      "blockingLevel": "HARD",
-      "status": "BLOCKED",
-      "decision": "BLOCKED. The live application composition and all 33 task-linked registrations are healthy and MR-IMPL-001 should require no Codebase rewrite, but the frozen MR-CAP-001 authority claims a nonexistent TypeScript symbol in @affine/core/package.json, disagrees on the owner and allowed paths, omits the actual Rspack entry sources, and defines acceptance tests that cannot truthfully verify the KEEP architecture contract. Explicit frozen-plan change control is required before Wave 0.",
+      "blockingLevel": "NONE",
+      "status": "COMPLETE",
+      "decision": "Fifth key-aware change control passed 224/224 checks, 120/120 challenges, Step 11b, 47-vs-47 independent discovery equality, and exactly one fresh independent review (VERIFIED). All 4/4 criteria pass; MR-BLOCK-003 is resolved.",
       "evidencePaths": [
         "Investigations/Evidence/MR-INV-002/REPORT.md",
-        "Investigations/Evidence/MR-INV-002/EVIDENCE.json"
+        "Investigations/Evidence/MR-INV-002/EVIDENCE.json",
+        "Investigations/Evidence/MR-INV-002/TOPOLOGY_RECONCILIATION.json",
+        "Investigations/Evidence/MR-INV-002/AUTHORITY_DISCOVERY_REPORT.json"
       ],
       "primarySources": [
         "Graphify/12 Source Documents/AFFINE_PROVENANCE.md",
@@ -136,11 +138,64 @@
         "Graphify/14 AFFiNE Reference/Reference Tree/tools/cli/src/bundle.ts"
       ],
       "codebaseChangeRequiredNext": false,
-      "frozenPlanContradiction": true,
-      "notes": "Two of four acceptance criteria passed. All 33 runtime registrations and the real entry graph were verified read-only, but owner/path/test contradictions block completion. FINAL_FREEZE_CERTIFICATION and Step 11b still pass, proving a semantic validator gap rather than filesystem drift.",
-      "blockerIds": [
-        "MR-BLOCK-003"
-      ]
+      "frozenPlanContradiction": false,
+      "notes": "Attempts 1-4 remain truthful failed history on non-authoritative WIP branches. Attempt 5 generically inspects dictionary keys and values, covers CAPABILITY_TO_PATH_MAP, FOLDER_OWNERSHIP_MATRIX, and PUBLIC_ENTRYPOINT_PLAN, fails closed on unknown keyed authority, preserves Codebase, and stops before MR-INV-003/Wave 0.",
+      "blockerIds": [],
+      "thirdChangeControl": {
+        "preChangeBackupTag": "mindroom-backup/change-control/MR-INV-002-sync-retry-20260811-144948",
+        "secondFailedCandidateBranch": "wip/MR-INV-002-second-failed-change-control-20260811-144854",
+        "secondFailedCandidateCommit": "cd601b3884b5fff5e2202aa6c1092dc3aa48b44b",
+        "validatorChecks": "215/215",
+        "challenges": "107/107",
+        "step11b": "PASS",
+        "semanticPreReviewGate": "PASS",
+        "independentReview": "FAILED",
+        "reviewDefect": "Manual discovery omitted PUBLIC_ENTRYPOINT_PLAN; stale temporary authority was not rejected.",
+        "failedCandidateBranch": "wip/MR-INV-002-third-failed-change-control-20260813-153400",
+        "failedCandidateCommit": "11945f02b8623193e591ce2c53bc5df882d94a45",
+        "codebaseModified": false
+      },
+      "fourthChangeControl": {
+        "preChangeBackupTag": "mindroom-backup/change-control/MR-INV-002-authority-discovery-20260813-153457",
+        "authorityArtifacts": 178,
+        "relevantArtifacts": 45,
+        "referenceHits": "3462/3462 classified and validated",
+        "unclassifiedOrUnvalidated": 0,
+        "silentlyIgnored": 0,
+        "publicEntrypointPlan": "AUTO_DISCOVERED_PASS",
+        "validatorChecks": "220/220",
+        "challenges": "112/112",
+        "step11b": "PASS",
+        "exhaustivePreReviewGate": "PASS",
+        "independentReview": "FAILED",
+        "codebaseModified": false,
+        "reviewDefect": "Dictionary keys were not treated as authority identities; CAPABILITY_TO_PATH_MAP and FOLDER_OWNERSHIP_MATRIX were missed.",
+        "failedCandidateBranch": "wip/MR-INV-002-fourth-failed-change-control-20260813-215856",
+        "failedCandidateCommit": "9a4ab6b7d9a4f39b93d97d02e10c2a324535b9c8"
+      },
+      "fifthChangeControl": {
+        "preChangeBackupTag": "mindroom-backup/change-control/MR-INV-002-key-aware-discovery-20260813-220037",
+        "authorityArtifacts": 178,
+        "relevantArtifacts": 47,
+        "keyRelevantArtifacts": 3,
+        "valueRelevantArtifacts": 45,
+        "references": "3149/3149 classified and validated at reviewed gate",
+        "unclassifiedOrUnvalidated": 0,
+        "silentlyIgnored": 0,
+        "capabilityToPathMap": "AUTO_DISCOVERED_KEY_PASS",
+        "folderOwnershipMatrix": "AUTO_DISCOVERED_KEY_PASS",
+        "publicEntrypointPlan": "AUTO_DISCOVERED_VALUE_PASS",
+        "validatorChecks": "224/224",
+        "challenges": "120/120",
+        "newKeyAwareChallenges": "8/8",
+        "step11b": "PASS",
+        "preReviewGate": "PASS_47_EQUALS_47",
+        "independentReview": "VERIFIED",
+        "reviewSessionId": "mindroom-mr-inv-002-fifth-key-aware-independent-review-20260813-225609",
+        "acceptanceCriteria": "4/4",
+        "codebaseModified": false,
+        "wave0": "READY_NOT_STARTED"
+      }
     },
     {
       "id": "MR-INV-003",
@@ -464,7 +519,7 @@
       "notes": "Derived from the canonical dependency audit, which makes the bootstrap a prerequisite of all six primary Wave 0 tasks."
     }
   ],
-  "publicationState": "MR-INV-002_BLOCKED_PENDING_COMMIT_AND_PUSH",
-  "publicationParent": "fcd5fd2448ab6301b4e9233a87c93d9919c5cf6b",
-  "publicationCommitMessage": "Investigate MindRoom MR-INV-002: Wave 0 architecture preservation boundary"
+  "publicationState": "MR_INV_002_FIFTH_CHANGE_CONTROL_VERIFIED_READY_FOR_PUBLICATION",
+  "publicationParent": "23398958f7e9485c58629e51c3f1db4b65182208",
+  "publicationCommitMessage": "Resolve MR-INV-002 key-aware authority discovery"
 }

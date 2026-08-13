@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "project": "MindRoom",
   "stage": "PRE_CODE_INVESTIGATION",
-  "lastUpdatedAt": "2026-08-11T10:41:25+03:00",
+  "lastUpdatedAt": "2026-08-13T22:56:09+03:00",
   "blockers": [
     {
       "blockerId": "MR-BLOCK-001",
@@ -105,17 +105,101 @@
       "frozenPlanChangeControlRequired": true,
       "userInputRequired": false,
       "externalDependencyRequired": false,
-      "status": "ACTIVE",
+      "status": "RESOLVED",
       "lifecycle": [
         {
           "state": "DISCOVERED",
           "discoveredAt": "2026-08-11T10:41:25+03:00",
           "evidencePath": "Investigations/Evidence/MR-INV-002/EVIDENCE.json",
           "meaning": "MR-INV-002 proved the current Codebase architecture is preservable but the frozen owner, exact-location, task-path, build-entry, and test records are not semantically coherent."
+        },
+        {
+          "state": "CHANGE_CONTROL_AUTHORIZED",
+          "authorization": "Explicit user frozen-plan change-control request",
+          "meaning": "First repair attempt authorized."
+        },
+        {
+          "state": "FIRST_REPAIR_REVIEW_FAILED",
+          "defect": "Worker-entry and bootstrap-consumer omissions plus self-referential ARCH-04/ARCH-08 derivations.",
+          "failedCandidateBranch": "wip/MR-INV-002-failed-change-control-20260811-134350",
+          "failedCandidateCommit": "d0f492c830247a050b76ac5b29a19746de79c3fa"
+        },
+        {
+          "state": "RETRY_CHANGE_CONTROL_AUTHORIZED",
+          "preChangeBackupTag": "mindroom-backup/change-control/MR-INV-002-retry-20260811-134452"
+        },
+        {
+          "state": "RETRY_REPAIR_CANDIDATE_APPLIED",
+          "at": "2026-08-11T14:13:58+03:00",
+          "meaning": "Complete source-derived topology candidate present; ACTIVE pending full recertification and one fresh review."
+        },
+        {
+          "state": "SECOND_REPAIR_REVIEW_FAILED",
+          "defect": "The complete canonical/top-level topology was not synchronized into every current-authoritative capability, location, nested task, and top-level bootstrap-consumer projection; ARCH-04/ARCH-08 did not detect the projection contradiction."
+        },
+        {
+          "state": "SECOND_FAILED_CANDIDATE_PRESERVED",
+          "branch": "wip/MR-INV-002-second-failed-change-control-20260811-144854",
+          "commit": "cd601b3884b5fff5e2202aa6c1092dc3aa48b44b"
+        },
+        {
+          "state": "THIRD_CHANGE_CONTROL_AUTHORIZED",
+          "preChangeBackupTag": "mindroom-backup/change-control/MR-INV-002-sync-retry-20260811-144948"
+        },
+        {
+          "state": "THIRD_REPAIR_SEMANTIC_GATE_PASSED",
+          "at": "2026-08-11T15:12:00+03:00",
+          "meaning": "All 11 discovered current projections equal source through the canonical contract; 215/215 checks, 107/107 challenges, and Step 11b pass. ACTIVE pending exactly one fresh review."
+        },
+        {
+          "state": "THIRD_REPAIR_REVIEW_FAILED",
+          "defect": "Manual current-projection discovery omitted PUBLIC_ENTRYPOINT_PLAN, and a stale temporary copy was not rejected by the production validator."
+        },
+        {
+          "state": "THIRD_FAILED_CANDIDATE_PRESERVED",
+          "branch": "wip/MR-INV-002-third-failed-change-control-20260813-153400",
+          "commit": "11945f02b8623193e591ce2c53bc5df882d94a45"
+        },
+        {
+          "state": "FOURTH_CHANGE_CONTROL_AUTHORIZED",
+          "preChangeBackupTag": "mindroom-backup/change-control/MR-INV-002-authority-discovery-20260813-153457"
+        },
+        {
+          "state": "FOURTH_DYNAMIC_AUTHORITY_GATE_PASSED",
+          "at": "2026-08-13T16:37:23+03:00",
+          "meaning": "Dynamic current-authority discovery covers 178 classified artifacts and all 3462 relevant references, including PUBLIC_ENTRYPOINT_PLAN, with 0 unclassified/unvalidated/silently ignored; 220/220 checks, 112/112 challenges, Step 11b, and exhaustive pre-review gate pass. ACTIVE pending exactly one fresh fourth-attempt review."
+        },
+        {
+          "state": "FOURTH_REPAIR_FAILED",
+          "defect": "Dictionary keys were not treated as authority identities; CAPABILITY_TO_PATH_MAP and FOLDER_OWNERSHIP_MATRIX escaped discovery.",
+          "failedCandidateBranch": "wip/MR-INV-002-fourth-failed-change-control-20260813-215856",
+          "failedCandidateCommit": "9a4ab6b7d9a4f39b93d97d02e10c2a324535b9c8"
+        },
+        {
+          "state": "FIFTH_CHANGE_CONTROL_AUTHORIZED",
+          "preChangeBackupTag": "mindroom-backup/change-control/MR-INV-002-key-aware-discovery-20260813-220037"
+        },
+        {
+          "state": "FIFTH_KEY_AWARE_GATE_PASSED",
+          "at": "2026-08-13T22:41:54+03:00",
+          "meaning": "Keys and values are recursively inspected; 47 validator artifacts equal 47 independently enumerated artifacts; all references classified and validated; 224/224 checks and 120/120 challenges pass."
+        },
+        {
+          "state": "INDEPENDENT_REVIEW_VERIFIED",
+          "at": "2026-08-13T22:56:09+03:00",
+          "reviewSessionId": "mindroom-mr-inv-002-fifth-key-aware-independent-review-20260813-225609",
+          "acceptanceCriteria": "4/4"
+        },
+        {
+          "state": "RESOLVED",
+          "resolvedAt": "2026-08-13T22:56:09+03:00",
+          "meaning": "MR-INV-002 COMPLETE; Codebase untouched; Wave 0 READY_NOT_STARTED."
         }
-      ]
+      ],
+      "resolvedAt": "2026-08-13T22:56:09+03:00",
+      "resolutionEvidence": "Attempt 5 key-aware discovery, 47-vs-47 independent pre-review enumeration, 224/224 certification, 120/120 challenges, Step 11b, exactly one fresh isolated VERIFIED review, and 4/4 acceptance criteria."
     }
   ],
-  "activeBlockerCount": 1,
-  "resolvedBlockerCount": 2
+  "activeBlockerCount": 0,
+  "resolvedBlockerCount": 3
 }

@@ -1,7 +1,7 @@
 {
-  "freezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
-  "officialValidatorRunId": "mindroom-mr-inv-001-change-control-20260809-080238-validation",
-  "externalReviewRunId": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
+  "freezeRunId": "mindroom-mr-inv-002-fourth-authority-discovery-recertified-freeze-20260813-160114",
+  "officialValidatorRunId": "mindroom-mr-inv-002-fourth-authority-discovery-change-control-20260813-160114-validation",
+  "externalReviewRunId": "mindroom-mr-inv-002-fifth-key-aware-independent-review-20260813-225609",
   "mappingStatus": "COMPLETED_AND_FROZEN",
   "independentReviewStatus": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
   "planningFreezeStatus": "FROZEN",
@@ -29,14 +29,14 @@
     "publicEntrypoints": 161
   },
   "manifestRecordCount": 167,
-  "manifestAggregateHash": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
+  "manifestAggregateHash": "eb1b6cc50c47dc4ae59b18325744c0abfaecf11857fddf2bb2de84c124b37220",
   "codebaseFileCount": 10080,
   "codebaseDirectoryCount": 2548,
   "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
-  "validatorCheckCount": 198,
-  "challengeTestCount": 95,
+  "validatorCheckCount": 224,
+  "challengeTestCount": 120,
   "blockingDefectCount": 0,
-  "repairRunId": "mindroom-mr-inv-001-change-control-20260809-080238",
+  "repairRunId": "mindroom-mr-inv-002-fourth-authority-discovery-change-control-20260813-160114",
   "gateTestSynchronizationStatus": "PASS",
   "warningSummary": [
     {
@@ -55,12 +55,12 @@
     }
   ],
   "backupBackend": "GITHUB_NATIVE_IMMUTABLE_GIT_REF",
-  "currentBackupRef": "refs/tags/mindroom-backup/change-control/20260809-103711",
+  "currentBackupRef": "refs/tags/mindroom-backup/change-control/MR-INV-002-key-aware-discovery-20260813-220037",
   "persistentLocalBackupRequired": false,
   "challengeReportState": "FRESH_CHALLENGE_EXECUTION_VERIFIED",
-  "timestamp": "2026-08-09T11:02:38+03:00",
-  "validatorSourceHash": "b2fe87ea8e391f639d374ef67a703d001ba9e90e5d0bb5896d0ec111a0e7a660",
-  "challengeSourceHash": "23b17369a10edc4535151272a9b5297a0e97aea329b55820edf16464cdf5a134",
+  "timestamp": "2026-08-13T16:01:14+03:00",
+  "validatorSourceHash": "53c324d6cb9d90e6a38011fe6fd54b02ec2374bebd53e4f8e8410e6d3ddf16c9",
+  "challengeSourceHash": "330717731c6c71a67c9adbbbcccfa348ff0cf9cde694c4b0d897cf3a046c49bb",
   "verifierSourceHash": "27a9859659e4834b9bdfc23391f51dcba0c977af4c1dbc7fa327e84e871141d4",
   "requiredChallenges": [
     "CHALLENGE-001",
@@ -157,7 +157,32 @@
     "CHALLENGE-FROZEN-WAVE0-BLOCKED-001",
     "CHALLENGE-FROZEN-SYNC-GENERATION-001",
     "CHALLENGE-FROZEN-SYNC-MANIFEST-001",
-    "CHALLENGE-FROZEN-VALIDATION-MODE-001"
+    "CHALLENGE-FROZEN-VALIDATION-MODE-001",
+    "CHALLENGE-ARCH-001",
+    "CHALLENGE-ARCH-002",
+    "CHALLENGE-ARCH-003",
+    "CHALLENGE-ARCH-004",
+    "CHALLENGE-ARCH-005",
+    "CHALLENGE-ARCH-006",
+    "CHALLENGE-ARCH-007",
+    "CHALLENGE-ARCH-008",
+    "CHALLENGE-ARCH-009",
+    "CHALLENGE-ARCH-010",
+    "CHALLENGE-ARCH-011",
+    "CHALLENGE-ARCH-012",
+    "CHALLENGE-ARCH-013",
+    "CHALLENGE-ARCH-014",
+    "CHALLENGE-ARCH-015",
+    "CHALLENGE-ARCH-016",
+    "CHALLENGE-ARCH-017",
+    "CHALLENGE-KEY-001",
+    "CHALLENGE-KEY-002",
+    "CHALLENGE-KEY-003",
+    "CHALLENGE-KEY-004",
+    "CHALLENGE-KEY-005",
+    "CHALLENGE-KEY-006",
+    "CHALLENGE-KEY-007",
+    "CHALLENGE-KEY-008"
   ],
   "challenges": [
     {
@@ -191,6 +216,8 @@
           "CNT-02"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -224,6 +251,8 @@
           "CAP-01"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -255,6 +284,8 @@
           "DEP-05"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -286,6 +317,8 @@
           "DEP-06"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -319,6 +352,8 @@
           "DEP-08"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -351,6 +386,8 @@
           "DEP-09"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -382,6 +419,8 @@
           "DEP-03"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -413,6 +452,8 @@
           "DEP-04"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -445,6 +486,8 @@
           "AUTH-03"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -476,6 +519,8 @@
           "AUTH-09"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -508,6 +553,8 @@
           "MAN-03"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -543,6 +590,8 @@
           "MAN-01"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -574,6 +623,8 @@
           "MAN-08"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -605,6 +656,8 @@
           "CON-04"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -636,6 +689,8 @@
           "CON-01"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -667,6 +722,8 @@
           "CON-02"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -698,6 +755,8 @@
           "WARN-02"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -730,6 +789,8 @@
           "WARN-04"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -762,6 +823,8 @@
           "WARN-07"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -796,6 +859,8 @@
           "WARN-06"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -827,6 +892,8 @@
           "META-07"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -858,6 +925,8 @@
           "META-01"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -892,6 +961,8 @@
           "SAFE-04"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -926,6 +997,8 @@
           "SAFE-02"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -957,6 +1030,8 @@
           "CB-05"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -991,6 +1066,8 @@
           "CB-08"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1027,6 +1104,8 @@
           "GATE-06"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1063,6 +1142,8 @@
           "GATE-07"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1095,6 +1176,8 @@
           "GATE-04"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1131,6 +1214,8 @@
           "GATE-05"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1163,6 +1248,8 @@
           "TEST-08"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1199,6 +1286,8 @@
           "GATE-01"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1231,6 +1320,8 @@
           "GATE-02"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1268,6 +1359,8 @@
           "GATE-08"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1307,6 +1400,8 @@
           "TEST-05"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1338,6 +1433,8 @@
           "META-07"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1375,6 +1472,8 @@
           "LIN-14"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1412,6 +1511,8 @@
           "LIN-19"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1452,6 +1553,8 @@
           "LIN-02"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1494,6 +1597,8 @@
           "LIN-03"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1538,6 +1643,8 @@
           "LIN-12"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1574,6 +1681,8 @@
           "LIN-06"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1610,6 +1719,8 @@
           "LIN-08"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1650,6 +1761,8 @@
           "LIN-11"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1684,6 +1797,8 @@
           "LIN-16"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1718,6 +1833,8 @@
           "LIN-21"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1754,6 +1871,8 @@
           "LIN-17"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1788,6 +1907,8 @@
           "LIN-22"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1825,6 +1946,8 @@
           "LIN-04"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1858,6 +1981,8 @@
           "LIN-13"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1893,6 +2018,8 @@
           "LINEAGE-STATUS-ENUM"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1927,6 +2054,8 @@
           "LINEAGE-RECLASSIFIED-SEMANTICS"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -1964,6 +2093,8 @@
           "LINEAGE-ALIAS-SEMANTICS"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2001,6 +2132,8 @@
           "LINEAGE-ALIAS-SEMANTICS"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2032,6 +2165,8 @@
           "LINEAGE-MERGED-SEMANTICS"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2063,6 +2198,8 @@
           "LINEAGE-MERGED-SEMANTICS"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2097,6 +2234,8 @@
           "LINEAGE-PROHIBITED-SEMANTICS"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2132,6 +2271,8 @@
           "LINEAGE-EXCLUDED-SEMANTICS"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2166,6 +2307,8 @@
           "CAPABILITY-LINEAGE-EVIDENCE"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2198,6 +2341,8 @@
           "CAPABILITY-LINEAGE-EVIDENCE"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2230,6 +2375,8 @@
           "TASK-LINEAGE-EVIDENCE"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2262,6 +2409,8 @@
           "TASK-LINEAGE-EVIDENCE"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2294,6 +2443,8 @@
           "LINEAGE-CONFIDENCE"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2327,6 +2478,8 @@
           "LINEAGE-CONFIDENCE"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2359,6 +2512,8 @@
           "CAPABILITY-LINEAGE-EVIDENCE-STATUS"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2391,6 +2546,8 @@
           "TASK-LINEAGE-EVIDENCE-STATUS"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2428,6 +2585,8 @@
           "CAPABILITY-LINEAGE-EVIDENCE-SOURCE"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2465,6 +2624,8 @@
           "TASK-LINEAGE-EVIDENCE-SOURCE"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2497,6 +2658,8 @@
           "CAPABILITY-LINEAGE-EVIDENCE-TARGETS"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2529,6 +2692,8 @@
           "TASK-LINEAGE-EVIDENCE-TARGETS"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2564,6 +2729,8 @@
           "LINEAGE-ALIAS-SOURCE"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2599,6 +2766,8 @@
           "LINEAGE-ALIAS-TARGET"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2634,6 +2803,8 @@
           "LINEAGE-RECLASSIFIED-SOURCE"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2669,6 +2840,8 @@
           "LINEAGE-RECLASSIFIED-TARGET"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2706,6 +2879,8 @@
           "META-19"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2740,6 +2915,8 @@
           "META-19"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2771,6 +2948,8 @@
           "BAK-03"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2802,6 +2981,8 @@
           "BAK-10"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2833,6 +3014,8 @@
           "BAK-05"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2864,6 +3047,8 @@
           "BAK-06"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2895,6 +3080,8 @@
           "BAK-07"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2926,6 +3113,8 @@
           "BAK-08"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2960,6 +3149,8 @@
           "META-19"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -2991,6 +3182,8 @@
           "BAK-13"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -3022,6 +3215,8 @@
           "BAK-11"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -3053,6 +3248,8 @@
           "BAK-13"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -3084,6 +3281,8 @@
           "TASK-OWNERSHIP-01"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -3115,6 +3314,8 @@
           "META-17"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -3147,6 +3348,8 @@
           "MAN-03"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -3178,6 +3381,8 @@
           "SAFE-06"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -3209,6 +3414,8 @@
           "SYNC-02"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -3240,6 +3447,8 @@
           "SYNC-03"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -3271,6 +3480,8 @@
           "SYNC-01"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -3302,6 +3513,8 @@
           "SYNC-04"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
       "passed": true
     },
     {
@@ -3333,6 +3546,923 @@
           "CERT-01"
         ]
       },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-001",
+      "mutation": "Claim a nonexistent TypeScript literal symbol in a current-authoritative JSON exact-location record",
+      "temporaryFiles": [
+        "04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-01"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-01",
+        "ARCH-06"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-01"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-002",
+      "mutation": "Exclude the architecture contract owner from allowedPaths",
+      "temporaryFiles": [
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-02"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-02",
+        "ARCH-06"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-002",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-02"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-003",
+      "mutation": "Catch the architecture contract owner with the forbidden catch-all",
+      "temporaryFiles": [
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-02",
+        "ARCH-03"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-02",
+        "ARCH-03",
+        "ARCH-06"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-003",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-02",
+          "ARCH-03"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-004",
+      "mutation": "Omit one source-required Rspack entry from the declared preservation boundary",
+      "temporaryFiles": [
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-04"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-04",
+        "ARCH-06",
+        "ARCH-10",
+        "ARCH-13",
+        "ARCH-17",
+        "ARCH-22"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-004",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-04"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-005",
+      "mutation": "Treat a generated dist file as an allowed owned canonical source",
+      "temporaryFiles": [
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-05"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-05",
+        "ARCH-06"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-005",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-05"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-006",
+      "mutation": "Make an MR-CAP-001 acceptance test require a nonexistent literal source anchor",
+      "temporaryFiles": [
+        "10 Verification/REQUIREMENT_TEST_MATRIX.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-06"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "GATE-13"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-006",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-06"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-007",
+      "mutation": "Remove a live configured worker entry from every temporary Graphify declaration while leaving Codebase source intact",
+      "temporaryFiles": [
+        "02 Architecture Map/WORKER_MAP.jsonl",
+        "03 Capability Map/CAPABILITY_EVIDENCE.jsonl",
+        "03 Capability Map/CAPABILITY_REGISTRY.json",
+        "03 Capability Map/CAPABILITY_SOURCE_SEARCH_RECEIPTS.jsonl",
+        "04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl",
+        "04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json",
+        "06 Folder Ownership/CAPABILITY_TO_PATH_MAP.json",
+        "06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl",
+        "07 Reorganisation/MOVE_PLAN.jsonl",
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+        "09 Implementation/TRANSPLANT_RECEIPTS.jsonl",
+        "09 Implementation/TRANSPLANT_SEARCH_QUEUE.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-04"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-04",
+        "ARCH-06",
+        "ARCH-10",
+        "ARCH-11",
+        "ARCH-12",
+        "ARCH-13",
+        "ARCH-14",
+        "ARCH-17",
+        "ARCH-21",
+        "ARCH-22"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-007",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-04"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-008",
+      "mutation": "Remove a live bootstrap consumer from every temporary Graphify declaration while leaving Codebase source intact",
+      "temporaryFiles": [
+        "03 Capability Map/CAPABILITY_EVIDENCE.jsonl",
+        "03 Capability Map/CAPABILITY_REGISTRY.json",
+        "03 Capability Map/CAPABILITY_SOURCE_SEARCH_RECEIPTS.jsonl",
+        "04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl",
+        "04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json",
+        "06 Folder Ownership/CAPABILITY_TO_PATH_MAP.json",
+        "06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl",
+        "07 Reorganisation/MOVE_PLAN.jsonl",
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+        "09 Implementation/TRANSPLANT_RECEIPTS.jsonl",
+        "09 Implementation/TRANSPLANT_SEARCH_QUEUE.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-08"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "ARCH-08",
+        "ARCH-10",
+        "ARCH-11",
+        "ARCH-12",
+        "ARCH-13",
+        "ARCH-14",
+        "ARCH-17",
+        "ARCH-21",
+        "ARCH-22"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-008",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-08"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-009",
+      "mutation": "Remove one real worker from only the CAPABILITY_REGISTRY architecture projection while source and canonical task authority remain correct",
+      "temporaryFiles": [
+        "03 Capability Map/CAPABILITY_REGISTRY.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-11"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "ARCH-11",
+        "ARCH-17",
+        "ARCH-22"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-009",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-11"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-010",
+      "mutation": "Remove one real bootstrap consumer from only the CHANGE_LOCATION_REGISTRY architecture projection while canonical authority remains correct",
+      "temporaryFiles": [
+        "04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-12"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "ARCH-12",
+        "ARCH-17",
+        "ARCH-22"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-010",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-12"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-011",
+      "mutation": "Remove one real worker from only the nested MR-IMPL-001 contract while the top-level canonical contract remains correct",
+      "temporaryFiles": [
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-14"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "ARCH-14",
+        "ARCH-17",
+        "ARCH-22"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-011",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-14"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-012",
+      "mutation": "Keep the top-level canonical task topology correct while all capability, location, and nested task copies are stale",
+      "temporaryFiles": [
+        "03 Capability Map/CAPABILITY_REGISTRY.json",
+        "04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl",
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-11",
+        "ARCH-12",
+        "ARCH-14",
+        "ARCH-17"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "ARCH-11",
+        "ARCH-12",
+        "ARCH-14",
+        "ARCH-17",
+        "ARCH-22"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-012",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-11",
+          "ARCH-12",
+          "ARCH-14",
+          "ARCH-17"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-013",
+      "mutation": "Remove one live worker only from PUBLIC_ENTRYPOINT_PLAN and require automatic dynamic discovery",
+      "temporaryFiles": [
+        "06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-17",
+        "ARCH-21",
+        "ARCH-22"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "ARCH-17",
+        "ARCH-21",
+        "ARCH-22"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-013",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-17",
+          "ARCH-21",
+          "ARCH-22"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-014",
+      "mutation": "Add an unknown current-authoritative MR-CAP-001/MR-IMPL-001 semantic structure and require fail-closed classification",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITY_CLASSIFICATION.jsonl",
+        "11 Completion/DYNAMIC_AUTHORITY_PROJECTION_ADVERSARIAL.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-19",
+        "ARCH-20"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "ARCH-17",
+        "ARCH-19",
+        "ARCH-20"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-014",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-19",
+          "ARCH-20"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-015",
+      "mutation": "Add a new current-authoritative known-schema topology projection with a stale worker set",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITY_CLASSIFICATION.jsonl",
+        "11 Completion/DYNAMIC_AUTHORITY_PROJECTION_ADVERSARIAL.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-17",
+        "ARCH-22"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "ARCH-17",
+        "ARCH-22"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-015",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-17",
+          "ARCH-22"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-016",
+      "mutation": "Add a stale known-schema projection classified historical/superseded and prove it is excluded from current authority",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITY_CLASSIFICATION.jsonl",
+        "11 Completion/DYNAMIC_AUTHORITY_PROJECTION_ADVERSARIAL.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [],
+      "actualFailedCheckIds": [],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "PASS",
+      "actualStatus": "PASS",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-016",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": []
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-017",
+      "mutation": "Promote the same stale known-schema projection to current authority and require dynamic rejection",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITY_CLASSIFICATION.jsonl",
+        "11 Completion/DYNAMIC_AUTHORITY_PROJECTION_ADVERSARIAL.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-17",
+        "ARCH-22"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "ARCH-17",
+        "ARCH-22"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-017",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-17",
+          "ARCH-22"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-KEY-001",
+      "mutation": "Register a filename-agnostic valid MR-CAP-001 dictionary-key path projection and prove automatic discovery, classification, and validation",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITY_CLASSIFICATION.jsonl",
+        "11 Completion/KEYED_AUTHORITY_PROJECTION_ADVERSARIAL.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [],
+      "actualFailedCheckIds": [],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "PASS",
+      "actualStatus": "PASS",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-KEY-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": []
+      },
+      "resultAssertionRequired": true,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-KEY-002",
+      "mutation": "Remove one canonical path only from the keyed CAPABILITY_TO_PATH_MAP MR-CAP-001 projection",
+      "temporaryFiles": [
+        "06 Folder Ownership/CAPABILITY_TO_PATH_MAP.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-24"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "ARCH-17",
+        "ARCH-22",
+        "ARCH-24"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-KEY-002",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-24"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-KEY-003",
+      "mutation": "Contradict only the keyed FOLDER_OWNERSHIP_MATRIX MR-CAP-001 owner projection",
+      "temporaryFiles": [
+        "06 Folder Ownership/FOLDER_OWNERSHIP_MATRIX.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-25"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "ARCH-17",
+        "ARCH-22",
+        "ARCH-25"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-KEY-003",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-25"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-KEY-004",
+      "mutation": "Register a new current-authoritative key-only MR-CAP-001 projection with unknown semantics and require fail-closed handling",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITY_CLASSIFICATION.jsonl",
+        "11 Completion/KEYED_AUTHORITY_PROJECTION_ADVERSARIAL.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-19",
+        "ARCH-20"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "ARCH-17",
+        "ARCH-19",
+        "ARCH-20"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-KEY-004",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-19",
+          "ARCH-20"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-KEY-005",
+      "mutation": "Register a stale keyed MR-CAP-001 path projection as historical/superseded and prove it remains inactive",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITY_CLASSIFICATION.jsonl",
+        "11 Completion/KEYED_AUTHORITY_PROJECTION_ADVERSARIAL.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [],
+      "actualFailedCheckIds": [],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "PASS",
+      "actualStatus": "PASS",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-KEY-005",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": []
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-KEY-006",
+      "mutation": "Promote the stale keyed MR-CAP-001 path projection to current authority and require scoped rejection",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITY_CLASSIFICATION.jsonl",
+        "11 Completion/KEYED_AUTHORITY_PROJECTION_ADVERSARIAL.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-17",
+        "ARCH-22"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "ARCH-17",
+        "ARCH-22"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-KEY-006",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-17",
+          "ARCH-22"
+        ]
+      },
+      "resultAssertionRequired": false,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-KEY-007",
+      "mutation": "Register equivalent key-based and value-based MR-CAP-001 path projections and require equivalent validation",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITY_CLASSIFICATION.jsonl",
+        "11 Completion/KEYED_AUTHORITY_PROJECTION_ADVERSARIAL.json",
+        "11 Completion/KEYED_AUTHORITY_VALUE_PROJECTION_ADVERSARIAL.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [],
+      "actualFailedCheckIds": [],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "PASS",
+      "actualStatus": "PASS",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-KEY-007",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": []
+      },
+      "resultAssertionRequired": true,
+      "resultAssertionPassed": true,
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-KEY-008",
+      "mutation": "Register one MR-CAP-001 path record carrying the identity in both key and value and require one deduplicated semantic record",
+      "temporaryFiles": [
+        "00 Execution Control/FINAL_AUTHORITY_CLASSIFICATION.jsonl",
+        "11 Completion/KEYED_AUTHORITY_PROJECTION_ADVERSARIAL.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [],
+      "actualFailedCheckIds": [],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "PASS",
+      "actualStatus": "PASS",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-KEY-008",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": []
+      },
+      "resultAssertionRequired": true,
+      "resultAssertionPassed": true,
       "passed": true
     }
   ],
@@ -3341,9 +4471,9 @@
   "lineageChallengesPassed": 24,
   "lineageChallengeFailures": 0,
   "lineageSemanticChallengesExecuted": 24,
-  "challengesUsingProductionValidator": 95,
-  "challengesWithIndependentExpectedEvidence": 95,
-  "challengesWithZeroFailureBaseline": 95,
+  "challengesUsingProductionValidator": 120,
+  "challengesWithIndependentExpectedEvidence": 120,
+  "challengesWithZeroFailureBaseline": 120,
   "challengesUsingBaselineFailureSubtraction": 0,
   "baselineFailuresSubtracted": false,
   "coreBaselineStatus": "PASS",
@@ -3358,7 +4488,7 @@
   "finalFreezeCertificationFailedCheckIds": [],
   "finalFreezeCertificationEnvironmentFailures": [],
   "backupUnchangedThroughoutChallenges": true,
-  "backupAggregateBeforeChallenges": "154c30f3841f3a6b1f5e8d7d8422e28bb21ce423274ffe169e95b25b11594cd2",
-  "backupAggregateAfterChallenges": "154c30f3841f3a6b1f5e8d7d8422e28bb21ce423274ffe169e95b25b11594cd2",
+  "backupAggregateBeforeChallenges": "ecf46d86717cb1d3775a6c9b1be9c7dcb147d02b4b96edbab9d56d2b30e6cbaf",
+  "backupAggregateAfterChallenges": "ecf46d86717cb1d3775a6c9b1be9c7dcb147d02b4b96edbab9d56d2b30e6cbaf",
   "postPublicationCertificationRevalidated": true
 }

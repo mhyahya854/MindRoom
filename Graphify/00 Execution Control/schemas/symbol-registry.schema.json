@@ -1,15 +1,28 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MindRoom symbol and reclassified non-symbol source-anchor row",
+  "description": "Legacy rows describe code symbols. A NON_SYMBOL_SOURCE_ANCHOR row explicitly describes a truthful manifest or configuration anchor and must never be interpreted as an exported TypeScript symbol.",
   "type": "object",
-  "required": ["symbolId", "locationEntityId", "symbol", "symbolKind", "exportStatus", "currentPath", "lineRange", "uniqueAnchor", "fileSha256", "capabilityIds", "astNodeIds", "mappingConfidence", "status"],
+  "required": ["capabilityId", "qualifiedName", "path", "lineStart", "lineEnd", "anchorSha256"],
   "properties": {
-    "symbolId": {"type": "string", "pattern": "^MR-SYM-"},
-    "locationEntityId": {"type": "string", "pattern": "^MR-LOC-"},
-    "symbol": {"type": "string"},
-    "currentPath": {"type": "string", "pattern": "^Codebase/"},
+    "capabilityId": {"type": "string", "pattern": "^MR-CAP-"},
+    "recordType": {"enum": ["SYMBOL", "NON_SYMBOL_SOURCE_ANCHOR"]},
+    "qualifiedName": {"type": "string", "minLength": 1},
+    "semanticType": {"type": "string", "minLength": 1},
+    "path": {"type": "string", "pattern": "^Codebase/"},
+    "lineStart": {"type": "integer", "minimum": 1},
+    "lineEnd": {"type": "integer", "minimum": 1},
+    "literalAnchor": {"type": "string", "minLength": 1},
+    "anchorSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
     "fileSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
-    "capabilityIds": {"type": "array", "items": {"type": "string"}},
-    "astNodeIds": {"type": "array"}
+    "currentAuthorityStatus": {"enum": ["CURRENT_AUTHORITATIVE", "HISTORICAL_SUPERSEDED", "LEGACY_UNVERIFIED"]},
+    "reclassification": {"type": "string", "minLength": 1}
   },
+  "allOf": [
+    {
+      "if": {"properties": {"recordType": {"const": "NON_SYMBOL_SOURCE_ANCHOR"}}, "required": ["recordType"]},
+      "then": {"required": ["semanticType", "literalAnchor", "fileSha256", "currentAuthorityStatus", "reclassification"]}
+    }
+  ],
   "additionalProperties": true
 }

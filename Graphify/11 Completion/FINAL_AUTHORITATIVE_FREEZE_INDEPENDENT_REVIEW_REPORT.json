@@ -1,87 +1,209 @@
 {
-  "reviewSessionId": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
-  "reviewerIsolationMethod": "Single isolated first-independent-review agent; exact bound detached candidate, immutable snapshot, active backup, package, Graphify, Codebase, Git index/refs, and repository were treated read-only; only the predetermined report path and designated evidence directory were writable; no delegation, repair, commit, push, LFS pull, worktree creation, snapshot creation, backup creation, or Graphify/Codebase mutation was performed.",
+  "schemaVersion": "2",
+  "project": "MindRoom",
+  "investigationId": "MR-INV-002",
+  "blockerId": "MR-BLOCK-003",
+  "attempt": 5,
+  "reviewSessionId": "mindroom-mr-inv-002-fifth-key-aware-independent-review-20260813-225609",
+  "reviewedAt": "2026-08-13T22:56:09+03:00",
+  "reviewerIsolationMethod": "One fresh isolated sub-agent with an explicit read-only mandate independently inspected the live fifth-attempt candidate, implemented its own current-authority key/value enumeration, and made no repository, Git, GitHub, Graphify, Investigations, or Codebase mutation.",
   "readOnly": true,
-  "repairRunId": "20260806-150031",
-  "candidateRunId": "mindroom-graphify-pre-bind-convergence-20260808-111839",
-  "reviewPackageSha256": "4e4ab9fd6e1f08c862777265993f9835ed657f96203f600d41d171c2ef93ae1d",
-  "candidateCommitSha": "16cd9496ab9d3bf59019a038a07e23251fc4d5b5",
-  "candidateTreeSha": "d31ce0aa54c2a79056ccfbb439dc8b214b107e0c",
-  "candidateParentSha": "c50c8093f43a0374c4463f70ef5f4c1b362208cb",
-  "remoteMainSha": "c50c8093f43a0374c4463f70ef5f4c1b362208cb",
-  "candidateSnapshotManifestSha256": "cf91a730bf11fcbd7c95fc04faaa858ec374e7f09d52faaafa5484480f81adc8",
-  "candidateSnapshotAggregateSha256": "6f1aa4dfc27430deb7c211f879d00f7fd74d593444d5ec4b8a4343b635a4434e",
-  "candidateManifestSha256": "cc2efd7d44971d053e94e7330e8c91dd98c5db8ee33cc34b71bc193f2e83e09d",
-  "candidateManifestAggregateSha256": "afe4b01b06a7e3c20fbb1f557b879fb924f4db278637e3c1facb0c480f123233",
-  "candidateManifestRecordCount": 166,
-  "validatorSha256": "5635e820d0c10fc8fad5fe3caddbe6add5892b363b8d690408ef5eae79019026",
-  "validatorCheckIds": ["AUTH-01","AUTH-02","AUTH-03","AUTH-04","AUTH-05","AUTH-06","AUTH-07","AUTH-08","AUTH-09","MAN-01","MAN-02","MAN-03","MAN-04","MAN-05","MAN-06","MAN-07","MAN-08","CNT-01","CNT-02","CNT-03","LIN-01","LIN-02","LIN-03","LIN-04","LIN-05","LIN-06","LIN-07","LIN-08","LIN-09","LIN-10","LIN-11","LIN-12","LIN-13","LIN-14","LIN-15","LIN-16","LIN-17","LIN-18","LIN-19","LIN-20","LIN-21","LIN-22","LIN-23","LINEAGE-STATUS-ENUM","LINEAGE-LEGACY-ID-UNIQUENESS","LINEAGE-CANONICAL-TARGETS","LINEAGE-SUPERSESSION-EVIDENCE","LINEAGE-DIRECT-SEMANTICS","LINEAGE-SUPERSEDED-SEMANTICS","LINEAGE-MERGED-SEMANTICS","LINEAGE-SPLIT-SEMANTICS","LINEAGE-RECLASSIFIED-SOURCE","LINEAGE-RECLASSIFIED-TARGET","LINEAGE-RECLASSIFIED-SEMANTICS","LINEAGE-PROHIBITED-SEMANTICS","LINEAGE-EXCLUDED-SEMANTICS","LINEAGE-ALIAS-SOURCE","LINEAGE-ALIAS-TARGET","LINEAGE-ALIAS-SEMANTICS","LINEAGE-UNRESOLVED","LINEAGE-CONFIDENCE","CAPABILITY-LINEAGE-EXPANSION","CAPABILITY-LINEAGE-EVIDENCE-SOURCE","CAPABILITY-LINEAGE-EVIDENCE-STATUS","CAPABILITY-LINEAGE-EVIDENCE-TARGETS","CAPABILITY-LINEAGE-EVIDENCE-SUPERSESSION","CAPABILITY-LINEAGE-EVIDENCE-AUTHORITY","CAPABILITY-LINEAGE-EVIDENCE","TASK-LINEAGE-EXPANSION","TASK-LINEAGE-EVIDENCE-SOURCE","TASK-LINEAGE-EVIDENCE-STATUS","TASK-LINEAGE-EVIDENCE-TARGETS","TASK-LINEAGE-EVIDENCE-SUPERSESSION","TASK-LINEAGE-EVIDENCE-AUTHORITY","TASK-LINEAGE-EVIDENCE","INVENTORY-CANDIDATE-RECORD-COUNT","BAK-01","BAK-02","BAK-03","BAK-04","BAK-05","BAK-06","BAK-07","BAK-08","BAK-09","BAK-10","BAK-11","BAK-12","BAK-13","CNT-04","CNT-05","CNT-06","CNT-07","CNT-08","CNT-09","CNT-10","CNT-11","CNT-12","CNT-13","CNT-14","CNT-15","TEST-01","TEST-02","TEST-03","TEST-04","TEST-05","TEST-06","TEST-07","TEST-08","GATE-01","GATE-02","GATE-03","GATE-04","GATE-05","GATE-06","GATE-07","GATE-08","GATE-09","GATE-10","GATE-11","GATE-12","GATE-13","GATE-14","CON-01","CON-02","CON-03","CON-04","CON-05","CON-06","CON-07","CON-08","CON-09","CON-10","CAP-01","CAP-02","CAP-03","DEP-01","DEP-02","DEP-03","DEP-04","DEP-05","DEP-06","DEP-07","DEP-08","DEP-09","WARN-01","WARN-02","WARN-03","WARN-04","WARN-05","WARN-06","WARN-07","WARN-08","WARN-09","CB-01","CB-02","CB-03","CB-04","CB-05","CB-06","CB-07","CB-08","CB-09","CB-10","SAFE-01","SAFE-02","SAFE-03","SAFE-04","SAFE-05","REV-01","REV-02","REV-03","META-01","META-02","META-03","META-04","META-05","META-06","META-07","META-08","META-09","META-10","META-17","META-18","META-11","META-12","META-13","META-14","META-15","META-16"],
-  "validatorCheckCount": 190,
-  "challengeRunnerSha256": "b48d50a7f2c061f96aaf757d265ab0880ceeec50aa206fa601909cad26ede776",
-  "challengeIds": ["CHALLENGE-001","CHALLENGE-002","CHALLENGE-003","CHALLENGE-004","CHALLENGE-005","CHALLENGE-006","CHALLENGE-007","CHALLENGE-008","CHALLENGE-009","CHALLENGE-AUTHORITY-CLASSIFICATION-001","CHALLENGE-010","CHALLENGE-011","CHALLENGE-012","CHALLENGE-013","CHALLENGE-014","CHALLENGE-015","CHALLENGE-016","CHALLENGE-017","CHALLENGE-018","CHALLENGE-019","CHALLENGE-020","CHALLENGE-021","CHALLENGE-022","CHALLENGE-023","CHALLENGE-024","CHALLENGE-025","CHALLENGE-GATE-001","CHALLENGE-GATE-002","CHALLENGE-GATE-003","CHALLENGE-GATE-004","CHALLENGE-GATE-005","CHALLENGE-GATE-006","CHALLENGE-GATE-007","CHALLENGE-GATE-008","CHALLENGE-GATE-009","CHALLENGE-GATE-010","CHALLENGE-LINEAGE-001","CHALLENGE-LINEAGE-002","CHALLENGE-LINEAGE-003","CHALLENGE-LINEAGE-004","CHALLENGE-LINEAGE-005","CHALLENGE-LINEAGE-006","CHALLENGE-LINEAGE-007","CHALLENGE-LINEAGE-008","CHALLENGE-LINEAGE-009","CHALLENGE-LINEAGE-010","CHALLENGE-LINEAGE-011","CHALLENGE-LINEAGE-012","CHALLENGE-LINEAGE-013","CHALLENGE-LINEAGE-014","CHALLENGE-LINEAGE-015","CHALLENGE-LINEAGE-STATUS-001","CHALLENGE-LINEAGE-RECLASSIFIED-001","CHALLENGE-LINEAGE-ALIAS-001","CHALLENGE-LINEAGE-ALIAS-002","CHALLENGE-LINEAGE-MERGED-001","CHALLENGE-LINEAGE-MERGED-002","CHALLENGE-LINEAGE-PROHIBITED-001","CHALLENGE-LINEAGE-EXCLUDED-001","CHALLENGE-CAPABILITY-EVIDENCE-001","CHALLENGE-CAPABILITY-EVIDENCE-002","CHALLENGE-TASK-EVIDENCE-001","CHALLENGE-TASK-EVIDENCE-002","CHALLENGE-LINEAGE-CONFIDENCE-001","CHALLENGE-LINEAGE-REVIEW-001","CHALLENGE-CAP-EVIDENCE-STATUS-001","CHALLENGE-TASK-EVIDENCE-STATUS-001","CHALLENGE-CAP-EVIDENCE-SOURCE-001","CHALLENGE-TASK-EVIDENCE-SOURCE-001","CHALLENGE-CAP-EVIDENCE-TARGET-001","CHALLENGE-TASK-EVIDENCE-TARGET-001","CHALLENGE-ALIAS-SOURCE-001","CHALLENGE-ALIAS-TARGET-001","CHALLENGE-RECLASSIFIED-SOURCE-001","CHALLENGE-RECLASSIFIED-TARGET-001","CHALLENGE-BACKUP-PATH-001","CHALLENGE-BACKUP-HASH-001","CHALLENGE-BACKUP-MISSING-FILE-001","CHALLENGE-BACKUP-AUTHORITY-DUPLICATE-001","CHALLENGE-LIVE-REPORT-OVERRIDE-001","CHALLENGE-MANIFEST-VALIDATOR-HASH-001"],
-  "challengeCount": 81,
-  "verifierSha256": "bd10586ecdd6ac8e1710e5deaed19084e19b08d51a2431ffa2dd92bb677a8eb7",
-  "authorityClassificationSha256": "9d0fdc2931bdfe07880206f13650be3aa7e6c924eb94c05c2275a08894dde62a",
-  "authorityMigrationReportSha256": "596523f9d3e3c54048b769f5912a387b2ce79635d101cdbc1987694a447c74de",
-  "liveValidationReportSha256": "7552b0988d7f50547422286f8dd1dd8e8f58444b90b151b403d8ffd0e443e79f",
-  "challengeReportSha256": "2a80e27fcb0f84b8cd8566771a0c5b7b27d1857296d381539b3f37ce326b2de9",
-  "codebaseFileCount": 10080,
-  "codebaseDirectoryCount": 2548,
-  "codebaseAggregateSha256": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
-  "codebaseGitTreePreserved": true,
-  "technicalChecks": [
-    {"checkId": "TECH-PACKAGE-001", "passed": true, "evidence": "Independently canonicalized package SHA-256 reproduced 4e4ab9fd6e1f08c862777265993f9835ed657f96203f600d41d171c2ef93ae1d; predeterminedVerdict is null."},
-    {"checkId": "TECH-CORE-001", "passed": true, "evidence": "validate_final_graphify_freeze.py --mode CORE_PRE_CHALLENGE --verify-only exited 0: PASS, 187 checks, zero failures, no overrides, no temporary challenge ID, exact package coreValidatorCheckIds order and set."},
-    {"checkId": "TECH-FULL-001", "passed": true, "evidence": "validate_final_graphify_freeze.py --mode FULL_TECHNICAL_CERTIFICATION --verify-only exited 0: PASS, 190 checks, zero failures, no overrides, no temporary challenge ID, exact package validatorCheckIds order and set."},
-    {"checkId": "TECH-CHALLENGE-001", "passed": true, "evidence": "run_final_freeze_challenges.py --verify-existing-report exited 0 with PASS and 81 challenges; IDs exactly equal package order, every challenge passed, all baselines PASS with zero baseline failures, zero environment failures/exemptions, and no baseline subtraction."},
-    {"checkId": "TECH-STEP11B-001", "passed": true, "evidence": "verify_step11b_results.py --verify-only exited 0: 190 expected/present validator IDs and 81 expected/present challenge IDs; live report, backup, candidate manifest, and governance state all passed."},
-    {"checkId": "TECH-SOURCE-HASHES-001", "passed": true, "evidence": "Validator, challenge runner, Step 11b verifier, authority classification, migration report, live validation report, and challenge report SHA-256 values all equal package bindings before and after review."},
-    {"checkId": "TECH-SECRET-SCAN-001", "passed": true, "evidence": "Optimized full candidate text scan covered private-key, AWS, GitHub, GitLab, Slack, Stripe-live, OpenAI, Google API-key, and credentialed-URI signatures. No live-token pattern matched. The only hits were an explicitly labeled test fixture key duplicated in the reference copy and local/example affine database URLs using the known placeholder password; tracked filename review found only two identical playground .env files containing placeholder server URLs."}
+  "candidateBaselineCommitSha": "23398958f7e9485c58629e51c3f1db4b65182208",
+  "candidateBaselineTreeSha": "f3740115ba384495b617ce757b077751f7efa735",
+  "remoteMainShaAtReview": "23398958f7e9485c58629e51c3f1db4b65182208",
+  "preChangeBackupTag": "mindroom-backup/change-control/MR-INV-002-key-aware-discovery-20260813-220037",
+  "validatorSha256": "53c324d6cb9d90e6a38011fe6fd54b02ec2374bebd53e4f8e8410e6d3ddf16c9",
+  "challengeRunnerSha256": "330717731c6c71a67c9adbbbcccfa348ff0cf9cde694c4b0d897cf3a046c49bb",
+  "verifierSha256": "27a9859659e4834b9bdfc23391f51dcba0c977af4c1dbc7fa327e84e871141d4",
+  "authorityClassificationSha256": "0b196589f22606f31f8411ba7f03be87c7365d1c2f6edfa28ff7c083b62d5403",
+  "reviewedLiveValidationReportSha256": "184f5e33ff4dace3a0e9a08e48ad5b4a6f524a7c8f74c10cc3654d940259a26e",
+  "reviewedChallengeReportSha256": "04aac2ccefa12e210dc9123ed34a43ffe63a99a8963ea0a749b729eb19e8ea36",
+  "independentEnumeration": {
+    "method": "Read FINAL_AUTHORITY_CLASSIFICATION.jsonl directly, select every CURRENT_AUTHORITATIVE row, parse every structured JSON/JSONL artifact with an independent recursive key-and-value walker, and scan textual/other current authority independently of the production inventory.",
+    "currentAuthoritativeArtifacts": 178,
+    "structuredArtifacts": 133,
+    "structuredArtifactsParsed": 133,
+    "textualArtifacts": 41,
+    "otherArtifacts": 4,
+    "keyDiscoveredRelevantArtifacts": 3,
+    "valueDiscoveredRelevantArtifacts": 45,
+    "deduplicatedRelevantArtifacts": 47,
+    "validatorRelevantArtifacts": 47,
+    "missingFromValidator": [],
+    "unexpectedInValidator": [],
+    "missingArtifacts": [],
+    "parseErrors": [],
+    "keyDiscoveredArtifacts": [
+      "04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json",
+      "06 Folder Ownership/CAPABILITY_TO_PATH_MAP.json",
+      "06 Folder Ownership/FOLDER_OWNERSHIP_MATRIX.json"
+    ]
+  },
+  "walkerInspection": {
+    "dictionaryKeysTraversed": true,
+    "dictionaryValuesTraversed": true,
+    "nestedDictionariesTraversed": true,
+    "listsTraversed": true,
+    "keyContextPreserved": true,
+    "preservedContext": [
+      "artifact path",
+      "JSON pointer / record path",
+      "dictionary key",
+      "associated value",
+      "containing map pointer and keys",
+      "authority status",
+      "semantic scope"
+    ],
+    "unifiedKeyValuePipeline": true,
+    "bothLocationDeduplication": true,
+    "unknownKeyedSemanticsFailClosed": true
+  },
+  "requiredProjectionChecks": [
+    {
+      "artifact": "06 Folder Ownership/CAPABILITY_TO_PATH_MAP.json",
+      "discoveredAutomatically": true,
+      "identityLocation": "KEY",
+      "pointer": "/MR-CAP-001",
+      "classification": "PATH_PROJECTION",
+      "scope": "EXACT_CURRENT_PATHS",
+      "actualPathCount": 53,
+      "canonicalPathCount": 53,
+      "missing": [],
+      "unexpected": [],
+      "contradictions": [],
+      "status": "PASS"
+    },
+    {
+      "artifact": "06 Folder Ownership/FOLDER_OWNERSHIP_MATRIX.json",
+      "discoveredAutomatically": true,
+      "identityLocation": "KEY",
+      "pointer": "/folderOwners/MR-CAP-001",
+      "classification": "OWNERSHIP_PROJECTION",
+      "scope": "CURRENT_OWNER_LABEL",
+      "actualOwner": "AFFiNE monorepo application composition and @affine/core package boundary",
+      "canonicalOwner": "AFFiNE monorepo application composition and @affine/core package boundary",
+      "missing": [],
+      "unexpected": [],
+      "contradictions": [],
+      "status": "PASS"
+    },
+    {
+      "artifact": "06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl",
+      "discoveredAutomatically": true,
+      "identityLocation": "VALUE",
+      "classification": "ENTRYPOINT_PROJECTION",
+      "scope": [
+        "applicationEntryPaths",
+        "workerEntryPaths",
+        "buildEntryPaths",
+        "bootstrapConsumerPaths"
+      ],
+      "actualCounts": {
+        "applicationEntryPaths": 8,
+        "workerEntryPaths": 9,
+        "buildEntryPaths": 17,
+        "bootstrapConsumerPaths": 12
+      },
+      "missing": [],
+      "unexpected": [],
+      "status": "PASS"
+    }
   ],
-  "authorityChecks": [
-    {"checkId": "AUTH-CLASSIFICATION-001", "passed": true, "evidence": "13,446 unique classification rows exactly equal the immutable snapshot file path set; no duplicate normalized paths, no unknown classifications, and no unclassified Graphify files."},
-    {"checkId": "AUTH-CURRENT-001", "passed": true, "evidence": "178 CURRENT_AUTHORITATIVE rows exactly agree with currentAuthority=true; the 166 includedInFinalManifest paths exactly equal the 166 candidate-manifest paths, and every manifest path is current authority."},
-    {"checkId": "AUTH-MIGRATION-001", "passed": true, "evidence": "Migration report exactly reconciles 178 current authoritative, 880 historical superseded, 10,126 reference-only, 98 generated nonauthoritative, and 2,164 cache/runtime files; unclassifiedFiles=0, conflictingCurrentAuthorityFiles=0, duplicateCanonicalStatusFiles=0, conflicts=[], and candidateAuthorityBoundarySynchronized=true."},
-    {"checkId": "AUTH-INDEX-001", "passed": true, "evidence": "FINAL_AUTHORITY_INDEX defines 21 distinct authority roles at 21 distinct existing current-authority paths and exactly one canonical status path: 00 Execution Control/STATUS.json."},
-    {"checkId": "AUTH-SEMANTIC-001", "passed": true, "evidence": "All 190 live semantic checks passed, including AUTH, manifest, count, lineage, capability/task lineage evidence, backup, traceability, tests, gates, contracts, capability, dependency, warning, Codebase, safety, review, and metadata families; no current-governance count/hash/backup contradiction or false final-review claim remained."},
-    {"checkId": "AUTH-GOVERNANCE-001", "passed": true, "evidence": "Canonical state remains pending/not frozen/blocked: independentReviewStatus=PENDING_GENUINELY_INDEPENDENT_FINAL_REVIEW, planningFreezeStatus=NOT_FROZEN, wave0Readiness=BLOCKED_PENDING_FINAL_INDEPENDENT_REVIEW, codebaseExecutionStatus=BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION, finalReleaseReceiptStatus=NOT_VERIFIED, implementationPerformed=false, and applicationReleased=false."}
-  ],
-  "architectureChecks": [
-    {"checkId": "ARCH-COUNTS-001", "passed": true, "evidence": "Canonical counts reconcile: 3 master plans, 1,782 requirements, 278 supersessions/legacy lineage rows, 161 capabilities/change records/public entrypoints/capability gates, 162 tasks, 338 tests, 6 release waves/wave gates, 14 ADRs, and 1 application gate."},
-    {"checkId": "ARCH-UNIQUENESS-001", "passed": true, "evidence": "Independent registry enumeration found no duplicate requirement, legacy-lineage, capability, task, test, wave-gate, capability-gate, or application-gate IDs."},
-    {"checkId": "ARCH-LINEAGE-001", "passed": true, "evidence": "All direct/superseded/merged/split/reclassified/prohibited/excluded/alias lineage semantics, source/target/evidence/status/authority checks, confidence rules, and capability/task lineage expansions passed; no unresolved or review-required legacy lineage rows remain."},
-    {"checkId": "ARCH-TRACEABILITY-001", "passed": true, "evidence": "Requirement-test, capability-task-test, gate ownership, contract, dependency, warning ownership, and release-wave reference checks all passed with no unknown direct test/gate/task/capability targets or duplicate canonical references."},
-    {"checkId": "ARCH-NO-EXECUTION-001", "passed": true, "evidence": "All 161 capabilities are NOT_STARTED; all 162 tasks have implementationPerformed=false and remain NOT_STARTED or MAPPED_NOT_AUTHORISED; all 161 capability gates and 6 wave gates are PLANNED_NOT_EXECUTED; the application gate is NOT_VERIFIED."}
-  ],
-  "backupChecks": [
-    {"checkId": "BACKUP-ROLE-001", "passed": true, "evidence": "The package's one active backup exists with role IMMUTABLE_BOUND_PRE_REVIEW_BACKUP; all three bound historical/nonactive backup paths remain absent exactly as declared and are not treated as active rollback authority."},
-    {"checkId": "BACKUP-EVIDENCE-001", "passed": true, "evidence": "Source-manifest SHA-256 a409a7b73ddf9da71f3917a23591db344ace1da06b4c4f9949dab755dbdb2c96, backup-manifest SHA-256 916ab471574fef1c049dd6d134f7fc7dca77fa513fb0292feb4b7054b8668662, and pair-verification SHA-256 b7924314f0b733d7f1079dfaf802cae3d49a2e46b241b57847285e541ee2bd31 equal package bindings."},
-    {"checkId": "BACKUP-GOVERNANCE-001", "passed": true, "evidence": "Production BAK-01 through BAK-13 all passed; the canonical receipt has one backupHistory authority object, no duplicate sibling backupEvidence authority, empty missing/extra/hash/size/directory/long-path/unreadable defect lists, verified=true, immutable=true, and VERIFIED_ACTIVE_PRE_REVIEW_BACKUP state."}
-  ],
-  "codebaseChecks": [
-    {"checkId": "CODEBASE-BASELINE-001", "passed": true, "evidence": "The bound Codebase baseline manifest SHA-256 is a5a982baa58bd6193c17ea5d5f758909e75ebb783b4416a6e6fe6dd4ef944c8e; complete rescan found 10,080 files, 2,548 directories, aggregate 91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748, with zero missing/extra/hash/size/directory differences."},
-    {"checkId": "CODEBASE-FS-001", "passed": true, "evidence": "Codebase rescan found zero unreadable paths, duplicate normalized paths, symlinks, or junctions."},
-    {"checkId": "CODEBASE-GIT-001", "passed": true, "evidence": "Parent and candidate Codebase Git subtree OIDs both equal bbf383e3418da4f613f58719160bb7cbd5709ffc; filesystem baseline and post-review aggregate are identical."}
-  ],
-  "gitChecks": [
-    {"checkId": "GIT-IDENTITY-001", "passed": true, "evidence": "Before and after review: HEAD=16cd9496ab9d3bf59019a038a07e23251fc4d5b5, HEAD tree=d31ce0aa54c2a79056ccfbb439dc8b214b107e0c, and parent=c50c8093f43a0374c4463f70ef5f4c1b362208cb."},
-    {"checkId": "GIT-DETACHED-CLEAN-001", "passed": true, "evidence": "symbolic-ref returned no branch and git status --porcelain remained empty before and after all verification; Git LFS status listed no staged or unstaged objects."},
-    {"checkId": "GIT-REMOTE-001", "passed": true, "evidence": "git ls-remote origin refs/heads/main returned exactly c50c8093f43a0374c4463f70ef5f4c1b362208cb before and after review, equal to the bound candidate parent."},
-    {"checkId": "GIT-POSTREVIEW-001", "passed": true, "evidence": "Post-review full rescans reproduced Graphify/snapshot/backup aggregate 6f1aa4dfc27430deb7c211f879d00f7fd74d593444d5ec4b8a4343b635a4434e and Codebase aggregate 91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748; all bound package, manifest, authority, live-report, challenge-report, and backup-evidence hashes remained unchanged."}
-  ],
-  "activeBackupChecks": [
-    {"checkId": "ACTIVE-BACKUP-NONSELF-001", "passed": true, "evidence": "Every non-receipt row in both bound source and backup manifests matches the active backup exactly for path, size, and SHA-256; directory sets also match, and all three independently recomputed non-receipt aggregates equal 919985c3dae9b834fc7a86d690e46081b94a87e932b3ebc7fbdf8d1ef82597db."},
-    {"checkId": "ACTIVE-BACKUP-RECEIPT-001", "passed": true, "evidence": "00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json is 10,864 bytes and SHA-256 7428285cd20d3d737f607120878768769239b3799c19483ee37dcdf0b1f7592f, byte-identical among candidate Graphify, immutable snapshot, and active backup."},
-    {"checkId": "ACTIVE-BACKUP-FULL-001", "passed": true, "evidence": "Active backup full scan found 13,446 files and 2,818 directories; complete paths, directory paths, sizes, and every file SHA-256 equal the candidate/snapshot identity, and full aggregate equals 6f1aa4dfc27430deb7c211f879d00f7fd74d593444d5ec4b8a4343b635a4434e."},
-    {"checkId": "ACTIVE-BACKUP-FS-001", "passed": true, "evidence": "Active backup full scan found zero unreadable paths, long-path omissions, duplicate normalized paths, symlinks, or junctions."},
-    {"checkId": "ACTIVE-BACKUP-IMMUTABILITY-001", "passed": true, "evidence": "Pre-review and post-review active-backup full aggregates, counts, and filesystem-state results are identical; no backup mutation occurred."}
-  ],
-  "lfsChecks": [
-    {"checkId": "LFS-PATHS-001", "passed": true, "evidence": "git lfs ls-files --long reports exactly the two package paths and no others; .gitattributes contains only their exact escaped path rules and no broad Graphify or *.jsonl LFS rule."},
-    {"checkId": "LFS-OID-001", "passed": true, "evidence": "DEPENDENCY_EDGES.jsonl pointer OID and materialized SHA-256 both equal eab3792a90c7744b5c5d8782ad34796cd0eb48c2f828da2671a861fb0b2d0433 at 114,232,612 bytes."},
-    {"checkId": "LFS-OID-002", "passed": true, "evidence": "Knowledge Graph/EDGES.jsonl pointer OID and materialized SHA-256 both equal 22111d28fa7e0ea4b6c2b3c779ca2261bc7a6f4e6da844ebc1b0557fd624ed27 at 112,287,175 bytes."},
-    {"checkId": "LFS-MATERIALIZATION-001", "passed": true, "evidence": "Both LFS paths are fully materialized working files, not pointer stubs; check-attr reports filter/diff/merge=lfs and text unset for both."},
-    {"checkId": "LFS-LARGE-BLOB-001", "passed": true, "evidence": "Complete HEAD tree enumeration found zero ordinary Git blobs over 100 MiB; the largest ordinary blob is 100,312,991 bytes, below 104,857,600 bytes."}
+  "sourceTopology": {
+    "applicationEntries": 8,
+    "workerEntries": 9,
+    "configuredEntries": 17,
+    "bootstrapConsumers": 12,
+    "compositionRoots": 7,
+    "runtimeRegistrations": 33,
+    "generatedRoots": 6,
+    "sourceMatchesCanonicalArchitecturePreservationContract": true,
+    "runtimeRegistrationsWithExactSourceEvidence": 33,
+    "status": "PASS"
+  },
+  "boundaryChecks": {
+    "ownerPath": "Codebase/packages/frontend/core/package.json",
+    "owned": true,
+    "allowed": true,
+    "forbidden": false,
+    "historicalFalseSymbolExcludedFromActiveAuthority": true,
+    "generatedPathsExcludedFromAllowedOwnedAndReferenceInputs": true,
+    "status": "PASS"
+  },
+  "keyedChallengeChecks": {
+    "requiredIds": [
+      "CHALLENGE-KEY-001",
+      "CHALLENGE-KEY-002",
+      "CHALLENGE-KEY-003",
+      "CHALLENGE-KEY-004",
+      "CHALLENGE-KEY-005",
+      "CHALLENGE-KEY-006",
+      "CHALLENGE-KEY-007",
+      "CHALLENGE-KEY-008"
+    ],
+    "passed": 8,
+    "failed": 0,
+    "genericFilenameAgnosticKeyDiscovery": "PASS",
+    "staleCapabilityPathMapRejected": "PASS",
+    "staleFolderOwnershipRejected": "PASS",
+    "unknownKeyedAuthorityFailsClosed": "PASS",
+    "historicalKeyedAuthorityInactive": "PASS",
+    "promotedStaleCurrentAuthorityRejected": "PASS",
+    "keyValueSemanticEquivalence": "PASS",
+    "keyValueDuplicateDeduplicated": "PASS"
+  },
+  "certificationChecks": {
+    "validatorPassed": 224,
+    "validatorTotal": 224,
+    "challengePassed": 120,
+    "challengeTotal": 120,
+    "missingChallengeIds": 0,
+    "unexpectedChallengeIds": 0,
+    "duplicateChallengeIds": 0,
+    "environmentExemptions": 0,
+    "baselineFailuresSubtracted": false,
+    "fullTechnicalCertification": "PASS",
+    "finalFreezeCertification": "PASS",
+    "step11b": "PASS"
+  },
+  "codebaseChecks": {
+    "gitTree": "bbf383e3418da4f613f58719160bb7cbd5709ffc",
+    "diffPaths": 0,
+    "stagedPaths": 0,
+    "implementationStatus": "NOT_STARTED",
+    "implementationPerformed": false,
+    "applicationReleased": false,
+    "status": "PASS"
+  },
+  "explicitAnswers": {
+    "doesAuthorityDiscoveryInspectBothDictionaryKeysAndValues": "YES",
+    "didValidatorDiscoverEveryRelevantCurrentAuthoritativeArtifactIndependentlyFound": "YES — 47/47; missing 0; unexpected 0",
+    "areCapabilityToPathMapAndFolderOwnershipMatrixCovered": "YES",
+    "wouldANewRegisteredCurrentAuthoritativeKeyedProjectionBeDiscoveredAutomatically": "YES",
+    "doUnknownKeyedAuthoritiesFailClosed": "YES",
+    "areAllFourAcceptanceCriteriaSatisfied": "YES — 4/4"
+  },
+  "acceptanceCriteria": [
+    {
+      "criterion": 1,
+      "description": "Active application/worker entries and runtime registrations verified",
+      "status": "PASS"
+    },
+    {
+      "criterion": 2,
+      "description": "Codebase mutation separated from preserved behavior",
+      "status": "PASS"
+    },
+    {
+      "criterion": 3,
+      "description": "Path/generated/forbidden boundaries reconcile with source topology",
+      "status": "PASS"
+    },
+    {
+      "criterion": 4,
+      "description": "Current-authority ambiguity completely resolved, including keyed authority",
+      "status": "PASS"
+    }
   ],
   "graphifyMutations": 0,
   "codebaseMutations": 0,

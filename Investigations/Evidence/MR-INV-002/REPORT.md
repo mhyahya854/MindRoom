@@ -157,3 +157,100 @@ Result: **2 / 4 passed**.
 `Codebase modified = NO`
 
 `Graphify modified = NO`
+
+## Frozen-plan change-control retry candidate
+
+
+Status: `BLOCKED — repair candidate awaiting full certification and one fresh independent review`.
+
+The original `MR-BLOCK-003` discovery above remains historical evidence. The first authorized repair attempt was rejected by its independent reviewer because it represented only eight HTML/application entries and seven bootstrap consumers, omitted nine configured worker source paths and five active bootstrap-consumer files, and let `ARCH-04`/`ARCH-08` trust those incomplete declarations. That exact failed candidate is preserved as non-authoritative WIP branch `wip/MR-INV-002-failed-change-control-20260811-134350` at commit `d0f492c830247a050b76ac5b29a19746de79c3fa`.
+
+The retry derives the live topology independently from package manifests, `bundle-shared.ts`, `bundle.ts`, `getBaseWorkerConfigs`, both Rspack target helpers, source-relative application imports, all active `@affine/core/bootstrap/*` imports, and the capability-linked runtime registry. The candidate reconciles 8 application entries, 9 unique worker entries, 17 total configured entries, 7 composition roots, 12 bootstrap consumers (16 imports), 3 bootstrap targets, 33 registrations, and 6 generated `dist/**` roots with zero missing or unexpected records. See `TOPOLOGY_RECONCILIATION.json`.
+
+Current authority contains no active `MR_CAP_001_CoreSymbol`. The truthful owner is `Codebase/packages/frontend/core/package.json`; it is exact, allowed, owned, and not forbidden. The task has 53 exact/allowed source inputs split into 20 owned and 33 read-only references. Application implementation remains `NONE`; Codebase tree `bbf383e3418da4f613f58719160bb7cbd5709ffc` and filesystem aggregate `91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748` remain unchanged.
+
+This candidate does not resolve the blocker by editing alone. `MR-INV-002` remains `BLOCKED` and `MR-BLOCK-003` remains `ACTIVE` until full certification, Step 11b, the dedicated reconciliation report, and exactly one fresh isolated review all pass.
+
+## Third change-control attempt — synchronized authority projection closure
+
+The second attempt also failed its independent review. Its canonical/top-level architecture contract correctly represented 8 application entries, 9 worker entries, 17 total configured entries, 12 bootstrap consumers, and 33 runtime registrations, but current-authoritative projections in `CAPABILITY_REGISTRY`, `CHANGE_LOCATION_REGISTRY`, the nested `IMPLEMENTATION_TASKS` contract, and the task-level bootstrap-consumer alias still contained the rejected 8-entry/7-consumer topology. `ARCH-04` and `ARCH-08` validated only the corrected canonical task contract and therefore did not detect those stale copies.
+
+That second failed candidate is preserved as non-authoritative history on `wip/MR-INV-002-second-failed-change-control-20260811-144854` at commit `cd601b3884b5fff5e2202aa6c1092dc3aa48b44b`. The third attempt began from published main `23398958f7e9485c58629e51c3f1db4b65182208` with immutable pre-change tag `mindroom-backup/change-control/MR-INV-002-sync-retry-20260811-144948`.
+
+The third candidate designates exactly one machine-readable canonical topology: `MR-IMPL-001.architecturePreservationContract` in `Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl`. Live Codebase source is independently derived first, that canonical contract is compared with source, and every discovered current-authoritative projection is then compared with both. The projection inventory contains 11 records: capability evidence; three capability-registry projections; two change-location projections; canonical, nested, and top-level implementation projections; the executable test binding; and the release-gate binding. Every record has zero missing and zero unexpected values.
+
+Production checks `ARCH-10` through `ARCH-17` now enforce unique canonical authority, source equality, capability/location/top-level/nested synchronization, executable acceptance-test coverage, release-gate binding, and complete projection enumeration. Four additive temporary-copy controls prove the previously missed class of defect: stale capability projection, stale location projection, stale nested task projection, and a correct canonical/top-level contract with all synchronized copies stale.
+
+Technical results before the one fresh review are:
+
+- `CORE_PRE_CHALLENGE`: 212 / 212 PASS.
+- `FULL_TECHNICAL_CERTIFICATION`: 215 / 215 PASS.
+- Full production challenge suite: 107 / 107 PASS.
+- `FINAL_FREEZE_CERTIFICATION`: 215 / 215 PASS.
+- Step 11b: 215 / 215 validator IDs and 107 / 107 challenge IDs, PASS.
+- Environment exemptions: 0.
+- Baseline subtraction: 0.
+- Semantic pre-review gate: PASS; 11 / 11 projections synchronized, 0 missing, 0 unexpected.
+- Codebase: 0 modified paths; Git tree `bbf383e3418da4f613f58719160bb7cbd5709ffc` and aggregate `91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748` preserved.
+
+The third attempt failed its single independent review. Although its 11 manually enumerated projections were synchronized, `PUBLIC_ENTRYPOINT_PLAN.jsonl` was also current authority and was absent from that inventory. The reviewer mutated a temporary `PUBLIC_ENTRYPOINT_PLAN` projection to stale topology and the production validator still passed. The third candidate is preserved as non-authoritative WIP branch `wip/MR-INV-002-third-failed-change-control-20260813-153400` at commit `11945f02b8623193e591ce2c53bc5df882d94a45`.
+
+## Fourth change-control attempt - dynamic current-authority discovery
+
+The fourth attempt began again from published main `23398958f7e9485c58629e51c3f1db4b65182208`. Its immutable pre-change tag is `mindroom-backup/change-control/MR-INV-002-authority-discovery-20260813-153457`.
+
+The production validator now derives the current-authority universe from `FINAL_AUTHORITY_CLASSIFICATION.jsonl`, rather than from a manually complete artifact list. It recursively discovers MR-CAP-001/MR-IMPL-001 references across structured and textual current authority, classifies each reference by semantics, validates every class, and fails closed when current semantics are unknown. The pre-review inventory contains 178 current-authority artifacts, 45 relevant artifacts, and 3462 reference hits: all 3462 are classified and validated, with zero unclassified, unvalidated, or silently ignored references. `PUBLIC_ENTRYPOINT_PLAN.jsonl` is automatically discovered as an entrypoint projection and has zero missing or unexpected paths.
+
+Production checks `ARCH-18` through `ARCH-22` enforce universe integrity, classification/validation closure, count conservation, automatic public-entrypoint coverage, and all known-schema projection truth. Five additive temporary-copy controls cover a stale `PUBLIC_ENTRYPOINT_PLAN`, an unknown current-authority artifact, a newly introduced stale known-schema artifact, the same artifact when historical/superseded, and promotion of that artifact back to current authority. All earlier architecture controls remain active.
+
+Technical results before the single fresh fourth-attempt review are:
+
+- `CORE_PRE_CHALLENGE`: 217 / 217 PASS.
+- `FULL_TECHNICAL_CERTIFICATION`: 220 / 220 PASS.
+- Full production challenge suite: 112 / 112 PASS.
+- `FINAL_FREEZE_CERTIFICATION`: 220 / 220 PASS.
+- Step 11b: 220 / 220 validator IDs and 112 / 112 challenge IDs, PASS.
+- Environment exemptions: 0.
+- Baseline subtraction: 0.
+- Exhaustive authority gate: PASS; 178 current artifacts, 3462 / 3462 references classified and validated, zero silent omissions.
+- Topology reconciliation: 8 application entries, 9 worker entries, 17 configured entries, 12 bootstrap consumers, 16 imports, 3 targets, 7 composition roots, and 33 / 33 runtime registrations.
+- Codebase: 0 modified paths; Git tree `bbf383e3418da4f613f58719160bb7cbd5709ffc` and aggregate `91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748` preserved.
+
+The fourth attempt is not yet complete. `MR-INV-002` remains `BLOCKED`, `MR-BLOCK-003` remains `ACTIVE`, and all four final investigation criteria remain pending until the exactly one authorized fresh fourth-attempt independent review returns `VERIFIED`.
+
+## Fourth-attempt failure — dictionary-key authority omission
+
+The fourth attempt failed because `_walk_relevant_records` traversed dictionary values but did not treat dictionary keys as possible authority identities. Its 45-artifact inventory therefore omitted two current keyed authorities: `CAPABILITY_TO_PATH_MAP.json` and `FOLDER_OWNERSHIP_MATRIX.json`. That candidate is preserved as non-authoritative history on `wip/MR-INV-002-fourth-failed-change-control-20260813-215856` at commit `9a4ab6b7d9a4f39b93d97d02e10c2a324535b9c8`. It is classified `HISTORICAL_FAILED_CANDIDATE` and must not be merged wholesale.
+
+## Fifth change-control attempt — key-aware current-authority closure
+
+The fifth attempt began from published main `23398958f7e9485c58629e51c3f1db4b65182208`. Its immutable pre-change tag is `mindroom-backup/change-control/MR-INV-002-key-aware-discovery-20260813-220037`.
+
+The production walker now recursively inspects both dictionary keys and values. A key match retains the artifact, JSON pointer, dictionary key, associated value, containing-map context, authority status, and semantic scope. Key, value, and combined matches use one semantic inventory and validation pipeline. Unknown current keyed semantics become `UNCLASSIFIED_CURRENT_AUTHORITY` and fail closed.
+
+The reviewed gate dynamically enumerated 178 current-authority artifacts and traversed all 133 structured artifacts. It found 47 relevant artifacts: three through keys and 45 through values, with a 47-artifact deduplicated union. The separately implemented pre-review enumerator also found exactly 47; the validator had zero missing or unexpected artifacts. All 3149 reviewed semantic references were classified and validated, with zero unclassified, unvalidated, or silently ignored references.
+
+Required keyed and value projections now pass naturally:
+
+- `CAPABILITY_TO_PATH_MAP.json#/MR-CAP-001` is automatically key-discovered as `PATH_PROJECTION / EXACT_CURRENT_PATHS`; all 53 canonical paths agree, with zero missing, unexpected, or contradictory values.
+- `FOLDER_OWNERSHIP_MATRIX.json#/folderOwners/MR-CAP-001` is automatically key-discovered as `OWNERSHIP_PROJECTION / CURRENT_OWNER_LABEL`; its scoped owner equals current canonical ownership.
+- `PUBLIC_ENTRYPOINT_PLAN.jsonl` remains value-discovered and agrees with 8 application entries, 9 workers, 17 configured entries, and 12 bootstrap consumers.
+
+Eight new keyed regressions prove generic valid discovery, path-map rejection, ownership rejection, unknown-schema fail-closed behavior, historical inactivity, stale-current rejection, key/value equivalence, and combined-location deduplication. All previous source, worker, bootstrap, projection, symbol, owner, generated-path, and test-anchor controls remain active.
+
+Final technical evidence is:
+
+- `FULL_TECHNICAL_CERTIFICATION`: 224 / 224 PASS.
+- Full production challenge suite: 120 / 120 PASS.
+- New keyed challenges: 8 / 8 PASS.
+- Missing, unexpected, or duplicate challenge IDs: 0.
+- Environment exemptions: 0.
+- Baseline subtraction: 0.
+- `FINAL_FREEZE_CERTIFICATION`: 224 / 224 PASS.
+- Step 11b: PASS.
+- Codebase diff and staged paths: 0.
+- Codebase Git tree before and after: `bbf383e3418da4f613f58719160bb7cbd5709ffc`.
+
+Exactly one fresh isolated read-only fifth-attempt reviewer independently inspected the walker, independently enumerated both key and value authority, found the same 178-artifact universe and 47 relevant artifacts, verified both formerly missed keyed projections, verified the generic challenge coverage, and returned `VERIFIED`. The reviewer explicitly concluded all four acceptance criteria pass.
+
+Final result: `MR-INV-002 = COMPLETE (4 / 4)`, `MR-BLOCK-003 = RESOLVED`, `Wave 0 = READY_NOT_STARTED`, `implementationPerformed = false`, and `applicationReleased = false`. Stop before `MR-INV-003` and before Wave 0.

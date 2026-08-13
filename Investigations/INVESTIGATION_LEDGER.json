@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "project": "MindRoom",
   "frozenPlanningBaseline": "bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd",
-  "currentRemoteMainAtLastRun": "fcd5fd2448ab6301b4e9233a87c93d9919c5cf6b",
+  "currentRemoteMainAtLastRun": "23398958f7e9485c58629e51c3f1db4b65182208",
   "stage": "PRE_CODE_INVESTIGATION",
-  "lastRunAt": "2026-08-11T10:41:25+03:00",
+  "lastRunAt": "2026-08-11T15:12:00+03:00",
   "investigations": [
     {
       "id": "MR-INV-001",
@@ -125,10 +125,11 @@
       "priority": "CRITICAL",
       "blockingLevel": "HARD",
       "status": "BLOCKED",
-      "decision": "BLOCKED. The live application composition and all 33 task-linked registrations are healthy and MR-IMPL-001 should require no Codebase rewrite, but the frozen MR-CAP-001 authority claims a nonexistent TypeScript symbol in @affine/core/package.json, disagrees on the owner and allowed paths, omits the actual Rspack entry sources, and defines acceptance tests that cannot truthfully verify the KEEP architecture contract. Explicit frozen-plan change control is required before Wave 0.",
+      "decision": "Third synchronized-authority candidate passed 215/215 certification checks, 107/107 challenges, Step 11b, and an 11-projection semantic gate. MR-BLOCK-003 remains ACTIVE until the one authorized fresh independent review returns VERIFIED.",
       "evidencePaths": [
         "Investigations/Evidence/MR-INV-002/REPORT.md",
-        "Investigations/Evidence/MR-INV-002/EVIDENCE.json"
+        "Investigations/Evidence/MR-INV-002/EVIDENCE.json",
+        "Investigations/Evidence/MR-INV-002/TOPOLOGY_RECONCILIATION.json"
       ],
       "primarySources": [
         "Graphify/12 Source Documents/AFFINE_PROVENANCE.md",
@@ -137,10 +138,21 @@
       ],
       "codebaseChangeRequiredNext": false,
       "frozenPlanContradiction": true,
-      "notes": "Two of four acceptance criteria passed. All 33 runtime registrations and the real entry graph were verified read-only, but owner/path/test contradictions block completion. FINAL_FREEZE_CERTIFICATION and Step 11b still pass, proving a semantic validator gap rather than filesystem drift.",
+      "notes": "First and second repair attempts failed independent review and are preserved on separate non-authoritative WIP branches. Third attempt: one canonical source-derived topology, 11 synchronized projections, zero missing/unexpected deltas, review pending; Wave 0 not started.",
       "blockerIds": [
         "MR-BLOCK-003"
-      ]
+      ],
+      "thirdChangeControl": {
+        "preChangeBackupTag": "mindroom-backup/change-control/MR-INV-002-sync-retry-20260811-144948",
+        "secondFailedCandidateBranch": "wip/MR-INV-002-second-failed-change-control-20260811-144854",
+        "secondFailedCandidateCommit": "cd601b3884b5fff5e2202aa6c1092dc3aa48b44b",
+        "validatorChecks": "215/215",
+        "challenges": "107/107",
+        "step11b": "PASS",
+        "semanticPreReviewGate": "PASS",
+        "independentReview": "PENDING",
+        "codebaseModified": false
+      }
     },
     {
       "id": "MR-INV-003",
@@ -464,7 +476,7 @@
       "notes": "Derived from the canonical dependency audit, which makes the bootstrap a prerequisite of all six primary Wave 0 tasks."
     }
   ],
-  "publicationState": "MR-INV-002_BLOCKED_PENDING_COMMIT_AND_PUSH",
-  "publicationParent": "fcd5fd2448ab6301b4e9233a87c93d9919c5cf6b",
+  "publicationState": "MR_INV_002_RETRY_CANDIDATE_NOT_YET_AUTHORIZED_FOR_PUBLICATION",
+  "publicationParent": "23398958f7e9485c58629e51c3f1db4b65182208",
   "publicationCommitMessage": "Investigate MindRoom MR-INV-002: Wave 0 architecture preservation boundary"
 }

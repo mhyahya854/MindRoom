@@ -1,6 +1,6 @@
 {
-  "freezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
-  "officialValidatorRunId": "mindroom-mr-inv-001-change-control-20260809-080238-validation",
+  "freezeRunId": "mindroom-mr-inv-002-third-sync-recertified-freeze-20260811-151200",
+  "officialValidatorRunId": "mindroom-mr-inv-002-third-sync-change-control-20260811-151200-validation",
   "externalReviewRunId": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
   "mappingStatus": "COMPLETED_AND_FROZEN",
   "independentReviewStatus": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
@@ -29,14 +29,14 @@
     "publicEntrypoints": 161
   },
   "manifestRecordCount": 167,
-  "manifestAggregateHash": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
+  "manifestAggregateHash": "acf7f59cc75c44cf6961b6eece326f1877f555a2c7d031f24c834427fecb60f8",
   "codebaseFileCount": 10080,
   "codebaseDirectoryCount": 2548,
   "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
-  "validatorCheckCount": 198,
-  "challengeTestCount": 95,
+  "validatorCheckCount": 215,
+  "challengeTestCount": 107,
   "blockingDefectCount": 0,
-  "repairRunId": "mindroom-mr-inv-001-change-control-20260809-080238",
+  "repairRunId": "mindroom-mr-inv-002-third-sync-change-control-20260811-151200",
   "gateTestSynchronizationStatus": "PASS",
   "warningSummary": [
     {
@@ -55,12 +55,12 @@
     }
   ],
   "backupBackend": "GITHUB_NATIVE_IMMUTABLE_GIT_REF",
-  "currentBackupRef": "refs/tags/mindroom-backup/change-control/20260809-103711",
+  "currentBackupRef": "refs/tags/mindroom-backup/change-control/MR-INV-002-sync-retry-20260811-144948",
   "persistentLocalBackupRequired": false,
   "challengeReportState": "FRESH_CHALLENGE_EXECUTION_VERIFIED",
-  "timestamp": "2026-08-09T11:02:38+03:00",
-  "validatorSourceHash": "b2fe87ea8e391f639d374ef67a703d001ba9e90e5d0bb5896d0ec111a0e7a660",
-  "challengeSourceHash": "23b17369a10edc4535151272a9b5297a0e97aea329b55820edf16464cdf5a134",
+  "timestamp": "2026-08-11T15:12:00+03:00",
+  "validatorSourceHash": "c83298474999fe8cf6e1365f7afa2faa86fb99916cb38a83579ebc62f6be3b33",
+  "challengeSourceHash": "0afb4bac66043d810fd45fb80efce637e0e6979522368caa73f352e791a51295",
   "verifierSourceHash": "27a9859659e4834b9bdfc23391f51dcba0c977af4c1dbc7fa327e84e871141d4",
   "requiredChallenges": [
     "CHALLENGE-001",
@@ -157,7 +157,19 @@
     "CHALLENGE-FROZEN-WAVE0-BLOCKED-001",
     "CHALLENGE-FROZEN-SYNC-GENERATION-001",
     "CHALLENGE-FROZEN-SYNC-MANIFEST-001",
-    "CHALLENGE-FROZEN-VALIDATION-MODE-001"
+    "CHALLENGE-FROZEN-VALIDATION-MODE-001",
+    "CHALLENGE-ARCH-001",
+    "CHALLENGE-ARCH-002",
+    "CHALLENGE-ARCH-003",
+    "CHALLENGE-ARCH-004",
+    "CHALLENGE-ARCH-005",
+    "CHALLENGE-ARCH-006",
+    "CHALLENGE-ARCH-007",
+    "CHALLENGE-ARCH-008",
+    "CHALLENGE-ARCH-009",
+    "CHALLENGE-ARCH-010",
+    "CHALLENGE-ARCH-011",
+    "CHALLENGE-ARCH-012"
   ],
   "challenges": [
     {
@@ -3334,6 +3346,443 @@
         ]
       },
       "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-001",
+      "mutation": "Claim a nonexistent TypeScript literal symbol in a current-authoritative JSON exact-location record",
+      "temporaryFiles": [
+        "04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-01"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-01",
+        "ARCH-06"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-001",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-01"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-002",
+      "mutation": "Exclude the architecture contract owner from allowedPaths",
+      "temporaryFiles": [
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-02"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-02",
+        "ARCH-06"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-002",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-02"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-003",
+      "mutation": "Catch the architecture contract owner with the forbidden catch-all",
+      "temporaryFiles": [
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-02",
+        "ARCH-03"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-02",
+        "ARCH-03",
+        "ARCH-06"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-003",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-02",
+          "ARCH-03"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-004",
+      "mutation": "Omit one source-required Rspack entry from the declared preservation boundary",
+      "temporaryFiles": [
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-04"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-04",
+        "ARCH-06",
+        "ARCH-10",
+        "ARCH-13",
+        "ARCH-17"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-004",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-04"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-005",
+      "mutation": "Treat a generated dist file as an allowed owned canonical source",
+      "temporaryFiles": [
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-05"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-05",
+        "ARCH-06"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-005",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-05"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-006",
+      "mutation": "Make an MR-CAP-001 acceptance test require a nonexistent literal source anchor",
+      "temporaryFiles": [
+        "10 Verification/REQUIREMENT_TEST_MATRIX.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-06"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "GATE-13"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-006",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-06"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-007",
+      "mutation": "Remove a live configured worker entry from every temporary Graphify declaration while leaving Codebase source intact",
+      "temporaryFiles": [
+        "03 Capability Map/CAPABILITY_REGISTRY.json",
+        "03 Capability Map/CAPABILITY_EVIDENCE.jsonl",
+        "03 Capability Map/CAPABILITY_SOURCE_SEARCH_RECEIPTS.jsonl",
+        "04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl",
+        "04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json",
+        "06 Folder Ownership/CAPABILITY_TO_PATH_MAP.json",
+        "06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl",
+        "07 Reorganisation/MOVE_PLAN.jsonl",
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+        "09 Implementation/TRANSPLANT_RECEIPTS.jsonl",
+        "09 Implementation/TRANSPLANT_SEARCH_QUEUE.jsonl",
+        "02 Architecture Map/WORKER_MAP.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-04"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-04",
+        "ARCH-06",
+        "ARCH-10",
+        "ARCH-11",
+        "ARCH-12",
+        "ARCH-13",
+        "ARCH-14",
+        "ARCH-17"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-007",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-04"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-008",
+      "mutation": "Remove a live bootstrap consumer from every temporary Graphify declaration while leaving Codebase source intact",
+      "temporaryFiles": [
+        "03 Capability Map/CAPABILITY_REGISTRY.json",
+        "03 Capability Map/CAPABILITY_EVIDENCE.jsonl",
+        "03 Capability Map/CAPABILITY_SOURCE_SEARCH_RECEIPTS.jsonl",
+        "04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl",
+        "04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json",
+        "06 Folder Ownership/CAPABILITY_TO_PATH_MAP.json",
+        "06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl",
+        "07 Reorganisation/MOVE_PLAN.jsonl",
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+        "09 Implementation/TRANSPLANT_RECEIPTS.jsonl",
+        "09 Implementation/TRANSPLANT_SEARCH_QUEUE.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-08"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "ARCH-08",
+        "ARCH-10",
+        "ARCH-11",
+        "ARCH-12",
+        "ARCH-13",
+        "ARCH-14",
+        "ARCH-17"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-008",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-08"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-009",
+      "mutation": "Remove one real worker from only the CAPABILITY_REGISTRY architecture projection while source and canonical task authority remain correct",
+      "temporaryFiles": [
+        "03 Capability Map/CAPABILITY_REGISTRY.json"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-11"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "ARCH-11",
+        "ARCH-17"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-009",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-11"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-010",
+      "mutation": "Remove one real bootstrap consumer from only the CHANGE_LOCATION_REGISTRY architecture projection while canonical authority remains correct",
+      "temporaryFiles": [
+        "04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-12"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "ARCH-12",
+        "ARCH-17"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-010",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-12"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-011",
+      "mutation": "Remove one real worker from only the nested MR-IMPL-001 contract while the top-level canonical contract remains correct",
+      "temporaryFiles": [
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-14"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "ARCH-14",
+        "ARCH-17"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-011",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-14"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "challengeId": "CHALLENGE-ARCH-012",
+      "mutation": "Keep the top-level canonical task topology correct while all capability, location, and nested task copies are stale",
+      "temporaryFiles": [
+        "03 Capability Map/CAPABILITY_REGISTRY.json",
+        "04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl",
+        "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+      ],
+      "productionValidatorFunction": "validate_final_graphify_freeze.do_strict_validation",
+      "productionValidatorInvoked": true,
+      "expectedFailedCheckIds": [
+        "ARCH-11",
+        "ARCH-12",
+        "ARCH-14",
+        "ARCH-17"
+      ],
+      "actualFailedCheckIds": [
+        "ARCH-06",
+        "ARCH-11",
+        "ARCH-12",
+        "ARCH-14",
+        "ARCH-17"
+      ],
+      "baselineStatus": "PASS",
+      "baselineFailedCheckIds": [],
+      "documentedEnvironmentFailures": [],
+      "environmentExemptions": [],
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "validationTarget": "TEMPORARY_CHALLENGE_CANDIDATE",
+      "overridesUsed": true,
+      "temporaryChallengeId": "CHALLENGE-ARCH-012",
+      "independentExpectedEvidence": {
+        "source": "immutable challenge specification",
+        "checkIds": [
+          "ARCH-11",
+          "ARCH-12",
+          "ARCH-14",
+          "ARCH-17"
+        ]
+      },
+      "passed": true
     }
   ],
   "gateSpecificChallenges": 10,
@@ -3341,9 +3790,9 @@
   "lineageChallengesPassed": 24,
   "lineageChallengeFailures": 0,
   "lineageSemanticChallengesExecuted": 24,
-  "challengesUsingProductionValidator": 95,
-  "challengesWithIndependentExpectedEvidence": 95,
-  "challengesWithZeroFailureBaseline": 95,
+  "challengesUsingProductionValidator": 107,
+  "challengesWithIndependentExpectedEvidence": 107,
+  "challengesWithZeroFailureBaseline": 107,
   "challengesUsingBaselineFailureSubtraction": 0,
   "baselineFailuresSubtracted": false,
   "coreBaselineStatus": "PASS",
@@ -3358,7 +3807,7 @@
   "finalFreezeCertificationFailedCheckIds": [],
   "finalFreezeCertificationEnvironmentFailures": [],
   "backupUnchangedThroughoutChallenges": true,
-  "backupAggregateBeforeChallenges": "154c30f3841f3a6b1f5e8d7d8422e28bb21ce423274ffe169e95b25b11594cd2",
-  "backupAggregateAfterChallenges": "154c30f3841f3a6b1f5e8d7d8422e28bb21ce423274ffe169e95b25b11594cd2",
+  "backupAggregateBeforeChallenges": "e5c8dad5f9a8e4eea976f151ec1090b3085793627f3c3fb998a09741a8364a15",
+  "backupAggregateAfterChallenges": "e5c8dad5f9a8e4eea976f151ec1090b3085793627f3c3fb998a09741a8364a15",
   "postPublicationCertificationRevalidated": true
 }

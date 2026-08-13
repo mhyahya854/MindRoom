@@ -157,3 +157,40 @@ Result: **2 / 4 passed**.
 `Codebase modified = NO`
 
 `Graphify modified = NO`
+
+## Frozen-plan change-control retry candidate
+
+
+Status: `BLOCKED — repair candidate awaiting full certification and one fresh independent review`.
+
+The original `MR-BLOCK-003` discovery above remains historical evidence. The first authorized repair attempt was rejected by its independent reviewer because it represented only eight HTML/application entries and seven bootstrap consumers, omitted nine configured worker source paths and five active bootstrap-consumer files, and let `ARCH-04`/`ARCH-08` trust those incomplete declarations. That exact failed candidate is preserved as non-authoritative WIP branch `wip/MR-INV-002-failed-change-control-20260811-134350` at commit `d0f492c830247a050b76ac5b29a19746de79c3fa`.
+
+The retry derives the live topology independently from package manifests, `bundle-shared.ts`, `bundle.ts`, `getBaseWorkerConfigs`, both Rspack target helpers, source-relative application imports, all active `@affine/core/bootstrap/*` imports, and the capability-linked runtime registry. The candidate reconciles 8 application entries, 9 unique worker entries, 17 total configured entries, 7 composition roots, 12 bootstrap consumers (16 imports), 3 bootstrap targets, 33 registrations, and 6 generated `dist/**` roots with zero missing or unexpected records. See `TOPOLOGY_RECONCILIATION.json`.
+
+Current authority contains no active `MR_CAP_001_CoreSymbol`. The truthful owner is `Codebase/packages/frontend/core/package.json`; it is exact, allowed, owned, and not forbidden. The task has 53 exact/allowed source inputs split into 20 owned and 33 read-only references. Application implementation remains `NONE`; Codebase tree `bbf383e3418da4f613f58719160bb7cbd5709ffc` and filesystem aggregate `91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748` remain unchanged.
+
+This candidate does not resolve the blocker by editing alone. `MR-INV-002` remains `BLOCKED` and `MR-BLOCK-003` remains `ACTIVE` until full certification, Step 11b, the dedicated reconciliation report, and exactly one fresh isolated review all pass.
+
+## Third change-control attempt — synchronized authority projection closure
+
+The second attempt also failed its independent review. Its canonical/top-level architecture contract correctly represented 8 application entries, 9 worker entries, 17 total configured entries, 12 bootstrap consumers, and 33 runtime registrations, but current-authoritative projections in `CAPABILITY_REGISTRY`, `CHANGE_LOCATION_REGISTRY`, the nested `IMPLEMENTATION_TASKS` contract, and the task-level bootstrap-consumer alias still contained the rejected 8-entry/7-consumer topology. `ARCH-04` and `ARCH-08` validated only the corrected canonical task contract and therefore did not detect those stale copies.
+
+That second failed candidate is preserved as non-authoritative history on `wip/MR-INV-002-second-failed-change-control-20260811-144854` at commit `cd601b3884b5fff5e2202aa6c1092dc3aa48b44b`. The third attempt began from published main `23398958f7e9485c58629e51c3f1db4b65182208` with immutable pre-change tag `mindroom-backup/change-control/MR-INV-002-sync-retry-20260811-144948`.
+
+The third candidate designates exactly one machine-readable canonical topology: `MR-IMPL-001.architecturePreservationContract` in `Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl`. Live Codebase source is independently derived first, that canonical contract is compared with source, and every discovered current-authoritative projection is then compared with both. The projection inventory contains 11 records: capability evidence; three capability-registry projections; two change-location projections; canonical, nested, and top-level implementation projections; the executable test binding; and the release-gate binding. Every record has zero missing and zero unexpected values.
+
+Production checks `ARCH-10` through `ARCH-17` now enforce unique canonical authority, source equality, capability/location/top-level/nested synchronization, executable acceptance-test coverage, release-gate binding, and complete projection enumeration. Four additive temporary-copy controls prove the previously missed class of defect: stale capability projection, stale location projection, stale nested task projection, and a correct canonical/top-level contract with all synchronized copies stale.
+
+Technical results before the one fresh review are:
+
+- `CORE_PRE_CHALLENGE`: 212 / 212 PASS.
+- `FULL_TECHNICAL_CERTIFICATION`: 215 / 215 PASS.
+- Full production challenge suite: 107 / 107 PASS.
+- `FINAL_FREEZE_CERTIFICATION`: 215 / 215 PASS.
+- Step 11b: 215 / 215 validator IDs and 107 / 107 challenge IDs, PASS.
+- Environment exemptions: 0.
+- Baseline subtraction: 0.
+- Semantic pre-review gate: PASS; 11 / 11 projections synchronized, 0 missing, 0 unexpected.
+- Codebase: 0 modified paths; Git tree `bbf383e3418da4f613f58719160bb7cbd5709ffc` and aggregate `91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748` preserved.
+
+The third attempt is not yet complete. `MR-INV-002` remains `BLOCKED`, `MR-BLOCK-003` remains `ACTIVE`, and all four final investigation criteria remain pending until the exactly one authorized fresh independent review returns `VERIFIED`.

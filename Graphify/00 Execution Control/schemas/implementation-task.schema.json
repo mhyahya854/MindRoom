@@ -34,8 +34,30 @@
     "requiredAffineSearches": {},
     "activeCodeSearches": {},
     "preliminaryTransplantDecision": {},
-    "allowedPaths": {},
-    "forbiddenPaths": {},
+    "allowedPaths": {
+      "description": "Exact canonical source/configuration paths the task may inspect or preserve. A contract owner must be present here.",
+      "type": "array"
+    },
+    "ownedPaths": {
+      "description": "Canonical source paths owned by this task's preservation or implementation boundary.",
+      "type": "array"
+    },
+    "referencePaths": {
+      "description": "Read-only source/configuration inputs used to derive or verify the boundary.",
+      "type": "array"
+    },
+    "generatedPaths": {
+      "description": "Disposable derived outputs that are never canonical architecture source.",
+      "type": "array"
+    },
+    "forbiddenPaths": {
+      "description": "Paths the task must not treat as canonical writable inputs. Generated paths may be repeated here to forbid source classification.",
+      "type": "array"
+    },
+    "architecturePreservationContract": {
+      "description": "Source-derived KEEP_EXISTING boundary for package, build-entry, composition-root, bootstrap, registration, and generated-output verification.",
+      "type": "object"
+    },
     "dependencies": {},
     "dependantTasks": {},
     "requiredAdaptations": {},

@@ -5,13 +5,13 @@
   "title": "Wave 0 application architecture preservation boundary",
   "question": "Which application entrypoints, package boundaries, and registrations must Wave 0 preserve, and which exact changes are actually required by MR-IMPL-001?",
   "startedAt": "2026-08-11T10:22:43+03:00",
-  "completedAt": "2026-08-11T10:41:25+03:00",
+  "completedAt": null,
   "startingSha": "fcd5fd2448ab6301b4e9233a87c93d9919c5cf6b",
   "status": "BLOCKED",
   "blockingLevel": "HARD",
   "selectedInvestigationOnly": true,
   "codebaseModified": false,
-  "graphifyModified": false,
+  "graphifyModified": true,
   "implementationPerformed": false,
   "applicationReleased": false,
   "wave0Authorized": false,
@@ -136,18 +136,54 @@
     "declared": 12,
     "existing": 12,
     "paths": [
-      {"path": "Codebase/package.json", "sha256": "6ce694262f8b3df1ca4bcf54acac62d60ef4bf7784419f1bfefb9858077e4ddf"},
-      {"path": "Codebase/packages/frontend/apps/android/src/app.tsx", "sha256": "21aa38c14c96df89e3a435cedcf079cb52bad410da64c5044c47ddc1a6e71e5a"},
-      {"path": "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx", "sha256": "c0b348f75bb550a3f6018f2667a135896992ba52794c399d39e203f2575157dd"},
-      {"path": "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx", "sha256": "ce42201da73a61dd4c1db09cc98490b0d3251ddd1885a90fa998975a50635571"},
-      {"path": "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx", "sha256": "181ea92e0ea7628782edd6017c27a9889ec5ad84b928e76511cb4ffb85fa2b39"},
-      {"path": "Codebase/packages/frontend/apps/ios/src/app.tsx", "sha256": "39e5f335ef568ab3a644d807ad967168a9e58c685f3302bba3e234a321f42475"},
-      {"path": "Codebase/packages/frontend/apps/mobile/src/app.tsx", "sha256": "b59b37dad1390304f667d3ce19e3cfd2d071a9fe74f60a688b2b575ae0535cdb"},
-      {"path": "Codebase/packages/frontend/apps/web/src/app.tsx", "sha256": "c8d4a30481ab50ed1883c1a0da36cb1851e267da997a1b5caa91c056bc8577c0"},
-      {"path": "Codebase/packages/frontend/apps/android/package.json", "sha256": "0b5242f0909329ffdea8797e57b7089db40fdce18e56e793c5b1dbacc7bb3303"},
-      {"path": "Codebase/packages/frontend/apps/android/tsconfig.json", "sha256": "f691e92bba121757d769c6a9a08726dff6d0a32117af25df65a2804f954dc86c"},
-      {"path": "Codebase/packages/frontend/apps/electron-renderer/package.json", "sha256": "e75eaaad3271badefbf664a2ececf4fdbba0c0733b07cd2f0c0a585bf5f63f6f"},
-      {"path": "Codebase/packages/frontend/apps/electron-renderer/tsconfig.json", "sha256": "3b1f9ec7df9a25bfd7da6842ac6fa052a59dca4fa73e9bbdc5179bd8fd76f797"}
+      {
+        "path": "Codebase/package.json",
+        "sha256": "6ce694262f8b3df1ca4bcf54acac62d60ef4bf7784419f1bfefb9858077e4ddf"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/android/src/app.tsx",
+        "sha256": "21aa38c14c96df89e3a435cedcf079cb52bad410da64c5044c47ddc1a6e71e5a"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/electron-renderer/src/app/app.tsx",
+        "sha256": "c0b348f75bb550a3f6018f2667a135896992ba52794c399d39e203f2575157dd"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/electron-renderer/src/popup/app.tsx",
+        "sha256": "ce42201da73a61dd4c1db09cc98490b0d3251ddd1885a90fa998975a50635571"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/electron-renderer/src/shell/app.tsx",
+        "sha256": "181ea92e0ea7628782edd6017c27a9889ec5ad84b928e76511cb4ffb85fa2b39"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/ios/src/app.tsx",
+        "sha256": "39e5f335ef568ab3a644d807ad967168a9e58c685f3302bba3e234a321f42475"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/mobile/src/app.tsx",
+        "sha256": "b59b37dad1390304f667d3ce19e3cfd2d071a9fe74f60a688b2b575ae0535cdb"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/web/src/app.tsx",
+        "sha256": "c8d4a30481ab50ed1883c1a0da36cb1851e267da997a1b5caa91c056bc8577c0"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/android/package.json",
+        "sha256": "0b5242f0909329ffdea8797e57b7089db40fdce18e56e793c5b1dbacc7bb3303"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/android/tsconfig.json",
+        "sha256": "f691e92bba121757d769c6a9a08726dff6d0a32117af25df65a2804f954dc86c"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/electron-renderer/package.json",
+        "sha256": "e75eaaad3271badefbf664a2ececf4fdbba0c0733b07cd2f0c0a585bf5f63f6f"
+      },
+      {
+        "path": "Codebase/packages/frontend/apps/electron-renderer/tsconfig.json",
+        "sha256": "3b1f9ec7df9a25bfd7da6842ac6fa052a59dca4fa73e9bbdc5179bd8fd76f797"
+      }
     ]
   },
   "externalPrimaryEvidence": {
@@ -265,7 +301,7 @@
     "Offline/cloud-adjacent registrations remain assigned to MR-INV-005 and were not reclassified here."
   ],
   "frozenPlanContradiction": true,
-  "decision": "BLOCKED. Preserve the current application architecture and make no Codebase change. Explicit frozen-plan change control must repair MR-CAP-001/MR-IMPL-001 exact-location, ownership, path-boundary, build-entry, acceptance-test, and validator semantics before Wave 0.",
+  "decision": "BLOCKED pending the one authorized fresh independent review. Third-attempt source/canonical/projection synchronization, complete certification, Step 11b, and semantic pre-review gate have passed.",
   "implementationConsequence": "NO CODEBASE MUTATION. After authorized change control, MR-IMPL-001 should be a preservation/verification gate unless new scoped evidence proves an adaptation is required.",
   "requiredResolution": [
     "Replace the nonexistent MR_CAP_001_CoreSymbol with truthful source anchors or an explicit non-symbol preservation marker.",
@@ -276,24 +312,48 @@
     "Rerun full authorized frozen change-control certification and independent review."
   ],
   "verification": {
+    "corePreChallenge": {
+      "status": "PASS",
+      "checks": 212,
+      "failures": 0
+    },
+    "fullTechnicalCertification": {
+      "status": "PASS",
+      "checks": 215,
+      "failures": 0
+    },
     "finalFreezeCertification": {
       "status": "PASS",
-      "checks": 198,
+      "checks": 215,
       "failures": 0,
       "validationMode": "FINAL_FREEZE_CERTIFICATION"
     },
+    "adversarialChallenges": {
+      "status": "PASS",
+      "passed": 107,
+      "total": 107,
+      "environmentExemptions": 0,
+      "baselineSubtraction": 0
+    },
     "step11b": {
       "status": "PASS",
-      "validatorIds": "198/198",
-      "challengeIds": "95/95"
+      "validatorIds": "215/215",
+      "challengeIds": "107/107"
+    },
+    "semanticPreReviewGate": {
+      "status": "PASS",
+      "projectionCount": 11,
+      "missing": 0,
+      "unexpected": 0
     },
     "codebasePreservation": {
       "files": 10080,
       "directories": 2548,
       "aggregateSha256": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+      "gitTree": "bbf383e3418da4f613f58719160bb7cbd5709ffc",
       "status": "PASS"
     },
-    "semanticValidatorGap": "The passing certification does not validate literal source-anchor existence or owner/allowed-path semantic agreement."
+    "semanticValidatorGap": "CLOSED_BY_ARCH_10_THROUGH_ARCH_17_AND_CHALLENGE_ARCH_009_THROUGH_012"
   },
   "progressAfterInvestigation": {
     "investigationsResolved": 1,
@@ -309,5 +369,132 @@
     "releaseGatesPassed": 0,
     "releaseGatesTotal": 168,
     "releaseGatesRemaining": 168
+  },
+  "changeControlRetry": {
+    "authorization": "EXPLICIT_USER_FROZEN_PLAN_CHANGE_CONTROL_RETRY",
+    "status": "SECOND_ATTEMPT_FAILED_INDEPENDENT_REVIEW",
+    "startingMain": "23398958f7e9485c58629e51c3f1db4b65182208",
+    "preChangeBackupTag": "mindroom-backup/change-control/MR-INV-002-retry-20260811-134452",
+    "failedCandidateWip": {
+      "branch": "wip/MR-INV-002-failed-change-control-20260811-134350",
+      "commit": "d0f492c830247a050b76ac5b29a19746de79c3fa",
+      "classification": "HISTORICAL_FAILED_CANDIDATE_NON_AUTHORITATIVE_DO_NOT_MERGE_WHOLESALE"
+    },
+    "repair": {
+      "fakeSymbolAction": "RECLASSIFIED_AS_HISTORICAL_SUPERSEDED; current authority uses non-symbol package/source anchors",
+      "exactPaths": 53,
+      "ownedPaths": 20,
+      "referencePaths": 33,
+      "generatedPaths": 6,
+      "sourceAnchors": 50,
+      "topologyReconciliation": "Investigations/Evidence/MR-INV-002/TOPOLOGY_RECONCILIATION.json"
+    },
+    "certification": "PASS_BEFORE_FAILED_REVIEW",
+    "freshIndependentReviewAttemptsAuthorizedThisRetry": 1,
+    "freshIndependentReviewAttemptsUsedThisRetry": 1,
+    "secondReviewDefect": "Canonical/top-level topology was complete, but current-authoritative capability, location, nested-task, and top-level bootstrap-consumer projections remained stale; ARCH-04/ARCH-08 did not enumerate them.",
+    "secondFailedCandidateWip": {
+      "branch": "wip/MR-INV-002-second-failed-change-control-20260811-144854",
+      "commit": "cd601b3884b5fff5e2202aa6c1092dc3aa48b44b",
+      "tree": "17d0e783ba8a2f691257e11ca91bbb8da1eacc3e",
+      "classification": "HISTORICAL_FAILED_CANDIDATE_NON_AUTHORITATIVE_DO_NOT_MERGE_WHOLESALE"
+    }
+  },
+  "changeControlHistory": [
+    {
+      "state": "MR_BLOCK_003_DISCOVERED",
+      "at": "2026-08-11T10:41:25+03:00",
+      "evidence": "Original MR-INV-002 evidence remains authoritative discovery history."
+    },
+    {
+      "state": "FIRST_CHANGE_CONTROL_REPAIR_ATTEMPTED",
+      "outcome": "FAILED_INDEPENDENT_REVIEW",
+      "defect": "The first repair declared only eight HTML/application entries and seven bootstrap consumers; it omitted nine configured worker sources and five active bootstrap-consumer files, while ARCH-04/ARCH-08 trusted the incomplete declarations."
+    },
+    {
+      "state": "FAILED_CANDIDATE_PRESERVED",
+      "branch": "wip/MR-INV-002-failed-change-control-20260811-134350",
+      "commit": "d0f492c830247a050b76ac5b29a19746de79c3fa"
+    },
+    {
+      "state": "RETRY_CHANGE_CONTROL_AUTHORIZED",
+      "preChangeBackupTag": "mindroom-backup/change-control/MR-INV-002-retry-20260811-134452"
+    },
+    {
+      "state": "SECOND_REPAIR_CANDIDATE_APPLIED",
+      "at": "2026-08-11T14:13:58+03:00",
+      "meaning": "Complete source-derived application/worker/bootstrap topology and source-independent validator checks are present; blocker remains ACTIVE until full certification and one fresh independent review pass."
+    },
+    {
+      "state": "SECOND_CHANGE_CONTROL_REVIEW_FAILED",
+      "at": "2026-08-11T14:45:00+03:00",
+      "outcome": "FAILED_INDEPENDENT_REVIEW",
+      "defect": "Current-authoritative capability, location, nested-task, and top-level bootstrap-consumer projections remained stale although the canonical/top-level contract was complete; validator coverage did not enumerate every projection."
+    },
+    {
+      "state": "SECOND_FAILED_CANDIDATE_PRESERVED",
+      "branch": "wip/MR-INV-002-second-failed-change-control-20260811-144854",
+      "commit": "cd601b3884b5fff5e2202aa6c1092dc3aa48b44b"
+    },
+    {
+      "state": "THIRD_CHANGE_CONTROL_AUTHORIZED",
+      "preChangeBackupTag": "mindroom-backup/change-control/MR-INV-002-sync-retry-20260811-144948"
+    },
+    {
+      "state": "THIRD_SYNCHRONIZED_REPAIR_CERTIFIED",
+      "at": "2026-08-11T15:12:00+03:00",
+      "meaning": "One source-derived canonical contract and all 11 current-authoritative projections reconcile with zero deltas; 215/215 validation, 107/107 challenges, Step 11b, and the semantic pre-review gate pass. Blocker remains ACTIVE pending exactly one fresh review."
+    }
+  ],
+  "retryAcceptanceCriteria": [
+    {
+      "criterion": "Active application entries, worker entries, bootstrap consumers, and capability-linked runtime registrations are verified from source.",
+      "status": "PENDING_FRESH_INDEPENDENT_REVIEW",
+      "candidateEvidence": "8 application + 9 worker = 17 configured entries; 12 consumers/16 imports; 33 registrations; source equals canonical and all projections."
+    },
+    {
+      "criterion": "Required Codebase mutation is separated from preserved behavior.",
+      "status": "PENDING_FRESH_INDEPENDENT_REVIEW",
+      "candidateEvidence": "KEEP_EXISTING; no Codebase mutation required or performed; tree and filesystem aggregate preserved."
+    },
+    {
+      "criterion": "Allowed/generated/forbidden paths reconcile with the complete entry graph.",
+      "status": "PENDING_FRESH_INDEPENDENT_REVIEW",
+      "candidateEvidence": "53 exact/allowed, 20 owned, 33 referenced, six generated/forbidden dist roots; complete source-derived entry boundary passes."
+    },
+    {
+      "criterion": "Architecture ownership and acceptance-test ambiguity are fully resolved across all current authority.",
+      "status": "PENDING_FRESH_INDEPENDENT_REVIEW",
+      "candidateEvidence": "Owner is allowed/owned/not forbidden; 50 literal anchors resolve; executable tests include canonical-to-all-projection synchronization; 11/11 projections have zero deltas."
+    }
+  ],
+  "retryAcceptanceSummary": {
+    "passed": 0,
+    "pending": 4,
+    "total": 4,
+    "finalizationRule": "Mark 4/4 PASS only after the one fresh third-attempt independent review returns VERIFIED."
+  },
+  "thirdChangeControlAttempt": {
+    "authorization": "EXPLICIT_USER_THIRD_FROZEN_PLAN_CHANGE_CONTROL_ATTEMPT",
+    "status": "TECHNICAL_CERTIFICATION_AND_SEMANTIC_GATE_PASS_FRESH_REVIEW_PENDING",
+    "startingMain": "23398958f7e9485c58629e51c3f1db4b65182208",
+    "preChangeBackupTag": "mindroom-backup/change-control/MR-INV-002-sync-retry-20260811-144948",
+    "canonicalAuthority": "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl#/records/MR-IMPL-001/architecturePreservationContract",
+    "projectionInventory": "Investigations/Evidence/MR-INV-002/TOPOLOGY_RECONCILIATION.json",
+    "projectionCount": 11,
+    "missingAcrossAllProjections": 0,
+    "unexpectedAcrossAllProjections": 0,
+    "validatorChecks": 215,
+    "validatorFailures": 0,
+    "challengesPassed": 107,
+    "challengesTotal": 107,
+    "environmentExemptions": 0,
+    "baselineSubtraction": 0,
+    "step11b": "PASS",
+    "semanticPreReviewGate": "PASS",
+    "freshIndependentReviewAttemptsAuthorized": 1,
+    "freshIndependentReviewAttemptsUsed": 0,
+    "codebaseTree": "bbf383e3418da4f613f58719160bb7cbd5709ffc",
+    "codebaseModified": false
   }
 }

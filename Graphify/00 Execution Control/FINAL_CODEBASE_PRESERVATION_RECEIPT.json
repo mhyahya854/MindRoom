@@ -1,6 +1,6 @@
 {
-  "freezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
-  "officialValidatorRunId": "mindroom-mr-inv-001-change-control-20260809-080238-validation",
+  "freezeRunId": "mindroom-mr-inv-002-fourth-authority-discovery-recertified-freeze-20260813-160114",
+  "officialValidatorRunId": "mindroom-mr-inv-002-fourth-authority-discovery-change-control-20260813-160114-validation",
   "externalReviewRunId": "mindroom-first-independent-review-20260808-170415-4e4ab9fd",
   "mappingStatus": "COMPLETED_AND_FROZEN",
   "independentReviewStatus": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
@@ -29,14 +29,14 @@
     "publicEntrypoints": 161
   },
   "manifestRecordCount": 167,
-  "manifestAggregateHash": "fbf4d54f53dec7f68823d01e6252b345e69dd119c238b5aaeec14d22b83a047f",
+  "manifestAggregateHash": "6f430ce7b5d14a188243f640b6043f751a2ea1601439dd8965dbb8b8191b1504",
   "codebaseFileCount": 10080,
   "codebaseDirectoryCount": 2548,
   "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
-  "validatorCheckCount": 198,
-  "challengeTestCount": 95,
+  "validatorCheckCount": 220,
+  "challengeTestCount": 112,
   "blockingDefectCount": 0,
-  "timestamp": "2026-08-09T11:02:38+03:00",
+  "timestamp": "2026-08-13T16:01:14+03:00",
   "codebasePreservation": {
     "before": {
       "fileCount": 10080,
@@ -53008,7 +53008,7 @@
     "verified": true,
     "verifiedAt": "2026-08-06T13:24:12+00:00"
   },
-  "repairRunId": "mindroom-mr-inv-001-change-control-20260809-080238",
+  "repairRunId": "mindroom-mr-inv-002-fourth-authority-discovery-change-control-20260813-160114",
   "gateTestSynchronizationStatus": "PASS",
   "warningSummary": [
     {
@@ -53026,8 +53026,8 @@
       ]
     }
   ],
-  "lastUpdatedAt": "2026-08-08T21:32:17+00:00",
-  "candidateRunId": "mindroom-graphify-pre-bind-convergence-20260808-111839",
+  "lastUpdatedAt": "2026-08-13T16:01:14+03:00",
+  "candidateRunId": "mindroom-mr-inv-002-third-sync-change-control-20260811-151200",
   "projectPhase": "GRAPHIFY_PLANNING_COMPLETE_AND_AUTHORITATIVELY_FROZEN",
   "historicalBackup": {
     "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-lineage-repair-20260801-190852",
@@ -53039,17 +53039,16 @@
   "candidateRootKind": "REPOSITORY_RELATIVE",
   "implementationPerformed": false,
   "applicationReleased": false,
-  "validatorSourceHash": "b2fe87ea8e391f639d374ef67a703d001ba9e90e5d0bb5896d0ec111a0e7a660",
-  "challengeSourceHash": "23b17369a10edc4535151272a9b5297a0e97aea329b55820edf16464cdf5a134",
+  "validatorSourceHash": "c83298474999fe8cf6e1365f7afa2faa86fb99916cb38a83579ebc62f6be3b33",
+  "challengeSourceHash": "0afb4bac66043d810fd45fb80efce637e0e6979522368caa73f352e791a51295",
   "verifierSourceHash": "27a9859659e4834b9bdfc23391f51dcba0c977af4c1dbc7fa327e84e871141d4",
   "backupState": "VERIFIED_GITHUB_NATIVE_IMMUTABLE_GIT_REF",
-  "finalFreezeRunId": "mindroom-graphify-final-freeze-20260808-185500",
+  "finalFreezeRunId": "mindroom-mr-inv-002-third-sync-recertified-freeze-20260811-151200",
   "independentReviewDecision": "VERIFIED",
   "reviewReportSha256": "eb0439a5e3bcc1c6c27712f5953d910e056aca20ad7db768db2d4151f8b6778f",
-  "candidateCommitSha": "16cd9496ab9d3bf59019a038a07e23251fc4d5b5",
-  "candidateTreeSha": "d31ce0aa54c2a79056ccfbb439dc8b214b107e0c",
-  "certificationTimestamp": "2026-08-08T21:32:17+00:00",
+  "certificationTimestamp": "2026-08-13T16:01:14+03:00",
   "backupBackend": "GITHUB_NATIVE_IMMUTABLE_GIT_REF",
-  "currentBackupRef": "refs/tags/mindroom-backup/change-control/20260809-103711",
-  "persistentLocalBackupRequired": false
+  "currentBackupRef": "refs/tags/mindroom-backup/change-control/MR-INV-002-authority-discovery-20260813-153457",
+  "persistentLocalBackupRequired": false,
+  "changeControlStatus": "MR_INV_002_FOURTH_DYNAMIC_AUTHORITY_CANDIDATE_TECHNICAL_CERTIFICATION_PENDING_FRESH_REVIEW"
 }

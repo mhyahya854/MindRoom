@@ -10,6 +10,7 @@ import subprocess
 import sys
 import tempfile
 from collections import Counter, defaultdict
+from fnmatch import fnmatchcase
 from pathlib import Path
 
 sys.dont_write_bytecode = True
@@ -20,6 +21,10 @@ CODEBASE = ROOT.parent / "Codebase"
 _CODEBASE_CACHE = {}
 _CHECK_DEFINITION_CACHE = {}
 _GITHUB_BACKUP_CACHE = {}
+_CURRENT_AUTHORITY_ARTIFACT_CACHE = {}
+_RELEVANT_AUTHORITY_NEEDLES = (
+    b"MR-CAP-001", b"MR-IMPL-001", b"MR_CAP_001_", b"ENTRY_MR-CAP-001",
+)
 
 CURRENT_METADATA = (
     "00 Execution Control/STATUS.json",
@@ -349,6 +354,1099 @@ def inventory_tree(root):
     return result
 
 
+def codebase_source_path(relative):
+    relative = str(relative or "").replace("\\", "/").removeprefix("./")
+    return ROOT.parent / relative
+
+
+def json_pointer_value(document, pointer):
+    if pointer == "":
+        return document
+    if not isinstance(pointer, str) or not pointer.startswith("/"):
+        raise ValueError(f"invalid JSON pointer: {pointer!r}")
+    current = document
+    for raw in pointer[1:].split("/"):
+        key = raw.replace("~1", "/").replace("~0", "~")
+        current = current[int(key)] if isinstance(current, list) else current[key]
+    return current
+
+
+def path_matches_pattern(path, pattern):
+    path = str(path or "").replace("\\", "/")
+    pattern = str(pattern or "").replace("\\", "/")
+    return path == pattern or fnmatchcase(path, pattern) or fnmatchcase(path, pattern.replace("**", "*"))
+
+
+def owner_path_issues(task):
+    owner = str((task.get("contract") or {}).get("ownedPackageOrModule") or "")
+    allowed = set(task.get("allowedPaths") or [])
+    owned = set(task.get("ownedPaths") or [])
+    references = set(task.get("referencePaths") or [])
+    issues = []
+    if not owner:
+        issues.append({"taskId": task.get("taskId"), "issue": "missing contract owner"})
+    elif owner not in allowed or owner not in owned | references:
+        issues.append({
+            "taskId": task.get("taskId"), "owner": owner,
+            "allowed": owner in allowed, "ownedOrReferenced": owner in owned | references,
+        })
+    return issues
+
+
+def owner_forbidden_issues(task):
+    owner = str((task.get("contract") or {}).get("ownedPackageOrModule") or "")
+    allowed = set(task.get("allowedPaths") or [])
+    matched = []
+    for pattern in task.get("forbiddenPaths") or []:
+        if pattern == "All paths not listed in allowedPaths":
+            if owner and owner not in allowed:
+                matched.append(pattern)
+        elif owner and path_matches_pattern(owner, pattern):
+            matched.append(pattern)
+    return [{"taskId": task.get("taskId"), "owner": owner, "matchedForbiddenPaths": matched}] if matched else []
+
+
+def _balanced_calls(text, function_name):
+    """Return call argument text without evaluating TypeScript."""
+    calls = []
+    for match in re.finditer(rf"\b{re.escape(function_name)}\s*\(", text):
+        start = match.end() - 1
+        depth, quote, escaped = 0, None, False
+        for index in range(start, len(text)):
+            char = text[index]
+            if quote:
+                if escaped:
+                    escaped = False
+                elif char == "\\":
+                    escaped = True
+                elif char == quote:
+                    quote = None
+                continue
+            if char in {"'", '"', "`"}:
+                quote = char
+            elif char == "(":
+                depth += 1
+            elif char == ")":
+                depth -= 1
+                if depth == 0:
+                    calls.append(text[start + 1:index])
+                    break
+    return calls
+
+
+def _function_body(text, function_name):
+    match = re.search(rf"\bfunction\s+{re.escape(function_name)}\s*\(", text)
+    if not match:
+        return None
+    paren_start = match.end() - 1
+    paren_depth, quote, escaped, paren_end = 0, None, False, None
+    for index in range(paren_start, len(text)):
+        char = text[index]
+        if quote:
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == quote:
+                quote = None
+            continue
+        if char in {"'", '"', "`"}:
+            quote = char
+        elif char == "(":
+            paren_depth += 1
+        elif char == ")":
+            paren_depth -= 1
+            if paren_depth == 0:
+                paren_end = index
+                break
+    if paren_end is None:
+        return None
+    brace = text.find("{", paren_end)
+    if brace < 0:
+        return None
+    depth, quote, escaped = 0, None, False
+    for index in range(brace, len(text)):
+        char = text[index]
+        if quote:
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == quote:
+                quote = None
+            continue
+        if char in {"'", '"', "`"}:
+            quote = char
+        elif char == "{":
+            depth += 1
+        elif char == "}":
+            depth -= 1
+            if depth == 0:
+                return text[brace + 1:index]
+    return None
+
+
+def _resolve_relative_source(importer_relative, specifier):
+    importer = codebase_source_path(importer_relative)
+    base = importer.parent / specifier
+    candidates = [base] if base.suffix else [Path(str(base) + suffix) for suffix in (".tsx", ".ts", ".mts", ".js")]
+    candidates += [base / name for name in ("index.tsx", "index.ts", "index.mts", "index.js")]
+    for candidate in candidates:
+        if candidate.is_file():
+            return candidate.relative_to(ROOT.parent).as_posix()
+    return None
+
+
+def derive_live_architecture_topology():
+    """Derive MR-CAP-001 topology only from current Codebase bytes."""
+    issues = []
+    apps_root = codebase_source_path("Codebase/packages/frontend/apps")
+    packages = []
+    for manifest_path in sorted(apps_root.glob("*/package.json")):
+        try:
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8-sig"))
+        except (OSError, json.JSONDecodeError) as error:
+            issues.append({"path": manifest_path.relative_to(ROOT.parent).as_posix(), "issue": f"manifest unreadable: {error}"})
+            continue
+        dependency_names = set()
+        for field in ("dependencies", "devDependencies", "peerDependencies", "optionalDependencies"):
+            dependency_names.update((manifest.get(field) or {}).keys())
+        if (manifest.get("scripts") or {}).get("build") == "affine bundle" and "@affine/core" in dependency_names:
+            root = manifest_path.parent.relative_to(ROOT.parent).as_posix()
+            packages.append({"packageName": manifest.get("name"), "packageRoot": root})
+
+    bundle_relative = "Codebase/tools/cli/src/bundle.ts"
+    bundle_path = codebase_source_path(bundle_relative)
+    shared_path = codebase_source_path("Codebase/tools/cli/src/bundle-shared.ts")
+    rspack_path = codebase_source_path("Codebase/tools/cli/src/rspack/index.ts")
+    if not all(path.is_file() for path in (bundle_path, shared_path, rspack_path)):
+        return {}, issues + [{"issue": "canonical bundler source/helper missing"}]
+    bundle_text = bundle_path.read_text(encoding="utf-8-sig")
+    shared_text = shared_path.read_text(encoding="utf-8-sig")
+    rspack_text = rspack_path.read_text(encoding="utf-8-sig")
+    supported_match = re.search(r"RSPACK_SUPPORTED_PACKAGES\s*=\s*\[(.*?)\]\s*as const", shared_text, re.S)
+    supported = set(re.findall(r"'([^']+)'", supported_match.group(1))) if supported_match else set()
+    if not supported_match:
+        issues.append({"issue": "Rspack supported-package source list not derivable"})
+    helper_requirements = [
+        "export function createHTMLTargetConfig(",
+        "entry,",
+        "export function createWorkerTargetConfig(",
+        "entry: { [workerName]: entry },",
+    ]
+    missing_helper_semantics = [literal for literal in helper_requirements if literal not in rspack_text]
+    if missing_helper_semantics:
+        issues.append({"issue": "Rspack helper entry semantics missing", "literals": missing_helper_semantics})
+
+    group_pattern = re.compile(
+        r"(?P<cases>(?:^\s{4}case\s+'[^']+':(?:\s*\{)?\s*\r?\n)+)(?P<body>.*?)(?=^\s{4}case\s+'|^\s{4}default:|\Z)",
+        re.M | re.S,
+    )
+    groups = [(re.findall(r"case\s+'([^']+)'", match.group("cases")), match.group("body")) for match in group_pattern.finditer(bundle_text)]
+    base_body = _function_body(bundle_text, "getBaseWorkerConfigs")
+    if base_body is None:
+        base_workers = []
+        issues.append({"issue": "getBaseWorkerConfigs source body not derivable"})
+    else:
+        base_workers = [f"Codebase/packages/frontend/core/src/{value}" for value in re.findall(r"core\.srcPath\.join\(\s*'([^']+)'\s*\)", base_body, re.S)]
+        if not base_workers:
+            issues.append({"issue": "base worker source set empty"})
+
+    topology_by_package, application_entries, worker_entries = [], [], []
+    for package in packages:
+        name, root = package["packageName"], package["packageRoot"]
+        if name not in supported:
+            issues.append({"packageName": name, "issue": "selected package absent from canonical Rspack support list"})
+        group = next((body for names, body in groups if name in names), None)
+        if group is None:
+            issues.append({"packageName": name, "issue": "selected package absent from bundle switch"})
+            continue
+        html_calls = _balanced_calls(group, "createRspackHTMLTargetConfig")
+        local_app_entries = []
+        if len(html_calls) != 1:
+            issues.append({"packageName": name, "issue": "expected exactly one HTML target call", "actual": len(html_calls)})
+        else:
+            local_app_entries = sorted({f"{root}/src/{value}" for value in re.findall(r"pkg\.srcPath\.join\(\s*'([^']+)'\s*\)", html_calls[0], re.S)})
+            if not local_app_entries:
+                issues.append({"packageName": name, "issue": "application entries not derivable from HTML target call"})
+        package_workers = []
+        for call in _balanced_calls(group, "createRspackWorkerTargetConfig"):
+            package_workers.extend(f"{root}/src/{value}" for value in re.findall(r"pkg\.srcPath\.join\(\s*'([^']+)'\s*\)", call, re.S))
+        selected_base = list(base_workers)
+        if re.search(r"includeMermaidAndTypst\s*:\s*false", group):
+            selected_base = [path for path in selected_base if "/modules/mermaid/" not in path and "/modules/typst/" not in path]
+        local_worker_entries = sorted(set(selected_base + package_workers))
+        local_all = sorted(set(local_app_entries + local_worker_entries))
+        topology_by_package.append({"packageName": name, "packageRoot": root, "applicationEntryPaths": local_app_entries, "workerEntryPaths": local_worker_entries, "allConfiguredEntryPaths": local_all})
+        application_entries.extend(local_app_entries)
+        worker_entries.extend(local_worker_entries)
+
+    application_entries = sorted(set(application_entries))
+    worker_entries = sorted(set(worker_entries))
+    all_entries = sorted(set(application_entries + worker_entries))
+    for path in all_entries:
+        if not codebase_source_path(path).is_file():
+            issues.append({"path": path, "issue": "configured entry source missing"})
+
+    composition_roots = []
+    for entry in application_entries:
+        source = codebase_source_path(entry)
+        text = source.read_text(encoding="utf-8-sig") if source.is_file() else ""
+        for specifier in re.findall(r"(?:from\s+|import\s*\()\s*['\"](\./app(?:\.tsx)?)['\"]", text):
+            resolved = _resolve_relative_source(entry, specifier)
+            if resolved:
+                composition_roots.append(resolved)
+            else:
+                issues.append({"path": entry, "specifier": specifier, "issue": "composition import does not resolve"})
+    composition_roots = sorted(set(composition_roots))
+
+    core_manifest_path = codebase_source_path("Codebase/packages/frontend/core/package.json")
+    try:
+        core_manifest = json.loads(core_manifest_path.read_text(encoding="utf-8-sig"))
+    except (OSError, json.JSONDecodeError) as error:
+        core_manifest = {}
+        issues.append({"path": "Codebase/packages/frontend/core/package.json", "issue": f"manifest unreadable: {error}"})
+    wildcard_target = (core_manifest.get("exports") or {}).get("./*")
+    bootstrap_imports = []
+    for package in packages:
+        src_root = codebase_source_path(f"{package['packageRoot']}/src")
+        for source in sorted(path for path in src_root.rglob("*") if path.suffix in {".ts", ".tsx", ".mts"} and path.is_file()):
+            text = source.read_text(encoding="utf-8-sig")
+            for suffix in sorted(set(re.findall(r"@affine/core/bootstrap/([^'\"\s;]+)", text))):
+                specifier_tail = f"bootstrap/{suffix}"
+                candidate = None
+                if isinstance(wildcard_target, str) and "*" in wildcard_target:
+                    relative_target = wildcard_target.replace("*", specifier_tail).removeprefix("./")
+                    base = core_manifest_path.parent / relative_target
+                    for possible in [base, Path(str(base) + ".ts"), Path(str(base) + ".tsx"), base / "index.ts"]:
+                        if possible.is_file():
+                            candidate = possible.relative_to(ROOT.parent).as_posix()
+                            break
+                bootstrap_imports.append({
+                    "consumerPath": source.relative_to(ROOT.parent).as_posix(),
+                    "specifier": f"@affine/core/{specifier_tail}",
+                    "targetPath": candidate,
+                })
+                if not candidate:
+                    issues.append({"path": source.relative_to(ROOT.parent).as_posix(), "specifier": specifier_tail, "issue": "bootstrap wildcard export does not resolve"})
+    bootstrap_imports = sorted(bootstrap_imports, key=lambda row: (row["consumerPath"], row["specifier"], str(row["targetPath"])))
+    bootstrap_consumers = sorted({row["consumerPath"] for row in bootstrap_imports})
+    bootstrap_targets = sorted({row["targetPath"] for row in bootstrap_imports if row["targetPath"]})
+    roots = ["Codebase/packages/frontend/core"] + [package["packageRoot"] for package in packages]
+    generated_paths = sorted(f"{root}/dist/**" for root in roots)
+    return {
+        "buildPackages": packages,
+        "buildPackageTopology": topology_by_package,
+        "applicationEntryPaths": application_entries,
+        "workerEntryPaths": worker_entries,
+        "allConfiguredEntryPaths": all_entries,
+        "compositionRoots": composition_roots,
+        "bootstrapConsumerPaths": bootstrap_consumers,
+        "bootstrapTargets": bootstrap_targets,
+        "bootstrapImports": bootstrap_imports,
+        "generatedOutputRoots": roots,
+        "generatedPaths": generated_paths,
+        "packageManifest": {"path": "Codebase/packages/frontend/core/package.json", "packageName": core_manifest.get("name"), "wildcardExport": wildcard_target},
+    }, issues
+
+
+def _set_mismatch(issue, derived, declared, task_id):
+    derived, declared = set(derived or []), set(declared or [])
+    if derived == declared:
+        return None
+    return {"taskId": task_id, "issue": issue, "missing": sorted(derived - declared), "unexpected": sorted(declared - derived)}
+
+
+def architecture_build_issues(task):
+    architecture = task.get("architecturePreservationContract") or {}
+    topology, issues = derive_live_architecture_topology()
+    issues = list(issues)
+    task_id = task.get("taskId")
+    declared_packages = [{"packageName": row.get("packageName"), "packageRoot": row.get("packageRoot")} for row in (architecture.get("buildPackages") or [])]
+    derived_package_pairs = {(row.get("packageName"), row.get("packageRoot")) for row in topology.get("buildPackages", [])}
+    declared_package_pairs = {(row.get("packageName"), row.get("packageRoot")) for row in declared_packages}
+    if derived_package_pairs != declared_package_pairs or len(declared_packages) != len(declared_package_pairs):
+        issues.append({"taskId": task_id, "issue": "source-derived and declared build packages differ", "actual": declared_packages, "expected": topology.get("buildPackages")})
+    derived_by_name = {row["packageName"]: row for row in topology.get("buildPackageTopology", [])}
+    declared_by_name = {row.get("packageName"): row for row in (architecture.get("buildPackageTopology") or [])}
+    if set(derived_by_name) != set(declared_by_name):
+        issues.append({"taskId": task_id, "issue": "per-package topology package identities differ", "actual": sorted(declared_by_name), "expected": sorted(derived_by_name)})
+    for name, derived in derived_by_name.items():
+        declared = declared_by_name.get(name) or {}
+        for field in ("applicationEntryPaths", "workerEntryPaths", "allConfiguredEntryPaths"):
+            mismatch = _set_mismatch(f"{name} {field} differs", derived.get(field), declared.get(field), task_id)
+            if mismatch:
+                issues.append(mismatch)
+    comparisons = [
+        ("application entry set differs", topology.get("applicationEntryPaths"), architecture.get("applicationEntryPaths") or task.get("applicationEntryPaths")),
+        ("worker entry set differs", topology.get("workerEntryPaths"), architecture.get("workerEntryPaths") or task.get("workerEntryPaths")),
+        ("all configured entry set differs", topology.get("allConfiguredEntryPaths"), architecture.get("allConfiguredEntryPaths") or architecture.get("buildEntryPaths") or task.get("buildEntryPaths")),
+        ("buildEntryPaths alias differs", topology.get("allConfiguredEntryPaths"), architecture.get("buildEntryPaths") or task.get("buildEntryPaths")),
+    ]
+    for issue, derived, declared in comparisons:
+        mismatch = _set_mismatch(issue, derived, declared, task_id)
+        if mismatch:
+            issues.append(mismatch)
+    for path in topology.get("allConfiguredEntryPaths", []):
+        absent = [field for field in ("exactCurrentPaths", "exactTargetPaths", "allowedPaths") if path not in (task.get(field) or [])]
+        owned_or_referenced = path in set(task.get("ownedPaths") or []) | set(task.get("referencePaths") or [])
+        if absent or not owned_or_referenced or not codebase_source_path(path).is_file():
+            issues.append({"taskId": task_id, "path": path, "missingFrom": absent, "ownedOrReferenced": owned_or_referenced, "sourceExists": codebase_source_path(path).is_file()})
+    return issues
+
+
+def generated_output_issues(task):
+    architecture = task.get("architecturePreservationContract") or {}
+    topology, topology_issues = derive_live_architecture_topology()
+    issues = list(topology_issues)
+    expected = topology.get("generatedPaths") or []
+    roots_expected = topology.get("generatedOutputRoots") or []
+    for field, actual in (("task.generatedPaths", task.get("generatedPaths")), ("architecture.generatedPaths", architecture.get("generatedPaths"))):
+        mismatch = _set_mismatch(f"{field} differs from source-derived generated roots", expected, actual, task.get("taskId"))
+        if mismatch:
+            issues.append(mismatch)
+    roots_mismatch = _set_mismatch("generated output roots differ", roots_expected, architecture.get("generatedOutputRoots"), task.get("taskId"))
+    if roots_mismatch:
+        issues.append(roots_mismatch)
+    canonical = []
+    for field in ("exactCurrentPaths", "exactTargetPaths", "allowedPaths", "ownedPaths", "referencePaths"):
+        canonical.extend({"field": field, "path": path} for path in (task.get(field) or []))
+    overlaps = [row for row in canonical if any(path_matches_pattern(row["path"], pattern) for pattern in expected)]
+    if overlaps:
+        issues.append({"taskId": task.get("taskId"), "issue": "generated output classified as canonical input", "overlaps": overlaps})
+    forbidden = task.get("forbiddenPaths") or []
+    unclassified = [pattern for pattern in expected if pattern not in forbidden]
+    if unclassified:
+        issues.append({"taskId": task.get("taskId"), "issue": "source-derived generated output not forbidden as canonical input", "paths": unclassified})
+    return issues
+
+
+def composition_bootstrap_issues(task):
+    architecture = task.get("architecturePreservationContract") or {}
+    topology, topology_issues = derive_live_architecture_topology()
+    issues = list(topology_issues)
+    task_id = task.get("taskId")
+    for label, derived, declared in [
+        ("composition root set differs", topology.get("compositionRoots"), architecture.get("compositionRoots")),
+        ("bootstrap consumer set differs", topology.get("bootstrapConsumerPaths"), architecture.get("bootstrapConsumerPaths")),
+        ("bootstrap target set differs", topology.get("bootstrapTargets"), architecture.get("bootstrapTargets")),
+    ]:
+        mismatch = _set_mismatch(label, derived, declared, task_id)
+        if mismatch:
+            issues.append(mismatch)
+    derived_imports = {(row.get("consumerPath"), row.get("specifier"), row.get("targetPath")) for row in topology.get("bootstrapImports", [])}
+    declared_imports = {(row.get("consumerPath"), row.get("specifier"), row.get("targetPath")) for row in architecture.get("bootstrapImports") or []}
+    if derived_imports != declared_imports:
+        issues.append({"taskId": task_id, "issue": "bootstrap import/target map differs", "missing": sorted(derived_imports - declared_imports), "unexpected": sorted(declared_imports - derived_imports)})
+    boundary = set(task.get("ownedPaths") or []) | set(task.get("referencePaths") or [])
+    for field in ("compositionRoots", "bootstrapConsumerPaths", "bootstrapTargets"):
+        for path in topology.get(field, []):
+            absent = [name for name in ("exactCurrentPaths", "exactTargetPaths", "allowedPaths") if path not in (task.get(name) or [])]
+            if absent or path not in boundary or not codebase_source_path(path).is_file():
+                issues.append({"taskId": task_id, "field": field, "path": path, "missingFrom": absent, "ownedOrReferenced": path in boundary, "sourceExists": codebase_source_path(path).is_file()})
+    package = architecture.get("packageManifest") or {}
+    manifest_path = codebase_source_path(package.get("path"))
+    try:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8-sig"))
+    except (OSError, json.JSONDecodeError) as error:
+        issues.append({"path": package.get("path"), "issue": f"package manifest unreadable: {error}"})
+    else:
+        if manifest.get("name") != package.get("packageName") or manifest.get("name") != (topology.get("packageManifest") or {}).get("packageName"):
+            issues.append({"path": package.get("path"), "issue": "package identity mismatch"})
+        for export in package.get("requiredExports") or []:
+            if (manifest.get("exports") or {}).get(export.get("key")) != export.get("target"):
+                issues.append({"path": package.get("path"), "issue": "required export mismatch", "export": export})
+        for export in package.get("declaredNonRequiredExports") or []:
+            target = str(export.get("target") or "").removeprefix("./")
+            actual_exists = (manifest_path.parent / target).is_file()
+            if (manifest.get("exports") or {}).get(export.get("key")) != export.get("target") or actual_exists is not export.get("targetExists"):
+                issues.append({"path": package.get("path"), "issue": "declared non-required export classification mismatch", "export": export, "actualTargetExists": actual_exists})
+    return issues
+
+
+def runtime_registration_issues(task, registration_map):
+    architecture = task.get("architecturePreservationContract") or {}
+    capability_id = task.get("capabilityId")
+    expected = sorted(registration_id for registration_id, row in registration_map.items() if capability_id in (row.get("capabilityIds") or []))
+    declared = list(task.get("runtimeRegistrations") or [])
+    architecture_declared = list(architecture.get("runtimeRegistrationIds") or [])
+    issues = []
+    for field, actual in (("task.runtimeRegistrations", declared), ("architecture.runtimeRegistrationIds", architecture_declared)):
+        if sorted(actual) != expected or len(actual) != len(set(actual)):
+            issues.append({"taskId": task.get("taskId"), "issue": f"{field} differs from capability-linked runtime registry", "missing": sorted(set(expected) - set(actual)), "unexpected": sorted(set(actual) - set(expected)), "duplicates": len(actual) - len(set(actual))})
+    for registration_id in expected:
+        row = registration_map[registration_id]
+        path = codebase_source_path(row.get("declaringPath"))
+        lines = path.read_text(encoding="utf-8-sig").splitlines() if path.is_file() else []
+        match = re.match(r"(\d+)", str(row.get("lineRange") or ""))
+        line_number = int(match.group(1)) if match else 0
+        evidence = next((value for value in (row.get("evidence") or []) if f":L{line_number}: " in value), None)
+        expected_line = evidence.split(f":L{line_number}: ", 1)[1] if evidence else None
+        line_ok = 0 < line_number <= len(lines) and (expected_line is None or lines[line_number - 1].strip() == expected_line.strip())
+        entrypoints_ok = all(codebase_source_path(value).is_file() for value in (row.get("runtimeEntrypoints") or []))
+        if not path.is_file() or not line_ok or not entrypoints_ok:
+            issues.append({"registrationId": registration_id, "declaringPathExists": path.is_file(), "lineEvidenceExact": line_ok, "runtimeEntrypointsExist": entrypoints_ok})
+    return issues
+
+
+ARCHITECTURE_PROJECTION_FIELDS = {
+    "applicationEntryPaths", "workerEntryPaths", "allConfiguredEntryPaths", "buildEntryPaths",
+    "buildPackages", "buildPackageTopology", "compositionRoots", "bootstrapConsumerPaths",
+    "bootstrapTargets", "bootstrapImports", "generatedOutputRoots", "generatedPaths",
+    "runtimeRegistrationIds", "contractOwner", "packageManifest",
+}
+
+
+def _json_identity(value):
+    return json.dumps(value, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
+
+
+def _normalized_projection_value(field, value):
+    if field == "buildPackages":
+        return sorted(
+            ({"packageName": row.get("packageName"), "packageRoot": row.get("packageRoot")} for row in (value or [])),
+            key=_json_identity,
+        )
+    if field == "buildPackageTopology":
+        return sorted(({
+            "packageName": row.get("packageName"),
+            "packageRoot": row.get("packageRoot"),
+            "applicationEntryPaths": sorted(set(row.get("applicationEntryPaths") or [])),
+            "workerEntryPaths": sorted(set(row.get("workerEntryPaths") or [])),
+            "allConfiguredEntryPaths": sorted(set(row.get("allConfiguredEntryPaths") or [])),
+        } for row in (value or [])), key=_json_identity)
+    if field == "bootstrapImports":
+        return sorted(({
+            "consumerPath": row.get("consumerPath"),
+            "specifier": row.get("specifier"),
+            "targetPath": row.get("targetPath"),
+        } for row in (value or [])), key=_json_identity)
+    if field == "packageManifest":
+        required_exports = [
+            {"key": row.get("key"), "target": row.get("target")}
+            for row in ((value or {}).get("requiredExports") or [])
+        ]
+        return {
+            "path": (value or {}).get("path"),
+            "packageName": (value or {}).get("packageName"),
+            "requiredExports": sorted(required_exports, key=_json_identity),
+        }
+    if isinstance(value, list):
+        return sorted(value, key=_json_identity)
+    return value
+
+
+def _projection_expected(field, topology, runtime_registration_ids):
+    mapping = {
+        "applicationEntryPaths": topology.get("applicationEntryPaths"),
+        "workerEntryPaths": topology.get("workerEntryPaths"),
+        "allConfiguredEntryPaths": topology.get("allConfiguredEntryPaths"),
+        "buildEntryPaths": topology.get("allConfiguredEntryPaths"),
+        "buildPackages": topology.get("buildPackages"),
+        "buildPackageTopology": topology.get("buildPackageTopology"),
+        "compositionRoots": topology.get("compositionRoots"),
+        "bootstrapConsumerPaths": topology.get("bootstrapConsumerPaths"),
+        "bootstrapTargets": topology.get("bootstrapTargets"),
+        "bootstrapImports": topology.get("bootstrapImports"),
+        "generatedOutputRoots": topology.get("generatedOutputRoots"),
+        "generatedPaths": topology.get("generatedPaths"),
+        "runtimeRegistrationIds": runtime_registration_ids,
+        "contractOwner": (topology.get("packageManifest") or {}).get("path"),
+        "packageManifest": {
+            "path": (topology.get("packageManifest") or {}).get("path"),
+            "packageName": (topology.get("packageManifest") or {}).get("packageName"),
+            "requiredExports": [{"key": "./*", "target": (topology.get("packageManifest") or {}).get("wildcardExport")}],
+        },
+    }
+    return mapping.get(field)
+
+
+def _projection_diff(expected, actual):
+    if isinstance(expected, list) and isinstance(actual, list):
+        expected_ids = Counter(_json_identity(value) for value in expected)
+        actual_ids = Counter(_json_identity(value) for value in actual)
+        missing = [json.loads(value) for value, count in sorted((expected_ids - actual_ids).items()) for _ in range(count)]
+        unexpected = [json.loads(value) for value, count in sorted((actual_ids - expected_ids).items()) for _ in range(count)]
+        return missing, unexpected
+    return ([], []) if expected == actual else ([expected], [actual])
+
+
+def _walk_architecture_projections(value, pointer=""):
+    if isinstance(value, dict):
+        fields = sorted(ARCHITECTURE_PROJECTION_FIELDS & set(value))
+        if fields and "/buildPackageTopology/" not in pointer:
+            yield pointer or "/", value, fields
+        for key, child in value.items():
+            child_pointer = f"{pointer}/{str(key).replace('~', '~0').replace('/', '~1')}"
+            yield from _walk_architecture_projections(child, child_pointer)
+    elif isinstance(value, list):
+        for index, child in enumerate(value):
+            yield from _walk_architecture_projections(child, f"{pointer}/{index}")
+
+
+RELEVANT_AUTHORITY_REFERENCE = re.compile(
+    r"TEST-MR-CAP-001-[A-Za-z0-9_-]+|ENTRY_MR-CAP-001|MR_CAP_001_[A-Za-z0-9_]+|MR-IMPL-001|MR-CAP-001"
+)
+CURRENT_AUTHORITY_CLASSES = {"CURRENT_AUTHORITATIVE", "CURRENT_SUPPORTING_EVIDENCE"}
+STRUCTURED_AUTHORITY_SUFFIXES = {".json", ".jsonl"}
+TEXTUAL_AUTHORITY_SUFFIXES = {".md", ".txt", ".csv", ".tsv"}
+PATH_PROJECTION_FIELDS = {
+    "exactCurrentPaths", "exactTargetPaths", "allowedPaths", "forbiddenPaths",
+    "ownedPaths", "referencePaths", "generatedPaths", "contractOwner",
+    "ownedPackageOrModule", "packageOrModule", "exportPath", "declaringPath",
+    "path", "paths", "currentPaths", "targetPaths", "newPaths", "previousPaths",
+    "intendedFinalPath", "plannedTargetPaths", "plannedCommonContractPath",
+    "plannedPackagePath", "implementationPaths", "typescriptPaths", "activeCodePaths",
+    "incomingDependentPaths", "outgoingDependencyPaths", "workerRegistrationPaths",
+    "legacyCurrentPaths", "historicalPathAliases", "anchorId", "anchorSha256",
+    "sourceAnchor", "literalAnchor", "uniqueAnchor", "verifiedAnchor",
+    "currentAnchors", "exactAnchors", "exactCurrentAnchors", "sourceAnchorCount",
+}
+TEST_PROJECTION_FIELDS = {"testId", "testIds", "testType", "executableAssertions", "verification"}
+GATE_PROJECTION_FIELDS = {"gateId", "waveId", "requiredTestIds", "blockingGateIds", "capabilityValidationGates", "waveGates"}
+DEPENDENCY_PROJECTION_FIELDS = {
+    "from", "to", "source", "target", "sourceId", "targetId", "sourceNodeId",
+    "targetNodeId", "dependencies", "dependsOn", "blockedBy", "upstream", "downstream",
+}
+ENTRYPOINT_PROJECTION_FIELDS = {"entrypointId", "exportPath", "packageOrModule", "exports", "consumers"}
+RUNTIME_PROJECTION_FIELDS = {"registrationId", "runtimeEntrypoints", "registeredIdentifiers", "declaringPath"}
+IDENTITY_REFERENCE_FIELDS = {
+    "id", "capabilityId", "capabilityIds", "taskId", "taskIds", "testId", "testIds",
+    "entrypointId", "nodeId", "requirementId", "requirementIds", "sourceRequirementIds",
+    "relatedCapabilities", "relatedImplementationTasks", "implementationTaskIds", "primaryTaskId",
+}
+REFERENCE_AUDIT_FIELDS = {
+    "ownershipBefore", "ownershipAfter", "verifiedPath", "verifiedApplicationEntrypoints",
+    "verifiedWorkerEntrypoints", "verifiedBuildEntrypoints", "verifiedBootstrapConsumers",
+    "verifiedRuntimeRegistrations", "generatedAt", "regeneratedAt", "regenerationReason",
+}
+KNOWN_SEMANTIC_CONTAINER_FIELDS = {
+    "architecturePreservationContract", "architectureAuthority", "contract", "implementationContract",
+    "topology", "publicEntrypoints", "runtimeRegistrations", "acceptanceTests", "sourceAnchors",
+    "currentSymbols", "exactSymbols", "locations", "capabilities", "tasks", "records",
+    "capabilityValidationGates", "waveGates", "requiredTests", "verification",
+} | ARCHITECTURE_PROJECTION_FIELDS | PATH_PROJECTION_FIELDS | TEST_PROJECTION_FIELDS | GATE_PROJECTION_FIELDS | DEPENDENCY_PROJECTION_FIELDS | ENTRYPOINT_PROJECTION_FIELDS | RUNTIME_PROJECTION_FIELDS | IDENTITY_REFERENCE_FIELDS | REFERENCE_AUDIT_FIELDS
+SUSPICIOUS_UNCLASSIFIED_FIELD = re.compile(r"architecture|topology|entry|bootstrap|worker|generated|path|runtime|anchor|owner|projection", re.I)
+
+
+def _pointer_token(value):
+    return str(value).replace("~", "~0").replace("/", "~1")
+
+
+def _reference_tokens(value):
+    return sorted(set(RELEVANT_AUTHORITY_REFERENCE.findall(str(value or ""))))
+
+
+def _direct_reference_hits(value, pointer=""):
+    hits = []
+    if isinstance(value, list):
+        for index, child in enumerate(value):
+            if not isinstance(child, dict):
+                hits.extend(_direct_reference_hits(child, f"{pointer}/{index}"))
+    elif isinstance(value, str):
+        for token in _reference_tokens(value):
+            hits.append({"location": pointer or "/", "token": token, "value": value})
+    return hits
+
+
+def _walk_relevant_records(value, pointer=""):
+    if isinstance(value, dict):
+        direct = []
+        for key, child in value.items():
+            if not isinstance(child, dict):
+                direct.extend(_direct_reference_hits(child, f"{pointer}/{_pointer_token(key)}"))
+        if direct:
+            yield pointer or "/", value, direct
+        for key, child in value.items():
+            yield from _walk_relevant_records(child, f"{pointer}/{_pointer_token(key)}")
+    elif isinstance(value, list):
+        for index, child in enumerate(value):
+            yield from _walk_relevant_records(child, f"{pointer}/{index}")
+
+
+def _authority_artifact_kind(relative):
+    suffix = Path(relative).suffix.lower()
+    if suffix in STRUCTURED_AUTHORITY_SUFFIXES:
+        return "STRUCTURED"
+    if suffix in TEXTUAL_AUTHORITY_SUFFIXES:
+        return "TEXTUAL"
+    return "OTHER"
+
+
+def _scan_current_authority_artifact(relative, authority_row, overrides):
+    path = source_path(relative, overrides)
+    if not path.is_file():
+        return {"records": [], "parseErrors": ["artifact missing"], "kind": _authority_artifact_kind(relative)}
+    stat = path.stat()
+    cache_key = (str(path.resolve()), stat.st_size, stat.st_mtime_ns)
+    if cache_key in _CURRENT_AUTHORITY_ARTIFACT_CACHE:
+        return _CURRENT_AUTHORITY_ARTIFACT_CACHE[cache_key]
+    kind = _authority_artifact_kind(relative)
+    records, errors = [], []
+    try:
+        # Most current-authority artifacts are large graphs unrelated to this
+        # change control. A byte-level prefilter keeps discovery dynamic while
+        # avoiding Python JSON traversal when no relevant identity can exist.
+        with path.open("rb") as binary_handle:
+            content = binary_handle.read()
+        if not any(needle in content for needle in _RELEVANT_AUTHORITY_NEEDLES):
+            result = {"records": [], "parseErrors": [], "kind": kind}
+            _CURRENT_AUTHORITY_ARTIFACT_CACHE[cache_key] = result
+            return result
+        if path.suffix.lower() == ".jsonl":
+            for line_number, raw_line in enumerate(content.splitlines(), 1):
+                if not any(needle in raw_line for needle in _RELEVANT_AUTHORITY_NEEDLES):
+                    continue
+                line = raw_line.decode("utf-8-sig")
+                row = json.loads(line)
+                for pointer, value, hits in _walk_relevant_records(row, f"/line/{line_number}"):
+                    records.append({"recordLocation": pointer, "referenceLocations": hits, "_value": value})
+        elif path.suffix.lower() == ".json":
+            text = content.decode("utf-8-sig")
+            for pointer, value, hits in _walk_relevant_records(json.loads(text)):
+                records.append({"recordLocation": pointer, "referenceLocations": hits, "_value": value})
+        else:
+            for line_number, raw_line in enumerate(content.splitlines(), 1):
+                line = raw_line.decode("utf-8-sig", errors="replace")
+                tokens = _reference_tokens(line)
+                if tokens:
+                    records.append({
+                        "recordLocation": f"/line/{line_number}",
+                        "referenceLocations": [{"location": f"/line/{line_number}", "token": token, "value": line.strip()} for token in tokens],
+                        "_value": {"text": line.strip()},
+                    })
+    except (OSError, UnicodeError, json.JSONDecodeError) as error:
+        errors.append(str(error))
+    result = {"records": records, "parseErrors": errors, "kind": kind}
+    _CURRENT_AUTHORITY_ARTIFACT_CACHE[cache_key] = result
+    return result
+
+
+def _all_record_keys(value):
+    keys = set()
+    if isinstance(value, dict):
+        keys.update(value)
+        for child in value.values():
+            keys.update(_all_record_keys(child))
+    elif isinstance(value, list):
+        for child in value:
+            keys.update(_all_record_keys(child))
+    return keys
+
+
+def _historical_record(value):
+    status_values = {
+        str(value.get(key) or "").upper()
+        for key in ("authorityStatus", "authorityClassification", "classification", "status", "recordStatus")
+        if isinstance(value, dict)
+    }
+    return any(any(marker in status for marker in ("HISTORICAL", "SUPERSEDED", "NON_AUTHORITATIVE")) for status in status_values)
+
+
+def _classify_authority_reference(relative, kind, location, value):
+    if kind != "STRUCTURED":
+        return "NON_TOPOLOGY_AUTHORITY", "TEXT_REFERENCE_PRESENCE_AND_CURRENT_AUTHORITY"
+    if re.search(r"/(?:validationResult/)?checks/\d+/(?:actual|expected|evidence)(?:/|$)", location):
+        return "REFERENCE_ONLY", "DERIVED_VALIDATOR_CHECK_EVIDENCE"
+    fields = set(value) if isinstance(value, dict) else set()
+    all_keys = _all_record_keys(value)
+    if _historical_record(value):
+        return "REFERENCE_ONLY", "HISTORICAL_RECORD_EXCLUDED_FROM_CURRENT_TOPOLOGY"
+    if fields & ARCHITECTURE_PROJECTION_FIELDS:
+        if (
+            relative == "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+            and re.fullmatch(r"/line/\d+/architecturePreservationContract", location)
+        ):
+            return "CANONICAL_TOPOLOGY", "SOURCE_TO_CANONICAL_EXACT_EQUALITY"
+        if fields & ENTRYPOINT_PROJECTION_FIELDS:
+            return "ENTRYPOINT_PROJECTION", "CANONICAL_SCOPED_FIELD_EQUALITY"
+        return "TOPOLOGY_PROJECTION", "CANONICAL_SCOPED_FIELD_EQUALITY"
+    if fields & ENTRYPOINT_PROJECTION_FIELDS:
+        return "ENTRYPOINT_PROJECTION", "ENTRYPOINT_IDENTITY_AND_PATH_VALIDATION"
+    if fields & GATE_PROJECTION_FIELDS:
+        return "RELEASE_GATE_PROJECTION", "RELEASE_GATE_TEST_BINDING"
+    if fields & TEST_PROJECTION_FIELDS:
+        return "TEST_PROJECTION", "TEST_IDENTITY_AND_EXECUTABLE_ASSERTIONS"
+    if fields & RUNTIME_PROJECTION_FIELDS:
+        return "REFERENCE_ONLY", "RUNTIME_REGISTRATION_IDENTITY_AND_SOURCE_RESOLUTION"
+    if fields & PATH_PROJECTION_FIELDS:
+        return "PATH_PROJECTION", "PATH_SCOPE_EXISTENCE_AND_CLASSIFICATION"
+    if fields & DEPENDENCY_PROJECTION_FIELDS:
+        return "DEPENDENCY_PROJECTION", "DEPENDENCY_ENDPOINT_IDENTITY_VALIDATION"
+    if fields & REFERENCE_AUDIT_FIELDS:
+        return "REFERENCE_ONLY", "STRUCTURED_AUDIT_REFERENCE_AND_CURRENT_AUTHORITY"
+    unknown_semantics = sorted(
+        key for key in fields
+        if SUSPICIOUS_UNCLASSIFIED_FIELD.search(str(key)) and key not in KNOWN_SEMANTIC_CONTAINER_FIELDS
+    )
+    if unknown_semantics:
+        return "UNCLASSIFIED_CURRENT_AUTHORITY", "NO_VALIDATION_RULE"
+    if fields & IDENTITY_REFERENCE_FIELDS or all_keys & IDENTITY_REFERENCE_FIELDS:
+        return "IDENTITY_ONLY", "CANONICAL_IDENTITY_MEMBERSHIP"
+    return "REFERENCE_ONLY", "STRUCTURED_REFERENCE_PRESENCE_AND_CURRENT_AUTHORITY"
+
+
+def _current_authority_reference_universe(authority_classification, overrides, capabilities, tasks, tests, entrypoints):
+    current_rows = [
+        row for row in authority_classification
+        if row.get("currentAuthority") is True and row.get("classification") in CURRENT_AUTHORITY_CLASSES and row.get("path")
+    ]
+    path_counts = Counter(normalize_rel(row.get("path")) for row in current_rows)
+    duplicate_paths = sorted(path for path, count in path_counts.items() if count > 1)
+    capability_ids = {row.get("capabilityId") for row in capabilities if row.get("capabilityId")}
+    task_ids = {row.get("taskId") for row in tasks if row.get("taskId")}
+    test_ids = {row.get("testId") for row in tests if row.get("testId")}
+    entrypoint_ids = {row.get("entrypointId") for row in entrypoints if row.get("entrypointId")}
+    known_ids = capability_ids | task_ids | test_ids | entrypoint_ids
+    artifacts, references, parse_errors, missing_artifacts = [], [], [], []
+    for authority_row in sorted(current_rows, key=lambda row: normalize_rel(row.get("path"))):
+        relative = normalize_rel(authority_row.get("path"))
+        scan = _scan_current_authority_artifact(relative, authority_row, overrides)
+        if not source_path(relative, overrides).is_file():
+            missing_artifacts.append(relative)
+        parse_errors.extend({"path": relative, "error": error} for error in scan["parseErrors"])
+        artifact_reference_count = 0
+        for record in scan["records"]:
+            value = record["_value"]
+            classification, rule = _classify_authority_reference(relative, scan["kind"], record["recordLocation"], value)
+            tokens = sorted({hit["token"] for hit in record["referenceLocations"]})
+            unresolved = sorted(token for token in tokens if token not in known_ids and not token.startswith("MR_CAP_001_"))
+            validation_executed = classification != "UNCLASSIFIED_CURRENT_AUTHORITY"
+            validation_result = "PASS" if validation_executed and not unresolved else "FAIL"
+            reference_count = len(record["referenceLocations"])
+            artifact_reference_count += reference_count
+            references.append({
+                "artifactPath": relative,
+                "recordLocation": record["recordLocation"],
+                "authorityStatus": authority_row.get("classification"),
+                "capabilityTaskIdentity": tokens,
+                "semanticClassification": classification,
+                "containsTopologySemantics": bool(_all_record_keys(value) & ARCHITECTURE_PROJECTION_FIELDS),
+                "containsPathSemantics": bool(_all_record_keys(value) & PATH_PROJECTION_FIELDS),
+                "containsEntrypointSemantics": bool(_all_record_keys(value) & (ENTRYPOINT_PROJECTION_FIELDS | {"applicationEntryPaths", "workerEntryPaths", "buildEntryPaths"})),
+                "containsBootstrapSemantics": bool(_all_record_keys(value) & {"bootstrapConsumerPaths", "bootstrapTargets", "bootstrapImports"}),
+                "containsRuntimeSemantics": bool(_all_record_keys(value) & (RUNTIME_PROJECTION_FIELDS | {"runtimeRegistrationIds"})),
+                "containsGeneratedPathSemantics": bool(_all_record_keys(value) & {"generatedPaths", "generatedOutputRoots"}),
+                "canonicalAuthorityUsed": "09 Implementation/IMPLEMENTATION_TASKS.jsonl#/MR-IMPL-001/architecturePreservationContract",
+                "comparisonRule": rule,
+                "referenceCount": reference_count,
+                "referenceLocations": record["referenceLocations"],
+                "unresolvedIdentities": unresolved,
+                "validationExecuted": validation_executed,
+                "validationResult": validation_result,
+                "_value": value,
+            })
+        artifacts.append({
+            "artifactPath": relative,
+            "authorityStatus": authority_row.get("classification"),
+            "artifactKind": scan["kind"],
+            "referenceCount": artifact_reference_count,
+            "relevant": artifact_reference_count > 0,
+            "parseErrors": scan["parseErrors"],
+        })
+    relevant_paths = sorted(row["artifactPath"] for row in artifacts if row["relevant"])
+    inventoried_paths = sorted({row["artifactPath"] for row in references})
+    unclassified = [row for row in references if row["semanticClassification"] == "UNCLASSIFIED_CURRENT_AUTHORITY"]
+    unvalidated = [row for row in references if not row["validationExecuted"]]
+    validation_failures = [row for row in references if row["validationResult"] == "FAIL" and row["validationExecuted"]]
+    return {
+        "authorityArtifacts": artifacts,
+        "referenceInventory": references,
+        "universeSummary": {
+            "totalCurrentAuthorityArtifacts": len(artifacts),
+            "structured": sum(row["artifactKind"] == "STRUCTURED" for row in artifacts),
+            "textual": sum(row["artifactKind"] == "TEXTUAL" for row in artifacts),
+            "other": sum(row["artifactKind"] == "OTHER" for row in artifacts),
+        },
+        "referenceSummary": {
+            "relevantArtifacts": len(relevant_paths),
+            "discovered": sum(row["referenceCount"] for row in references),
+            "classified": sum(row["referenceCount"] for row in references if row["semanticClassification"] != "UNCLASSIFIED_CURRENT_AUTHORITY"),
+            "validated": sum(row["referenceCount"] for row in references if row["validationExecuted"]),
+            "unclassified": sum(row["referenceCount"] for row in unclassified),
+            "unvalidated": sum(row["referenceCount"] for row in unvalidated),
+            "silentlyIgnored": len(set(relevant_paths) - set(inventoried_paths)),
+        },
+        "classificationCounts": dict(sorted(Counter(row["semanticClassification"] for row in references).items())),
+        "relevantArtifactPaths": relevant_paths,
+        "duplicateAuthorityPaths": duplicate_paths,
+        "missingAuthorityArtifacts": missing_artifacts,
+        "parseErrors": parse_errors,
+        "unclassifiedReferences": unclassified,
+        "unvalidatedReferences": unvalidated,
+        "referenceValidationFailures": validation_failures,
+        "silentlyIgnoredArtifacts": sorted(set(relevant_paths) - set(inventoried_paths)),
+    }
+
+
+def _dynamic_projection_group(relative, pointer):
+    if relative == "03 Capability Map/CAPABILITY_REGISTRY.json":
+        return "CAPABILITY_REGISTRY"
+    if relative == "04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl":
+        return "CHANGE_LOCATION_REGISTRY"
+    if relative == "09 Implementation/IMPLEMENTATION_TASKS.jsonl":
+        return "IMPLEMENTATION_NESTED" if "/contract/" in pointer else "IMPLEMENTATION_TOP_LEVEL"
+    if relative == "06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl":
+        return "PUBLIC_ENTRYPOINT_PLAN"
+    return "DYNAMIC_PROJECTION"
+
+
+def architecture_projection_reconciliation(capabilities, change_records, tasks, tests, release_matrix, evidence_rows, receipt_rows, exact_locations, registration_map, authority_classification, entrypoints, overrides=None):
+    """Derive source truth, discover current authority dynamically, then validate every scoped projection."""
+    overrides = overrides or {}
+    topology, source_issues = derive_live_architecture_topology()
+    task = next((row for row in tasks if row.get("taskId") == "MR-IMPL-001"), None)
+    runtime_ids = sorted(
+        registration_id for registration_id, row in registration_map.items()
+        if "MR-CAP-001" in (row.get("capabilityIds") or [])
+    )
+    authority = _current_authority_reference_universe(authority_classification, overrides, capabilities, tasks, tests, entrypoints)
+    inventory, issues_by_group, seen_locations = [], defaultdict(list), set()
+    canonical_relative = "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+    canonical_rows = []
+    for reference in authority["referenceInventory"]:
+        value = reference.get("_value")
+        if not isinstance(value, dict) or reference["authorityStatus"] not in CURRENT_AUTHORITY_CLASSES:
+            continue
+        for pointer, projection, fields in _walk_architecture_projections(value, reference["recordLocation"]):
+            location_key = (reference["artifactPath"], pointer)
+            if location_key in seen_locations:
+                continue
+            seen_locations.add(location_key)
+            reconciliations, actual_topology, expected_topology = {}, {}, {}
+            for field in fields:
+                expected = _normalized_projection_value(field, _projection_expected(field, topology, runtime_ids))
+                actual = _normalized_projection_value(field, projection.get(field))
+                missing, unexpected = _projection_diff(expected, actual)
+                reconciliations[field] = {"missing": missing, "unexpected": unexpected}
+                actual_topology[field], expected_topology[field] = actual, expected
+            missing = [{"field": field, "value": item} for field, result in reconciliations.items() for item in result["missing"]]
+            unexpected = [{"field": field, "value": item} for field, result in reconciliations.items() for item in result["unexpected"]]
+            is_canonical = (
+                reference["artifactPath"] == canonical_relative
+                and re.fullmatch(r"/line/\d+/architecturePreservationContract", pointer) is not None
+                and projection.get("authorityStatus") == "CURRENT_AUTHORITATIVE"
+                and projection.get("decision") == "KEEP_EXISTING"
+            )
+            semantic_classification = "CANONICAL_TOPOLOGY" if is_canonical else (
+                "ENTRYPOINT_PROJECTION" if set(projection) & ENTRYPOINT_PROJECTION_FIELDS else "TOPOLOGY_PROJECTION"
+            )
+            status = "PASS" if not missing and not unexpected else "FAIL"
+            row = {
+                "projectionId": f"{reference['artifactPath']}#{pointer}",
+                "filePath": reference["artifactPath"],
+                "jsonLocation": pointer,
+                "authorityClassification": reference["authorityStatus"],
+                "semanticClassification": semantic_classification,
+                "semanticFields": fields,
+                "canonicalSource": f"{canonical_relative}#/MR-IMPL-001/architecturePreservationContract",
+                "comparisonRule": "SOURCE_TO_CANONICAL_EXACT_EQUALITY" if is_canonical else "CANONICAL_SCOPED_FIELD_EQUALITY",
+                "expectedTopology": expected_topology,
+                "actualTopology": actual_topology,
+                "missing": missing,
+                "unexpected": unexpected,
+                "status": status,
+            }
+            inventory.append(row)
+            if is_canonical:
+                canonical_rows.append(row)
+            if status == "FAIL":
+                issues_by_group[_dynamic_projection_group(reference["artifactPath"], pointer)].append({
+                    "projectionId": row["projectionId"], "missing": missing, "unexpected": unexpected,
+                })
+
+    canonical = (task or {}).get("architecturePreservationContract") or {}
+    canonical_issues = list(source_issues)
+    if canonical.get("authorityStatus") != "CURRENT_AUTHORITATIVE" or canonical.get("decision") != "KEEP_EXISTING":
+        canonical_issues.append({"issue": "canonical topology authority classification/decision invalid"})
+    if len(canonical_rows) != 1 or canonical_rows[0].get("status") != "PASS":
+        canonical_issues.append({"issue": "exactly one source-equal canonical task topology is required", "canonicalRows": canonical_rows})
+
+    architecture_tests = [
+        row for row in tests
+        if "MR-CAP-001" in (row.get("capabilityIds") or []) and "MR-IMPL-001" in (row.get("taskIds") or [])
+    ]
+    cross_projection_test_ids = sorted(
+        row.get("testId") for row in architecture_tests
+        if any(value.get("assertion") == "CURRENT_AUTHORITY_PROJECTIONS_EQUAL_CANONICAL" for value in (row.get("executableAssertions") or []))
+    )
+    integration_ids = sorted(row.get("testId") for row in architecture_tests if row.get("testType") == "INTEGRATION")
+    test_issues = [] if integration_ids and cross_projection_test_ids == integration_ids else [{
+        "issue": "integration test projection lacks the canonical cross-projection executable assertion",
+        "integrationTestIds": integration_ids, "assertionTestIds": cross_projection_test_ids,
+    }]
+    capability_gate = next((row for row in release_matrix.get("capabilityValidationGates", []) if row.get("capabilityId") == "MR-CAP-001"), {})
+    wave_gate = (release_matrix.get("waveGates") or {}).get((task or {}).get("releaseWave")) or {}
+    gate_issues = []
+    for test_id in cross_projection_test_ids:
+        missing_from = [name for name, gate in (("capabilityGate", capability_gate), ("waveGate", wave_gate)) if test_id not in (gate.get("requiredTestIds") or [])]
+        if missing_from:
+            gate_issues.append({"testId": test_id, "missingFrom": missing_from})
+    inventory.extend([
+        {
+            "projectionId": "REQUIREMENT_TEST_MATRIX.CANONICAL_ASSERTION_BINDING",
+            "filePath": "10 Verification/REQUIREMENT_TEST_MATRIX.jsonl", "jsonLocation": "/MR-CAP-001+MR-IMPL-001",
+            "authorityClassification": "CURRENT_AUTHORITATIVE", "semanticClassification": "TEST_PROJECTION",
+            "semanticFields": ["executableAssertions"], "canonicalSource": f"{canonical_relative}#/MR-IMPL-001/architecturePreservationContract",
+            "comparisonRule": "TEST_EXECUTABLE_ASSERTION_BINDING", "missing": test_issues, "unexpected": [],
+            "status": "PASS" if not test_issues else "FAIL",
+        },
+        {
+            "projectionId": "RELEASE_GATE_MATRIX.CANONICAL_TEST_BINDING",
+            "filePath": "10 Verification/RELEASE_GATE_MATRIX.json", "jsonLocation": "/MR-CAP-001+WAVE_0",
+            "authorityClassification": "CURRENT_AUTHORITATIVE", "semanticClassification": "RELEASE_GATE_PROJECTION",
+            "semanticFields": ["requiredTestIds"], "canonicalSource": "10 Verification/REQUIREMENT_TEST_MATRIX.jsonl#/MR-CAP-001+MR-IMPL-001",
+            "comparisonRule": "RELEASE_GATE_TEST_BINDING", "missing": gate_issues, "unexpected": [],
+            "status": "PASS" if not gate_issues and bool(cross_projection_test_ids) else "FAIL",
+        },
+    ])
+    if test_issues:
+        issues_by_group["TEST_PROJECTION"].extend(test_issues)
+    if gate_issues or not cross_projection_test_ids:
+        issues_by_group["RELEASE_GATE_PROJECTION"].extend(gate_issues or [{"issue": "no cross-projection test is bound to gates"}])
+
+    # Do not persist private parsed values; the report retains every location, classification, and rule.
+    public_reference_inventory = [{key: value for key, value in row.items() if key != "_value"} for row in authority["referenceInventory"]]
+    authority["referenceInventory"] = public_reference_inventory
+    for field in ("unclassifiedReferences", "unvalidatedReferences", "referenceValidationFailures"):
+        authority[field] = [{key: value for key, value in row.items() if key != "_value"} for row in authority[field]]
+    discovery_issues = (
+        authority["duplicateAuthorityPaths"] + authority["missingAuthorityArtifacts"]
+        + authority["parseErrors"] + authority["unclassifiedReferences"]
+        + authority["unvalidatedReferences"] + authority["referenceValidationFailures"]
+        + authority["silentlyIgnoredArtifacts"]
+    )
+    all_projection_issues = [issue for group in sorted(issues_by_group) for issue in issues_by_group[group]]
+    public_projection = [row for row in inventory if row.get("filePath") == "06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl"]
+    return {
+        "canonicalAuthority": {
+            "projectionId": canonical_rows[0]["projectionId"] if len(canonical_rows) == 1 else None,
+            "filePath": canonical_relative,
+            "jsonLocation": canonical_rows[0]["jsonLocation"] if len(canonical_rows) == 1 else None,
+            "authorityStatus": canonical.get("authorityStatus"), "decision": canonical.get("decision"),
+        },
+        "sourceDerivedTopology": topology,
+        "runtimeRegistrationIds": runtime_ids,
+        "authorityDiscovery": authority,
+        "projectionInventory": sorted(inventory, key=lambda row: row["projectionId"]),
+        "publicEntrypointProjections": public_projection,
+        "issuesByGroup": {group: values for group, values in sorted(issues_by_group.items())},
+        "canonicalIssues": canonical_issues,
+        "discoveryIssues": discovery_issues,
+        "issues": canonical_issues + discovery_issues + all_projection_issues,
+    }
+
+
+def current_anchor_issues(exact_locations):
+    issues = []
+    for capability_id, location in (exact_locations.get("locations") or {}).items():
+        if location.get("authorityStatus") != "CURRENT_AUTHORITATIVE":
+            continue
+        anchors = location.get("sourceAnchors") or []
+        if not anchors:
+            issues.append({"capabilityId": capability_id, "issue": "current authority has no source anchors"})
+        for row in anchors:
+            path = codebase_source_path(row.get("path"))
+            literal = str(row.get("literal") or "")
+            text = path.read_text(encoding="utf-8-sig") if path.is_file() else ""
+            lines = text.splitlines()
+            line_number = row.get("lineStart")
+            line_ok = isinstance(line_number, int) and 0 < line_number <= len(lines) and literal in lines[line_number - 1]
+            semantic = row.get("semanticType")
+            semantic_ok = True
+            if semantic in {"PACKAGE_MANIFEST", "PACKAGE_EXPORT_BOUNDARY"}:
+                try:
+                    json.loads(text)
+                except (TypeError, json.JSONDecodeError):
+                    semantic_ok = False
+            if semantic == "TYPESCRIPT_EXPORTED_SYMBOL":
+                semantic_ok = path.suffix in {".ts", ".tsx"} and re.search(r"\bexport\s+(?:interface|class|function|const|type|enum)\b", literal) is not None
+            literal_hash_ok = hashlib.sha256(literal.encode("utf-8")).hexdigest() == row.get("literalSha256")
+            file_hash_ok = path.is_file() and sha256_file(path) == row.get("fileSha256")
+            if not path.is_file() or literal not in text or not line_ok or not semantic_ok or not literal_hash_ok or not file_hash_ok:
+                issues.append({
+                    "capabilityId": capability_id, "anchorId": row.get("anchorId"), "path": row.get("path"),
+                    "sourceExists": path.is_file(), "literalPresent": literal in text, "lineExact": line_ok,
+                    "semanticCompatible": semantic_ok, "literalHashExact": literal_hash_ok, "fileHashExact": file_hash_ok,
+                })
+    return issues
+
+
+def current_symbol_issues(capability_map, exact_locations, symbol_rows, evidence_rows, receipt_rows, change_records):
+    issues = []
+    for capability_id, location in (exact_locations.get("locations") or {}).items():
+        if location.get("authorityStatus") != "CURRENT_AUTHORITATIVE":
+            continue
+        capability = capability_map.get(capability_id) or {}
+        active = list(capability.get("currentSymbols") or []) + list(capability.get("exactSymbols") or []) + list(location.get("symbols") or [])
+        active.extend(row.get("qualifiedName") for row in symbol_rows if row.get("capabilityId") == capability_id and row.get("recordType") != "NON_SYMBOL_SOURCE_ANCHOR")
+        active.extend(row.get("symbol") for row in evidence_rows if row.get("capabilityId") == capability_id and row.get("symbol"))
+        active.extend(row.get("verifiedSymbol") for row in receipt_rows if row.get("capabilityId") == capability_id and row.get("verifiedSymbol"))
+        active.extend(value for row in change_records if row.get("capabilityId") == capability_id for value in (row.get("symbols") or []))
+        synthetic = [value for value in active if re.fullmatch(r"MR_CAP_\d+_CoreSymbol", str(value or ""))]
+        if synthetic:
+            issues.append({"capabilityId": capability_id, "activeSyntheticSymbols": synthetic})
+    return issues
+
+
+def acceptance_assertion_issues(tests, task_map, capability_map, exact_locations, symbol_rows, evidence_rows, receipt_rows, change_records, registration_map, projection_reconciliation=None):
+    issues = []
+    current_symbols = current_symbol_issues(capability_map, exact_locations, symbol_rows, evidence_rows, receipt_rows, change_records)
+    synthetic_caps = {row["capabilityId"] for row in current_symbols}
+    for test in tests:
+        assertions = test.get("executableAssertions")
+        if not assertions:
+            continue
+        for index, assertion in enumerate(assertions):
+            kind = assertion.get("assertion")
+            passed, detail = False, None
+            try:
+                if kind == "JSON_POINTER_EQUALS":
+                    document = json.loads(codebase_source_path(assertion.get("path")).read_text(encoding="utf-8-sig"))
+                    actual = json_pointer_value(document, assertion.get("jsonPointer"))
+                    passed, detail = actual == assertion.get("expected"), {"actual": actual, "expected": assertion.get("expected")}
+                elif kind == "PATH_EXISTS":
+                    passed = codebase_source_path(assertion.get("path")).is_file()
+                elif kind == "SOURCE_LITERAL_PRESENT":
+                    passed = assertion.get("literal") in codebase_source_path(assertion.get("path")).read_text(encoding="utf-8-sig")
+                elif kind == "TASK_OWNER_ALLOWED_AND_NOT_FORBIDDEN":
+                    task = task_map.get(assertion.get("taskId")) or {}
+                    detail = owner_path_issues(task) + owner_forbidden_issues(task)
+                    passed = not detail
+                elif kind == "NO_CURRENT_ACTIVE_SYMBOL":
+                    passed = assertion.get("capabilityId") not in synthetic_caps
+                elif kind == "SOURCE_ANCHORS_RESOLVE":
+                    detail = [row for row in current_anchor_issues(exact_locations) if row.get("capabilityId") == assertion.get("capabilityId")]
+                    passed = not detail
+                elif kind == "PACKAGE_BOOTSTRAP_EXPORTS_RESOLVE":
+                    detail = composition_bootstrap_issues(task_map.get(assertion.get("taskId")) or {})
+                    passed = not detail
+                elif kind in {"BUILD_ENTRY_SET_EQUALS_SOURCE", "APPLICATION_ENTRY_SET_EQUALS_SOURCE", "WORKER_ENTRY_SET_EQUALS_SOURCE", "ALL_CONFIGURED_ENTRY_SET_EQUALS_SOURCE"}:
+                    detail = architecture_build_issues(task_map.get(assertion.get("taskId")) or {})
+                    passed = not detail
+                elif kind in {"COMPOSITION_ROOTS_RESOLVE", "COMPOSITION_ROOTS_EQUAL_SOURCE", "BOOTSTRAP_CONNECTIONS_RESOLVE", "BOOTSTRAP_CONSUMER_SET_EQUALS_SOURCE"}:
+                    task = task_map.get(assertion.get("taskId")) or {}
+                    detail = composition_bootstrap_issues(task)
+                    passed = not detail
+                elif kind == "RUNTIME_REGISTRATIONS_RESOLVE":
+                    task = task_map.get(assertion.get("taskId")) or {}
+                    detail = runtime_registration_issues(task, registration_map)
+                    passed = not detail
+                elif kind == "GENERATED_OUTPUTS_NON_AUTHORITATIVE":
+                    detail = generated_output_issues(task_map.get(assertion.get("taskId")) or {})
+                    passed = not detail
+                elif kind == "CURRENT_AUTHORITY_PROJECTIONS_EQUAL_CANONICAL":
+                    detail = (projection_reconciliation or {}).get("issues") or []
+                    passed = bool(projection_reconciliation) and not detail
+                else:
+                    detail = {"issue": "unknown executable assertion"}
+            except (OSError, KeyError, IndexError, TypeError, ValueError, json.JSONDecodeError) as error:
+                detail = {"exception": str(error)}
+            if not passed:
+                issues.append({"testId": test.get("testId"), "assertionIndex": index, "assertion": assertion, "detail": detail})
+    return issues
+
+
 def add(checks, check_id, category, description, passed, actual, expected, evidence, method):
     checks.append({
         "checkId": check_id, "category": category, "description": description,
@@ -543,6 +1641,11 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     lineage_traceability = read_json("11 Completion/FINAL_CAPABILITY_TASK_REQUIREMENT_TRACEABILITY_REPORT.json", overrides, {}) or {}
     backup_receipt = read_json("00 Execution Control/FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION.json", overrides, {}) or {}
     change_records = read_jsonl("04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl", overrides)
+    exact_locations = read_json("04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json", overrides, {}) or {}
+    symbol_rows = read_jsonl("04 Exact Location Registry/SYMBOL_REGISTRY.jsonl", overrides)
+    capability_evidence_rows = read_jsonl("03 Capability Map/CAPABILITY_EVIDENCE.jsonl", overrides)
+    capability_source_receipts = read_jsonl("03 Capability Map/CAPABILITY_SOURCE_SEARCH_RECEIPTS.jsonl", overrides)
+    runtime_registration_rows = read_jsonl("02 Architecture Map/RUNTIME_REGISTRATION_REGISTRY.jsonl", overrides)
     tests = read_jsonl("10 Verification/REQUIREMENT_TEST_MATRIX.jsonl", overrides)
     entrypoints = read_jsonl("06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl", overrides)
     release_matrix = read_json("10 Verification/RELEASE_GATE_MATRIX.json", overrides, {}) or {}
@@ -557,6 +1660,7 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     metadata = {relative: read_json(relative, overrides, {}) or {} for relative in CURRENT_METADATA}
     test_ids = {row.get("testId") for row in tests if row.get("testId")}
     cap_info, task_info = capability_metrics(capabilities, cap_graph), task_metrics(tasks, same_wave)
+    registration_map = {row.get("registrationId"): row for row in runtime_registration_rows if row.get("registrationId")}
     cap_contracts, task_contracts = contract_metrics(capabilities, "capabilityId", test_ids), contract_metrics(tasks, "taskId", test_ids)
     derived_ownership, ownership_issues = derive_test_ownership(tests, cap_info["capabilityMap"], task_info["taskMap"])
 
@@ -1369,6 +2473,81 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     add(checks, "TEST-07", "tests", "Every required acceptance-test reference exists", not unknown_acceptance_refs, unknown_acceptance_refs, [], unknown_acceptance_refs, "contract reference membership in test registry")
     add(checks, "TEST-08", "tests", "Every explicit test wave matches its independently derived owner wave", not test_wave_mismatches, test_wave_mismatches, [], test_wave_mismatches, "test field compared to task/capability owner waves")
 
+    # Source-truth and preservation-boundary checks. These apply generally to
+    # records that explicitly opt into current source-anchor or architecture-
+    # preservation semantics, without silently reinterpreting legacy records.
+    architecture_tasks = [row for row in tasks if row.get("architecturePreservationContract")]
+    anchor_issues = current_anchor_issues(exact_locations)
+    add(checks, "ARCH-01", "architecture", "Every current-authoritative literal source anchor exists, matches its line and hashes, and is compatible with its semantic type", not anchor_issues, anchor_issues, [], anchor_issues, "live source bytes, literal line binding, SHA-256, JSON parsing, and semantic-type compatibility")
+    owner_issues = [issue for task in architecture_tasks for issue in owner_path_issues(task)]
+    add(checks, "ARCH-02", "architecture", "Every architecture-preservation contract owner is allowed and is owned or explicitly referenced", bool(architecture_tasks) and not owner_issues, owner_issues, [], owner_issues, "contract-owner join against allowedPaths plus ownedPaths/referencePaths")
+    forbidden_owner_issues = [issue for task in architecture_tasks for issue in owner_forbidden_issues(task)]
+    add(checks, "ARCH-03", "architecture", "No architecture-preservation contract owner is forbidden explicitly or by a catch-all boundary", bool(architecture_tasks) and not forbidden_owner_issues, forbidden_owner_issues, [], forbidden_owner_issues, "exact/glob forbidden-path matching plus catch-all evaluation against allowedPaths")
+    build_issues = [issue for task in architecture_tasks for issue in architecture_build_issues(task)]
+    add(checks, "ARCH-04", "architecture", "Declared application, worker, per-package, and combined preservation entry sets exactly equal the topology derived from live package manifests, bundle.ts, and Rspack helpers", bool(architecture_tasks) and not build_issues, build_issues, [], build_issues, "independent application-package selection plus createRspackHTMLTargetConfig, createRspackWorkerTargetConfig, getBaseWorkerConfigs condition parsing, Rspack entry semantics, and exact boundary membership")
+    generated_issues = [issue for task in architecture_tasks for issue in generated_output_issues(task)]
+    add(checks, "ARCH-05", "architecture", "Source-derived generated dist outputs are explicitly classified and never canonical exact, allowed, owned, or reference inputs", bool(architecture_tasks) and not generated_issues, generated_issues, [], generated_issues, "independent selected-package root derivation, exact set equality, glob overlap, and forbidden-source classification")
+    projection_reconciliation = architecture_projection_reconciliation(
+        capabilities, change_records, tasks, tests, release_matrix,
+        capability_evidence_rows, capability_source_receipts, exact_locations, registration_map,
+        authority_classification, entrypoints, overrides,
+    )
+    assertion_issues = acceptance_assertion_issues(tests, task_info["taskMap"], cap_info["capabilityMap"], exact_locations, symbol_rows, capability_evidence_rows, capability_source_receipts, change_records, registration_map, projection_reconciliation)
+    architecture_task_ids = {task.get("taskId") for task in architecture_tasks}
+    architecture_test_ids = {test.get("testId") for test in tests if architecture_task_ids & set(test.get("taskIds") or [])}
+    executable_architecture_test_ids = {test.get("testId") for test in tests if test.get("executableAssertions") and test.get("testId") in architecture_test_ids}
+    add(checks, "ARCH-06", "architecture", "Every architecture-preservation acceptance test has executable source-specific assertions and every assertion passes", bool(architecture_test_ids) and architecture_test_ids == executable_architecture_test_ids and not assertion_issues, {"missingExecutableSpecifications": sorted(architecture_test_ids - executable_architecture_test_ids), "assertionIssues": assertion_issues}, {"missingExecutableSpecifications": [], "assertionIssues": []}, sorted(architecture_test_ids - executable_architecture_test_ids) + assertion_issues, "recognized executable assertion evaluation against live source, task, exact-location, and runtime authorities")
+    runtime_issues = [issue for task in architecture_tasks for issue in runtime_registration_issues(task, registration_map)]
+    add(checks, "ARCH-07", "architecture", "Every capability-linked architecture runtime registration is declared exactly once and resolves with exact source-line evidence and existing runtime entrypoints", bool(architecture_tasks) and not runtime_issues, runtime_issues, [], runtime_issues, "capabilityIds-to-registration source join, declared set equality, source-line evidence comparison, and runtime-entrypoint existence")
+    composition_issues = [issue for task in architecture_tasks for issue in composition_bootstrap_issues(task)]
+    add(checks, "ARCH-08", "architecture", "Package exports plus source-derived composition-root, bootstrap-consumer, bootstrap-target, and import-map sets exactly equal the declared preservation boundary", bool(architecture_tasks) and not composition_issues, composition_issues, [], composition_issues, "independent selected-package source scan, relative app-import resolution, package wildcard-export resolution, exact set equality, and boundary membership")
+    synthetic_symbol_issues = current_symbol_issues(cap_info["capabilityMap"], exact_locations, symbol_rows, capability_evidence_rows, capability_source_receipts, change_records)
+    add(checks, "ARCH-09", "architecture", "No current-authoritative exact-location capability retains a synthetic MR_CAP_*_CoreSymbol as an active symbol", not synthetic_symbol_issues, synthetic_symbol_issues, [], synthetic_symbol_issues, "current-symbol projections across capability, exact-location, symbol, evidence, search-receipt, and change registries")
+    canonical_projection_issues = projection_reconciliation.get("canonicalIssues") or []
+    add(checks, "ARCH-10", "architecture", "Exactly one current-authoritative MR-IMPL-001 topology contract is canonical and equals independently derived Codebase source", not canonical_projection_issues, canonical_projection_issues, [], canonical_projection_issues, "canonical task-contract designation plus source-derived topology reconciliation")
+    capability_projection_issues = (projection_reconciliation.get("issuesByGroup") or {}).get("CAPABILITY_REGISTRY", [])
+    add(checks, "ARCH-11", "architecture", "Every current-authoritative CAPABILITY_REGISTRY architecture projection equals the canonical source-derived topology", not capability_projection_issues, capability_projection_issues, [], capability_projection_issues, "recursive current-capability projection enumeration and field-level source/canonical set equality")
+    location_projection_issues = (projection_reconciliation.get("issuesByGroup") or {}).get("CHANGE_LOCATION_REGISTRY", [])
+    add(checks, "ARCH-12", "architecture", "Every current-authoritative CHANGE_LOCATION_REGISTRY architecture projection equals the canonical source-derived topology", not location_projection_issues, location_projection_issues, [], location_projection_issues, "recursive current-location projection enumeration and field-level source/canonical set equality")
+    task_top_projection_issues = (projection_reconciliation.get("issuesByGroup") or {}).get("IMPLEMENTATION_TOP_LEVEL", [])
+    add(checks, "ARCH-13", "architecture", "MR-IMPL-001 top-level architecture aliases equal the canonical source-derived topology", not task_top_projection_issues, task_top_projection_issues, [], task_top_projection_issues, "task-root alias enumeration and field-level source/canonical set equality")
+    task_nested_projection_issues = (projection_reconciliation.get("issuesByGroup") or {}).get("IMPLEMENTATION_NESTED", [])
+    add(checks, "ARCH-14", "architecture", "Every nested MR-IMPL-001 architecture contract projection equals the canonical source-derived topology", not task_nested_projection_issues, task_nested_projection_issues, [], task_nested_projection_issues, "recursive nested-task projection enumeration and field-level source/canonical set equality")
+    test_projection_issues = (projection_reconciliation.get("issuesByGroup") or {}).get("TEST_PROJECTION", [])
+    add(checks, "ARCH-15", "architecture", "The MR-CAP-001 integration test executes canonical-to-all-current-projection synchronization", not test_projection_issues, test_projection_issues, [], test_projection_issues, "executable assertion binding to the complete projection reconciliation")
+    gate_projection_issues = (projection_reconciliation.get("issuesByGroup") or {}).get("RELEASE_GATE_PROJECTION", [])
+    add(checks, "ARCH-16", "architecture", "The projection-synchronization acceptance test is bound to the MR-CAP-001 capability gate and owning wave gate", not gate_projection_issues, gate_projection_issues, [], gate_projection_issues, "test-to-capability-gate and test-to-wave-gate exact membership")
+    all_projection_issues = projection_reconciliation.get("issues") or []
+    projection_inventory = projection_reconciliation.get("projectionInventory") or []
+    duplicate_projection_ids = sorted(value for value, count in Counter(row.get("projectionId") for row in projection_inventory).items() if count > 1)
+    comprehensive_projection_issues = all_projection_issues + ([{"duplicateProjectionIds": duplicate_projection_ids}] if duplicate_projection_ids else [])
+    add(checks, "ARCH-17", "architecture", "Every discovered current-authoritative MR-CAP-001/MR-IMPL-001 topology projection is uniquely inventoried and synchronized to source through the canonical contract", bool(projection_inventory) and not comprehensive_projection_issues, {"projectionCount": len(projection_inventory), "issues": comprehensive_projection_issues}, {"projectionCount": "one or more", "issues": []}, comprehensive_projection_issues, "recursive authoritative-record discovery, unique projection IDs, and exact field-level reconciliation")
+    authority_discovery = projection_reconciliation.get("authorityDiscovery") or {}
+    discovery_summary = authority_discovery.get("referenceSummary") or {}
+    discovery_integrity_issues = (
+        authority_discovery.get("duplicateAuthorityPaths", [])
+        + authority_discovery.get("missingAuthorityArtifacts", [])
+        + authority_discovery.get("parseErrors", [])
+    )
+    add(checks, "ARCH-18", "architecture", "The dynamic current-authority universe is uniquely classified, present, and parseable", bool(authority_discovery.get("authorityArtifacts")) and not discovery_integrity_issues, {"universeSummary": authority_discovery.get("universeSummary"), "issues": discovery_integrity_issues}, {"issues": []}, discovery_integrity_issues, "FINAL_AUTHORITY_CLASSIFICATION currentAuthority selection plus live artifact parsing")
+    unclassified_authority = authority_discovery.get("unclassifiedReferences") or []
+    unvalidated_authority = authority_discovery.get("unvalidatedReferences") or []
+    add(checks, "ARCH-19", "architecture", "Every dynamically discovered current-authoritative MR-CAP-001/MR-IMPL-001 reference has a known semantic classification and an executed validation rule", not unclassified_authority and not unvalidated_authority, {"unclassified": unclassified_authority, "unvalidated": unvalidated_authority}, {"unclassified": [], "unvalidated": []}, unclassified_authority + unvalidated_authority, "fail-closed semantic classification over every discovered relevant record")
+    discovery_counts_equal = (
+        discovery_summary.get("discovered", 0) > 0
+        and discovery_summary.get("classified") == discovery_summary.get("discovered")
+        and discovery_summary.get("validated") == discovery_summary.get("discovered")
+        and discovery_summary.get("unclassified") == 0
+        and discovery_summary.get("unvalidated") == 0
+        and discovery_summary.get("silentlyIgnored") == 0
+    )
+    add(checks, "ARCH-20", "architecture", "Dynamic authority discovery accounts for every relevant reference with no silent omission", discovery_counts_equal, discovery_summary, {"discovered": "positive", "classified": "equals discovered", "validated": "equals discovered", "unclassified": 0, "unvalidated": 0, "silentlyIgnored": 0}, authority_discovery.get("silentlyIgnoredArtifacts") or [], "reference-count conservation across discovery, classification, and validation")
+    public_entrypoint_projections = projection_reconciliation.get("publicEntrypointProjections") or []
+    public_entrypoint_ok = bool(public_entrypoint_projections) and all(row.get("status") == "PASS" for row in public_entrypoint_projections)
+    add(checks, "ARCH-21", "architecture", "PUBLIC_ENTRYPOINT_PLAN is automatically discovered from current authority and every scoped topology field equals source truth", public_entrypoint_ok, public_entrypoint_projections, "one or more dynamically discovered PASS projections", [row for row in public_entrypoint_projections if row.get("status") != "PASS"], "authority-classification-driven discovery with no filename allowlist")
+    dynamic_projection_failures = [row for row in projection_inventory if row.get("status") != "PASS"]
+    add(checks, "ARCH-22", "architecture", "Every dynamically discovered known-schema topology projection passes its scoped canonical/source comparison", bool(projection_inventory) and not dynamic_projection_failures, {"projectionCount": len(projection_inventory), "failures": dynamic_projection_failures}, {"projectionCount": "positive", "failures": []}, dynamic_projection_failures, "schema-field discovery across all current structured authority artifacts")
+
     # Exact gate-test sets. Expected sets never use current requiredTestIds.
     expected_by_wave = {wave: {test_id for test_id, owner in derived_ownership.items() if owner["owningWave"] == wave} for wave in EXPECTED_WAVES}
     missing_gate_keys = sorted(set(EXPECTED_WAVES) - set(wave_gates))
@@ -1634,6 +2813,14 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
             "taskUnresolvedSourceReferences": len(task_unknown),
             "backupOmissions": len(backup_missing),
             "gateTestValidationChecks": sum(check["category"] in {"tests", "gates"} for check in checks),
+            "architectureAuthorityDiscovery": {
+                "universeSummary": (projection_reconciliation.get("authorityDiscovery") or {}).get("universeSummary"),
+                "referenceSummary": (projection_reconciliation.get("authorityDiscovery") or {}).get("referenceSummary"),
+                "classificationCounts": (projection_reconciliation.get("authorityDiscovery") or {}).get("classificationCounts"),
+                "projectionCount": len(projection_reconciliation.get("projectionInventory") or []),
+                "projectionFailures": sum(row.get("status") != "PASS" for row in (projection_reconciliation.get("projectionInventory") or [])),
+                "publicEntrypointProjectionCount": len(projection_reconciliation.get("publicEntrypointProjections") or []),
+            },
             "tautologicalChecks": 0,
             "baselineRelativeOnlyChecks": 0,
             "validatorWrites": 0,

@@ -4,7 +4,7 @@ Updated: 2026-08-15T19:10:32+03:00
 
 ## Control state
 
-- Published starting main: `0b1fb086dcf22c91ee4cd1c8ff26c5f90debd01c`
+- Published starting main: `5ed38e25e3eee186d2483cdec79b8ed43c979107`
 - Selected investigation: `MR-INV-009` (`BLOCKED`)
 - Active hard blocker: `MR-BLOCK-004`
 - `MR-BLOCK-003`: `RESOLVED`

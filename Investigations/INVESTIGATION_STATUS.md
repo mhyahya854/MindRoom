@@ -1,11 +1,11 @@
 # MindRoom Pre-Code Investigation Status
 
-Updated: 2026-08-15T18:34:32+03:00
+Updated: 2026-08-15T18:45:34+03:00
 
 ## Control state
 
-- Published starting main: `fb8c9a1d85a7449448b7fdb69496b0d5ca9cf89f`
-- Selected investigation: `MR-INV-003` (`COMPLETE`)
+- Published starting main: `2a675454ab215af9bac026995b6d4b29e09886b8`
+- Selected investigation: `MR-INV-004` (`COMPLETE`)
 - `MR-BLOCK-003`: `RESOLVED`
 - Wave 0 started: **NO**
 - Implementation performed: **NO**
@@ -14,7 +14,7 @@ Updated: 2026-08-15T18:34:32+03:00
 
 ## Current investigation
 
-`MR-INV-003` is complete. The Electron main/preload/renderer IPC boundary is context-isolated, sandboxed, source-checked, and mapped to explicit handler/event families. Wave 0 must preserve it exactly.
+`MR-INV-004` is complete. The active BlockSuite 0.27.0 workspace family and `ViewExtensionManager` page-spec pipeline are the preserved foundation. The pinned AFFiNE reference and MIT-scoped BlockSuite licence boundary support the KEEP decision.
 
 ## Preservation
 
@@ -27,17 +27,17 @@ Updated: 2026-08-15T18:34:32+03:00
 
 ## Progress
 
-- Investigations complete: **4 / 9**
+- Investigations complete: **5 / 9**
 - Investigations blocked: **0**
-- Investigations remaining: **5**
+- Investigations remaining: **4**
 - Hard blockers: **0**
 - Canonical implementation: **0 / 162**
 - Canonical release gates passed: **0 / 168**
 
 ## Next investigation
 
-`MR-INV-004` remains the next CRITICAL investigation.
+`MR-INV-006` is the next HIGH-priority investigation.
 
 ## Stop condition
 
-`MR-INV-003` is complete and no hard blocker was introduced. Stop before `MR-INV-004` and before Wave 0.
+`MR-INV-004` is complete and no hard blocker was introduced. Stop before `MR-INV-006` and before Wave 0.

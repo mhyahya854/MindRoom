@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "investigationId": "MR-INV-004",
+  "status": "COMPLETE",
+  "decision": "Wave 0 must preserve the active BlockSuite 0.27.0 workspace family and existing ViewExtensionManager page-spec pipeline. The KEEP decision is compatible with the pinned AFFiNE reference and MIT-scoped BlockSuite licence boundary.",
+  "frozenPlanContradiction": false,
+  "codebaseChangeRequiredNext": false,
+  "hardBlockers": [],
+  "softRisks": [
+    "TRANSPLANT_SEARCH_QUEUE.jsonl has stale referenceAvailable=false/SEARCH_INCOMPLETE rows for MR-TRANSPLANT-005/006 despite verified reference evidence.",
+    "Two copied-source headers inside BlockSuite have incomplete local licence evidence and must be resolved before transplant/distribution.",
+    "Final dependency licence/SBOM/notice work remains unresolved for release."
+  ],
+  "acceptanceCriteria": [
+    {
+      "criterion": "Active BlockSuite package versions and workspace boundaries are identified.",
+      "result": "PASS",
+      "evidence": "74 active package manifests under Codebase/blocksuite, all version 0.27.0, workspace block blocksuite/**/*."
+    },
+    {
+      "criterion": "Page editor construction and spec registration paths are proven from Codebase.",
+      "result": "PASS",
+      "evidence": "PageEditor creates BlockStdScope with supplied specs; manager/view.ts and lit-adaper.tsx configure ViewExtensionManager and return manager.get('page')."
+    },
+    {
+      "criterion": "AI-specific adjacent paths are separated from the non-AI foundation.",
+      "result": "PASS",
+      "evidence": "ai/components/page-editor-block-specs.ts is an opt-in custom spec; base ViewProvider can construct page mode without it and adds AI only through .ai(enableAI)."
+    },
+    {
+      "criterion": "The KEEP decision is compatible with the pinned AFFiNE reference and licensing boundary.",
+      "result": "PASS",
+      "evidence": "Pinned reference 0.26.3 has the same 74 package names; MR-CAP-005/006 are byte-identical KEEP_EXISTING; BlockSuite is root MIT scope outside backend/native EE/MPL."
+    }
+  ],
+  "activeBlockSuite": {
+    "packageManifestCount": 74,
+    "version": "0.27.0",
+    "workspaceGlob": "blocksuite/**/*"
+  },
+  "pinnedReference": {
+    "packageManifestCount": 74,
+    "version": "0.26.3",
+    "commit": "da7781a75171140fd966c6cfbe05da9f1fb111d6",
+    "tree": "4f7b0d6657efa7e9ee0c1e3359e09a21eb8e145f",
+    "packageSetDifference": {
+      "activeOnly": 0,
+      "referenceOnly": 0
+    }
+  },
+  "capabilityParity": [
+    {
+      "capabilityId": "MR-CAP-005",
+      "capabilityName": "BlockSuite",
+      "decision": "KEEP_EXISTING",
+      "activePaths": 12,
+      "referencePaths": 12,
+      "identicalPaths": 12,
+      "differingPaths": 0
+    },
+    {
+      "capabilityId": "MR-CAP-006",
+      "capabilityName": "Page mode",
+      "decision": "KEEP_EXISTING",
+      "activePaths": 12,
+      "referencePaths": 12,
+      "identicalPaths": 12,
+      "differingPaths": 0
+    }
+  ],
+  "keyRepositoryFacts": [
+    {
+      "fact": "Codebase/blocksuite has 74 package manifests at version 0.27.0.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "The pinned AFFiNE reference has 74 package manifests at version 0.26.3 and the same package names.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "AFFINE_ACTIVE_CODE_PARITY_REPORT.md reports 110 capabilities searched, 0 incomplete, 1210 exact pairs, 1105 identical, 105 version-delta pairs.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "MR-CAP-005 and MR-CAP-006 are KEEP_EXISTING with 12/12 byte-identical reference paths each.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "BlockSuite is mapped to root MIT scope outside the AFFiNE backend/native EE/MPL exception.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    }
+  ],
+  "primarySources": [
+    "Graphify/03 Capability Map/CAPABILITY_EVIDENCE.jsonl",
+    "Graphify/05 Dependency and Impact/CAPABILITY_DEPENDENCY_GRAPH.json",
+    "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+    "Graphify/09 Implementation/TRANSPLANT_SEARCH_QUEUE.jsonl",
+    "Graphify/12 Source Documents/AFFINE_PROVENANCE.md",
+    "Graphify/12 Source Documents/LICENCE_AND_ATTRIBUTION_MAP.md",
+    "Graphify/14 AFFiNE Reference/AFFINE_ACTIVE_CODE_PARITY_REPORT.md",
+    "Graphify/14 AFFiNE Reference/AFFINE_CAPABILITY_INDEX.jsonl",
+    "Codebase/package.json",
+    "Codebase/blocksuite/**/package.json",
+    "Codebase/packages/frontend/core/src/blocksuite/editors/page-editor.ts",
+    "Codebase/packages/frontend/core/src/blocksuite/manager/view.ts",
+    "Codebase/packages/frontend/core/src/blocksuite/block-suite-editor/lit-adaper.tsx",
+    "Codebase/packages/frontend/core/src/blocksuite/ai/components/page-editor-block-specs.ts"
+  ]
+}

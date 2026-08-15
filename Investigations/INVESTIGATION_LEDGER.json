@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "project": "MindRoom",
   "frozenPlanningBaseline": "bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd",
-  "currentRemoteMainAtLastRun": "fb8c9a1d85a7449448b7fdb69496b0d5ca9cf89f",
+  "currentRemoteMainAtLastRun": "2a675454ab215af9bac026995b6d4b29e09886b8",
   "stage": "PRE_CODE_INVESTIGATION",
   "lastRunAt": "2026-08-13T22:56:09+03:00",
   "investigations": [
@@ -285,10 +285,28 @@
       ],
       "priority": "CRITICAL",
       "blockingLevel": "HARD",
-      "status": "PENDING",
-      "decision": "",
-      "evidencePaths": [],
-      "primarySources": [],
+      "status": "COMPLETE",
+      "decision": "Wave 0 must preserve the active BlockSuite 0.27.0 workspace family and existing ViewExtensionManager page-spec pipeline. The KEEP decision is compatible with the pinned AFFiNE reference and MIT-scoped BlockSuite licence boundary.",
+      "evidencePaths": [
+        "Investigations/Evidence/MR-INV-004/REPORT.md",
+        "Investigations/Evidence/MR-INV-004/EVIDENCE.json"
+      ],
+      "primarySources": [
+        "Graphify/03 Capability Map/CAPABILITY_EVIDENCE.jsonl",
+        "Graphify/05 Dependency and Impact/CAPABILITY_DEPENDENCY_GRAPH.json",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+        "Graphify/09 Implementation/TRANSPLANT_SEARCH_QUEUE.jsonl",
+        "Graphify/12 Source Documents/AFFINE_PROVENANCE.md",
+        "Graphify/12 Source Documents/LICENCE_AND_ATTRIBUTION_MAP.md",
+        "Graphify/14 AFFiNE Reference/AFFINE_ACTIVE_CODE_PARITY_REPORT.md",
+        "Graphify/14 AFFiNE Reference/AFFINE_CAPABILITY_INDEX.jsonl",
+        "Codebase/package.json",
+        "Codebase/blocksuite/**/package.json",
+        "Codebase/packages/frontend/core/src/blocksuite/editors/page-editor.ts",
+        "Codebase/packages/frontend/core/src/blocksuite/manager/view.ts",
+        "Codebase/packages/frontend/core/src/blocksuite/block-suite-editor/lit-adaper.tsx",
+        "Codebase/packages/frontend/core/src/blocksuite/ai/components/page-editor-block-specs.ts"
+      ],
       "codebaseChangeRequiredNext": false,
       "frozenPlanContradiction": false,
       "notes": "Derived from the MR-CAP-005 -> MR-CAP-006 dependency and the critical graph risk on both capabilities."

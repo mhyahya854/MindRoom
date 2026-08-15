@@ -1,21 +1,21 @@
 # MindRoom Pre-Code Investigation Status
 
-Updated: 2026-08-15T19:10:32+03:00
+Updated: 2026-08-15T19:31:00+03:00
 
 ## Control state
 
-- Published starting main: `5ed38e25e3eee186d2483cdec79b8ed43c979107`
-- Selected investigation: `MR-INV-009` (`BLOCKED`)
-- Active hard blocker: `MR-BLOCK-004`
-- `MR-BLOCK-003`: `RESOLVED`
+- Published starting main: `22406fd4d05dff1a66d4e704988b61796ce28b50`
+- Selected change control: `MR-INV-009` / `MR-BLOCK-004`
+- Change-control result: `COMPLETE`
+- Active hard blockers: **0**
 - Wave 0 started: **NO**
 - Implementation performed: **NO**
 - Application released: **NO**
 - Codebase modified: **NO**
 
-## Current investigation
+## Change-control result
 
-`MR-INV-009` is blocked. `BATCH_EXECUTION_PLAN.md` is current authoritative but its `WAVE_0` section lists product-expansion capabilities instead of the canonical Wave 0 tasks/capabilities. Frozen-plan change control is required before Codebase changes.
+`MR-INV-009` is complete. `BATCH_EXECUTION_PLAN.md` now explicitly identifies itself as a noncanonical product-expansion batching taxonomy. Canonical Wave 0 authority, dependency order, rollback coverage, validators, challenges, and independent review all pass.
 
 ## Preservation
 
@@ -28,17 +28,13 @@ Updated: 2026-08-15T19:10:32+03:00
 
 ## Progress
 
-- Investigations complete: **8 / 9**
-- Investigations blocked: **1**
-- Investigations remaining: **0 pending**
-- Hard blockers: **1**
+- Investigations complete: **9 / 9**
+- Investigations blocked: **0**
+- Investigations remaining: **0**
+- Hard blockers: **0**
 - Canonical implementation: **0 / 162**
 - Canonical release gates passed: **0 / 168**
 
-## Next investigation
-
-None until frozen-plan change control resolves `MR-BLOCK-004`.
-
 ## Stop condition
 
-Do not start Wave 0 while `MR-BLOCK-004` is active.
+All investigations are resolved and no hard blockers remain. Do not begin Wave 0 until explicit user authorization.

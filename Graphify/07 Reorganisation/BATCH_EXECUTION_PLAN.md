@@ -1,10 +1,12 @@
-# Product Expansion Batch Execution Plan
+# Product Expansion Batching Taxonomy (Non-Canonical Wave Semantics)
 
 Run: `mindroom-graphify-forensic-finalization-20260730-150956`
 
 **Planning only; all batches remain unauthorised.**
 
-## WAVE_0
+**Scope note:** This file groups product-expansion capabilities for planning convenience only. Its group labels are not canonical MindRoom implementation waves and must not be read as Wave 0 execution authority. The canonical implementation waves are defined by `Graphify/09 Implementation/IMPLEMENTATION_QUEUE.md`, `Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl`, and `Graphify/10 Verification/RELEASE_GATE_MATRIX.json`.
+
+## PRODUCT_EXPANSION_GROUP_0
 
 - `MR-CAP-132` / `MR-BATCH-132` — Finance Privacy and Local Protection
 - `MR-CAP-134` / `MR-BATCH-134` — Canvas Ownership and Scoping
@@ -13,7 +15,7 @@ Run: `mindroom-graphify-forensic-finalization-20260730-150956`
 - `MR-CAP-160` / `MR-BATCH-160` — Stable Identity Across File Movement
 - `MR-CAP-161` / `MR-BATCH-161` — Knowledge-Graph Reconstruction and Recovery
 
-## WAVE_1
+## PRODUCT_EXPANSION_GROUP_1
 
 - `MR-CAP-135` / `MR-BATCH-135` — Independent Whiteboard Documents
 - `MR-CAP-136` / `MR-BATCH-136` — Folder Home Canvas
@@ -32,7 +34,7 @@ Run: `mindroom-graphify-forensic-finalization-20260730-150956`
 - `MR-CAP-153` / `MR-BATCH-153` — Explicit Links and Automatic Backlinks
 - `MR-CAP-156` / `MR-BATCH-156` — Manual Conceptual Relationships
 
-## WAVE_2
+## PRODUCT_EXPANSION_GROUP_2
 
 - `MR-CAP-111` / `MR-BATCH-111` — Local Calendar Core
 - `MR-CAP-112` / `MR-BATCH-112` — Calendar Ownership and Scoped Views
@@ -44,7 +46,7 @@ Run: `mindroom-graphify-forensic-finalization-20260730-150956`
 - `MR-CAP-118` / `MR-BATCH-118` — Journal Calendar Integration
 - `MR-CAP-119` / `MR-BATCH-119` — ICS Import and Export
 
-## WAVE_3
+## PRODUCT_EXPANSION_GROUP_3
 
 - `MR-CAP-121` / `MR-BATCH-121` — MindRoom Finance Core
 - `MR-CAP-122` / `MR-BATCH-122` — Financial Accounts
@@ -56,7 +58,7 @@ Run: `mindroom-graphify-forensic-finalization-20260730-150956`
 - `MR-CAP-130` / `MR-BATCH-130` — Finance CSV Import and Export
 - `MR-CAP-133` / `MR-BATCH-133` — Calendar–Finance Integration
 
-## WAVE_4
+## PRODUCT_EXPANSION_GROUP_4
 
 - `MR-CAP-147` / `MR-BATCH-147` — Workspace Global Knowledge Map
 - `MR-CAP-148` / `MR-BATCH-148` — Federated Mind-Map Aggregation
@@ -66,7 +68,7 @@ Run: `mindroom-graphify-forensic-finalization-20260730-150956`
 - `MR-CAP-157` / `MR-BATCH-157` — Temporary Contextual Relationships
 - `MR-CAP-159` / `MR-BATCH-159` — Global Knowledge-Graph Filters
 
-## WAVE_5
+## PRODUCT_EXPANSION_GROUP_5
 
 - `MR-CAP-120` / `MR-BATCH-120` — Optional External Calendar Adapters
 - `MR-CAP-127` / `MR-BATCH-127` — Savings Goals

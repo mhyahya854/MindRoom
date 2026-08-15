@@ -11,6 +11,7 @@ import sys
 import tempfile
 from collections import Counter, defaultdict
 from fnmatch import fnmatchcase
+from graphlib import TopologicalSorter
 from pathlib import Path
 
 sys.dont_write_bytecode = True
@@ -2868,6 +2869,78 @@ def do_strict_validation(overrides=None, validation_mode="CORE_PRE_CHALLENGE", c
     audit_wrong = {test_id for row in gate_audit.get("gateAudits", []) for test_id in row.get("wrongWaveTestIds", [])}
     corrected = set(gate_sync.get("testWaveMetadataCorrections") or [])
     add(checks, "GATE-14", "gates", "Pre-repair audit independently preserves every corrected wrong-wave test", bool(audit_wrong) and audit_wrong == corrected, sorted(audit_wrong), sorted(corrected), ["FINAL_WAVE_GATE_TEST_AUDIT.json", "FINAL_WAVE_GATE_TEST_SYNCHRONIZATION_REPORT.json"], "pre-repair wrong-wave ID set compared to recorded corrections")
+
+    # Canonical Wave 0 execution authority and batch-plan semantics.
+    canonical_wave0_tasks = [row for row in tasks if row.get("releaseWave") == "WAVE_0"]
+    canonical_wave0_task_ids = sorted({row.get("taskId") for row in canonical_wave0_tasks if row.get("taskId")})
+    canonical_wave0_capability_ids = sorted({row.get("capabilityId") for row in canonical_wave0_tasks if row.get("capabilityId")})
+    wave0_gate = (release_matrix.get("waveGates") or {}).get("WAVE_0") or {}
+    wave0_gate_task_ids = sorted(wave0_gate.get("requiredTaskIds") or [])
+    wave0_gate_capability_ids = sorted(wave0_gate.get("requiredCapabilityIds") or [])
+    expected_wave0_task_ids = sorted([
+        "MR-IMPL-BOOTSTRAP-001",
+        "MR-IMPL-001",
+        "MR-IMPL-002",
+        "MR-IMPL-003",
+        "MR-IMPL-004",
+        "MR-IMPL-005",
+        "MR-IMPL-006",
+    ])
+    expected_wave0_capability_ids = sorted([
+        "MR-CAP-001",
+        "MR-CAP-002",
+        "MR-CAP-003",
+        "MR-CAP-004",
+        "MR-CAP-005",
+        "MR-CAP-006",
+    ])
+    add(checks, "WAVE0-01", "wave0", "Canonical Wave 0 task set is independently derived from implementation authority", canonical_wave0_task_ids == expected_wave0_task_ids, canonical_wave0_task_ids, expected_wave0_task_ids, canonical_wave0_task_ids, "releaseWave field enumeration from IMPLEMENTATION_TASKS")
+    add(checks, "WAVE0-02", "wave0", "Canonical Wave 0 capability set is independently derived from implementation authority", canonical_wave0_capability_ids == expected_wave0_capability_ids, canonical_wave0_capability_ids, expected_wave0_capability_ids, canonical_wave0_capability_ids, "task capabilityId field enumeration from IMPLEMENTATION_TASKS")
+    add(checks, "WAVE0-03", "wave0", "Release-gate Wave 0 task scope equals canonical implementation tasks", wave0_gate_task_ids == canonical_wave0_task_ids, wave0_gate_task_ids, canonical_wave0_task_ids, wave0_gate, "RELEASE_GATE_MATRIX requiredTaskIds exact set")
+    add(checks, "WAVE0-04", "wave0", "Release-gate Wave 0 capability scope equals canonical implementation capabilities", wave0_gate_capability_ids == canonical_wave0_capability_ids, wave0_gate_capability_ids, canonical_wave0_capability_ids, wave0_gate, "RELEASE_GATE_MATRIX requiredCapabilityIds exact set")
+    wave0_task_set = set(canonical_wave0_task_ids)
+    wave0_edges = []
+    for row in canonical_wave0_tasks:
+        source = row.get("taskId")
+        for dep in (row.get("dependencies") or []) + (row.get("prerequisites") or []):
+            if dep in wave0_task_set:
+                wave0_edges.append((source, dep))
+    wave0_graph = {task_id: set() for task_id in canonical_wave0_task_ids}
+    for source, target in wave0_edges:
+        wave0_graph.setdefault(source, set()).add(target)
+    try:
+        list(TopologicalSorter(wave0_graph).static_order()) if canonical_wave0_task_ids else None
+        topological_valid = True
+        topological_failure = []
+    except Exception as exc:
+        topological_valid = False
+        topological_failure = [str(exc)]
+    add(checks, "WAVE0-05", "wave0", "Canonical Wave 0 dependency graph is topologically valid", topological_valid and bool(canonical_wave0_task_ids), topological_failure, [], topological_failure, "stdlib TopologicalSorter over Wave 0 task dependencies")
+    required_wave0_edges = [
+        ("MR-IMPL-001", "MR-IMPL-BOOTSTRAP-001"),
+        ("MR-IMPL-002", "MR-IMPL-001"),
+        ("MR-IMPL-003", "MR-IMPL-001"),
+        ("MR-IMPL-004", "MR-IMPL-002"),
+        ("MR-IMPL-005", "MR-IMPL-BOOTSTRAP-001"),
+        ("MR-IMPL-006", "MR-IMPL-005"),
+    ]
+    missing_required_edges = sorted(edge for edge in required_wave0_edges if edge not in wave0_edges)
+    add(checks, "WAVE0-08", "wave0", "All canonical Wave 0 same-wave prerequisite edges are present", not missing_required_edges, missing_required_edges, [], missing_required_edges, "required dependency edge set membership")
+    rollback_rows = read_jsonl("07 Reorganisation/ROLLBACK_PLAN.jsonl", overrides)
+    missing_rollback = sorted({row.get("capabilityId") for row in canonical_wave0_tasks if row.get("capabilityId")} - {row.get("capabilityId") for row in rollback_rows})
+    task_rollback_missing = sorted(row.get("taskId") for row in canonical_wave0_tasks if not (row.get("rollbackContract") or {}).get("revertCode"))
+    add(checks, "WAVE0-06", "wave0", "Rollback coverage exists for every canonical Wave 0 task and capability", not missing_rollback and not task_rollback_missing, {"missingCapabilityRollback": missing_rollback, "missingTaskRollback": task_rollback_missing}, {"missingCapabilityRollback": [], "missingTaskRollback": []}, missing_rollback + task_rollback_missing, "ROLLBACK_PLAN and task rollbackContract join")
+    batch_text = read_text("07 Reorganisation/BATCH_EXECUTION_PLAN.md", overrides)
+    batch_has_canonical_wave0_heading = bool(re.search(r"(?m)^##\s+WAVE_0\s*$", batch_text))
+    batch_has_product_expansion_group0 = "## PRODUCT_EXPANSION_GROUP_0" in batch_text
+    batch_has_scope_note = "not canonical MindRoom implementation waves" in batch_text
+    batch_authority_rows = [row for row in authority_classification if row.get("path") == "07 Reorganisation/BATCH_EXECUTION_PLAN.md"]
+    batch_is_current = any(row.get("classification") == "CURRENT_AUTHORITATIVE" and row.get("currentAuthority") for row in batch_authority_rows)
+    batch_semantics_ok = (
+        (batch_is_current and batch_has_product_expansion_group0 and batch_has_scope_note and not batch_has_canonical_wave0_heading)
+        or (not batch_is_current)
+    )
+    add(checks, "WAVE0-07", "wave0", "Product-expansion batching taxonomy does not masquerade as canonical implementation Wave 0", batch_semantics_ok, {"currentAuthority": batch_is_current, "canonicalWave0Heading": batch_has_canonical_wave0_heading, "productExpansionGroup0": batch_has_product_expansion_group0, "scopeNote": batch_has_scope_note}, {"currentAuthority": True, "canonicalWave0Heading": False, "productExpansionGroup0": True, "scopeNote": True}, ["BATCH_EXECUTION_PLAN.md", "FINAL_AUTHORITY_CLASSIFICATION.jsonl"], "authority-classification plus markdown heading/scope-note semantic inspection")
 
     # Contracts.
     add(checks, "CON-01", "contracts", "Capability embedded waves match top-level waves", not cap_contracts.get("waveMismatches"), cap_contracts.get("waveMismatches", []), [], ["CAPABILITY_REGISTRY.json"], "field comparison")

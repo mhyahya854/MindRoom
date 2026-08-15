@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "project": "MindRoom",
   "frozenPlanningBaseline": "bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd",
-  "currentRemoteMainAtLastRun": "5ed38e25e3eee186d2483cdec79b8ed43c979107",
+  "currentRemoteMainAtLastRun": "22406fd4d05dff1a66d4e704988b61796ce28b50",
   "stage": "PRE_CODE_INVESTIGATION",
   "lastRunAt": "2026-08-13T22:56:09+03:00",
   "investigations": [
@@ -596,11 +596,12 @@
       ],
       "priority": "HIGH",
       "blockingLevel": "HARD",
-      "status": "BLOCKED",
-      "decision": "MR-INV-009 is blocked because BATCH_EXECUTION_PLAN.md is current authoritative but lists noncanonical product-expansion capabilities under WAVE_0, contradicting the canonical Wave 0 implementation queue and release gate.",
+      "status": "COMPLETE",
+      "decision": "Frozen-plan change control reconciled BATCH_EXECUTION_PLAN.md as a noncanonical product-expansion batching taxonomy. Canonical Wave 0 authority, dependency order, rollback coverage, validation, challenges, and independent review now pass.",
       "evidencePaths": [
         "Investigations/Evidence/MR-INV-009/REPORT.md",
-        "Investigations/Evidence/MR-INV-009/EVIDENCE.json"
+        "Investigations/Evidence/MR-INV-009/EVIDENCE.json",
+        "Investigations/Evidence/MR-INV-009/CHANGE_CONTROL_INDEPENDENT_REVIEW.json"
       ],
       "primarySources": [
         "Graphify/00 Execution Control/DEPENDENCY_WAVE_BASELINE.json",
@@ -613,8 +614,8 @@
         "Graphify/10 Verification/RELEASE_GATE_MATRIX.json"
       ],
       "codebaseChangeRequiredNext": false,
-      "frozenPlanContradiction": true,
-      "notes": "Derived from the canonical dependency audit, which makes the bootstrap a prerequisite of all six primary Wave 0 tasks."
+      "frozenPlanContradiction": false,
+      "notes": "Resolved by authorized MR-INV-009 frozen-plan change control; MR-BLOCK-004 RESOLVED. Wave 0 remains READY_NOT_STARTED."
     }
   ],
   "publicationState": "MR_INV_002_FIFTH_CHANGE_CONTROL_VERIFIED_READY_FOR_PUBLICATION",

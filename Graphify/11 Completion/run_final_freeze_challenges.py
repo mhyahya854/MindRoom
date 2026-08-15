@@ -26,6 +26,7 @@ TASK_PATH = "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
 LINEAGE_PATH = "03 Capability Map/LEGACY_REQUIREMENT_LINEAGE_MAP.jsonl"
 GATE_PATH = "10 Verification/RELEASE_GATE_MATRIX.json"
 TEST_PATH = "10 Verification/REQUIREMENT_TEST_MATRIX.jsonl"
+BATCH_PATH = "07 Reorganisation/BATCH_EXECUTION_PLAN.md"
 EXACT_LOCATION_PATH = "04 Exact Location Registry/EXACT_LOCATION_REGISTRY.json"
 CHANGE_LOCATION_PATH = "04 Exact Location Registry/CHANGE_LOCATION_REGISTRY.jsonl"
 PUBLIC_ENTRYPOINT_PATH = "06 Folder Ownership/PUBLIC_ENTRYPOINT_PLAN.jsonl"
@@ -628,6 +629,13 @@ CHALLENGE_DEFINITIONS = [
     definition("CHALLENGE-KEY-006", "Promote the stale keyed MR-CAP-001 path projection to current authority and require scoped rejection", [AUTHORITY_CLASSIFICATION_PATH], ["ARCH-17", "ARCH-22"], mutate_stale_generic_keyed_authority),
     definition("CHALLENGE-KEY-007", "Register equivalent key-based and value-based MR-CAP-001 path projections and require equivalent validation", [AUTHORITY_CLASSIFICATION_PATH], [], mutate_key_value_equivalent_authorities, expected_status="PASS", result_assertion=key_value_equivalence_assertion),
     definition("CHALLENGE-KEY-008", "Register one MR-CAP-001 path record carrying the identity in both key and value and require one deduplicated semantic record", [AUTHORITY_CLASSIFICATION_PATH], [], mutate_key_value_duplicate_authority, expected_status="PASS", result_assertion=key_value_duplicate_assertion),
+    definition("CHALLENGE-WAVE0-001", "Remove one real canonical Wave 0 task from implementation authority", [TASK_PATH], ["WAVE0-01"], lambda o: mutate_jsonl(Path(o[TASK_PATH]), lambda rows: rows.remove(next(row for row in rows if row.get("taskId") == "MR-IMPL-006")))),
+    definition("CHALLENGE-WAVE0-002", "Promote a non-Wave-0 task into canonical Wave 0", [TASK_PATH], ["WAVE0-01", "WAVE0-02", "CON-03"], lambda o: mutate_jsonl(Path(o[TASK_PATH]), lambda rows: next(row for row in rows if row.get("releaseWave") == "WAVE_1").__setitem__("releaseWave", "WAVE_0"))),
+    definition("CHALLENGE-WAVE0-003", "Remove the MR-IMPL-002 prerequisite from MR-IMPL-004", [TASK_PATH], ["WAVE0-08"], lambda o: mutate_jsonl(Path(o[TASK_PATH]), lambda rows: next(row for row in rows if row.get("taskId") == "MR-IMPL-004").setdefault("dependencies", []).remove("MR-IMPL-002"))),
+    definition("CHALLENGE-WAVE0-004", "Remove the MR-IMPL-005 prerequisite from MR-IMPL-006", [TASK_PATH], ["WAVE0-08"], lambda o: mutate_jsonl(Path(o[TASK_PATH]), lambda rows: next(row for row in rows if row.get("taskId") == "MR-IMPL-006").setdefault("dependencies", []).remove("MR-IMPL-005"))),
+    definition("CHALLENGE-WAVE0-005", "Make a competing product-expansion batch list claim canonical WAVE_0", [BATCH_PATH], ["WAVE0-07"], lambda o: Path(o[BATCH_PATH]).write_text("# Conflicting Product Expansion Plan\n\n## WAVE_0\n\n- `MR-CAP-132` / `MR-BATCH-132`\n", encoding="utf-8")),
+    definition("CHALLENGE-WAVE0-006", "Keep a conflicting product-expansion batch list historical and prove it is not active execution authority", [BATCH_PATH, AUTHORITY_CLASSIFICATION_PATH], [], lambda o: (Path(o[BATCH_PATH]).write_text("# Conflicting Product Expansion Plan\n\n## WAVE_0\n\n- `MR-CAP-132` / `MR-BATCH-132`\n", encoding="utf-8"), mutate_jsonl(Path(o[AUTHORITY_CLASSIFICATION_PATH]), lambda rows: next(row for row in rows if row.get("path") == "07 Reorganisation/BATCH_EXECUTION_PLAN.md").update({"classification": "HISTORICAL", "currentAuthority": False}))), expected_status="PASS"),
+    definition("CHALLENGE-WAVE0-007", "Remove rollback coverage for a canonical Wave 0 capability", ["07 Reorganisation/ROLLBACK_PLAN.jsonl"], ["WAVE0-06"], lambda o: mutate_jsonl(Path(o["07 Reorganisation/ROLLBACK_PLAN.jsonl"]), lambda rows: rows.remove(next(row for row in rows if row.get("capabilityId") == "MR-CAP-006")))),
 ]
 
 

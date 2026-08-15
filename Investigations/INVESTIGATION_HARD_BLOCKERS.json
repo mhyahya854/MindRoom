@@ -216,10 +216,13 @@
       "frozenPlanChangeControlRequired": true,
       "userInputRequired": false,
       "externalDependencyRequired": false,
-      "status": "ACTIVE"
+      "status": "RESOLVED",
+      "resolvedAt": "2026-08-15T19:31:00+03:00",
+      "resolvedBy": "AUTHORIZED_FROZEN_PLAN_CHANGE_CONTROL",
+      "resolution": "BATCH_EXECUTION_PLAN.md is now a noncanonical product-expansion batching taxonomy with explicit scope note; canonical Wave 0 authority, dependency order, rollback coverage, validators, challenges, and independent review pass."
     }
   ],
-  "activeBlockerCount": 1,
-  "resolvedBlockerCount": 3,
-  "lastUpdatedAt": "2026-08-15T19:10:32+03:00"
+  "activeBlockerCount": 0,
+  "resolvedBlockerCount": 4,
+  "lastUpdatedAt": "2026-08-15T19:31:00+03:00"
 }

@@ -1,0 +1,30 @@
+{
+  "verdict": "VERIFIED",
+  "reviewer": "isolated-read-only-process",
+  "questions": {
+    "q1_any_conflicting_current_authority": true,
+    "q2_batch_semantics_unambiguous": true,
+    "q3_topological_order_valid": true,
+    "q4_rollback_complete": true,
+    "q5_acceptance_criteria_satisfied": true,
+    "q6_codebase_untouched": true
+  },
+  "taskIds": [
+    "MR-IMPL-001",
+    "MR-IMPL-002",
+    "MR-IMPL-003",
+    "MR-IMPL-004",
+    "MR-IMPL-005",
+    "MR-IMPL-006",
+    "MR-IMPL-BOOTSTRAP-001"
+  ],
+  "capabilityIds": [
+    "MR-CAP-001",
+    "MR-CAP-002",
+    "MR-CAP-003",
+    "MR-CAP-004",
+    "MR-CAP-005",
+    "MR-CAP-006"
+  ],
+  "codebaseTree": "bbf383e3418da4f613f58719160bb7cbd5709ffc"
+}

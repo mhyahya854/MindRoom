@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "project": "MindRoom",
   "frozenPlanningBaseline": "bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd",
-  "currentRemoteMainAtLastRun": "ac7e4e9eb43c600265ced4c1cca05d3efd988686",
+  "currentRemoteMainAtLastRun": "fb8c9a1d85a7449448b7fdb69496b0d5ca9cf89f",
   "stage": "PRE_CODE_INVESTIGATION",
   "lastRunAt": "2026-08-13T22:56:09+03:00",
   "investigations": [
@@ -229,10 +229,28 @@
       ],
       "priority": "CRITICAL",
       "blockingLevel": "HARD",
-      "status": "PENDING",
-      "decision": "",
-      "evidencePaths": [],
-      "primarySources": [],
+      "status": "COMPLETE",
+      "decision": "Wave 0 must preserve the current context-isolated Electron preload/IPC/security boundaries exactly; no frozen-plan change is required.",
+      "evidencePaths": [
+        "Investigations/Evidence/MR-INV-003/REPORT.md",
+        "Investigations/Evidence/MR-INV-003/EVIDENCE.json"
+      ],
+      "primarySources": [
+        "Graphify/02 Architecture Map/IPC_AND_PRELOAD_MAP.jsonl",
+        "Graphify/02 Architecture Map/COMMAND_AND_EVENT_MAP.jsonl",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+        "Codebase/packages/frontend/apps/electron/src/main/index.ts",
+        "Codebase/packages/frontend/apps/electron/src/main/web-preferences.ts",
+        "Codebase/packages/frontend/apps/electron/src/main/security-restrictions.ts",
+        "Codebase/packages/frontend/apps/electron/src/main/handlers.ts",
+        "Codebase/packages/frontend/apps/electron/src/main/events.ts",
+        "Codebase/packages/frontend/apps/electron/src/main/exposed.ts",
+        "Codebase/packages/frontend/apps/electron/src/preload/bootstrap.ts",
+        "Codebase/packages/frontend/apps/electron/src/preload/electron-api.ts",
+        "Codebase/packages/frontend/apps/electron/src/preload/shared-storage.ts",
+        "Codebase/packages/frontend/apps/electron/src/preload/worker.ts",
+        "Codebase/packages/frontend/electron-api/src/index.ts"
+      ],
       "codebaseChangeRequiredNext": false,
       "frozenPlanContradiction": false,
       "notes": "Tightly couples MR-IMPL-002, MR-IMPL-003, and MR-IMPL-004 because separating the bridge endpoints from their process owners would make the evidence incomplete."

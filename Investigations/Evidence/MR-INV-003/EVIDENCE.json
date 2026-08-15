@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "investigationId": "MR-INV-003",
+  "status": "COMPLETE",
+  "decision": "Wave 0 must preserve the current context-isolated Electron preload/IPC/security boundaries exactly; no frozen-plan change is required.",
+  "frozenPlanContradiction": false,
+  "codebaseChangeRequiredNext": false,
+  "hardBlockers": [],
+  "softRisks": [
+    "The __apis surface is broad and must remain narrowly scoped during later changes.",
+    "MessagePort transfers for worker-connect and helper-connection must remain limited to their existing bridges.",
+    "The Sentry preload import is a later EXCLUDE_LATER network/telemetry concern."
+  ],
+  "acceptanceCriteria": [
+    {
+      "criterion": "BrowserWindow security settings and runtime process owners are proven from Codebase.",
+      "result": "PASS",
+      "evidence": "web-preferences.ts sets sandbox=true, contextIsolation=true, nodeIntegration=false; main/index.ts calls app.enableSandbox(); security-restrictions.ts validates internal origins and denies unexpected navigation/windows."
+    },
+    {
+      "criterion": "Every preload exposure and corresponding main-process handler family is mapped.",
+      "result": "PASS",
+      "evidence": "Four preload exposures map to main/handlers.ts (14 handler namespaces), main/events.ts (7 event namespaces), main/shared-storage, and static appInfo."
+    },
+    {
+      "criterion": "Renderer access to privileged operations is classified and bounded.",
+      "result": "PASS",
+      "evidence": "checkSource validates internal assets:// origins before IPC dispatch; helper/worker MessagePorts are separate from general IPC."
+    },
+    {
+      "criterion": "No unresolved IPC or security architecture risk remains before mutation.",
+      "result": "PASS",
+      "evidence": "Repository evidence shows a coherent context-isolated bridge and no frozen-plan contradiction; remaining items are soft hardening risks."
+    }
+  ],
+  "preloadExposures": [
+    {
+      "name": "__appInfo",
+      "declaringPath": "Codebase/packages/frontend/apps/electron/src/preload/bootstrap.ts",
+      "lineRange": "16-16",
+      "mainOwner": "STATIC_PRELOAD_DATA",
+      "notes": "Built from process arguments; no privileged RPC surface."
+    },
+    {
+      "name": "__apis",
+      "declaringPath": "Codebase/packages/frontend/apps/electron/src/preload/bootstrap.ts",
+      "lineRange": "17-17",
+      "mainOwner": "Codebase/packages/frontend/apps/electron/src/main/handlers.ts",
+      "notes": "AFFINE_API_CHANNEL_NAME dispatches through 14 handler namespaces."
+    },
+    {
+      "name": "__events",
+      "declaringPath": "Codebase/packages/frontend/apps/electron/src/preload/bootstrap.ts",
+      "lineRange": "18-18",
+      "mainOwner": "Codebase/packages/frontend/apps/electron/src/main/events.ts",
+      "notes": "AFFINE_EVENT_CHANNEL_NAME and AFFINE_EVENT_SUBSCRIBE_CHANNEL_NAME dispatch through 7 event namespaces."
+    },
+    {
+      "name": "__sharedStorage",
+      "declaringPath": "Codebase/packages/frontend/apps/electron/src/preload/bootstrap.ts",
+      "lineRange": "19-19",
+      "mainOwner": "Codebase/packages/frontend/apps/electron/src/main/shared-storage/handlers.ts and main/shared-storage/events.ts",
+      "notes": "Global state/cache bridge over the same API/event channels."
+    }
+  ],
+  "handlerNamespaces": [
+    "debug",
+    "ui",
+    "clipboard",
+    "updater",
+    "configStorage",
+    "findInPage",
+    "import",
+    "sharedStorage",
+    "worker",
+    "recording",
+    "popup",
+    "i18n",
+    "byokStorage",
+    "auth"
+  ],
+  "eventNamespaces": [
+    "applicationMenu",
+    "updater",
+    "ui",
+    "sharedStorage",
+    "recording",
+    "popup",
+    "power"
+  ],
+  "securityBaseline": {
+    "sandbox": true,
+    "contextIsolation": true,
+    "nodeIntegration": false,
+    "appEnableSandbox": true,
+    "internalProtocol": "assets:",
+    "internalHosts": [
+      ".",
+      "another-host"
+    ]
+  },
+  "keyRepositoryFacts": [
+    {
+      "fact": "IPC_AND_PRELOAD_MAP.jsonl contains 4 PRELOAD_EXPOSURE, 4 IPC_EVENT_LISTENER, and 3 IPC_REGISTRATION rows.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "preload/bootstrap.ts exposes __appInfo, __apis, __events, and __sharedStorage only after validating an internal URL.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "main/handlers.ts registers 14 handler namespaces and checks source before dispatch.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "main/events.ts registers 7 event namespaces and checks source before subscription.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "web-preferences.ts centralizes sandbox=true, contextIsolation=true, nodeIntegration=false.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    }
+  ],
+  "primarySources": [
+    "Graphify/02 Architecture Map/IPC_AND_PRELOAD_MAP.jsonl",
+    "Graphify/02 Architecture Map/COMMAND_AND_EVENT_MAP.jsonl",
+    "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+    "Codebase/packages/frontend/apps/electron/src/main/index.ts",
+    "Codebase/packages/frontend/apps/electron/src/main/web-preferences.ts",
+    "Codebase/packages/frontend/apps/electron/src/main/security-restrictions.ts",
+    "Codebase/packages/frontend/apps/electron/src/main/handlers.ts",
+    "Codebase/packages/frontend/apps/electron/src/main/events.ts",
+    "Codebase/packages/frontend/apps/electron/src/main/exposed.ts",
+    "Codebase/packages/frontend/apps/electron/src/preload/bootstrap.ts",
+    "Codebase/packages/frontend/apps/electron/src/preload/electron-api.ts",
+    "Codebase/packages/frontend/apps/electron/src/preload/shared-storage.ts",
+    "Codebase/packages/frontend/apps/electron/src/preload/worker.ts",
+    "Codebase/packages/frontend/electron-api/src/index.ts"
+  ]
+}

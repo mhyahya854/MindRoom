@@ -1,11 +1,11 @@
 # MindRoom Pre-Code Investigation Status
 
-Updated: 2026-08-15T18:24:15+03:00
+Updated: 2026-08-15T18:34:32+03:00
 
 ## Control state
 
-- Published starting main: `ac7e4e9eb43c600265ced4c1cca05d3efd988686`
-- Selected investigation: `MR-INV-005` (`COMPLETE`)
+- Published starting main: `fb8c9a1d85a7449448b7fdb69496b0d5ca9cf89f`
+- Selected investigation: `MR-INV-003` (`COMPLETE`)
 - `MR-BLOCK-003`: `RESOLVED`
 - Wave 0 started: **NO**
 - Implementation performed: **NO**
@@ -14,7 +14,7 @@ Updated: 2026-08-15T18:24:15+03:00
 
 ## Current investigation
 
-`MR-INV-005` is complete. The frozen plan is internally compatible because Wave 0 preserves and verifies retained foundations while `MR-IMPL-099` remains a Wave 1 local-only network enforcement task. No frozen-plan change is required.
+`MR-INV-003` is complete. The Electron main/preload/renderer IPC boundary is context-isolated, sandboxed, source-checked, and mapped to explicit handler/event families. Wave 0 must preserve it exactly.
 
 ## Preservation
 
@@ -27,17 +27,17 @@ Updated: 2026-08-15T18:24:15+03:00
 
 ## Progress
 
-- Investigations complete: **3 / 9**
+- Investigations complete: **4 / 9**
 - Investigations blocked: **0**
-- Investigations remaining: **6**
+- Investigations remaining: **5**
 - Hard blockers: **0**
 - Canonical implementation: **0 / 162**
 - Canonical release gates passed: **0 / 168**
 
 ## Next investigation
 
-`MR-INV-003` remains the next CRITICAL investigation.
+`MR-INV-004` remains the next CRITICAL investigation.
 
 ## Stop condition
 
-`MR-INV-005` is complete and no hard blocker was introduced. Stop before `MR-INV-003` and before Wave 0.
+`MR-INV-003` is complete and no hard blocker was introduced. Stop before `MR-INV-004` and before Wave 0.

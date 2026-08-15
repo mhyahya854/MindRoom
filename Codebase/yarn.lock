@@ -7680,6 +7680,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mindroom/common@workspace:packages/common/mindroom":
+  version: 0.0.0-use.local
+  resolution: "@mindroom/common@workspace:packages/common/mindroom"
+  languageName: unknown
+  linkType: soft
+
 "@monaco-editor/loader@npm:^1.5.0":
   version: 1.7.0
   resolution: "@monaco-editor/loader@npm:1.7.0"

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "project": "MindRoom",
   "frozenPlanningBaseline": "bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd",
-  "currentRemoteMainAtLastRun": "23398958f7e9485c58629e51c3f1db4b65182208",
+  "currentRemoteMainAtLastRun": "ac7e4e9eb43c600265ced4c1cca05d3efd988686",
   "stage": "PRE_CODE_INVESTIGATION",
   "lastRunAt": "2026-08-13T22:56:09+03:00",
   "investigations": [
@@ -316,10 +316,23 @@
       ],
       "priority": "CRITICAL",
       "blockingLevel": "HARD",
-      "status": "PENDING",
-      "decision": "",
-      "evidencePaths": [],
-      "primarySources": [],
+      "status": "COMPLETE",
+      "decision": "Wave 0 preservation/verification is compatible with local-only network enforcement remaining in Wave 1; no frozen-plan change is required.",
+      "evidencePaths": [
+        "Investigations/Evidence/MR-INV-005/REPORT.md",
+        "Investigations/Evidence/MR-INV-005/EVIDENCE.json"
+      ],
+      "primarySources": [
+        "Graphify/02 Architecture Map/NETWORK_BOUNDARY_MAP.jsonl",
+        "Graphify/09 Implementation/IMPLEMENTATION_QUEUE.md",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+        "Graphify/10 Verification/RELEASE_GATE_MATRIX.json",
+        "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl",
+        "Codebase/packages/frontend/core/src/bootstrap/browser.ts",
+        "Codebase/packages/frontend/core/src/bootstrap/electron.ts",
+        "Codebase/packages/frontend/core/src/modules/telemetry/index.ts",
+        "Codebase/packages/common/nbstore/src/telemetry/manager.ts"
+      ],
       "codebaseChangeRequiredNext": false,
       "frozenPlanContradiction": false,
       "notes": "Derived from explicit Wave 0 invariants and the frozen placement of local-only network enforcement in Wave 1."

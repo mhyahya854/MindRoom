@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "investigationId": "MR-INV-005",
+  "status": "COMPLETE",
+  "decision": "Wave 0 preservation/verification is compatible with local-only network enforcement remaining in Wave 1; no frozen-plan change is required.",
+  "frozenPlanContradiction": false,
+  "codebaseChangeRequiredNext": false,
+  "hardBlockers": [],
+  "softRisks": [
+    "Wave 0 offline tests must use isolated local fixtures so retained cloud/telemetry code is not accidentally exercised.",
+    "Final installed-runtime offline proof must remain outside GATE-WAVE_0."
+  ],
+  "acceptanceCriteria": [
+    {
+      "criterion": "Boot-time and core-path network dependencies are enumerated from actual registrations.",
+      "result": "PASS",
+      "evidence": "NETWORK_BOUNDARY_MAP.jsonl records 24 classified network boundaries; Codebase bootstrap files import telemetry and cloud registrations remain active."
+    },
+    {
+      "criterion": "Optional/deferred network adapters are separated from mandatory runtime paths.",
+      "result": "PASS",
+      "evidence": "Boundary classifications are EXCLUDE_LATER, PRESERVE_REVIEW, PRESERVE_ADAPT, and MIXED; runtimeReachability distinguishes conditional adapters from renderer/worker core paths."
+    },
+    {
+      "criterion": "Wave 0 gate criteria are reconciled with MR-IMPL-099's Wave 1 placement.",
+      "result": "PASS",
+      "evidence": "GATE-WAVE_0.requiredTaskIds contains the seven Wave 0 tasks and omits MR-IMPL-099; MR-IMPL-099 and GATE-MR-CAP-099 are WAVE_1."
+    },
+    {
+      "criterion": "No unresolved offline-first sequencing contradiction remains.",
+      "result": "PASS",
+      "evidence": "Wave 0 is retained-foundation preservation with scoped offline tests, not final network removal."
+    }
+  ],
+  "keyRepositoryFacts": [
+    {
+      "fact": "NETWORK_BOUNDARY_MAP has 19 EXCLUDE_LATER, 3 PRESERVE_REVIEW, 1 PRESERVE_ADAPT, and 1 MIXED entry.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "IMPLEMENTATION_QUEUE.md places MR-IMPL-099 under WAVE_1.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "GATE-WAVE_0 does not require MR-IMPL-099.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "Codebase/packages/frontend/core/src/bootstrap/browser.ts and bootstrap/electron.ts import ./telemetry.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "Codebase/packages/frontend/core/src/modules/telemetry/index.ts imports from ../cloud.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "Codebase/packages/common/nbstore/src/telemetry/manager.ts contains HTTP and Socket.IO telemetry send paths.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    }
+  ],
+  "primarySources": [
+    "Graphify/02 Architecture Map/NETWORK_BOUNDARY_MAP.jsonl",
+    "Graphify/09 Implementation/IMPLEMENTATION_QUEUE.md",
+    "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+    "Graphify/10 Verification/RELEASE_GATE_MATRIX.json",
+    "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl",
+    "Codebase/packages/frontend/core/src/bootstrap/browser.ts",
+    "Codebase/packages/frontend/core/src/bootstrap/electron.ts",
+    "Codebase/packages/frontend/core/src/modules/telemetry/index.ts",
+    "Codebase/packages/common/nbstore/src/telemetry/manager.ts"
+  ]
+}

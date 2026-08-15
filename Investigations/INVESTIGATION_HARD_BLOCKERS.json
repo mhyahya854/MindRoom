@@ -198,8 +198,28 @@
       ],
       "resolvedAt": "2026-08-13T22:56:09+03:00",
       "resolutionEvidence": "Attempt 5 key-aware discovery, 47-vs-47 independent pre-review enumeration, 224/224 certification, 120/120 challenges, Step 11b, exactly one fresh isolated VERIFIED review, and 4/4 acceptance criteria."
+    },
+    {
+      "blockerId": "MR-BLOCK-004",
+      "investigationId": "MR-INV-009",
+      "description": "The frozen Wave 0 batch-execution plan is contradictory with the canonical Wave 0 implementation queue and release gate. BATCH_EXECUTION_PLAN.md is CURRENT_AUTHORITATIVE but lists MR-CAP-132, MR-CAP-134, MR-CAP-140, MR-CAP-158, MR-CAP-160, and MR-CAP-161 under WAVE_0 instead of the canonical Wave 0 capabilities MR-CAP-001 through MR-CAP-006.",
+      "sourceEvidence": [
+        "Graphify/07 Reorganisation/BATCH_EXECUTION_PLAN.md",
+        "Graphify/09 Implementation/IMPLEMENTATION_QUEUE.md",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+        "Graphify/10 Verification/RELEASE_GATE_MATRIX.json",
+        "Graphify/11 Completion/TASK_EXECUTION_DEPENDENCY_AUDIT.jsonl",
+        "Investigations/Evidence/MR-INV-009/EVIDENCE.json"
+      ],
+      "whyItBlocksImplementation": "An authorized Wave 0 executor could follow a noncanonical Wave 0 batch list from a current authoritative planning artifact, producing incorrect execution order, receipts, and rollback boundaries.",
+      "resolutionRequired": "Run explicit frozen-plan change control to reconcile BATCH_EXECUTION_PLAN.md with the canonical Wave 0 task/capability set, dependency audit, implementation queue, and release gate, then independently revalidate the frozen authority.",
+      "frozenPlanChangeControlRequired": true,
+      "userInputRequired": false,
+      "externalDependencyRequired": false,
+      "status": "ACTIVE"
     }
   ],
-  "activeBlockerCount": 0,
-  "resolvedBlockerCount": 3
+  "activeBlockerCount": 1,
+  "resolvedBlockerCount": 3,
+  "lastUpdatedAt": "2026-08-15T19:10:32+03:00"
 }

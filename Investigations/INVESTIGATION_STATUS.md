@@ -1,11 +1,12 @@
 # MindRoom Pre-Code Investigation Status
 
-Updated: 2026-08-15T19:01:18+03:00
+Updated: 2026-08-15T19:10:32+03:00
 
 ## Control state
 
-- Published starting main: `fd861ce4d27830d45672a147f1aba263773ea5e9`
-- Selected investigation: `MR-INV-008` (`COMPLETE`)
+- Published starting main: `0b1fb086dcf22c91ee4cd1c8ff26c5f90debd01c`
+- Selected investigation: `MR-INV-009` (`BLOCKED`)
+- Active hard blocker: `MR-BLOCK-004`
 - `MR-BLOCK-003`: `RESOLVED`
 - Wave 0 started: **NO**
 - Implementation performed: **NO**
@@ -14,7 +15,7 @@ Updated: 2026-08-15T19:01:18+03:00
 
 ## Current investigation
 
-`MR-INV-008` is complete. Wave 0 KEEP decisions are supported by the verified pinned AFFiNE reference and separated licence boundaries. No transplant or invention receipt is required before Wave 0.
+`MR-INV-009` is blocked. `BATCH_EXECUTION_PLAN.md` is current authoritative but its `WAVE_0` section lists product-expansion capabilities instead of the canonical Wave 0 tasks/capabilities. Frozen-plan change control is required before Codebase changes.
 
 ## Preservation
 
@@ -28,16 +29,16 @@ Updated: 2026-08-15T19:01:18+03:00
 ## Progress
 
 - Investigations complete: **8 / 9**
-- Investigations blocked: **0**
-- Investigations remaining: **1**
-- Hard blockers: **0**
+- Investigations blocked: **1**
+- Investigations remaining: **0 pending**
+- Hard blockers: **1**
 - Canonical implementation: **0 / 162**
 - Canonical release gates passed: **0 / 168**
 
 ## Next investigation
 
-`MR-INV-009` is the final pending investigation.
+None until frozen-plan change control resolves `MR-BLOCK-004`.
 
 ## Stop condition
 
-`MR-INV-008` is complete and no hard blocker was introduced. Stop before `MR-INV-009` and before Wave 0.
+Do not start Wave 0 while `MR-BLOCK-004` is active.

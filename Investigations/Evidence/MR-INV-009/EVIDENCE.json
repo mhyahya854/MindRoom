@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "investigationId": "MR-INV-009",
+  "status": "BLOCKED",
+  "decision": "MR-INV-009 is blocked because BATCH_EXECUTION_PLAN.md is current authoritative but lists noncanonical product-expansion capabilities under WAVE_0, contradicting the canonical Wave 0 implementation queue and release gate.",
+  "frozenPlanContradiction": true,
+  "codebaseChangeRequiredNext": false,
+  "hardBlockers": [
+    {
+      "blockerId": "MR-BLOCK-004",
+      "description": "BATCH_EXECUTION_PLAN.md WAVE_0 section lists MR-CAP-132, MR-CAP-134, MR-CAP-140, MR-CAP-158, MR-CAP-160, and MR-CAP-161 instead of the canonical Wave 0 tasks/capabilities.",
+      "resolutionRequired": "Run explicit frozen-plan change control to reconcile BATCH_EXECUTION_PLAN.md with IMPLEMENTATION_QUEUE.md, RELEASE_GATE_MATRIX.json, and the canonical Wave 0 dependency audit."
+    }
+  ],
+  "softRisks": [],
+  "acceptanceCriteria": [
+    {
+      "criterion": "A deterministic topological order exists for all seven Wave 0 tasks.",
+      "result": "PASS",
+      "evidence": "Derived order: bootstrap, 001, 002/003/005 parallel-safe, 004 after 002, 006 after 005."
+    },
+    {
+      "criterion": "Parallel-safe and strictly sequential task boundaries are identified.",
+      "result": "PASS",
+      "evidence": "Dependencies in IMPLEMENTATION_TASKS and TASK_EXECUTION_DEPENDENCY_AUDIT are valid and acyclic."
+    },
+    {
+      "criterion": "Each micro-batch has scoped pre/post hashes, tests, receipts, and rollback actions.",
+      "result": "PASS",
+      "evidence": "Wave 0 tasks have rollback actions/contracts, verification receipts, and hash-manifest checkpoints."
+    },
+    {
+      "criterion": "No same-wave ordering artifact contradicts the canonical task dependency audit.",
+      "result": "FAIL",
+      "evidence": "CURRENT_AUTHORITATIVE BATCH_EXECUTION_PLAN.md WAVE_0 section contradicts the canonical Wave 0 task/capability set."
+    }
+  ],
+  "canonicalWave0Order": [
+    "MR-IMPL-BOOTSTRAP-001",
+    "MR-IMPL-001",
+    "MR-IMPL-002",
+    "MR-IMPL-003",
+    "MR-IMPL-005",
+    "MR-IMPL-004",
+    "MR-IMPL-006"
+  ],
+  "contradiction": {
+    "artifact": "Graphify/07 Reorganisation/BATCH_EXECUTION_PLAN.md",
+    "authorityClass": "CURRENT_AUTHORITATIVE",
+    "listedWave0Capabilities": [
+      "MR-CAP-132",
+      "MR-CAP-134",
+      "MR-CAP-140",
+      "MR-CAP-158",
+      "MR-CAP-160",
+      "MR-CAP-161"
+    ],
+    "canonicalWave0Capabilities": [
+      "MR-CAP-001",
+      "MR-CAP-002",
+      "MR-CAP-003",
+      "MR-CAP-004",
+      "MR-CAP-005",
+      "MR-CAP-006"
+    ]
+  },
+  "keyRepositoryFacts": [
+    {
+      "fact": "DEPENDENCY_WAVE_BASELINE reports no task cycles, capability cycles, backward waves, or unknown dependencies.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "TASK_EXECUTION_DEPENDENCY_AUDIT confirms the canonical Wave 0 task edges are valid.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "BATCH_EXECUTION_PLAN.md is current authoritative but its WAVE_0 section conflicts with the canonical Wave 0 task set.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    }
+  ],
+  "primarySources": [
+    "Graphify/00 Execution Control/DEPENDENCY_WAVE_BASELINE.json",
+    "Graphify/05 Dependency and Impact/SAME_WAVE_EXECUTION_ORDER.json",
+    "Graphify/07 Reorganisation/BATCH_EXECUTION_PLAN.md",
+    "Graphify/07 Reorganisation/ROLLBACK_PLAN.jsonl",
+    "Graphify/11 Completion/TASK_EXECUTION_DEPENDENCY_AUDIT.jsonl",
+    "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+    "Graphify/09 Implementation/IMPLEMENTATION_QUEUE.md",
+    "Graphify/10 Verification/RELEASE_GATE_MATRIX.json"
+  ]
+}

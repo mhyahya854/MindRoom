@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "project": "MindRoom",
   "frozenPlanningBaseline": "bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd",
-  "currentRemoteMainAtLastRun": "fd861ce4d27830d45672a147f1aba263773ea5e9",
+  "currentRemoteMainAtLastRun": "0b1fb086dcf22c91ee4cd1c8ff26c5f90debd01c",
   "stage": "PRE_CODE_INVESTIGATION",
   "lastRunAt": "2026-08-13T22:56:09+03:00",
   "investigations": [
@@ -596,12 +596,24 @@
       ],
       "priority": "HIGH",
       "blockingLevel": "HARD",
-      "status": "PENDING",
-      "decision": "",
-      "evidencePaths": [],
-      "primarySources": [],
+      "status": "BLOCKED",
+      "decision": "MR-INV-009 is blocked because BATCH_EXECUTION_PLAN.md is current authoritative but lists noncanonical product-expansion capabilities under WAVE_0, contradicting the canonical Wave 0 implementation queue and release gate.",
+      "evidencePaths": [
+        "Investigations/Evidence/MR-INV-009/REPORT.md",
+        "Investigations/Evidence/MR-INV-009/EVIDENCE.json"
+      ],
+      "primarySources": [
+        "Graphify/00 Execution Control/DEPENDENCY_WAVE_BASELINE.json",
+        "Graphify/05 Dependency and Impact/SAME_WAVE_EXECUTION_ORDER.json",
+        "Graphify/07 Reorganisation/BATCH_EXECUTION_PLAN.md",
+        "Graphify/07 Reorganisation/ROLLBACK_PLAN.jsonl",
+        "Graphify/11 Completion/TASK_EXECUTION_DEPENDENCY_AUDIT.jsonl",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+        "Graphify/09 Implementation/IMPLEMENTATION_QUEUE.md",
+        "Graphify/10 Verification/RELEASE_GATE_MATRIX.json"
+      ],
       "codebaseChangeRequiredNext": false,
-      "frozenPlanContradiction": false,
+      "frozenPlanContradiction": true,
       "notes": "Derived from the canonical dependency audit, which makes the bootstrap a prerequisite of all six primary Wave 0 tasks."
     }
   ],

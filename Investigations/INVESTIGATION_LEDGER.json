@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "project": "MindRoom",
   "frozenPlanningBaseline": "bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd",
-  "currentRemoteMainAtLastRun": "e2a38e82e13dc16a810bb14284b49cd644faf60a",
+  "currentRemoteMainAtLastRun": "fd861ce4d27830d45672a147f1aba263773ea5e9",
   "stage": "PRE_CODE_INVESTIGATION",
   "lastRunAt": "2026-08-13T22:56:09+03:00",
   "investigations": [
@@ -536,10 +536,22 @@
       ],
       "priority": "HIGH",
       "blockingLevel": "HARD",
-      "status": "PENDING",
-      "decision": "",
-      "evidencePaths": [],
-      "primarySources": [],
+      "status": "COMPLETE",
+      "decision": "Wave 0 KEEP decisions are supported by the verified pinned AFFiNE reference and separated licence boundaries. No transplant or invention receipt is required before Wave 0.",
+      "evidencePaths": [
+        "Investigations/Evidence/MR-INV-008/REPORT.md",
+        "Investigations/Evidence/MR-INV-008/EVIDENCE.json"
+      ],
+      "primarySources": [
+        "Graphify/12 Source Documents/AFFINE_PROVENANCE.md",
+        "Graphify/12 Source Documents/LICENCE_AND_ATTRIBUTION_MAP.md",
+        "Graphify/12 Source Documents/THIRD_PARTY_CODE_REGISTER.jsonl",
+        "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+        "Graphify/09 Implementation/TRANSPLANT_SEARCH_QUEUE.jsonl",
+        "Graphify/14 AFFiNE Reference/AFFINE_ACTIVE_CODE_PARITY_REPORT.md",
+        "Graphify/14 AFFiNE Reference/AFFINE_CAPABILITY_INDEX.jsonl",
+        "Graphify/14 AFFiNE Reference/Reference Tree/package.json"
+      ],
       "codebaseChangeRequiredNext": false,
       "frozenPlanContradiction": false,
       "notes": "Restricted backend/native scopes are relevant to architecture and Electron boundaries even when the initial decision is KEEP_EXISTING."

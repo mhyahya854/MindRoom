@@ -1,11 +1,11 @@
 # MindRoom Pre-Code Investigation Status
 
-Updated: 2026-08-15T18:56:51+03:00
+Updated: 2026-08-15T19:01:18+03:00
 
 ## Control state
 
-- Published starting main: `e2a38e82e13dc16a810bb14284b49cd644faf60a`
-- Selected investigation: `MR-INV-007` (`COMPLETE`)
+- Published starting main: `fd861ce4d27830d45672a147f1aba263773ea5e9`
+- Selected investigation: `MR-INV-008` (`COMPLETE`)
 - `MR-BLOCK-003`: `RESOLVED`
 - Wave 0 started: **NO**
 - Implementation performed: **NO**
@@ -14,7 +14,7 @@ Updated: 2026-08-15T18:56:51+03:00
 
 ## Current investigation
 
-`MR-INV-007` is complete. The 13 Wave 0 tests map to existing command families, explicit task owners, a defined test-receipt schema, and independent-review responsibility. Wave 0-specific fixtures are implementation-bound.
+`MR-INV-008` is complete. Wave 0 KEEP decisions are supported by the verified pinned AFFiNE reference and separated licence boundaries. No transplant or invention receipt is required before Wave 0.
 
 ## Preservation
 
@@ -27,17 +27,17 @@ Updated: 2026-08-15T18:56:51+03:00
 
 ## Progress
 
-- Investigations complete: **7 / 9**
+- Investigations complete: **8 / 9**
 - Investigations blocked: **0**
-- Investigations remaining: **2**
+- Investigations remaining: **1**
 - Hard blockers: **0**
 - Canonical implementation: **0 / 162**
 - Canonical release gates passed: **0 / 168**
 
 ## Next investigation
 
-`MR-INV-008` is the next HIGH-priority investigation.
+`MR-INV-009` is the final pending investigation.
 
 ## Stop condition
 
-`MR-INV-007` is complete and no hard blocker was introduced. Stop before `MR-INV-008` and before Wave 0.
+`MR-INV-008` is complete and no hard blocker was introduced. Stop before `MR-INV-009` and before Wave 0.

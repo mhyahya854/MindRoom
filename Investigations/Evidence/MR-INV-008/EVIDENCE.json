@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "investigationId": "MR-INV-008",
+  "status": "COMPLETE",
+  "decision": "Wave 0 KEEP decisions are supported by the verified pinned AFFiNE reference and separated licence boundaries. No transplant or invention receipt is required before Wave 0.",
+  "frozenPlanContradiction": false,
+  "codebaseChangeRequiredNext": false,
+  "hardBlockers": [],
+  "softRisks": [
+    "TRANSPLANT_SEARCH_QUEUE has stale SEARCH_INCOMPLETE/referenceAvailable=false rows for MR-TRANSPLANT-002..006.",
+    "Two copied-source headers have incomplete local licence evidence for later distribution decisions.",
+    "Final licence/SBOM/notice work remains later."
+  ],
+  "acceptanceCriteria": [
+    {
+      "criterion": "The pinned upstream commit/tree/archive evidence is verified from the frozen repository.",
+      "result": "PASS",
+      "evidence": "AFFINE_PROVENANCE records commit da7781a75171140fd966c6cfbe05da9f1fb111d6, tree 4f7b0d6657efa7e9ee0c1e3359e09a21eb8e145f, version 0.26.3, archive URL, and SHA-256."
+    },
+    {
+      "criterion": "Active-vs-reference deltas are classified for all Wave 0 target families.",
+      "result": "PASS",
+      "evidence": "AFFINE_CAPABILITY_INDEX classifies all six Wave 0 capabilities as KEEP_EXISTING with path-level identical/delta/active-only evidence."
+    },
+    {
+      "criterion": "MIT, mixed AFFiNE EE/MPL, and embedded third-party boundaries are separated.",
+      "result": "PASS",
+      "evidence": "LICENCE_AND_ATTRIBUTION_MAP separates root MIT, BlockSuite MIT, backend/native EE/MPL, and embedded component licences."
+    },
+    {
+      "criterion": "Every transplant or invention decision required before Wave 0 is either approved or proven unnecessary.",
+      "result": "PASS",
+      "evidence": "All Wave 0 capabilities are KEEP_EXISTING with transplantApproved=false, inventionApproved=false, and blockers=[]."
+    }
+  ],
+  "pinnedReference": {
+    "repository": "toeverything/AFFiNE",
+    "commit": "da7781a75171140fd966c6cfbe05da9f1fb111d6",
+    "tree": "4f7b0d6657efa7e9ee0c1e3359e09a21eb8e145f",
+    "packageVersion": "0.26.3",
+    "archiveUrl": "https://codeload.github.com/toeverything/AFFiNE/zip/da7781a75171140fd966c6cfbe05da9f1fb111d6",
+    "archiveSha256": "1fc573a2143f664d4944df4e82570651f54c75ba8a891c546fe9153820a597c9"
+  },
+  "wave0CapabilityParity": [
+    {
+      "capabilityId": "MR-CAP-001",
+      "activePaths": 12,
+      "referencePaths": 12,
+      "identicalPaths": 7,
+      "versionDeltaPaths": 5,
+      "activeOnlyPaths": 0,
+      "decision": "KEEP_EXISTING"
+    },
+    {
+      "capabilityId": "MR-CAP-002",
+      "activePaths": 12,
+      "referencePaths": 10,
+      "identicalPaths": 9,
+      "versionDeltaPaths": 1,
+      "activeOnlyPaths": 2,
+      "decision": "KEEP_EXISTING"
+    },
+    {
+      "capabilityId": "MR-CAP-003",
+      "activePaths": 12,
+      "referencePaths": 12,
+      "identicalPaths": 11,
+      "versionDeltaPaths": 1,
+      "activeOnlyPaths": 0,
+      "decision": "KEEP_EXISTING"
+    },
+    {
+      "capabilityId": "MR-CAP-004",
+      "activePaths": 11,
+      "referencePaths": 11,
+      "identicalPaths": 8,
+      "versionDeltaPaths": 3,
+      "activeOnlyPaths": 0,
+      "decision": "KEEP_EXISTING"
+    },
+    {
+      "capabilityId": "MR-CAP-005",
+      "activePaths": 12,
+      "referencePaths": 12,
+      "identicalPaths": 12,
+      "versionDeltaPaths": 0,
+      "activeOnlyPaths": 0,
+      "decision": "KEEP_EXISTING"
+    },
+    {
+      "capabilityId": "MR-CAP-006",
+      "activePaths": 12,
+      "referencePaths": 12,
+      "identicalPaths": 12,
+      "versionDeltaPaths": 0,
+      "activeOnlyPaths": 0,
+      "decision": "KEEP_EXISTING"
+    }
+  ],
+  "licenceBoundary": {
+    "rootMitScope": "Codebase outside packages/backend and packages/common/native",
+    "blocksuite": "Root MIT scope, subject to embedded component licences",
+    "restricted": "packages/backend/** and packages/common/native/** = AFFiNE EE with MPL-2.0 client-side carveout",
+    "finalDistributionWorkRemaining": [
+      "Complete dependency licence audit",
+      "Resolve two incomplete copied-source headers",
+      "Generate NOTICE.txt and THIRD_PARTY_NOTICES.txt",
+      "Complete SBOM"
+    ]
+  },
+  "keyRepositoryFacts": [
+    {
+      "fact": "AFFINE_ACTIVE_CODE_PARITY_REPORT reports 110 capabilities searched, 0 incomplete, 1210 exact pairs, 1105 identical, 105 version-delta pairs, 0 approved transplants.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "All six Wave 0 capability families are KEEP_EXISTING with no transplant/invention approval and no blockers.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "Wave 0 targets are outside the AFFiNE backend/native EE/MPL exception.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "TRANSPLANT_SEARCH_QUEUE contains stale SEARCH_INCOMPLETE rows for MR-TRANSPLANT-002..006 despite verified reference evidence.",
+      "evidenceClassification": "INFERENCE"
+    }
+  ],
+  "primarySources": [
+    "Graphify/12 Source Documents/AFFINE_PROVENANCE.md",
+    "Graphify/12 Source Documents/LICENCE_AND_ATTRIBUTION_MAP.md",
+    "Graphify/12 Source Documents/THIRD_PARTY_CODE_REGISTER.jsonl",
+    "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+    "Graphify/09 Implementation/TRANSPLANT_SEARCH_QUEUE.jsonl",
+    "Graphify/14 AFFiNE Reference/AFFINE_ACTIVE_CODE_PARITY_REPORT.md",
+    "Graphify/14 AFFiNE Reference/AFFINE_CAPABILITY_INDEX.jsonl",
+    "Graphify/14 AFFiNE Reference/Reference Tree/package.json"
+  ]
+}

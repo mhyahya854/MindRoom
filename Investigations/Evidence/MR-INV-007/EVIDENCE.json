@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "investigationId": "MR-INV-007",
+  "status": "COMPLETE",
+  "decision": "Wave 0 test evidence can be produced with existing vendored Yarn/Node command families, Graphify structural verifiers, the test-receipt schema, and independent review ownership. Wave 0-specific fixtures are explicitly implementation-bound.",
+  "frozenPlanContradiction": false,
+  "codebaseChangeRequiredNext": false,
+  "hardBlockers": [],
+  "softRisks": [
+    "CAP-002 through CAP-006 fixtures do not exist yet and are implementation-bound.",
+    "The exact CAP-001 structural verifier command may be task-specific.",
+    "Tests require the Node 22.23.1 and Yarn install state established in MR-INV-006."
+  ],
+  "acceptanceCriteria": [
+    {
+      "criterion": "Every Wave 0 test ID maps to an executable repository-discovered command and owner.",
+      "result": "PASS",
+      "evidence": "13 Wave 0 tests map to Wave 0 task owners and command families from TEST_COMMAND_REGISTRY and task command fields."
+    },
+    {
+      "criterion": "Required fixtures and offline/cross-platform conditions are available or explicitly implementation-bound.",
+      "result": "PASS",
+      "evidence": "CAP-001 uses repository source; Wave 0 task fixtures are named and implementation-bound; all 13 tests are offline/cross-platform."
+    },
+    {
+      "criterion": "Receipt format and independent review responsibility are unambiguous.",
+      "result": "PASS",
+      "evidence": "test-receipt.schema.json defines receipt fields; Wave 0 tasks require an independent reviewer who differs from the implementer."
+    },
+    {
+      "criterion": "No release-gate prerequisite is impossible before Wave 0 completion.",
+      "result": "PASS",
+      "evidence": "FINAL_WAVE_GATE_TEST_SYNCHRONIZATION_REPORT.json status=PASS, blockingDefects=[], Wave 0 gate audit MATCH."
+    }
+  ],
+  "wave0TestSummary": {
+    "totalTests": 13,
+    "offlineRequired": 13,
+    "crossPlatformRequired": 13,
+    "requiredReceipt": "VERIFY_WAVE_0_RECEIPT"
+  },
+  "testCommandMapping": [
+    {
+      "testFamily": "TEST-MR-BOOTSTRAP-001",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs workspace @mindroom/common build",
+      "ownerTask": "MR-IMPL-BOOTSTRAP-001",
+      "source": "IMPLEMENTATION_TASKS.jsonl MR-IMPL-BOOTSTRAP-001.command"
+    },
+    {
+      "testFamily": "TEST-MR-CAP-001-UNIT-001 / INTEG-002",
+      "command": "python Graphify/11 Completion/validate_final_graphify_freeze.py --mode FINAL_FREEZE_CERTIFICATION --verify-only (repository-local structural verifier family)",
+      "ownerTask": "MR-IMPL-001",
+      "source": "REQUIREMENT_TEST_MATRIX environment and Graphify validator"
+    },
+    {
+      "testFamily": "TEST-MR-CAP-002..006-UNIT-001",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs test",
+      "ownerTask": "MR-IMPL-002..006",
+      "source": "TEST_COMMAND_REGISTRY CMD-UNIT"
+    },
+    {
+      "testFamily": "TEST-MR-CAP-002..006-INTEG-002",
+      "command": "node .yarn/releases/yarn-4.13.0.cjs affine @affine/electron vitest",
+      "ownerTask": "MR-IMPL-002..006",
+      "source": "TEST_COMMAND_REGISTRY CMD-ELECTRON-UNIT"
+    }
+  ],
+  "fixtures": {
+    "available": [
+      "Repository source tree",
+      "Temporary validator candidate copies"
+    ],
+    "implementationBound": [
+      "FIX-workspace-package-json",
+      "FIX-mr-cap-002-integ-workspace",
+      "FIX-mr-cap-002-unit-data",
+      "FIX-mr-cap-003-integ-workspace",
+      "FIX-mr-cap-003-unit-data",
+      "FIX-mr-cap-004-integ-workspace",
+      "FIX-mr-cap-004-unit-data",
+      "FIX-mr-cap-005-integ-workspace",
+      "FIX-mr-cap-005-unit-data",
+      "FIX-mr-cap-006-integ-workspace",
+      "FIX-mr-cap-006-unit-data"
+    ],
+    "fixturesDirectoryPresent": false
+  },
+  "receiptSchema": "Graphify/00 Execution Control/schemas/test-receipt.schema.json",
+  "independentReview": {
+    "bootstrap": "INDEPENDENT_REVIEWER_REQUIRED_NOT_IMPLEMENTER",
+    "primaryWave0Tasks": "Independent capability reviewer; mustDifferFromImplementer=true"
+  },
+  "keyRepositoryFacts": [
+    {
+      "fact": "GATE-WAVE_0 requires 13 test IDs and VERIFY_WAVE_0_RECEIPT.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "FINAL_WAVE_GATE_TEST_SYNCHRONIZATION_REPORT status=PASS and blockingDefects=[].",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "TEST_COMMAND_REGISTRY maps available Yarn/Electron command families.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "Wave 0 task reviewers require an independent reviewer different from the implementer.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    }
+  ],
+  "primarySources": [
+    "Graphify/10 Verification/RELEASE_GATE_MATRIX.json",
+    "Graphify/10 Verification/REQUIREMENT_TEST_MATRIX.jsonl",
+    "Graphify/10 Verification/TEST_COMMAND_REGISTRY.json",
+    "Graphify/10 Verification/FIXTURE_QA_MATRIX.md",
+    "Graphify/11 Completion/FINAL_TEST_WAVE_OWNERSHIP.jsonl",
+    "Graphify/11 Completion/FINAL_WAVE_GATE_TEST_SYNCHRONIZATION_REPORT.json",
+    "Graphify/00 Execution Control/schemas/test-receipt.schema.json",
+    "Graphify/09 Implementation/IMPLEMENTATION_TASKS.jsonl"
+  ]
+}

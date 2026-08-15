@@ -1,11 +1,11 @@
 # MindRoom Pre-Code Investigation Status
 
-Updated: 2026-08-15T18:45:34+03:00
+Updated: 2026-08-15T18:50:54+03:00
 
 ## Control state
 
-- Published starting main: `2a675454ab215af9bac026995b6d4b29e09886b8`
-- Selected investigation: `MR-INV-004` (`COMPLETE`)
+- Published starting main: `a023f02183b3e45a131bc11299b068de3bc5cc35`
+- Selected investigation: `MR-INV-006` (`COMPLETE`)
 - `MR-BLOCK-003`: `RESOLVED`
 - Wave 0 started: **NO**
 - Implementation performed: **NO**
@@ -14,7 +14,7 @@ Updated: 2026-08-15T18:45:34+03:00
 
 ## Current investigation
 
-`MR-INV-004` is complete. The active BlockSuite 0.27.0 workspace family and `ViewExtensionManager` page-spec pipeline are the preserved foundation. The pinned AFFiNE reference and MIT-scoped BlockSuite licence boundary support the KEEP decision.
+`MR-INV-006` is complete. Wave 0 is toolchain-compatible after a deterministic pre-flight setup using Node `22.23.1` and vendored Yarn `4.13.0`.
 
 ## Preservation
 
@@ -27,17 +27,17 @@ Updated: 2026-08-15T18:45:34+03:00
 
 ## Progress
 
-- Investigations complete: **5 / 9**
+- Investigations complete: **6 / 9**
 - Investigations blocked: **0**
-- Investigations remaining: **4**
+- Investigations remaining: **3**
 - Hard blockers: **0**
 - Canonical implementation: **0 / 162**
 - Canonical release gates passed: **0 / 168**
 
 ## Next investigation
 
-`MR-INV-006` is the next HIGH-priority investigation.
+`MR-INV-007` is the next HIGH-priority investigation.
 
 ## Stop condition
 
-`MR-INV-004` is complete and no hard blocker was introduced. Stop before `MR-INV-006` and before Wave 0.
+`MR-INV-006` is complete and no hard blocker was introduced. Stop before `MR-INV-007` and before Wave 0.

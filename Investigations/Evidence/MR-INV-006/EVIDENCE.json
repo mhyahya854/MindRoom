@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "investigationId": "MR-INV-006",
+  "status": "COMPLETE",
+  "decision": "Wave 0 is toolchain-compatible after a deterministic pre-flight setup: use Node 22.23.1 and invoke vendored Yarn 4.13.0 with node .yarn/releases/yarn-4.13.0.cjs. No Codebase change or frozen-plan change is required.",
+  "frozenPlanContradiction": false,
+  "codebaseChangeRequiredNext": false,
+  "hardBlockers": [],
+  "softRisks": [
+    "Current local Node is v24.18.0 and must be switched to 22.23.1 before Wave 0.",
+    "Yarn is not on PATH; commands must use the vendored .yarn/releases/yarn-4.13.0.cjs path.",
+    "Native build/package/installer verification remains later-wave work."
+  ],
+  "acceptanceCriteria": [
+    {
+      "criterion": "The exact supported runtime and package-manager versions are proven from repository files.",
+      "result": "PASS",
+      "evidence": "package.json engines node >=22.12.0 <23.0.0, .nvmrc 22.23.1, packageManager yarn@4.13.0, .yarnrc.yml yarnPath .yarn/releases/yarn-4.13.0.cjs."
+    },
+    {
+      "criterion": "A compatible Node runtime is available or a deterministic pre-Wave-0 setup action is established.",
+      "result": "PASS",
+      "evidence": "Current node v24.18.0 is incompatible, but the deterministic action is install/use Node 22.23.1 and invoke vendored Yarn 4.13.0."
+    },
+    {
+      "criterion": "Wave 0 build and test commands are portable or have explicit platform-specific owners.",
+      "result": "PASS",
+      "evidence": "TEST_COMMAND_REGISTRY.json maps 20 available commands to vendored Yarn; cross-platform matrix covers Windows x64, macOS arm64/x64, Linux x64."
+    },
+    {
+      "criterion": "Native/Electron module compatibility has no unresolved hard blocker.",
+      "result": "PASS",
+      "evidence": "Electron ^39.0.0, @affine/native N-API targets six platforms, precompiled .node modules supported; Wave 0 is KEEP verification."
+    }
+  ],
+  "repositoryToolchain": {
+    "packageManager": "yarn@4.13.0",
+    "nodeEngineRange": ">=22.12.0 <23.0.0",
+    "nodeVersionPin": "22.23.1",
+    "yarnPath": ".yarn/releases/yarn-4.13.0.cjs"
+  },
+  "localEnvironment": {
+    "node": "v24.18.0",
+    "npm": "11.16.0",
+    "corepack": "0.35.0",
+    "yarnCommand": "NOT_FOUND_ON_PATH",
+    "vendoredYarnVersion": "4.13.0",
+    "versionManagersFound": []
+  },
+  "commandRegistrySummary": {
+    "available": 20,
+    "unavailable": 6,
+    "safeBaselineTrue": 6,
+    "safeBaselineFalse": 20,
+    "note": "Available commands use node .yarn/releases/yarn-4.13.0.cjs; unavailable commands are later installer/licence/SBOM/offline/restoration work."
+  },
+  "keyRepositoryFacts": [
+    {
+      "fact": "Codebase/.nvmrc pins Node 22.23.1.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "Codebase/package.json engines require Node >=22.12.0 <23.0.0.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "Vendored Yarn reports version 4.13.0 when invoked with node.",
+      "evidenceClassification": "EMPIRICALLY_VERIFIED_READ_ONLY"
+    },
+    {
+      "fact": "CI setup-node uses node-version-file .nvmrc.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    },
+    {
+      "fact": "TEST_COMMAND_REGISTRY has 20 available and 6 unavailable commands.",
+      "evidenceClassification": "PROVEN_FROM_REPOSITORY"
+    }
+  ],
+  "primarySources": [
+    "Graphify/00 Execution Control/PACKAGE_BOUNDARY_BASELINE.json",
+    "Graphify/02 Architecture Map/BUILD_AND_PACKAGING_MAP.md",
+    "Graphify/10 Verification/CROSS_PLATFORM_TEST_MATRIX.md",
+    "Graphify/10 Verification/TEST_COMMAND_REGISTRY.json",
+    "Codebase/package.json",
+    "Codebase/.nvmrc",
+    "Codebase/.yarnrc.yml",
+    "Codebase/.yarn/releases/yarn-4.13.0.cjs",
+    "Codebase/.github/actions/setup-node/action.yml"
+  ]
+}

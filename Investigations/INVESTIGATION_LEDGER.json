@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "project": "MindRoom",
   "frozenPlanningBaseline": "bdaaf9f9a538a6bdb8481183337d5e8238c8f8dd",
-  "currentRemoteMainAtLastRun": "2a675454ab215af9bac026995b6d4b29e09886b8",
+  "currentRemoteMainAtLastRun": "a023f02183b3e45a131bc11299b068de3bc5cc35",
   "stage": "PRE_CODE_INVESTIGATION",
   "lastRunAt": "2026-08-13T22:56:09+03:00",
   "investigations": [
@@ -415,10 +415,23 @@
       ],
       "priority": "HIGH",
       "blockingLevel": "HARD",
-      "status": "PENDING",
-      "decision": "",
-      "evidencePaths": [],
-      "primarySources": [],
+      "status": "COMPLETE",
+      "decision": "Wave 0 is toolchain-compatible after a deterministic pre-flight setup: use Node 22.23.1 and invoke vendored Yarn 4.13.0 with node .yarn/releases/yarn-4.13.0.cjs. No Codebase change or frozen-plan change is required.",
+      "evidencePaths": [
+        "Investigations/Evidence/MR-INV-006/REPORT.md",
+        "Investigations/Evidence/MR-INV-006/EVIDENCE.json"
+      ],
+      "primarySources": [
+        "Graphify/00 Execution Control/PACKAGE_BOUNDARY_BASELINE.json",
+        "Graphify/02 Architecture Map/BUILD_AND_PACKAGING_MAP.md",
+        "Graphify/10 Verification/CROSS_PLATFORM_TEST_MATRIX.md",
+        "Graphify/10 Verification/TEST_COMMAND_REGISTRY.json",
+        "Codebase/package.json",
+        "Codebase/.nvmrc",
+        "Codebase/.yarnrc.yml",
+        "Codebase/.yarn/releases/yarn-4.13.0.cjs",
+        "Codebase/.github/actions/setup-node/action.yml"
+      ],
       "codebaseChangeRequiredNext": false,
       "frozenPlanContradiction": false,
       "notes": "The runtime mismatch was observed during MR-INV-001 but is intentionally left for this separate investigation."

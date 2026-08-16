@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "authorizationState": "PENDING_EXPLICIT_USER_AUTHORIZATION",
+  "authorizationHistory": [],
+  "note": "Wave 0 implementation has not started on main. This record becomes ACTIVE after the first successful Wave 0 task transition."
+}

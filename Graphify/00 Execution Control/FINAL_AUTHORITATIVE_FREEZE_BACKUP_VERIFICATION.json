@@ -1,167 +1,169 @@
-﻿{
-    "schemaVersion":  4,
-    "receiptType":  "FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION",
-    "backupPurpose":  "MR_INV_002_FIFTH_KEY_AWARE_AUTHORITY_CHANGE_CONTROL_PRE_CHANGE_RECOVERY_POINT",
-    "backupBackend":  "GITHUB_NATIVE_IMMUTABLE_GIT_REF",
-    "repository":  "mhyahya854/MindRoom",
-    "remote":  "origin",
-    "remoteUrl":  "git@github.com:mhyahya854/MindRoom.git",
-    "refType":  "TAG",
-    "ref":  "refs/tags/mindroom-backup/change-control/MR-INV-002-key-aware-discovery-20260813-220037",
-    "currentBackupRef":  "refs/tags/mindroom-backup/change-control/MR-INV-002-key-aware-discovery-20260813-220037",
-    "commitSha":  "d749534310f7b171912d5e12f8cadbcd5c106709",
-    "treeSha":  "f3740115ba384495b617ce757b077751f7efa735",
-    "graphifyTreeSha":  "886b37a2618ff3d97c3e3b27672a9a1529a2327c",
-    "codebaseTreeSha":  "bbf383e3418da4f613f58719160bb7cbd5709ffc",
-    "trackedPathCount":  23535,
-    "trackedPathSetSha256":  "7775362aa6ac35335942428feb15b6cbfa6330053a461b24284e8045abc49c42",
-    "lfsObjects":  [
-                       {
-                           "path":  "Graphify/05 Dependency and Impact/DEPENDENCY_EDGES.jsonl",
-                           "oid":  "eab3792a90c7744b5c5d8782ad34796cd0eb48c2f828da2671a861fb0b2d0433",
-                           "sizeBytes":  114232612
-                       },
-                       {
-                           "path":  "Graphify/05 Dependency and Impact/Knowledge Graph/EDGES.jsonl",
-                           "oid":  "22111d28fa7e0ea4b6c2b3c779ca2261bc7a6f4e6da844ebc1b0557fd624ed27",
-                           "sizeBytes":  112287175
-                       }
-                   ],
-    "remoteRefVerified":  true,
-    "persistentLocalBackupRequired":  false,
-    "lfsObjectsVerified":  true,
-    "status":  "VERIFIED",
-    "verifiedAt":  "2026-08-13T22:21:07+03:00",
-    "backupHistory":  {
-                          "historicalOriginalBackup":  {
-                                                           "path":  "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-lineage-repair-20260801-190852",
-                                                           "present":  false,
-                                                           "verified":  false,
-                                                           "active":  false,
-                                                           "role":  "HISTORICAL_MISSING_NONACTIVE"
-                                                       },
-                          "replacementPreReviewBackup":  {
-                                                             "path":  "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-pre-review-certification-20260805-092300",
-                                                             "present":  false,
-                                                             "verified":  false,
-                                                             "active":  false,
-                                                             "role":  "HISTORICAL_MISSING_NONACTIVE"
-                                                         },
-                          "mutableWorkingMirror":  {
-                                                       "path":  "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-final-authoritative-freeze-20260806-152420",
-                                                       "present":  false,
-                                                       "verified":  false,
-                                                       "active":  false,
-                                                       "role":  "HISTORICAL_LOCAL_RECOVERY_EVIDENCE"
-                                                   },
-                          "invalidatedCandidateBackup":  {
-                                                             "path":  "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-final-bound-pre-review-backup-20260808-115500",
-                                                             "present":  false,
-                                                             "verified":  false,
-                                                             "active":  false,
-                                                             "role":  "SUPERSEDED_BACKUP_BACKEND"
-                                                         },
-                          "formerActivePreReviewBackup":  {
-                                                              "path":  "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-final-converged-pre-review-backup-20260808-151008",
-                                                              "present":  false,
-                                                              "verified":  false,
-                                                              "active":  false,
-                                                              "role":  "SUPERSEDED_BACKUP_BACKEND",
-                                                              "historicalClassification":  "HISTORICAL_LOCAL_RECOVERY_EVIDENCE"
-                                                          }
-                      },
-    "historicalBackupPolicy":  "Historical local paths are truthful nonactive evidence; the missing laptop copies are not current certification requirements.",
-    "tagImmutabilityPolicy":  {
-                                  "forceMoveAllowed":  false,
-                                  "reuseAllowed":  false,
-                                  "automaticDeletionAllowed":  false
-                              },
-    "freezeRunId":  "mindroom-mr-inv-002-fourth-authority-discovery-recertified-freeze-20260813-160114",
-    "externalReviewRunId":  "mindroom-mr-inv-002-fifth-key-aware-independent-review-20260813-225609",
-    "mappingStatus":  "COMPLETED_AND_FROZEN",
-    "independentReviewStatus":  "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
-    "planningFreezeStatus":  "FROZEN",
-    "wave0Readiness":  "READY_NOT_STARTED",
-    "codebaseExecutionStatus":  "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
-    "finalReleaseReceiptStatus":  "NOT_VERIFIED",
-    "canonicalCounts":  {
-                            "masterPlans":  3,
-                            "requirements":  1782,
-                            "supersessions":  278,
-                            "legacyLineageRecords":  278,
-                            "capabilities":  161,
-                            "changeRecords":  161,
-                            "tasks":  162,
-                            "primaryTasks":  161,
-                            "bootstrapTasks":  1,
-                            "tests":  338,
-                            "fixtureCategories":  6,
-                            "canonicalFixtureRecords":  6,
-                            "releaseWaves":  6,
-                            "waveGates":  6,
-                            "capabilityValidationGates":  161,
-                            "applicationGates":  1,
-                            "adrs":  14,
-                            "publicEntrypoints":  161
-                        },
-    "codebaseFileCount":  10080,
-    "codebaseDirectoryCount":  2548,
-    "codebaseAggregateHash":  "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
-    "gateTestSynchronizationStatus":  "PASS",
-    "warningSummary":  [
-                           {
-                               "findingId":  "FINDING-ADR-0011-PBKDF2-CALIBRATION",
-                               "releaseWave":  "WAVE_1",
-                               "blockingGateIds":  [
-                                                       "GATE-WAVE_1"
-                                                   ]
-                           },
-                           {
-                               "findingId":  "FINDING-ADR-0013-ADAPTER-ISOLATION",
-                               "releaseWave":  "WAVE_4",
-                               "blockingGateIds":  [
-                                                       "GATE-WAVE_4"
-                                                   ]
-                           }
-                       ],
-    "projectPhase":  "GRAPHIFY_PLANNING_COMPLETE_AND_AUTHORITATIVELY_FROZEN",
-    "implementationPerformed":  false,
-    "applicationReleased":  false,
-    "finalFreezeRunId":  "mindroom-mr-inv-002-third-sync-recertified-freeze-20260811-151200",
-    "independentReviewDecision":  "VERIFIED",
-    "reviewReportSha256":  "eb0439a5e3bcc1c6c27712f5953d910e056aca20ad7db768db2d4151f8b6778f",
-    "officialValidatorRunId":  "mindroom-mr-inv-002-fourth-authority-discovery-change-control-20260813-160114-validation",
-    "repairRunId":  "mindroom-mr-inv-002-fourth-authority-discovery-change-control-20260813-160114",
-    "backupState":  "VERIFIED_GITHUB_NATIVE_IMMUTABLE_GIT_REF",
-    "receiptState":  "VERIFIED_GITHUB_NATIVE_IMMUTABLE_GIT_REF",
-    "timestamp":  "2026-08-13T22:21:07+03:00",
-    "lastUpdatedAt":  "2026-08-13T22:21:07+03:00",
-    "changeControl":  {
-                          "investigationId":  "MR-INV-002",
-                          "blockerId":  "MR-BLOCK-003",
-                          "authorization":  "EXPLICIT_USER_FIFTH_KEY_AWARE_CHANGE_CONTROL_ATTEMPT",
-                          "preChangeMain":  "23398958f7e9485c58629e51c3f1db4b65182208",
-                          "firstFailedCandidateWipBranch":  "wip/MR-INV-002-failed-change-control-20260811-134350",
-                          "firstFailedCandidateWipCommit":  "d0f492c830247a050b76ac5b29a19746de79c3fa",
-                          "secondFailedCandidateWipBranch":  "wip/MR-INV-002-second-failed-change-control-20260811-144854",
-                          "secondFailedCandidateWipCommit":  "cd601b3884b5fff5e2202aa6c1092dc3aa48b44b",
-                          "thirdFailedCandidateWipBranch":  "wip/MR-INV-002-third-failed-change-control-20260813-153400",
-                          "thirdFailedCandidateWipCommit":  "11945f02b8623193e591ce2c53bc5df882d94a45",
-                          "fourthPreChangeTag":  "mindroom-backup/change-control/MR-INV-002-authority-discovery-20260813-153457",
-                          "annotatedTagObject":  "d749534310f7b171912d5e12f8cadbcd5c106709",
-                          "peeledStartingCommit":  "23398958f7e9485c58629e51c3f1db4b65182208",
-                          "fourthFailedCandidateWipBranch":  "wip/MR-INV-002-fourth-failed-change-control-20260813-215856",
-                          "fourthFailedCandidateWipCommit":  "9a4ab6b7d9a4f39b93d97d02e10c2a324535b9c8",
-                          "fifthPreChangeTag":  "mindroom-backup/change-control/MR-INV-002-key-aware-discovery-20260813-220037"
-                      },
-    "manifestRecordCount":  167,
-    "manifestAggregateHash":  "71c63168de25d0e757219fc5034e1d175393dfcbd54d06828c20ff1054f73d8f",
-    "validatorCheckCount":  224,
-    "challengeTestCount":  120,
-    "blockingDefectCount":  0,
-    "validatorSourceHash":  "05abc2c492e4dadb30f619457257980f6c5a0ac0d89dc982ea998be3ee4522e9",
-    "challengeSourceHash":  "5b7ed9361e4debcd24a85476ca14f566a992c04fde9b43d24e9ac7b6bcdde829",
-    "verifierSourceHash":  "27a9859659e4834b9bdfc23391f51dcba0c977af4c1dbc7fa327e84e871141d4",
-    "changeControlStatus":  "MR_INV_002_FIFTH_KEY_AWARE_AUTHORITY_CANDIDATE_TECHNICAL_CERTIFICATION_PENDING_FRESH_REVIEW",
-    "certificationTimestamp":  "2026-08-13T16:01:14+03:00"
+{
+  "schemaVersion": 4,
+  "receiptType": "FINAL_AUTHORITATIVE_FREEZE_BACKUP_VERIFICATION",
+  "backupPurpose": "MR_INV_002_FIFTH_KEY_AWARE_AUTHORITY_CHANGE_CONTROL_PRE_CHANGE_RECOVERY_POINT",
+  "backupBackend": "GITHUB_NATIVE_IMMUTABLE_GIT_REF",
+  "repository": "mhyahya854/MindRoom",
+  "remote": "origin",
+  "remoteUrl": "git@github.com:mhyahya854/MindRoom.git",
+  "refType": "TAG",
+  "ref": "refs/tags/mindroom-backup/change-control/MR-INV-002-key-aware-discovery-20260813-220037",
+  "currentBackupRef": "refs/tags/mindroom-backup/change-control/MR-INV-002-key-aware-discovery-20260813-220037",
+  "commitSha": "d749534310f7b171912d5e12f8cadbcd5c106709",
+  "treeSha": "f3740115ba384495b617ce757b077751f7efa735",
+  "graphifyTreeSha": "886b37a2618ff3d97c3e3b27672a9a1529a2327c",
+  "codebaseTreeSha": "bbf383e3418da4f613f58719160bb7cbd5709ffc",
+  "trackedPathCount": 23535,
+  "trackedPathSetSha256": "7775362aa6ac35335942428feb15b6cbfa6330053a461b24284e8045abc49c42",
+  "lfsObjects": [
+    {
+      "path": "Graphify/05 Dependency and Impact/DEPENDENCY_EDGES.jsonl",
+      "oid": "eab3792a90c7744b5c5d8782ad34796cd0eb48c2f828da2671a861fb0b2d0433",
+      "sizeBytes": 114232612
+    },
+    {
+      "path": "Graphify/05 Dependency and Impact/Knowledge Graph/EDGES.jsonl",
+      "oid": "22111d28fa7e0ea4b6c2b3c779ca2261bc7a6f4e6da844ebc1b0557fd624ed27",
+      "sizeBytes": 112287175
+    }
+  ],
+  "remoteRefVerified": true,
+  "persistentLocalBackupRequired": false,
+  "lfsObjectsVerified": true,
+  "status": "VERIFIED",
+  "verifiedAt": "2026-08-13T22:21:07+03:00",
+  "backupHistory": {
+    "historicalOriginalBackup": {
+      "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-lineage-repair-20260801-190852",
+      "present": false,
+      "verified": false,
+      "active": false,
+      "role": "HISTORICAL_MISSING_NONACTIVE"
+    },
+    "replacementPreReviewBackup": {
+      "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-pre-review-certification-20260805-092300",
+      "present": false,
+      "verified": false,
+      "active": false,
+      "role": "HISTORICAL_MISSING_NONACTIVE"
+    },
+    "mutableWorkingMirror": {
+      "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-before-final-authoritative-freeze-20260806-152420",
+      "present": false,
+      "verified": false,
+      "active": false,
+      "role": "HISTORICAL_LOCAL_RECOVERY_EVIDENCE"
+    },
+    "invalidatedCandidateBackup": {
+      "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-final-bound-pre-review-backup-20260808-115500",
+      "present": false,
+      "verified": false,
+      "active": false,
+      "role": "SUPERSEDED_BACKUP_BACKEND"
+    },
+    "formerActivePreReviewBackup": {
+      "path": "C:\\Users\\mhyah\\Downloads\\Code\\MindRoom-Recovery\\Graphify-final-converged-pre-review-backup-20260808-151008",
+      "present": false,
+      "verified": false,
+      "active": false,
+      "role": "SUPERSEDED_BACKUP_BACKEND",
+      "historicalClassification": "HISTORICAL_LOCAL_RECOVERY_EVIDENCE"
+    }
+  },
+  "historicalBackupPolicy": "Historical local paths are truthful nonactive evidence; the missing laptop copies are not current certification requirements.",
+  "tagImmutabilityPolicy": {
+    "forceMoveAllowed": false,
+    "reuseAllowed": false,
+    "automaticDeletionAllowed": false
+  },
+  "freezeRunId": "mindroom-mr-inv-002-fourth-authority-discovery-recertified-freeze-20260813-160114",
+  "externalReviewRunId": "mindroom-mr-inv-002-fifth-key-aware-independent-review-20260813-225609",
+  "mappingStatus": "COMPLETED_AND_FROZEN",
+  "independentReviewStatus": "APPROVED_GENUINELY_INDEPENDENT_FINAL_REVIEW",
+  "planningFreezeStatus": "FROZEN",
+  "wave0Readiness": "READY_NOT_STARTED",
+  "codebaseExecutionStatus": "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+  "finalReleaseReceiptStatus": "NOT_VERIFIED",
+  "canonicalCounts": {
+    "masterPlans": 3,
+    "requirements": 1782,
+    "supersessions": 278,
+    "legacyLineageRecords": 278,
+    "capabilities": 161,
+    "changeRecords": 161,
+    "tasks": 162,
+    "primaryTasks": 161,
+    "bootstrapTasks": 1,
+    "tests": 338,
+    "fixtureCategories": 6,
+    "canonicalFixtureRecords": 6,
+    "releaseWaves": 6,
+    "waveGates": 6,
+    "capabilityValidationGates": 161,
+    "applicationGates": 1,
+    "adrs": 14,
+    "publicEntrypoints": 161
+  },
+  "codebaseFileCount": 10080,
+  "codebaseDirectoryCount": 2548,
+  "codebaseAggregateHash": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+  "gateTestSynchronizationStatus": "PASS",
+  "warningSummary": [
+    {
+      "findingId": "FINDING-ADR-0011-PBKDF2-CALIBRATION",
+      "releaseWave": "WAVE_1",
+      "blockingGateIds": [
+        "GATE-WAVE_1"
+      ]
+    },
+    {
+      "findingId": "FINDING-ADR-0013-ADAPTER-ISOLATION",
+      "releaseWave": "WAVE_4",
+      "blockingGateIds": [
+        "GATE-WAVE_4"
+      ]
+    }
+  ],
+  "projectPhase": "GRAPHIFY_PLANNING_COMPLETE_AND_AUTHORITATIVELY_FROZEN",
+  "implementationPerformed": false,
+  "applicationReleased": false,
+  "finalFreezeRunId": "mindroom-mr-inv-002-third-sync-recertified-freeze-20260811-151200",
+  "independentReviewDecision": "VERIFIED",
+  "reviewReportSha256": "eb0439a5e3bcc1c6c27712f5953d910e056aca20ad7db768db2d4151f8b6778f",
+  "officialValidatorRunId": "mindroom-mr-inv-002-fourth-authority-discovery-change-control-20260813-160114-validation",
+  "repairRunId": "mindroom-mr-inv-002-fourth-authority-discovery-change-control-20260813-160114",
+  "backupState": "VERIFIED_GITHUB_NATIVE_IMMUTABLE_GIT_REF",
+  "receiptState": "VERIFIED_GITHUB_NATIVE_IMMUTABLE_GIT_REF",
+  "timestamp": "2026-08-13T22:21:07+03:00",
+  "lastUpdatedAt": "2026-08-13T22:21:07+03:00",
+  "changeControl": {
+    "investigationId": "MR-INV-002",
+    "blockerId": "MR-BLOCK-003",
+    "authorization": "EXPLICIT_USER_FIFTH_KEY_AWARE_CHANGE_CONTROL_ATTEMPT",
+    "preChangeMain": "23398958f7e9485c58629e51c3f1db4b65182208",
+    "firstFailedCandidateWipBranch": "wip/MR-INV-002-failed-change-control-20260811-134350",
+    "firstFailedCandidateWipCommit": "d0f492c830247a050b76ac5b29a19746de79c3fa",
+    "secondFailedCandidateWipBranch": "wip/MR-INV-002-second-failed-change-control-20260811-144854",
+    "secondFailedCandidateWipCommit": "cd601b3884b5fff5e2202aa6c1092dc3aa48b44b",
+    "thirdFailedCandidateWipBranch": "wip/MR-INV-002-third-failed-change-control-20260813-153400",
+    "thirdFailedCandidateWipCommit": "11945f02b8623193e591ce2c53bc5df882d94a45",
+    "fourthPreChangeTag": "mindroom-backup/change-control/MR-INV-002-authority-discovery-20260813-153457",
+    "annotatedTagObject": "d749534310f7b171912d5e12f8cadbcd5c106709",
+    "peeledStartingCommit": "23398958f7e9485c58629e51c3f1db4b65182208",
+    "fourthFailedCandidateWipBranch": "wip/MR-INV-002-fourth-failed-change-control-20260813-215856",
+    "fourthFailedCandidateWipCommit": "9a4ab6b7d9a4f39b93d97d02e10c2a324535b9c8",
+    "fifthPreChangeTag": "mindroom-backup/change-control/MR-INV-002-key-aware-discovery-20260813-220037"
+  },
+  "manifestRecordCount": 179,
+  "manifestAggregateHash": "70c75a5a3458d31b354b12567b548b63555723045d481689a9e10796cc9d88ec",
+  "validatorCheckCount": 232,
+  "challengeTestCount": 127,
+  "blockingDefectCount": 0,
+  "validatorSourceHash": "05abc2c492e4dadb30f619457257980f6c5a0ac0d89dc982ea998be3ee4522e9",
+  "challengeSourceHash": "5b7ed9361e4debcd24a85476ca14f566a992c04fde9b43d24e9ac7b6bcdde829",
+  "verifierSourceHash": "27a9859659e4834b9bdfc23391f51dcba0c977af4c1dbc7fa327e84e871141d4",
+  "changeControlStatus": "MR_INV_002_FIFTH_KEY_AWARE_AUTHORITY_CANDIDATE_TECHNICAL_CERTIFICATION_PENDING_FRESH_REVIEW",
+  "certificationTimestamp": "2026-08-13T16:01:14+03:00",
+  "lifecyclePhase": "PRE_IMPLEMENTATION_FROZEN",
+  "executionGovernanceReady": true
 }

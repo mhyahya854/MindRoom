@@ -1,0 +1,29 @@
+{
+  "reviewerSession": "/root/mr_wave0_execution_governance_review",
+  "classification": "ABORTED_REVIEW_INFRASTRUCTURE_ATTEMPT",
+  "semanticVerdictProduced": false,
+  "recordedAsVerified": false,
+  "recordedAsFailed": false,
+  "contributedRepairDecisions": false,
+  "stallEvidence": [
+    "Reviewer remained in running state for over one hour without returning a verdict.",
+    "Bounded status rechecks showed no completed review artifact.",
+    "Follow-up status request timed out without a response."
+  ],
+  "terminatedAt": "2026-08-16T12:25:00+03:00",
+  "replacementPermitted": true,
+  "reason": "Independent review infrastructure stalled; exactly one replacement reviewer is permitted.",
+  "replacementAttempts": [
+    {
+      "reviewerSession": "/root/mr_wave0_execution_governance_review_2",
+      "classification": "ABORTED_REVIEW_INFRASTRUCTURE_ATTEMPT",
+      "semanticVerdictProduced": false,
+      "stallEvidence": [
+        "Replacement reviewer remained in running state without returning a verdict.",
+        "No python/git process activity was observed during the wait.",
+        "Follow-up status request timed out without a response."
+      ],
+      "terminatedAt": "2026-08-16T12:55:00+03:00"
+    }
+  ]
+}

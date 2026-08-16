@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "MindRoom trusted execution Codebase baseline",
+  "required": [
+    "schemaVersion",
+    "originalFrozenCodebaseTree",
+    "currentTrustedCodebaseTree",
+    "currentTrustedAggregateSha256",
+    "lastCompletedTask",
+    "currentPublishedCommit",
+    "completedTaskChain"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "originalFrozenCodebaseTree": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "currentTrustedCodebaseTree": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "currentTrustedAggregateSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "lastCompletedTask": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "currentPublishedCommit": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "completedTaskChain": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

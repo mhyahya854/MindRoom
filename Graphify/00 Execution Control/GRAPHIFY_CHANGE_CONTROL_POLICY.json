@@ -15,5 +15,28 @@
     "frozenManifestPreservation": "Previous frozen manifests remain permanently preserved in immutable execution control history.",
     "freezeVersionIncrement": "A new planning freeze version is required after any approved planning amendment cycle."
   },
-  "changeHistory": []
+  "changeHistory": [
+    {
+      "changeId": "MR-CHANGE-WAVE0-EXECUTION-GOVERNANCE",
+      "authorization": "EXPLICIT_USER_AUTHORIZED_FROZEN_PLAN_CHANGE_CONTROL",
+      "timestamp": "2026-08-16T00:00:00+03:00",
+      "contradiction": "The final-freeze validator correctly forbids all Codebase drift but was incorrectly being used as the post-start implementation success gate.",
+      "resolution": "Preserve FINAL_FREEZE_CERTIFICATION unchanged and add a separate fail-closed IMPLEMENTATION_EXECUTION_CERTIFICATION with receipt-chain, checkpoint, dependency, path-scope, and failed-WIP exclusion validation.",
+      "affectedAuthority": [
+        "Graphify/00 Execution Control/schemas/execution-state.schema.json",
+        "Graphify/00 Execution Control/schemas/execution-receipt.schema.json",
+        "Graphify/00 Execution Control/schemas/execution-trusted-baseline.schema.json",
+        "Graphify/11 Completion/validate_execution_state.py",
+        "Graphify/11 Completion/verify_execution_state.py",
+        "Graphify/11 Completion/run_execution_state_challenges.py",
+        "Graphify/11 Completion/EXECUTION_GOVERNANCE_ARCHITECTURE.md",
+        "Graphify/11 Completion/EXECUTION_AUTHORIZATION_RECORD.json",
+        "Graphify/11 Completion/EXECUTION_RECEIPTS.jsonl",
+        "Graphify/11 Completion/EXECUTION_CHECKPOINT_CHAIN.jsonl",
+        "Graphify/11 Completion/EXECUTION_TRUSTED_BASELINE.json",
+        "Graphify/11 Completion/EXECUTION_CERTIFICATION_CHALLENGE_REPORT.json"
+      ],
+      "codebaseModified": false
+    }
+  ]
 }

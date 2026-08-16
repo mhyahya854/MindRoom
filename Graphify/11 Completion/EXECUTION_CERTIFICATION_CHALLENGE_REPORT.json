@@ -1,0 +1,264 @@
+{
+  "reportId": "mindroom-execution-governance-challenges-final",
+  "validatorSourceHash": "9d310be6f181a338692deb05d4e4cc7146a35c74620690155d35c8b0a75bae95",
+  "challengeSourceHash": "b2f40c4acae8e54840e88af2edbebe61f37cbe31fc1dad4e0b1607707e6caa89",
+  "verdict": "PASS",
+  "positiveChallenges": [
+    {
+      "challengeId": "EXEC-CHALLENGE-POS-002",
+      "mutation": "Current untouched main remains valid pre-start",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "finalFreezeStatus": "PASS",
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-POS-001",
+      "mutation": "Modeled legitimate bootstrap task with complete receipt chain",
+      "expectedStatus": "PASS",
+      "actualStatus": "PASS",
+      "failedCheckIds": [],
+      "finalFreezeStatus": "FAIL",
+      "finalFreezeFailedCheckIds": [
+        "BAK-01",
+        "BAK-09",
+        "CB-02",
+        "CB-03",
+        "CB-05",
+        "CB-06",
+        "CB-07",
+        "CB-08",
+        "CB-10",
+        "GATE-13",
+        "MAN-03",
+        "META-04",
+        "META-05",
+        "META-08",
+        "META-10",
+        "META-17",
+        "SAFE-02",
+        "SAFE-03"
+      ],
+      "passed": true
+    }
+  ],
+  "negativeChallenges": [
+    {
+      "challengeId": "EXEC-CHALLENGE-001",
+      "mutation": "Unauthorized Codebase path mutation",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-09",
+        "EXEC-14"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-09",
+        "EXEC-14"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-002",
+      "mutation": "Missing execution receipt",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-06",
+        "EXEC-07",
+        "EXEC-13",
+        "EXEC-14",
+        "EXEC-15",
+        "EXEC-17",
+        "EXEC-18"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-06",
+        "EXEC-07",
+        "EXEC-13",
+        "EXEC-14",
+        "EXEC-15"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-003",
+      "mutation": "Fake receipt with wrong ending tree",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-05",
+        "EXEC-08"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-05",
+        "EXEC-08"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-004",
+      "mutation": "Non-complete receipt is not treated as completed",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-06",
+        "EXEC-07",
+        "EXEC-13",
+        "EXEC-14",
+        "EXEC-15",
+        "EXEC-17",
+        "EXEC-18"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-06",
+        "EXEC-13",
+        "EXEC-15"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-005",
+      "mutation": "Broken task chain ending tree",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-05",
+        "EXEC-07"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-05",
+        "EXEC-07"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-006",
+      "mutation": "Dependency violation for completed task",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-10"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-10"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-007",
+      "mutation": "Missing pre-task checkpoint",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-11"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-11"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-008",
+      "mutation": "Failed WIP branch promoted implicitly",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-06",
+        "EXEC-07",
+        "EXEC-13",
+        "EXEC-14",
+        "EXEC-15",
+        "EXEC-17",
+        "EXEC-18"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-06",
+        "EXEC-13",
+        "EXEC-15"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-009",
+      "mutation": "Stale pre-start status after Codebase change",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-01",
+        "EXEC-15",
+        "EXEC-18"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-01",
+        "EXEC-15",
+        "EXEC-18"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-010",
+      "mutation": "Premature application release during Wave 0",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-16"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-16"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-011",
+      "mutation": "Baseline overwrite attack",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-03",
+        "EXEC-07"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-03"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-012",
+      "mutation": "Freeze-mode weakening: mutated Codebase must fail FINAL_FREEZE_CERTIFICATION",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "BAK-01",
+        "BAK-09",
+        "CB-02",
+        "CB-03",
+        "CB-05",
+        "CB-06",
+        "CB-07",
+        "CB-08",
+        "CB-10",
+        "GATE-13",
+        "MAN-03",
+        "META-08",
+        "META-10",
+        "META-17"
+      ],
+      "passed": true
+    }
+  ],
+  "baselineFailuresSubtracted": false,
+  "environmentExemptions": [],
+  "documentedEnvironmentFailures": [],
+  "executionVerifierStatus": "PASS",
+  "executionVerifierCheckIds": 20,
+  "livePreStartExecutionVerifierStatus": "FAIL_EXPECTED",
+  "verifierSummary": {
+    "status": "PASS",
+    "expectedValidatorCheckIds": 20,
+    "presentValidatorCheckIds": 20,
+    "completedReceiptCount": 1,
+    "liveCodebaseAggregateSha256": "7202fae057753ba05160b3120b6a3dc1f6c62ebe453c0333dd21ab0eb598fea5",
+    "currentTrustedCodebaseTree": "a6edbf8c7c7f2df6cb221e75fed06c66017f1e42"
+  }
+}

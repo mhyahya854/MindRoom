@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "originalFrozenCodebaseTree": "bbf383e3418da4f613f58719160bb7cbd5709ffc",
+  "currentTrustedCodebaseTree": "bbf383e3418da4f613f58719160bb7cbd5709ffc",
+  "currentTrustedAggregateSha256": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748",
+  "lastCompletedTask": null,
+  "currentPublishedCommit": "237c7c460edcef7279b1e93903cc560000655c83",
+  "completedTaskChain": [],
+  "originalFrozenBaseline": {
+    "fileCount": 10080,
+    "directoryCount": 2548,
+    "aggregateSha256": "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748"
+  }
+}

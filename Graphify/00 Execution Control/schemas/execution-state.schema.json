@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "MindRoom execution lifecycle state",
+  "required": [
+    "schemaVersion",
+    "lifecyclePhase",
+    "wave0Readiness",
+    "codebaseExecutionStatus",
+    "implementationPerformed",
+    "applicationReleased"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "lifecyclePhase": {
+      "enum": [
+        "PRE_IMPLEMENTATION_FROZEN",
+        "IMPLEMENTATION_IN_PROGRESS",
+        "WAVE_BOUNDARY_CERTIFICATION",
+        "FINAL_RELEASE_CERTIFICATION"
+      ]
+    },
+    "wave0Readiness": {
+      "enum": [
+        "READY_NOT_STARTED",
+        "WAVE_0_IN_PROGRESS",
+        "WAVE_0_COMPLETED"
+      ]
+    },
+    "codebaseExecutionStatus": {
+      "enum": [
+        "BLOCKED_PENDING_EXPLICIT_USER_AUTHORIZATION",
+        "AUTHORIZED",
+        "BLOCKED_FROZEN_PLAN_CONTRADICTION"
+      ]
+    },
+    "implementationPerformed": {
+      "type": "boolean"
+    },
+    "applicationReleased": {
+      "type": "boolean"
+    },
+    "executionAuthorization": {
+      "type": "object",
+      "required": [
+        "authorizedWave",
+        "authorizationType",
+        "authorizationState",
+        "authorizedAt",
+        "preAuthorizationMain",
+        "preAuthorizationCodebaseTree"
+      ],
+      "properties": {
+        "authorizedWave": {
+          "enum": [
+            "WAVE_0",
+            "WAVE_1",
+            "WAVE_2",
+            "WAVE_3",
+            "WAVE_4"
+          ]
+        },
+        "authorizationType": {
+          "const": "EXPLICIT_USER_AUTHORIZATION"
+        },
+        "authorizationState": {
+          "enum": [
+            "PENDING_EXPLICIT_USER_AUTHORIZATION",
+            "ACTIVE",
+            "SUPERSEDED",
+            "REVOKED"
+          ]
+        },
+        "authorizedAt": {
+          "type": "string"
+        },
+        "preAuthorizationMain": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "preAuthorizationCodebaseTree": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

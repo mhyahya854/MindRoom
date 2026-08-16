@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "MindRoom canonical implementation execution receipt",
+  "required": [
+    "taskId",
+    "capabilityId",
+    "wave",
+    "startingCommit",
+    "endingCommit",
+    "startingCodebaseTree",
+    "endingCodebaseTree",
+    "preTaskCheckpoint",
+    "postTaskCheckpoint",
+    "changedPaths",
+    "allowedPaths",
+    "forbiddenPaths",
+    "generatedPaths",
+    "testsExecuted",
+    "testResults",
+    "acceptanceCriteria",
+    "rollbackAction",
+    "dependencyState",
+    "publishedToMain",
+    "status"
+  ],
+  "properties": {
+    "taskId": {
+      "type": "string"
+    },
+    "capabilityId": {
+      "type": "string"
+    },
+    "wave": {
+      "enum": [
+        "WAVE_0",
+        "WAVE_1",
+        "WAVE_2",
+        "WAVE_3",
+        "WAVE_4"
+      ]
+    },
+    "startingCommit": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "endingCommit": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "startingCodebaseTree": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "endingCodebaseTree": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "preTaskCheckpoint": {
+      "type": "string"
+    },
+    "postTaskCheckpoint": {
+      "type": "string"
+    },
+    "changedPaths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowedPaths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbiddenPaths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "generatedPaths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "testsExecuted": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "testResults": {
+      "type": "object"
+    },
+    "acceptanceCriteria": {
+      "type": "object"
+    },
+    "rollbackAction": {
+      "type": "string"
+    },
+    "dependencyState": {
+      "type": "object"
+    },
+    "publishedToMain": {
+      "type": "boolean"
+    },
+    "status": {
+      "enum": [
+        "COMPLETE",
+        "BLOCKED",
+        "FAILED"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

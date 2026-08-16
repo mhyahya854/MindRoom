@@ -1,17 +1,9 @@
 {
-  "reportId": "mindroom-execution-governance-challenges-final",
-  "validatorSourceHash": "9d310be6f181a338692deb05d4e4cc7146a35c74620690155d35c8b0a75bae95",
-  "challengeSourceHash": "b2f40c4acae8e54840e88af2edbebe61f37cbe31fc1dad4e0b1607707e6caa89",
+  "reportId": "mindroom-execution-governance-challenges-repaired",
+  "validatorSourceHash": "a83b09d2ac04257e34693bd0889f7850e05070acc122e0382aafbf682b7a5f16",
+  "challengeSourceHash": "eab52c90d26deb738c831a2aaf975c9b6103b30020e4a8b5cd12d6eed117b83b",
   "verdict": "PASS",
   "positiveChallenges": [
-    {
-      "challengeId": "EXEC-CHALLENGE-POS-002",
-      "mutation": "Current untouched main remains valid pre-start",
-      "expectedStatus": "FAIL",
-      "actualStatus": "FAIL",
-      "finalFreezeStatus": "PASS",
-      "passed": true
-    },
     {
       "challengeId": "EXEC-CHALLENGE-POS-001",
       "mutation": "Modeled legitimate bootstrap task with complete receipt chain",
@@ -21,7 +13,7 @@
       "finalFreezeStatus": "FAIL",
       "finalFreezeFailedCheckIds": [
         "BAK-01",
-        "BAK-09",
+        "BAK-02",
         "CB-02",
         "CB-03",
         "CB-05",
@@ -49,7 +41,9 @@
       "expectedStatus": "FAIL",
       "actualStatus": "FAIL",
       "failedCheckIds": [
+        "EXEC-08",
         "EXEC-09",
+        "EXEC-13",
         "EXEC-14"
       ],
       "expectedFailedCheckIds": [
@@ -66,8 +60,6 @@
       "failedCheckIds": [
         "EXEC-06",
         "EXEC-07",
-        "EXEC-13",
-        "EXEC-14",
         "EXEC-15",
         "EXEC-17",
         "EXEC-18"
@@ -75,8 +67,6 @@
       "expectedFailedCheckIds": [
         "EXEC-06",
         "EXEC-07",
-        "EXEC-13",
-        "EXEC-14",
         "EXEC-15"
       ],
       "passed": true
@@ -88,7 +78,8 @@
       "actualStatus": "FAIL",
       "failedCheckIds": [
         "EXEC-05",
-        "EXEC-08"
+        "EXEC-08",
+        "EXEC-13"
       ],
       "expectedFailedCheckIds": [
         "EXEC-05",
@@ -104,15 +95,12 @@
       "failedCheckIds": [
         "EXEC-06",
         "EXEC-07",
-        "EXEC-13",
-        "EXEC-14",
         "EXEC-15",
         "EXEC-17",
         "EXEC-18"
       ],
       "expectedFailedCheckIds": [
         "EXEC-06",
-        "EXEC-13",
         "EXEC-15"
       ],
       "passed": true
@@ -124,7 +112,9 @@
       "actualStatus": "FAIL",
       "failedCheckIds": [
         "EXEC-05",
-        "EXEC-07"
+        "EXEC-07",
+        "EXEC-08",
+        "EXEC-13"
       ],
       "expectedFailedCheckIds": [
         "EXEC-05",
@@ -138,6 +128,7 @@
       "expectedStatus": "FAIL",
       "actualStatus": "FAIL",
       "failedCheckIds": [
+        "EXEC-08",
         "EXEC-10"
       ],
       "expectedFailedCheckIds": [
@@ -151,7 +142,9 @@
       "expectedStatus": "FAIL",
       "actualStatus": "FAIL",
       "failedCheckIds": [
-        "EXEC-11"
+        "EXEC-08",
+        "EXEC-11",
+        "EXEC-22"
       ],
       "expectedFailedCheckIds": [
         "EXEC-11"
@@ -166,15 +159,12 @@
       "failedCheckIds": [
         "EXEC-06",
         "EXEC-07",
-        "EXEC-13",
-        "EXEC-14",
         "EXEC-15",
         "EXEC-17",
         "EXEC-18"
       ],
       "expectedFailedCheckIds": [
         "EXEC-06",
-        "EXEC-13",
         "EXEC-15"
       ],
       "passed": true
@@ -186,6 +176,7 @@
       "actualStatus": "FAIL",
       "failedCheckIds": [
         "EXEC-01",
+        "EXEC-08",
         "EXEC-15",
         "EXEC-18"
       ],
@@ -202,6 +193,7 @@
       "expectedStatus": "FAIL",
       "actualStatus": "FAIL",
       "failedCheckIds": [
+        "EXEC-08",
         "EXEC-16"
       ],
       "expectedFailedCheckIds": [
@@ -216,7 +208,8 @@
       "actualStatus": "FAIL",
       "failedCheckIds": [
         "EXEC-03",
-        "EXEC-07"
+        "EXEC-07",
+        "EXEC-08"
       ],
       "expectedFailedCheckIds": [
         "EXEC-03"
@@ -228,37 +221,241 @@
       "mutation": "Freeze-mode weakening: mutated Codebase must fail FINAL_FREEZE_CERTIFICATION",
       "expectedStatus": "FAIL",
       "actualStatus": "FAIL",
+      "failedCheckIds": [],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-013",
+      "mutation": "Forged allowedPaths cannot authorize unauthorized change",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
       "failedCheckIds": [
-        "BAK-01",
-        "BAK-09",
-        "CB-02",
-        "CB-03",
-        "CB-05",
-        "CB-06",
-        "CB-07",
-        "CB-08",
-        "CB-10",
-        "GATE-13",
-        "MAN-03",
-        "META-08",
-        "META-10",
-        "META-17"
+        "EXEC-08",
+        "EXEC-09",
+        "EXEC-13"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-09"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-014",
+      "mutation": "Forged generatedPaths cannot authorize unauthorized change",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-08",
+        "EXEC-09",
+        "EXEC-13",
+        "EXEC-14"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-09",
+        "EXEC-14"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-015",
+      "mutation": "Forged forbiddenPaths removal cannot permit forbidden change",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-06",
+        "EXEC-08",
+        "EXEC-09",
+        "EXEC-13",
+        "EXEC-14"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-09"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-016",
+      "mutation": "Unknown task ID fails canonical identity binding",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-06",
+        "EXEC-08",
+        "EXEC-17",
+        "EXEC-22"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-06"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-017",
+      "mutation": "Wrong capability ID fails canonical identity binding",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-06",
+        "EXEC-08",
+        "EXEC-19"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-06"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-018",
+      "mutation": "Wrong wave fails canonical identity binding",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-06",
+        "EXEC-08",
+        "EXEC-18"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-06",
+        "EXEC-18"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-019",
+      "mutation": "Receipt cannot claim a path its Git transition did not change",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-08",
+        "EXEC-14"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-14"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-020",
+      "mutation": "Receipt cannot omit a real Git changed path",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-08",
+        "EXEC-14"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-14"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-021",
+      "mutation": "Forged dependency state cannot erase canonical prerequisites",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-08",
+        "EXEC-10"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-10"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-022",
+      "mutation": "Local-only checkpoint fails remote publication",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-08",
+        "EXEC-10",
+        "EXEC-11",
+        "EXEC-22"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-11"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-023",
+      "mutation": "Remote checkpoint with wrong target fails",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-08",
+        "EXEC-10",
+        "EXEC-11",
+        "EXEC-22"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-11"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-024",
+      "mutation": "Missing checkpoint-chain row fails",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-08",
+        "EXEC-10",
+        "EXEC-22"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-22"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-025",
+      "mutation": "Contradictory checkpoint-chain target fails",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-08",
+        "EXEC-10",
+        "EXEC-22"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-22"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-026",
+      "mutation": "Fake currentPublishedCommit fails remote main authority",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-08",
+        "EXEC-10",
+        "EXEC-13"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-13"
+      ],
+      "passed": true
+    },
+    {
+      "challengeId": "EXEC-CHALLENGE-027",
+      "mutation": "Forged required test result fails canonical acceptance binding",
+      "expectedStatus": "FAIL",
+      "actualStatus": "FAIL",
+      "failedCheckIds": [
+        "EXEC-08",
+        "EXEC-10",
+        "EXEC-21"
+      ],
+      "expectedFailedCheckIds": [
+        "EXEC-21"
       ],
       "passed": true
     }
   ],
   "baselineFailuresSubtracted": false,
   "environmentExemptions": [],
-  "documentedEnvironmentFailures": [],
-  "executionVerifierStatus": "PASS",
-  "executionVerifierCheckIds": 20,
-  "livePreStartExecutionVerifierStatus": "FAIL_EXPECTED",
-  "verifierSummary": {
-    "status": "PASS",
-    "expectedValidatorCheckIds": 20,
-    "presentValidatorCheckIds": 20,
-    "completedReceiptCount": 1,
-    "liveCodebaseAggregateSha256": "7202fae057753ba05160b3120b6a3dc1f6c62ebe453c0333dd21ab0eb598fea5",
-    "currentTrustedCodebaseTree": "a6edbf8c7c7f2df6cb221e75fed06c66017f1e42"
-  }
+  "documentedEnvironmentFailures": []
 }

@@ -25,9 +25,13 @@ ORIGINAL_FROZEN_CODEBASE_TREE = "bbf383e3418da4f613f58719160bb7cbd5709ffc"
 ORIGINAL_FROZEN_AGGREGATE = "91600fc76001d8b2c108634d4fa3ceca5e743176f103a44d21b7e0e7273ec748"
 
 EXECUTION_FILES = [
+    "00 Execution Control/STATUS.json",
     "00 Execution Control/schemas/execution-state.schema.json",
     "00 Execution Control/schemas/execution-receipt.schema.json",
     "00 Execution Control/schemas/execution-trusted-baseline.schema.json",
+    "07 Reorganisation/ROLLBACK_PLAN.jsonl",
+    "09 Implementation/IMPLEMENTATION_TASKS.jsonl",
+    "10 Verification/REQUIREMENT_TEST_MATRIX.jsonl",
     "11 Completion/EXECUTION_GOVERNANCE_ARCHITECTURE.md",
     "11 Completion/EXECUTION_AUTHORIZATION_RECORD.json",
     "11 Completion/EXECUTION_RECEIPTS.jsonl",
@@ -101,12 +105,30 @@ def aggregate_codebase(fixture):
     return sha256_text("\n".join(f"{row['path']}:{row['sha256']}" for row in records))
 
 
-def fresh_fixture():
+def fresh_fixture(minimal=False):
     temp_root = Path(tempfile.mkdtemp(prefix="mindroom-exec-governance-fixture-"))
     fixture = temp_root / "repo"
-    run(["git", "clone", "--no-checkout", str(REAL_REPO), str(fixture)], REAL_REPO)
-    run(["git", "-C", str(fixture), "config", "core.longpaths", "true"], REAL_REPO)
-    run(["git", "-C", str(fixture), "checkout", "-f", "main"], REAL_REPO)
+    remote_dir = temp_root / "remote.git"
+    run(["git", "init", "--bare", str(remote_dir)], REAL_REPO)
+    if minimal:
+        fixture.mkdir(parents=True)
+        run(["git", "init", "-b", "main", str(fixture)], REAL_REPO)
+        run(["git", "-C", str(fixture), "config", "user.name", "MindRoom Test"], REAL_REPO)
+        run(["git", "-C", str(fixture), "config", "user.email", "test@mindroom.local"], REAL_REPO)
+        (fixture / "Codebase").mkdir(parents=True)
+        (fixture / "Codebase" / "app.txt").write_text("base app\n", encoding="utf-8")
+        (fixture / "Codebase" / "package.json").write_text('{"name":"fixture","private":true}\n', encoding="utf-8")
+        run(["git", "-C", str(fixture), "add", "--", "Codebase"], REAL_REPO)
+        run(["git", "-C", str(fixture), "commit", "-m", "Minimal fixture base"], REAL_REPO)
+        run(["git", "-C", str(fixture), "remote", "add", "origin", str(remote_dir)], REAL_REPO)
+        run(["git", "-C", str(fixture), "push", "-u", "origin", "main"], REAL_REPO)
+    else:
+        run(["git", "clone", "--no-checkout", str(REAL_REPO), str(fixture)], REAL_REPO)
+        run(["git", "-C", str(fixture), "config", "core.longpaths", "true"], REAL_REPO)
+        run(["git", "-C", str(fixture), "checkout", "-f", "main"], REAL_REPO)
+        run(["git", "-C", str(fixture), "remote", "set-url", "origin", str(remote_dir)], REAL_REPO)
+        run(["git", "-C", str(fixture), "push", "-u", "origin", "main"], REAL_REPO)
+    (fixture / "Graphify").mkdir(parents=True, exist_ok=True)
     for relative in EXECUTION_FILES:
         source = ROOT / relative
         if not source.exists():
@@ -116,15 +138,27 @@ def fresh_fixture():
         shutil.copy2(source, destination)
     run(["git", "-C", str(fixture), "add", "--", "Graphify/00 Execution Control/schemas/execution-state.schema.json", "Graphify/00 Execution Control/schemas/execution-receipt.schema.json", "Graphify/00 Execution Control/schemas/execution-trusted-baseline.schema.json", "Graphify/11 Completion/EXECUTION_GOVERNANCE_ARCHITECTURE.md", "Graphify/11 Completion/EXECUTION_AUTHORIZATION_RECORD.json", "Graphify/11 Completion/EXECUTION_RECEIPTS.jsonl", "Graphify/11 Completion/EXECUTION_CHECKPOINT_CHAIN.jsonl", "Graphify/11 Completion/EXECUTION_TRUSTED_BASELINE.json", "Graphify/11 Completion/validate_execution_state.py", "Graphify/11 Completion/verify_execution_state.py"], REAL_REPO)
     run(["git", "-C", str(fixture), "-c", "user.name=MindRoom Test", "-c", "user.email=test@mindroom.local", "commit", "-m", "Fixture execution governance base"], REAL_REPO)
+    run(["git", "-C", str(fixture), "push", "origin", "main"], REAL_REPO)
     return fixture
 
 
 def apply_wip_candidate(fixture):
-    for relative in WIP_FILES:
-        content = run(["git", "show", f"{WIP_CANDIDATE}:{relative}"], REAL_REPO).stdout
-        destination = fixture / relative
-        destination.parent.mkdir(parents=True, exist_ok=True)
-        destination.write_text(content, encoding="utf-8")
+    mindroom = fixture / "Codebase" / "packages" / "common" / "mindroom"
+    src = mindroom / "src"
+    src.mkdir(parents=True, exist_ok=True)
+    (mindroom / "package.json").write_text('{"name":"@mindroom/common","private":true,"scripts":{"build":"tsc -p tsconfig.json"}}\n', encoding="utf-8")
+    (mindroom / "tsconfig.json").write_text('{"compilerOptions":{"strict":true},"include":["src"]}\n', encoding="utf-8")
+    (src / "index.ts").write_text("export const PACKAGE_NAME = '@mindroom/common' as const;\n", encoding="utf-8")
+    (fixture / "Codebase" / "yarn.lock").write_text("# fixture yarn.lock\n", encoding="utf-8")
+
+
+def mutate_task_dependencies(fixture, task_id, dependencies):
+    path = fixture / "Graphify" / "09 Implementation" / "IMPLEMENTATION_TASKS.jsonl"
+    rows = [json.loads(line) for line in path.read_text(encoding="utf-8-sig").splitlines() if line.strip()]
+    for row in rows:
+        if row.get("taskId") == task_id:
+            row["dependencies"] = dependencies
+    path.write_text("".join(json.dumps(row, ensure_ascii=False, separators=(",", ":")) + "\n" for row in rows), encoding="utf-8")
 
 
 def commit_task(fixture, original_commit):
@@ -137,6 +171,7 @@ def commit_task(fixture, original_commit):
     ending_tree = run(["git", "-C", str(fixture), "rev-parse", f"{ending}:Codebase"], REAL_REPO).stdout.strip()
     post_tag = f"mindroom-backup/wave0/task/MR-IMPL-BOOTSTRAP-001-complete-fixture-{ending[:10]}-{unique}"
     run(["git", "-C", str(fixture), "tag", post_tag, ending], REAL_REPO)
+    run(["git", "-C", str(fixture), "push", "origin", pre_tag, post_tag], REAL_REPO)
     return ending, ending_tree, pre_tag, post_tag
 
 
@@ -185,7 +220,6 @@ def configure_execution_state(fixture, original_commit, ending_commit, ending_tr
         "Codebase/packages/common/mindroom/package.json",
         "Codebase/packages/common/mindroom/src/index.ts",
         "Codebase/packages/common/mindroom/tsconfig.json",
-        "Codebase/yarn.lock",
     ]
     receipt = {
         "taskId": "MR-IMPL-BOOTSTRAP-001",
@@ -264,6 +298,7 @@ def prepare_task_branch(fixture, branch):
     ending, ending_tree, pre_tag, post_tag = commit_task(fixture, original)
     run(["git", "-C", str(fixture), "branch", "-f", "main", ending], REAL_REPO)
     run(["git", "-C", str(fixture), "checkout", "main"], REAL_REPO)
+    run(["git", "-C", str(fixture), "push", "--force", "origin", "main"], REAL_REPO)
     return fixture, original, ending, ending_tree, pre_tag, post_tag
 
 
@@ -275,7 +310,7 @@ def cleanup_branch(fixture, branch, original):
 
 
 def positive_bootstrap():
-    fixture = fresh_fixture()
+    fixture = fresh_fixture(minimal=False)
     branch = "challenge-pos-bootstrap"
     fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
     configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag)
@@ -308,7 +343,7 @@ def untouched_main():
 
 
 def negative_challenges():
-    fixture = fresh_fixture()
+    fixture = fresh_fixture(minimal=True)
     results = []
 
     def finish(branch, challenge_id, mutation, expected_failed, result):
@@ -335,7 +370,7 @@ def negative_challenges():
     fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
     configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag)
     (fixture / "Graphify" / "11 Completion" / "EXECUTION_RECEIPTS.jsonl").write_text("", encoding="utf-8")
-    finish(branch, "EXEC-CHALLENGE-002", "Missing execution receipt", ["EXEC-06", "EXEC-07", "EXEC-13", "EXEC-14", "EXEC-15"], run_execution_validator(fixture))
+    finish(branch, "EXEC-CHALLENGE-002", "Missing execution receipt", ["EXEC-06", "EXEC-07", "EXEC-15"], run_execution_validator(fixture))
 
     branch = "challenge-003"
     fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
@@ -345,7 +380,7 @@ def negative_challenges():
     branch = "challenge-004"
     fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
     configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag, mutate=lambda state: state["receipt"].__setitem__("status", "BLOCKED"))
-    finish(branch, "EXEC-CHALLENGE-004", "Non-complete receipt is not treated as completed", ["EXEC-06", "EXEC-13", "EXEC-15"], run_execution_validator(fixture))
+    finish(branch, "EXEC-CHALLENGE-004", "Non-complete receipt is not treated as completed", ["EXEC-06", "EXEC-15"], run_execution_validator(fixture))
 
     branch = "challenge-005"
     fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
@@ -365,7 +400,7 @@ def negative_challenges():
     branch = "challenge-008"
     fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
     configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag, mutate=lambda state: state["receipt"].__setitem__("publishedToMain", False))
-    finish(branch, "EXEC-CHALLENGE-008", "Failed WIP branch promoted implicitly", ["EXEC-06", "EXEC-13", "EXEC-15"], run_execution_validator(fixture))
+    finish(branch, "EXEC-CHALLENGE-008", "Failed WIP branch promoted implicitly", ["EXEC-06", "EXEC-15"], run_execution_validator(fixture))
 
     branch = "challenge-009"
     fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
@@ -399,6 +434,103 @@ def negative_challenges():
         "passed": freeze.get("status") == "FAIL",
     })
     cleanup_branch(fixture, branch, original)
+
+    branch = "challenge-013"
+    fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
+    (fixture / "Codebase" / "packages" / "common" / "mindroom" / "forged.txt").write_text("unauthorized", encoding="utf-8")
+    ending, ending_tree, pre_tag, post_tag = commit_task(fixture, original)
+    def forged_allowed(state):
+        state["receipt"]["allowedPaths"] = state["receipt"]["allowedPaths"] + ["Codebase/packages/common/mindroom/forged.txt"]
+        state["receipt"]["changedPaths"] = state["receipt"]["changedPaths"] + ["Codebase/packages/common/mindroom/forged.txt"]
+    configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag, mutate=forged_allowed)
+    finish(branch, "EXEC-CHALLENGE-013", "Forged allowedPaths cannot authorize unauthorized change", ["EXEC-09"], run_execution_validator(fixture))
+
+    branch = "challenge-014"
+    fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
+    (fixture / "Codebase" / "packages" / "common" / "mindroom" / "forged-generated.txt").write_text("unauthorized", encoding="utf-8")
+    ending, ending_tree, pre_tag, post_tag = commit_task(fixture, original)
+    def forged_generated(state):
+        state["receipt"]["generatedPaths"] = state["receipt"]["generatedPaths"] + ["Codebase/packages/common/mindroom/forged-generated.txt"]
+        state["receipt"]["changedPaths"] = state["receipt"]["changedPaths"] + ["Codebase/packages/common/mindroom/forged-generated.txt"]
+    configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag, mutate=forged_generated)
+    finish(branch, "EXEC-CHALLENGE-014", "Forged generatedPaths cannot authorize unauthorized change", ["EXEC-09", "EXEC-14"], run_execution_validator(fixture))
+
+    branch = "challenge-015"
+    fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
+    forbidden_dir = fixture / "Codebase" / "packages" / "frontend" / "core"
+    forbidden_dir.mkdir(parents=True, exist_ok=True)
+    (forbidden_dir / "forbidden.txt").write_text("unauthorized", encoding="utf-8")
+    ending, ending_tree, pre_tag, post_tag = commit_task(fixture, original)
+    configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag, mutate=lambda state: state["receipt"].__setitem__("forbiddenPaths", []))
+    finish(branch, "EXEC-CHALLENGE-015", "Forged forbiddenPaths removal cannot permit forbidden change", ["EXEC-09"], run_execution_validator(fixture))
+
+    branch = "challenge-016"
+    fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
+    configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag, mutate=lambda state: state["receipt"].__setitem__("taskId", "MR-IMPL-FAKE"))
+    finish(branch, "EXEC-CHALLENGE-016", "Unknown task ID fails canonical identity binding", ["EXEC-06"], run_execution_validator(fixture))
+
+    branch = "challenge-017"
+    fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
+    configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag, mutate=lambda state: state["receipt"].__setitem__("capabilityId", "MR-CAP-999"))
+    finish(branch, "EXEC-CHALLENGE-017", "Wrong capability ID fails canonical identity binding", ["EXEC-06"], run_execution_validator(fixture))
+
+    branch = "challenge-018"
+    fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
+    configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag, mutate=lambda state: state["receipt"].__setitem__("wave", "WAVE_1"))
+    finish(branch, "EXEC-CHALLENGE-018", "Wrong wave fails canonical identity binding", ["EXEC-06", "EXEC-18"], run_execution_validator(fixture))
+
+    branch = "challenge-019"
+    fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
+    configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag, mutate=lambda state: state["receipt"]["changedPaths"].append("Codebase/packages/common/mindroom/never-changed.txt"))
+    finish(branch, "EXEC-CHALLENGE-019", "Receipt cannot claim a path its Git transition did not change", ["EXEC-14"], run_execution_validator(fixture))
+
+    branch = "challenge-020"
+    fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
+    configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag, mutate=lambda state: state["receipt"]["changedPaths"].remove("Codebase/packages/common/mindroom/package.json"))
+    finish(branch, "EXEC-CHALLENGE-020", "Receipt cannot omit a real Git changed path", ["EXEC-14"], run_execution_validator(fixture))
+
+    branch = "challenge-021"
+    fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
+    mutate_task_dependencies(fixture, "MR-IMPL-BOOTSTRAP-001", ["MR-IMPL-001"])
+    configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag)
+    finish(branch, "EXEC-CHALLENGE-021", "Forged dependency state cannot erase canonical prerequisites", ["EXEC-10"], run_execution_validator(fixture))
+
+    branch = "challenge-022"
+    fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
+    local_tag = f"local-only-checkpoint-{os.urandom(4).hex()}"
+    run(["git", "-C", str(fixture), "tag", local_tag, original], REAL_REPO)
+    configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag, mutate=lambda state: state["receipt"].__setitem__("preTaskCheckpoint", local_tag))
+    finish(branch, "EXEC-CHALLENGE-022", "Local-only checkpoint fails remote publication", ["EXEC-11"], run_execution_validator(fixture))
+
+    branch = "challenge-023"
+    fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
+    wrong_tag = f"wrong-target-checkpoint-{os.urandom(4).hex()}"
+    run(["git", "-C", str(fixture), "tag", wrong_tag, ending], REAL_REPO)
+    run(["git", "-C", str(fixture), "push", "origin", wrong_tag], REAL_REPO)
+    configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag, mutate=lambda state: state["receipt"].__setitem__("preTaskCheckpoint", wrong_tag))
+    finish(branch, "EXEC-CHALLENGE-023", "Remote checkpoint with wrong target fails", ["EXEC-11"], run_execution_validator(fixture))
+
+    branch = "challenge-024"
+    fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
+    configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag)
+    (fixture / "Graphify" / "11 Completion" / "EXECUTION_CHECKPOINT_CHAIN.jsonl").write_text("", encoding="utf-8")
+    finish(branch, "EXEC-CHALLENGE-024", "Missing checkpoint-chain row fails", ["EXEC-22"], run_execution_validator(fixture))
+
+    branch = "challenge-025"
+    fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
+    configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag, mutate=lambda state: state["chain"][0].__setitem__("targetCommit", "0" * 40))
+    finish(branch, "EXEC-CHALLENGE-025", "Contradictory checkpoint-chain target fails", ["EXEC-22"], run_execution_validator(fixture))
+
+    branch = "challenge-026"
+    fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
+    configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag, mutate=lambda state: state["baseline"].__setitem__("currentPublishedCommit", "0" * 40))
+    finish(branch, "EXEC-CHALLENGE-026", "Fake currentPublishedCommit fails remote main authority", ["EXEC-13"], run_execution_validator(fixture))
+
+    branch = "challenge-027"
+    fixture, original, ending, ending_tree, pre_tag, post_tag = prepare_task_branch(fixture, branch)
+    configure_execution_state(fixture, original, ending, ending_tree, pre_tag, post_tag, mutate=lambda state: state["receipt"]["testResults"].__setitem__("TEST-MR-BOOTSTRAP-001", "FAIL"))
+    finish(branch, "EXEC-CHALLENGE-027", "Forged required test result fails canonical acceptance binding", ["EXEC-21"], run_execution_validator(fixture))
+
     return results
 
 
@@ -407,6 +539,8 @@ def main():
     positive = []
     if "--positive" in arguments or not arguments:
         positive.append(untouched_main())
+        positive.append(positive_bootstrap())
+    elif "--positive-bootstrap" in arguments:
         positive.append(positive_bootstrap())
     negative = negative_challenges() if "--negative" in arguments or not arguments else []
     report = {

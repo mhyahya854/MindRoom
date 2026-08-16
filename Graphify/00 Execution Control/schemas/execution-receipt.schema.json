@@ -26,10 +26,12 @@
   ],
   "properties": {
     "taskId": {
-      "type": "string"
+      "type": "string",
+      "pattern": "^MR-IMPL-(?:BOOTSTRAP-001|[0-9]{3})$"
     },
     "capabilityId": {
-      "type": "string"
+      "type": "string",
+      "pattern": "^MR-CAP-[0-9]{3}$"
     },
     "wave": {
       "enum": [
@@ -115,5 +117,5 @@
       ]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": false
 }

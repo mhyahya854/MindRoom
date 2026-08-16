@@ -1,9 +1,11 @@
 """Fail-closed post-start execution certification for MindRoom.
 
 This validator is the canonical IMPLEMENTATION_EXECUTION_CERTIFICATION mode.
-It intentionally does NOT compare Codebase to the original frozen baseline as
-an equality gate. Instead it proves that every live Codebase delta is
-attributable to successfully completed canonical implementation task receipts.
+It does NOT compare Codebase to the original frozen baseline as an equality
+gate. Instead it proves that every live Codebase delta is attributable to a
+successfully completed canonical implementation task receipt whose identity,
+scope, dependencies, tests, checkpoints, and publication are all derived from
+repository authority rather than from the receipt itself.
 
 The original frozen baseline remains immutable and is never redefined.
 """
@@ -11,7 +13,6 @@ The original frozen baseline remains immutable and is never redefined.
 from __future__ import annotations
 
 import hashlib
-import importlib.util
 import json
 import os
 import re
@@ -38,6 +39,16 @@ TRUSTED_BASELINE_PATH = "11 Completion/EXECUTION_TRUSTED_BASELINE.json"
 TASKS_PATH = "09 Implementation/IMPLEMENTATION_TASKS.jsonl"
 ROLLBACK_PATH = "07 Reorganisation/ROLLBACK_PLAN.jsonl"
 TEST_PATH = "10 Verification/REQUIREMENT_TEST_MATRIX.jsonl"
+
+# Canonical governance-level generated output patterns. These are NOT
+# receipt-authoritative: they are repository governance policy and cannot be
+# widened by any execution receipt.
+CANONICAL_GENERATED_PATH_PATTERNS = (
+    "Codebase/yarn.lock",
+    "Codebase/.yarn/install-state.gz",
+    "Codebase/packages/*/*/dist/**",
+    "Codebase/packages/*/*/src/generated/**",
+)
 
 VALIDATION_MODES = ("IMPLEMENTATION_EXECUTION_CERTIFICATION",)
 
@@ -136,21 +147,40 @@ def git_diff_paths(commit_a, commit_b):
         parts = line.split("\t")
         if len(parts) < 2:
             continue
-        status = parts[0]
-        path = parts[1]
-        rows.append({"status": status, "path": path})
+        rows.append({"status": parts[0], "path": parts[1]})
     return rows
 
 
-def git_tag_target(ref):
+def git_local_tag_target(ref):
     return git_rev_parse(f"refs/tags/{ref}")
 
 
-def git_is_ancestor(commit, branch):
-    branch_commit = git_rev_parse(branch)
-    if not branch_commit:
+def git_remote_refs(pattern):
+    result = git(["ls-remote", "--refs", "origin", pattern], check=False)
+    if result.returncode != 0:
+        return {}
+    targets = {}
+    for line in result.stdout.splitlines():
+        parts = line.split("\t")
+        if len(parts) == 2:
+            targets[parts[1]] = parts[0]
+    return targets
+
+
+def git_remote_main():
+    refs = git_remote_refs("refs/heads/main")
+    return refs.get("refs/heads/main")
+
+
+def git_remote_tag_target(tag):
+    refs = git_remote_refs(f"refs/tags/{tag}")
+    return refs.get(f"refs/tags/{tag}")
+
+
+def git_is_ancestor(commit, ancestor_root):
+    if not commit or not ancestor_root:
         return False
-    result = git(["merge-base", "--is-ancestor", commit, branch_commit], check=False)
+    result = git(["merge-base", "--is-ancestor", commit, ancestor_root], check=False)
     return result.returncode == 0
 
 
@@ -160,7 +190,8 @@ def path_matches_pattern(path, pattern):
     if path == pattern:
         return True
     if "**" in pattern:
-        return re.fullmatch(pattern.replace(".", r"\.").replace("*", ".*"), path) is not None
+        regex = "^" + re.escape(pattern).replace(r"\*\*", ".*").replace(r"\*", "[^/]*") + "$"
+        return re.match(regex, path) is not None
     return path.startswith(pattern.rstrip("/") + "/")
 
 
@@ -169,8 +200,27 @@ def matches_any(path, patterns):
 
 
 def required_fields(row, fields, label):
-    missing = [field for field in fields if not row.get(field)]
-    return missing
+    return [field for field in fields if not row.get(field)]
+
+
+def normalize_path(value):
+    return str(value or "").replace("\\", "/").removeprefix("./")
+
+
+def canonical_task_lookup(task_id, tasks):
+    matches = [row for row in tasks if row.get("taskId") == task_id]
+    if len(matches) != 1:
+        return None, f"task {task_id!r} must resolve to exactly one canonical task; found {len(matches)}"
+    return matches[0], None
+
+
+def canonical_generated_paths(task, actual_paths=None):
+    explicit = task.get("generatedPaths") or []
+    patterns = list(dict.fromkeys(list(explicit) + list(CANONICAL_GENERATED_PATH_PATTERNS)))
+    if actual_paths is None:
+        return patterns
+    applicable = [pattern for pattern in patterns if any(matches_any(path, [pattern]) for path in actual_paths)]
+    return applicable or patterns
 
 
 def add(checks, check_id, category, description, passed, actual, expected, evidence, method):
@@ -197,7 +247,7 @@ def do_execution_validation():
     rollback_rows = read_jsonl(ROLLBACK_PATH)
     tests = read_jsonl(TEST_PATH)
     live = inventory_tree(CODEBASE)
-    task_map = {row.get("taskId"): row for row in tasks if row.get("taskId")}
+    test_map = {row.get("testId"): row for row in tests if row.get("testId")}
 
     lifecycle = status.get("lifecyclePhase")
     wave0 = status.get("wave0Readiness")
@@ -205,6 +255,12 @@ def do_execution_validation():
     implementation_performed = status.get("implementationPerformed") is True
     application_released = status.get("applicationReleased") is True
     completed_receipts = [row for row in receipts if row.get("status") == "COMPLETE" and row.get("publishedToMain") is True]
+
+    original_tree = trusted.get("originalFrozenCodebaseTree")
+    current_tree = trusted.get("currentTrustedCodebaseTree")
+    current_aggregate = trusted.get("currentTrustedAggregateSha256")
+    current_published = trusted.get("currentPublishedCommit")
+    remote_main = git_remote_main()
 
     # EXEC-01 lifecycle state valid
     lifecycle_ok = lifecycle in {
@@ -235,19 +291,16 @@ def do_execution_validation():
 
     # EXEC-03 original frozen baseline preserved
     original_ok = (
-        trusted.get("originalFrozenCodebaseTree") == ORIGINAL_FROZEN_CODEBASE_TREE
+        original_tree == ORIGINAL_FROZEN_CODEBASE_TREE
         and (trusted.get("originalFrozenBaseline") or {}).get("aggregateSha256") == ORIGINAL_FROZEN_AGGREGATE
         and (trusted.get("originalFrozenBaseline") or {}).get("fileCount") == ORIGINAL_FROZEN_FILE_COUNT
         and (trusted.get("originalFrozenBaseline") or {}).get("directoryCount") == ORIGINAL_FROZEN_DIRECTORY_COUNT
     )
     add(checks, "EXEC-03", "baseline", "Original frozen Codebase baseline remains immutable", original_ok, {
-        "tree": trusted.get("originalFrozenCodebaseTree"), "aggregateSha256": (trusted.get("originalFrozenBaseline") or {}).get("aggregateSha256"),
+        "tree": original_tree, "aggregateSha256": (trusted.get("originalFrozenBaseline") or {}).get("aggregateSha256"),
     }, {"tree": ORIGINAL_FROZEN_CODEBASE_TREE, "aggregateSha256": ORIGINAL_FROZEN_AGGREGATE}, ["EXECUTION_TRUSTED_BASELINE.json"], "constant baseline comparison")
 
     # EXEC-04 current trusted Codebase tree recorded
-    current_tree = trusted.get("currentTrustedCodebaseTree")
-    current_aggregate = trusted.get("currentTrustedAggregateSha256")
-    current_published = trusted.get("currentPublishedCommit")
     add(checks, "EXEC-04", "baseline", "Current trusted Codebase tree and published commit are recorded", bool(current_tree) and bool(current_aggregate) and bool(current_published), {
         "currentTrustedCodebaseTree": current_tree, "currentTrustedAggregateSha256": current_aggregate, "currentPublishedCommit": current_published,
     }, "nonempty current trusted tree, aggregate, and commit", ["EXECUTION_TRUSTED_BASELINE.json"], "required-field validation")
@@ -261,29 +314,43 @@ def do_execution_validation():
     }, {"liveTree": current_tree, "trustedTree": current_tree, "liveAggregate": current_aggregate, "trustedAggregate": current_aggregate},
     ["EXECUTION_TRUSTED_BASELINE.json"], "independent Git tree and byte-aggregate comparison")
 
-    # EXEC-06 every completed task has one valid receipt
-    receipt_ids = [row.get("taskId") for row in receipts]
-    duplicate_ids = sorted({value for value, count in __import__("collections").Counter(receipt_ids).items() if count > 1})
+    # EXEC-06 canonical receipt identity binding
+    identity_issues = []
+    duplicate_ids = sorted({value for value, count in __import__("collections").Counter(row.get("taskId") for row in receipts).items() if count > 1})
     receipt_required = [
         "taskId", "capabilityId", "wave", "startingCommit", "endingCommit", "startingCodebaseTree", "endingCodebaseTree",
         "preTaskCheckpoint", "postTaskCheckpoint", "changedPaths", "allowedPaths", "forbiddenPaths", "generatedPaths",
         "testsExecuted", "testResults", "acceptanceCriteria", "rollbackAction", "dependencyState", "publishedToMain", "status",
     ]
-    missing_receipt_fields = []
+    missing_fields = []
     for row in completed_receipts:
         missing = required_fields(row, receipt_required, row.get("taskId"))
         if missing:
-            missing_receipt_fields.append({"taskId": row.get("taskId"), "missing": missing})
-    no_missing_required = not duplicate_ids and not missing_receipt_fields and len(completed_receipts) == len({row.get("taskId") for row in completed_receipts})
-    missing_receipt_while_moved = not completed_receipts and (implementation_performed or current_tree != trusted.get("originalFrozenCodebaseTree"))
-    add(checks, "EXEC-06", "receipts", "Every completed task has exactly one valid execution receipt", no_missing_required and not missing_receipt_while_moved, {
-        "duplicateIds": duplicate_ids, "missingFields": missing_receipt_fields, "completedReceipts": len(completed_receipts), "missingReceiptWhileMoved": missing_receipt_while_moved,
-    }, {"duplicateIds": [], "missingFields": [], "completedReceipts": len(completed_receipts), "missingReceiptWhileMoved": False}, ["EXECUTION_RECEIPTS.jsonl"], "receipt uniqueness and required-field validation")
+            missing_fields.append({"taskId": row.get("taskId"), "missing": missing})
+        task, error = canonical_task_lookup(row.get("taskId"), tasks)
+        if error:
+            identity_issues.append({"taskId": row.get("taskId"), "reason": error})
+            continue
+        canonical = {
+            "taskId": task.get("taskId"),
+            "capabilityId": task.get("capabilityId"),
+            "contractCapabilityId": (task.get("contract") or {}).get("capabilityId"),
+            "wave": task.get("releaseWave"),
+        }
+        if row.get("capabilityId") not in {task.get("capabilityId"), (task.get("contract") or {}).get("capabilityId")}:
+            identity_issues.append({"taskId": row.get("taskId"), "reason": "capabilityId does not match canonical task", "canonical": canonical, "actual": row.get("capabilityId")})
+        if row.get("wave") != task.get("releaseWave"):
+            identity_issues.append({"taskId": row.get("taskId"), "reason": "wave does not match canonical releaseWave", "canonical": canonical, "actual": row.get("wave")})
+    no_missing_required = not duplicate_ids and not missing_fields
+    missing_receipt_while_moved = not completed_receipts and (implementation_performed or current_tree != original_tree)
+    add(checks, "EXEC-06", "receipts", "Completed receipts bind to exactly one canonical task with matching identity", no_missing_required and not missing_receipt_while_moved and not identity_issues, {
+        "duplicateIds": duplicate_ids, "missingFields": missing_fields, "identityIssues": identity_issues, "missingReceiptWhileMoved": missing_receipt_while_moved,
+    }, {"duplicateIds": [], "missingFields": [], "identityIssues": [], "missingReceiptWhileMoved": False}, ["EXECUTION_RECEIPTS.jsonl", "IMPLEMENTATION_TASKS.jsonl"], "receipt-to-canonical-task identity join")
 
     # EXEC-07 receipt chain is contiguous
     chain_ok = True
     chain_evidence = []
-    previous_tree = trusted.get("originalFrozenCodebaseTree")
+    previous_tree = original_tree
     if completed_receipts:
         ordered = list(completed_receipts)
         for index, row in enumerate(ordered):
@@ -294,7 +361,7 @@ def do_execution_validation():
         if previous_tree != current_tree:
             chain_ok = False
             chain_evidence.append({"expectedEndingTree": current_tree, "actualEndingTree": previous_tree})
-    elif current_tree != trusted.get("originalFrozenCodebaseTree"):
+    elif current_tree != original_tree:
         chain_ok = False
         chain_evidence.append({"noReceiptsButTreeMoved": current_tree})
     add(checks, "EXEC-07", "receipts", "Execution receipt chain is contiguous from the original baseline to the current tree", chain_ok, chain_evidence, [], ["EXECUTION_RECEIPTS.jsonl", "EXECUTION_TRUSTED_BASELINE.json"], "tree-transition comparison")
@@ -311,71 +378,104 @@ def do_execution_validation():
             })
     add(checks, "EXEC-08", "receipts", "Git commits reproduce every receipt starting and ending tree", not git_transition_issues, git_transition_issues, [], ["EXECUTION_RECEIPTS.jsonl"], "Git tree identity reproduction")
 
-    # EXEC-09 actual task path deltas obey allowed/forbidden scope
+    # EXEC-09 actual path deltas obey canonical allowed/forbidden/generated scope
     scope_issues = []
+    scope_equality_issues = []
     for row in completed_receipts:
+        task, _ = canonical_task_lookup(row.get("taskId"), tasks)
+        if task is None:
+            continue
+        canonical_allowed = task.get("allowedPaths") or []
+        canonical_forbidden = task.get("forbiddenPaths") or []
         diffs = git_diff_paths(row.get("startingCommit"), row.get("endingCommit"))
-        allowed = (row.get("allowedPaths") or [])
-        forbidden = (row.get("forbiddenPaths") or [])
-        generated = (row.get("generatedPaths") or [])
+        actual_paths = {diff["path"] for diff in diffs}
+        canonical_generated = canonical_generated_paths(task, actual_paths)
+        for field in ("allowedPaths", "forbiddenPaths", "generatedPaths"):
+            receipt_scope = row.get(field) or []
+            canonical_scope = {"allowedPaths": canonical_allowed, "forbiddenPaths": canonical_forbidden, "generatedPaths": canonical_generated}[field]
+            if [normalize_path(v) for v in receipt_scope] != [normalize_path(v) for v in canonical_scope]:
+                scope_equality_issues.append({"taskId": row.get("taskId"), "field": field, "receipt": receipt_scope, "canonical": canonical_scope})
         for diff in diffs:
             path = diff["path"]
-            if matches_any(path, forbidden):
-                scope_issues.append({"taskId": row.get("taskId"), "path": path, "reason": "forbidden path"})
-            elif not matches_any(path, allowed) and not matches_any(path, generated):
-                scope_issues.append({"taskId": row.get("taskId"), "path": path, "reason": "outside allowed/generated scope"})
-    add(checks, "EXEC-09", "scope", "Actual task path deltas obey allowed and forbidden scope", not scope_issues, scope_issues, [], ["EXECUTION_RECEIPTS.jsonl"], "Git diff vs task contract path sets")
+            if matches_any(path, canonical_forbidden):
+                scope_issues.append({"taskId": row.get("taskId"), "path": path, "reason": "forbidden by canonical task scope"})
+            elif not matches_any(path, canonical_allowed) and not matches_any(path, canonical_generated):
+                scope_issues.append({"taskId": row.get("taskId"), "path": path, "reason": "outside canonical allowed/generated scope"})
+    add(checks, "EXEC-09", "scope", "Actual task path deltas obey canonical scope and receipt scope equals canonical scope", not scope_issues and not scope_equality_issues, {
+        "scopeIssues": scope_issues, "scopeEqualityIssues": scope_equality_issues,
+    }, {"scopeIssues": [], "scopeEqualityIssues": []}, ["EXECUTION_RECEIPTS.jsonl", "IMPLEMENTATION_TASKS.jsonl"], "Git diff vs canonical task path sets")
 
-    # EXEC-10 task dependencies were satisfied before execution
+    # EXEC-10 canonical dependencies were satisfied before execution
     dependency_issues = []
     completed_ids = [row.get("taskId") for row in completed_receipts]
     for index, row in enumerate(completed_receipts):
-        task = task_map.get(row.get("taskId")) or {}
-        dependencies = (task.get("dependencies") or []) + (task.get("prerequisites") or [])
-        receipt_dependencies = (row.get("dependencyState") or {}).get("dependencies") or []
-        dependencies = list(dict.fromkeys(list(dependencies) + list(receipt_dependencies)))
-        for dependency in dependencies:
+        task, _ = canonical_task_lookup(row.get("taskId"), tasks)
+        if task is None:
+            continue
+        canonical_deps = (task.get("dependencies") or []) + (task.get("prerequisites") or [])
+        receipt_deps = (row.get("dependencyState") or {}).get("dependencies") or []
+        if sorted(set(canonical_deps)) != sorted(set(receipt_deps)):
+            dependency_issues.append({"taskId": row.get("taskId"), "canonical": sorted(set(canonical_deps)), "receipt": sorted(set(receipt_deps)), "reason": "receipt dependency evidence does not match canonical task"})
+        for dependency in canonical_deps:
             if dependency not in completed_ids[:index]:
                 dependency_issues.append({"taskId": row.get("taskId"), "dependency": dependency, "reason": "not complete before task"})
-    add(checks, "EXEC-10", "dependencies", "Task dependencies were complete before execution", not dependency_issues, dependency_issues, [], ["IMPLEMENTATION_TASKS.jsonl", "EXECUTION_RECEIPTS.jsonl"], "dependency-order comparison")
+    add(checks, "EXEC-10", "dependencies", "Task dependencies come from canonical authority and were complete before execution", not dependency_issues, dependency_issues, [], ["IMPLEMENTATION_TASKS.jsonl", "EXECUTION_RECEIPTS.jsonl"], "canonical dependency-order comparison")
 
-    # EXEC-11/12 checkpoints
-    checkpoint_issues = []
+    # EXEC-11/12 remote checkpoints
+    remote_checkpoint_issues = []
+    checkpoint_chain_issues = []
     for row in completed_receipts:
-        pre_target = git_tag_target(row.get("preTaskCheckpoint"))
-        post_target = git_tag_target(row.get("postTaskCheckpoint"))
-        if pre_target != row.get("startingCommit"):
-            checkpoint_issues.append({"taskId": row.get("taskId"), "kind": "pre", "tag": row.get("preTaskCheckpoint"), "expected": row.get("startingCommit"), "actual": pre_target})
-        if post_target != row.get("endingCommit"):
-            checkpoint_issues.append({"taskId": row.get("taskId"), "kind": "post", "tag": row.get("postTaskCheckpoint"), "expected": row.get("endingCommit"), "actual": post_target})
-    add(checks, "EXEC-11", "checkpoints", "Pre-task immutable checkpoints exist and target the starting commit", not [row for row in checkpoint_issues if row.get("kind") == "pre"], [row for row in checkpoint_issues if row.get("kind") == "pre"], [], ["EXECUTION_RECEIPTS.jsonl"], "Git tag target reproduction")
-    add(checks, "EXEC-12", "checkpoints", "Post-task immutable checkpoints exist and target the ending commit", not [row for row in checkpoint_issues if row.get("kind") == "post"], [row for row in checkpoint_issues if row.get("kind") == "post"], [], ["EXECUTION_RECEIPTS.jsonl"], "Git tag target reproduction")
+        remote_pre = git_remote_tag_target(row.get("preTaskCheckpoint"))
+        remote_post = git_remote_tag_target(row.get("postTaskCheckpoint"))
+        local_pre = git_local_tag_target(row.get("preTaskCheckpoint"))
+        local_post = git_local_tag_target(row.get("postTaskCheckpoint"))
+        if remote_pre != row.get("startingCommit") or (local_pre and local_pre != remote_pre):
+            remote_checkpoint_issues.append({"taskId": row.get("taskId"), "kind": "pre", "remote": remote_pre, "local": local_pre, "expected": row.get("startingCommit")})
+        if remote_post != row.get("endingCommit") or (local_post and local_post != remote_post):
+            remote_checkpoint_issues.append({"taskId": row.get("taskId"), "kind": "post", "remote": remote_post, "local": local_post, "expected": row.get("endingCommit")})
+        pre_rows = [r for r in checkpoint_rows if r.get("taskId") == row.get("taskId") and r.get("kind") == "pre-task"]
+        post_rows = [r for r in checkpoint_rows if r.get("taskId") == row.get("taskId") and r.get("kind") == "post-task"]
+        if len(pre_rows) != 1 or len(post_rows) != 1:
+            checkpoint_chain_issues.append({"taskId": row.get("taskId"), "preRows": len(pre_rows), "postRows": len(post_rows), "reason": "checkpoint chain must have exactly one pre and one post row"})
+        else:
+            if pre_rows[0].get("tag") != row.get("preTaskCheckpoint") or pre_rows[0].get("targetCommit") != row.get("startingCommit"):
+                checkpoint_chain_issues.append({"taskId": row.get("taskId"), "kind": "pre", "reason": "chain row does not match receipt/remote target"})
+            if post_rows[0].get("tag") != row.get("postTaskCheckpoint") or post_rows[0].get("targetCommit") != row.get("endingCommit"):
+                checkpoint_chain_issues.append({"taskId": row.get("taskId"), "kind": "post", "reason": "chain row does not match receipt/remote target"})
+    add(checks, "EXEC-11", "checkpoints", "Pre-task immutable checkpoints exist on origin and target the starting commit", not [row for row in remote_checkpoint_issues if row.get("kind") == "pre"], [row for row in remote_checkpoint_issues if row.get("kind") == "pre"], [], ["EXECUTION_RECEIPTS.jsonl"], "origin ls-remote tag reproduction")
+    add(checks, "EXEC-12", "checkpoints", "Post-task immutable checkpoints exist on origin and target the ending commit", not [row for row in remote_checkpoint_issues if row.get("kind") == "post"], [row for row in remote_checkpoint_issues if row.get("kind") == "post"], [], ["EXECUTION_RECEIPTS.jsonl"], "origin ls-remote tag reproduction")
 
-    # EXEC-13 failed WIP branches are non-authoritative
-    wip_issues = []
-    main_commit = git_rev_parse("refs/heads/main") or git_rev_parse("HEAD")
-    if not completed_receipts and current_tree != trusted.get("originalFrozenCodebaseTree"):
-        wip_issues.append({"taskId": None, "reason": "tree moved without a completed main-published receipt"})
+    # EXEC-13 remote main publication authority
+    publication_issues = []
+    if current_published:
+        published_tree = git_tree(current_published)
+        if remote_main != current_published:
+            publication_issues.append({"reason": "currentPublishedCommit does not equal remote main", "trusted": current_published, "remoteMain": remote_main})
+        if published_tree != current_tree:
+            publication_issues.append({"reason": "currentPublishedCommit Codebase tree does not equal trusted tree", "commitTree": published_tree, "trustedTree": current_tree})
     for row in completed_receipts:
         ending = row.get("endingCommit")
-        if not ending or not main_commit:
-            wip_issues.append({"taskId": row.get("taskId"), "reason": "missing ending commit or main"})
-        elif not git_is_ancestor(ending, main_commit or "HEAD"):
-            wip_issues.append({"taskId": row.get("taskId"), "endingCommit": ending, "reason": "not published on main"})
-    add(checks, "EXEC-13", "authority", "Completed task endings are published on main; WIP branches are non-authoritative", not wip_issues, wip_issues, [], ["EXECUTION_RECEIPTS.jsonl"], "Git ancestry against main")
+        if not ending or not remote_main or not git_is_ancestor(ending, remote_main):
+            publication_issues.append({"taskId": row.get("taskId"), "endingCommit": ending, "reason": "ending commit is not an ancestor of remote main"})
+    add(checks, "EXEC-13", "authority", "Current published commit is actual remote main and completed endings are published on remote main", not publication_issues, publication_issues, [], ["EXECUTION_TRUSTED_BASELINE.json", "EXECUTION_RECEIPTS.jsonl"], "origin main and ancestry validation")
 
-    # EXEC-14 no unexplained Codebase changes exist
-    unexplained = []
-    original_main = authorization.get("preAuthorizationMain") if active_auth else None
-    if original_main and current_published:
-        total_diffs = git_diff_paths(original_main, current_published)
-        attributed = set()
-        for row in completed_receipts:
-            attributed.update((row.get("changedPaths") or []) + (row.get("generatedPaths") or []))
-        for diff in total_diffs:
-            if diff["path"] not in attributed:
-                unexplained.append(diff)
-    add(checks, "EXEC-14", "scope", "No unexplained Codebase changes exist beyond completed task receipts", not unexplained, unexplained, [], ["EXECUTION_RECEIPTS.jsonl", "EXECUTION_AUTHORIZATION_RECORD.json"], "original-to-current Git diff vs receipt path union")
+    # EXEC-14 receipt changedPaths equals real Git delta
+    path_equality_issues = []
+    for row in completed_receipts:
+        actual = git_diff_paths(row.get("startingCommit"), row.get("endingCommit"))
+        actual_paths = {diff["path"] for diff in actual}
+        canonical_generated = canonical_generated_paths(canonical_task_lookup(row.get("taskId"), tasks)[0] if canonical_task_lookup(row.get("taskId"), tasks)[0] else {}, actual_paths)
+        actual_generated = {path for path in actual_paths if matches_any(path, canonical_generated)}
+        actual_source = actual_paths - actual_generated
+        receipt_source = set(normalize_path(path) for path in (row.get("changedPaths") or []))
+        receipt_generated = set(normalize_path(path) for path in (row.get("generatedPaths") or []))
+        if receipt_source != actual_source or receipt_generated != actual_generated:
+            path_equality_issues.append({
+                "taskId": row.get("taskId"),
+                "receiptSource": sorted(receipt_source), "actualSource": sorted(actual_source),
+                "receiptGenerated": sorted(receipt_generated), "actualGenerated": sorted(actual_generated),
+            })
+    add(checks, "EXEC-14", "scope", "Receipt changedPaths and generatedPaths exactly equal the real Git delta", not path_equality_issues, path_equality_issues, [], ["EXECUTION_RECEIPTS.jsonl"], "Git diff vs receipt path partition")
 
     # EXEC-15 status/receipt lifecycle metadata agree
     metadata_ok = (
@@ -412,6 +512,30 @@ def do_execution_validation():
     # EXEC-20 validation does not mutate Codebase
     add(checks, "EXEC-20", "safety", "Execution validation performs zero Codebase mutations", True, 0, 0, [], "read-only validator design")
 
+    # EXEC-21 canonical test/acceptance binding
+    test_issues = []
+    for row in completed_receipts:
+        task, _ = canonical_task_lookup(row.get("taskId"), tasks)
+        if task is None:
+            continue
+        required_tests = list(dict.fromkeys((task.get("tests") or []) + ((task.get("contract") or {}).get("acceptanceTests") or [])))
+        canonical_test_ids = [test_id for test_id in required_tests if re.fullmatch(r"TEST-[A-Z0-9-]+", str(test_id))]
+        receipt_results = row.get("testResults") or {}
+        receipt_tests = row.get("testsExecuted") or []
+        for test_id in canonical_test_ids:
+            if test_id not in test_map:
+                test_issues.append({"taskId": row.get("taskId"), "testId": test_id, "reason": "required test is not canonical"})
+            if test_id not in receipt_tests or receipt_results.get(test_id) != "PASS":
+                test_issues.append({"taskId": row.get("taskId"), "testId": test_id, "reason": "required test missing or not PASS"})
+        acceptance = row.get("acceptanceCriteria") or {}
+        for test_id in canonical_test_ids:
+            if acceptance.get(test_id) != "PASS":
+                test_issues.append({"taskId": row.get("taskId"), "testId": test_id, "reason": "acceptance criteria does not record PASS"})
+    add(checks, "EXEC-21", "tests", "Required canonical tests and acceptance bindings are represented with PASS", not test_issues, test_issues, [], ["IMPLEMENTATION_TASKS.jsonl", "REQUIREMENT_TEST_MATRIX.jsonl", "EXECUTION_RECEIPTS.jsonl"], "canonical test/acceptance join")
+
+    # EXEC-22 checkpoint-chain reconciliation
+    add(checks, "EXEC-22", "checkpoints", "Execution checkpoint chain reconciles with receipts and remote tags", not checkpoint_chain_issues, checkpoint_chain_issues, [], ["EXECUTION_CHECKPOINT_CHAIN.jsonl", "EXECUTION_RECEIPTS.jsonl"], "checkpoint-chain cross-record reconciliation")
+
     failed = [check for check in checks if check["status"] == "FAIL"]
     return {
         "mode": "IMPLEMENTATION_EXECUTION_CERTIFICATION",
@@ -422,7 +546,8 @@ def do_execution_validation():
             "completedReceiptCount": len(completed_receipts),
             "liveCodebaseAggregateSha256": live["aggregateSha256"],
             "currentTrustedCodebaseTree": current_tree,
-            "originalFrozenCodebaseTree": trusted.get("originalFrozenCodebaseTree"),
+            "originalFrozenCodebaseTree": original_tree,
+            "remoteMain": remote_main,
             "validatorWrites": 0,
         },
     }

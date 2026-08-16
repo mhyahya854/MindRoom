@@ -14,7 +14,7 @@ HERE = Path(__file__).resolve()
 ROOT = HERE.parents[1]
 VALIDATOR = ROOT / "11 Completion" / "validate_execution_state.py"
 
-REQUIRED_CHECKS = [f"EXEC-{number:02d}" for number in range(1, 21)]
+REQUIRED_CHECKS = [f"EXEC-{number:02d}" for number in range(1, 23)]
 
 
 def load_validator():
